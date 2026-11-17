@@ -13,6 +13,7 @@ Last updated: 2026-11-18
 - Twice-daily GitHub Actions schedule (08:17 and 20:17 Asia/Seoul, represented in UTC cron)
 - First live collection succeeded: 15 feed entries fetched and 15 inserted
 - Collected metadata committed by GitHub Actions
+- Project documentation and source policy
 
 ## First run evidence
 
@@ -22,7 +23,13 @@ Last updated: 2026-11-18
 - Unit tests: 3 passed, 0 failed
 - Live feed: 15 fetched, 15 new, 15 total
 - Data validation: passed
-- Pages configuration initially failed because the repository had no Pages site configured. The workflow is being updated to enable Pages automatically; deployment must be verified in the next run.
+
+## Pages deployment blocker
+
+- Workflow run 1 failed only at Pages setup after collection, tests, validation, and data commit had succeeded.
+- Workflow run 2 retried with Pages enablement, but GitHub returned "Resource not accessible by integration" when the connected automation attempted to create the Pages site.
+- Required one-time owner action: repository Settings → Pages → Build and deployment → Source = GitHub Actions. Then rerun the workflow.
+- Do not report the public site as deployed until a successful Pages deployment run is visible.
 
 ## Not implemented yet
 
@@ -38,4 +45,3 @@ Last updated: 2026-11-18
 - A keyword match is only a rough relevance hint.
 - RSS descriptions are often empty for Shorts.
 - GitHub Actions schedules can start later than the exact scheduled minute.
-- GitHub Pages must be enabled successfully before the public site is available.

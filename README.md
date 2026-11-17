@@ -2,7 +2,7 @@
 
 해원 관련 공개 콘텐츠를 출처와 함께 모아보는 모바일 우선 팬 아카이브입니다.
 
-- 사이트: https://uforpel.github.io/haewon-archive/
+- 사이트(배포 설정 완료 후): https://uforpel.github.io/haewon-archive/
 - 저장소: https://github.com/UForPel/haewon-archive
 - 수집 대상(현재): NMIXX 공식 YouTube 채널의 공개 Atom 피드
 - 자동 실행: 매일 한국 시간 08:17 / 20:17 (GitHub Actions)
@@ -15,6 +15,16 @@
 3. 제목·설명에서 해원 관련 키워드(해원, 오해원, HAEWON) 표시
 4. 모바일 웹에서 제목 검색, 해원 관련 영상 필터, 영상 링크 열기
 5. 수집 결과와 마지막 실행 시각을 JSON으로 기록
+
+## GitHub Pages 최초 설정
+
+GitHub 연결 권한으로 Pages 사이트를 처음 생성하는 작업이 거부되어, 저장소 소유자가 한 번만 설정해야 합니다.
+
+1. 저장소의 Settings → Pages로 이동합니다.
+2. Build and deployment의 Source를 GitHub Actions로 선택합니다.
+3. Actions 탭에서 Collect and deploy archive 워크플로를 다시 실행합니다.
+
+이후에는 워크플로가 테스트, 수집, 데이터 커밋, Pages 배포를 이어서 수행합니다.
 
 ## 로컬 테스트
 
