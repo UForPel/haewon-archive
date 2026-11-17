@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f3">
+  <meta name="description" content="해원 관련 공개 영상과 출처 링크를 모아보는 아카이브">
+  <title>Haewon Archive</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">HAEWON <span>ARCHIVE</span></a>
+    <a class="source-link" href="https://www.youtube.com/@NMIXXOfficial" target="_blank" rel="noopener">NMIXX 공식 채널 ↗</a>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">PUBLIC CONTENT INDEX</p>
+      <h1>Haewon Archive</h1>
+      <p>공개된 영상과 게시물의 출처를 한곳에서 찾아보세요.</p>
+      <div class="stats"><strong id="video-count">0</strong><span>수집된 영상</span><span id="updated-at">업데이트 기록 확인 중</span></div>
+    </section>
+    <section class="controls" aria-label="검색 및 필터">
+      <label class="search"><span class="sr-only">검색</span><input id="search" type="search" placeholder="영상 제목이나 설명 검색"></label>
+      <div class="filters">
+        <button class="filter active" data-filter="all">전체</button>
+        <button class="filter" data-filter="haewon">해원 관련</button>
+        <button class="filter" data-filter="recent">최신순</button>
+      </div>
+    </section>
+    <section><div id="video-grid" class="video-grid" aria-live="polite"></div><p id="empty" class="empty" hidden>아직 표시할 영상이 없어요. 첫 자동 수집이 끝나면 여기에 나타납니다.</p></section>
+    <section class="photo-note">
+      <h2>사진 링크</h2>
+      <p>사진 원본을 무단 복제하지 않습니다. 허용된 출처의 원문 링크를 확인하고, 사진 항목은 출처 검토 후 추가합니다.</p>
+      <a href="https://nmixx.jype.com/" target="_blank" rel="noopener">NMIXX 공식 웹사이트 ↗</a>
+    </section>
+  </main>
+  <footer>Fan-made index · 각 콘텐츠의 권리는 원저작자에게 있습니다.</footer>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

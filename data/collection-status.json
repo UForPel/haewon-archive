@@ -1,0 +1,9 @@
+{
+  "status": "not-run",
+  "source": "nmixx-youtube",
+  "lastAttemptAt": null,
+  "lastSuccessAt": null,
+  "itemsFetched": 0,
+  "itemsAdded": 0,
+  "message": "첫 GitHub Actions 수집 실행 전"
+}

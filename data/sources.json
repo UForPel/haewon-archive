@@ -1,0 +1,27 @@
+[
+  {
+    "id": "nmixx-youtube",
+    "name": "NMIXX Official YouTube",
+    "kind": "youtube-atom",
+    "url": "https://www.youtube.com/@NMIXXOfficial",
+    "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnUAyD4t2LkvW68YrDh7fDg",
+    "policy": "public-feed",
+    "enabled": true
+  },
+  {
+    "id": "jyp-official",
+    "name": "JYP / NMIXX Official Website",
+    "kind": "manual-link",
+    "url": "https://nmixx.jype.com/",
+    "policy": "manual-link-only",
+    "enabled": true
+  },
+  {
+    "id": "nmixx-instagram",
+    "name": "NMIXX Official Instagram",
+    "kind": "manual-link",
+    "url": "https://www.instagram.com/nmixx_official/",
+    "policy": "manual-link-only",
+    "enabled": true
+  }
+]

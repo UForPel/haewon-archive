@@ -1,0 +1,14 @@
+{
+  "name": "haewon-archive",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "collect": "node scripts/collect-youtube.mjs",
+    "validate": "node scripts/validate-data.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
