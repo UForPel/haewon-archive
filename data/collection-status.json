@@ -1,11 +1,9 @@
 {
-  "status": "success",
+  "status": "not-run",
   "source": "nmixx-youtube",
-  "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnUAyD4t2LkvW68YrDh7fDg",
-  "lastAttemptAt": "2026-11-17T23:55:37.422Z",
-  "lastSuccessAt": "2026-11-17T23:55:37.579Z",
-  "itemsFetched": 15,
-  "itemsAdded": 15,
-  "totalItems": 15,
-  "message": "공개 YouTube 채널 피드 수집 완료"
+  "lastAttemptAt": null,
+  "lastSuccessAt": null,
+  "itemsFetched": 0,
+  "itemsAdded": 0,
+  "message": "첫 GitHub Actions 수집 실행 전"
 }
