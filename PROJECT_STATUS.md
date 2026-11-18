@@ -14,7 +14,7 @@ Last updated: 2026-11-18
 - Official NMIXX YouTube public Atom feed collector
 - Video-ID deduplication and newest-first ordering
 - Keyword-based Haewon relevance hint
-- Search across video title, description, and channel name
+- Unified search across video titles, descriptions, photo-link titles, notes, and source names\n- Combined type and source filters across video and photo-link entries\n- Date-range and recent-7-day filters shared across both content types\n- Expandable detail panels for video and photo-link entries
 - Quick filters: all, Haewon keyword, recent 7 days
 - Start/end publication date filters
 - Visible-result count and responsive mobile layout
