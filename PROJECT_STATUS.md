@@ -14,7 +14,10 @@ Last updated: 2026-11-18
 - Official NMIXX YouTube public Atom feed collector
 - Video-ID deduplication and newest-first ordering
 - Keyword-based Haewon relevance hint
-- Unified search across video titles, descriptions, photo-link titles, notes, and source names\n- Combined type and source filters across video and photo-link entries\n- Date-range and recent-7-day filters shared across both content types\n- Expandable detail panels for video and photo-link entries
+- Unified search across video titles, descriptions, photo-link titles, notes, and source names
+- Combined type and source filters across video and photo-link entries
+- Date-range and recent-7-day filters shared across both content types
+- Expandable detail panels for video and photo-link entries
 - Quick filters: all, Haewon keyword, recent 7 days
 - Start/end publication date filters
 - Visible-result count and responsive mobile layout
@@ -44,7 +47,7 @@ Last updated: 2026-11-18
 
 ## Next
 1. Improve member relevance review without scraping or unsupported APIs.
-2. Add source/type filters and an item detail view.
+2. Add source/type filters and an item detail view (completed).
 3. Add source health and per-run collection history.
 4. Add a simpler guided process for publishing photo-link JSON.
 
