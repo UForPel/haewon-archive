@@ -33,13 +33,44 @@
       <label>종료일 <input id="date-to" type="date"></label>
       <span id="result-count" class="result-count" aria-live="polite">불러오는 중</span>
     </section>
-    <section>
+    <section aria-label="영상 목록">
       <div id="video-grid" class="video-grid" aria-live="polite"></div>
       <p id="empty" class="empty" hidden>아직 표시할 영상이 없어요. 첫 자동 수집이 끝나면 여기에 나타납니다.</p>
     </section>
+
+    <section class="photo-section" aria-labelledby="photo-heading">
+      <div class="section-heading">
+        <div><p class="eyebrow">SOURCE-LINK LIBRARY</p><h2 id="photo-heading">사진 게시물 링크</h2></div>
+        <span id="photo-count" class="photo-count">0개</span>
+      </div>
+      <p class="photo-policy">사진 파일을 복제하지 않고 원문 게시물 링크와 출처 정보만 기록합니다. 등록한 임시 항목은 현재 브라우저에만 저장됩니다.</p>
+
+      <form id="photo-form" class="photo-form">
+        <label>게시물 제목 <input id="photo-title" maxlength="120" required placeholder="예: 공식 프로필 사진 게시물"></label>
+        <div class="form-row">
+          <label>출처 이름 <input id="photo-source" maxlength="80" required placeholder="예: NMIXX 공식 웹사이트"></label>
+          <label>게시 날짜 <input id="photo-date" type="date" required></label>
+        </div>
+        <label>원문 게시물 URL <input id="photo-url" type="url" inputmode="url" required placeholder="https://..."></label>
+        <label>메모 <textarea id="photo-notes" maxlength="300" rows="2" placeholder="선택 사항: 게시물 설명 또는 확인 사항"></textarea></label>
+        <div class="photo-actions">
+          <button class="primary-button" type="submit">임시 링크 등록</button>
+          <button class="secondary-button" id="export-photos" type="button">JSON 내보내기</button>
+          <label class="import-button">JSON 가져오기<input id="import-photos" type="file" accept="application/json,.json"></label>
+        </div>
+        <p id="photo-status" class="photo-status" role="status" aria-live="polite">원문 링크만 등록할 수 있습니다. 임시 항목은 이 브라우저에 저장됩니다.</p>
+      </form>
+
+      <div id="photo-list" class="photo-list" aria-live="polite"></div>
+      <div class="photo-publish-note">
+        <strong>다른 기기에도 공개하려면</strong>
+        <p>JSON 내보내기로 파일을 만든 뒤, GitHub 저장소의 <code>data/photos.json</code> 내용을 해당 JSON으로 교체해 커밋하세요. 다음 사이트 배포부터 모든 방문자에게 반영됩니다.</p>
+        <a href="https://github.com/UForPel/haewon-archive/blob/main/data/photos.json" target="_blank" rel="noopener">GitHub에서 사진 데이터 파일 열기 ↗</a>
+      </div>
+    </section>
     <section class="photo-note">
-      <h2>사진 링크</h2>
-      <p>사진 원본을 무단 복제하지 않습니다. 허용된 출처의 원문 링크를 확인하고, 사진 항목은 출처 검토 후 추가합니다.</p>
+      <h2>공식 출처</h2>
+      <p>사진 원본을 무단 복제하지 않습니다. 허용된 출처의 원문 링크만 기록합니다.</p>
       <a href="https://nmixx.jype.com/" target="_blank" rel="noopener">NMIXX 공식 웹사이트 ↗</a>
     </section>
   </main>
