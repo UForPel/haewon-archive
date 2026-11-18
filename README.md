@@ -2,70 +2,73 @@
 
 해원 관련 공개 콘텐츠를 출처와 함께 모아보는 모바일 우선 팬 아카이브입니다.
 
-- 사이트(배포 설정 완료 후): https://uforpel.github.io/haewon-archive/
+- 사이트: https://uforpel.github.io/haewon-archive/
 - 저장소: https://github.com/UForPel/haewon-archive
-- 수집 대상(현재): NMIXX 공식 YouTube 채널의 공개 Atom 피드
-- 자동 실행: 매일 한국 시간 08:17 / 20:17 (GitHub Actions)
-- 실행 로그: https://github.com/UForPel/haewon-archive/actions
+- 현재 자동 수집: NMIXX 공식 YouTube 공개 Atom 피드
+- 기존 자동 실행: 매일 한국 시간 08:17 / 20:17 (GitHub Actions)
 
 ## 현재 MVP 기능
 
 1. 공식 NMIXX YouTube 채널의 최신 피드 항목 수집
 2. 영상 ID 기준 중복 제거 및 최신순 저장
-3. 제목·설명에서 해원 관련 키워드(해원, 오해원, HAEWON) 표시
-4. 모바일 웹에서 제목 검색, 해원 관련 영상 필터, 영상 링크 열기
+3. 제목·설명에서 해원 관련 키워드 표시
+4. 모바일 웹에서 검색, 필터, 영상 링크 열기
 5. 수집 결과와 마지막 실행 시각을 JSON으로 기록
 6. 영상·사진 링크 통합 검색, 자료 유형 및 출처 필터
 7. 영상·사진 항목의 상세 정보 펼쳐보기
 8. 공개 사진 게시물의 HTTPS 원문 링크를 브라우저에서 임시 등록·가져오기·내보내기
-9. 사진 링크의 제목, 출처, 게시 날짜, 메모를 JSON으로 관리하고 중복·잘못된 URL을 검사
+9. 사진 링크 메타데이터 JSON 관리 및 검증
+
+## 프로젝트 연속성
+
+새 ChatGPT 대화는 먼저 [PROJECT_MEMORY.md](PROJECT_MEMORY.md)를 읽고, [CHATGPT_OPERATING_RULES.md](CHATGPT_OPERATING_RULES.md)의 순서에 따라 최신 상태를 확인합니다.
+
+## 자동화 거버넌스
+
+- [GEMINI.md](GEMINI.md): Gemini 행동강령과 출력 규칙
+- [SECURITY_POLICY.md](SECURITY_POLICY.md): 변경 보호되는 보안·개인정보·접근 경계
+- [COLLECTION_RULES.md](COLLECTION_RULES.md): 수집 가능 출처, 검증, 중복 제거 및 쓰기 게이트
+- [SOURCE_POLICY.md](SOURCE_POLICY.md): 실제 출처별 허용 상태
+- [SEARCH_STRATEGY.md](SEARCH_STRATEGY.md): 검색어·검색 조합·우선순위
+- [CLASSIFICATION_RULES.md](CLASSIFICATION_RULES.md): 게시자 유형과 해원 관련성의 분리 분류
+- [POLICY_CHANGELOG.md](POLICY_CHANGELOG.md): 정책 변경 이력
+- [schemas/archive-record.schema.json](schemas/archive-record.schema.json): 아카이브 레코드 목표 스키마
+- [schemas/run-log.schema.json](schemas/run-log.schema.json): 자동화 실행 로그 목표 스키마
+- [AUTOMATION_PLAN.md](AUTOMATION_PLAN.md): 외부 스케줄러 + Gemini 설계
+- [DECISIONS.md](DECISIONS.md): 확정 결정과 미확정 사항
+- [PROJECT_STATUS.md](PROJECT_STATUS.md): 실제 구현·테스트 상태
+- [SESSION_LOG.md](SESSION_LOG.md): 작업 세션 기록
+- [ROADMAP.md](ROADMAP.md): 개발 계획
+
+## 현재 자동화 상태 — 주의
+
+외부 스케줄러, Cloudflare Worker, Gemini API 연동, 5분 주기 워크플로, 팬 영상 자동 검색, 사진 자동 크롤러 및 정책 자동 업데이트는 아직 구현되지 않았습니다. 현재 스케줄은 기존 GitHub Actions의 하루 2회입니다.
+
+새 JSON Schema 파일은 목표 데이터 계약을 문서화한 것이며, 현재 검증 스크립트가 해당 스키마를 실제 적용하는 단계는 아직 아닙니다.
 
 ## GitHub Pages 최초 설정
 
-GitHub 연결 권한으로 Pages 사이트를 처음 생성하는 작업이 거부되어, 저장소 소유자가 한 번만 설정해야 합니다.
-
-1. 저장소의 Settings → Pages로 이동합니다.
-2. Build and deployment의 Source를 GitHub Actions로 선택합니다.
-3. Actions 탭에서 Collect and deploy archive 워크플로를 다시 실행합니다.
-
-이후에는 워크플로가 테스트, 수집, 데이터 커밋, Pages 배포를 이어서 수행합니다.
+Pages가 아직 구성되지 않은 경우 저장소 Settings → Pages → Build and deployment에서 Source를 GitHub Actions로 선택한 뒤 Actions 탭에서 워크플로를 실행합니다.
 
 ## 로컬 테스트
 
-Node.js 20 이상에서 npm test, npm run collect, npm run validate 순서로 실행합니다.
+Node.js 20 이상에서 다음 명령을 실행합니다.
 
-수집 스크립트는 API 키 없이 공개 채널 피드를 읽습니다. YouTube 피드가 제공하는 최신 15개 항목만 매 실행 때 확인하므로, 장기간 수집이 중단되거나 짧은 시간에 15개를 초과하는 새 영상이 게시되면 누락이 생길 수 있습니다.
+```bash
+npm test
+npm run collect
+npm run validate
+```
 
-## 통합 검색과 필터
-
-- 검색창은 영상 제목·설명·출처와 사진 링크 제목·메모·출처를 함께 검색합니다.
-- 자료 유형(전체/영상/사진 링크)과 출처 필터를 조합할 수 있습니다.
-- 날짜 범위 및 최근 7일 필터는 두 자료 유형에 함께 적용됩니다. 해원 키워드 필터는 해원 관련 키워드가 확인된 영상에만 적용됩니다.
-- 각 항목의 `상세 정보`를 펼치면 피드 설명, 수집 시각, 저장 위치 등 추가 정보를 확인할 수 있습니다.
+현재 공식 YouTube Atom 피드는 한 번에 최신 15개 항목만 제공합니다. 수집기가 실행되는 동안 새 기록을 누적하지만, 전체 YouTube 검색이나 팬 영상 전체 탐색 기능은 아닙니다.
 
 ## 사진 링크 등록
 
-- 사진 링크 등록 폼은 제목, 출처 이름, 게시 날짜, HTTPS 원문 URL, 선택 메모를 받습니다.
-- 등록한 항목은 현재 브라우저의 로컬 저장소에 임시 보관됩니다. 다른 기기나 방문자에게 자동 공유되지는 않습니다.
-- `JSON 내보내기`로 `photos.json`을 내려받은 뒤 저장소의 `data/photos.json`을 교체하고 커밋하면 공개 아카이브에 반영됩니다.
-- `JSON 가져오기`로 백업 파일을 불러올 수 있으며, 원문 URL 중복과 필수 필드를 검사합니다.
-- 원본 사진 파일은 저장하지 않습니다. Instagram·TikTok 등 로그인/접근 제한을 우회해 수집하지 않습니다.
-
-## 프로젝트 연속성 및 자동화 설계
-
-- PROJECT_MEMORY.md: 새 대화에서 가장 먼저 읽을 프로젝트 기억 및 인수인계 문서
-- CHATGPT_OPERATING_RULES.md: ChatGPT의 매 대화 시작·작업·기록 규칙
-- GEMINI.md: Gemini의 임무, 금지사항 및 행동강령
-- AUTOMATION_PLAN.md: 외부 스케줄러 + Gemini 자동화 설계 및 구현 단계
-- DECISIONS.md: 확정된 결정과 미확정 사항
-- SESSION_LOG.md: 중요한 대화·작업의 시간순 기록
-
-## 기존 프로젝트 문서
-
-- SOURCE_POLICY.md: 수집 출처 및 권리 정책
-- PROJECT_STATUS.md: 구현·테스트 현황
-- ROADMAP.md: 다음 작업 계획
+- 사진 원본 파일은 저장하지 않고 원문 URL과 출처 메타데이터만 관리합니다.
+- 등록한 항목은 현재 브라우저의 로컬 저장소에 임시 보관됩니다.
+- JSON 내보내기 후 `data/photos.json`에 반영하고 커밋해야 모든 방문자에게 공개됩니다.
+- 로그인/접근 제한이나 플랫폼의 자동화 제한을 우회하지 않습니다.
 
 ## 권리 안내
 
-이 저장소는 비공식 팬 프로젝트입니다. 각 영상·이미지의 권리는 원저작자 및 권리자에게 있습니다. 썸네일은 YouTube 공개 피드가 제공하는 미리보기 주소를 사용하며, 영상은 YouTube 원문으로 연결합니다. 권리자의 요청이나 플랫폼 정책 변경이 있으면 해당 항목을 검토하고 조정합니다.
+이 저장소는 비공식 팬 프로젝트입니다. 각 영상·이미지의 권리는 원저작자 및 권리자에게 있습니다. 썸네일은 제공자가 공개한 미리보기 주소를 허용 범위에서 사용하며, 영상은 원문으로 연결합니다. 권리자의 요청이나 플랫폼 정책 변경이 있으면 해당 항목을 검토하고 조정합니다.
