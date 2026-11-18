@@ -25,8 +25,8 @@
 - [x] Add protected security and collection policies
 - [x] Add initial search strategy and classification rules
 - [x] Add policy changelog and target JSON schemas
-- [ ] Enforce JSON schemas in the validator and add tests
-- [ ] Add dry-run run logs and deterministic candidate validation
+- [x] Enforce archive-record JSON Schema in the validator and add tests
+- [ ] Add dry-run run logs and enforce the run-log schema
 - [ ] Verify Gemini API features, quotas, pricing and data terms
 - [ ] Verify external scheduler and secure trigger gateway
 - [ ] Implement Gemini-assisted permitted public discovery
