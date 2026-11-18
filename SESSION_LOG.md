@@ -94,3 +94,35 @@ User agreed to continue with the next planned documentation step: establish prot
 2. Validate both schema JSON files and compare their contracts against actual existing records.
 3. Implement schema enforcement in scripts/validate-data.mjs with tests before Gemini integration.
 4. Then verify current Gemini API capabilities/quotas/terms and the external scheduler + secure dispatch design.
+
+
+## 2026-11-19 — Archive record schema enforcement
+
+### User direction
+User approved the next implementation step: make the documented archive JSON Schema enforceable by the existing validator and add tests.
+
+### Inspected baseline
+- Re-read project memory, operating rules, decision register, session log, status, roadmap, relevant schemas, current validator, collector, photo-link validation, data fixtures, package manifest and workflow.
+- Confirmed current videos.json has 17 records and photos.json is an empty array.
+- Confirmed existing video records contain the required schema fields and use standard YouTube watch URLs and thumbnail hosts.
+- Confirmed the current validator previously checked only broad JSON shape and photo-specific validation.
+
+### Implemented
+- Added `scripts/json-schema.mjs`: a dependency-free validator for the JSON Schema subset used by the repository, including local refs, oneOf, types, required/properties, additionalProperties, string lengths/patterns/formats, enum/const and array maxItems.
+- Updated `scripts/validate-data.mjs` to load `schemas/archive-record.schema.json`, validate every video and photo-link record, preserve photo-specific normalization checks and reject duplicate video IDs.
+- Added `tests/json-schema.test.mjs` covering valid video/photo records, invalid types, missing required fields, unsafe URLs, invalid dates, extra properties and incomplete records.
+- Updated the thumbnail pattern to accept both `i.ytimg.com` and numbered `iN.ytimg.com` hosts.
+- Updated PROJECT_MEMORY.md, PROJECT_STATUS.md, ROADMAP.md, AUTOMATION_PLAN.md and README.md to distinguish enforced archive schema from the future run-log schema.
+
+### Not implemented
+- The run-log schema is not yet wired to a log producer or validator.
+- No Gemini API, external scheduler, Worker, fan-video discovery, photo crawler or policy updater was added.
+- Existing Actions schedule remains twice daily.
+
+### Verification state
+- All changed files were committed to main through GitHub.
+- Runtime tests and `npm run validate` have not yet been confirmed. The final push should trigger the existing workflow; inspect its final run before claiming tests pass.
+- No deployment/UI visual verification is claimed.
+
+### Next step
+Check the latest GitHub Actions run for the final documentation/code commit. If it fails, inspect job logs and fix the concrete failure before proceeding to the dry-run collection/run-log pipeline.
