@@ -47,7 +47,7 @@ Status: DESIGN ONLY. No external scheduler, Gemini API integration, Worker or fi
 - [x] Add protected security and collection policies.
 - [x] Add initial search and classification rules.
 - [x] Add policy changelog and target schemas for archive records and sanitized run logs.
-- [ ] Implement validators that enforce the schemas (documentation contract only so far).
+- [x] Enforce the archive-record schema in the existing validator and add tests.\n- [ ] Enforce the run-log schema when run logging is implemented.
 
 ### Phase 1 — Provider and trigger validation
 - [ ] Verify cron-job.org free limits, reliability and request features.
@@ -81,4 +81,4 @@ Status: DESIGN ONLY. No external scheduler, Gemini API integration, Worker or fi
 - No secure trigger gateway is deployed.
 - Gemini integration and constrained policy updater do not exist.
 - No automated fan-video or photo collector has been implemented.
-- The new JSON schemas are documentation contracts; current validation script does not yet enforce them.
+- The archive-record schema is enforced for video and photo records. The run-log schema remains a future contract until machine logging is implemented.
