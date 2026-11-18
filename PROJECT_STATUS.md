@@ -7,7 +7,8 @@ Last updated: 2026-11-18
 - Public GitHub Pages site: https://uforpel.github.io/haewon-archive/
 - User confirmed the deployed site opens and works.
 - Latest photo-link feature deployment completed successfully: https://github.com/UForPel/haewon-archive/actions/runs/44210058627
-- The post-change run passed unit tests, collection, JSON validation, and GitHub Pages deployment.
+- The post-change photo-link run passed unit tests, collection, JSON validation, and GitHub Pages deployment.
+- Unified-search/filter/detail UI changes are committed to main; the corresponding GitHub Actions test and deployment result has not yet been confirmed.
 
 ## Implemented
 - Mobile-first static archive page
@@ -47,8 +48,8 @@ Last updated: 2026-11-18
 
 ## Next
 1. Improve member relevance review without scraping or unsupported APIs.
-3. Add source health and per-run collection history.
-4. Add a simpler guided process for publishing photo-link JSON.
+2. Add source health and per-run collection history.
+3. Add a simpler guided process for publishing photo-link JSON.
 
 ## Source policy
 - Use official public feeds and documented, permitted interfaces.
