@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://uforpel.github.io/haewon-archive/schemas/archive-record.schema.json",
   "title": "Haewon Archive record",
-  "description": "Target contract for archive video and photo-link records. This schema documents the data contract; the current validator does not yet enforce this JSON Schema.",
+  "description": "Target contract for archive video and photo-link records. This schema documents the data contract; the enforced by scripts/validate-data.mjs using the repository's supported JSON Schema subset.",
   "oneOf": [
     { "$ref": "#/$defs/video" },
     { "$ref": "#/$defs/photoLink" }
@@ -16,7 +16,7 @@
         "id": { "type": "string", "minLength": 1, "maxLength": 128 },
         "title": { "type": "string", "minLength": 1, "maxLength": 500 },
         "url": { "type": "string", "format": "uri", "pattern": "^https://www\\.youtube\\.com/watch\\?v=" },
-        "thumbnailUrl": { "type": "string", "format": "uri", "pattern": "^https://i[0-9]+\\.ytimg\\.com/vi/" },
+        "thumbnailUrl": { "type": "string", "format": "uri", "pattern": "^https://i([0-9]+\\.)?ytimg\\.com/vi/" },
         "publishedAt": { "type": "string", "format": "date-time" },
         "description": { "type": "string", "maxLength": 10000 },
         "channelName": { "type": "string", "minLength": 1, "maxLength": 200 },
