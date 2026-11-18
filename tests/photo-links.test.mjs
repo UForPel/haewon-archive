@@ -21,6 +21,7 @@ test('HTTP, javascript 및 잘못된 날짜는 거부한다', () => {
   assert.throws(() => normalizePhotoEntry({ ...valid, url: 'http://example.com' }), /https/);
   assert.throws(() => normalizePhotoEntry({ ...valid, url: 'javascript:alert(1)' }), /원문 링크/);
   assert.throws(() => normalizePhotoEntry({ ...valid, publishedAt: '2026-99-99' }), /날짜/);
+  assert.throws(() => normalizePhotoEntry({ ...valid, publishedAt: '2026-02-31' }), /날짜/);
 });
 
 test('같은 원문 링크를 중복 등록하지 않는다', () => {
