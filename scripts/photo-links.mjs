@@ -18,8 +18,9 @@ export function normalizePhotoEntry(entry) {
     throw new Error('보안을 위해 https 원문 링크만 등록할 수 있습니다.');
   }
 
+  const parsedDate = new Date(publishedAt + 'T00:00:00Z');
   if (!/^\d{4}-\d{2}-\d{2}$/.test(publishedAt) ||
-      Number.isNaN(Date.parse(publishedAt + 'T00:00:00Z'))) {
+      Number.isNaN(parsedDate.getTime()) || parsedDate.toISOString().slice(0, 10) !== publishedAt) {
     throw new Error('게시 날짜를 확인해 주세요.');
   }
 
