@@ -6,8 +6,8 @@ Last updated: 2026-11-18
 - Public repository: https://github.com/UForPel/haewon-archive
 - Public GitHub Pages site: https://uforpel.github.io/haewon-archive/
 - User confirmed the deployed site opens and works.
-- Latest confirmed full deployment before this photo-link feature: https://github.com/UForPel/haewon-archive/actions/runs/44209391536
-- Photo-link feature commits are now on main; its post-change workflow must complete successfully before claiming a new deployment.
+- Latest photo-link feature deployment completed successfully: https://github.com/UForPel/haewon-archive/actions/runs/44210058627
+- The post-change run passed unit tests, collection, JSON validation, and GitHub Pages deployment.
 
 ## Implemented
 - Mobile-first static archive page
