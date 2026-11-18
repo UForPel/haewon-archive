@@ -47,7 +47,6 @@ Last updated: 2026-11-18
 
 ## Next
 1. Improve member relevance review without scraping or unsupported APIs.
-2. Add source/type filters and an item detail view (completed).
 3. Add source health and per-run collection history.
 4. Add a simpler guided process for publishing photo-link JSON.
 
