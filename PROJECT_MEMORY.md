@@ -1,7 +1,7 @@
 # Haewon Archive — Persistent Project Memory
 
 Last updated: 2026-11-19
-Status: governance documentation expanded; Gemini automation is NOT implemented.
+Status: archive video/photo record JSON Schema enforcement implemented; Gemini automation is NOT implemented.
 
 ## Purpose
 First-read handoff document for every new ChatGPT conversation about this repository. Read it before proposing or changing project work, then follow links to detailed documents.
@@ -28,7 +28,7 @@ Build a useful in-site archive for Haewon-related public content:
 - Current data inspected on 2026-11-19: 17 video records; `data/photos.json` is empty.
 - Automated fan-video discovery and automated photo crawling are not implemented.
 - The existing workflow schedule remains twice daily at UTC 23:17 and 11:17 (Korea 08:17 and 20:17).
-- The workflow runs tests, collects the official feed, validates data, commits changed data and deploys Pages when configured.
+- The workflow runs tests, collects the official feed, validates data (including archive-record JSON Schema checks), commits changed data and deploys Pages when configured.
 - Latest Actions state must be checked before claiming current workflow health. A five-minute scheduler/Gemini run does not exist.
 
 ## Automation direction — agreed, NOT implemented
@@ -52,7 +52,7 @@ Build a useful in-site archive for Haewon-related public content:
 - [SEARCH_STRATEGY.md](SEARCH_STRATEGY.md): search vocabulary and prioritization; limited mutable scope.
 - [CLASSIFICATION_RULES.md](CLASSIFICATION_RULES.md): publisher-origin and Haewon relevance labels.
 - [POLICY_CHANGELOG.md](POLICY_CHANGELOG.md): audit trail for policy changes.
-- [schemas/archive-record.schema.json](schemas/archive-record.schema.json): target archive record contract.
+- [schemas/archive-record.schema.json](schemas/archive-record.schema.json): enforced archive record contract.
 - [schemas/run-log.schema.json](schemas/run-log.schema.json): proposed sanitized machine-run log contract.
 - [AUTOMATION_PLAN.md](AUTOMATION_PLAN.md): scheduler/Gemini architecture and phases.
 - [DECISIONS.md](DECISIONS.md): confirmed decisions and unresolved choices.
