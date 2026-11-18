@@ -10,8 +10,16 @@
 - [x] Add working recent-7-day and date-range filters
 - [ ] Improve member relevance tagging without scraping or unsupported API use
 
+## Photo link library
+- [x] Add photo source-link registration form
+- [x] Store drafts in the current browser
+- [x] Import and export photo metadata as JSON
+- [x] Validate HTTPS URLs, required fields, dates, and duplicate links
+- [x] Display saved-repository links separately from browser-only drafts
+- [ ] Add a simpler guided publishing workflow for updating data/photos.json
+- [ ] Consider shared registration only if a safe, free, no-secret backend becomes available
+
 ## Next
-- [ ] Add a simple, auditable manual-link workflow for photo posts
 - [ ] Add source/type filters and an item detail view
 - [ ] Add source health and per-run collection history
 - [ ] Add additional official sources only when they provide supported public feeds or documented access
