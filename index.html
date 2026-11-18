@@ -22,13 +22,21 @@
     </section>
     <section class="controls" aria-label="검색 및 필터">
       <label class="search"><span class="sr-only">검색</span><input id="search" type="search" placeholder="영상 제목이나 설명 검색"></label>
-      <div class="filters">
-        <button class="filter active" data-filter="all">전체</button>
-        <button class="filter" data-filter="haewon">해원 관련</button>
-        <button class="filter" data-filter="recent">최신순</button>
+      <div class="filters" role="group" aria-label="빠른 필터">
+        <button class="filter active" data-filter="all" aria-pressed="true">전체</button>
+        <button class="filter" data-filter="haewon" aria-pressed="false">해원 키워드</button>
+        <button class="filter" data-filter="recent" aria-pressed="false">최근 7일</button>
       </div>
     </section>
-    <section><div id="video-grid" class="video-grid" aria-live="polite"></div><p id="empty" class="empty" hidden>아직 표시할 영상이 없어요. 첫 자동 수집이 끝나면 여기에 나타납니다.</p></section>
+    <section class="date-controls" aria-label="게시 날짜 범위">
+      <label>시작일 <input id="date-from" type="date"></label>
+      <label>종료일 <input id="date-to" type="date"></label>
+      <span id="result-count" class="result-count" aria-live="polite">불러오는 중</span>
+    </section>
+    <section>
+      <div id="video-grid" class="video-grid" aria-live="polite"></div>
+      <p id="empty" class="empty" hidden>아직 표시할 영상이 없어요. 첫 자동 수집이 끝나면 여기에 나타납니다.</p>
+    </section>
     <section class="photo-note">
       <h2>사진 링크</h2>
       <p>사진 원본을 무단 복제하지 않습니다. 허용된 출처의 원문 링크를 확인하고, 사진 항목은 출처 검토 후 추가합니다.</p>
