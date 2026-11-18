@@ -27,16 +27,14 @@
         <button class="filter" data-filter="haewon" aria-pressed="false">해원 키워드</button>
         <button class="filter" data-filter="recent" aria-pressed="false">최근 7일</button>
       </div>
+      <div class="archive-filters"><label>자료 유형 <select id="type-filter"><option value="all">전체 자료</option><option value="video">영상만</option><option value="photo">사진 링크만</option></select></label><label>출처 <select id="source-filter"><option value="all">모든 출처</option></select></label></div>
     </section>
     <section class="date-controls" aria-label="게시 날짜 범위">
       <label>시작일 <input id="date-from" type="date"></label>
       <label>종료일 <input id="date-to" type="date"></label>
       <span id="result-count" class="result-count" aria-live="polite">불러오는 중</span>
     </section>
-    <section aria-label="영상 목록">
-      <div id="video-grid" class="video-grid" aria-live="polite"></div>
-      <p id="empty" class="empty" hidden>아직 표시할 영상이 없어요. 첫 자동 수집이 끝나면 여기에 나타납니다.</p>
-    </section>
+    <section aria-label="영상 목록" id="video-section"><div class="section-heading compact-heading"><div><p class="eyebrow">VIDEO ARCHIVE</p><h2>영상</h2></div><span id="video-result-count" class="photo-count">0개</span></div><div id="video-grid" class="video-grid" aria-live="polite"></div><p id="empty" class="empty" hidden>조건에 맞는 영상이 없습니다.</p></section>
 
     <section class="photo-section" aria-labelledby="photo-heading">
       <div class="section-heading">
