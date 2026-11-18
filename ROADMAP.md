@@ -20,7 +20,7 @@
 - [ ] Consider shared registration only if a safe, free, no-secret backend becomes available
 
 ## Next
-- [ ] Add source/type filters and an item detail view
+- [x] Add source/type filters and an item detail view
 - [ ] Add source health and per-run collection history
 - [ ] Add additional official sources only when they provide supported public feeds or documented access
 
