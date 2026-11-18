@@ -6,12 +6,13 @@
 - [x] Persist data and deduplicate by video ID
 - [x] Add unit tests and JSON validation
 - [x] Run collection twice daily
-- [ ] Confirm GitHub Pages deployment
+- [x] Configure and successfully deploy GitHub Pages
+- [x] Add working recent-7-day and date-range filters
 - [ ] Improve member relevance tagging without scraping or unsupported API use
 
 ## Next
 - [ ] Add a simple, auditable manual-link workflow for photo posts
-- [ ] Add date/source/type filters and item detail view
+- [ ] Add source/type filters and an item detail view
 - [ ] Add source health and per-run collection history
 - [ ] Add additional official sources only when they provide supported public feeds or documented access
 
