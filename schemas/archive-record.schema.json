@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uforpel.github.io/haewon-archive/schemas/archive-record.schema.json",
+  "title": "Haewon Archive record",
+  "description": "Target contract for archive video and photo-link records. This schema documents the data contract; the current validator does not yet enforce this JSON Schema.",
+  "oneOf": [
+    { "$ref": "#/$defs/video" },
+    { "$ref": "#/$defs/photoLink" }
+  ],
+  "$defs": {
+    "video": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "url", "thumbnailUrl", "publishedAt", "channelName", "sourceId", "collectedAt", "relevance"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https://www\\.youtube\\.com/watch\\?v=" },
+        "thumbnailUrl": { "type": "string", "format": "uri", "pattern": "^https://i[0-9]+\\.ytimg\\.com/vi/" },
+        "publishedAt": { "type": "string", "format": "date-time" },
+        "description": { "type": "string", "maxLength": 10000 },
+        "channelName": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "sourceId": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "collectedAt": { "type": "string", "format": "date-time" },
+        "relevance": { "type": "boolean" }
+      }
+    },
+    "photoLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "sourceName", "url", "publishedAt", "notes"],
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "sourceName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "publishedAt": { "type": "string", "format": "date" },
+        "notes": { "type": "string", "maxLength": 300 }
+      }
+    }
+  }
+}
