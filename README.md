@@ -51,7 +51,16 @@ Node.js 20 이상에서 npm test, npm run collect, npm run validate 순서로 �
 - `JSON 가져오기`로 백업 파일을 불러올 수 있으며, 원문 URL 중복과 필수 필드를 검사합니다.
 - 원본 사진 파일은 저장하지 않습니다. Instagram·TikTok 등 로그인/접근 제한을 우회해 수집하지 않습니다.
 
-## 문서
+## 프로젝트 연속성 및 자동화 설계
+
+- PROJECT_MEMORY.md: 새 대화에서 가장 먼저 읽을 프로젝트 기억 및 인수인계 문서
+- CHATGPT_OPERATING_RULES.md: ChatGPT의 매 대화 시작·작업·기록 규칙
+- GEMINI.md: Gemini의 임무, 금지사항 및 행동강령
+- AUTOMATION_PLAN.md: 외부 스케줄러 + Gemini 자동화 설계 및 구현 단계
+- DECISIONS.md: 확정된 결정과 미확정 사항
+- SESSION_LOG.md: 중요한 대화·작업의 시간순 기록
+
+## 기존 프로젝트 문서
 
 - SOURCE_POLICY.md: 수집 출처 및 권리 정책
 - PROJECT_STATUS.md: 구현·테스트 현황
