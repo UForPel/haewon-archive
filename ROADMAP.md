@@ -19,12 +19,27 @@
 - [ ] Add a simpler guided publishing workflow for updating data/photos.json
 - [ ] Consider shared registration only if a safe, free, no-secret backend becomes available
 
+## Governance and automation foundation
+- [x] Add persistent ChatGPT project memory and operating rules
+- [x] Define Gemini responsibilities and prohibited actions
+- [x] Add protected security and collection policies
+- [x] Add initial search strategy and classification rules
+- [x] Add policy changelog and target JSON schemas
+- [ ] Enforce JSON schemas in the validator and add tests
+- [ ] Add dry-run run logs and deterministic candidate validation
+- [ ] Verify Gemini API features, quotas, pricing and data terms
+- [ ] Verify external scheduler and secure trigger gateway
+- [ ] Implement Gemini-assisted permitted public discovery
+- [ ] Implement evidence-based constrained policy updates
+- [ ] Start external scheduler only after dry-run and security tests pass
+
 ## Next
-- [x] Add source/type filters and an item detail view
 - [ ] Add source health and per-run collection history
 - [ ] Add additional official sources only when they provide supported public feeds or documented access
+- [ ] Expand fan-video discovery only through sources whose automated access is permitted
 
 ## Explicit non-goals
-- Copying or rehosting copyrighted photos
+- Copying or rehosting copyrighted photos/videos without permission
 - Bypassing platform login, access controls, rate limits, or anti-bot measures
 - Claiming comprehensive coverage of all Haewon appearances
+- Letting Gemini rewrite application code, workflows, schemas, validators or security rules
