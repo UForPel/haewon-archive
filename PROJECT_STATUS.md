@@ -9,6 +9,7 @@ Last updated: 2026-11-18
 - Latest photo-link feature deployment completed successfully: https://github.com/UForPel/haewon-archive/actions/runs/44210058627
 - The post-change photo-link run passed unit tests, collection, JSON validation, and GitHub Pages deployment.
 - Unified-search/filter/detail UI changes are committed to main.
+- A blank archive data view was traced to `js/app.js` importing `./photo-links.mjs` when that browser module file was missing; the module has now been added at the expected path.
 - The new shared-filter module passed its four focused Node.js tests locally; the full repository test/collection/deployment workflow result has not yet been confirmed.
 
 ## Implemented
