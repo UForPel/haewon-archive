@@ -1,6 +1,13 @@
 # Project status
 
-Last updated: 2026-11-18
+Last updated: 2026-11-19
+
+## Continuity and planned automation (documentation only, 2026-11-19)
+- Added PROJECT_MEMORY.md, CHATGPT_OPERATING_RULES.md, GEMINI.md, AUTOMATION_PLAN.md, DECISIONS.md and SESSION_LOG.md.
+- These documents define the requested external-scheduler + Gemini policy-learning direction.
+- Documentation only: no external scheduler, trigger gateway, Gemini API integration, five-minute workflow, automated fan-video collector, or policy updater has been implemented.
+- Gemini scope is collection/search/classification guidance only; Gemini must not modify application code or protected security/privacy/access rules.
+- Read PROJECT_MEMORY.md first when resuming in a new conversation.
 
 ## Current state
 - Public repository: https://github.com/UForPel/haewon-archive
