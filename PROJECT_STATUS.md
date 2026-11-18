@@ -2,46 +2,47 @@
 
 Last updated: 2026-11-18
 
-## Completed
+## Current state
+- Public repository: https://github.com/UForPel/haewon-archive
+- Public GitHub Pages site: https://uforpel.github.io/haewon-archive/
+- User confirmed the deployed site opens and works.
+- The GitHub Actions deployment run completed successfully:
+  https://github.com/UForPel/haewon-archive/actions/runs/44209032164
 
-- Public repository initialized: https://github.com/UForPel/haewon-archive
-- Mobile-first static archive page and video card rendering
-- YouTube public Atom feed collector for NMIXX Official
+## Implemented
+- Mobile-first static archive page
+- Official NMIXX YouTube public Atom feed collector
 - Video-ID deduplication and newest-first ordering
-- Keyword flag for 해원 / 오해원 / HAEWON
-- JSON data validation and three unit tests
-- Twice-daily GitHub Actions schedule (08:17 and 20:17 Asia/Seoul, represented in UTC cron)
-- First live collection succeeded: 15 feed entries fetched and 15 inserted
-- Collected metadata committed by GitHub Actions
-- Project documentation and source policy
+- Keyword-based Haewon relevance hint
+- Search across video title, description, and channel name
+- Quick filters: all, Haewon keyword, recent 7 days
+- Start/end publication date filters
+- Visible-result count and clearer no-results messaging
+- Responsive mobile layout for date controls
+- JSON validation, three collector unit tests, and scheduled GitHub Actions collection
+- GitHub Pages deployment through Actions
 
-## First run evidence
+## Current source and coverage limitations
+- Automated video source: official NMIXX YouTube public Atom feed only.
+- The feed returns up to 15 newest uploads, so it is not a complete historical archive.
+- Relevance is a keyword hint based on title/description, not visual or human verification.
+- A false relevance result does not mean Haewon is absent from the video.
+- Photo automation is not implemented. The site currently provides an official website link and a source-policy note.
+- Original photo files are not mirrored or rehosted.
 
-- Workflow run: https://github.com/UForPel/haewon-archive/actions/runs/44203537362
-- Code commit: 03a0c7ccf69c0050e78df94e33b70cb306a6fd9c
-- Data commit: da18e31a08d248662d7d4c4149a8a57b00e3c6e0
-- Unit tests: 3 passed, 0 failed
-- Live feed: 15 fetched, 15 new, 15 total
-- Data validation: passed
+## Latest UI improvement
+- Fixed the previous "latest" quick filter, which had no filtering effect.
+- Added a rolling seven-day filter and date range controls.
+- Search now also checks channel name.
+- Updated labels to say "Haewon keyword included" rather than implying verified appearance.
 
-## Pages deployment blocker
+## Next
+1. Improve relevance review without scraping or unsupported APIs.
+2. Add a simple manual, auditable link-entry workflow for photo posts.
+3. Add source/type filters and item detail view.
+4. Add source health and per-run collection history.
 
-- Workflow run 1 failed only at Pages setup after collection, tests, validation, and data commit had succeeded.
-- Workflow run 2 retried with Pages enablement, but GitHub returned "Resource not accessible by integration" when the connected automation attempted to create the Pages site.
-- Required one-time owner action: repository Settings → Pages → Build and deployment → Source = GitHub Actions. Then rerun the workflow.
-- Do not report the public site as deployed until a successful Pages deployment run is visible.
-
-## Not implemented yet
-
-- Photos automation (source links only, subject to permission and supported feeds)
-- Search across YouTube beyond the official channel feed
-- Reliable detection of every video in which Haewon appears
-- Manual photo/link management UI
-- Confirmed successful Pages deployment
-
-## Known limitations
-
-- Feed contains only the newest 15 uploads at the time of each run.
-- A keyword match is only a rough relevance hint.
-- RSS descriptions are often empty for Shorts.
-- GitHub Actions schedules can start later than the exact scheduled minute.
+## Source policy
+- Use official public feeds and documented, permitted interfaces.
+- Do not bypass login walls, access controls, rate limits, or anti-bot protections.
+- Do not copy or rehost copyrighted photos without permission.
