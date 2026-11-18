@@ -32,7 +32,7 @@
 - [SEARCH_STRATEGY.md](SEARCH_STRATEGY.md): 검색어·검색 조합·우선순위
 - [CLASSIFICATION_RULES.md](CLASSIFICATION_RULES.md): 게시자 유형과 해원 관련성의 분리 분류
 - [POLICY_CHANGELOG.md](POLICY_CHANGELOG.md): 정책 변경 이력
-- [schemas/archive-record.schema.json](schemas/archive-record.schema.json): 아카이브 레코드 목표 스키마
+- [schemas/archive-record.schema.json](schemas/archive-record.schema.json): 영상·사진 링크 데이터에 실제 적용되는 스키마
 - [schemas/run-log.schema.json](schemas/run-log.schema.json): 자동화 실행 로그 목표 스키마
 - [AUTOMATION_PLAN.md](AUTOMATION_PLAN.md): 외부 스케줄러 + Gemini 설계
 - [DECISIONS.md](DECISIONS.md): 확정 결정과 미확정 사항
@@ -44,7 +44,7 @@
 
 외부 스케줄러, Cloudflare Worker, Gemini API 연동, 5분 주기 워크플로, 팬 영상 자동 검색, 사진 자동 크롤러 및 정책 자동 업데이트는 아직 구현되지 않았습니다. 현재 스케줄은 기존 GitHub Actions의 하루 2회입니다.
 
-새 JSON Schema 파일은 목표 데이터 계약을 문서화한 것이며, 현재 검증 스크립트가 해당 스키마를 실제 적용하는 단계는 아직 아닙니다.
+아카이브 레코드 스키마는 `npm run validate`에서 영상·사진 링크 항목에 실제 적용됩니다. 실행 로그 스키마는 향후 자동화 로그 기능을 만들 때 적용할 예정입니다.
 
 ## GitHub Pages 최초 설정
 
