@@ -3,9 +3,9 @@ export function filterDiscoveryItems(items,query='') {
  if(!q)return items;
  return items.filter(item=>[item.title,item.description,item.sourceName,item.query].some(value=>String(value||'').toLowerCase().includes(q)));
 }
-const list=document.querySelector('#discovery-list');
-const count=document.querySelector('#discovery-count');
-const search=document.querySelector('#discovery-search');
+const list=typeof document!=='undefined'?document.querySelector('#discovery-list'):null;
+const count=typeof document!=='undefined'?document.querySelector('#discovery-count'):null;
+const search=typeof document!=='undefined'?document.querySelector('#discovery-search'):null;
 if(list&&count){
  let allItems=[];
  const render=()=>{
@@ -29,7 +29,7 @@ if(list&&count){
  };
  if(search)search.addEventListener('input',render);
  fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
-  allItems=Array.isArray(items)?items:[[]];
+  allItems=Array.isArray(items)?items:[];
   render();
  }).catch(()=>{count.textContent='불러오기 실패';const empty=document.createElement('p');empty.className='empty';empty.textContent='자동 발견 자료를 불러오지 못했습니다.';list.replaceChildren(empty);});
 }
