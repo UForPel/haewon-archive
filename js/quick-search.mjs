@@ -11,7 +11,7 @@ export function buildSearchUrl(platform, query) {
   return urls[platform] || urls.youtube;
 }
 
-const form = document.querySelector('#quick-search-form');
+const form = typeof document !== 'undefined' ? document.querySelector('#quick-search-form') : null;
 if (form) {
   form.addEventListener('submit', event => {
     event.preventDefault();
