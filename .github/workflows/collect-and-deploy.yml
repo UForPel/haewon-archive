@@ -36,6 +36,8 @@ jobs:
         run: npm test
       - name: Collect public YouTube feed
         run: npm run collect
+      - name: Discover public news RSS candidates
+        run: npm run collect-news
       - name: Validate archive data
         run: npm run validate
       - name: Generate operational run log
