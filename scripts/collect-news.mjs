@@ -65,7 +65,7 @@ export async function collectFeeds({queries=getDailySearches(),fetchImpl=fetch,n
 }
 async function main(){
  const path=resolve(ROOT,'data/discovery.json'),existing=JSON.parse(await readFile(path,'utf8')),now=new Date().toISOString();
- const {incoming,failures,queries,successfulQueries}=await collectFeeds({now});
+ const queriesList=getDailySearches();\n const {incoming,failures,queries,successfulQueries}=await collectFeeds({queries:queriesList,now});
  if(successfulQueries===0){
   console.warn(JSON.stringify({status:'skipped',reason:'all-news-feeds-unavailable',queries,successfulQueries,failedQueries:failures,existingCandidatesPreserved:existing.length}));
   return;
@@ -74,7 +74,9 @@ async function main(){
  const existingUrls=new Set(existing.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const uniqueIncoming=new Set(incoming.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const added=[...uniqueIncoming].filter(url=>!existingUrls.has(url)).length;
+ const perQuery=queriesList.map(query=>({query,candidates:incoming.filter(item=>item.query===query).length,uniqueCandidates:new Set(incoming.filter(item=>item.query===query).map(item=>item.url.toLowerCase())).size}));
  await writeFile(path,JSON.stringify(merged,null,2)+'\n');
- console.log(JSON.stringify({queries,successfulQueries,failedQueries:failures, fetched:incoming.length,uniqueIncoming:uniqueIncoming.size,added,duplicates:incoming.length-uniqueIncoming.size,total:merged.length}));
+ await writeFile(resolve(ROOT,'data/news-collection-status.json'),JSON.stringify({schemaVersion:'1.0.0',collectedAt:now,searchPack:SEARCH_PACKS.findIndex(pack=>JSON.stringify(pack)===JSON.stringify(queriesList)),queries:perQuery,requestedQueries:queries,successfulQueries,failedQueries:failures.map(x=>({query:x.query,error:x.error})),fetched:incoming.length,uniqueIncoming:uniqueIncoming.size,added,totalCandidates:merged.length},null,2)+'\n');
+ console.log(JSON.stringify({queries,successfulQueries,failedQueries:failures,fetched:incoming.length,uniqueIncoming:uniqueIncoming.size,added,duplicates:incoming.length-uniqueIncoming.size,total:merged.length}));
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(e=>{console.error(e);process.exitCode=1});
