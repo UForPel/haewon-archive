@@ -4,13 +4,19 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { classifyDiscoveryItem } from '../js/discovery-kind.mjs';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-export const SEARCHES=['오해원 NMIXX','해원 엔믹스','NMIXX Haewon','Haewon fancam'];
+export const SEARCHES=['오해원 NMIXX','해원 엔믹스','NMIXX Haewon'];
 function decode(value=''){
  return value.replace(/<!\[CDATA\[(.*?)\]\]>/gs,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").trim();
 }
 function tag(raw,tagName){
  const m=raw.match(new RegExp('<'+tagName+'>([\\s\\S]*?)</'+tagName+'>','i'));
  return m?decode(m[1]):'';
+}
+function imageUrl(raw){
+ const tag=raw.match(/<(?:media:thumbnail|media:content)\\b[^>]*>/i)?.[0]||'';
+ const url=tag.match(/\\burl=["']([^"']+)["']/i)?.[1]||'';
+ const decoded=decode(url);
+ return /^https:\\/\\//i.test(decoded)?decoded:'';
 }
 export function relevanceScore(title='',description=''){
  const text=(title+' '+description).toLowerCase();
@@ -28,7 +34,7 @@ export function parseRss(xml,query,now=new Date().toISOString()){
   if(!title||!url||!/^https:\/\/\S+/i.test(url))return null;
   const date=pub?new Date(pub):null,publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const id=createHash('sha256').update(url).digest('hex').slice(0,20);
-  return {id,title,url,publishedAt,description:description.slice(0,1200),sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
+  return {id,title,url,publishedAt,description:description.slice(0,1200),thumbnailUrl:imageUrl(raw),sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
  }).filter(item => item && classifyDiscoveryItem(item) === 'article');
  return items;
 }
