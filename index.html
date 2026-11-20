@@ -36,19 +36,6 @@
     </section>
     <section aria-label="영상 목록" id="video-section"><div class="section-heading compact-heading"><div><p class="eyebrow">VIDEO ARCHIVE</p><h2>영상</h2></div><span id="video-result-count" class="photo-count">0개</span></div><div id="video-grid" class="video-grid" aria-live="polite"></div><p id="empty" class="empty" hidden>조건에 맞는 영상이 없습니다.</p></section>
 
-    <section class="photo-section" aria-labelledby="candidate-heading">
-      <div class="section-heading"><div><p class="eyebrow">DISCOVERY INBOX</p><h2 id="candidate-heading">자료 후보 등록</h2></div></div>
-      <p class="photo-policy">유튜브·SNS·뉴스·팬 콘텐츠 등 다양한 출처의 링크를 후보로 저장합니다. 등록된 자료는 검토 대기이며 현재 브라우저에만 저장됩니다.</p>
-      <form id="candidate-form" class="photo-form">
-        <label>자료 유형 <select id="candidate-type"><option value="video">영상</option><option value="photo">사진</option><option value="news">뉴스·인터뷰</option><option value="social">SNS 게시물</option><option value="fan-content">팬 콘텐츠</option><option value="other">기타</option></select></label>
-        <label>제목 <input id="candidate-title" maxlength="160" required placeholder="자료 제목"></label>
-        <div class="form-row"><label>출처 <input id="candidate-source" maxlength="100" required placeholder="채널·계정·언론사"></label><label>게시 날짜(선택) <input id="candidate-date" type="date"></label></div>
-        <label>원문 URL <input id="candidate-url" type="url" required placeholder="https://..."></label>
-        <label>메모 <textarea id="candidate-notes" maxlength="500" rows="2" placeholder="해원 관련성, 검토할 점 등"></textarea></label>
-        <div class="photo-actions"><button class="primary-button" type="submit">검토 후보 저장</button><button class="secondary-button" id="export-candidates" type="button">후보 JSON 내보내기</button><label class="import-button">JSON 가져오기<input id="import-candidates" type="file" accept="application/json,.json"></label></div>
-        <p id="candidate-status" class="photo-status" role="status" aria-live="polite">링크 후보는 자동으로 공개 아카이브에 올라가지 않습니다.</p>
-      </form><div id="candidate-list" class="photo-list"></div>
-    </section>
     <section class="photo-section" aria-labelledby="photo-heading">
       <div class="section-heading">
         <div><p class="eyebrow">SOURCE-LINK LIBRARY</p><h2 id="photo-heading">사진 게시물 링크</h2></div>
@@ -87,6 +74,5 @@
   </main>
   <footer>Fan-made index · 각 콘텐츠의 권리는 원저작자에게 있습니다.</footer>
   <script type="module" src="js/app.js"></script>
-  <script type="module" src="js/candidate-inbox.mjs"></script>
 </body>
 </html>
