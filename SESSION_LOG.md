@@ -179,3 +179,32 @@ Begin tangible implementation/testing before Gemini automation. First inspect la
 ### Next
 - Verify run #85 and inspect logs if failure.
 - Once tests pass, proceed to machine-readable sanitized run logs, tests and validation before Gemini dry-run integration.
+
+## 2026-11-20 — Project-wide review protocol and run-log audit
+
+### User feedback / intent
+User asked for deeper, multi-angle improvement work instead of brief sequential status reports. Intent: ChatGPT should proactively inspect the whole project, identify cross-cutting improvements, weigh risks/dependencies, and deliver real implementations and verification—not merely move to the next checklist item.
+
+
+### Operating-rule change
+- Added a project-wide improvement protocol to CHATGPT_OPERATING_RULES.md: review UX, data quality/coverage, reliability, tests, security/privacy, free-tier sustainability, accessibility/mobile, maintainability, automation failure modes and observability; prioritize by impact/risk/dependency/effort; batch related changes; verify behavior separately from CI.
+- Commit: 1810f60ed87033ceed895f9eb7a9ae964e1c4248
+- URL: https://github.com/UForPel/haewon-archive/commit/1810f60ed87033ceed895f9eb7a9ae964e1c4248
+
+### Current run-log feature audit (read-only inspection)
+- scripts/run-log.mjs, tests/run-log.test.mjs, scripts/validate-data.mjs, schemas/run-log.schema.json, package.json and workflow inspected.
+- Run #93 (44706648807) is still pending with no jobs at inspection time; implementation is NOT CI-verified.
+- Run-log counts currently derive duplicates = max(itemsFetched - itemsAdded, 0), which may mislabel rejected/filtered records as duplicates. videoCount/photoCount arguments are unused. validation.passed is hard-coded true. These are correctness issues to fix before trusting logs.
+- Workflow uses concurrency cancel-in-progress: true; rapid pushes can cancel active runs and prevent reliable verification. Batch coherent commits and consider changing concurrency policy to queue/avoid canceling active data runs after assessing race behavior.
+- Workflow can stop on collector/test/validation errors before the log-generation step, so failed runs may leave no operational log. Failure logging needs a safe always-run strategy with explicit step outcomes and sanitized errors, without accidentally committing/deploying invalid data.
+- Workflow commits logs under data/; current changed-path capture is pre-log and adds the directory manually. Verify accurately and avoid sensitive content.
+
+### Error/omission
+Previous progress reports were too short and sequential, lacked whole-project risk assessment, and did not clearly flag stale project docs or workflow cancellation as a cross-cutting concern. Correction: use the project-wide review protocol and separate planned/implemented/tested/verified claims. Preventive check: review docs for stale contradictory status after code changes.
+
+### Next prioritized work
+1. Wait/check #93; inspect failure logs if available.
+2. Fix run-log data accuracy and ensure logs exist for failed collection/test/validation runs without deploying invalid data.
+3. Review workflow concurrency and commit batching to avoid cancellations.
+4. Add focused tests for failure/outcome/accurate counts, run the full suite and validate actual generated logs.
+5. Update PROJECT_STATUS, ROADMAP, PROJECT_MEMORY and append SESSION_LOG before moving to Haewon Daily.
