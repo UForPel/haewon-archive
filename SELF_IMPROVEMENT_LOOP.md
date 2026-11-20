@@ -67,3 +67,11 @@ Track, where available: feed requests succeeded/failed, items fetched, unique it
 - **Change:** Added a candidate search input in the archive page; it filters title, description, source name, and query metadata case-insensitively. Kept relevance-first ordering. Exported the pure filter function and guarded DOM setup so tests can import the module in Node. Added 3 discovery-filter tests and 5 quick-search URL-builder tests.
 - **Verification:** Reconstructed the two modules and test files in a temporary Node environment; 8/8 tests passed. This verifies the copied pure functions and basic module import only; it is not a full repository test run, browser interaction test, live RSS collection, Actions result, or Pages deployment.
 - **Next:** Add a real candidate source/inspect RSS output; then evaluate false positives and source diversity. Candidate data remains empty at last inspection, so this search field currently shows the empty-state message until candidates are collected.
+
+
+## Iteration record — resilient RSS collection (2026-11-20)
+- **Observation:** The news collector aborted the entire run when any single RSS query failed. This could prevent otherwise successful query results from being saved.
+- **Change:** Extracted an injectable `collectFeeds` helper, captured per-query failures, and allowed successful feeds to be merged and persisted when at least one query succeeds. If all queries fail, the collector throws before writing, preserving existing discovery data.
+- **Tests added:** partial-success and all-failure cases using mocked fetch responses.
+- **Verification limits:** Changes committed to GitHub; tests were not executed in this environment, and workflow/Pages status is not verified.
+- **Next:** Observe workflow logs for actual successful/failed query counts and adjust sources based on real data.
