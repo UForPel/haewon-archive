@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { youtubeId, discoveryVideos } from '../scripts/sync-discovery-videos.mjs';
+import { youtubeId, discoveryVideos, resolveYoutubeCandidates } from '../scripts/sync-discovery-videos.mjs';
 
 test('extracts YouTube IDs from watch, short, shorts and embed links',()=>{
  assert.equal(youtubeId('https://www.youtube.com/watch?v=abcdefghijk'),'abcdefghijk');
@@ -18,4 +18,11 @@ test('news discovered YouTube candidates become schema-shaped video records',()=
 });
 test('non-YouTube candidates are not copied to video archive',()=>{
  assert.deepEqual(discoveryVideos([{title:'News',url:'https://example.com/news'}]),[]);
+});
+
+test('Google News wrapper redirects are resolved to YouTube originals',async()=>{
+ const items=[{title:'MBC Haewon fancam - YouTube',url:'https://news.google.com/rss/articles/example'}];
+ const resolved=await resolveYoutubeCandidates(items,async()=>({url:'https://www.youtube.com/watch?v=abcdefghijk'}));
+ assert.equal(resolved.length,1);
+ assert.equal(resolved[0].url,'https://www.youtube.com/watch?v=abcdefghijk');
 });
