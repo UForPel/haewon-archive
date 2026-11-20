@@ -8,8 +8,9 @@ function decode(value=''){
  return value.replace(/<!\[CDATA\[(.*?)\]\]>/gs,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").trim();
 }
 function tag(raw,tagName){
- const tag=(raw,name)=>{const m=raw.match(new RegExp('<'+name+'>([\\s\\S]*?)</'+name+'>','i'));return m?decode(m[1]):''};
- const title=tag(raw,'title'),url=tag(raw,'link'),pub=tag(raw,'pubDate'),description=tag(raw,'description'),source=tag(raw,'source')||'Google News';
+ const m=raw.match(new RegExp('<'+tagName+'>([\\s\\S]*?)</'+tagName+'>','i'));
+ return m?decode(m[1]):'';
+}
 }
 export function parseRss(xml,query,now=new Date().toISOString()){
  if(typeof xml!=='string'||!/<rss\b/i.test(xml))throw new Error('RSS 응답이 아닙니다');
