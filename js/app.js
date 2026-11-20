@@ -88,21 +88,58 @@ function renderVideos() {
   const pageCount = Math.max(1, Math.ceil(allVisible.length / VIDEO_PAGE_SIZE));
   videoPage = Math.min(videoPage, pageCount);
   const visible = allVisible.slice((videoPage - 1) * VIDEO_PAGE_SIZE, videoPage * VIDEO_PAGE_SIZE);
+
   grid.replaceChildren(...visible.map(video => {
-    const card = document.createElement('article'); card.className = 'video-card';
-    const open = document.createElement('a'); open.className = 'video-open'; open.href = video.url; open.target = '_blank'; open.rel = 'noopener noreferrer';
+    const card = document.createElement('article');
+    card.className = 'video-card';
+
+    const open = document.createElement('a');
+    open.className = 'video-open';
+    open.href = video.url;
+    open.target = '_blank';
+    open.rel = 'noopener noreferrer';
+
     const thumbnail = /^https:\/\//i.test(String(video.thumbnailUrl || '')) ? video.thumbnailUrl : '';
-    if (thumbnail) { const img = document.createElement('img'); img.src = thumbnail; img.alt = ''; img.loading = 'lazy'; img.onerror = () => { const fallback = document.createElement('div'); fallback.className = 'thumbnail-fallback'; fallback.textContent = '썸네일을 불러올 수 없습니다'; img.replaceWith(fallback); }; open.append(img); } else { const fallback = document.createElement('div'); fallback.className = 'thumbnail-fallback'; fallback.textContent = '썸네일 없음'; open.append(fallback); }
-    const info = document.createElement('div'); info.className = 'video-info';
-    const title = document.createElement('div'); title.className = 'video-title'; title.textContent = video.title;
-    const meta = document.createElement('div'); meta.className = 'video-meta';
-    meta.textContent = new Date(video.publishedAt).toLocaleDateString('ko-KR') + ' · ' + sourceName(video.sourceId);
+    if (thumbnail) {
+      const img = document.createElement('img');
+      img.src = thumbnail;
+      img.alt = '';
+      img.loading = 'lazy';
+      img.onerror = () => {
+        const fallback = document.createElement('div');
+        fallback.className = 'thumbnail-fallback';
+        fallback.textContent = '썸네일을 불러올 수 없습니다';
+        img.replaceWith(fallback);
+      };
+      open.append(img);
+    } else {
+      const fallback = document.createElement('div');
+      fallback.className = 'thumbnail-fallback';
+      fallback.textContent = '썸네일 없음';
+      open.append(fallback);
+    }
+
+    const info = document.createElement('div');
+    info.className = 'video-info';
+    const title = document.createElement('div');
+    title.className = 'video-title';
+    title.textContent = video.title;
+    const meta = document.createElement('div');
+    meta.className = 'video-meta';
+    meta.textContent = (video.publishedAt ? new Date(video.publishedAt).toLocaleDateString('ko-KR') : '날짜 미상') + ' · ' + sourceName(video.sourceId);
     info.append(title, meta);
-    if (video.relevance) { const tag = document.createElement('span'); tag.className = 'tag'; tag.textContent = '해원 키워드 포함'; info.append(tag); }
-    open.append(img, info); card.append(open);
+    if (video.relevance) {
+      const tag = document.createElement('span');
+      tag.className = 'tag';
+      tag.textContent = '해원 키워드 포함';
+      info.append(tag);
+    }
+    open.append(info);
+    card.append(open);
     addDetails(card, video.description, '수집 시각: ' + (video.collectedAt ? new Date(video.collectedAt).toLocaleString('ko-KR') : '기록 없음'), video.url, 'YouTube 원문 열기 ↗');
     return card;
   }));
+
   document.querySelector('#video-result-count').textContent = allVisible.length + '개 전체 · ' + videoPage + '/' + pageCount + '페이지';
   renderPagination(document.querySelector('#video-pagination'), videoPage, pageCount, page => { videoPage = page; renderVideos(); });
   empty.hidden = visible.length > 0;
