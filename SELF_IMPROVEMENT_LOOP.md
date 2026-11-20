@@ -13,6 +13,24 @@ This repository is the external working memory and test surface for an iterative
 7. **Record:** commit code/data and update this log with the change, evidence, known limits, and next priority.
 8. **Repeat:** select the next bottleneck based on evidence, not habit or user-visible novelty.
 
+## Engineering quality protocol
+
+Apply these practices within each iteration, scaled to the change:
+
+- **Requirements & acceptance criteria:** define the observed problem, constraints, expected behavior, and measurable success before coding.
+- **Architecture/decomposition:** isolate collection, parsing, normalization, deduplication, validation, persistence, rendering, and external adapters where practical; keep pure logic testable.
+- **Root-cause analysis:** fix the cause, not just the visible symptom. Check adjacent code and existing contracts before editing.
+- **Failure taxonomy:** distinguish transient failures (timeouts, 429, 5xx), permanent failures (invalid URL/unsupported format), malformed data, partial success, and empty-but-valid results. Retry only transient cases, with bounded attempts, timeout and exponential backoff/jitter where appropriate.
+- **Fallbacks:** plan permitted alternate sources or modes; do not bypass access controls, anti-bot protections, or source policies. Preserve known-good data when optional collection fails.
+- **Idempotency & deduplication:** repeated runs must not create duplicates or corrupt ordering/state. Use stable identifiers or canonical URLs and test repeated execution.
+- **Input/data contracts:** validate external input at boundaries (required fields, types, URL/date formats, size limits, schemas); reject or quarantine invalid records with clear reasons.
+- **Test layers:** unit tests for pure functions; integration tests for module/data contracts; end-to-end/workflow checks for deployment-critical paths. Include empty, duplicate, malformed, partial-failure, timeout, and boundary fixtures as relevant.
+- **Adversarial self-review:** after implementation, actively search for counterexamples, race conditions, unintended writes, regressions, security/privacy risks, and misleading success metrics. Review the patch independently of the rationale that produced it.
+- **Complexity/resource review:** consider time and memory complexity, unnecessary repeated work, API/feed quotas, rate limits, and free-tier constraints. Optimize only against evidence or a clear scaling risk.
+- **Observability:** record sanitized outcome, source/query, elapsed time, fetched/added/duplicate/invalid counts when these are actually measurable, and failure class. Never fabricate counts or mark validation passed without executing it.
+- **Verification truthfulness:** label source review, local execution, CI, live data collection, and visual deployment checks separately. A successful CI run does not prove data quality or feature effectiveness.
+- **Rollback safety:** prefer small reversible changes and protect existing data; document rollback when a change affects collection or persistence.
+
 ## Quality guardrails
 - Keep candidate discovery separate from confirmed archive records.
 - Preserve source URLs and publisher attribution; never copy full media.
