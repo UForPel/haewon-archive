@@ -4,3 +4,6 @@ export function classifyDiscoveryItem(item = {}) {
   const text = [item.title, item.description, item.url].map(value => String(value || '')).join(' ');
   return VIDEO_HINTS.test(text) ? 'video' : 'article';
 }
+export function filterArticleCandidates(items = []) {
+  return items.filter(item => classifyDiscoveryItem(item) === 'article');
+}
