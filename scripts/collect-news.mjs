@@ -11,7 +11,6 @@ function tag(raw,tagName){
  const m=raw.match(new RegExp('<'+tagName+'>([\\s\\S]*?)</'+tagName+'>','i'));
  return m?decode(m[1]):'';
 }
-}
 export function parseRss(xml,query,now=new Date().toISOString()){
  if(typeof xml!=='string'||!/<rss\b/i.test(xml))throw new Error('RSS 응답이 아닙니다');
  const items=[...xml.matchAll(/<item\b[^>]*>(.*?)<\/item>/gis)].map(([,raw])=>{
@@ -37,7 +36,10 @@ async function main(){
   incoming.push(...parseRss(await response.text(),query,now));
  }
  const merged=mergeCandidates(existing,incoming);
+ const existingUrls=new Set(existing.map(item=>item?.url?.toLowerCase()).filter(Boolean));
+ const uniqueIncoming=new Set(incoming.map(item=>item?.url?.toLowerCase()).filter(Boolean));
+ const added=[...uniqueIncoming].filter(url=>!existingUrls.has(url)).length;
  await writeFile(path,JSON.stringify(merged,null,2)+'\n');
- console.log(JSON.stringify({queries:SEARCHES.length,fetched:incoming.length,added:merged.length-existing.length,total:merged.length}));
+ console.log(JSON.stringify({queries:SEARCHES.length,fetched:incoming.length,uniqueIncoming:uniqueIncoming.size,added,duplicates:incoming.length-uniqueIncoming.size,total:merged.length}));
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(e=>{console.error(e);process.exitCode=1});
