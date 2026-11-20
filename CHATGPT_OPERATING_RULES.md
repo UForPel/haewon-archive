@@ -22,6 +22,15 @@ If a file cannot be accessed, report that limitation and do not infer its conten
 - Do not claim automatic logging after every message. Logging occurs at meaningful milestones and the end of substantial work sessions when GitHub access is available.
 - New chats must resume from repository records without asking the user to repeat documented context.
 
+## Compact, machine-readable continuity format
+- Save project conversations as **decision/work summaries**, not verbatim transcripts, unless the user explicitly requests a transcript.
+- Optimize records for fast, low-token, unambiguous rereading by ChatGPT: stable headings, concise bullets, explicit status labels, dates, paths, commit/run URLs and a single concrete next action.
+- Use a compact structured format (Markdown headings and bullets; JSON only for stable machine fields) and avoid prose repetition, speculative claims, and duplicated history.
+- Preserve all material decisions, constraints (especially free-only/cost limits), architecture/authority boundaries, accepted/rejected approaches with reasons, implementation evidence, blockers, and unresolved questions. Do not compress away meaning or invent missing facts.
+- Keep the chronological SESSION_LOG append-only; update PROJECT_MEMORY/PROJECT_STATUS/ROADMAP only when their canonical summary/status needs changing.
+- Mark facts as implemented/tested/verified separately from planned/proposed/unverified. Link to commits and workflow runs rather than copying lengthy logs.
+- On every substantial work session, save a concise continuity update before closing when repository writes are available. Do not claim a save if the commit did not succeed.
+
 ## Implementation discipline
 - Prefer working code and tests over research-only output.
 - Inspect before editing. Make the smallest coherent change.
