@@ -14,3 +14,10 @@
 .photo-card{flex-wrap:wrap}
 .photo-card .item-details{flex-basis:100%;padding:0}
 @media(max-width:760px){.archive-filters{align-items:stretch;flex-direction:column}.archive-filters label{justify-content:space-between}.archive-filters select{flex:1;max-width:none}.compact-heading{margin-top:18px}}
+
+/* In-archive discovery shortcuts */
+.discovery-shortcuts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.discovery-shortcuts a{display:flex;flex-direction:column;gap:5px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:10px;text-decoration:none;transition:transform .15s,border-color .15s}
+.discovery-shortcuts a:hover{transform:translateY(-2px);border-color:var(--accent)}
+.discovery-shortcuts strong{font-size:13px}.discovery-shortcuts span{font-size:11px;color:var(--muted)}
+@media(max-width:640px){.discovery-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}}
