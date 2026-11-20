@@ -24,6 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - name: Record workflow start time
+        run: echo "RUN_STARTED_AT=$(date -u +%Y-%m-%dT%H:%M:%S.000Z)" >> "$GITHUB_ENV"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Node
@@ -35,6 +37,14 @@ jobs:
       - name: Collect public YouTube feed
         run: npm run collect
       - name: Validate archive data
+        run: npm run validate
+      - name: Generate operational run log
+        env:
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          RUN_STARTED_AT: ${{ env.RUN_STARTED_AT }}
+        run: npm run log
+      - name: Validate archive and run logs
         run: npm run validate
       - name: Commit collected data
         run: |
