@@ -152,3 +152,30 @@ Check the latest GitHub Actions run for the final documentation/code commit. If 
 
 ### Next action
 - Verify latest Actions run triggered by operating-rule change; then continue the planned check of the outstanding schema-validator workflow run before new implementation.
+
+
+## 2026-11-20 — Initial workflow test and thumbnail schema correction
+
+### Goal
+Begin tangible implementation/testing before Gemini automation. First inspect latest Actions and repair failures.
+
+### Verified failure
+- Actions run #84: https://github.com/UForPel/haewon-archive/actions/runs/44706156313
+- 19 tests: 18 passed, 1 failed. Video schema fixture failed because thumbnail host pattern did not match `i.ytimg.com`; collection/deploy steps skipped after tests.
+- Root cause: thumbnail host regex incorrectly expected a digit-dot segment after `i`, but actual supported hosts include `i.ytimg.com` as well as `i2.ytimg.com` variants.
+
+### Correction made
+- Updated `schemas/archive-record.schema.json` thumbnail URL pattern to explicitly accept `i.ytimg.com` or numbered `iN.ytimg.com` hosts.
+- Commit: 372234688efb2f67490c5d084bfd034c33017ea1
+- Commit URL: https://github.com/UForPel/haewon-archive/commit/372234688efb2f67490c5d084bfd034c33017ea1
+
+### Verification
+- New workflow run #85 ID 44706310654 triggered by the fix.
+- At log-writing time it was in progress; success is not yet confirmed.
+
+### Error / omission prevention
+- Earlier regex change was not tested against both unnumbered and numbered real thumbnail host patterns. Add representative fixtures for both variants and verify CI output before reporting pass.
+
+### Next
+- Verify run #85 and inspect logs if failure.
+- Once tests pass, proceed to machine-readable sanitized run logs, tests and validation before Gemini dry-run integration.
