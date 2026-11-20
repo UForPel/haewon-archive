@@ -290,3 +290,19 @@ Asked whether expert software-development algorithms and practices (robustness, 
 ### Verification
 - GitHub Actions deployment triggered by latest UI commit; pending at log update.- No direct mobile-browser visual test is claimed yet. After deployment, manually inspect on phone and report any remaining overflow/layout issues.
 
+
+
+## 2026-11-20 — Discovery candidate type labeling
+
+### Observation
+- The automated discovery section was titled “newly discovered news,” but current RSS candidates include YouTube/fancam video links. This made the list's label misleading.
+
+### Change
+- Added a small classifier that labels obvious YouTube/fancam/video candidates as “영상 후보” and other links as “기사 후보.”
+- Renamed the section to “새로 발견된 콘텐츠 후보” and clarified that all entries are unreviewed candidates.
+- Added regression tests for video/article labeling.
+- Commits: 235cb86a0697e00eb6ea32d09d36dc8aa557203d (classifier), 50ac2cf48b6cfc889847a55a056b18b69f43838f (view), e5a50a2956739b05e0f279b3520f385d5a4b4859 (tests), c1962f9e76d0ad9ed7229934e060f0f712e05bb2 (section wording).
+
+### Verification
+- GitHub commits created. CI run is pending at the time of this entry; confirm test and deployment result before claiming verification.
+- Classification is heuristic, not authoritative content moderation or news verification.
