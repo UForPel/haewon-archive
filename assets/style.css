@@ -70,3 +70,7 @@ main,section,.section-heading,.controls,.date-controls,.photo-card,.video-card,.
 @media(max-width:600px){.discovery-card{grid-template-columns:1fr;gap:10px}.discovery-thumbnail{max-width:100%;aspect-ratio:16/9}.controls{align-items:stretch;flex-direction:column}.filters{flex-wrap:wrap}.date-controls{align-items:stretch;flex-wrap:wrap}.result-count{margin-left:0;width:100%}}
 
 .thumbnail-fallback{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;padding:12px;background:#eee;color:var(--muted);font-size:12px;text-align:center}
+
+/* Discovery cards support both news articles and videos surfaced by RSS. */
+.discovery-thumbnail-wrap{min-width:0;width:100%}
+.discovery-thumbnail-fallback{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/9;padding:12px;background:#eee;color:var(--muted);font-size:12px;text-align:center;border-radius:8px}
