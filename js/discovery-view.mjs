@@ -38,7 +38,7 @@ if(list&&count){
    }else{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent='미리보기 이미지 없음';thumbnail.append(fallback);}
    card.append(thumbnail);
    const details=document.createElement('div');details.className='photo-card-details';
-   const title=document.createElement('h3');title.textContent=item.title;
+   const title=document.createElement('h3');const titleLink=document.createElement('a');titleLink.href=item.url;titleLink.target='_blank';titleLink.rel='noopener noreferrer';titleLink.textContent=item.title;titleLink.className='discovery-title-link';title.append(titleLink);
    const kind=document.createElement('span');kind.className='tag';kind.textContent=classifyDiscoveryItem(item)==='video'?'뉴스 발견 영상':'기사 후보';
    const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):'')+' · 발견 후보';
    const note=document.createElement('p');note.className='photo-description';note.textContent=item.description||'검색 결과로 발견된 링크';
