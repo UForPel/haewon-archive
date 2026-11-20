@@ -11,6 +11,15 @@ function tag(raw,tagName){
  const m=raw.match(new RegExp('<'+tagName+'>([\\s\\S]*?)</'+tagName+'>','i'));
  return m?decode(m[1]):'';
 }
+export function relevanceScore(title='',description=''){
+ const text=(title+' '+description).toLowerCase();
+ let score=0;
+ if(/오해원|haewon/.i.test(text))score+=4;
+ if(/해원/.i.test(text))score+=2;
+ if(/nmixx|엔믹스/i.test(text))score+=2;
+ if(/fancam|직캠|인터뷰|interview|stage|무대|shorts|쇼츠/i.test(text))score+=1;
+ return score;
+}
 export function parseRss(xml,query,now=new Date().toISOString()){
  if(typeof xml!=='string'||!/<rss\b/i.test(xml))throw new Error('RSS 응답이 아닙니다');
  const items=[...xml.matchAll(/<item\b[^>]*>(.*?)<\/item>/gis)].map(([,raw])=>{
@@ -18,7 +27,7 @@ export function parseRss(xml,query,now=new Date().toISOString()){
   if(!title||!url||!/^https:\/\/\S+/i.test(url))return null;
   const date=pub?new Date(pub):null,publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const id=createHash('sha256').update(url).digest('hex').slice(0,20);
-  return {id,title,url,publishedAt,description:description.slice(0,1200),sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate'};
+  return {id,title,url,publishedAt,description:description.slice(0,1200),sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
  }).filter(Boolean);
  return items;
 }
