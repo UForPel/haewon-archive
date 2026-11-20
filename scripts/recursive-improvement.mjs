@@ -34,7 +34,7 @@ async function main(){
  ]);
  const report=buildImprovementCycle({discovery,videos});
  const path=resolve(ROOT,'data/improvement-cycle.json');
- await writeFile(path,JSON.stringify(report,null,2)+'\\n');
+ await writeFile(path,JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({algorithm:report.algorithm,version:report.algorithmVersion,day:report.day,pack:report.cycle.packIndex,queries:report.cycle.activeQueries.length,candidates:report.evidence.discoveryCandidates}));
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(error=>{console.error(error);process.exitCode=1});
