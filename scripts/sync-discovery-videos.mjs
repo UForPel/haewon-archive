@@ -8,7 +8,16 @@ export function youtubeId(url=''){
  const value=String(url||'');
  return value.match(/[?&]v=([\w-]{11})/)?.[1]||value.match(/youtu\.be\/([\w-]{11})/)?.[1]||value.match(/youtube\.com\/(?:shorts|embed)\/([\w-]{11})/)?.[1]||'';
 }
-export async function resolveYoutubeCandidates(items=[],fetchImpl=fetch){\n const resolved=[];\n for(const item of items){\n  if(youtubeId(item.url)){resolved.push(item);continue;}\n  if(!/youtube|유튜브|fancam|직캠|fan.?cam/i.test(String(item.title||'')))continue;\n  try{const response=await fetchImpl(item.url,{redirect:'follow',headers:{'user-agent':'HaewonArchiveBot/0.3 (public link resolver)'},signal:AbortSignal.timeout(8000)});const finalUrl=response.url||item.url;if(youtubeId(finalUrl))resolved.push({...item,url:finalUrl});}catch{}\n }\n return resolved;\n}\nexport function discoveryVideos(items=[],now=new Date().toISOString()){
+export async function resolveYoutubeCandidates(items=[],fetchImpl=fetch){
+ const resolved=[];
+ for(const item of items){
+  if(youtubeId(item.url)){resolved.push(item);continue;}
+  if(!/youtube|유튜브|fancam|직캠|fan.?cam/i.test(String(item.title||'')))continue;
+  try{const response=await fetchImpl(item.url,{redirect:'follow',headers:{'user-agent':'HaewonArchiveBot/0.3 (public link resolver)'},signal:AbortSignal.timeout(8000)});const finalUrl=response.url||item.url;if(youtubeId(finalUrl))resolved.push({...item,url:finalUrl});}catch{}
+ }
+ return resolved;
+}
+export function discoveryVideos(items=[],now=new Date().toISOString()){
  return items.filter(item=>youtubeId(item.url)).map(item=>{
   const id=youtubeId(item.url);
   const publishedAt=item.publishedAt||item.discoveredAt||now;
