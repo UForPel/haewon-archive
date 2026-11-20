@@ -247,3 +247,23 @@ Asked whether expert software-development algorithms and practices (robustness, 
 - GitHub Contents API confirmed the file was updated and commit created.
 - This is a documentation change; no code tests are claimed.
 - Follow-up: update ChatGPT operating rules to require this protocol in code tasks, then use it on a substantive feature change rather than adding process docs repeatedly.
+
+
+
+## 2026-11-20 — Run-log outcome correctness fix
+
+### Observation / root cause
+- Direct code review found `buildRunLog` mapped every non-success collector status to overall `failed`, even when the source outcome was correctly `skipped`. This misreported an intentional/no-op skip as a failure.
+- Trigger normalization also collapsed `manual` and `external_scheduler` into `unknown`, despite schema support for both.
+
+### Change
+- Map source outcome `skipped` to run status `skipped`; preserve `failed` only for collector errors.
+- Preserve `manual` and `external_scheduler` trigger types.
+- Added focused regression tests for skipped status and trigger normalization.
+- Commits: `de4b20ddfae3fbbad4169518b4311f21af8146c5` (code), `289de90caac325b3d5a69e480ed6c62981d85ce7` (tests).
+
+### Verification
+- GitHub commits confirmed. Tests and workflow result are pending; do not claim verified until Actions completes.
+
+### Next
+- Check Actions run for these commits. Then prioritize product discovery coverage over more documentation/process-only work.
