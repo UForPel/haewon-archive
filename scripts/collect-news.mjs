@@ -6,7 +6,7 @@ const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export const SEARCHES=['오해원 NMIXX','해원 엔믹스','NMIXX Haewon','Haewon fancam'];
 export function parseRss(xml,query,now=new Date().toISOString()){
  if(typeof xml!=='string'||!xml.includes('<rss'))throw new Error('RSS 응답이 아닙니다');
-  const get=(tag)=>{const m=raw.match(new RegExp('<'+tag+'(?:\\s[^>]*)?>([\\s\\S]*?)<\\/'+tag+'>','i'));return m?m[1].replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').trim():''};
+  const get=(tag)=>{const m=raw.match(new RegExp('<'+tag+'(?:\\s[^>]*)?>([\\s\\S]*?)<\\/'+tag+'>','i'));return m?m[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').trim():''};
   const get=(tag)=>{const m=raw.match(new RegExp('<'+tag+'(?:\s[^>]*)?>([\s\S]*?)<\/'+tag+'>','i'));return m?m[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').trim():''};
   const title=get('title'),url=get('link'),pub=get('pubDate'),description=get('description'),source=get('source')||'Google News';
   if(!title||!url||!/^https:\//i.test(url))return null;
