@@ -383,3 +383,35 @@ Asked whether expert software-development algorithms and practices (robustness, 
 - If a thumbnail fails to load, replace the image with a readable fallback.
 - Commit: `0a9e05fc`
 - CI run #216: **success**, including deploy.
+
+
+## 2026-11-21 — 뉴스 카드 링크·검색 조합·뉴스 유래 YouTube 통합
+
+### 사용자 피드백
+1. 뉴스 카드에서 긴 URL을 직접 보여주지 말고 제목 클릭으로 원문 이동.
+2. 기사/영상 썸네일을 제공하고 없으면 읽기 쉬운 fallback.
+3. 뉴스 RSS에서 발견한 YouTube 링크도 영상 목록에 분류해서 함께 보여주기. 공식 채널 최신 피드만으로 영상 목록을 제한하지 않기.
+4. 검색어는 이름/언어/콘텐츠 유형을 다양하게 조합.
+
+### 코드 변경
+- RSS 후보 카드 제목에 원문 링크 적용, 별도 원문 URL 액션 제거.
+- RSS thumbnail 표시/placeholder 기능 유지.
+- 뉴스에서 발견된 watch, youtu.be, shorts, embed 링크를 표준 YouTube 영상 레코드로 변환하는 `scripts/sync-discovery-videos.mjs` 추가. 기존 영상과 video ID 기준 merge.
+- Workflow에 뉴스 수집 후 영상 sync 단계 추가, npm script 및 source registry 추가.
+- YouTube 검색 프리셋 10개(해원/오해원/Haewon, 직캠, focus cam, 4K, stage, shorts, 인터뷰, variety, behind) 추가.
+- RSS 뉴스 검색은 영상 검색어와 분리하고 뉴스/인터뷰/매거진/브랜드 중심 조합으로 유지.
+
+### 검증 상태
+- 이전 run #223은 discovery test suite 실패. 당시 discovery view의 syntax error를 수정하고 테스트 블록을 정리함.
+- 이후 여러 커밋으로 workflow runs가 취소되어 최신 run #235는 pending 상태. 이 기록 시점에 최신 CI 성공을 주장하지 않음.
+- 모바일 브라우저 실화면 검증은 아직 수행하지 않음.
+
+### 주요 커밋
+- `1a18ca4` discovery card syntax fix
+- `3fb5e3f` discovery test closure fix
+- `0735b54` news title clickable
+- `cdf71c4` YouTube search presets
+- `0d5c6e2` discovery YouTube sync script
+- `8ea5588` workflow sync step
+- `6dccb99` sync regression tests
+- `bb6e3e9` source registry label
