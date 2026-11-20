@@ -6,7 +6,9 @@
   "scripts": {
     "test": "node --test",
     "collect": "node scripts/collect-youtube.mjs",
-    "collect-news": "node scripts/collect-news.mjs",\n    "sync-discovery-videos": "node scripts/sync-discovery-videos.mjs",
+    "collect-news": "node scripts/collect-news.mjs",
+    "sync-discovery-videos": "node scripts/sync-discovery-videos.mjs",
+    "improve": "node scripts/recursive-improvement.mjs",
     "validate": "node scripts/validate-data.mjs",
     "log": "node scripts/run-log.mjs"
   },
