@@ -52,7 +52,7 @@ export function mergeCandidates(existing,incoming){
  return [...map.values()].sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
 }
 export function newsFeedUrl(query){return 'https://news.google.com/rss/search?q='+encodeURIComponent(query)+'&hl=ko&gl=KR&ceid=KR:ko';}
-export async function collectFeeds({queries=SEARCHES,fetchImpl=fetch,now=new Date().toISOString()}={}){
+export async function collectFeeds({queries=getDailySearches(),fetchImpl=fetch,now=new Date().toISOString()}={}){
  const incoming=[],failures=[];
  for(const query of queries){
   try{
