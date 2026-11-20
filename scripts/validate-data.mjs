@@ -29,6 +29,17 @@ for (const path of ['data/videos.json', 'data/photos.json', 'data/sources.json',
   console.log(`OK ${path}`);
 }
 
+const discovery = JSON.parse(await readFile(new URL('data/discovery.json', root), 'utf8'));
+if (!Array.isArray(discovery)) throw new Error('data/discovery.json must be an array');
+const discoveryUrls = new Set();
+for (const [index, item] of discovery.entries()) {
+  if (!item || typeof item !== 'object' || typeof item.title !== 'string' || !item.title.trim() || typeof item.url !== 'string' || !/^https:\/\//.test(item.url) || typeof item.sourceName !== 'string' || typeof item.discoveredAt !== 'string') throw new Error(`Invalid discovery candidate at index ${index}`);
+  const key = item.url.toLowerCase();
+  if (discoveryUrls.has(key)) throw new Error('data/discovery.json contains duplicate URLs');
+  discoveryUrls.add(key);
+}
+console.log(`OK data/discovery.json (${discovery.length} discovery candidates)`);
+
 const runLogDir = new URL('data/run-logs/', root);
 try {
   const names = (await readdir(runLogDir)).filter(name => name.endsWith('.json')).sort();
