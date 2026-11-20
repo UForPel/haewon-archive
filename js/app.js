@@ -91,7 +91,8 @@ function renderVideos() {
   grid.replaceChildren(...visible.map(video => {
     const card = document.createElement('article'); card.className = 'video-card';
     const open = document.createElement('a'); open.className = 'video-open'; open.href = video.url; open.target = '_blank'; open.rel = 'noopener noreferrer';
-    const thumbnail = /^https:\/\//i.test(String(video.thumbnailUrl || '')) ? video.thumbnailUrl : '';\n    if (thumbnail) { const img = document.createElement('img'); img.src = thumbnail; img.alt = ''; img.loading = 'lazy'; img.onerror = () => { const fallback = document.createElement('div'); fallback.className = 'thumbnail-fallback'; fallback.textContent = '썸네일을 불러올 수 없습니다'; img.replaceWith(fallback); }; open.append(img); } else { const fallback = document.createElement('div'); fallback.className = 'thumbnail-fallback'; fallback.textContent = '썸네일 없음'; open.append(fallback); }
+    const thumbnail = /^https:\/\//i.test(String(video.thumbnailUrl || '')) ? video.thumbnailUrl : '';
+    if (thumbnail) { const img = document.createElement('img'); img.src = thumbnail; img.alt = ''; img.loading = 'lazy'; img.onerror = () => { const fallback = document.createElement('div'); fallback.className = 'thumbnail-fallback'; fallback.textContent = '썸네일을 불러올 수 없습니다'; img.replaceWith(fallback); }; open.append(img); } else { const fallback = document.createElement('div'); fallback.className = 'thumbnail-fallback'; fallback.textContent = '썸네일 없음'; open.append(fallback); }
     const info = document.createElement('div'); info.className = 'video-info';
     const title = document.createElement('div'); title.className = 'video-title'; title.textContent = video.title;
     const meta = document.createElement('div'); meta.className = 'video-meta';
