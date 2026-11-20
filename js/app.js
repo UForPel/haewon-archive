@@ -23,6 +23,8 @@ let filter = 'all';
 let sources = [];
 let publishedPhotos = [];
 let localPhotos = [];
+const VIDEO_PAGE_SIZE = 12;
+let videoPage = 1;
 
 function localDateValue(value) {
   if (!value) return null;
@@ -82,7 +84,10 @@ function addDetails(card, description, metadata, linkUrl, linkLabel) {
   card.append(details);
 }
 function renderVideos() {
-  const visible = filteredVideos().sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+  const allVisible = filteredVideos().sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+  const pageCount = Math.max(1, Math.ceil(allVisible.length / VIDEO_PAGE_SIZE));
+  videoPage = Math.min(videoPage, pageCount);
+  const visible = allVisible.slice((videoPage - 1) * VIDEO_PAGE_SIZE, videoPage * VIDEO_PAGE_SIZE);
   grid.replaceChildren(...visible.map(video => {
     const card = document.createElement('article'); card.className = 'video-card';
     const open = document.createElement('a'); open.className = 'video-open'; open.href = video.url; open.target = '_blank'; open.rel = 'noopener noreferrer';
@@ -97,7 +102,8 @@ function renderVideos() {
     addDetails(card, video.description, '수집 시각: ' + (video.collectedAt ? new Date(video.collectedAt).toLocaleString('ko-KR') : '기록 없음'), video.url, 'YouTube 원문 열기 ↗');
     return card;
   }));
-  document.querySelector('#video-result-count').textContent = visible.length + '개';
+  document.querySelector('#video-result-count').textContent = allVisible.length + '개 전체 · ' + videoPage + '/' + pageCount + '페이지';
+  renderPagination(document.querySelector('#video-pagination'), videoPage, pageCount, page => { videoPage = page; renderVideos(); });
   empty.hidden = visible.length > 0;
   empty.textContent = videos.length ? '조건에 맞는 영상이 없어요. 검색어나 필터를 바꿔보세요.' : '아직 표시할 영상이 없습니다.';
   videoSection.hidden = typeFilter.value === 'photo';
@@ -142,9 +148,20 @@ function renderPhotos() {
   photoSection.hidden = typeFilter.value === 'video';
 }
 function renderAll() {
+  videoPage = 1;
   renderVideos(); renderPhotos();
   const total = (typeFilter.value === 'photo' ? 0 : filteredVideos().length) + (typeFilter.value === 'video' ? 0 : filteredPhotos().length);
   resultCount.textContent = total.toLocaleString('ko-KR') + '개 표시';
+}
+function renderPagination(container, page, pageCount, onPage) {
+  if (!container) return;
+  container.replaceChildren();
+  if (pageCount <= 1) { container.hidden = true; return; }
+  container.hidden = false;
+  const previous = document.createElement('button'); previous.type = 'button'; previous.textContent = '이전'; previous.disabled = page <= 1; previous.addEventListener('click', () => onPage(page - 1));
+  const label = document.createElement('span'); label.textContent = `${page} / ${pageCount}`; label.setAttribute('aria-live', 'polite');
+  const next = document.createElement('button'); next.type = 'button'; next.textContent = '다음'; next.disabled = page >= pageCount; next.addEventListener('click', () => onPage(page + 1));
+  container.append(previous, label, next);
 }
 function setPhotoStatus(message, isError = false) {
   photoStatus.textContent = message; photoStatus.classList.toggle('error', isError);
