@@ -2,7 +2,6 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
-import { classifyDiscoveryItem } from '../js/discovery-kind.mjs';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export const SEARCHES=['오해원 NMIXX','해원 엔믹스','NMIXX Haewon'];
 function decode(value=''){
@@ -35,7 +34,7 @@ export function parseRss(xml,query,now=new Date().toISOString()){
   const date=pub?new Date(pub):null,publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const id=createHash('sha256').update(url).digest('hex').slice(0,20);
   return {id,title,url,publishedAt,description:description.slice(0,1200),thumbnailUrl:imageUrl(raw),sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
- }).filter(item => item && classifyDiscoveryItem(item) === 'article');
+ }).filter(Boolean);
  return items;
 }
 export function mergeCandidates(existing,incoming){
