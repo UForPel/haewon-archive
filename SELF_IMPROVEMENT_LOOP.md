@@ -40,3 +40,10 @@ Track, where available: feed requests succeeded/failed, items fetched, unique it
 - **Verification:** A local reconstructed fixture test run passed 4/4. This is a parser/test fixture check, not a full repository test, workflow run, live RSS fetch, or deployment verification.
 - **Limit:** Actual GitHub Actions status and live feed collection remain unverified from this session.
 - **Next:** Obtain a successful workflow run and inspect candidate relevance; then improve discovery coverage based on observed results.
+
+## Iteration record — relevance scoring (2026-11-20)
+- **Observed:** RSS candidates were all presented as equally ranked despite mixed query specificity; users had no quick signal for likely Haewon/NMIXX relevance.
+- **Hypothesis:** A transparent deterministic keyword score and relevance-first ordering will reduce review effort without discarding uncertain candidates.
+- **Change:** Added score signals for 오해원/Haewon, 해원, NMIXX/엔믹스, and content terms (fancam/직캠/interview/stage/shorts); exposed score in the discovery list; sorted candidates by score then recency. Candidates remain unconfirmed and are not auto-promoted into archive records.
+- **Verification:** Reconstructed local parser fixture tests passed 5/5, including score behavior. This is not a full repository test, live feed, Actions, or deployment verification.
+- **Next:** Verify actual RSS results and tune score only from observed precision/false positives; then pursue public video discovery.
