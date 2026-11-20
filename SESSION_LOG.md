@@ -267,3 +267,26 @@ Asked whether expert software-development algorithms and practices (robustness, 
 
 ### Next
 - Check Actions run for these commits. Then prioritize product discovery coverage over more documentation/process-only work.
+
+
+## 2026-11-20 — Mobile layout stabilization and list pagination
+
+### User report
+- On mobile, long news/discovery scrolling caused layout shifts and other sections to appear displaced; videos/news lists are too long.
+
+### Changes
+- Added pagination controls to video archive and discovery candidate lists (12 items per page).
+- Video list now renders only the current page and displays total count/page number.
+- Discovery candidate list now renders 12 items per page; search resets to page 1.
+- Constrained card content widths and added wrapping for long titles, metadata, and URLs to reduce horizontal overflow/flex displacement.
+- Added responsive pagination styles.
+
+### Commits
+- index controls: a8fbce0b3b842c59fb9e70a73ac4c619d878892c
+- video pagination: bceb54b22acc8dd3b5f845568325c121bd6952c3
+- discovery pagination: c55c956a94630859442643abb10708a856cbdfce
+- responsive card CSS: 473cc5abd5d192c9325239c9055410644b0372ea
+
+### Verification
+- GitHub Actions deployment triggered by latest UI commit; pending at log update.- No direct mobile-browser visual test is claimed yet. After deployment, manually inspect on phone and report any remaining overflow/layout issues.
+
