@@ -8,12 +8,27 @@ const count=typeof document!=='undefined'?document.querySelector('#discovery-cou
 const search=typeof document!=='undefined'?document.querySelector('#discovery-search'):null;
 if(list&&count){
  let allItems=[];
+ const PAGE_SIZE=12;
+ let page=1;
+ const pagination=document.querySelector('#discovery-pagination');
+ const renderPagination=(pageCount)=>{
+  if(!pagination)return;
+  pagination.replaceChildren();
+  if(pageCount<=1){pagination.hidden=true;return;}
+  pagination.hidden=false;
+  const prev=document.createElement('button');prev.type='button';prev.textContent='이전';prev.disabled=page<=1;prev.addEventListener('click',()=>{page--;render();});
+  const label=document.createElement('span');label.textContent=`${page} / ${pageCount}페이지`;label.setAttribute('aria-live','polite');
+  const next=document.createElement('button');next.type='button';next.textContent='다음';next.disabled=page>=pageCount;next.addEventListener('click',()=>{page++;render();});
+  pagination.append(prev,label,next);
+ };
  const render=()=>{
   const q=search?.value||'';
   const items=filterDiscoveryItems(allItems,q).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
-  count.textContent=items.length+'개'+(q.trim()?' / 검색 결과':'');
+  const pageCount=Math.max(1,Math.ceil(items.length/PAGE_SIZE));
+  page=Math.min(page,pageCount);
+  count.textContent=items.length+'개 전체'+(q.trim()?' / 검색 결과':'');
   list.replaceChildren();
-  items.slice(0,80).forEach(item=>{
+  items.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE).forEach(item=>{
    const card=document.createElement('article');card.className='photo-card';
    const details=document.createElement('div');details.className='photo-card-details';
    const title=document.createElement('h3');title.textContent=item.title;
@@ -25,9 +40,10 @@ if(list&&count){
    const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='원문 열기 ↗';
    actions.append(link);card.append(details,actions);list.append(card);
   });
+  renderPagination(pageCount);
   if(!items.length){const empty=document.createElement('p');empty.className='empty';empty.textContent=allItems.length?'검색 결과가 없습니다. 다른 검색어를 입력해 보세요.':'자동 발견 후보가 아직 없습니다.';list.append(empty);}
  };
- if(search)search.addEventListener('input',render);
+ if(search)search.addEventListener('input',()=>{page=1;render();});
  fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
   allItems=Array.isArray(items)?items:[];
   render();
