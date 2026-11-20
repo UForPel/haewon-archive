@@ -9,4 +9,3 @@ test('no-match query returns empty list',()=>{assert.deepEqual(filterDiscoveryIt
 test('YouTube and fancam candidates are labeled as videos',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon fancam'}),'video');assert.equal(classifyDiscoveryItem({url:'https://www.youtube.com/watch?v=abc'}),'video');});
 test('ordinary articles remain article candidates even when their description mentions YouTube',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon interview',url:'https://example.com/news',description:'The interview video is available on YouTube'}),'article');});
 test('article candidate list excludes video links',()=>{assert.deepEqual(filterArticleCandidates([{title:'Haewon interview'},{title:'Haewon fancam'},{title:'YouTube clip'}]).map(x=>x.title),['Haewon interview']);});
-});
