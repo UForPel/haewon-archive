@@ -47,3 +47,9 @@ Track, where available: feed requests succeeded/failed, items fetched, unique it
 - **Change:** Added score signals for 오해원/Haewon, 해원, NMIXX/엔믹스, and content terms (fancam/직캠/interview/stage/shorts); exposed score in the discovery list; sorted candidates by score then recency. Candidates remain unconfirmed and are not auto-promoted into archive records.
 - **Verification:** Reconstructed local parser fixture tests passed 5/5, including score behavior. This is not a full repository test, live feed, Actions, or deployment verification.
 - **Next:** Verify actual RSS results and tune score only from observed precision/false positives; then pursue public video discovery.
+
+## Iteration record — visible discovery access (2026-11-20)
+- **Observed:** Automated candidate list is empty (data/discovery.json currently []) and automated videos are only from the official NMIXX channel feed. The score feature therefore has little visible value until candidate data exists.
+- **Change:** Added in-archive search shortcuts for YouTube fancams/stages, Google Images, TikTok, and X; added a custom query input that opens YouTube results from inside the archive; added responsive shortcut cards. This is an honest search-launcher UI, not embedded search results or automated fan-video ingestion.
+- **Verification:** Reviewed committed HTML/module/CSS content. Full browser rendering, live platform searches, and Pages deployment remain unverified.
+- **Next:** Prioritize a permitted free source for broad video discovery and a workflow to import/verify candidate links; avoid presenting external search shortcuts as collected archive items.
