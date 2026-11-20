@@ -21,7 +21,7 @@ export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, vid
     runId: String(runId),
     startedAt,
     finishedAt,
-    trigger: ['schedule', 'push', 'workflow_dispatch'].includes(trigger) ? trigger : 'unknown',
+    trigger: trigger === 'schedule' ? 'github_schedule' : trigger === 'workflow_dispatch' ? 'workflow_dispatch' : trigger === 'push' ? 'unknown' : 'unknown',
     mode: 'production',
     status: sourceOutcome === 'success' ? 'success' : 'failed',
     sources: [{
