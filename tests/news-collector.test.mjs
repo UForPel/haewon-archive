@@ -10,7 +10,7 @@ test('비 RSS를 거부한다',()=>{assert.throws(()=>parseRss('<html/>','query'
 test('관련성 점수는 해원 및 NMIXX 키워드에 반응한다',()=>{assert.ok(relevanceScore('오해원 NMIXX 직캠','')>relevanceScore('일반 뉴스',''));});
 
 test('partial feed failure does not discard successful query results',async()=>{
- const fetchImpl=async url=>String(url).includes('오해원')?new Response(fixture,{status:200}):new Response('',{status:503});
+ const fetchImpl=async url=>decodeURIComponent(String(url)).includes('오해원')?new Response(fixture,{status:200}):new Response('',{status:503});
  const result=await collectFeeds({queries:['오해원','해원'],fetchImpl,now:'2026-11-20T00:00:00Z'});
  assert.equal(result.successfulQueries,1);
  assert.equal(result.failures.length,1);
