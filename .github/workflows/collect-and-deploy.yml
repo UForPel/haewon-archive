@@ -16,7 +16,7 @@ permissions:
 # Prevent overlapping collectors from racing while committing refreshed data.
 concurrency:
   group: haewon-archive-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   verify-collect-deploy:
