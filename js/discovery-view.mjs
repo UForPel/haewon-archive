@@ -1,8 +1,17 @@
+export function filterDiscoveryItems(items,query='') {
+ const q=String(query||'').trim().toLowerCase();
+ if(!q)return items;
+ return items.filter(item=>[item.title,item.description,item.sourceName,item.query].some(value=>String(value||'').toLowerCase().includes(q)));
+}
 const list=document.querySelector('#discovery-list');
 const count=document.querySelector('#discovery-count');
+const search=document.querySelector('#discovery-search');
 if(list&&count){
- fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
-  count.textContent=items.length+'개';
+ let allItems=[];
+ const render=()=>{
+  const q=search?.value||'';
+  const items=filterDiscoveryItems(allItems,q).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
+  count.textContent=items.length+'개'+(q.trim()?' / 검색 결과':'');
   list.replaceChildren();
   items.slice(0,80).forEach(item=>{
    const card=document.createElement('article');card.className='photo-card';
@@ -16,6 +25,11 @@ if(list&&count){
    const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='원문 열기 ↗';
    actions.append(link);card.append(details,actions);list.append(card);
   });
-  if(!items.length){const empty=document.createElement('p');empty.className='empty';empty.textContent='자동 발견 후보가 아직 없습니다.';list.append(empty);}
+  if(!items.length){const empty=document.createElement('p');empty.className='empty';empty.textContent=allItems.length?'검색 결과가 없습니다. 다른 검색어를 입력해 보세요.':'자동 발견 후보가 아직 없습니다.';list.append(empty);}
+ };
+ if(search)search.addEventListener('input',render);
+ fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
+  allItems=Array.isArray(items)?items:[[]];
+  render();
  }).catch(()=>{count.textContent='불러오기 실패';const empty=document.createElement('p');empty.className='empty';empty.textContent='자동 발견 자료를 불러오지 못했습니다.';list.replaceChildren(empty);});
 }
