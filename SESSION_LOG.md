@@ -321,3 +321,30 @@ Asked whether expert software-development algorithms and practices (robustness, 
 
 ### Verification
 - Workflow change committed. A fresh Actions run must confirm the race mitigation; conflict handling is still fail-fast rather than attempting to auto-resolve data conflicts.
+
+
+## 2026-11-20 — Separate YouTube/video discovery from article candidates and mobile layout hardening
+
+### User-reported issues
+- Sections and cards visibly break on mobile; long lists create scroll/layout instability.
+- The “news” discovery area was largely YouTube/fancam candidates, not news articles.
+- User requested separate YouTube collection/search and article/news areas, including thumbnail display.
+
+### Changes
+- Discovery classifier now exposes article filtering; article UI renders only non-video candidates.
+- RSS collector skips video/fancam/YouTube candidates before storing news discovery results.
+- Section headings now explicitly distinguish “플랫폼별 검색” from “기사 후보”; text explains RSS candidate status.
+- Mobile CSS hardens overflow, wraps section headings and filters, stacks article cards/actions, and makes quick-search controls single-column on narrow screens.
+- Video archive already uses YouTube thumbnailUrl on video cards; this remains the dedicated collected-video section.
+- Tests added for filtering video candidates from article lists.
+
+### Commits
+- classifier: 083f7cc467997ff61c2b1ff117f368d108e76930
+- collector: a1df8cc89968859ae955b0936266997d31a01c80
+- view: 0b50be114d6bf7bfa868c1cb4911c99757c6d614
+- tests: db74e81b14531eee0e1bb2040f7382e4eba24510
+- HTML: 798a880fec4e47626106dbae945a896f76341cda
+- CSS: 3c0d0568b2d48d6b2aa55839c893ba2b69123962
+
+### Verification
+- Awaiting CI run after these commits. Mobile browser visual verification remains outstanding.
