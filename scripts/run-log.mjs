@@ -22,9 +22,9 @@ export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, vid
     runId: String(runId),
     startedAt,
     finishedAt,
-    trigger: trigger === 'schedule' ? 'github_schedule' : trigger === 'workflow_dispatch' ? 'workflow_dispatch' : trigger === 'push' ? 'unknown' : 'unknown',
+    trigger: trigger === 'schedule' ? 'github_schedule' : trigger === 'workflow_dispatch' ? 'workflow_dispatch' : trigger === 'push' ? 'unknown' : trigger === 'manual' ? 'manual' : trigger === 'external_scheduler' ? 'external_scheduler' : 'unknown',
     mode: 'production',
-    status: sourceOutcome === 'success' ? 'success' : 'failed',
+    status: sourceOutcome === 'success' ? 'success' : sourceOutcome === 'skipped' ? 'skipped' : 'failed',
     sources: [{
       sourceId: status.source || 'nmixx-youtube',
       outcome: sourceOutcome,
