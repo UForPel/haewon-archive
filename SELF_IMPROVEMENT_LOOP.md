@@ -53,3 +53,10 @@ Track, where available: feed requests succeeded/failed, items fetched, unique it
 - **Change:** Added in-archive search shortcuts for YouTube fancams/stages, Google Images, TikTok, and X; added a custom query input that opens YouTube results from inside the archive; added responsive shortcut cards. This is an honest search-launcher UI, not embedded search results or automated fan-video ingestion.
 - **Verification:** Reviewed committed HTML/module/CSS content. Full browser rendering, live platform searches, and Pages deployment remain unverified.
 - **Next:** Prioritize a permitted free source for broad video discovery and a workflow to import/verify candidate links; avoid presenting external search shortcuts as collected archive items.
+
+
+## Iteration record — multi-platform quick search (2026-11-20)
+- **Observed:** The quick-search form only opened YouTube, despite shortcut cards for several platforms. This limited the feature and made the earlier improvement less visible/useful.
+- **Change:** Added a platform selector for YouTube, Google web search, Google Images, TikTok, and X; updated URL builder and mobile styling. Search query is encoded and empty input does not open a destination.
+- **Verification:** Committed HTML, module, and CSS inspected. No browser-level interaction test, full repository test run, GitHub Actions run, or deployment verification was available; treat the feature as committed but not runtime-verified.
+- **Next:** Continue toward real in-archive indexed results. Current external search launcher is a temporary discovery affordance, not the requested integrated search experience.
