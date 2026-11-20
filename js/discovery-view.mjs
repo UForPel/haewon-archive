@@ -32,9 +32,11 @@ if(list&&count){
   list.replaceChildren();
   items.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE).forEach(item=>{
    const card=document.createElement('article');card.className='photo-card discovery-card';
+   const thumbnail=document.createElement('div');thumbnail.className='discovery-thumbnail-wrap';
    if(/^https:\/\//i.test(String(item.thumbnailUrl||''))){
-    const image=document.createElement('img');image.className='discovery-thumbnail';image.src=item.thumbnailUrl;image.alt='기사 미리보기';image.loading='lazy';image.onerror=()=>image.remove();card.append(image);
-   }
+    const image=document.createElement('img');image.className='discovery-thumbnail';image.src=item.thumbnailUrl;image.alt='기사 또는 영상 미리보기';image.loading='lazy';image.onerror=()=>{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent='미리보기 이미지 없음';image.replaceWith(fallback);};thumbnail.append(image);
+   }else{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent='미리보기 이미지 없음';thumbnail.append(fallback);}
+   card.append(thumbnail;
    const details=document.createElement('div');details.className='photo-card-details';
    const title=document.createElement('h3');title.textContent=item.title;
    const kind=document.createElement('span');kind.className='tag';kind.textContent=classifyDiscoveryItem(item)==='video'?'뉴스 발견 영상':'기사 후보';
