@@ -114,3 +114,19 @@ Gemini may propose changes only to query vocabulary, combinations, and priority 
 Search presets now combine Korean/English names with content type: fancam/직캠, focus cam, 4K, stage, shorts, interview, variety, behind. These presets open YouTube directly and do not depend on the official channel Atom feed's latest-item limit.
 
 Editorial RSS searches remain focused on news, interviews, magazine, broadcast and brand topics. If an RSS candidate is a direct YouTube URL, the video sync pipeline also converts it to a canonical video record and deduplicates by video ID; it remains in discovery candidates as well. Thus discovery classification must not destructively filter or drop cross-category items.
+
+
+## Daily bounded recursive-improvement cycle (algorithm v1.1.0)
+
+The scheduled GitHub Actions workflow runs a deterministic, bounded improvement cycle after collection. The cycle rotates three editorial RSS query packs by Korea Standard Time date, records the active pack and observed candidate yield, and keeps candidate records non-destructive.
+
+The imitation loop is deliberately evidence-gated:
+1. Observe public collection outputs and query-level candidate counts.
+2. Evaluate yield and coverage proxies; do not call them precision.
+3. Select a date-rotated query pack for exploration.
+4. Record the cycle report in `data/improvement-cycle.json`.
+5. Run tests and schema/data validation before deployment.
+
+Automatic query promotion is disabled until human-reviewed relevance labels, false-positive labels and a stable evaluation sample exist. The algorithm cannot alter source permissions, privacy rules, attribution, deduplication or candidate-retention safeguards. It imitates a recursive improvement workflow; it does not modify its own source code or claim model self-training.
+
+Google News RSS wrapper links whose titles indicate YouTube/fancam are conditionally resolved through ordinary public HTTP redirects. Only final URLs that resolve to a recognized YouTube video ID enter the video archive; the original discovery candidate remains preserved.
