@@ -2,11 +2,11 @@ export function buildSearchUrl(platform, query) {
   const q = encodeURIComponent(String(query || '').trim());
   if (!q) return '';
   const urls = {
-    youtube: 'https://www.youtube.com/results?search_query=' + q,
-    google: 'https://www.google.com/search?q=' + q,
-    images: 'https://www.google.com/search?tbm=isch&q=' + q,
-    tiktok: 'https://www.tiktok.com/search?q=' + q,
-    x: 'https://x.com/search?q=' + q
+        youtube: `https://www.youtube.com/results?search_query=${q}`,
+        google: `https://www.google.com/search?q=${q}`,
+        images: `https://www.google.com/search?tbm=isch&q=${q}`,
+        tiktok: `https://www.tiktok.com/search?q=${q}`,
+        x: `https://x.com/search?q=${q}`
   };
   return urls[platform] || urls.youtube;
 }
