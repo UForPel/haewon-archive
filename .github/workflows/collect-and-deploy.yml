@@ -38,6 +38,10 @@ jobs:
         run: npm run collect
       - name: Discover public news RSS candidates
         run: npm run collect-news
+      - name: Merge YouTube links discovered from news
+        run: npm run sync-discovery-videos
+      - name: Run bounded daily improvement cycle
+        run: npm run improve
       - name: Validate archive data
         run: npm run validate
       - name: Generate operational run log
