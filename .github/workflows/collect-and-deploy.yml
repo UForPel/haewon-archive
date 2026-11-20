@@ -53,28 +53,37 @@ jobs:
       - name: Validate archive and run logs
         run: npm run validate
       - name: Commit collected data
+        env:
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          RUN_STARTED_AT: ${{ env.RUN_STARTED_AT }}
         run: |
-          if [[ -n "$(git status --porcelain data/)" ]]; then
+          # Always regenerate against the latest main to avoid stale JSON rebase conflicts.
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            npm run collect
+            npm run collect-news
+            npm run sync-discovery-videos
+            npm run improve
+            npm run validate
+            npm run log
+            if [[ -z "$(git status --porcelain data/)" ]]; then
+              echo "No data changes to commit."
+              exit 0
+            fi
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/
-            git commit -m "data: refresh official NMIXX video feed"
-            # Reconcile commits that landed while this collector was running.
-            for attempt in 1 2 3; do
-              git fetch origin main
-              git rebase origin/main
-              if git push; then
-                break
-              fi
-              if [[ "$attempt" -eq 3 ]]; then
-                echo "::error::Push failed after 3 attempts."
-                exit 1
-              fi
-              sleep 2
-            done
-          else
-            echo "No data changes to commit."
-          fi
+            git commit -m "data: refresh archive discovery and improvement cycle"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push race on attempt $attempt; refreshing source data from latest main."
+            sleep 2
+          done
+          echo "::error::Push failed after 3 regenerate-and-push attempts."
+          exit 1
       - name: Check whether GitHub Pages is configured
         id: pages
         env:
