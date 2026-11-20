@@ -13,10 +13,10 @@ function tag(raw,tagName){
  return m?decode(m[1]):'';
 }
 function imageUrl(raw){
- const tag=raw.match(/<(?:media:thumbnail|media:content)\\b[^>]*>/i)?.[0]||'';
- const url=tag.match(/\\burl=["']([^"']+)["']/i)?.[1]||'';
+ const markup=raw.match(/<(?:media:thumbnail|media:content)\b[^>]*>/i)?.[0]||'';
+ const url=markup.match(/\burl=["']([^"']+)["']/i)?.[1]||'';
  const decoded=decode(url);
- return /^https:\\/\\//i.test(decoded)?decoded:'';
+ return /^https:\/\//i.test(decoded)?decoded:'';
 }
 export function relevanceScore(title='',description=''){
  const text=(title+' '+description).toLowerCase();
