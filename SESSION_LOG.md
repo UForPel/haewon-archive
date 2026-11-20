@@ -415,3 +415,35 @@ Asked whether expert software-development algorithms and practices (robustness, 
 - `8ea5588` workflow sync step
 - `6dccb99` sync regression tests
 - `bb6e3e9` source registry label
+
+
+## 2026-11-21 — 날짜 기반 재귀개선 모방 알고리즘 v1.1.0
+
+### CI 실패 원인과 수정
+- Actions #237 실패 원인은 `package.json`에 잘못 삽입된 문자형 `\\n` 때문에 npm이 JSON을 읽지 못한 것. package.json을 정상 JSON으로 재작성.
+- 이후 Actions #243은 기존 `tests/discovery-search.test.mjs` 끝의 불필요한 `});`로 테스트 파일이 실패. 해당 문자를 제거.
+- 실패 로그를 확인하고 수정했으며, 최신 커밋의 CI 결과는 아직 대기 중.
+
+### 알고리즘 구조
+- KST 날짜를 기준으로 3개 편집/뉴스 검색어 팩을 순환하는 결정적 탐색 루틴 추가.
+- 각 실행은 발견 후보를 검색어별로 집계하고, 관찰 가능한 수집량/커버리지 proxy를 기록.
+- `data/improvement-cycle.json`에 알고리즘 버전, 날짜, 선택 팩, 다음 팩, 후보 수, 제한사항을 기록.
+- Google News RSS wrapper가 YouTube/fancam 영상 제목을 가진 경우 공개 HTTP redirect를 따라가 최종 URL이 YouTube 영상 ID로 확인되면 영상 목록에 편입. 원래 뉴스 후보는 유지.
+- workflow에서 뉴스 수집 → YouTube redirect resolve/중복 통합 → 일별 개선 사이클 → 데이터 검증 순서로 실행.
+- 테스트에서 날짜별 팩 결정성, KST 날짜 경계, 미검증 정밀도 과장 방지, Google News redirect 변환을 확인.
+
+### 검증 원칙
+- 이 구조는 재귀개선 *모방* 알고리즘이며 모델 자체의 자기학습이나 코드 자체수정이 아님.
+- 검토된 정답 라벨이 없으므로 precision은 `not_measured`; 후보 수만으로 검색어 자동 승격하지 않음.
+- 자동으로 변경하는 범위는 날짜 기반 검색어 팩 순환 및 성과 기록에 한정. 권한/개인정보/출처 정책/중복제거/후보 보존은 불변.
+- 실효성 검증은 최신 GitHub Actions 전체 통과 후에만 인정.
+
+### 주요 커밋
+- `a266bc9` package.json repair and improve command
+- `6f40355`, `011ea79` daily query pack rotation
+- `ddc0024` improvement cycle v1.1.0
+- `492e721` workflow integration
+- `6ab87fc` algorithm tests
+- `7c0d72e` discovery test syntax repair
+- `90a4050`, `3013f75` Google News redirect resolver
+- `a40a00a` redirect regression test
