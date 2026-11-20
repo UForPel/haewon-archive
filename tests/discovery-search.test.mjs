@@ -7,4 +7,5 @@ test('discovery query filters title, source and description case-insensitively',
 test('empty query returns every candidate',()=>{assert.equal(filterDiscoveryItems(items,'').length,2);});
 test('no-match query returns empty list',()=>{assert.deepEqual(filterDiscoveryItems(items,'missing'),[]);});
 test('YouTube and fancam candidates are labeled as videos',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon fancam'}),'video');assert.equal(classifyDiscoveryItem({description:'YouTube'}),'video');});
-test('ordinary articles remain article candidates',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon interview',url:'https://example.com/news'}),'article');});\ntest('article candidate list excludes video links',()=>{assert.deepEqual(filterArticleCandidates([{title:'Haewon interview'},{title:'Haewon fancam'},{title:'YouTube clip'}]).map(x=>x.title),['Haewon interview']);});
+test('ordinary articles remain article candidates',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon interview',url:'https://example.com/news'}),'article');});
+test('article candidate list excludes video links',()=>{assert.deepEqual(filterArticleCandidates([{title:'Haewon interview'},{title:'Haewon fancam'},{title:'YouTube clip'}]).map(x=>x.title),['Haewon interview']);});
