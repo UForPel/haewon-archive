@@ -14,8 +14,8 @@ function tag(raw,tagName){
 export function relevanceScore(title='',description=''){
  const text=(title+' '+description).toLowerCase();
  let score=0;
- if(/오해원|haewon/.i.test(text))score+=4;
- if(/해원/.i.test(text))score+=2;
+ if(/오해원|haewon/i.test(text))score+=4;
+ if(/해원/i.test(text))score+=2;
  if(/nmixx|엔믹스/i.test(text))score+=2;
  if(/fancam|직캠|인터뷰|interview|stage|무대|shorts|쇼츠/i.test(text))score+=1;
  return score;
