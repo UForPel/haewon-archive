@@ -45,12 +45,22 @@ function validateNode(value, schema, root, path, errors) {
   }
 
   if (schema.oneOf) {
-    const matches = schema.oneOf.filter(candidate => {
+    const candidates = schema.oneOf.map(candidate => {
       const candidateErrors = [];
       validateNode(value, candidate, root, path, candidateErrors);
-      return candidateErrors.length === 0;
-    }).length;
-    if (matches !== 1) errors.push(`${path}: exactly one schema variant must match (matched ${matches})`);
+      return candidateErrors;
+    });
+    const matches = candidates.filter(candidateErrors => candidateErrors.length === 0).length;
+    if (matches !== 1) {
+      errors.push(`${path}: exactly one schema variant must match (matched ${matches})`);
+      if (matches === 0 && candidates.length) {
+        // Surface the closest variant's diagnostics so callers can see the
+        // underlying field failure instead of only a generic oneOf message.
+        const closest = candidates.reduce((best, candidate) =>
+          candidate.length < best.length ? candidate : best, candidates[0]);
+        errors.push(...closest);
+      }
+    }
     return;
   }
 
