@@ -1,4 +1,4 @@
-import { filterArticleCandidates } from './discovery-kind.mjs';
+import { classifyDiscoveryItem } from './discovery-kind.mjs';
 
 export function filterDiscoveryItems(items,query='') {
  const q=String(query||'').trim().toLowerCase();
@@ -25,7 +25,7 @@ if(list&&count){
  };
  const render=()=>{
   const q=search?.value||'';
-  const items=filterDiscoveryItems(filterArticleCandidates(allItems),q).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
+  const items=filterDiscoveryItems(allItems,q).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
   const pageCount=Math.max(1,Math.ceil(items.length/PAGE_SIZE));
   page=Math.min(page,pageCount);
   count.textContent=items.length+'개 전체'+(q.trim()?' / 검색 결과':'');
@@ -37,7 +37,7 @@ if(list&&count){
    }
    const details=document.createElement('div');details.className='photo-card-details';
    const title=document.createElement('h3');title.textContent=item.title;
-   const kind=document.createElement('span');kind.className='tag';kind.textContent='기사 후보';
+   const kind=document.createElement('span');kind.className='tag';kind.textContent=classifyDiscoveryItem(item)==='video'?'뉴스 발견 영상':'기사 후보';
    const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):'')+' · 발견 후보';
    const note=document.createElement('p');note.className='photo-description';note.textContent=item.description||'검색 결과로 발견된 링크';
    const score=document.createElement('p');score.className='photo-meta';score.textContent='관련성 점수 '+(Number.isFinite(item.relevanceScore)?item.relevanceScore:'미평가')+' · 검토 전 후보';
