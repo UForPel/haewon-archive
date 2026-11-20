@@ -3,7 +3,16 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-export const SEARCHES=[\n '오해원 NMIXX','해원 엔믹스','NMIXX Haewon','Haewon NMIXX interview','오해원 인터뷰','Haewon NMIXX news','NMIXX Haewon magazine','오해원 방송','해원 엔믹스 기사','Haewon NMIXX brand'\n];
+export const SEARCH_PACKS = [
+  ['오해원 NMIXX','해원 엔믹스','NMIXX Haewon','Haewon NMIXX news'],
+  ['Haewon NMIXX interview','오해원 인터뷰','NMIXX Haewon magazine','Haewon NMIXX brand'],
+  ['오해원 방송','해원 엔믹스 기사','NMIXX Haewon appearance','Haewon NMIXX event']
+];
+export const SEARCHES = SEARCH_PACKS.flat();
+export function getDailySearches(day = new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'})) {
+  const dayNumber = Math.floor(Date.parse(day+'T00:00:00Z') / 86400000);
+  return SEARCH_PACKS[((dayNumber % SEARCH_PACKS.length)+SEARCH_PACKS.length)%SEARCH_PACKS.length];
+}
 function decode(value=''){
  return value.replace(/<!\[CDATA\[(.*?)\]\]>/gs,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").trim();
 }
