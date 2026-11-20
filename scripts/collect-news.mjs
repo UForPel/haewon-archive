@@ -6,10 +6,10 @@ const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export const SEARCHES=['오해원 NMIXX','해원 엔믹스','NMIXX Haewon','Haewon fancam'];
 export function parseRss(xml,query,now=new Date().toISOString()){
  if(typeof xml!=='string'||!xml.includes('<rss'))throw new Error('RSS 응답이 아닙니다');
- const items=[...xml.matchAll(/<item(?:\\s[^>]*)?>([\\s\\S]*?)<\\/item>/gi)].map(([,raw])=>{
-  const get=(tag)=>{const m=raw.match(new RegExp('<'+tag+'(?:\\s[^>]*)?>([\\s\\S]*?)<\\/'+tag+'>','i'));return m?m[1].replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').trim():''};
+ const items=[...xml.matchAll(/<item(?:\s[^>]*)?>([\s\S]*?)<\/item>/gi)].map(([,raw])=>{
+  const get=(tag)=>{const m=raw.match(new RegExp('<'+tag+'(?:\s[^>]*)?>([\s\S]*?)<\/'+tag+'>','i'));return m?m[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').trim():''};
   const title=get('title'),url=get('link'),pub=get('pubDate'),description=get('description'),source=get('source')||'Google News';
-  if(!title||!url||!/^https:\\//i.test(url))return null;
+  if(!title||!url||!/^https:\//i.test(url))return null;
   const date=pub?new Date(pub):null;
   const publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const id=createHash('sha256').update(url).digest('hex').slice(0,20);
@@ -31,7 +31,7 @@ async function main(){
   incoming.push(...parseRss(await response.text(),query,now));
  }
  const merged=mergeCandidates(existing,incoming);
- await writeFile(path,JSON.stringify(merged,null,2)+'\\n');
+ await writeFile(path,JSON.stringify(merged,null,2)+'\n');
  console.log(JSON.stringify({queries:SEARCHES.length,fetched:incoming.length,added:merged.length-existing.length,total:merged.length}));
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(e=>{console.error(e);process.exitCode=1});
