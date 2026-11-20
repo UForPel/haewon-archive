@@ -226,3 +226,24 @@ Previous progress reports were too short and sequential, lacked whole-project ri
 - Governance and logging work has expanded ahead of the product's core coverage. Stop adding process/documentation-only improvements unless a concrete risk requires them.
 - Next high-value product work: Haewon Daily, then permitted public discovery for fan videos, then integrated search/classification improvements.
 - Project status/roadmap are updated to reflect that run-log failure-path handling remains incomplete and feature work should take priority.
+
+
+## 2026-11-20 — Engineering quality protocol added
+
+### User question / direction
+Asked whether expert software-development algorithms and practices (robustness, accuracy, efficiency, fallbacks) are being documented for future iterations.
+
+### Repository audit
+- README references `SELF_IMPROVEMENT_LOOP.md`.
+- Existing loop already covers observe → diagnose → hypothesis → change → verify → measure → record, quality guardrails, metrics and iteration records.
+- The newly discussed engineering practices were not yet fully formalized in that document.
+
+### Documentation change
+- Added an Engineering quality protocol to `SELF_IMPROVEMENT_LOOP.md`: acceptance criteria, decomposition, root-cause analysis, failure taxonomy, bounded retry/backoff, permitted fallbacks, idempotency, boundary validation, layered tests, adversarial review, complexity/resource review, observability, truthful verification labels, and rollback safety.
+- Commit: 30a0c035dbbf3fb7c4ab448137ad083e19b671a
+- URL: https://github.com/UForPel/haewon-archive/commit/30a0c035dbbf3fb7c4ab448137ad083e19b671a
+
+### Verification
+- GitHub Contents API confirmed the file was updated and commit created.
+- This is a documentation change; no code tests are claimed.
+- Follow-up: update ChatGPT operating rules to require this protocol in code tasks, then use it on a substantive feature change rather than adding process docs repeatedly.
