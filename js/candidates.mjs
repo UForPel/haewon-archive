@@ -9,7 +9,7 @@ export function normalizeCandidate(entry) {
   if (notes.length>500) throw new Error('메모는 500자 이내입니다.');
   let url; try { url=new URL(rawUrl); } catch { throw new Error('URL을 확인해 주세요.'); }
   if(url.protocol!=='https:'||url.username||url.password) throw new Error('HTTPS 링크만 등록할 수 있습니다.');
-  if(publishedAt && (!/^\\d{4}-\\d{2}-\\d{2}$/.test(publishedAt)||Number.isNaN(Date.parse(publishedAt+'T00:00:00Z'))||new Date(publishedAt+'T00:00:00Z').toISOString().slice(0,10)!==publishedAt)) throw new Error('게시 날짜를 확인해 주세요.');
+  if(publishedAt && (!/^\d{4}-\d{2}-\d{2}$/.test(publishedAt)||Number.isNaN(Date.parse(publishedAt+'T00:00:00Z'))||new Date(publishedAt+'T00:00:00Z').toISOString().slice(0,10)!==publishedAt)) throw new Error('게시 날짜를 확인해 주세요.');
   return {id:String(entry.id??'').trim(),type,title,sourceName,url:url.href,publishedAt,notes,status:'review'};
 }
 export function validateCandidates(items) {
