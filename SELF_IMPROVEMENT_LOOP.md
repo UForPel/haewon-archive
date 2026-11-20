@@ -32,3 +32,11 @@ Track, where available: feed requests succeeded/failed, items fetched, unique it
 4. Improve source diversity beyond official channels.
 5. Add social discovery pointers where public RSS/API access is supported; otherwise record searchable source pointers, not brittle scraping.
 6. Review the archive UI and unify discovery candidates with archive search/filtering.
+
+
+## Iteration record — RSS collector syntax and metrics repair (2026-11-20)
+- **Observed:** The RSS collector had a stray closing brace and its test file lacked a closing test block, preventing the workflow's test-first stage from running. The previous `added` count also used total merged length minus existing length, which can misreport when duplicates exist.
+- **Change:** Removed the extra brace; closed the test suite; calculated `added` from unique incoming URLs absent from existing data and added `uniqueIncoming`/`duplicates` metrics to output.
+- **Verification:** A local reconstructed fixture test run passed 4/4. This is a parser/test fixture check, not a full repository test, workflow run, live RSS fetch, or deployment verification.
+- **Limit:** Actual GitHub Actions status and live feed collection remain unverified from this session.
+- **Next:** Obtain a successful workflow run and inspect candidate relevance; then improve discovery coverage based on observed results.
