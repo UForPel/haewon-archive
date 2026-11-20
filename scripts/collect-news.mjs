@@ -56,7 +56,7 @@ async function main(){
  const existingUrls=new Set(existing.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const uniqueIncoming=new Set(incoming.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const added=[...uniqueIncoming].filter(url=>!existingUrls.has(url)).length;
- await writeFile(path,JSON.stringify(merged,null,2)+'\\n');
+ await writeFile(path,JSON.stringify(merged,null,2)+'\n');
  console.log(JSON.stringify({queries,successfulQueries,failedQueries:failures, fetched:incoming.length,uniqueIncoming:uniqueIncoming.size,added,duplicates:incoming.length-uniqueIncoming.size,total:merged.length}));
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(e=>{console.error(e);process.exitCode=1});
