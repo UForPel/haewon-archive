@@ -107,3 +107,10 @@ Prefer high-yield, diverse sources. Do not let a single platform dominate simply
 Track precision and coverage separately. A source/query that finds many candidates but few verified items is not necessarily valuable. Keep a fixed human-reviewed sample to evaluate changes and record false positives and missed items.
 
 Gemini may propose changes only to query vocabulary, combinations, and priority ordering. Proposals require sanitized run evidence, expected impact, rollback notes and fixed-sample evaluation. Source permissions, security boundaries and protected rules cannot be changed by search optimization.
+
+
+## Expanded combination presets and cross-pipeline preservation (2026-11-21)
+
+Search presets now combine Korean/English names with content type: fancam/직캠, focus cam, 4K, stage, shorts, interview, variety, behind. These presets open YouTube directly and do not depend on the official channel Atom feed's latest-item limit.
+
+Editorial RSS searches remain focused on news, interviews, magazine, broadcast and brand topics. If an RSS candidate is a direct YouTube URL, the video sync pipeline also converts it to a canonical video record and deduplicates by video ID; it remains in discovery candidates as well. Thus discovery classification must not destructively filter or drop cross-category items.
