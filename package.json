@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node --test",
     "collect": "node scripts/collect-youtube.mjs",
-    "validate": "node scripts/validate-data.mjs"
+    "validate": "node scripts/validate-data.mjs",
+    "log": "node scripts/run-log.mjs"
   },
   "engines": {
     "node": ">=20"
