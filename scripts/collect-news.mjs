@@ -8,7 +8,7 @@ function decode(value=''){
  return value.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").trim();
 }
 export function parseRss(xml,query,now=new Date().toISOString()){
- if(typeof xml!=='string'||!/<rss\b/i.test(xml))throw new Error('RSS 응답이 아닙니다');
+  const get=(tag)=>{const match=raw.match(new RegExp('<'+tag+'>([\\s\\S]*?)</'+tag+'>','i'));return match?decode(match[1]):''};
  const items=[...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map(([,raw])=>{
   const get=(tag)=>{const match=raw.match(new RegExp('<'+tag+'>([\\\\s\\\\S]*?)</'+tag+'>','i'));return match?decode(match[1]):''};
   const title=get('title'),url=get('link'),pub=get('pubDate'),description=get('description'),source=get('source')||'Google News';
