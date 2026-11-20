@@ -62,3 +62,9 @@ main,section,.section-heading,.controls,.date-controls,.photo-card,.video-card,.
  .date-controls input{max-width:100%;min-width:0}
  .pagination{flex-wrap:wrap}
 }
+
+/* Article candidate thumbnails: preserve readable text on narrow screens. */
+.discovery-card{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);align-items:start;gap:14px}
+.discovery-thumbnail{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#eee;border-radius:8px}
+.discovery-card .photo-card-details{min-width:0;overflow-wrap:anywhere}
+@media(max-width:600px){.discovery-card{grid-template-columns:1fr;gap:10px}.discovery-thumbnail{max-width:100%;aspect-ratio:16/9}.controls{align-items:stretch;flex-direction:column}.filters{flex-wrap:wrap}.date-controls{align-items:stretch;flex-wrap:wrap}.result-count{margin-left:0;width:100%}}
