@@ -51,7 +51,10 @@ export async function collectFeeds({queries=SEARCHES,fetchImpl=fetch,now=new Dat
 async function main(){
  const path=resolve(ROOT,'data/discovery.json'),existing=JSON.parse(await readFile(path,'utf8')),now=new Date().toISOString();
  const {incoming,failures,queries,successfulQueries}=await collectFeeds({now});
- if(successfulQueries===0)throw new Error('All news RSS queries failed; existing data preserved.');
+ if(successfulQueries===0){
+  console.warn(JSON.stringify({status:'skipped',reason:'all-news-feeds-unavailable',queries,successfulQueries,failedQueries:failures,existingCandidatesPreserved:existing.length}));
+  return;
+ }
  const merged=mergeCandidates(existing,incoming);
  const existingUrls=new Set(existing.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const uniqueIncoming=new Set(incoming.map(item=>item?.url?.toLowerCase()).filter(Boolean));
