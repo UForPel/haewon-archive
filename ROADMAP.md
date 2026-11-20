@@ -26,14 +26,16 @@
 - [x] Add initial search strategy and classification rules
 - [x] Add policy changelog and target JSON schemas
 - [x] Enforce archive-record JSON Schema in the validator and add tests
-- [ ] Add dry-run run logs and enforce the run-log schema
+- [x] Add operational run logs and enforce the run-log schema (success-path verified; failure-path incomplete)
 - [ ] Verify Gemini API features, quotas, pricing and data terms
 - [ ] Verify external scheduler and secure trigger gateway
 - [ ] Implement Gemini-assisted permitted public discovery
 - [ ] Implement evidence-based constrained policy updates
 - [ ] Start external scheduler only after dry-run and security tests pass
 
-## Next
+## Next — prioritize actual user value
+- [ ] Implement Haewon Daily from permitted official sources with change detection and original links
+- [ ] Expand video discovery beyond the official feed through permitted public sources
 - [ ] Add source health and per-run collection history
 - [ ] Add additional official sources only when they provide supported public feeds or documented access
 - [ ] Expand fan-video discovery only through sources whose automated access is permitted

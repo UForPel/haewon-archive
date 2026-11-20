@@ -99,6 +99,7 @@ async function main() {
       lastSuccessAt: new Date().toISOString(),
       itemsFetched: incoming.length,
       itemsAdded: added,
+      itemsDuplicate: incoming.length - added,
       totalItems: merged.length,
       message: '공개 YouTube 채널 피드 수집 완료'
     }, null, 2) + '\n');
@@ -110,6 +111,9 @@ async function main() {
     await writeFile(statusPath, JSON.stringify({
       ...previous,
       status: 'error',
+      itemsFetched: 0,
+      itemsAdded: 0,
+      itemsDuplicate: 0,
       lastAttemptAt: attemptedAt,
       message: error.message
     }, null, 2) + '\n');

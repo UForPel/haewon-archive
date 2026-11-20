@@ -15,6 +15,7 @@ function readJson(path) {
 export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, videoCount, photoCount, changedPaths = [] }) {
   const itemsFetched = Number(status.itemsFetched) || 0;
   const itemsAdded = Number(status.itemsAdded) || 0;
+  const itemsDuplicate = Number(status.itemsDuplicate) || 0;
   const sourceOutcome = status.status === 'success' ? 'success' : status.status === 'error' ? 'failed' : 'skipped';
   const record = {
     schemaVersion: '1.0.0',
@@ -34,7 +35,7 @@ export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, vid
       discovered: itemsFetched,
       accepted: itemsAdded,
       rejected: 0,
-      duplicates: Math.max(0, itemsFetched - itemsAdded),
+      duplicates: itemsDuplicate,
       uncertain: 0
     },
     validation: { passed: true, errors: [] },

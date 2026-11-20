@@ -208,3 +208,21 @@ Previous progress reports were too short and sequential, lacked whole-project ri
 3. Review workflow concurrency and commit batching to avoid cancellations.
 4. Add focused tests for failure/outcome/accurate counts, run the full suite and validate actual generated logs.
 5. Update PROJECT_STATUS, ROADMAP, PROJECT_MEMORY and append SESSION_LOG before moving to Haewon Daily.
+
+
+## 2026-11-20 — Workflow cancellation risk and project direction
+
+### Implemented and verified
+- Changed `.github/workflows/collect-and-deploy.yml` concurrency to `cancel-in-progress: false`, so new runs queue rather than cancel active runs in the same group.
+- Commit: `6cf2b535dd539f00163ec6a9fbb800c63221f77b`.
+- Actions #96 completed successfully: https://github.com/UForPel/haewon-archive/actions/runs/44708067028
+- Prior run #95 also succeeded: https://github.com/UForPel/haewon-archive/actions/runs/44707182754
+
+### Actual collection result (run #96)
+- 15 valid feed items observed; 0 new items; 17 total videos.
+- This is operational success but no archive growth. Do not count it as user-facing feature progress.
+
+### Assessment / priority correction
+- Governance and logging work has expanded ahead of the product's core coverage. Stop adding process/documentation-only improvements unless a concrete risk requires them.
+- Next high-value product work: Haewon Daily, then permitted public discovery for fan videos, then integrated search/classification improvements.
+- Project status/roadmap are updated to reflect that run-log failure-path handling remains incomplete and feature work should take priority.

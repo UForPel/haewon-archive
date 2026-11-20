@@ -1,6 +1,6 @@
 # Project status
 
-Last updated: 2026-11-19
+Last updated: 2026-11-20
 
 ## Governance documentation update (2026-11-19)
 - Added protected `SECURITY_POLICY.md` and `COLLECTION_RULES.md`.
@@ -8,7 +8,7 @@ Last updated: 2026-11-19
 - Added `POLICY_CHANGELOG.md`.
 - Added `schemas/archive-record.schema.json` and `schemas/run-log.schema.json` as contracts.
 - Updated `GEMINI.md`, `PROJECT_MEMORY.md` and `AUTOMATION_PLAN.md` to enforce proposal-only Gemini behavior and trusted-workflow validation.
-- `scripts/validate-data.mjs` now enforces `archive-record.schema.json` for every video and photo-link record. `run-log.schema.json` remains a future contract and is not yet emitted/validated.
+- `scripts/validate-data.mjs` now enforces `archive-record.schema.json` for every video and photo-link record. `run-log.schema.json` is now enforced for generated logs. The collector workflow emits a log on successful runs; failure-path logging remains incomplete.
 
 ## Schema validation implementation (2026-11-19)\n- Added `scripts/json-schema.mjs`, a dependency-free validator for the JSON Schema subset used by this repository (local `$ref`, `oneOf`, types, required/properties, additionalProperties, lengths, patterns, formats, enums/constants and array limits).\n- Added `tests/json-schema.test.mjs` for valid video/photo records and invalid types, URLs, dates, extra fields and incomplete objects.\n- Existing `validatePhotoEntries` checks remain in place, with schema validation layered on top.\n- Existing video IDs are also checked for duplicates.\n- Runtime test and Actions result must be confirmed from the latest run before marking this as tested.\n\n## Automation status — NOT IMPLEMENTED
 - No external scheduler, trigger gateway, Gemini API integration, five-minute workflow, automated fan-video collector, automated photo crawler or policy updater exists.
@@ -52,3 +52,10 @@ Last updated: 2026-11-19
 2. Add a dry-run-only collection/run-log contract before integrating Gemini.
 3. Verify Gemini API capabilities, current quotas and data terms from Google documentation.
 4. Verify external scheduler and secure dispatch design before selecting or enabling it.
+
+
+## Verified operational improvements (2026-11-20)
+- Run #95 succeeded: tests, collection, archive validation, run-log generation/validation, commit and Pages deployment.
+- Run #96 succeeded after changing workflow concurrency to `cancel-in-progress: false`; active runs are no longer cancelled by newer runs in the same concurrency group. Queue behavior still needs observation under repeated triggers.
+- Latest collector observed 15 valid feed items, 0 additions, 17 total records. This is a successful no-new-item run, not a content-growth milestone.
+- Operational run-log counts still need refinement; duplicate/rejected semantics and failure-path logging remain open.
