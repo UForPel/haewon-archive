@@ -27,3 +27,5 @@ test('news collector search list does not include fancam query',async()=>{
  const {SEARCHES}=await import('../scripts/collect-news.mjs');
  assert.ok(SEARCHES.every(query=>!/(fancam|직캠)/i.test(query)));
 });
+
+test('RSS YouTube video link is retained as a candidate with its thumbnail',()=>{const xml='<rss><channel><item><title>Haewon official stage video</title><link>https://www.youtube.com/watch?v=video123</link><description>Official clip</description><media:thumbnail url="https://img.example/youtube.jpg" /></item></channel></rss>';const [item]=parseRss(xml,'Haewon');assert.equal(item.url,'https://www.youtube.com/watch?v=video123');assert.equal(item.thumbnailUrl,'https://img.example/youtube.jpg');});
