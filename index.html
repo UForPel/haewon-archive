@@ -34,7 +34,7 @@
       <label>종료일 <input id="date-to" type="date"></label>
       <span id="result-count" class="result-count" aria-live="polite">불러오는 중</span>
     </section>
-    <section aria-label="영상 목록" id="video-section"><div class="section-heading compact-heading"><div><p class="eyebrow">VIDEO ARCHIVE</p><h2>영상</h2></div><span id="video-result-count" class="photo-count">0개</span></div><div id="video-grid" class="video-grid" aria-live="polite"></div><p id="empty" class="empty" hidden>조건에 맞는 영상이 없습니다.</p></section>
+    <section aria-label="영상 목록" id="video-section"><div class="section-heading compact-heading"><div><p class="eyebrow">VIDEO ARCHIVE</p><h2>영상</h2></div><span id="video-result-count" class="photo-count">0개</span></div><div id="video-grid" class="video-grid" aria-live="polite"></div><nav class="pagination" id="video-pagination" aria-label="영상 페이지 이동"></nav><p id="empty" class="empty" hidden>조건에 맞는 영상이 없습니다.</p></section>
 
     <section class="photo-section" aria-labelledby="quick-discovery-heading">
       <div class="section-heading"><div><p class="eyebrow">LIVE SEARCH SHORTCUTS</p><h2 id="quick-discovery-heading">콘텐츠 바로 찾기</h2></div>
@@ -53,7 +53,7 @@
       <div class="section-heading"><div><p class="eyebrow">AUTOMATED DISCOVERY</p><h2 id="discovery-heading">새로 발견된 뉴스</h2></div><span id="discovery-count" class="photo-count">0개</span></div>
       <p class="photo-policy">검색 RSS에서 자동 발견한 링크입니다. 아직 AI 검토를 거친 확정 자료가 아니라 발견 후보입니다. 제목·설명·출처를 검색해 후보를 좁힐 수 있습니다.</p>
       <label class="discovery-search-label" for="discovery-search">발견 후보 검색</label><input id="discovery-search" class="discovery-search" type="search" placeholder="뉴스 제목, 출처, 설명 검색">
-      <div id="discovery-list" class="photo-list" aria-live="polite"></div>
+      <div id="discovery-list" class="photo-list" aria-live="polite"></div><nav class="pagination" id="discovery-pagination" aria-label="뉴스 페이지 이동"></nav>
     </section>
     <section class="photo-section" aria-labelledby="photo-heading">
       <div class="section-heading">
