@@ -39,3 +39,15 @@ test('duplicate count is taken from explicit collector metric, not inferred', ()
   const log = buildRunLog({ ...base, status: { ...base.status, itemsDuplicate: 4 } });
   assert.equal(log.counts.duplicates, 4);
 });
+
+test('skipped collector remains skipped rather than being mislabeled failed', () => {
+  const log = buildRunLog({ ...base, status: { status: 'skipped', source: 'nmixx-youtube', itemsFetched: 0, itemsAdded: 0, itemsDuplicate: 0 } });
+  assert.equal(log.status, 'skipped');
+  assert.equal(log.sources[0].outcome, 'skipped');
+  assert.equal(log.sources[0].errorCode, undefined);
+});
+
+test('manual and external scheduler triggers are preserved', () => {
+  assert.equal(buildRunLog({ ...base, trigger: 'manual' }).trigger, 'manual');
+  assert.equal(buildRunLog({ ...base, trigger: 'external_scheduler' }).trigger, 'external_scheduler');
+});
