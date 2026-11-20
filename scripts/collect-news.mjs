@@ -5,13 +5,16 @@ import { createHash } from 'node:crypto';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export const SEARCHES=['오해원 NMIXX','해원 엔믹스','NMIXX Haewon','Haewon fancam'];
 function decode(value=''){
- return value.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").trim();
+ return value.replace(/<!\[CDATA\[(.*?)\]\]>/gs,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").trim();
+}
+function tag(raw,tagName){
+ const match=raw.match(new RegExp('<'+tagName+'>(.*?)</'+tagName+'>','is'));
+ return match?decode(match[1]):'';
 }
 export function parseRss(xml,query,now=new Date().toISOString()){
-  const get=(tag)=>{const match=raw.match(new RegExp('<'+tag+'>([\\s\\S]*?)</'+tag+'>','i'));return match?decode(match[1]):''};
- const items=[...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map(([,raw])=>{
-  const get=(tag)=>{const match=raw.match(new RegExp('<'+tag+'>([\\\\s\\\\S]*?)</'+tag+'>','i'));return match?decode(match[1]):''};
-  const title=get('title'),url=get('link'),pub=get('pubDate'),description=get('description'),source=get('source')||'Google News';
+ if(typeof xml!=='string'||!/<rss\b/i.test(xml))throw new Error('RSS 응답이 아닙니다');
+ const items=[...xml.matchAll(/<item\b[^>]*>(.*?)<\/item>/gis)].map(([,raw])=>{
+  const title=tag(raw,'title'),url=tag(raw,'link'),pub=tag(raw,'pubDate'),description=tag(raw,'description'),source=tag(raw,'source')||'Google News';
   if(!title||!url||!/^https:\/\/\S+/i.test(url))return null;
   const date=pub?new Date(pub):null,publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const id=createHash('sha256').update(url).digest('hex').slice(0,20);
