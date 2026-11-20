@@ -65,3 +65,10 @@ If a file cannot be accessed, report that limitation and do not infer its conten
 
 ## Reporting format
 For each substantial update include: changed paths; planned vs implemented items; actual tests; commit URL; Actions run URL if applicable; deployment/UI verification state; blockers; one concrete next step.
+## Project-wide improvement protocol (user-requested)
+- Do not default to a short, linear “next step” report. At the start of each work session, review the whole project goal, architecture, current blockers and dependencies; identify cross-cutting risks and high-leverage improvements before choosing work.
+- Consider product UX, data quality/coverage, reliability, testability, security/privacy, cost/free-tier sustainability, accessibility/mobile use, maintainability, automation failure modes and observability. Prioritize by impact, dependency, risk and effort; explain why the chosen task is the best next move.
+- For substantial tasks, use a work plan with coherent deliverables: inspect current state; diagnose root causes; implement a focused set of improvements; test; inspect real workflow output; update project docs/logs. Avoid fragmented commits that trigger unnecessary workflow cancellations.
+- Treat CI success as only one evidence layer. Verify behavior and generated artifacts, data correctness, deployment, and user-visible UX separately when applicable. Report what is and is not verified.
+- Before making changes, check the workflow concurrency behavior and whether pushes will cancel active runs. Batch related changes and avoid rapid successive pushes unless necessary.
+- Provide a thoughtful, multi-angle report with findings, risks, actual changes/evidence, and next priorities; brevity must not remove important reasoning or verification.
