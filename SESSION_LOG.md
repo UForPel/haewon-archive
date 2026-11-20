@@ -377,3 +377,9 @@ Asked whether expert software-development algorithms and practices (robustness, 
 ### Verification
 - GitHub Actions run #213: **success** — unit tests, collectors, data validation, operational log validation, commit/deploy steps all passed.
 - Browser-based manual visual review on a real mobile viewport is still not performed. The automated structure test confirms balanced tag nesting and unique IDs, not visual quality.
+
+### Follow-up — thumbnail fallback hardening
+- Avoid creating an image element with an empty `src`; use a text fallback when no valid HTTPS thumbnail exists.
+- If a thumbnail fails to load, replace the image with a readable fallback.
+- Commit: `0a9e05fc`
+- CI run #216: **success**, including deploy.
