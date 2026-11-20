@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0",
+  "algorithm": "bounded-recursive-imitation",
+  "algorithmVersion": "1.1.0",
+  "day": "2026-11-21",
+  "timeZone": "Asia/Seoul",
+  "cycle": {
+    "packIndex": 0,
+    "packCount": 3,
+    "activeQueries": [
+      "오해원 NMIXX",
+      "해원 엔믹스",
+      "NMIXX Haewon",
+      "Haewon NMIXX news"
+    ],
+    "nextDayPackIndex": 1
+  },
+  "evidence": {
+    "discoveryCandidates": 280,
+    "uniqueVideoRecords": 18,
+    "queryYield": [
+      {
+        "query": "오해원 NMIXX",
+        "candidates": 103
+      },
+      {
+        "query": "해원 엔믹스",
+        "candidates": 49
+      },
+      {
+        "query": "NMIXX Haewon",
+        "candidates": 110
+      },
+      {
+        "query": "Haewon NMIXX news",
+        "candidates": 5
+      }
+    ],
+    "highestYieldQueries": [
+      "NMIXX Haewon",
+      "오해원 NMIXX",
+      "해원 엔믹스"
+    ]
+  },
+  "evaluation": {
+    "status": "exploratory",
+    "precision": "not_measured",
+    "coverage": "partial_proxy",
+    "reason": "No human-reviewed relevance labels or query-level false-positive labels are available yet."
+  },
+  "adaptation": {
+    "applied": "date-based query-pack rotation only",
+    "automaticPromotion": false,
+    "destructiveFiltering": false,
+    "protectedRules": [
+      "source permissions",
+      "privacy",
+      "attribution",
+      "deduplication",
+      "candidate retention"
+    ],
+    "nextImprovement": "Collect query-level reviewed precision and false-positive labels before adaptive ranking."
+  }
+}
