@@ -7,6 +7,13 @@
 - 현재 자동 수집: NMIXX 공식 YouTube 공개 Atom 피드
 - 기존 자동 실행: 매일 한국 시간 08:17 / 20:17 (GitHub Actions)
 
+## 자동 발견 및 개선 루프
+
+- 공개 뉴스 RSS 검색어 4개를 자동 탐색해 `data/discovery.json` 후보를 축적
+- 뉴스 후보는 확정 아카이브와 분리하고 사이트에서 출처 링크로 확인
+- `SELF_IMPROVEMENT_LOOP.md`에 관찰 → 진단 → 가설 → 수정 → 검증 → 측정 → 기록 반복 원칙
+- AI API 없이 RSS/키워드 기반 수집부터 실행 (AI 판단과 자동 수집은 구분)
+
 ## 현재 MVP 기능
 
 1. 공식 NMIXX YouTube 채널의 최신 피드 항목 수집
