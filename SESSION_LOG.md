@@ -348,3 +348,32 @@ Asked whether expert software-development algorithms and practices (robustness, 
 
 ### Verification
 - Awaiting CI run after these commits. Mobile browser visual verification remains outstanding.
+
+## 2026-11-21 — 구조 검증 및 기사/영상 분리 개선
+
+### 구조 검증에서 발견한 실제 결함
+- HTML 구조 테스트를 새로 추가했고, 플랫폼별 검색 섹션의 헤딩 wrapper가 닫히지 않아 다음 섹션까지 DOM이 중첩되는 문제를 발견·수정했다.
+- RSS 뉴스 수집기에서 이미지 helper가 중복 선언되어 테스트 실패를 유발한 것을 제거했다.
+- 영상 분류가 설명(description) 텍스트까지 읽으면 일반 기사 설명에 등장한 YouTube를 영상으로 오판할 수 있어, 제목의 영상 표식과 YouTube URL만으로 판정하도록 좁혔다.
+
+### 변경
+- 기사 RSS 검색에서 fancam query 제거. 영상 수집과 뉴스 검색의 역할 분리.
+- RSS `media:thumbnail` / `media:content` 이미지 URL 추출을 지원하고, 기사 후보 카드에서 제공되는 썸네일 표시.
+- 영상 카드의 썸네일 로딩 실패 시 안내 placeholder 표시.
+- 좁은 화면에서 기사 썸네일/본문을 세로 배치하고, 검색·필터·날짜 컨트롤을 wrap/stack하여 overflow 완화.
+- HTML tag nesting 및 ID 중복 테스트 추가.
+
+### 관련 커밋
+- `00d2455` classifier 초기 개선
+- `98f3d99`, `c2040ed`, `d605456` RSS thumbnail parsing 정리 (중간 오류를 CI에서 발견하고 수정)
+- `56a551a` article classifier test
+- `7f83fbf` article thumbnail UI
+- `89236f3`, `a5c9b14` responsive CSS / fallback
+- `f207a79` HTML structure test
+- `369785e` classifier false-positive fix
+- `4adb21e` malformed HTML heading fix
+- `d605456` duplicate helper removal
+
+### Verification
+- GitHub Actions run #213: **success** — unit tests, collectors, data validation, operational log validation, commit/deploy steps all passed.
+- Browser-based manual visual review on a real mobile viewport is still not performed. The automated structure test confirms balanced tag nesting and unique IDs, not visual quality.
