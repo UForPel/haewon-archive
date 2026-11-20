@@ -31,6 +31,13 @@ If a file cannot be accessed, report that limitation and do not infer its conten
 - Mark facts as implemented/tested/verified separately from planned/proposed/unverified. Link to commits and workflow runs rather than copying lengthy logs.
 - On every substantial work session, save a concise continuity update before closing when repository writes are available. Do not claim a save if the commit did not succeed.
 
+## Error, omission and intent tracking
+- Infer the user's underlying goal, constraints and priorities from the whole conversation; record a concise intent summary, not merely the literal request.
+- Explicitly record ChatGPT mistakes, missed details, overlooked requirements, uncertainty, failed approaches, contradictions, and anything likely to be forgotten or misinterpreted. Include the correction and prevention rule when known.
+- Do not hide errors in a success summary. Separate confirmed facts from assumptions and open questions.
+- When useful, keep an "Errors / omissions / risks" section in SESSION_LOG with: issue, impact, correction, prevention/verification.
+- Treat user feedback about how ChatGPT should operate as an operating-rule change and update this file promptly when repository access is available.
+
 ## Implementation discipline
 - Prefer working code and tests over research-only output.
 - Inspect before editing. Make the smallest coherent change.
