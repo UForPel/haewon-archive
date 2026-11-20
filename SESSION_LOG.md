@@ -306,3 +306,18 @@ Asked whether expert software-development algorithms and practices (robustness, 
 ### Verification
 - GitHub commits created. CI run is pending at the time of this entry; confirm test and deployment result before claiming verification.
 - Classification is heuristic, not authoritative content moderation or news verification.
+
+
+## 2026-11-20 — Collector push race diagnosis and retry/rebase mitigation
+
+### Observed failure
+- New feature commits landed while collection workflows were running. The collector completed tests and validation, created its data/run-log commit, then its push was rejected because remote main had advanced (non-fast-forward).
+- Runs #185 and #187 failed at the data commit push step, not at unit tests or data validation. Run #183 had completed successfully before the overlapping commits.
+
+### Change
+- Collector commit step now fetches main, rebases its generated data commit onto the current remote tip, then pushes. It retries the fetch/rebase/push sequence up to three times for a bounded response to a concurrent push race.
+- Workflow commit: d2f6232fd9cde873bcad768b2ae0ead2f7eac0ee
+
+
+### Verification
+- Workflow change committed. A fresh Actions run must confirm the race mitigation; conflict handling is still fail-fast rather than attempting to auto-resolve data conflicts.
