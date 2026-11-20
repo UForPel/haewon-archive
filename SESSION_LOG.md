@@ -126,3 +126,29 @@ User approved the next implementation step: make the documented archive JSON Sch
 
 ### Next step
 Check the latest GitHub Actions run for the final documentation/code commit. If it fails, inspect job logs and fix the concrete failure before proceeding to the dry-run collection/run-log pipeline.
+
+
+## 2026-11-20 — Intent continuity, error/omission tracking and mandatory first-read reaffirmed
+
+### User intent / operating preference
+- User wants GitHub continuity records to capture the intent behind conversations, not merely a surface summary.
+- Prioritize low-token, quickly readable, accurate handoffs with enough detail to prevent lost requirements.
+- ChatGPT must read GitHub project records first at the start of every Haewon Archive conversation, before substantive answers or work; never rely on chat memory alone for current project state.
+- Record mistakes, missed requirements, overlooked details, uncertainties, failed approaches, and corrections/prevention steps explicitly when material.
+
+### Change implemented
+- Updated `CHATGPT_OPERATING_RULES.md` with a dedicated error/omission/intent-tracking section.
+- Required `SESSION_LOG.md` to surface errors/omissions/risks with issue, impact, correction and prevention/verification where useful.
+- Added guidance not to hide errors in success summaries and to distinguish confirmed facts from assumptions/open questions.
+
+### Evidence
+- Operating-rules commit: 1efb402fe3f3e3b49e1f89f5bd7ad6bfe0108362
+- Commit URL: https://github.com/UForPel/haewon-archive/commit/1efb402fe3f3e3b49e1f89f5bd7ad6bfe0108362
+- This log entry is being appended after that rules commit; verify its own commit separately.
+
+### Errors / omissions / risks
+- Risk identified: compact summaries can accidentally omit nuance or make an unverified state sound confirmed. Prevention: preserve material constraints and intent, label statuses (planned/implemented/tested/verified), and explicitly log uncertainties and mistakes.
+- Operational limitation: GitHub-first reading is required for Haewon Archive tasks, but tool access may fail; if so, disclose the failure and avoid guessing current repository state.
+
+### Next action
+- Verify latest Actions run triggered by operating-rule change; then continue the planned check of the outstanding schema-validator workflow run before new implementation.
