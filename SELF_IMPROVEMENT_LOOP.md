@@ -60,3 +60,10 @@ Track, where available: feed requests succeeded/failed, items fetched, unique it
 - **Change:** Added a platform selector for YouTube, Google web search, Google Images, TikTok, and X; updated URL builder and mobile styling. Search query is encoded and empty input does not open a destination.
 - **Verification:** Committed HTML, module, and CSS inspected. No browser-level interaction test, full repository test run, GitHub Actions run, or deployment verification was available; treat the feature as committed but not runtime-verified.
 - **Next:** Continue toward real in-archive indexed results. Current external search launcher is a temporary discovery affordance, not the requested integrated search experience.
+
+
+## Iteration record — in-archive discovery search (2026-11-20)
+- **Observed:** The candidate-news list had no search control, so once RSS candidates appear, users would need to scan the list manually. The renderer also was difficult to test because its DOM setup ran at module load in a non-browser environment.
+- **Change:** Added a candidate search input in the archive page; it filters title, description, source name, and query metadata case-insensitively. Kept relevance-first ordering. Exported the pure filter function and guarded DOM setup so tests can import the module in Node. Added 3 discovery-filter tests and 5 quick-search URL-builder tests.
+- **Verification:** Reconstructed the two modules and test files in a temporary Node environment; 8/8 tests passed. This verifies the copied pure functions and basic module import only; it is not a full repository test run, browser interaction test, live RSS collection, Actions result, or Pages deployment.
+- **Next:** Add a real candidate source/inspect RSS output; then evaluate false positives and source diversity. Candidate data remains empty at last inspection, so this search field currently shows the empty-state message until candidates are collected.
