@@ -1,10 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { filterDiscoveryItems } from '../js/discovery-view.mjs';
-import { classifyDiscoveryItem } from '../js/discovery-kind.mjs';
+import { classifyDiscoveryItem, filterArticleCandidates } from '../js/discovery-kind.mjs';
 const items=[{title:'Haewon interview',sourceName:'News A',description:'NMIXX interview'},{title:'Stage clip',sourceName:'News B',description:'NMIXX stage'}];
 test('discovery query filters title, source and description case-insensitively',()=>{assert.equal(filterDiscoveryItems(items,'haewon').length,1);assert.equal(filterDiscoveryItems(items,'news b')[0].title,'Stage clip');assert.equal(filterDiscoveryItems(items,'stage').length,1);});
 test('empty query returns every candidate',()=>{assert.equal(filterDiscoveryItems(items,'').length,2);});
 test('no-match query returns empty list',()=>{assert.deepEqual(filterDiscoveryItems(items,'missing'),[]);});
 test('YouTube and fancam candidates are labeled as videos',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon fancam'}),'video');assert.equal(classifyDiscoveryItem({description:'YouTube'}),'video');});
-test('ordinary articles remain article candidates',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon interview',url:'https://example.com/news'}),'article');});
+test('ordinary articles remain article candidates',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon interview',url:'https://example.com/news'}),'article');});\ntest('article candidate list excludes video links',()=>{assert.deepEqual(filterArticleCandidates([{title:'Haewon interview'},{title:'Haewon fancam'},{title:'YouTube clip'}]).map(x=>x.title),['Haewon interview']);});
