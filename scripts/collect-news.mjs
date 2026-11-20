@@ -3,7 +3,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-export const SEARCHES=[\n '오해원 NMIXX','해원 엔믹스','NMIXX Haewon','Haewon NMIXX interview','오해원 인터뷰','해원 직캠','오해원 직캠','Haewon fancam','NMIXX Haewon stage','해원 예능','오해원 쇼츠','Haewon NMIXX behind','해원 사진','NMIXX Haewon news'\n];
+export const SEARCHES=[\n '오해원 NMIXX','해원 엔믹스','NMIXX Haewon','Haewon NMIXX interview','오해원 인터뷰','Haewon NMIXX news','NMIXX Haewon magazine','오해원 방송','해원 엔믹스 기사','Haewon NMIXX brand'\n];
 function decode(value=''){
  return value.replace(/<!\[CDATA\[(.*?)\]\]>/gs,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").trim();
 }
