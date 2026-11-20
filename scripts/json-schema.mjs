@@ -9,6 +9,10 @@ function isValidDate(value) {
 
 function isValidDateTime(value) {
   if (!DATE_TIME_RE.test(value)) return false;
+  if (!isValidDate(value.slice(0, 10))) return false;
+  const time = value.slice(11, 19);
+  const [hour, minute, second] = time.split(':').map(Number);
+  if (hour > 23 || minute > 59 || second > 59) return false;
   return !Number.isNaN(Date.parse(value));
 }
 
