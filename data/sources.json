@@ -23,5 +23,13 @@
     "url": "https://www.instagram.com/nmixx_official/",
     "policy": "manual-link-only",
     "enabled": true
+  },
+  {
+    "id": "news-discovery-youtube",
+    "name": "뉴스 RSS 발견 YouTube",
+    "kind": "news-discovery-video",
+    "url": "https://www.youtube.com/",
+    "policy": "candidate-links",
+    "enabled": true
   }
 ]
