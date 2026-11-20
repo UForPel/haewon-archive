@@ -31,7 +31,10 @@ if(list&&count){
   count.textContent=items.length+'개 전체'+(q.trim()?' / 검색 결과':'');
   list.replaceChildren();
   items.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE).forEach(item=>{
-   const card=document.createElement('article');card.className='photo-card';
+   const card=document.createElement('article');card.className='photo-card discovery-card';
+   if(/^https:\/\//i.test(String(item.thumbnailUrl||''))){
+    const image=document.createElement('img');image.className='discovery-thumbnail';image.src=item.thumbnailUrl;image.alt='기사 미리보기';image.loading='lazy';image.onerror=()=>image.remove();card.append(image);
+   }
    const details=document.createElement('div');details.className='photo-card-details';
    const title=document.createElement('h3');title.textContent=item.title;
    const kind=document.createElement('span');kind.className='tag';kind.textContent='기사 후보';
