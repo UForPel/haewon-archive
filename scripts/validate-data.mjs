@@ -50,7 +50,7 @@ const reviews = JSON.parse(await readFile(new URL('data/relevance-reviews.json',
 if (!Array.isArray(reviews)) throw new Error('data/relevance-reviews.json must be an array');
 const reviewUrls = new Set();
 for (const [index, review] of reviews.entries()) {
-  if (!review || typeof review.url !== 'string' || !/^https:\\/\\//.test(review.url) || typeof review.query !== 'string' || typeof review.relevant !== 'boolean' || typeof review.reviewedAt !== 'string') throw new Error(`Invalid relevance review at index ${index}`);
+  if (!review || typeof review.url !== 'string' || !review.url.startsWith('https://') || typeof review.query !== 'string' || typeof review.relevant !== 'boolean' || typeof review.reviewedAt !== 'string') throw new Error(`Invalid relevance review at index ${index}`);
   if (reviewUrls.has(review.url)) throw new Error('Duplicate relevance review URL');
   reviewUrls.add(review.url);
 }
