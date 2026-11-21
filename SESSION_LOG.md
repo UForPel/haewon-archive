@@ -447,3 +447,23 @@ Asked whether expert software-development algorithms and practices (robustness, 
 - `7c0d72e` discovery test syntax repair
 - `90a4050`, `3013f75` Google News redirect resolver
 - `a40a00a` redirect regression test
+
+
+## 2026-11-21 — 재귀개선 모방 v1.2.0 및 데이터 동시성 보강
+
+### 발견한 문제
+- 이전 280개 후보는 누적 discovery 크기였으며, 이를 당일 검색어별 성과로 표현하면 오해를 일으킴.
+- GitHub Actions가 생성한 JSON을 rebase하는 동안 다른 수집 실행의 data 변경과 충돌해 commit 단계 실패.
+
+### 변경
+- 뉴스 수집기가 `data/news-collection-status.json`에 당일 검색어별 후보/고유 후보/실패 수를 기록.
+- 개선 사이클에서 누적 후보와 당일 후보를 분리.
+- `data/relevance-reviews.json`에 사람이 확인한 관련성 라벨을 저장할 기반 마련.
+- 개선 알고리즘 v1.2.0은 실제 검토 라벨로만 precision을 계산. 20건 미만은 탐색 단계로 표시하고 자동 승격은 금지.
+- 데이터 검증기에 일별 뉴스 성과와 검토 라벨 구조/중복 검사를 추가.
+- GitHub Actions 데이터 커밋은 stale JSON rebase 대신 최신 main에서 수집 단계를 재실행하고 검증한 뒤 push하는 방식으로 변경.
+
+### 주의
+- 20개 검토 샘플은 최소 운영 기준일 뿐 통계적 유의성 보증이 아님.
+- 사람의 검토 라벨은 아직 비어 있으므로 precision은 null/not measured 상태가 정상.
+- 최신 workflow 전체 성공은 아직 확인 전.
