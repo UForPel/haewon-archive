@@ -130,3 +130,12 @@ The imitation loop is deliberately evidence-gated:
 Automatic query promotion is disabled until human-reviewed relevance labels, false-positive labels and a stable evaluation sample exist. The algorithm cannot alter source permissions, privacy rules, attribution, deduplication or candidate-retention safeguards. It imitates a recursive improvement workflow; it does not modify its own source code or claim model self-training.
 
 Google News RSS wrapper links whose titles indicate YouTube/fancam are conditionally resolved through ordinary public HTTP redirects. Only final URLs that resolve to a recognized YouTube video ID enter the video archive; the original discovery candidate remains preserved.
+
+
+## Evidence-based daily cycle v1.2.0 (2026-11-21)
+
+- Collection writes `data/news-collection-status.json` with current-run per-query fetched and unique candidate counts, separate from cumulative archive size.
+- `data/relevance-reviews.json` stores explicit human labels: URL, query, relevant boolean, reviewedAt. Empty by default; no synthetic labels are generated.
+- The cycle reports precision only from explicit review labels. It marks the sample exploratory until at least 20 reviewed records exist; this is a minimum reporting gate, not proof of statistical significance.
+- Automatic query promotion remains disabled. Query volume is not treated as relevance or precision.
+- The workflow resets to latest main and regenerates collected data before each push attempt rather than rebasing stale generated JSON snapshots.
