@@ -39,6 +39,23 @@ for (const [index, item] of discovery.entries()) {
   discoveryUrls.add(key);
 }
 console.log(`OK data/discovery.json (${discovery.length} discovery candidates)`);
+const newsStatus = JSON.parse(await readFile(new URL('data/news-collection-status.json', root), 'utf8'));
+if (!newsStatus || typeof newsStatus !== 'object' || !Array.isArray(newsStatus.queries) || !Number.isInteger(newsStatus.fetched) || newsStatus.fetched < 0) throw new Error('Invalid data/news-collection-status.json');
+for (const row of newsStatus.queries) {
+  if (typeof row.query !== 'string' || !Number.isInteger(row.candidates) || !Number.isInteger(row.uniqueCandidates) || row.candidates < 0 || row.uniqueCandidates < 0 || row.uniqueCandidates > row.candidates) throw new Error('Invalid per-query news yield row');
+}
+console.log(`OK data/news-collection-status.json (${newsStatus.queries.length} per-query metrics)`);
+
+const reviews = JSON.parse(await readFile(new URL('data/relevance-reviews.json', root), 'utf8'));
+if (!Array.isArray(reviews)) throw new Error('data/relevance-reviews.json must be an array');
+const reviewUrls = new Set();
+for (const [index, review] of reviews.entries()) {
+  if (!review || typeof review.url !== 'string' || !/^https:\\/\\//.test(review.url) || typeof review.query !== 'string' || typeof review.relevant !== 'boolean' || typeof review.reviewedAt !== 'string') throw new Error(`Invalid relevance review at index ${index}`);
+  if (reviewUrls.has(review.url)) throw new Error('Duplicate relevance review URL');
+  reviewUrls.add(review.url);
+}
+console.log(`OK data/relevance-reviews.json (${reviews.length} human-reviewed labels)`);
+
 
 const runLogDir = new URL('data/run-logs/', root);
 try {
