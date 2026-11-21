@@ -8,7 +8,7 @@ export const ALGORITHM_VERSION='1.1.0';
 export function kstDay(date=new Date()){
  return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
 }
-export function buildImprovementCycle({discovery=[],videos=[],day=kstDay()}={}){
+export function buildImprovementCycle({discovery=[],videos=[],newsStatus=null,reviews=[],day=kstDay()}={}){
  const active=getDailySearches(day);
  const counts=new Map();
  for(const item of discovery){
@@ -16,7 +16,7 @@ export function buildImprovementCycle({discovery=[],videos=[],day=kstDay()}={}){
   if(!q)continue;
   counts.set(q,(counts.get(q)||0)+1);
  }
- const activeYield=active.map(query=>({query,candidates:counts.get(query)||0}));
+ const currentCounts=new Map((newsStatus?.queries||[]).map(row=>[row.query,Number(row.uniqueCandidates??row.candidates)||0]));\n const activeYield=active.map(query=>({query,candidates:currentCounts.get(query)||0}));\n const reviewed=reviews.filter(row=>row&&typeof row.query==='string'&&typeof row.relevant==='boolean');\n const relevantCount=reviewed.filter(row=>row.relevant).length;\n const reviewedPrecision=reviewed.length?relevantCount/reviewed.length:null;\n const reviewCounts=new Map();\n for(const row of reviewed){const entry=reviewCounts.get(row.query)||{query:row.query,reviewed:0,relevant:0};entry.reviewed++;if(row.relevant)entry.relevant++;reviewCounts.set(row.query,entry);}\n const perQueryReviews=[...reviewCounts.values()].map(row=>({...row,precision:row.relevant/row.reviewed}));
  const ranked=[...activeYield].sort((a,b)=>b.candidates-a.candidates||a.query.localeCompare(b.query));
  const packIndex=((Math.floor(Date.parse(day+'T00:00:00Z')/86400000)%SEARCH_PACKS.length)+SEARCH_PACKS.length)%SEARCH_PACKS.length;
  return {
@@ -28,7 +28,7 @@ export function buildImprovementCycle({discovery=[],videos=[],day=kstDay()}={}){
  };
 }
 async function main(){
- const [discovery,videos]=await Promise.all([
+ const [discovery,videos,newsStatus,reviews]=await Promise.all([
   readFile(resolve(ROOT,'data/discovery.json'),'utf8').then(JSON.parse),
   readFile(resolve(ROOT,'data/videos.json'),'utf8').then(JSON.parse)
  ]);
