@@ -1,52 +1,57 @@
 {
   "schemaVersion": "1.0.0",
   "algorithm": "bounded-recursive-imitation",
-  "algorithmVersion": "1.1.0",
-  "day": "2026-11-21",
+  "algorithmVersion": "1.2.0",
+  "day": "2026-11-22",
   "timeZone": "Asia/Seoul",
   "cycle": {
-    "packIndex": 0,
+    "packIndex": 1,
     "packCount": 3,
     "activeQueries": [
-      "오해원 NMIXX",
-      "해원 엔믹스",
-      "NMIXX Haewon",
-      "Haewon NMIXX news"
+      "Haewon NMIXX interview",
+      "오해원 인터뷰",
+      "NMIXX Haewon magazine",
+      "Haewon NMIXX brand"
     ],
-    "nextDayPackIndex": 1
+    "nextDayPackIndex": 2
   },
   "evidence": {
-    "discoveryCandidates": 280,
+    "cumulativeDiscoveryCandidates": 306,
+    "currentRunCandidates": 45,
     "uniqueVideoRecords": 18,
     "queryYield": [
       {
-        "query": "오해원 NMIXX",
-        "candidates": 103
-      },
-      {
-        "query": "해원 엔믹스",
-        "candidates": 49
-      },
-      {
-        "query": "NMIXX Haewon",
-        "candidates": 110
-      },
-      {
-        "query": "Haewon NMIXX news",
+        "query": "Haewon NMIXX interview",
         "candidates": 5
+      },
+      {
+        "query": "오해원 인터뷰",
+        "candidates": 32
+      },
+      {
+        "query": "NMIXX Haewon magazine",
+        "candidates": 4
+      },
+      {
+        "query": "Haewon NMIXX brand",
+        "candidates": 4
       }
     ],
     "highestYieldQueries": [
-      "NMIXX Haewon",
-      "오해원 NMIXX",
-      "해원 엔믹스"
+      "오해원 인터뷰",
+      "Haewon NMIXX interview",
+      "Haewon NMIXX brand"
     ]
   },
   "evaluation": {
     "status": "exploratory",
-    "precision": "not_measured",
+    "reviewedCount": 0,
+    "relevantCount": 0,
+    "precision": null,
+    "minimumSampleForPromotion": 20,
+    "queryReviews": [],
     "coverage": "partial_proxy",
-    "reason": "No human-reviewed relevance labels or query-level false-positive labels are available yet."
+    "reason": "Insufficient human-reviewed relevance labels for strategy promotion."
   },
   "adaptation": {
     "applied": "date-based query-pack rotation only",
@@ -59,6 +64,6 @@
       "deduplication",
       "candidate retention"
     ],
-    "nextImprovement": "Collect query-level reviewed precision and false-positive labels before adaptive ranking."
+    "nextImprovement": "Collect human-reviewed relevance labels and compare query packs over repeated samples."
   }
 }

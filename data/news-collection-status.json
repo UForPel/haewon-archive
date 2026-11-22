@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "collectedAt": "2026-11-22T03:11:48.963Z",
+  "searchPack": 1,
+  "queries": [
+    {
+      "query": "Haewon NMIXX interview",
+      "candidates": 5,
+      "uniqueCandidates": 5
+    },
+    {
+      "query": "오해원 인터뷰",
+      "candidates": 32,
+      "uniqueCandidates": 32
+    },
+    {
+      "query": "NMIXX Haewon magazine",
+      "candidates": 4,
+      "uniqueCandidates": 4
+    },
+    {
+      "query": "Haewon NMIXX brand",
+      "candidates": 4,
+      "uniqueCandidates": 4
+    }
+  ],
+  "requestedQueries": 4,
+  "successfulQueries": 4,
+  "failedQueries": [],
+  "fetched": 45,
+  "uniqueIncoming": 43,
+  "added": 26,
+  "totalCandidates": 306
+}
