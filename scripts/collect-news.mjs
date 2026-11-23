@@ -97,9 +97,17 @@ export function canonicalCandidateUrl(value){
   return url.toString().replace(/\/$/,'');
  }catch{return ''}
 }
+export function canonicalCandidateTitle(value=''){
+ return String(value||'').replace(/<[^>]*>/g,' ').replace(/&amp;/gi,'&').normalize('NFKC').toLocaleLowerCase().replace(/\\b(?:youtube|youtu\\.be)\\b/g,'').replace(/[\\p{P}\\p{S}\\s]+/gu,'').trim();
+}
 export function mergeCandidates(existing,incoming){
  const map=new Map();
- for(const item of [...existing,...incoming]){const key=canonicalCandidateUrl(item?.url);if(item?.url&&key&&!map.has(key))map.set(key,item);}
+ for(const item of [...existing,...incoming]){
+  const titleKey=canonicalCandidateTitle(item?.title);
+  const urlKey=canonicalCandidateUrl(item?.url);
+  const key=titleKey.length>=32?'title:'+titleKey:(urlKey?'url:'+urlKey:'');
+  if(item?.url&&key&&!map.has(key))map.set(key,item);
+ }
  return [...map.values()].sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
 }
 export function newsFeedUrl(query){return 'https://news.google.com/rss/search?q='+encodeURIComponent(query)+'&hl=ko&gl=KR&ceid=KR:ko';}
