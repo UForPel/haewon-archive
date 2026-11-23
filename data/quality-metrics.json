@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T13:32:50.428Z",
+  "generatedAt": "2026-11-23T13:33:43.382Z",
   "collection": {
     "newsQueriesRequested": 4,
     "newsQueriesSuccessful": 4,
@@ -7,9 +7,9 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 473,
-    "newsUniqueFetched": 142,
-    "newsAddedLastRun": 15,
-    "duplicateBeforeMergeLastRun": 1,
+    "newsUniqueFetched": 68,
+    "newsAddedLastRun": 0,
+    "duplicateBeforeMergeLastRun": 0,
     "duplicateGroupsCurrent": 473,
     "duplicateItemsCollapsedCurrent": 0
   },
@@ -23,6 +23,20 @@
       "urlCoverage": 100,
       "thumbnailCoverage": 0,
       "dateCoverage": 100
+    }
+  ],
+  "sourceCollectionStatus": [
+    {
+      "source": "Google News RSS",
+      "requested": 4,
+      "successful": 4,
+      "successRate": 100
+    },
+    {
+      "source": "NMIXX YouTube Atom",
+      "requested": 1,
+      "successful": 1,
+      "successRate": 100
     }
   ],
   "classification": {
