@@ -59,9 +59,20 @@ export function parseRss(xml,query,now=new Date().toISOString()){
  }).filter(Boolean);
  return items;
 }
+export function canonicalCandidateUrl(value){
+ try{
+  const url=new URL(String(value||''));
+  if(!/^https?:$/.test(url.protocol))return '';
+  url.hostname=url.hostname.toLowerCase().replace(/^www\./,'');
+  url.hash='';
+  for(const key of [...url.searchParams.keys()])if(/^(utm_|fbclid|gclid|ref|source)/i.test(key))url.searchParams.delete(key);
+  url.searchParams.sort();
+  return url.toString().replace(/\/$/,'');
+ }catch{return ''}
+}
 export function mergeCandidates(existing,incoming){
  const map=new Map();
- for(const item of [...existing,...incoming])if(item?.url&&!map.has(item.url.toLowerCase()))map.set(item.url.toLowerCase(),item);
+ for(const item of [...existing,...incoming]){const key=canonicalCandidateUrl(item?.url);if(item?.url&&key&&!map.has(key))map.set(key,item);}
  return [...map.values()].sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
 }
 export function newsFeedUrl(query){return 'https://news.google.com/rss/search?q='+encodeURIComponent(query)+'&hl=ko&gl=KR&ceid=KR:ko';}
