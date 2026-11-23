@@ -144,3 +144,10 @@ Last updated: 2026-11-20
 - Dashboard now reports thumbnail coverage, unique URLs, repeated URL groups/items, and top image hosts.
 - Tests added for URL fragment normalization, repeat detection, missing URLs and host breakdown.
 - Code/test/UI commits: `0540ab7d`, `9f3d3ee8`, `ccd7fe75`. CI must validate this cycle before it is marked verified.
+
+
+## 2026-11-24 — Thumbnail quality response checks (in progress)
+- Added bounded HEAD sampling of distinct thumbnail URLs, checking response status and `Content-Type`; non-image responses, broken (404/410), unreachable, and 429 are separated.
+- Added heuristic flags for reused thumbnail URLs, logo/icon-like path names, and small-size URL hints. These are triage clues only; no visual classifier is implemented, and article relevance cannot be verified from URL metadata alone.
+- Actual dataset anomaly from the current quality snapshot: 144 candidate records share a single thumbnail URL (`lh3.googleusercontent.com`), with 474 records missing thumbnails. This suggests the current enrichment pipeline may repeatedly assign the same image; the URL audit exposed it, but the image must be inspected before declaring it a bad image.
+- CI issue observed: run #388 reached deployment but failed because `deploy-pages` could not find the `github-pages` artifact. Tests and earlier steps were successful. New audit code is being validated after syntax fixes; do not mark this cycle complete yet.
