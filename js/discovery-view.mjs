@@ -23,12 +23,34 @@ if(list&&count){
   const next=document.createElement('button');next.type='button';next.textContent='다음';next.disabled=page>=pageCount;next.addEventListener('click',()=>{page++;render();});
   pagination.append(prev,label,next);
  };
+ const categoryBar=document.querySelector('#discovery-categories');
+ let selectedCategory='all';
+ const categoryOf=item=>{
+  if(classifyDiscoveryItem(item)==='video')return 'video';
+  const text=String(item.title||'')+' '+String(item.description||'');
+  if(/공식|official|jyp|nmixx/i.test(text))return 'official';
+  if(/인터뷰|interview|방송|예능|radio|라디오|출연/i.test(text))return 'interview';
+  if(/무대|stage|공연|concert|직캠|fancam|dance|춤/i.test(text))return 'performance';
+  return 'news';
+ };
+ const categoryLabels={all:'전체',news:'뉴스',video:'영상',official:'공식',interview:'인터뷰·방송',performance:'무대·공연'};
+ const renderCategories=()=>{
+  if(!categoryBar)return;
+  categoryBar.replaceChildren();
+  Object.entries(categoryLabels).forEach(([key,label])=>{
+   const button=document.createElement('button');button.type='button';button.textContent=label;button.className=selectedCategory===key?'active':'';
+   button.setAttribute('aria-pressed',String(selectedCategory===key));
+   button.addEventListener('click',()=>{selectedCategory=key;page=1;render();});
+   categoryBar.append(button);
+  });
+ };
  const render=()=>{
   const q=search?.value||'';
-  const items=filterDiscoveryItems(allItems,q).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
+  const filtered=filterDiscoveryItems(allItems,q).filter(item=>selectedCategory==='all'||categoryOf(item)===selectedCategory);
+  const items=filtered.slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
   const pageCount=Math.max(1,Math.ceil(items.length/PAGE_SIZE));
   page=Math.min(page,pageCount);
-  count.textContent=items.length+'개 전체'+(q.trim()?' / 검색 결과':'');
+  count.textContent=items.length+'개'+(q.trim()?' / 검색 결과':'')+' · '+categoryLabels[selectedCategory];
   list.replaceChildren();
   items.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE).forEach(item=>{
    const card=document.createElement('article');card.className='photo-card discovery-card';
@@ -39,7 +61,7 @@ if(list&&count){
    card.append(thumbnail);
    const details=document.createElement('div');details.className='photo-card-details';
    const title=document.createElement('h3');const titleLink=document.createElement('a');titleLink.href=item.url;titleLink.target='_blank';titleLink.rel='noopener noreferrer';titleLink.textContent=item.title;titleLink.className='discovery-title-link';title.append(titleLink);
-   const kind=document.createElement('span');kind.className='tag';kind.textContent=classifyDiscoveryItem(item)==='video'?'뉴스 발견 영상':'기사 후보';
+   const kind=document.createElement('span');kind.className='tag';kind.textContent=categoryLabels[categoryOf(item)];
    const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):'')+' · 발견 후보';
    const note=document.createElement('p');note.className='photo-description';note.textContent=item.description||'검색 결과로 발견된 링크';
    const score=document.createElement('p');score.className='photo-meta';score.textContent='관련성 점수 '+(Number.isFinite(item.relevanceScore)?item.relevanceScore:'미평가')+' · 검토 전 후보';
