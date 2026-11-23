@@ -72,7 +72,7 @@ if(list&&count){
 }
 
 async function renderQualitySummary(){
- const host=document.querySelector('#discovery-quality-summary');if(!host)return;
+ if(typeof document==='undefined')return; const host=document.querySelector('#discovery-quality-summary');if(!host)return;
  try{const response=await fetch('./data/quality-metrics.json');if(!response.ok)throw new Error('metrics unavailable');const metrics=await response.json();host.replaceChildren();
  const heading=document.createElement('h3');heading.textContent='자료 품질 현황';host.append(heading);
  const summary=document.createElement('p');summary.textContent='뉴스 수집 성공률 '+(metrics.collection.newsQuerySuccessRate===null?'미측정':metrics.collection.newsQuerySuccessRate+'%')+' · 후보 '+metrics.collection.newsCandidatesTotal+'개 · 링크 검사 '+(metrics.linkAudit?.checked||0)+'개 · 깨진 링크 '+(metrics.linkAudit?.broken?.length||0)+'개 · 썸네일 누락 '+(metrics.linkAudit?.thumbnailMissing||0)+'개';host.append(summary);
