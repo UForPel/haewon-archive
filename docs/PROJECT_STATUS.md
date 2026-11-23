@@ -46,3 +46,16 @@ Updated: 2026-11-23 (KST)
 
 ## Project log entry
 2026-11-23 — UI cleanup and classification expansion. Duplicate outbound link removed; title remains clickable. Added event/activity and brand/photo category heuristics. GitHub source was read before editing, file write completed, and source re-fetched for verification. CI/deploy result pending.
+
+## Follow-up development — 2026-11-23
+- Extracted news classification into reusable `classifyDiscoveryCategory()` in `js/discovery-kind.mjs`.
+- UI now calls the shared classifier rather than maintaining inline category logic.
+- Category priority is explicit: event/activity, brand/photo, official, interview/broadcast, performance, then news; video detection remains first.
+- Added tests for event/brand tags, priority against broad official terms, and category fallback cases.
+- Commits:
+  - `1b01652b` feat: extract reusable news category classifier
+  - `12e5205e` refactor: use shared news category classifier
+  - `71cf3efb` test: cover discovery news categories
+  - `0902025f` fix: import category classifier in discovery tests
+- CI runs were queued/cancelled by successive commits; latest test commit run #286 was pending at log update. Verification is pending; do not mark tests passed until CI completes.
+- Next: wait for latest run; if it fails, inspect logs and fix; then continue with dashboard metrics / classifier quality review.
