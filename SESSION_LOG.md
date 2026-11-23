@@ -577,3 +577,9 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Dataset snapshot: 144 records share one exact thumbnail URL; 474/618 candidates have no thumbnail. This is a suspected enrichment quality issue, not a visually confirmed conclusion.
 - CI #388 deployment failed: deploy-pages reported missing `github-pages` artifact even though artifact-upload step was reported completed. Investigate pipeline/Actions platform and retry after tests pass.
 - Local clone/test unavailable because the execution environment cannot resolve github.com; GitHub Actions is the verification path.
+
+
+## 2026-11-24 — Actual sample and deployment retry fix
+- Latest quality data: 168 thumbnails across 618 candidates but only 1 distinct URL; 167 are repeated URL assignments. 450 missing thumbnails. The distinct URL sampled returned HTTP 200 and `image/png`.
+- Repeated-URL heuristic is only a URL-level signal. It does not visually classify logo, image relevance, or visually duplicate images under different URLs.
+- CI #401 attempt 2: unit tests, collection, quality, validation, and artifact upload passed; deploy failed because two `github-pages` artifacts existed from retries. Fixed workflow to use unique artifact name per attempt for upload and deploy. Awaiting new CI.
