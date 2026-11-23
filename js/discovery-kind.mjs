@@ -64,7 +64,7 @@ export function groupDiscoveryDuplicates(items = []) {
   for (const item of items) {
     const titleKey = normalizeTitle(item.title);
     const urlKey = canonicalUrl(item.url);
-    const key = urlKey ? 'url:' + urlKey : (titleKey.length >= 32 ? 'title:' + titleKey : '');
+    const key = titleKey.length >= 32 ? 'title:' + titleKey : (urlKey ? 'url:' + urlKey : '');
     if (!key) { unique.push({ ...item, duplicateCount: 1, sourceCount: 1, duplicateSources: [] }); continue; }
     const group = groups.get(key);
     if (group) group.push(item); else groups.set(key, [item]);
