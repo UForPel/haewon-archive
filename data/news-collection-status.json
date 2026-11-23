@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-23T13:06:30.579Z",
+  "collectedAt": "2026-11-23T13:06:48.861Z",
   "searchPack": 2,
   "queries": [
     {
       "query": "오해원 방송",
-      "candidates": 33,
-      "uniqueCandidates": 33
+      "candidates": 34,
+      "uniqueCandidates": 34
     },
     {
       "query": "해원 엔믹스 기사",
@@ -20,15 +20,15 @@
     },
     {
       "query": "Haewon NMIXX event",
-      "candidates": 7,
-      "uniqueCandidates": 7
+      "candidates": 8,
+      "uniqueCandidates": 8
     }
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
   "failedQueries": [],
-  "fetched": 67,
-  "uniqueIncoming": 67,
+  "fetched": 69,
+  "uniqueIncoming": 69,
   "added": 0,
   "totalCandidates": 381
 }
