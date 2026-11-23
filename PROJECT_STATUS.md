@@ -137,3 +137,10 @@ Last updated: 2026-11-20
 - Link audit: 40 sample candidate records checked; 0 broken, 0 rate-limited, 0 unreachable. This is not a full crawl.
 - Human category review: 0 samples; accuracy remains unmeasured.
 - Latest CI #381: unit tests, collection, quality generation, archive validation, log validation, and artifact upload passed; GitHub Pages deployment status failed on the platform response. Earlier #377 completed successfully end-to-end. Re-check latest Actions before claiming a full current run.
+
+
+## 2026-11-24 — Thumbnail URL reuse audit
+- Added a quality-metrics audit for normalized exact thumbnail URL reuse and image-host distribution; this detects literal URL reuse only and does not claim visual duplicate detection.
+- Dashboard now reports thumbnail coverage, unique URLs, repeated URL groups/items, and top image hosts.
+- Tests added for URL fragment normalization, repeat detection, missing URLs and host breakdown.
+- Code/test/UI commits: `0540ab7d`, `9f3d3ee8`, `ccd7fe75`. CI must validate this cycle before it is marked verified.
