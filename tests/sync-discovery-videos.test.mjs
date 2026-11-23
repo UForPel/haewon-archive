@@ -26,3 +26,18 @@ test('Google News wrapper redirects are resolved to YouTube originals',async()=>
  assert.equal(resolved.length,1);
  assert.equal(resolved[0].url,'https://www.youtube.com/watch?v=abcdefghijk');
 });
+
+test('redirect resolution is concurrent but capped at four workers and forty candidates',async()=>{
+ let active=0,maxActive=0,calls=0;
+ const candidates=Array.from({length:55},(_,i)=>({title:'Haewon YouTube fancam '+i,url:'https://news.google.com/rss/articles/'+i}));
+ const resolved=await resolveYoutubeCandidates(candidates,async()=>{
+  calls++;active++;maxActive=Math.max(maxActive,active);
+  await new Promise(resolve=>setTimeout(resolve,3));
+  active--;
+  return {url:'https://youtu.be/abcdefghijk'};
+ });
+ assert.equal(calls,40);
+ assert.equal(resolved.length,40);
+ assert.ok(maxActive>1);
+ assert.ok(maxActive<=4);
+});
