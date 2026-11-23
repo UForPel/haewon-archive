@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-23T13:35:12.331Z",
+  "collectedAt": "2026-11-23T13:36:25.165Z",
   "searchPack": 2,
   "queries": [
     {
@@ -20,15 +20,15 @@
     },
     {
       "query": "Haewon NMIXX event",
-      "candidates": 8,
-      "uniqueCandidates": 8
+      "candidates": 7,
+      "uniqueCandidates": 7
     }
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
   "failedQueries": [],
-  "fetched": 69,
-  "uniqueIncoming": 69,
+  "fetched": 68,
+  "uniqueIncoming": 68,
   "added": 0,
   "totalCandidates": 473
 }
