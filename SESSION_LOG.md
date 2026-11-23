@@ -467,3 +467,11 @@ Asked whether expert software-development algorithms and practices (robustness, 
 - 20개 검토 샘플은 최소 운영 기준일 뿐 통계적 유의성 보증이 아님.
 - 사람의 검토 라벨은 아직 비어 있으므로 precision은 null/not measured 상태가 정상.
 - 최신 workflow 전체 성공은 아직 확인 전.
+
+
+## 2026-11-23 — Discovery deduplication / classifier improvement
+- Verified #292 and #293 passed. Investigated previous category failures and confirmed the ambiguous keyword issue had been corrected.
+- Dataset scan: 381 RSS candidates; 4 exact normalized-title duplicate groups (8 records) observed.
+- Implemented conservative title normalization/grouping (long titles only), representative selection by relevance/recency, and source/duplicate counts. Classifier now checks title first, then cleaned RSS description.
+- #294 deploy step failed: artifact upload succeeded but deploy-pages reported 0 artifacts, suggesting transient artifact API lookup failure. Unit tests passed in that run.
+- #295 succeeded on syntax correction commit `c47041a6`. Additional dedupe tests and UI grouping commits are now being added; verification is pending.
