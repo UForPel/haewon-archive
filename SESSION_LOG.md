@@ -533,3 +533,25 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 ### Verification
 - CI run #346 passed on initial parser commit; subsequent commits triggered runs #351/#352 at the time of this entry. The final latest run must be checked after the status/log commits.
 - Local execution was not available through this session; verification relies on GitHub Actions.
+
+
+## 2026-11-24 — Publisher thumbnail backfill, duplicate merge and review metrics
+### Latest baseline inspected
+- Discovery snapshot: 585 candidates; 0 thumbnails (0%). Google News source had 100% URL/date coverage. The quality metrics snapshot was generated before this cycle's new code ran.
+- News collection snapshot: 4/4 RSS queries succeeded; 258 fetched, 239 unique, 97 additions. Existing data showed 3 normalized long-title duplicate groups (6 rows → 3 groups), across opaque Google News redirect URLs.
+- Research: Google News RSS omits thumbnails/snippets in observed payloads; free publisher-page Open Graph/twitter image extraction is best-effort. RSS itself is an undocumented, unstable surface. Research links: https://cloro.dev/blog/google-news-rss/ and https://hushread.com/blog/rss-feed-images-not-showing.
+### Code changes
+- RSS candidates: added bounded publisher-page metadata image extraction, rotating backfill selection (12/run; 3 workers; 5s timeout; six-hour slot rotation), only missing Google News redirect URLs; preserve records on failure and preserve existing thumbnails.
+- Collector merge: normalized exact long headlines before opaque RSS URLs, canonical URL fallback for short titles; duplicate rows merge metadata so thumbnails/date/description are not lost.
+- Quality metrics: expose thumbnail enrichment attempt/found/missing/failed; duplicate before/after counts and normalized title-group totals; exact single-label classifier accuracy and per-category review metrics.
+- UI: expose duplicate before/after and thumbnail backfill result rows.
+- Tests: OpenGraph metadata extraction, safe URL rejection, bounded/rotating enrichment, fetch failure preservation, long-headline dedupe across different Google redirect tokens, metadata retention, duplicate comparison and manual-review accuracy.
+### CI history / correction
+- A CI run failed with `ReferenceError: thumbnailEnrichment is not defined` in collector main after a bad variable-order insertion. This was fixed by merging candidates first, then initializing enrichment and writing the returned list.
+- Latest observed run #372 had 77 unit tests passing; collection, quality generation and archive validation steps also completed successfully. Commit #373 was queued after test changes; status/log docs commits trigger further runs. Final CI result must be checked after all commits.
+- Do not claim thumbnails are already recovered: the 0% snapshot predates the new backfill and current effectiveness is not measured yet.
+### Next verification
+1. Check latest Actions run for unit tests, collect-news, quality metrics, data validation, artifact upload and Pages deployment.
+2. Read the refreshed `data/quality-metrics.json` and `data/news-collection-status.json`; calculate actual thumbnail gain.
+3. If publisher OG extraction remains 0%, inspect sampled redirect destinations and blocked/fetch failure reasons; do not introduce paid APIs as dependencies.
+4. Continue adding real review labels before reporting category accuracy.
