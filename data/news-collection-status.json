@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-23T13:29:36.160Z",
+  "collectedAt": "2026-11-23T13:30:02.049Z",
   "searchPack": 2,
   "queries": [
     {
@@ -10,8 +10,8 @@
     },
     {
       "query": "해원 엔믹스 기사",
-      "candidates": 25,
-      "uniqueCandidates": 25
+      "candidates": 100,
+      "uniqueCandidates": 100
     },
     {
       "query": "NMIXX Haewon appearance",
@@ -27,8 +27,8 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "failedQueries": [],
-  "fetched": 68,
-  "uniqueIncoming": 68,
+  "fetched": 143,
+  "uniqueIncoming": 142,
   "added": 0,
   "totalCandidates": 458
 }
