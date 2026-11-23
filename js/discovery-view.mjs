@@ -1,4 +1,4 @@
-import { classifyDiscoveryItem, classifyDiscoveryCategory, groupDiscoveryDuplicates } from './discovery-kind.mjs';
+import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates } from './discovery-kind.mjs';
 
 export function filterDiscoveryItems(items,query='') {
  const q=String(query||'').trim().toLowerCase();
@@ -25,7 +25,7 @@ if(list&&count){
  };
  const categoryBar=document.querySelector('#discovery-categories');
  let selectedCategory='all';
- const categoryOf=classifyDiscoveryCategory;
+ const categoryOf=classifyDiscoveryCategories;
  const categoryLabels={all:'전체',news:'뉴스',video:'영상',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
  const renderCategories=()=>{
   if(!categoryBar)return;
@@ -39,7 +39,7 @@ if(list&&count){
  };
  const render=()=>{
   const q=search?.value||'';
-  const filtered=groupDiscoveryDuplicates(filterDiscoveryItems(allItems,q)).filter(item=>selectedCategory==='all'||categoryOf(item)===selectedCategory);
+  const filtered=groupDiscoveryDuplicates(filterDiscoveryItems(allItems,q)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory));
   const items=filtered.slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
   const pageCount=Math.max(1,Math.ceil(items.length/PAGE_SIZE));
   page=Math.min(page,pageCount);
@@ -54,7 +54,7 @@ if(list&&count){
    card.append(thumbnail);
    const details=document.createElement('div');details.className='photo-card-details';
    const title=document.createElement('h3');const titleLink=document.createElement('a');titleLink.href=item.url;titleLink.target='_blank';titleLink.rel='noopener noreferrer';titleLink.textContent=item.title;titleLink.className='discovery-title-link';title.append(titleLink);
-   const kind=document.createElement('span');kind.className='tag';kind.textContent=categoryLabels[categoryOf(item)];
+   const kind=document.createElement('span');kind.className='tag';kind.textContent=categoryOf(item).map(category=>categoryLabels[category]||category).join(' · ');
    const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):'')+' · 발견 후보'+(item.duplicateCount>1?' · 중복 '+item.duplicateCount+'건 / 출처 '+item.sourceCount+'곳':'');
    const note=document.createElement('p');note.className='photo-description';note.textContent=item.description||'검색 결과로 발견된 링크';
    const score=document.createElement('p');score.className='photo-meta';score.textContent='관련성 점수 '+(Number.isFinite(item.relevanceScore)?item.relevanceScore:'미평가')+' · 검토 전 후보';
