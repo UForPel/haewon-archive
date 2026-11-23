@@ -98,7 +98,7 @@ export function canonicalCandidateUrl(value){
  }catch{return ''}
 }
 export function canonicalCandidateTitle(value=''){
- return String(value||'').replace(/<[^>]*>/g,' ').replace(/&amp;/gi,'&').normalize('NFKC').toLocaleLowerCase().replace(/\\b(?:youtube|youtu\\.be)\\b/g,'').replace(/[\\p{P}\\p{S}\\s]+/gu,'').trim();
+ return String(value||'').replace(/<[^>]*>/g,' ').replace(/&amp;/gi,'&').normalize('NFKC').toLocaleLowerCase().replace(/\b(?:youtube|youtu\.be)\b/g,'').replace(/[\p{P}\p{S}\s]+/gu,'').trim();
 }
 export function mergeCandidates(existing,incoming){
  const map=new Map();
