@@ -75,9 +75,9 @@ async function renderQualitySummary(){
  const host=document.querySelector('#discovery-quality-summary');if(!host)return;
  try{const response=await fetch('./data/quality-metrics.json');if(!response.ok)throw new Error('metrics unavailable');const metrics=await response.json();host.replaceChildren();
  const heading=document.createElement('h3');heading.textContent='자료 품질 현황';host.append(heading);
- const summary=document.createElement('p');summary.textContent='뉴스 수집 성공률 '+(metrics.collection.newsQuerySuccessRate===null?'미측정':metrics.collection.newsQuerySuccessRate+'%')+' · 후보 '+metrics.collection.newsCandidatesTotal+'개 · 링크 검사 '+(metrics.linkAudit?.checked||0)+'개 · 깨진 링크 '+(metrics.linkAudit?.broken?.length||0)+'개';host.append(summary);
+ const summary=document.createElement('p');summary.textContent='뉴스 수집 성공률 '+(metrics.collection.newsQuerySuccessRate===null?'미측정':metrics.collection.newsQuerySuccessRate+'%')+' · 후보 '+metrics.collection.newsCandidatesTotal+'개 · 링크 검사 '+(metrics.linkAudit?.checked||0)+'개 · 깨진 링크 '+(metrics.linkAudit?.broken?.length||0)+'개 · 썸네일 누락 '+(metrics.linkAudit?.thumbnailMissing||0)+'개';host.append(summary);
  const classification=document.createElement('p');classification.textContent='분류 검토 정확도 '+(metrics.classification.accuracy===null?'미측정 (검토 라벨 없음)':metrics.classification.accuracy+'% · 검토 '+metrics.classification.reviewedSamples+'건');host.append(classification);
- for(const source of metrics.sources||[]){const row=document.createElement('p');row.className='photo-meta';row.textContent=source.source+' · '+source.items+'건 · URL '+source.urlCoverage+'% · 썸네일 '+source.thumbnailCoverage+'% · 날짜 '+source.dateCoverage+'%';host.append(row);}
+ const dedupe=document.createElement('p');dedupe.textContent='중복 제거: '+(metrics.collection.newsAddedLastRun||0)+'개 신규 · 현재 그룹 '+(metrics.collection.duplicateGroupsCurrent||0)+'개 · 병합된 항목 '+(metrics.collection.duplicateItemsCollapsedCurrent||0)+'개';host.append(dedupe);\n for(const source of metrics.sources||[]){const row=document.createElement('p');row.className='photo-meta';row.textContent=source.source+' · '+source.items+'건 · URL '+source.urlCoverage+'% · 썸네일 '+source.thumbnailCoverage+'% · 날짜 '+source.dateCoverage+'%';host.append(row);}
  }catch{host.textContent='자료 품질 통계를 아직 사용할 수 없습니다.';}
 }
 renderQualitySummary();
