@@ -21,6 +21,8 @@ test('news category classifier prioritizes explicit event/brand tags over broad 
 test('news categories retain interview, performance, official and default news fallbacks',()=>{
  assert.equal(classifyDiscoveryCategory({title:'Haewon interview radio'}),'interview');
  assert.equal(classifyDiscoveryCategory({title:'NMIXX stage performance'}),'performance');
+ assert.equal(classifyDiscoveryCategory({title:'NMIXX new album coverage'}),'news');
+ assert.equal(classifyDiscoveryCategory({title:'JYP artist news update'}),'news');
  assert.equal(classifyDiscoveryCategory({title:'NMIXX official notice'}),'official');
  assert.equal(classifyDiscoveryCategory({title:'Local article about Haewon'}),'news');
 });
