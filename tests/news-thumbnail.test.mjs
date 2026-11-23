@@ -40,3 +40,5 @@ test('thumbnail enrichment keeps candidate on fetch error',async()=>{
  const report=await enrichThumbnails([{id:'x',url:'https://news.google.com/rss/articles/x',thumbnailUrl:''}],{fetchImpl:async()=>{throw new Error('blocked')}});
  assert.equal(report.items.length,1);assert.equal(report.items[0].thumbnailUrl,'');assert.equal(report.failed,1);
 });
+
+test('thumbnail backfill rotates selection by offset and stays bounded',async()=>{const items=Array.from({length:5},(_,i)=>({id:String(i),url:'https://news.google.com/rss/articles/'+i,thumbnailUrl:''}));const visited=[];const report=await enrichThumbnails(items,{limit:2,offset:3,fetchImpl:async url=>{visited.push(url);return {ok:true,status:200,text:async()=>'<meta property="og:image" content="https://cdn.example/'+visited.length+'.jpg">'}}});assert.equal(report.attempted,2);assert.equal(visited.length,2);assert.ok(visited[0].endsWith('/3'));assert.ok(visited[1].endsWith('/4'));});
