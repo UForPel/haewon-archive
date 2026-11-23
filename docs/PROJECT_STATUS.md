@@ -66,3 +66,9 @@ Updated: 2026-11-23 (KST)
 - Narrowed official classification to explicit official/notice/update wording; removed generic `jyp` and `nmixx` name triggers so ordinary coverage is not mislabeled official.
 - Added regression assertions for generic NMIXX coverage and generic JYP artist coverage to remain `news`.
 - Fix commits: `ab67171a` (classifier), `0a9b4652` (regression tests). New CI verification is pending.
+
+
+## Follow-up classifier correction — 2026-11-23
+- The first narrowed official rule still included the ambiguous word `update`; CI #291 correctly caught that `JYP artist news update` was misclassified as official.
+- Removed the standalone `update` trigger. Official category now relies on explicit official/notice wording (`공식`, `official`, `공지`, `notice`, `소식`).
+- Code commit: `ace49bd3`. CI is pending for this newest commit; prior classifier-only run #289 passed, but did not include the newest regression tests.
