@@ -2533,7 +2533,7 @@
     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBISjcxczd3cFVqZ2trX29VR0g1ZzVTMTFDSy1Gb3l0QWNUeE52U3A4SDdwalIxNnhjeDhsT1hFdDZZci11TWRzcVM5YWU?oc=5",
     "publishedAt": "2025-02-24T08:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTFBISjcxczd3cFVqZ2trX29VR0g1ZzVTMTFDSy1Gb3l0QWNUeE52U3A4SDdwalIxNnhjeDhsT1hFdDZZci11TWRzcVM5YWU?oc=5\" target=\"_blank\">‘음율 - 피차일반 (彼此一般)’ Covered by NMIXX HAEWON</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">YouTube</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "NMIXX Haewon",
@@ -2547,7 +2547,7 @@
     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBWRklsVG15dEhIS01xd01nRmZBUmpfRVU4U3B1aVFUb0pWck5Ia3BQcE1oclh4X0VpQzBTTUEydF83WVE5SjVHQVpFd09aaWhnWVNGSHZET3RSdTFmZ05vOGNaT2JPZw?oc=5",
     "publishedAt": "2025-01-18T08:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTFBWRklsVG15dEhIS01xd01nRmZBUmpfRVU4U3B1aVFUb0pWck5Ia3BQcE1oclh4X0VpQzBTTUEydF83WVE5SjVHQVpFd09aaWhnWVNGSHZET3RSdTFmZ05vOGNaT2JPZw?oc=5\" target=\"_blank\">미주, “변우석이 이상형”이라는 오해원에 “얘도 얼굴 보네” (‘놀뭐’)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">매일경제</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 방송",
@@ -2566,7 +2566,8 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "9d0507f7bba930fbbc54",
@@ -2574,7 +2575,7 @@
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE53NV9OekZyMEFNSjJJUm9oTGZpdDBMN2plS0lqb3NMT1RCVnJpT1cxS0lYYmJvOXhkRGM3UEc0RkczLUU5Z3prdFlDb3hLQTNjWHMyZg?oc=5",
     "publishedAt": "2024-11-01T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE53NV9OekZyMEFNSjJJUm9oTGZpdDBMN2plS0lqb3NMT1RCVnJpT1cxS0lYYmJvOXhkRGM3UEc0RkczLUU5Z3prdFlDb3hLQTNjWHMyZg?oc=5\" target=\"_blank\">\"제일 웃기다고 생각했는데 드디어…\" '워크맨' 장성규, 오해원과 세계관 통합</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">www.xportsnews.com</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 NMIXX",
@@ -2594,7 +2595,7 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "1ca251e322ba944e803b",
@@ -2608,7 +2609,7 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "7c55014ca55ca3160b14",
@@ -2616,7 +2617,7 @@
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8xZWZKZlAwcExqVGp2QmZJT2R5WWZnTEdLX2NLdEFURll0TUNqQ2EzcGVJYzh4Qmhvd1c1cWFyNG9JdVpPRXVxbmVNMFloWXZkWUJmR0EtZlZTZW9QdzhWaA?oc=5",
     "publishedAt": "2024-09-29T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE8xZWZKZlAwcExqVGp2QmZJT2R5WWZnTEdLX2NLdEFURll0TUNqQ2EzcGVJYzh4Qmhvd1c1cWFyNG9JdVpPRXVxbmVNMFloWXZkWUJmR0EtZlZTZW9QdzhWaA?oc=5\" target=\"_blank\">오해원, 대체 못하는 게 뭐야? 그림 실력 `체크!` [런닝맨]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">마이데일리</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 인터뷰",
@@ -2630,7 +2631,7 @@
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1JYWduSnA3dlVKQVFnMUFRNEo5TWtJdm9yQ0JxYWxtMFBNXzg5aXJMRU41MlJnM29Ua2YxUWZVc1JFTUI4LTdFRE9QQXZQMzdJTHIw?oc=5",
     "publishedAt": "2024-09-29T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE1JYWduSnA3dlVKQVFnMUFRNEo5TWtJdm9yQ0JxYWxtMFBNXzg5aXJMRU41MlJnM29Ua2YxUWZVc1JFTUI4LTdFRE9QQXZQMzdJTHIw?oc=5\" target=\"_blank\">오해원, 대체 못하는 게 뭐야? 그림 실력 '체크!' [런닝맨]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 방송",
@@ -2650,7 +2651,7 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "8890aef09b5cc4dafb5c",
@@ -2658,7 +2659,7 @@
     "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE55TWptaFp2SDljM25felFXZTNmTENrMXlHTVZKd3hKeHl4T1VuYjJvdDUxTl9fUF9LMklrV2Mxa1k?oc=5",
     "publishedAt": "2024-07-31T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiQEFVX3lxTE55TWptaFp2SDljM25felFXZTNmTENrMXlHTVZKd3hKeHl4T1VuYjJvdDUxTl9fUF9LMklrV2Mxa1k?oc=5\" target=\"_blank\">모르면 안 되는 밈 제조기! 오해원, 랄랄 밈 모음</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">캐릿 Careet</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 인터뷰",
@@ -2672,7 +2673,7 @@
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE80NWZabnZyS3RNOVBWWVlEeV9fc1ZTXy1DbFlsWW5HalZHNmh1cTVZRWxhblRDcjFsZUNDb3NMNll1dm9DQk9tc3QxNHZTcV9jYlZtZkowUy1uTTZfRW5QbQ?oc=5",
     "publishedAt": "2024-07-31T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE80NWZabnZyS3RNOVBWWVlEeV9fc1ZTXy1DbFlsWW5HalZHNmh1cTVZRWxhblRDcjFsZUNDb3NMNll1dm9DQk9tc3QxNHZTcV9jYlZtZkowUy1uTTZfRW5QbQ?oc=5\" target=\"_blank\">`양궁여제` 임시현, `고윤정x오해원` 닮은 꼴 미모 화제</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">마이데일리</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 인터뷰",
@@ -2692,7 +2693,7 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "febcd9132fa7aece89c3",

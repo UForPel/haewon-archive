@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T23:37:15.310Z",
+  "generatedAt": "2026-11-23T23:37:45.645Z",
   "collection": {
     "newsQueriesRequested": 4,
     "newsQueriesSuccessful": 4,
@@ -32,10 +32,10 @@
       "source": "Google News",
       "items": 613,
       "withUrl": 613,
-      "withThumbnail": 12,
+      "withThumbnail": 24,
       "withDate": 613,
       "urlCoverage": 100,
-      "thumbnailCoverage": 2,
+      "thumbnailCoverage": 4,
       "dateCoverage": 100
     }
   ],
@@ -77,7 +77,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 0,
-    "thumbnailMissing": 601,
+    "thumbnailMissing": 589,
     "results": [
       {
         "kind": "article",
