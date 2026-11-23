@@ -8,14 +8,30 @@ export function youtubeId(url=''){
  const value=String(url||'');
  return value.match(/[?&]v=([\w-]{11})/)?.[1]||value.match(/youtu\.be\/([\w-]{11})/)?.[1]||value.match(/youtube\.com\/(?:shorts|embed)\/([\w-]{11})/)?.[1]||'';
 }
+export const MAX_REDIRECT_CANDIDATES=40;
+export const REDIRECT_CONCURRENCY=4;
 export async function resolveYoutubeCandidates(items=[],fetchImpl=fetch){
- const resolved=[];
+ const direct=[],eligible=[];
  for(const item of items){
-  if(youtubeId(item.url)){resolved.push(item);continue;}
-  if(!/youtube|유튜브|fancam|직캠|fan.?cam/i.test(String(item.title||'')))continue;
-  try{const response=await fetchImpl(item.url,{redirect:'follow',headers:{'user-agent':'HaewonArchiveBot/0.3 (public link resolver)'},signal:AbortSignal.timeout(8000)});const finalUrl=response.url||item.url;if(youtubeId(finalUrl))resolved.push({...item,url:finalUrl});}catch{}
+  if(youtubeId(item.url)){direct.push(item);continue;}
+  if(/youtube|유튜브|fancam|직캠|fan.?cam/i.test(String(item.title||'')))eligible.push(item);
  }
- return resolved;
+ const candidates=eligible.slice(0,MAX_REDIRECT_CANDIDATES),resolved=[];
+ let cursor=0;
+ async function worker(){
+  while(true){
+   const index=cursor++;
+   if(index>=candidates.length)return;
+   const item=candidates[index];
+   try{
+    const response=await fetchImpl(item.url,{redirect:'follow',headers:{'user-agent':'HaewonArchiveBot/0.3 (public link resolver)'},signal:AbortSignal.timeout(8000)});
+    const finalUrl=response.url||item.url;
+    if(youtubeId(finalUrl))resolved.push({...item,url:finalUrl});
+   }catch{}
+  }
+ }
+ await Promise.all(Array.from({length:Math.min(REDIRECT_CONCURRENCY,candidates.length)},()=>worker()));
+ return [...direct,...resolved];
 }
 export function discoveryVideos(items=[],now=new Date().toISOString()){
  return items.filter(item=>youtubeId(item.url)).map(item=>{
