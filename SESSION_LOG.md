@@ -569,3 +569,11 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Implemented exact normalized URL repetition metrics and host distribution for thumbnails, displayed in the discovery quality dashboard.
 - Important boundary: repeated URL reuse can indicate duplicate images, but different URLs can still serve the same image; this is not perceptual/image-hash dedupe.
 - Added test coverage; code, test, UI separated into commits `0540ab7d`, `9f3d3ee8`, `ccd7fe75`. Verification pending latest CI.
+
+
+## 2026-11-24 — Thumbnail response validation and heuristic audit (in progress)
+- Implemented distinct thumbnail URL HEAD checks for response status and image Content-Type, with bounded sample size/concurrency/timeouts. Test coverage added for valid image, non-image, and broken response cases.
+- Added URL-only triage heuristics (reused URL, logo/icon-ish path, tiny-size query hints); explicitly not visual image recognition and cannot determine article relevance.
+- Dataset snapshot: 144 records share one exact thumbnail URL; 474/618 candidates have no thumbnail. This is a suspected enrichment quality issue, not a visually confirmed conclusion.
+- CI #388 deployment failed: deploy-pages reported missing `github-pages` artifact even though artifact-upload step was reported completed. Investigate pipeline/Actions platform and retry after tests pass.
+- Local clone/test unavailable because the execution environment cannot resolve github.com; GitHub Actions is the verification path.
