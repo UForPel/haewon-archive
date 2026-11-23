@@ -555,3 +555,11 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 2. Read the refreshed `data/quality-metrics.json` and `data/news-collection-status.json`; calculate actual thumbnail gain.
 3. If publisher OG extraction remains 0%, inspect sampled redirect destinations and blocked/fetch failure reasons; do not introduce paid APIs as dependencies.
 4. Continue adding real review labels before reporting category accuracy.
+
+
+### Measurement update — 2026-11-23 23:41 UTC
+- Latest committed quality snapshot: 616 candidates, 84 thumbnail-bearing (14%; baseline 0%), 12 enrichment attempts found 12 images, 0 misses/0 errors.
+- Incoming dedupe comparison: 210 fetched → 194 after merge, 16 collapsed. Dedupe aliases canonical URL and long normalized headline to prevent URL duplicates while preserving metadata.
+- Link audit: 40 sampled records, 0 broken, 0 rate-limited, 0 unreachable. Classification review labels: 0, accuracy unmeasured.
+- #381 latest attempt 2: unit tests, collection, quality metrics, archive validation, operational log validation and artifact upload passed; Pages deploy failed with GitHub response `Deployment failed, try again later`. #377 was full success on the earlier code/test commit. Latest UI + metrics code has CI validation but current Pages deployment remains failed.
+- Added UI for exact single-label and per-category review accuracy (only shown when review samples exist), duplicate comparison and thumbnail enrichment results. Latest status board records measured data and CI caveat.
