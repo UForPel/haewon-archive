@@ -491,3 +491,13 @@ Asked whether expert software-development algorithms and practices (robustness, 
 - Added `assessDiscoveryQuality()`: 5 metadata signals (descriptive title, source, valid URL, parseable date, thumbnail) contribute 20 points each. Labels are low/medium/high completeness only; not source trustworthiness or truth.
 - Added tests for URL identity priority and metadata completeness tiers. UI displays the completeness metric alongside relevance score.
 - Commits: `c1b4691d` code, `35d43ddb` tests, `8797a57d` UI, `70877b89` project status. Latest CI #309/#311 pending/in progress at this log entry; not yet verified.
+
+
+## 2026-11-23 — Quality metrics cycle and CI repair notes
+- Implemented per-source collection success rates (Google News query success; YouTube feed pass/fail), source field coverage, candidate totals, current duplicate grouping, and before/after collector duplicate counts.
+- Bounded link audit checks up to 12 discovery candidates (article URL and thumbnail URLs if present), with 4-second per-request timeout and HEAD/GET fallback for unsupported/blocked HEAD. Report includes broken sampled links and thumbnail URL missing count.
+- Category counts use the live classifier. Category accuracy remains null until manual expected-category review records exist; sample size is currently 0. This is intentionally not presented as measured accuracy.
+- Added summary/UI region, package quality script, generated metrics validation, and mocked tests for coverage/metrics/link audit.
+- Latest verified CI #333 completed success. #329 and #330 also successful. Earlier failures #321–#328 were caused by malformed dashboard/test syntax and a document reference during Node test import; logs pinpointed them and fixes were applied before #329/#333 success.
+- CI #333 snapshot: Google News RSS 4/4 query success (100%); YouTube Atom success; 19 videos; 473 candidate records; URL/date coverage 100%, thumbnail coverage 0%; 12 audited URLs, 0 broken; category counts video 139/news 280/interview 24/brand 12/performance 16/event 3/official 2; reviewed classification labels 0, so accuracy unmeasured. Candidate duplicate reduction in current grouping: 0.
+- Commits and CI are detailed in PROJECT_STATUS.md; #333 verified the latest source-success UI change and full workflow.
