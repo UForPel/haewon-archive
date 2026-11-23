@@ -69,3 +69,8 @@ try {
   if (error.code !== 'ENOENT') throw error;
   console.log('OK data/run-logs (not created yet)');
 }
+
+const qualityMetrics = JSON.parse(await readFile(new URL('data/quality-metrics.json', root), 'utf8'));
+if (!qualityMetrics || typeof qualityMetrics !== 'object' || !Array.isArray(qualityMetrics.sources) || !qualityMetrics.collection || !qualityMetrics.classification || !qualityMetrics.linkAudit) throw new Error('Invalid data/quality-metrics.json');
+if (!Number.isInteger(qualityMetrics.linkAudit.checked) || !Array.isArray(qualityMetrics.linkAudit.broken)) throw new Error('Invalid link audit metrics');
+console.log(`OK data/quality-metrics.json (${qualityMetrics.sources.length} source summaries, ${qualityMetrics.linkAudit.checked} links checked)`);
