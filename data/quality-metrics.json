@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-11-23T23:33:10.328Z",
+  "generatedAt": "2026-11-23T23:33:38.418Z",
   "collection": {
     "newsQueriesRequested": 4,
     "newsQueriesSuccessful": 4,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 592,
-    "newsUniqueFetched": 208,
-    "newsAddedLastRun": 7,
-    "duplicateBeforeMergeLastRun": 17,
-    "duplicateGroupsCurrent": 592,
-    "duplicateItemsCollapsedCurrent": 0
+    "newsCandidatesTotal": 594,
+    "newsUniqueFetched": 253,
+    "newsAddedLastRun": 2,
+    "duplicateBeforeMergeLastRun": 24,
+    "duplicateGroupsCurrent": 591,
+    "duplicateItemsCollapsedCurrent": 3
   },
   "sources": [
     {
       "source": "Google News",
-      "items": 592,
-      "withUrl": 592,
+      "items": 594,
+      "withUrl": 594,
       "withThumbnail": 0,
-      "withDate": 592,
+      "withDate": 594,
       "urlCoverage": 100,
       "thumbnailCoverage": 0,
       "dateCoverage": 100
@@ -40,10 +40,10 @@
     }
   ],
   "classification": {
-    "items": 592,
+    "items": 594,
     "categoryCounts": {
-      "video": 166,
-      "news": 357,
+      "video": 167,
+      "news": 358,
       "interview": 26,
       "brand": 19,
       "performance": 22,
@@ -61,7 +61,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 0,
-    "thumbnailMissing": 592,
+    "thumbnailMissing": 594,
     "results": [
       {
         "kind": "article",

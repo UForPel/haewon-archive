@@ -1467,6 +1467,20 @@
     "relevanceScore": 8
   },
   {
+    "id": "3910bd80fc5e7b4cfb3e",
+    "title": "[포토] 엔믹스 오해원, '외모 체크' 필요 없는 대세돌 미모··· '2024 SBS 가요대전' - 비하인드",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1PNjRDdXVjTW9lb0ZOTXo3VERWN3dfaGtSNlNQYkxmMEdJMkFjT09wdzB4bXRicTNPaEcwNmlRSGlTYkhMRURESllhamRSdTRwY0NCczRQclhxRjk5dXpzQzFHeXc1a1JlcThDTWN3?oc=5",
+    "publishedAt": "2024-12-25T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE1PNjRDdXVjTW9lb0ZOTXo3VERWN3dfaGtSNlNQYkxmMEdJMkFjT09wdzB4bXRicTNPaEcwNmlRSGlTYkhMRURESllhamRSdTRwY0NCczRQclhxRjk5dXpzQzFHeXc1a1JlcThDTWN3?oc=5\" target=\"_blank\">[포토] 엔믹스 오해원, '외모 체크' 필요 없는 대세돌 미모··· '2024 SBS 가요대전'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">비하인드</font>",
+    "thumbnailUrl": "",
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 NMIXX",
+    "discoveredAt": "2026-11-23T23:33:36.161Z",
+    "status": "candidate",
+    "relevanceScore": 8
+  },
+  {
     "id": "52545fb3db375b641bad",
     "title": "[Y초점] 엔믹스 오해원, 정말 ‘외모췍’ 이 유행어 하나로 떴을까? - YTN",
     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBVZ3d5T3Nud2JKVGZQUi1UYXFNcHlaX1pabGVuSHctOEljMG9wU3N6NWxhVG9ReFd4QnJhRWdYNldVelFNNi1xMW4xOFE2MVR3dUpKWV81NzI3UVNZa0E?oc=5",
@@ -7728,6 +7742,20 @@
     "discoverySource": "google-news-rss",
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-23T23:33:07.030Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
+    "id": "b8367b216b0f784cbed4",
+    "title": "220627 NMIXX \"월간 5️⃣☀️1️⃣ #1\" VLIVE - YouTube",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1lX2hpdS1UbDlRUGI1RXFGNW55Tk1ydWRxTUU5b1RFSklyODJIMzI1VldkalNpSVVKZFBnUW9yQTVRNkxIdENDOHdHWHBKd0hvYm1GT25zVm02Q1lN?oc=5",
+    "publishedAt": "2023-01-05T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1lX2hpdS1UbDlRUGI1RXFGNW55Tk1ydWRxTUU5b1RFSklyODJIMzI1VldkalNpSVVKZFBnUW9yQTVRNkxIdENDOHdHWHBKd0hvYm1GT25zVm02Q1lN?oc=5\" target=\"_blank\">220627 NMIXX \"월간 5️⃣☀️1️⃣ #1\" VLIVE</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">YouTube</font>",
+    "thumbnailUrl": "",
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 NMIXX",
+    "discoveredAt": "2026-11-23T23:33:36.161Z",
     "status": "candidate",
     "relevanceScore": 2
   },
