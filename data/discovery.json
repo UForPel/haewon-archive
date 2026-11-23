@@ -1273,6 +1273,20 @@
     "relevanceScore": 8
   },
   {
+    "id": "d01473dbe0f0558d6d99",
+    "title": "[1인N역] '워크돌'이 키운 오해원…엔믹스로 기세 이어질까 (엑:스피디아) - 엑스포츠뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1tMjVyeExRVDBkTFlCOTZSSnp2dkw4NmFNMHh3R0tFUlpCUXNUVTdBYXl4Y0FnUmJxSW4waWxwQk0xMVFNVW9vOGdOYnNGZ1NDNHU5Sg?oc=5",
+    "publishedAt": "2025-03-10T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE1tMjVyeExRVDBkTFlCOTZSSnp2dkw4NmFNMHh3R0tFUlpCUXNUVTdBYXl4Y0FnUmJxSW4waWxwQk0xMVFNVW9vOGdOYnNGZ1NDNHU5Sg?oc=5\" target=\"_blank\">[1인N역] '워크돌'이 키운 오해원…엔믹스로 기세 이어질까 (엑:스피디아)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">엑스포츠뉴스</font>",
+    "thumbnailUrl": "",
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 방송",
+    "discoveredAt": "2026-11-23T11:57:28.964Z",
+    "status": "candidate",
+    "relevanceScore": 8
+  },
+  {
     "id": "d86aab0165fcbae56bd6",
     "title": "[엔믹스] 서열 정리 당한 오해원 - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5OeUdvVXhaQmhhcXQzTEJnakd4V2FMTFZGR0FDdzJncWZpdl9PTGFSMzRQUU5QQzJmOFpaakRkYTUxenAxeXB1SzNsTWtUcDZVcVFGYWNPTGRTRW51?oc=5",
@@ -4660,6 +4674,20 @@
     "discoverySource": "google-news-rss",
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T13:22:59.272Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
+    "id": "855e689ac0ec7455f794",
+    "title": "879회 - MBC",
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdzJuMFVFSXB3eU9KeUlZZU10b1hVT1N2T2JRUWtvaHlxbzJ0U2NXRkdscGlrdGxDZW0zMTYxVnBXbFBRbWFoNm1pZllobXBUWk9OdFJQeUFtYXRaOVUzZUl4UTgtTWhkVTJVZklMMmFmcGhiMTlYTHFhZVZpOTZXeWFWUnI0dGhJNFVFdkVNTzlKM3B0QnI3TUxjak5KOWNGS1Br?oc=5",
+    "publishedAt": "2024-08-28T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxOdzJuMFVFSXB3eU9KeUlZZU10b1hVT1N2T2JRUWtvaHlxbzJ0U2NXRkdscGlrdGxDZW0zMTYxVnBXbFBRbWFoNm1pZllobXBUWk9OdFJQeUFtYXRaOVUzZUl4UTgtTWhkVTJVZklMMmFmcGhiMTlYTHFhZVZpOTZXeWFWUnI0dGhJNFVFdkVNTzlKM3B0QnI3TUxjak5KOWNGS1Br?oc=5\" target=\"_blank\">879회</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MBC</font>",
+    "thumbnailUrl": "",
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 방송",
+    "discoveredAt": "2026-11-23T11:57:28.964Z",
     "status": "candidate",
     "relevanceScore": 0
   },

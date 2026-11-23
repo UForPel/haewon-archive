@@ -2,11 +2,11 @@
   "status": "success",
   "source": "nmixx-youtube",
   "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnUAyD4t2LkvW68YrDh7fDg",
-  "lastAttemptAt": "2026-11-23T03:44:03.227Z",
-  "lastSuccessAt": "2026-11-23T03:44:03.325Z",
+  "lastAttemptAt": "2026-11-23T11:57:28.445Z",
+  "lastSuccessAt": "2026-11-23T11:57:28.844Z",
   "itemsFetched": 15,
-  "itemsAdded": 0,
-  "itemsDuplicate": 15,
-  "totalItems": 18,
+  "itemsAdded": 1,
+  "itemsDuplicate": 14,
+  "totalItems": 19,
   "message": "공개 YouTube 채널 피드 수집 완료"
 }

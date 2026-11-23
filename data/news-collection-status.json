@@ -1,17 +1,17 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-23T03:44:03.473Z",
+  "collectedAt": "2026-11-23T11:57:28.964Z",
   "searchPack": 2,
   "queries": [
     {
       "query": "오해원 방송",
-      "candidates": 32,
-      "uniqueCandidates": 32
+      "candidates": 34,
+      "uniqueCandidates": 34
     },
     {
       "query": "해원 엔믹스 기사",
-      "candidates": 26,
-      "uniqueCandidates": 26
+      "candidates": 25,
+      "uniqueCandidates": 25
     },
     {
       "query": "NMIXX Haewon appearance",
@@ -27,8 +27,8 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "failedQueries": [],
-  "fetched": 66,
-  "uniqueIncoming": 66,
-  "added": 1,
-  "totalCandidates": 350
+  "fetched": 67,
+  "uniqueIncoming": 67,
+  "added": 2,
+  "totalCandidates": 352
 }
