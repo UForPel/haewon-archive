@@ -1,34 +1,34 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-23T13:40:08.326Z",
-  "searchPack": 2,
+  "collectedAt": "2026-11-23T21:23:33.161Z",
+  "searchPack": 0,
   "queries": [
     {
-      "query": "오해원 방송",
-      "candidates": 34,
-      "uniqueCandidates": 34
+      "query": "오해원 NMIXX",
+      "candidates": 48,
+      "uniqueCandidates": 48
     },
     {
-      "query": "해원 엔믹스 기사",
-      "candidates": 25,
-      "uniqueCandidates": 25
+      "query": "해원 엔믹스",
+      "candidates": 51,
+      "uniqueCandidates": 51
     },
     {
-      "query": "NMIXX Haewon appearance",
-      "candidates": 2,
-      "uniqueCandidates": 2
+      "query": "NMIXX Haewon",
+      "candidates": 49,
+      "uniqueCandidates": 49
     },
     {
-      "query": "Haewon NMIXX event",
-      "candidates": 7,
-      "uniqueCandidates": 7
+      "query": "Haewon NMIXX news",
+      "candidates": 10,
+      "uniqueCandidates": 10
     }
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
   "failedQueries": [],
-  "fetched": 68,
-  "uniqueIncoming": 68,
-  "added": 0,
-  "totalCandidates": 473
+  "fetched": 158,
+  "uniqueIncoming": 147,
+  "added": 14,
+  "totalCandidates": 487
 }
