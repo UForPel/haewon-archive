@@ -26,7 +26,7 @@ export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoS
  const fetched=Number(newsStatus.fetched||0), unique=Number(newsStatus.uniqueIncoming||0);
  return {generatedAt:new Date().toISOString(),collection:{newsQueriesRequested:Number(newsStatus.requestedQueries||0),newsQueriesSuccessful:Number(newsStatus.successfulQueries||0),newsQuerySuccessRate:newsStatus.requestedQueries?Math.round(newsStatus.successfulQueries/newsStatus.requestedQueries*100):null,youtubeStatus:videoStatus.status||'unknown',videosTotal:videos.length,newsCandidatesTotal:discovery.length,newsUniqueFetched:unique,newsAddedLastRun:Number(newsStatus.added||0),duplicateBeforeMergeLastRun:fetched?Math.max(0,fetched-unique):null,duplicateAfterMergeCount:Math.max(0,unique+Number(newsStatus.totalCandidates||0)-discovery.length)},sources:sourceRows,classification:{items:discovery.length,categoryCounts,reviewedSamples:reviewed.length,accuracy:reviewed.length?Math.round(correct/reviewed.length*100):null,accuracyLabel:reviewed.length?'manual-review agreement':'not measured (no category review labels)'},linkAudit:{status:'pending',checked:0,broken:[],thumbnailMissing:discovery.filter(item=>!/^https?:\/\//i.test(item.thumbnailUrl||'')).length}};
 }
-export async function auditLinks(items,{fetchImpl=fetch,limit=30,timeoutMs=8000}={}){
+export async function auditLinks(items,{fetchImpl=fetch,limit=12,timeoutMs=4000}={}){
  const unique=new Map();
  for(const item of items.slice(0,limit)){
   for(const [kind,url] of [['article',item.url],['thumbnail',item.thumbnailUrl]])if(/^https?:\/\//i.test(String(url||''))&&!unique.has(url))unique.set(url,{kind,url});
