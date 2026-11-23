@@ -106,7 +106,7 @@ export function mergeCandidates(existing,incoming){
   const titleKey=canonicalCandidateTitle(item?.title);
   const urlKey=canonicalCandidateUrl(item?.url);
   const key=titleKey.length>=32?'title:'+titleKey:(urlKey?'url:'+urlKey:'');
-  if(item?.url&&key&&!map.has(key))map.set(key,item);
+  if(item?.url&&key){const prior=map.get(key);if(!prior)map.set(key,item);else map.set(key,{...prior,thumbnailUrl:prior.thumbnailUrl||item.thumbnailUrl||'',publishedAt:prior.publishedAt||item.publishedAt||'',description:(prior.description||'').length>=(item.description||'').length?prior.description:item.description,sourceName:prior.sourceName||item.sourceName,relevanceScore:Math.max(Number(prior.relevanceScore||0),Number(item.relevanceScore||0))});}
  }
  return [...map.values()].sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
 }
