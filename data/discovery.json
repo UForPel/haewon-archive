@@ -11,7 +11,7 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "8db1a2f8d3b528f5b14f",
@@ -25,7 +25,7 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "484548a28daf266b0af0",
@@ -38,7 +38,8 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
-    "relevanceScore": 9
+    "relevanceScore": 9,
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "52450695704f8f37828a",
@@ -51,7 +52,8 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
-    "relevanceScore": 9
+    "relevanceScore": 9,
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "ad80ba5c4044d322fefe",
@@ -65,7 +67,7 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "87bc658694fe794890b9",
@@ -3665,6 +3667,20 @@
     "relevanceScore": 4
   },
   {
+    "id": "13da35e9ee2a9465d5fc",
+    "title": "엔믹스 해원, 매끈하게 빛나는 피부 자신감…생기 넘치는 분위기 [화보] - 서플 뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1nQkFJaWV3N3dmNlZ2OTNva0FjTkhxT3psdVFiR0JiNG9mckdWRnhaWWhUNVZ5dGI1ZUc0UXJwLXo1MUxWMGV1LXVmSS1oS0laMFdOa2JmMGRvNTVw?oc=5",
+    "publishedAt": "2026-09-22T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1nQkFJaWV3N3dmNlZ2OTNva0FjTkhxT3psdVFiR0JiNG9mckdWRnhaWWhUNVZ5dGI1ZUc0UXJwLXo1MUxWMGV1LXVmSS1oS0laMFdOa2JmMGRvNTVw?oc=5\" target=\"_blank\">엔믹스 해원, 매끈하게 빛나는 피부 자신감…생기 넘치는 분위기 [화보]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">서플 뉴스</font>",
+    "thumbnailUrl": "",
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-23T23:43:30.461Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "edb07199d27444993dff",
     "title": "릴리·해원부터 지우·규진까지…엔믹스, 완전체 넘어 ‘유닛 맛집’ 노린다 - 스포츠동아",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE94UHA1Y01WVzZkYzk3aGU3ZGhwVjBsQWNYQ1V4UUo0WE5kN2R3bEdaWG9UUmhVY0VpSDF1eG1hZVpEYVNxUjlDVVNZVkhYQnJYUWlOOXRQZ21UaEZhT2NSTFBId2J6bGN6aV9JRXV3?oc=5",
@@ -4151,6 +4167,20 @@
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
+    "id": "b360e201e65b71391c05",
+    "title": "[사진]엔믹스 배이-해원 '찐친 포즈' - OSEN",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBkXzFIYlU3ZUMtZlZfdUdfY3NqWXlZU0ttb05ieEJvT2pjMGZUWVE5dlo4QUtSaXNFRkxWOUROVHlJSVlrMHBJRm1GbEhkcmNnV2d2bQ?oc=5",
+    "publishedAt": "2026-07-23T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTFBkXzFIYlU3ZUMtZlZfdUdfY3NqWXlZU0ttb05ieEJvT2pjMGZUWVE5dlo4QUtSaXNFRkxWOUROVHlJSVlrMHBJRm1GbEhkcmNnV2d2bQ?oc=5\" target=\"_blank\">[사진]엔믹스 배이-해원 '찐친 포즈'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">OSEN</font>",
+    "thumbnailUrl": "",
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-23T23:43:30.461Z",
     "status": "candidate",
     "relevanceScore": 4
   },
@@ -8474,7 +8504,7 @@
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE8yT3htR2dnVmNXMko5M19SbjU1U1FYUmFvdUlnNVNOYU9JNllocWtBSFpmRUhRNXRLV0RNbkhxdS1ZT1M2UElwNTl5WFc4MkdkMnZF?oc=5",
     "publishedAt": "2024-10-08T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE8yT3htR2dnVmNXMko5M19SbjU1U1FYUmFvdUlnNVNOYU9JNllocWtBSFpmRUhRNXRLV0RNbkhxdS1ZT1M2UElwNTl5WFc4MkdkMnZF?oc=5\" target=\"_blank\">[팬튜브②] \"저작권 침해 상쇄될 정도로 소중\"…긍·부정 효과는?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 방송",
@@ -8494,7 +8524,7 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "855e689ac0ec7455f794",
@@ -8502,7 +8532,7 @@
     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdzJuMFVFSXB3eU9KeUlZZU10b1hVT1N2T2JRUWtvaHlxbzJ0U2NXRkdscGlrdGxDZW0zMTYxVnBXbFBRbWFoNm1pZllobXBUWk9OdFJQeUFtYXRaOVUzZUl4UTgtTWhkVTJVZklMMmFmcGhiMTlYTHFhZVZpOTZXeWFWUnI0dGhJNFVFdkVNTzlKM3B0QnI3TUxjak5KOWNGS1Br?oc=5",
     "publishedAt": "2024-08-28T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxOdzJuMFVFSXB3eU9KeUlZZU10b1hVT1N2T2JRUWtvaHlxbzJ0U2NXRkdscGlrdGxDZW0zMTYxVnBXbFBRbWFoNm1pZllobXBUWk9OdFJQeUFtYXRaOVUzZUl4UTgtTWhkVTJVZklMMmFmcGhiMTlYTHFhZVZpOTZXeWFWUnI0dGhJNFVFdkVNTzlKM3B0QnI3TUxjak5KOWNGS1Br?oc=5\" target=\"_blank\">879회</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MBC</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 방송",
@@ -8516,7 +8546,7 @@
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5kc0JpU042cjE4NWYybW5abEJFRF8xU3F5bDZjc1JKblJSelRTSnhpc1VGdzF3c1I0anhxS2s3bWFEYkpkU1hxdFhEc29qU1l5cVlnWW94VGlMd1gzNzRfNA?oc=5",
     "publishedAt": "2023-12-28T08:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5kc0JpU042cjE4NWYybW5abEJFRF8xU3F5bDZjc1JKblJSelRTSnhpc1VGdzF3c1I0anhxS2s3bWFEYkpkU1hxdFhEc29qU1l5cVlnWW94VGlMd1gzNzRfNA?oc=5\" target=\"_blank\">이용진 \"'과몰입 인생사', 호기심 있게 임할 수 있는 프로‥영광\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">iMBC 연예</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 방송",
@@ -8530,7 +8560,7 @@
     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9LTm04NGQ4MnNRWXRHMU9pMk5KVG8xemdHcVBTNzE4MkF4RHpJcnFScnpuN0xJbzdneTNzOVV6OVZ2Y2o1RFVjY3E3aVVockpNSGxmQkxGZDNwRmNmdEE?oc=5",
     "publishedAt": "2018-11-16T08:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE9LTm04NGQ4MnNRWXRHMU9pMk5KVG8xemdHcVBTNzE4MkF4RHpJcnFScnpuN0xJbzdneTNzOVV6OVZ2Y2o1RFVjY3E3aVVockpNSGxmQkxGZDNwRmNmdEE?oc=5\" target=\"_blank\">[Y이슈] \"하지 않은 말로 오해\"...'해투4' 워너원, 방송사고 직접 해명</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">YTN</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 방송",
@@ -8544,7 +8574,7 @@
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5EMVVjTGVlMjlrQ3hUT3djdWotejVEclNSZ3UxY0xNa1VETWI5TW5tN1ZienZsVGgxMXhsd3BOa01IMXg2aGFzMWtKNzBEbktzWkFLUkJzc0RRLUFEUmNMcFY1N3NTVngtNnUzZWRR?oc=5",
     "publishedAt": "2017-04-06T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE5EMVVjTGVlMjlrQ3hUT3djdWotejVEclNSZ3UxY0xNa1VETWI5TW5tN1ZienZsVGgxMXhsd3BOa01IMXg2aGFzMWtKNzBEbktzWkFLUkJzc0RRLUFEUmNMcFY1N3NTVngtNnUzZWRR?oc=5\" target=\"_blank\">'사랑은방울방울' 왕지혜 선우은숙 무릎 꿇고 공현주 악행에 '버럭'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">폴리뉴스 Polinews</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 방송",
@@ -8558,7 +8588,7 @@
     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ENmR6YjlCUkFMeXQzMkJUWHUxTWYwTGxkY01nWGM4UzdSN2Y5MEsxRDhydUtwQW5pNmczWUgyZmpRYlVCemRubV9oeFVsRlB2THc1MjREblo2blBTS09wc3V3UVI0SDVxb2ZNMw?oc=5",
     "publishedAt": "2014-04-19T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTE1ENmR6YjlCUkFMeXQzMkJUWHUxTWYwTGxkY01nWGM4UzdSN2Y5MEsxRDhydUtwQW5pNmczWUgyZmpRYlVCemRubV9oeFVsRlB2THc1MjREblo2blBTS09wc3V3UVI0SDVxb2ZNMw?oc=5\" target=\"_blank\">'참 좋은 시절' 김희선, 고인범에게 물벼락 맞았다…부자사이 이간질</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">OBS경인TV</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 방송",

@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-23T23:43:03.929Z",
+  "generatedAt": "2026-11-23T23:43:32.328Z",
   "collection": {
     "newsQueriesRequested": 4,
     "newsQueriesSuccessful": 4,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 616,
-    "newsUniqueFetched": 253,
-    "newsAddedLastRun": 0,
-    "duplicateBeforeMergeLastRun": 24,
-    "duplicateGroupsCurrent": 616,
+    "newsCandidatesTotal": 618,
+    "newsUniqueFetched": 239,
+    "newsAddedLastRun": 2,
+    "duplicateBeforeMergeLastRun": 17,
+    "duplicateGroupsCurrent": 618,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 277,
-      "after": 253,
-      "collapsed": 24,
+      "before": 256,
+      "after": 239,
+      "collapsed": 17,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -30,12 +30,12 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 616,
-      "withUrl": 616,
-      "withThumbnail": 108,
-      "withDate": 616,
+      "items": 618,
+      "withUrl": 618,
+      "withThumbnail": 120,
+      "withDate": 618,
       "urlCoverage": 100,
-      "thumbnailCoverage": 18,
+      "thumbnailCoverage": 19,
       "dateCoverage": 100
     }
   ],
@@ -54,12 +54,12 @@
     }
   ],
   "classification": {
-    "items": 616,
+    "items": 618,
     "categoryCounts": {
       "video": 182,
-      "news": 364,
+      "news": 365,
       "interview": 27,
-      "brand": 19,
+      "brand": 20,
       "performance": 22,
       "event": 3,
       "official": 2
@@ -73,15 +73,21 @@
   "linkAudit": {
     "status": "completed",
     "sampledItems": 40,
-    "checked": 40,
+    "checked": 41,
     "broken": [],
     "rateLimited": 0,
     "unreachable": 0,
-    "thumbnailMissing": 508,
+    "thumbnailMissing": 498,
     "results": [
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5JNnJER1VBa3IxVzEtQXNGbWhRQk1acDhnSEtVYnNrV3Z5d3ZrMlBtSkVOa0lpMy1TdUxlRjJnTkg2YTQ2cGxFc1hVWTdrQWdnTVJnM2gybDdFcTVB?oc=5",
+        "status": 200,
+        "ok": true
+      },
+      {
+        "kind": "thumbnail",
+        "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
         "status": 200,
         "ok": true
       },
