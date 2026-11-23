@@ -483,3 +483,11 @@ Asked whether expert software-development algorithms and practices (robustness, 
 - Duplicate key strategy: normalized exact long title (cross-source), canonical URL for short/generic title; strip tracking params, hash, lowercase host. Representative selection remains relevance then recency; preserve duplicate and source counts.
 - Added regression coverage for multi-label tags, title precedence, canonical URL tracking cleanup, short title safety, and cross-source long-title grouping. Assertion was corrected from expected news to expected interview for an interview title.
 - CI #305 failed before fix (SyntaxError extra brace). CI #306 on the brace fix was pending at the point of log update; verification not yet claimed.
+
+
+## 2026-11-23 — Metadata completeness scoring / canonical URL priority
+- CI #307 and #308 were verified successful before this cycle. #305 was a known syntax error; #306 succeeded after correcting the extra brace.
+- Changed duplicate grouping key order: canonical URL first (tracking parameters and fragment removed), normalized exact long title fallback only when no usable URL. This avoids splitting records that point to the same article but use different headlines.
+- Added `assessDiscoveryQuality()`: 5 metadata signals (descriptive title, source, valid URL, parseable date, thumbnail) contribute 20 points each. Labels are low/medium/high completeness only; not source trustworthiness or truth.
+- Added tests for URL identity priority and metadata completeness tiers. UI displays the completeness metric alongside relevance score.
+- Commits: `c1b4691d` code, `35d43ddb` tests, `8797a57d` UI, `70877b89` project status. Latest CI #309/#311 pending/in progress at this log entry; not yet verified.
