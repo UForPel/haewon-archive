@@ -1,28 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { filterDiscoveryItems } from '../js/discovery-view.mjs';
-import { classifyDiscoveryItem, classifyDiscoveryCategory, filterArticleCandidates } from '../js/discovery-kind.mjs';
+import { classifyDiscoveryItem, classifyDiscoveryCategory, filterArticleCandidates, groupDiscoveryDuplicates } from '../js/discovery-kind.mjs';
 const items=[{title:'Haewon interview',sourceName:'News A',description:'NMIXX interview'},{title:'Stage clip',sourceName:'News B',description:'NMIXX stage'}];
 test('discovery query filters title, source and description case-insensitively',()=>{assert.equal(filterDiscoveryItems(items,'haewon').length,1);assert.equal(filterDiscoveryItems(items,'news b')[0].title,'Stage clip');assert.equal(filterDiscoveryItems(items,'stage').length,1);});
 test('empty query returns every candidate',()=>{assert.equal(filterDiscoveryItems(items,'').length,2);});
 test('no-match query returns empty list',()=>{assert.deepEqual(filterDiscoveryItems(items,'missing'),[]);});
 test('YouTube and fancam candidates are labeled as videos',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon fancam'}),'video');assert.equal(classifyDiscoveryItem({url:'https://www.youtube.com/watch?v=abc'}),'video');});
-test('ordinary articles remain article candidates even when their description mentions YouTube',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon interview',url:'https://example.com/news',description:'The interview video is available on YouTube'}),'article');});
+test('ordinary articles remain articles when descriptions mention YouTube',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon interview',url:'https://example.com/news',description:'The interview video is available on YouTube'}),'article');});
 test('article candidate list excludes video links',()=>{assert.deepEqual(filterArticleCandidates([{title:'Haewon interview'},{title:'Haewon fancam'},{title:'YouTube clip'}]).map(x=>x.title),['Haewon interview']);});
-
-test('news category classifier separates event and brand coverage',()=>{
- assert.equal(classifyDiscoveryCategory({title:'NMIXX 팬미팅 일정'}),'event');
- assert.equal(classifyDiscoveryCategory({title:'Haewon pictorial campaign'}),'brand');
-});
-test('news category classifier prioritizes explicit event/brand tags over broad official keywords',()=>{
- assert.equal(classifyDiscoveryCategory({title:'NMIXX 공식 팬미팅 공지'}),'event');
- assert.equal(classifyDiscoveryCategory({title:'NMIXX 공식 브랜드 화보'}),'brand');
-});
-test('news categories retain interview, performance, official and default news fallbacks',()=>{
- assert.equal(classifyDiscoveryCategory({title:'Haewon interview radio'}),'interview');
- assert.equal(classifyDiscoveryCategory({title:'NMIXX stage performance'}),'performance');
- assert.equal(classifyDiscoveryCategory({title:'NMIXX new album coverage'}),'news');
- assert.equal(classifyDiscoveryCategory({title:'JYP artist news update'}),'news');
- assert.equal(classifyDiscoveryCategory({title:'NMIXX official notice'}),'official');
- assert.equal(classifyDiscoveryCategory({title:'Local article about Haewon'}),'news');
-});
+test('news category classifier separates event and brand coverage',()=>{assert.equal(classifyDiscoveryCategory({title:'NMIXX 팬미팅 일정'}),'event');assert.equal(classifyDiscoveryCategory({title:'Haewon pictorial campaign'}),'brand');});
+test('event and brand terms outrank broad official keywords',()=>{assert.equal(classifyDiscoveryCategory({title:'NMIXX 공식 팬미팅 공지'}),'event');assert.equal(classifyDiscoveryCategory({title:'NMIXX 공식 브랜드 화보'}),'brand');});
+test('news category fallback and explicit category labels',()=>{assert.equal(classifyDiscoveryCategory({title:'Haewon interview radio'}),'interview');assert.equal(classifyDiscoveryCategory({title:'NMIXX stage performance'}),'performance');assert.equal(classifyDiscoveryCategory({title:'NMIXX new album coverage'}),'news');assert.equal(classifyDiscoveryCategory({title:'JYP artist news update'}),'news');assert.equal(classifyDiscoveryCategory({title:'NMIXX official notice'}),'official');});
+test('title category takes precedence over noisy RSS description',()=>{assert.equal(classifyDiscoveryCategory({title:'Haewon interview',description:'official event performance brand'}),'interview');assert.equal(classifyDiscoveryCategory({title:'Local coverage',description:'<b>Official notice</b> from the publisher'}),'official');});
+test('duplicate grouping collapses exact normalized titles and retains source counts',()=>{const grouped=groupDiscoveryDuplicates([{title:'Haewon — News Article Title That Is Long Enough',sourceName:'A',relevanceScore:3},{title:'Haewon News Article Title That Is Long Enough',sourceName:'B',relevanceScore:8}]);assert.equal(grouped.length,1);assert.equal(grouped[0].duplicateCount,2);assert.equal(grouped[0].sourceCount,2);assert.equal(grouped[0].sourceName,'B');});
+test('short generic headlines are not merged',()=>{const grouped=groupDiscoveryDuplicates([{title:'News',sourceName:'A'},{title:'News',sourceName:'B'}]);assert.equal(grouped.length,2);assert.ok(grouped.every(x=>x.duplicateCount===1));});
