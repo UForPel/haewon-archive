@@ -3704,6 +3704,20 @@
     "relevanceScore": 4
   },
   {
+    "id": "7b02def2d2209d68c499",
+    "title": "[포토] 엔믹스 해원, 청순함 가득 - seoulwire.com",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1paUxwbTAyTEdUM1ZpTllwMWlvNWxaMnZ4M0xwbVM0MDBPZmFTU0g4Y0J2cURIZHZudm1QYktyQ0pEX3M4N1dqVjJSakJuNlNsbUdCNW12c3pGS0gwWEZVWTJBcGpkYnRjLUhn?oc=5",
+    "publishedAt": "2023-02-02T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE1paUxwbTAyTEdUM1ZpTllwMWlvNWxaMnZ4M0xwbVM0MDBPZmFTU0g4Y0J2cURIZHZudm1QYktyQ0pEX3M4N1dqVjJSakJuNlNsbUdCNW12c3pGS0gwWEZVWTJBcGpkYnRjLUhn?oc=5\" target=\"_blank\">[포토] 엔믹스 해원, 청순함 가득</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">seoulwire.com</font>",
+    "thumbnailUrl": "",
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스 기사",
+    "discoveredAt": "2026-11-23T13:17:52.359Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "f439f96df4c2b82bcdbb",
     "title": "[포토] 엔믹스 해원, '귀여워~' (2022 SBS 가요대전) - 한국경제",
     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9hNkxuVHlKMTdEOVpwanEtU3lxM2J5Vl94NXN4dEtiaFNxN2oxcTZUalZBbF8xdFQxcl9wdDFCWXVIcm1HVUdKWGJmNHh6S0haRmFubkczdlFyQQ?oc=5",
@@ -3726,6 +3740,20 @@
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-20T12:53:37.166Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
+    "id": "1dca2488560369f169b0",
+    "title": "엔믹스 해원 '여긴 어디? 나는 누구?'[엑's HD포토] - 엑스포츠뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAtdnlWUEhkcnpWNGxnNHc0UFBCUTkta2FqRU5vNXBCRjBLc3Vlc2VLOF91cE9tT21nR3pYdXJzQWJGWmc1SVRqNEFiNmZHTl9XcVlTcw?oc=5",
+    "publishedAt": "2022-10-13T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTFAtdnlWUEhkcnpWNGxnNHc0UFBCUTkta2FqRU5vNXBCRjBLc3Vlc2VLOF91cE9tT21nR3pYdXJzQWJGWmc1SVRqNEFiNmZHTl9XcVlTcw?oc=5\" target=\"_blank\">엔믹스 해원 '여긴 어디? 나는 누구?'[엑's HD포토]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">엑스포츠뉴스</font>",
+    "thumbnailUrl": "",
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스 기사",
+    "discoveredAt": "2026-11-23T13:17:52.359Z",
     "status": "candidate",
     "relevanceScore": 4
   },
