@@ -14,3 +14,6 @@ test('link audit reports network errors without crashing',async()=>{
  const report=await auditLinks([{url:'https://err.test'}],{fetchImpl:async()=>{throw new Error('network');}});
  assert.equal(report.broken.length,0);assert.equal(report.unreachable,1);assert.match(report.results[0].error,/network/);
 });
+
+test('review metrics expose exact-label and per-category agreement',()=>{const report=summarizeCollection({discovery:[{title:'Haewon interview'}],reviews:[{title:'Haewon interview',expectedCategory:'interview'}]});assert.equal(report.classification.accuracy,100);assert.equal(report.classification.exactSingleLabelAccuracy,100);assert.equal(report.classification.perCategoryReview.interview.accuracy,100);});
+test('duplicate comparison uses normalized headline groups',()=>{const report=summarizeCollection({discovery:[{title:'Same headline — a sufficiently long news article about Haewon',url:'https://news.google.com/rss/articles/a'},{title:'Same headline a sufficiently long news article about Haewon',url:'https://news.google.com/rss/articles/b'}]});assert.equal(report.collection.newsCandidatesTotal,2);assert.equal(report.collection.duplicateGroupsCurrent,1);assert.equal(report.collection.duplicateItemsCollapsedCurrent,1);assert.equal(report.collection.deduplicationComparison.before,2);assert.equal(report.collection.deduplicationComparison.after,1);});
