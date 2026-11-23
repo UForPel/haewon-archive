@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T13:33:43.382Z",
+  "generatedAt": "2026-11-23T13:34:13.941Z",
   "collection": {
     "newsQueriesRequested": 4,
     "newsQueriesSuccessful": 4,
@@ -7,7 +7,7 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 473,
-    "newsUniqueFetched": 68,
+    "newsUniqueFetched": 100,
     "newsAddedLastRun": 0,
     "duplicateBeforeMergeLastRun": 0,
     "duplicateGroupsCurrent": 473,
