@@ -5,18 +5,18 @@ import { classifyDiscoveryCategories, groupDiscoveryDuplicates } from '../js/dis
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const readJson=async path=>JSON.parse(await readFile(resolve(ROOT,path),'utf8'));
 export function summarizeThumbnailUrls(items=[]){
- const urls=new Map(),hosts=new Map(),missing=0;
- let missingCount=0;
+ const urls=new Map(),hosts=new Map();let missingCount=0;
  for(const item of items){
   let normalized='';
   try{const url=new URL(item.thumbnailUrl||'');if(url.protocol==='https:'){url.hash='';normalized=url.toString();}}catch{}
   if(!normalized){missingCount++;continue;}
   urls.set(normalized,(urls.get(normalized)||0)+1);
-  const host=new URL(normalized).hostname.toLowerCase().replace(/^www\\./,'');
+  const host=new URL(normalized).hostname.toLowerCase().replace(/^www\./,'');
   hosts.set(host,(hosts.get(host)||0)+1);
  }
  const repeated=[...urls.entries()].filter(([,count])=>count>1).map(([url,count])=>({url,count})).sort((a,b)=>b.count-a.count);
- const heuristicFlags=[...urls.entries()].map(([url,count])=>{const parsed=new URL(url);const suspiciousName=/(?:logo|avatar|icon|favicon|sprite|placeholder|default)/i.test(parsed.pathname);const tinyHint=/(?:w|width|size|sz)=?(?:1|2|3|4|5|6|7|8|9|10|1[0-9]|2[0-4])(?:\b|&|$)|(?:s0-w(?:1[0-9]|2[0-4]))/i.test(parsed.search+parsed.pathname);return {url,count,flags:[...(count>1?['reused-url']:[]),...(suspiciousName?['name-suggests-logo-icon']:[]),...(tinyHint?['small-size-hint']:[])]};}).filter(row=>row.flags.length);\n return {items:items.length,withThumbnail:items.length-missingCount,missing:missingCount,uniqueThumbnailUrls:urls.size,repeatedUrlGroups:repeated.length,repeatedItems:repeated.reduce((sum,row)=>sum+row.count-1,0),repeatedUrls:repeated.slice(0,20),heuristicFlaggedUrls:heuristicFlags.length,heuristicFlags:heuristicFlags.slice(0,20),hosts:[...hosts.entries()].map(([host,count])=>({host,count})).sort((a,b)=>b.count-a.count)};
+ const heuristicFlags=[...urls.entries()].map(([url,count])=>{const parsed=new URL(url);const suspiciousName=/(?:logo|avatar|icon|favicon|sprite|placeholder|default)/i.test(parsed.pathname);const tinyHint=/(?:w|width|size|sz)=?(?:1|2|3|4|5|6|7|8|9|10|1[0-9]|2[0-4])(?:\b|&|$)|(?:s0-w(?:1[0-9]|2[0-4]))/i.test(parsed.search+parsed.pathname);return {url,count,flags:[...(count>1?['reused-url']:[]),...(suspiciousName?['name-suggests-logo-icon']:[]),...(tinyHint?['small-size-hint']:[])]};}).filter(row=>row.flags.length);
+ return {items:items.length,withThumbnail:items.length-missingCount,missing:missingCount,uniqueThumbnailUrls:urls.size,repeatedUrlGroups:repeated.length,repeatedItems:repeated.reduce((sum,row)=>sum+row.count-1,0),repeatedUrls:repeated.slice(0,20),heuristicFlaggedUrls:heuristicFlags.length,heuristicFlags:heuristicFlags.slice(0,20),hosts:[...hosts.entries()].map(([host,count])=>({host,count})).sort((a,b)=>b.count-a.count)};
 }
 export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoStatus={},reviews=[]}={}){
  const sourceMap=new Map();
