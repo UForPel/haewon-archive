@@ -10,7 +10,8 @@
     "sync-discovery-videos": "node scripts/sync-discovery-videos.mjs",
     "improve": "node scripts/recursive-improvement.mjs",
     "validate": "node scripts/validate-data.mjs",
-    "log": "node scripts/run-log.mjs"
+    "log": "node scripts/run-log.mjs",
+    "quality": "node scripts/quality-metrics.mjs"
   },
   "engines": {
     "node": ">=20"
