@@ -128,3 +128,12 @@ Last updated: 2026-11-20
 - Quality metrics now expose thumbnail enrichment attempts/found/missing/failed, exact normalized headline groups and before/after duplicate collapse, and exact single-label classification agreement plus per-category review counts. Human review remains zero until actual labels are entered.
 - UI shows duplicate merge before/after and thumbnail-enrichment outcomes.
 - CI verification is pending for the latest commit; see Actions. Earlier attempts during this cycle failed due an undefined thumbnail-enrichment variable, which was corrected. Do not treat the latest run as complete until final test/deploy status is checked.
+
+
+### Actual data effect — verified 2026-11-23 23:41 UTC
+- Discovery candidates: 616.
+- Thumbnails: 84/616 (14%), up from 0% at baseline. The latest run's bounded enrichment returned 12/12 images (0 missing, 0 failed); publisher-page extraction is best-effort and the backfill will continue rotating through missing records.
+- Incoming duplicate merge: 210 fetched rows → 194 after dedupe, 16 collapsed (latest snapshot). Canonical title/URL aliases prevent duplicate URL validator failures.
+- Link audit: 40 sample candidate records checked; 0 broken, 0 rate-limited, 0 unreachable. This is not a full crawl.
+- Human category review: 0 samples; accuracy remains unmeasured.
+- Latest CI #381: unit tests, collection, quality generation, archive validation, log validation, and artifact upload passed; GitHub Pages deployment status failed on the platform response. Earlier #377 completed successfully end-to-end. Re-check latest Actions before claiming a full current run.
