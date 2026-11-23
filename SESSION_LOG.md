@@ -563,3 +563,9 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Link audit: 40 sampled records, 0 broken, 0 rate-limited, 0 unreachable. Classification review labels: 0, accuracy unmeasured.
 - #381 latest attempt 2: unit tests, collection, quality metrics, archive validation, operational log validation and artifact upload passed; Pages deploy failed with GitHub response `Deployment failed, try again later`. #377 was full success on the earlier code/test commit. Latest UI + metrics code has CI validation but current Pages deployment remains failed.
 - Added UI for exact single-label and per-category review accuracy (only shown when review samples exist), duplicate comparison and thumbnail enrichment results. Latest status board records measured data and CI caveat.
+
+
+## 2026-11-24 — Thumbnail URL reuse audit
+- Implemented exact normalized URL repetition metrics and host distribution for thumbnails, displayed in the discovery quality dashboard.
+- Important boundary: repeated URL reuse can indicate duplicate images, but different URLs can still serve the same image; this is not perceptual/image-hash dedupe.
+- Added test coverage; code, test, UI separated into commits `0540ab7d`, `9f3d3ee8`, `ccd7fe75`. Verification pending latest CI.
