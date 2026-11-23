@@ -501,3 +501,9 @@ Asked whether expert software-development algorithms and practices (robustness, 
 - Latest verified CI #333 completed success. #329 and #330 also successful. Earlier failures #321–#328 were caused by malformed dashboard/test syntax and a document reference during Node test import; logs pinpointed them and fixes were applied before #329/#333 success.
 - CI #333 snapshot: Google News RSS 4/4 query success (100%); YouTube Atom success; 19 videos; 473 candidate records; URL/date coverage 100%, thumbnail coverage 0%; 12 audited URLs, 0 broken; category counts video 139/news 280/interview 24/brand 12/performance 16/event 3/official 2; reviewed classification labels 0, so accuracy unmeasured. Candidate duplicate reduction in current grouping: 0.
 - Commits and CI are detailed in PROJECT_STATUS.md; #333 verified the latest source-success UI change and full workflow.
+
+
+## 2026-11-23 — Link audit false-positive correction and rerun outcome
+- Adjusted audit result classes: only HTTP 404/410 are counted as broken; HTTP 429 is rate-limited; other non-success statuses/network failures are unreachable. The dashboard reports access issues separately.
+- CI #338 full run success; its quality report shows 12 sampled URLs checked, 0 broken, 0 rate-limited, 0 other unreachable, and 473 discovery candidates missing thumbnails. This is only a 12-item bounded link sample.
+- #343 attempt 1 passed tests and data generation/validation but failed Pages deployment with a temporary artifact metadata lookup (0 artifacts). Attempt 2 passed tests and the collection/validation steps, but Pages deploy found two same-name artifacts after rerun. A clean workflow run triggered by the documentation commit is used for final verification.
