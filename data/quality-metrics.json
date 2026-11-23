@@ -1,5 +1,25 @@
 {
-  "generatedAt": "2026-11-23T23:43:32.328Z",
+  "generatedAt": "2026-11-23T23:48:59.344Z",
+  "thumbnailAudit": {
+    "items": 618,
+    "withThumbnail": 132,
+    "missing": 486,
+    "uniqueThumbnailUrls": 1,
+    "repeatedUrlGroups": 1,
+    "repeatedItems": 131,
+    "repeatedUrls": [
+      {
+        "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+        "count": 132
+      }
+    ],
+    "hosts": [
+      {
+        "host": "lh3.googleusercontent.com",
+        "count": 132
+      }
+    ]
+  },
   "collection": {
     "newsQueriesRequested": 4,
     "newsQueriesSuccessful": 4,
@@ -7,17 +27,17 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 618,
-    "newsUniqueFetched": 239,
-    "newsAddedLastRun": 2,
-    "duplicateBeforeMergeLastRun": 17,
+    "newsUniqueFetched": 192,
+    "newsAddedLastRun": 0,
+    "duplicateBeforeMergeLastRun": 11,
     "duplicateGroupsCurrent": 618,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 256,
-      "after": 239,
-      "collapsed": 17,
+      "before": 203,
+      "after": 192,
+      "collapsed": 11,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -32,10 +52,10 @@
       "source": "Google News",
       "items": 618,
       "withUrl": 618,
-      "withThumbnail": 120,
+      "withThumbnail": 132,
       "withDate": 618,
       "urlCoverage": 100,
-      "thumbnailCoverage": 19,
+      "thumbnailCoverage": 21,
       "dateCoverage": 100
     }
   ],
@@ -77,7 +97,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 0,
-    "thumbnailMissing": 498,
+    "thumbnailMissing": 486,
     "results": [
       {
         "kind": "article",
