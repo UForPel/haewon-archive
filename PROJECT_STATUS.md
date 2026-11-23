@@ -118,3 +118,13 @@ Last updated: 2026-11-20
 - Added tests for thumbnail metadata, description markup, unsafe/logo candidates, parser integration, and tracking-parameter deduplication; quality test asserts sampled record count.
 - Classification accuracy remains unmeasured until human review labels are added; this cycle does not fabricate accuracy.
 - Latest CI after all commits must be inspected before declaring the cycle verified.
+
+
+## 2026-11-24 — RSS thumbnail backfill and headline deduplication cycle
+- Re-inspected the live dataset: 585 discovery records, 0 thumbnails (0%); Google News RSS rows had 100% URL/date coverage. Existing metrics still reflect a snapshot before the new enrichment logic.
+- Google News RSS payloads do not reliably include thumbnails; research confirms RSS image metadata is generally absent, so publisher-page metadata is a free but best-effort fallback. See [Google News RSS limitations](https://cloro.dev/blog/google-news-rss/) and [RSS image troubleshooting](https://hushread.com/blog/rss-feed-images-not-showing).
+- Implemented bounded publisher-page Open Graph/twitter image extraction for missing Google News candidates, max 12 attempts per run, 3 concurrent requests, 5-second timeout. Backfill selection rotates every 6 hours and writes recovered thumbnails back to existing discovery records. Existing thumbnails are preserved; failed fetches do not drop candidates.
+- Collector now merges long normalized exact headlines before opaque Google News URL tokens and merges thumbnail/date/description metadata into existing records. Short/generic headlines fall back to canonical URL dedupe.
+- Quality metrics now expose thumbnail enrichment attempts/found/missing/failed, exact normalized headline groups and before/after duplicate collapse, and exact single-label classification agreement plus per-category review counts. Human review remains zero until actual labels are entered.
+- UI shows duplicate merge before/after and thumbnail-enrichment outcomes.
+- CI verification is pending for the latest commit; see Actions. Earlier attempts during this cycle failed due an undefined thumbnail-enrichment variable, which was corrected. Do not treat the latest run as complete until final test/deploy status is checked.
