@@ -20,11 +20,24 @@ function tag(raw,tagName){
  const m=raw.match(new RegExp('<'+tagName+'>([\\s\\S]*?)</'+tagName+'>','i'));
  return m?decode(m[1]):'';
 }
-function imageUrl(raw){
- const markup=raw.match(/<(?:media:thumbnail|media:content)\b[^>]*>/i)?.[0]||'';
- const url=markup.match(/\burl=["']([^"']+)["']/i)?.[1]||'';
- const decoded=decode(url);
- return /^https:\/\//i.test(decoded)?decoded:'';
+export function extractRssThumbnail(raw='',description=''){
+ const candidates=[];
+ for(const tag of raw.matchAll(/<(?:media:thumbnail|media:content|enclosure)\b[^>]*>/gi)){
+  const attrs=tag[0];
+  const url=attrs.match(/\burl=["']([^"']+)["']/i)?.[1]||attrs.match(/\bhref=["']([^"']+)["']/i)?.[1]||'';
+  const type=attrs.match(/\btype=["']([^"']+)["']/i)?.[1]||'';
+  if(!type||/^image\//i.test(type))candidates.push(decode(url));
+ }
+ const text=decode(description||raw);
+ for(const match of text.matchAll(/<(?:img|source)\b[^>]*>/gi)){
+  const attrs=match[0];
+  const src=attrs.match(/\b(?:src|data-src|data-original|data-lazy-src)=["']([^"']+)["']/i)?.[1]||attrs.match(/\bsrcset=["']([^"']+)["']/i)?.[1]?.split(',')[0]?.trim().split(/\s+/)[0]||'';
+  candidates.push(decode(src));
+ }
+ for(const candidate of candidates){
+  try{const url=new URL(candidate);if(url.protocol==='https:'&&!/(?:logo|avatar|icon|favicon)/i.test(url.pathname))return url.href;}catch{}
+ }
+ return '';
 }
 export function relevanceScore(title='',description=''){
  const text=(title+' '+description).toLowerCase();
@@ -42,7 +55,7 @@ export function parseRss(xml,query,now=new Date().toISOString()){
   if(!title||!url||!/^https:\/\/\S+/i.test(url))return null;
   const date=pub?new Date(pub):null,publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const id=createHash('sha256').update(url).digest('hex').slice(0,20);
-  return {id,title,url,publishedAt,description:description.slice(0,1200),thumbnailUrl:imageUrl(raw),sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
+  return {id,title,url,publishedAt,description:description.slice(0,1200),thumbnailUrl:extractRssThumbnail(raw,description),sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
  }).filter(Boolean);
  return items;
 }
