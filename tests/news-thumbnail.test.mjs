@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { extractRssThumbnail, parseRss, canonicalCandidateUrl, mergeCandidates } from '../scripts/collect-news.mjs';
+import { extractRssThumbnail, parseRss, canonicalCandidateUrl, mergeCandidates, extractOpenGraphImage, enrichThumbnails } from '../scripts/collect-news.mjs';
 
 test('extracts image from media thumbnail metadata',()=>{
  assert.equal(extractRssThumbnail('<media:thumbnail url="https://cdn.example/news.jpg"/>'),'https://cdn.example/news.jpg');
@@ -23,4 +23,20 @@ test('canonical URL removes tracking parameters and fragments for deduplication'
  const merged=mergeCandidates([{url:'https://www.example.com/story?utm_campaign=one',title:'Story'}],[{url:'https://example.com/story?utm_source=two',title:'Story updated'}]);
  assert.equal(merged.length,1);
  assert.equal(merged[0].title,'Story');
+});
+
+test('extracts safe OpenGraph image metadata',()=>{
+ assert.equal(extractOpenGraphImage('<meta property="og:image" content="https://cdn.example/preview.jpg">'),'https://cdn.example/preview.jpg');
+ assert.equal(extractOpenGraphImage('<meta name="twitter:image" content="http://cdn.example/preview.jpg">'),'');
+ assert.equal(extractOpenGraphImage('<meta property="og:image" content="https://cdn.example/logo.png">'),'');
+});
+test('enriches bounded missing thumbnails from publisher metadata',async()=>{
+ let calls=0;
+ const items=[{id:'1',url:'https://news.google.com/rss/articles/a',thumbnailUrl:''},{id:'2',url:'https://news.google.com/rss/articles/b',thumbnailUrl:'https://existing.test/x.jpg'},{id:'3',url:'https://other.test/article',thumbnailUrl:''}];
+ const report=await enrichThumbnails(items,{limit:1,fetchImpl:async()=>{calls++;return {ok:true,status:200,text:async()=>'<meta property="og:image" content="https://cdn.example/new.jpg">'}}});
+ assert.equal(calls,1);assert.equal(report.attempted,1);assert.equal(report.found,1);assert.equal(report.items[0].thumbnailUrl,'https://cdn.example/new.jpg');assert.equal(report.items[1].thumbnailUrl,'https://existing.test/x.jpg');assert.equal(report.items[2].thumbnailUrl,'');
+});
+test('thumbnail enrichment keeps candidate on fetch error',async()=>{
+ const report=await enrichThumbnails([{id:'x',url:'https://news.google.com/rss/articles/x',thumbnailUrl:''}],{fetchImpl:async()=>{throw new Error('blocked')}});
+ assert.equal(report.items.length,1);assert.equal(report.items[0].thumbnailUrl,'');assert.equal(report.failed,1);
 });
