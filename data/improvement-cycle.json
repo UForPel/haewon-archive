@@ -17,7 +17,7 @@
   },
   "evidence": {
     "cumulativeDiscoveryCandidates": 381,
-    "currentRunCandidates": 67,
+    "currentRunCandidates": 68,
     "uniqueVideoRecords": 19,
     "queryYield": [
       {
@@ -34,7 +34,7 @@
       },
       {
         "query": "Haewon NMIXX event",
-        "candidates": 7
+        "candidates": 8
       }
     ],
     "highestYieldQueries": [
