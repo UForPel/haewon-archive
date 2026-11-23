@@ -59,3 +59,13 @@ Last updated: 2026-11-20
 - Run #96 succeeded after changing workflow concurrency to `cancel-in-progress: false`; active runs are no longer cancelled by newer runs in the same concurrency group. Queue behavior still needs observation under repeated triggers.
 - Latest collector observed 15 valid feed items, 0 additions, 17 total records. This is a successful no-new-item run, not a content-growth milestone.
 - Operational run-log counts still need refinement; duplicate/rejected semantics and failure-path logging remain open.
+
+
+## Discovery deduplication and category refinement — 2026-11-23
+- Confirmed CI #292 and #293 success; #291/#288 failures were classifier regressions and their follow-up correction passed.
+- Inspected the live discovery dataset (381 records): found 4 exact normalized-title duplicate groups (8 records) among the sampled full dataset scan. This is a conservative exact-title grouping signal, not fuzzy semantic deduplication.
+- Added `groupDiscoveryDuplicates()`: normalize punctuation/case, merge only sufficiently long exact normalized titles, keep short/generic headlines separate, select a representative by relevance then recency, and expose duplicate/source counts.
+- Category quality: prefer title matches before cleaned RSS description fallback to reduce publisher boilerplate overriding the article title.
+- UI integration and regression tests are being committed separately. CI is required before declaring this fully verified.
+- CI #294 failed during Pages deployment because the deploy step reported zero artifacts after upload had succeeded; logs show an artifact API/deployment lookup issue, not unit-test failure. #295 succeeded after syntax correction.
+- Commits: `f3b5b791` (initial classifier/dedupe implementation, subsequently syntax-corrected in `c47041a6`); test/UI commits pending CI.
