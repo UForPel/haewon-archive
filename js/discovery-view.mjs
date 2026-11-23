@@ -1,4 +1,4 @@
-import { classifyDiscoveryItem } from './discovery-kind.mjs';
+import { classifyDiscoveryItem, classifyDiscoveryCategory } from './discovery-kind.mjs';
 
 export function filterDiscoveryItems(items,query='') {
  const q=String(query||'').trim().toLowerCase();
@@ -25,17 +25,7 @@ if(list&&count){
  };
  const categoryBar=document.querySelector('#discovery-categories');
  let selectedCategory='all';
- const categoryOf=item=>{
-  if(classifyDiscoveryItem(item)==='video')return 'video';
-  const text=String(item.title||'')+' '+String(item.description||'');
-  if(/공식|official|jyp|nmixx/i.test(text))return 'official';
-  if(/인터뷰|interview|방송|예능|radio|라디오|출연/i.test(text))return 'interview';
-  if(/무대|stage|공연|concert|직캠|fancam|dance|춤/i.test(text))return 'performance';
-  if(/행사|event|팬미팅|fan meeting|시상식|award|페스티벌|festival/i.test(text))return 'event';
-  if(/광고|브랜드|brand|화보|pictorial|campaign|모델/i.test(text))return 'brand';
-  if(/공지|notice|소식|update/i.test(text))return 'official';
-  return 'news';
- };
+ const categoryOf=classifyDiscoveryCategory;
  const categoryLabels={all:'전체',news:'뉴스',video:'영상',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
  const renderCategories=()=>{
   if(!categoryBar)return;
