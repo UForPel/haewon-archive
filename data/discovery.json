@@ -1496,7 +1496,8 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailUrl": ""
   },
   {
     "id": "bab87c204fad9202f92d",
@@ -6151,7 +6152,7 @@
     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA3QXFqRmlXd3BWR255a2JWY3R6UmZtdFNEZmFoNFRwbTdvaHdkal9nMHB1S1BPUTBwcnZxRi1EX0VJUEg2WnlLVTJHakxGTTRvejdoOHR5LV92bXUxU3BPa0thd1dVQdIBakFVX3lxTE12MjAwcUMxNEZqWXk3Q1NuRlVVSDRlUm9MUjY3T0g4aURTa3I4MHIyMDVJNFFsVlV1OE1xWm9EQnVaV2I5Mm03Nmo3QXZVVFZFRXpvWTdmRkc2aWUyZFM3Sy05OGdDMTBHdUE?oc=5",
     "publishedAt": "2023-04-15T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTFA3QXFqRmlXd3BWR255a2JWY3R6UmZtdFNEZmFoNFRwbTdvaHdkal9nMHB1S1BPUTBwcnZxRi1EX0VJUEg2WnlLVTJHakxGTTRvejdoOHR5LV92bXUxU3BPa0thd1dVQdIBakFVX3lxTE12MjAwcUMxNEZqWXk3Q1NuRlVVSDRlUm9MUjY3T0g4aURTa3I4MHIyMDVJNFFsVlV1OE1xWm9EQnVaV2I5Mm03Nmo3QXZVVFZFRXpvWTdmRkc2aWUyZFM3Sy05OGdDMTBHdUE?oc=5\" target=\"_blank\">[today포토] 엔믹스(NMIXX) 해원, ‘사랑스러운 농담곰’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">연예투데이뉴스</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스 기사",
@@ -6165,7 +6166,7 @@
     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1oWlRSSENCSHVzMGxZS1c3WDl2OWhPdlZHWEZPSF9CeVpXc0UydEt2d3QyN3hCZDcxSjZkbXlUbzFYNXhaVEt4R3JkWjRGUEYyZWFDZHRidjUtV1h0U0tzUmZuTGY4QdIBakFVX3lxTFBSV0Jqc2ZvRk4tNmtCdEd5NUQ2ZC1rS28yMm1wR3YtVDEzRXd6ZnpZWjJ5TFExUnlsSExKeUxybUdURzF1YkxETW5fc19JZDRfMW85V2l3bl9weE5pWmZFMElQR3ZJSWJhQXc?oc=5",
     "publishedAt": "2023-04-15T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE1oWlRSSENCSHVzMGxZS1c3WDl2OWhPdlZHWEZPSF9CeVpXc0UydEt2d3QyN3hCZDcxSjZkbXlUbzFYNXhaVEt4R3JkWjRGUEYyZWFDZHRidjUtV1h0U0tzUmZuTGY4QdIBakFVX3lxTFBSV0Jqc2ZvRk4tNmtCdEd5NUQ2ZC1rS28yMm1wR3YtVDEzRXd6ZnpZWjJ5TFExUnlsSExKeUxybUdURzF1YkxETW5fc19JZDRfMW85V2l3bl9weE5pWmZFMElQR3ZJSWJhQXc?oc=5\" target=\"_blank\">[today포토] 엔믹스(NMIXX) 해원, ‘매력 보조개’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">연예투데이뉴스</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스 기사",
@@ -6179,7 +6180,7 @@
     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1malJ2STNnTU9sTWR0dEhSYjgtQWhKTGFPcFVoZ1BvT01fekgtUEtSVllNMExjYVR1TG5PekdhVG5UZWtyZi1aRC1kc1dURW9zQWJ5NnRkNU1NVndjZS1tb04tQkxoLVdZV1HSAW5BVV95cUxPdTlOalprWXgxRWRTRFhNamlmcThyczRnMHUyRWtjX1BMcUR2RE9STTdzVzJwZDdrSnJ0cjlIYjFkRF9jR1lyNXVTNnRuWW5INU1ZT1FXUGV6aWJVUUhBRk5PRl9rbWw5TFR6R3Rodw?oc=5",
     "publishedAt": "2023-03-21T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE1malJ2STNnTU9sTWR0dEhSYjgtQWhKTGFPcFVoZ1BvT01fekgtUEtSVllNMExjYVR1TG5PekdhVG5UZWtyZi1aRC1kc1dURW9zQWJ5NnRkNU1NVndjZS1tb04tQkxoLVdZV1HSAW5BVV95cUxPdTlOalprWXgxRWRTRFhNamlmcThyczRnMHUyRWtjX1BMcUR2RE9STTdzVzJwZDdrSnJ0cjlIYjFkRF9jR1lyNXVTNnRuWW5INU1ZT1FXUGV6aWJVUUhBRk5PRl9rbWw5TFR6R3Rodw?oc=5\" target=\"_blank\">엔믹스 해원, 눈빛이 다했네~</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">한국아이닷컴</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스 기사",
@@ -6199,7 +6200,7 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "fbabdfd09af265cfb2b5",
@@ -6207,7 +6208,7 @@
     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBxX3hfN1pLbnR2TmtjTE5GTWNqRFFEbnpzaFR2OUhKYk9mSmVWY2lrbVVhVFZNaHR3ZlN3ei1HRzJUVWVVV0FETHV0eGp4bllGV2tIazhURm9TQXpFMV95MlV2c3hKZm9C?oc=5",
     "publishedAt": "2023-02-02T08:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTFBxX3hfN1pLbnR2TmtjTE5GTWNqRFFEbnpzaFR2OUhKYk9mSmVWY2lrbVVhVFZNaHR3ZlN3ei1HRzJUVWVVV0FETHV0eGp4bllGV2tIazhURm9TQXpFMV95MlV2c3hKZm9C?oc=5\" target=\"_blank\">엔믹스(NMIXX) 릴리-해원-설윤, ‘돋보이는 스타일링’ 개인 포토타임[뉴스엔TV]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스엔</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "Haewon NMIXX news",
@@ -6221,7 +6222,7 @@
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1paUxwbTAyTEdUM1ZpTllwMWlvNWxaMnZ4M0xwbVM0MDBPZmFTU0g4Y0J2cURIZHZudm1QYktyQ0pEX3M4N1dqVjJSakJuNlNsbUdCNW12c3pGS0gwWEZVWTJBcGpkYnRjLUhn?oc=5",
     "publishedAt": "2023-02-02T08:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE1paUxwbTAyTEdUM1ZpTllwMWlvNWxaMnZ4M0xwbVM0MDBPZmFTU0g4Y0J2cURIZHZudm1QYktyQ0pEX3M4N1dqVjJSakJuNlNsbUdCNW12c3pGS0gwWEZVWTJBcGpkYnRjLUhn?oc=5\" target=\"_blank\">[포토] 엔믹스 해원, 청순함 가득</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">seoulwire.com</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스 기사",
@@ -6240,7 +6241,8 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "c940eaad1a24a48ad6cb",
@@ -6248,7 +6250,7 @@
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9icS1qTHMxNmZhV3RqRWJyLVNBQkUxcDdpaVVnMkd1S0hTWmRrTTB0V1dScFR0SzZVdFY1T0JCY0t0ZnBWd0xDNDNmMElORTZfX1I4?oc=5",
     "publishedAt": "2022-12-24T08:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE9icS1qTHMxNmZhV3RqRWJyLVNBQkUxcDdpaVVnMkd1S0hTWmRrTTB0V1dScFR0SzZVdFY1T0JCY0t0ZnBWd0xDNDNmMElORTZfX1I4?oc=5\" target=\"_blank\">[S포토] 엔믹스 해원, '뾰로롱' (2022 SBS 가요대전)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스 기사",
@@ -6262,7 +6264,7 @@
     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9meW9JZEhmaWVKbHlUNXVGS1dVN29RN0xIU1FXRzFtVTRfazEtek1wTU83Um5tU0JOTUplMEk3SmxreFo0dlE5bkNTZjdQZWZaZ3BkSTR0OExkSXAzVDBZb2xraHVYQdIBakFVX3lxTE5YTlhPTHVfS28xVGhtRVEyVDJld0NfQnFWZGxjOXBBZ0dCa0NKTHhlZ09RRXZZcUN3OEV0RU1pdzlobWQ4TldCWnBZUHhOeV9qNzlxMnE3M0otZE5KdkZzVWNKN1d5MEgxQnc?oc=5",
     "publishedAt": "2022-12-17T08:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE9meW9JZEhmaWVKbHlUNXVGS1dVN29RN0xIU1FXRzFtVTRfazEtek1wTU83Um5tU0JOTUplMEk3SmxreFo0dlE5bkNTZjdQZWZaZ3BkSTR0OExkSXAzVDBZb2xraHVYQdIBakFVX3lxTE5YTlhPTHVfS28xVGhtRVEyVDJld0NfQnFWZGxjOXBBZ0dCa0NKTHhlZ09RRXZZcUN3OEV0RU1pdzlobWQ4TldCWnBZUHhOeV9qNzlxMnE3M0otZE5KdkZzVWNKN1d5MEgxQnc?oc=5\" target=\"_blank\">[today포토] 엔믹스(NMIXX) 해원, ‘매력 가득한 입술’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">연예투데이뉴스</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스 기사",
@@ -6282,7 +6284,7 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "1dca2488560369f169b0",
@@ -6290,7 +6292,7 @@
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAtdnlWUEhkcnpWNGxnNHc0UFBCUTkta2FqRU5vNXBCRjBLc3Vlc2VLOF91cE9tT21nR3pYdXJzQWJGWmc1SVRqNEFiNmZHTl9XcVlTcw?oc=5",
     "publishedAt": "2022-10-13T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTFAtdnlWUEhkcnpWNGxnNHc0UFBCUTkta2FqRU5vNXBCRjBLc3Vlc2VLOF91cE9tT21nR3pYdXJzQWJGWmc1SVRqNEFiNmZHTl9XcVlTcw?oc=5\" target=\"_blank\">엔믹스 해원 '여긴 어디? 나는 누구?'[엑's HD포토]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">엑스포츠뉴스</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스 기사",
@@ -6304,7 +6306,7 @@
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9IT1czMHU4Z25BUXFLNUh2V1pLQTFTb1dJanQ0MG41VGpNYnVYeS1OeHQtQTRlSF9xNk5tRU53TDRnanlmcXFZUFM5cUlNWkZ6QTNMNw?oc=5",
     "publishedAt": "2022-10-13T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE9IT1czMHU4Z25BUXFLNUh2V1pLQTFTb1dJanQ0MG41VGpNYnVYeS1OeHQtQTRlSF9xNk5tRU53TDRnanlmcXFZUFM5cUlNWkZ6QTNMNw?oc=5\" target=\"_blank\">엔믹스 해원 '이렇게 깜찍하면 반칙'[엑's HD포토]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">엑스포츠뉴스</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스 기사",
