@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-23T21:23:33.161Z",
+  "collectedAt": "2026-11-23T21:24:17.147Z",
   "searchPack": 0,
   "queries": [
     {
       "query": "오해원 NMIXX",
-      "candidates": 48,
-      "uniqueCandidates": 48
+      "candidates": 47,
+      "uniqueCandidates": 47
     },
     {
       "query": "해원 엔믹스",
@@ -15,8 +15,8 @@
     },
     {
       "query": "NMIXX Haewon",
-      "candidates": 49,
-      "uniqueCandidates": 49
+      "candidates": 48,
+      "uniqueCandidates": 48
     },
     {
       "query": "Haewon NMIXX news",
@@ -27,8 +27,8 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "failedQueries": [],
-  "fetched": 158,
-  "uniqueIncoming": 147,
-  "added": 14,
+  "fetched": 156,
+  "uniqueIncoming": 145,
+  "added": 0,
   "totalCandidates": 487
 }
