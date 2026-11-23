@@ -1007,7 +1007,7 @@
     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9aaE0zRW5rZ211MjNGNXlleDJsbXZ6T3F3Wm9LY0NlX2RnbDdSVzBMZmtvLUN3Y1V4R0pxYUUzaFF5aW9nVC1IWlpVaFUtcUlSZ1M2M3JDUWNiQm5rQ2szOVFtQW04elhO?oc=5",
     "publishedAt": "2026-08-29T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE9aaE0zRW5rZ211MjNGNXlleDJsbXZ6T3F3Wm9LY0NlX2RnbDdSVzBMZmtvLUN3Y1V4R0pxYUUzaFF5aW9nVC1IWlpVaFUtcUlSZ1M2M3JDUWNiQm5rQ2szOVFtQW04elhO?oc=5\" target=\"_blank\">엔믹스 해원, 청순 오해원 [포토엔HD]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스엔</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스",
@@ -1027,7 +1027,7 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "c71a2d8737d6f52f7015",
@@ -1040,7 +1040,8 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "fce649787a91816ae54d",
@@ -1048,7 +1049,7 @@
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE04V2VMcjg1VWtIZTBvYlV0aUROazNWaEVYMGxvZkgxdGZvRjZnSXg3ZnpzZlBJai1fSjVsb2ZPYUlDd21DTm1CLVlCWkJCdlpUbEhz?oc=5",
     "publishedAt": "2026-05-22T07:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE04V2VMcjg1VWtIZTBvYlV0aUROazNWaEVYMGxvZkgxdGZvRjZnSXg3ZnpzZlBJai1fSjVsb2ZPYUlDd21DTm1CLVlCWkJCdlpUbEhz?oc=5\" target=\"_blank\">'아기맹수' 김시현, 엔믹스 신곡 챌린지 참여…오해원·장규진과 함께 \"앙!\" [★SNS]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "오해원 방송",
@@ -1067,7 +1068,8 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "1a8551e20d76d8e5146a",
@@ -1080,7 +1082,8 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "9931ffd8030cee38d6e9",
@@ -1088,7 +1091,7 @@
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0xQU1SVkh0em1fWko2ZlNObV9hSDN3bTBJVnByeVZ5Snc2Z1hCTnhtanplNGRuMzNBRHJVQzdGcy1GVjFOcV9QcTBIeENPZWliazZFSTlIVDc2b1BW?oc=5",
     "publishedAt": "2026-03-03T08:00:00.000Z",
     "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE0xQU1SVkh0em1fWko2ZlNObV9hSDN3bTBJVnByeVZ5Snc2Z1hCTnhtanplNGRuMzNBRHJVQzdGcy1GVjFOcV9QcTBIeENPZWliazZFSTlIVDc2b1BW?oc=5\" target=\"_blank\">【4K】251129·251130NMIXX 1ST WORLD TOUR[EPISODE 1: ZERO FRONTIER]INCHEON HAEWON엔믹스해원 – BOOM 2Days Mix</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">YouTube</font>",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "sourceName": "Google News",
     "discoverySource": "google-news-rss",
     "query": "NMIXX Haewon",
@@ -1107,7 +1110,8 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "fc5a6f24fd45c6916f00",
@@ -1120,7 +1124,8 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "f97525fa344eddf5cec2",
@@ -1133,7 +1138,8 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "6d42ee5d398da61a22fa",
@@ -1147,7 +1153,7 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "e978a9698da6bdc604a3",
@@ -1161,7 +1167,7 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
   },
   {
     "id": "d952d6faeab078dddd66",

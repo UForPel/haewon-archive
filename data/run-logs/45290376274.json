@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
   "runId": "45290376274",
-  "startedAt": "2026-11-23T23:37:30.000Z",
-  "finishedAt": "2026-11-23T23:37:46.865Z",
+  "startedAt": "2026-11-23T23:38:35.000Z",
+  "finishedAt": "2026-11-23T23:38:49.487Z",
   "trigger": "unknown",
   "mode": "production",
   "status": "success",
@@ -27,9 +27,10 @@
   "changedPaths": [
     "data/collection-status.json",
     "data/discovery.json",
+    "data/improvement-cycle.json",
     "data/news-collection-status.json",
     "data/quality-metrics.json",
     "data/run-logs"
   ],
-  "durationMs": 16865
+  "durationMs": 14487
 }

@@ -17,12 +17,12 @@
   },
   "evidence": {
     "cumulativeDiscoveryCandidates": 613,
-    "currentRunCandidates": 176,
+    "currentRunCandidates": 155,
     "uniqueVideoRecords": 19,
     "queryYield": [
       {
         "query": "오해원 NMIXX",
-        "candidates": 47
+        "candidates": 46
       },
       {
         "query": "해원 엔믹스",
@@ -30,11 +30,11 @@
       },
       {
         "query": "NMIXX Haewon",
-        "candidates": 49
+        "candidates": 48
       },
       {
         "query": "Haewon NMIXX news",
-        "candidates": 29
+        "candidates": 10
       }
     ],
     "highestYieldQueries": [
