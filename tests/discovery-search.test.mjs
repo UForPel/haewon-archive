@@ -9,3 +9,18 @@ test('no-match query returns empty list',()=>{assert.deepEqual(filterDiscoveryIt
 test('YouTube and fancam candidates are labeled as videos',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon fancam'}),'video');assert.equal(classifyDiscoveryItem({url:'https://www.youtube.com/watch?v=abc'}),'video');});
 test('ordinary articles remain article candidates even when their description mentions YouTube',()=>{assert.equal(classifyDiscoveryItem({title:'Haewon interview',url:'https://example.com/news',description:'The interview video is available on YouTube'}),'article');});
 test('article candidate list excludes video links',()=>{assert.deepEqual(filterArticleCandidates([{title:'Haewon interview'},{title:'Haewon fancam'},{title:'YouTube clip'}]).map(x=>x.title),['Haewon interview']);});
+
+test('news category classifier separates event and brand coverage',()=>{
+ assert.equal(classifyDiscoveryCategory({title:'NMIXX 팬미팅 일정'}),'event');
+ assert.equal(classifyDiscoveryCategory({title:'Haewon pictorial campaign'}),'brand');
+});
+test('news category classifier prioritizes explicit event/brand tags over broad official keywords',()=>{
+ assert.equal(classifyDiscoveryCategory({title:'NMIXX 공식 팬미팅 공지'}),'event');
+ assert.equal(classifyDiscoveryCategory({title:'NMIXX 공식 브랜드 화보'}),'brand');
+});
+test('news categories retain interview, performance, official and default news fallbacks',()=>{
+ assert.equal(classifyDiscoveryCategory({title:'Haewon interview radio'}),'interview');
+ assert.equal(classifyDiscoveryCategory({title:'NMIXX stage performance'}),'performance');
+ assert.equal(classifyDiscoveryCategory({title:'NMIXX official notice'}),'official');
+ assert.equal(classifyDiscoveryCategory({title:'Local article about Haewon'}),'news');
+});
