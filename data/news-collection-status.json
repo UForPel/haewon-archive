@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-23T11:57:28.964Z",
+  "collectedAt": "2026-11-23T11:57:56.733Z",
   "searchPack": 2,
   "queries": [
     {
@@ -29,6 +29,6 @@
   "failedQueries": [],
   "fetched": 67,
   "uniqueIncoming": 67,
-  "added": 2,
+  "added": 0,
   "totalCandidates": 352
 }
