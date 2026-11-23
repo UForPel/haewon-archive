@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-23T23:56:07.873Z",
+  "generatedAt": "2026-11-23T23:56:46.672Z",
   "thumbnailAudit": {
     "items": 618,
-    "withThumbnail": 156,
-    "missing": 462,
+    "withThumbnail": 168,
+    "missing": 450,
     "uniqueThumbnailUrls": 1,
     "repeatedUrlGroups": 1,
-    "repeatedItems": 155,
+    "repeatedItems": 167,
     "repeatedUrls": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "count": 156
+        "count": 168
       }
     ],
     "heuristicFlaggedUrls": 1,
     "heuristicFlags": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "count": 156,
+        "count": 168,
         "flags": [
           "reused-url"
         ]
@@ -26,7 +26,7 @@
     "hosts": [
       {
         "host": "lh3.googleusercontent.com",
-        "count": 156
+        "count": 168
       }
     ]
   },
@@ -37,17 +37,17 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 618,
-    "newsUniqueFetched": 296,
+    "newsUniqueFetched": 249,
     "newsAddedLastRun": 2,
-    "duplicateBeforeMergeLastRun": 33,
+    "duplicateBeforeMergeLastRun": 28,
     "duplicateGroupsCurrent": 618,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 329,
-      "after": 295,
-      "collapsed": 34,
+      "before": 277,
+      "after": 248,
+      "collapsed": 29,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -62,10 +62,10 @@
       "source": "Google News",
       "items": 618,
       "withUrl": 618,
-      "withThumbnail": 156,
+      "withThumbnail": 168,
       "withDate": 618,
       "urlCoverage": 100,
-      "thumbnailCoverage": 25,
+      "thumbnailCoverage": 27,
       "dateCoverage": 100
     }
   ],
@@ -105,9 +105,9 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 1,
+    "rateLimited": 0,
     "unreachable": 0,
-    "thumbnailMissing": 462,
+    "thumbnailMissing": 450,
     "results": [
       {
         "kind": "article",
@@ -136,8 +136,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE15RHFobzdEazU1bUpUbXRFUjFDU3VZNk9NVFhKNXl4QjlDNzlrRkFscDJZYXNfTDJLYXJPcVlLQ0pXVmRBSm1qTlZxYjRmTzlESFNNYWIxdVYxQ0JmVk8wZUVTZE1INW5yVC1mT2xuU3dDdw?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
