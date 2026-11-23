@@ -475,3 +475,11 @@ Asked whether expert software-development algorithms and practices (robustness, 
 - Implemented conservative title normalization/grouping (long titles only), representative selection by relevance/recency, and source/duplicate counts. Classifier now checks title first, then cleaned RSS description.
 - #294 deploy step failed: artifact upload succeeded but deploy-pages reported 0 artifacts, suggesting transient artifact API lookup failure. Unit tests passed in that run.
 - #295 succeeded on syntax correction commit `c47041a6`. Additional dedupe tests and UI grouping commits are now being added; verification is pending.
+
+
+## 2026-11-23 — Dedupe accuracy and multi-label categories (follow-up)
+- Verified #300 success and #303 success. Latest #305 failed at unit tests due to an extra closing brace in `js/discovery-kind.mjs`; logs identified SyntaxError at module line 61. Corrected in `f9922745`.
+- Added multi-label category export and UI tag/filter integration; labels are title-derived when title has category matches, and description fallback is used only when title has no match to reduce boilerplate contamination.
+- Duplicate key strategy: normalized exact long title (cross-source), canonical URL for short/generic title; strip tracking params, hash, lowercase host. Representative selection remains relevance then recency; preserve duplicate and source counts.
+- Added regression coverage for multi-label tags, title precedence, canonical URL tracking cleanup, short title safety, and cross-source long-title grouping. Assertion was corrected from expected news to expected interview for an interview title.
+- CI #305 failed before fix (SyntaxError extra brace). CI #306 on the brace fix was pending at the point of log update; verification not yet claimed.
