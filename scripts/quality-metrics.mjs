@@ -40,7 +40,7 @@ export async function auditLinks(items,{fetchImpl=fetch,limit=12,timeoutMs=4000}
    results.push({...target,status,ok:status>=200&&status<400});
   }catch(error){results.push({...target,status:null,ok:false,error:String(error?.message||error)});}
  }
- return {status:'completed',checked:results.length,broken:results.filter(r=>!r.ok),thumbnailMissing:items.filter(item=>!/^https?:\\/\\//i.test(String(item.thumbnailUrl||''))).length,results};
+ return {status:'completed',checked:results.length,broken:results.filter(r=>!r.ok),thumbnailMissing:items.filter(item=>!/^https?:/i.test(String(item.thumbnailUrl||''))).length,results};
 }
 async function main(){
  const [videos,discovery,newsStatus,videoStatus,reviews]=await Promise.all(['data/videos.json','data/discovery.json','data/news-collection-status.json','data/collection-status.json','data/category-reviews.json'].map(async path=>{try{return await readJson(path)}catch{return path.endsWith('category-reviews.json')?[]:{}}}));
