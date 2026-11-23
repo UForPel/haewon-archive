@@ -9,3 +9,20 @@ export function classifyDiscoveryItem(item = {}) {
 export function filterArticleCandidates(items = []) {
   return items.filter(item => classifyDiscoveryItem(item) === 'article');
 }
+
+const CATEGORY_RULES = [
+  ['event', /행사|event|팬미팅|fan meeting|시상식|award|페스티벌|festival/i],
+  ['brand', /광고|브랜드|brand|화보|pictorial|campaign|모델/i],
+  ['official', /공식|official|jyp|nmixx|공지|notice|소식|update/i],
+  ['interview', /인터뷰|interview|방송|예능|radio|라디오|출연/i],
+  ['performance', /무대|stage|공연|concert|직캠|fancam|dance|춤/i]
+];
+
+export function classifyDiscoveryCategory(item = {}) {
+  if (classifyDiscoveryItem(item) === 'video') return 'video';
+  const text = String(item.title || '') + ' ' + String(item.description || '');
+  for (const [category, pattern] of CATEGORY_RULES) {
+    if (pattern.test(text)) return category;
+  }
+  return 'news';
+}
