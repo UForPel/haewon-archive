@@ -132,8 +132,9 @@ async function main(){
   console.warn(JSON.stringify({status:'skipped',reason:'all-news-feeds-unavailable',queries,successfulQueries,failedQueries:failures,existingCandidatesPreserved:existing.length}));
   return;
  }
- const incomingEnriched=thumbnailEnrichment.items;
- const merged=mergeCandidates(existing,incomingEnriched);
+ const merged=mergeCandidates(existing,incoming);
+ const thumbnailEnrichment=await enrichThumbnails(merged,{offset:Math.floor(Date.now()/21600000)});
+ const mergedWithThumbnails=thumbnailEnrichment.items;
  const existingUrls=new Set(existing.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const uniqueIncoming=new Set(incoming.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const added=[...uniqueIncoming].filter(url=>!existingUrls.has(url)).length;
