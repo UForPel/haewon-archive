@@ -12,5 +12,5 @@ test('link audit counts response codes and reports broken links',async()=>{
 test('429 rate limits are not counted as broken URLs',async()=>{const report=await auditLinks([{url:'https://limited.test'}],{fetchImpl:async()=>({status:429})});assert.equal(report.broken.length,0);assert.equal(report.rateLimited,1);});
 test('link audit reports network errors without crashing',async()=>{
  const report=await auditLinks([{url:'https://err.test'}],{fetchImpl:async()=>{throw new Error('network');}});
- assert.equal(report.broken.length,0);assert.equal(report.unreachable,1);assert.match(report.unreachable,1);
+ assert.equal(report.broken.length,0);assert.equal(report.unreachable,1);assert.match(report.results[0].error,/network/);
 });
