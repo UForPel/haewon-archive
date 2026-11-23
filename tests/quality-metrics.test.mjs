@@ -7,7 +7,7 @@ test('source coverage and classification metrics are based on candidate data',()
 });
 test('link audit counts response codes and reports broken links',async()=>{
  const report=await auditLinks([{url:'https://good.test',thumbnailUrl:'https://bad.test/thumb'}],{fetchImpl:async url=>({status:url.includes('bad')?404:200}),limit:5});
- assert.equal(report.checked,2);assert.equal(report.broken.length,1);assert.equal(report.rateLimited,0);assert.equal(report.unreachable,0);assert.equal(report.thumbnailMissing,0);assert.equal(report.broken[0].status,404);
+ assert.equal(report.checked,2);assert.equal(report.sampledItems,1);assert.equal(report.broken.length,1);assert.equal(report.rateLimited,0);assert.equal(report.unreachable,0);assert.equal(report.thumbnailMissing,0);assert.equal(report.broken[0].status,404);
 });
 test('429 rate limits are not counted as broken URLs',async()=>{const report=await auditLinks([{url:'https://limited.test'}],{fetchImpl:async()=>({status:429})});assert.equal(report.broken.length,0);assert.equal(report.rateLimited,1);});
 test('link audit reports network errors without crashing',async()=>{
