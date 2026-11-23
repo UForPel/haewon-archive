@@ -22,7 +22,7 @@
     "queryYield": [
       {
         "query": "오해원 방송",
-        "candidates": 34
+        "candidates": 33
       },
       {
         "query": "해원 엔믹스 기사",
@@ -34,7 +34,7 @@
       },
       {
         "query": "Haewon NMIXX event",
-        "candidates": 6
+        "candidates": 7
       }
     ],
     "highestYieldQueries": [

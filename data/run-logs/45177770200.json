@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "runId": "45177770200",
+  "startedAt": "2026-11-23T12:48:27.000Z",
+  "finishedAt": "2026-11-23T12:48:40.975Z",
+  "trigger": "unknown",
+  "mode": "production",
+  "status": "success",
+  "sources": [
+    {
+      "sourceId": "nmixx-youtube",
+      "outcome": "success",
+      "itemsSeen": 15
+    }
+  ],
+  "counts": {
+    "discovered": 15,
+    "accepted": 0,
+    "rejected": 0,
+    "duplicates": 15,
+    "uncertain": 0
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "changedPaths": [
+    "data/collection-status.json",
+    "data/improvement-cycle.json",
+    "data/news-collection-status.json",
+    "data/run-logs/45177770200.json",
+    "data/run-logs"
+  ],
+  "durationMs": 13975
+}
