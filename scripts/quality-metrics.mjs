@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { classifyDiscoveryCategories } from '../js/discovery-kind.mjs';
+import { classifyDiscoveryCategories, groupDiscoveryDuplicates } from '../js/discovery-kind.mjs';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const readJson=async path=>JSON.parse(await readFile(resolve(ROOT,path),'utf8'));
 export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoStatus={},reviews=[]}={}){
@@ -23,8 +23,8 @@ export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoS
  }
  for(const review of reviewed)if(classifyDiscoveryCategories({title:review.title||'',description:review.description||'',url:review.url||''}).includes(review.expectedCategory))correct++;
  const sourceRows=[...sourceMap.values()].map(s=>({...s,urlCoverage:s.items?Math.round(s.withUrl/s.items*100):0,thumbnailCoverage:s.items?Math.round(s.withThumbnail/s.items*100):0,dateCoverage:s.items?Math.round(s.withDate/s.items*100):0})).sort((a,b)=>b.items-a.items);
- const fetched=Number(newsStatus.fetched||0), unique=Number(newsStatus.uniqueIncoming||0);
- return {generatedAt:new Date().toISOString(),collection:{newsQueriesRequested:Number(newsStatus.requestedQueries||0),newsQueriesSuccessful:Number(newsStatus.successfulQueries||0),newsQuerySuccessRate:newsStatus.requestedQueries?Math.round(newsStatus.successfulQueries/newsStatus.requestedQueries*100):null,youtubeStatus:videoStatus.status||'unknown',videosTotal:videos.length,newsCandidatesTotal:discovery.length,newsUniqueFetched:unique,newsAddedLastRun:Number(newsStatus.added||0),duplicateBeforeMergeLastRun:fetched?Math.max(0,fetched-unique):null,duplicateAfterMergeCount:Math.max(0,unique+Number(newsStatus.totalCandidates||0)-discovery.length)},sources:sourceRows,classification:{items:discovery.length,categoryCounts,reviewedSamples:reviewed.length,accuracy:reviewed.length?Math.round(correct/reviewed.length*100):null,accuracyLabel:reviewed.length?'manual-review agreement':'not measured (no category review labels)'},linkAudit:{status:'pending',checked:0,broken:[],thumbnailMissing:discovery.filter(item=>!/^https?:\/\//i.test(item.thumbnailUrl||'')).length}};
+ const fetched=Number(newsStatus.fetched||0), unique=Number(newsStatus.uniqueIncoming||0), deduped=groupDiscoveryDuplicates(discovery);
+ return {generatedAt:new Date().toISOString(),collection:{newsQueriesRequested:Number(newsStatus.requestedQueries||0),newsQueriesSuccessful:Number(newsStatus.successfulQueries||0),newsQuerySuccessRate:newsStatus.requestedQueries?Math.round(newsStatus.successfulQueries/newsStatus.requestedQueries*100):null,youtubeStatus:videoStatus.status||'unknown',videosTotal:videos.length,newsCandidatesTotal:discovery.length,newsUniqueFetched:unique,newsAddedLastRun:Number(newsStatus.added||0),duplicateBeforeMergeLastRun:fetched?Math.max(0,fetched-unique):null,duplicateGroupsCurrent:deduped.length,duplicateItemsCollapsedCurrent:Math.max(0,discovery.length-deduped.length)},sources:sourceRows,classification:{items:discovery.length,categoryCounts,reviewedSamples:reviewed.length,accuracy:reviewed.length?Math.round(correct/reviewed.length*100):null,accuracyLabel:reviewed.length?'manual-review agreement':'not measured (no category review labels)'},linkAudit:{status:'pending',checked:0,broken:[],thumbnailMissing:discovery.filter(item=>!/^https?:\/\//i.test(item.thumbnailUrl||'')).length}};
 }
 export async function auditLinks(items,{fetchImpl=fetch,limit=12,timeoutMs=4000}={}){
  const unique=new Map();
