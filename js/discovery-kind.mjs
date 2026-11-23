@@ -58,3 +58,4 @@ export function groupDiscoveryDuplicates(items = []) {
   });
   return [...unique, ...grouped].sort((a,b) => Number(b.relevanceScore || 0) - Number(a.relevanceScore || 0) || String(b.publishedAt || b.discoveredAt || '').localeCompare(String(a.publishedAt || a.discoveredAt || '')));
 }
+}
