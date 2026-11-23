@@ -31,9 +31,12 @@ if(list&&count){
   if(/공식|official|jyp|nmixx/i.test(text))return 'official';
   if(/인터뷰|interview|방송|예능|radio|라디오|출연/i.test(text))return 'interview';
   if(/무대|stage|공연|concert|직캠|fancam|dance|춤/i.test(text))return 'performance';
+  if(/행사|event|팬미팅|fan meeting|시상식|award|페스티벌|festival/i.test(text))return 'event';
+  if(/광고|브랜드|brand|화보|pictorial|campaign|모델/i.test(text))return 'brand';
+  if(/공지|notice|소식|update/i.test(text))return 'official';
   return 'news';
  };
- const categoryLabels={all:'전체',news:'뉴스',video:'영상',official:'공식',interview:'인터뷰·방송',performance:'무대·공연'};
+ const categoryLabels={all:'전체',news:'뉴스',video:'영상',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
  const renderCategories=()=>{
   if(!categoryBar)return;
   categoryBar.replaceChildren();
@@ -66,9 +69,7 @@ if(list&&count){
    const note=document.createElement('p');note.className='photo-description';note.textContent=item.description||'검색 결과로 발견된 링크';
    const score=document.createElement('p');score.className='photo-meta';score.textContent='관련성 점수 '+(Number.isFinite(item.relevanceScore)?item.relevanceScore:'미평가')+' · 검토 전 후보';
    details.append(title,kind,meta,score,note);
-   const actions=document.createElement('div');actions.className='photo-card-actions';
-   const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='원문 열기 ↗';
-   actions.append(link);card.append(details,actions);list.append(card);
+   card.append(details);list.append(card);
   });
   renderPagination(pageCount);
   if(!items.length){const empty=document.createElement('p');empty.className='empty';empty.textContent=allItems.length?'검색 결과가 없습니다. 다른 검색어를 입력해 보세요.':'자동 발견 후보가 아직 없습니다.';list.append(empty);}
