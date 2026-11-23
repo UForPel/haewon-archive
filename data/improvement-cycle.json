@@ -16,8 +16,8 @@
     "nextDayPackIndex": 0
   },
   "evidence": {
-    "cumulativeDiscoveryCandidates": 383,
-    "currentRunCandidates": 68,
+    "cumulativeDiscoveryCandidates": 457,
+    "currentRunCandidates": 143,
     "uniqueVideoRecords": 19,
     "queryYield": [
       {
@@ -26,7 +26,7 @@
       },
       {
         "query": "해원 엔믹스 기사",
-        "candidates": 25
+        "candidates": 100
       },
       {
         "query": "NMIXX Haewon appearance",
@@ -38,8 +38,8 @@
       }
     ],
     "highestYieldQueries": [
-      "오해원 방송",
       "해원 엔믹스 기사",
+      "오해원 방송",
       "Haewon NMIXX event"
     ]
   },
