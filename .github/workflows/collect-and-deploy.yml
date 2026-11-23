@@ -42,6 +42,8 @@ jobs:
         run: npm run sync-discovery-videos
       - name: Run bounded daily improvement cycle
         run: npm run improve
+      - name: Generate collection quality metrics and bounded link audit
+        run: npm run quality
       - name: Validate archive data
         run: npm run validate
       - name: Generate operational run log
@@ -66,6 +68,7 @@ jobs:
             npm run collect-news
             npm run sync-discovery-videos
             npm run improve
+            npm run quality
             npm run validate
             npm run log
             if [[ -z "$(git status --porcelain data/)" ]]; then
