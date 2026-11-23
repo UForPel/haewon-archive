@@ -151,3 +151,10 @@ Last updated: 2026-11-20
 - Added heuristic flags for reused thumbnail URLs, logo/icon-like path names, and small-size URL hints. These are triage clues only; no visual classifier is implemented, and article relevance cannot be verified from URL metadata alone.
 - Actual dataset anomaly from the current quality snapshot: 144 candidate records share a single thumbnail URL (`lh3.googleusercontent.com`), with 474 records missing thumbnails. This suggests the current enrichment pipeline may repeatedly assign the same image; the URL audit exposed it, but the image must be inspected before declaring it a bad image.
 - CI issue observed: run #388 reached deployment but failed because `deploy-pages` could not find the `github-pages` artifact. Tests and earlier steps were successful. New audit code is being validated after syntax fixes; do not mark this cycle complete yet.
+
+
+## 2026-11-24 — Thumbnail quality audit & Pages retry fix
+- Quality audit sample (CI #401): 1 distinct thumbnail URL checked; HTTP 200, `image/png`. Dataset snapshot: 168 thumbnail assignments across 618 candidates use the same URL (167 repeated assignments); 450 candidates have no thumbnail. This confirms a URL reuse anomaly, not visual proof of wrong content.
+- URL heuristics flag repeated URLs; path-name and small-size hints are implemented but no visual classifier. Article/image relevance remains unverified.
+- Unit tests passed in CI #401 attempt 1 and attempt 2. Collection, metrics, validation, and artifact upload also succeeded.
+- Pages deploy failed because artifact name `github-pages` was duplicated across workflow attempts. Workflow now uses an attempt-specific artifact name and matching deploy input (`github-pages-${{ github.run_attempt }}`) to make retries deterministic. CI for this pipeline fix is pending.
