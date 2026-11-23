@@ -69,8 +69,10 @@ export function extractOpenGraphImage(html=''){
  }
  return '';
 }
-export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs=5000,concurrency=3}={}){
- const targets=items.filter(item=>!item.thumbnailUrl&&/^https:\/\/news\.google\.com\//i.test(item.url||'')).slice(0,limit);
+export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs=5000,concurrency=3,offset=0}={}){
+ const missing=items.filter(item=>!item.thumbnailUrl&&/^https:\/\/news\.google\.com\//i.test(item.url||''));
+ const start=missing.length?Math.abs(Number(offset)||0)%missing.length:0;
+ const targets=Array.from({length:Math.min(limit,missing.length)},(_,index)=>missing[(start+index)%missing.length]);
  const results=new Array(targets.length);let cursor=0;
  async function worker(){while(true){const index=cursor++;if(index>=targets.length)return;const item=targets[index];try{
   const response=await fetchImpl(item.url,{method:'GET',redirect:'follow',headers:{'user-agent':'Mozilla/5.0 (compatible; HaewonArchiveBot/0.2; thumbnail metadata)'},signal:AbortSignal.timeout(timeoutMs)});
@@ -116,7 +118,7 @@ async function main(){
  const path=resolve(ROOT,'data/discovery.json'),existing=JSON.parse(await readFile(path,'utf8')),now=new Date().toISOString();
  const queriesList=getDailySearches();
  const {incoming,failures,queries,successfulQueries}=await collectFeeds({queries:queriesList,now});
- const thumbnailEnrichment=await enrichThumbnails(incoming);
+
  if(successfulQueries===0){
   await writeFile(resolve(ROOT,'data/news-collection-status.json'),JSON.stringify({schemaVersion:'1.0.0',collectedAt:now,searchPack:SEARCH_PACKS.findIndex(pack=>JSON.stringify(pack)===JSON.stringify(queriesList)),queries:queriesList.map(query=>({query,candidates:0,uniqueCandidates:0})),requestedQueries:queries,successfulQueries,failedQueries:failures.map(x=>({query:x.query,error:x.error})),fetched:0,uniqueIncoming:0,added:0,totalCandidates:existing.length},null,2)+'\n');
   console.warn(JSON.stringify({status:'skipped',reason:'all-news-feeds-unavailable',queries,successfulQueries,failedQueries:failures,existingCandidatesPreserved:existing.length}));
@@ -128,7 +130,7 @@ async function main(){
  const uniqueIncoming=new Set(incoming.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const added=[...uniqueIncoming].filter(url=>!existingUrls.has(url)).length;
  const perQuery=queriesList.map(query=>({query,candidates:incoming.filter(item=>item.query===query).length,uniqueCandidates:new Set(incoming.filter(item=>item.query===query).map(item=>item.url.toLowerCase())).size}));
- await writeFile(path,JSON.stringify(merged,null,2)+'\n');
+ await writeFile(path,JSON.stringify(mergedWithThumbnails,null,2)+'\n');
  await writeFile(resolve(ROOT,'data/news-collection-status.json'),JSON.stringify({schemaVersion:'1.0.0',collectedAt:now,searchPack:SEARCH_PACKS.findIndex(pack=>JSON.stringify(pack)===JSON.stringify(queriesList)),queries:perQuery,requestedQueries:queries,successfulQueries,failedQueries:failures.map(x=>({query:x.query,error:x.error})),fetched:incoming.length,uniqueIncoming:uniqueIncoming.size,added,thumbnailEnrichment:{attempted:thumbnailEnrichment.attempted,found:thumbnailEnrichment.found,missing:thumbnailEnrichment.missing,failed:thumbnailEnrichment.failed},totalCandidates:merged.length},null,2)+'\n');
  console.log(JSON.stringify({queries,successfulQueries,failedQueries:failures,fetched:incoming.length,uniqueIncoming:uniqueIncoming.size,added,duplicates:incoming.length-uniqueIncoming.size,thumbnailEnrichment,total:merged.length}));
 }
