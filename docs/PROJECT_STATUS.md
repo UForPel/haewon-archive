@@ -59,3 +59,10 @@ Updated: 2026-11-23 (KST)
   - `0902025f` fix: import category classifier in discovery tests
 - CI runs were queued/cancelled by successive commits; latest test commit run #286 was pending at log update. Verification is pending; do not mark tests passed until CI completes.
 - Next: wait for latest run; if it fails, inspect logs and fix; then continue with dashboard metrics / classifier quality review.
+
+
+## Classifier quality correction — 2026-11-23
+- CI run #288 failed in the category test: the broad `official` rule matched `NMIXX stage performance` before the performance rule. This was a real test failure, not a runner issue.
+- Narrowed official classification to explicit official/notice/update wording; removed generic `jyp` and `nmixx` name triggers so ordinary coverage is not mislabeled official.
+- Added regression assertions for generic NMIXX coverage and generic JYP artist coverage to remain `news`.
+- Fix commits: `ab67171a` (classifier), `0a9b4652` (regression tests). New CI verification is pending.
