@@ -24,7 +24,7 @@ export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoS
  for(const review of reviewed)if(classifyDiscoveryCategories({title:review.title||'',description:review.description||'',url:review.url||''}).includes(review.expectedCategory))correct++;
  const sourceRows=[...sourceMap.values()].map(s=>({...s,urlCoverage:s.items?Math.round(s.withUrl/s.items*100):0,thumbnailCoverage:s.items?Math.round(s.withThumbnail/s.items*100):0,dateCoverage:s.items?Math.round(s.withDate/s.items*100):0})).sort((a,b)=>b.items-a.items);
  const fetched=Number(newsStatus.fetched||0), unique=Number(newsStatus.uniqueIncoming||0), deduped=groupDiscoveryDuplicates(discovery);
- const titleKey=item=>String(item.title||'').replace(/<[^>]*>/g,' ').replace(/&amp;/gi,'&').normalize('NFKC').toLocaleLowerCase().replace(/\\b(?:youtube|youtu\\.be)\\b/g,'').replace(/[\\p{P}\\p{S}\\s]+/gu,'').trim();
+ const titleKey=item=>String(item.title||'').replace(/<[^>]*>/g,' ').replace(/&amp;/gi,'&').normalize('NFKC').toLocaleLowerCase().replace(/\b(?:youtube|youtu\.be)\b/g,'').replace(/[\p{P}\p{S}\s]+/gu,'').trim();
  const titleGroups=new Map();for(const item of discovery){const key=titleKey(item);if(key.length>=32)titleGroups.set(key,(titleGroups.get(key)||[]).concat(item));}
  const duplicateTitleGroups=[...titleGroups.values()].filter(group=>group.length>1);
  const perCategoryReview={};let exactCorrect=0;
