@@ -40,13 +40,31 @@ function canonicalUrl(value) {
     return url.toString().replace(/\/$/, '');
   } catch { return ''; }
 }
+export function assessDiscoveryQuality(item = {}) {
+  const signals = [];
+  const warnings = [];
+  let score = 0;
+  if (String(item.title || '').trim().length >= 12) { score += 20; signals.push('title'); }
+  else warnings.push('title_missing_or_short');
+  if (String(item.sourceName || item.discoverySource || '').trim()) { score += 20; signals.push('source'); }
+  else warnings.push('source_missing');
+  if (canonicalUrl(item.url)) { score += 20; signals.push('url'); }
+  else warnings.push('url_missing_or_invalid');
+  const date = Date.parse(item.publishedAt || item.discoveredAt || '');
+  if (Number.isFinite(date)) { score += 20; signals.push('date'); }
+  else warnings.push('date_missing_or_invalid');
+  if (/^https?:\/\//i.test(String(item.thumbnailUrl || ''))) { score += 20; signals.push('thumbnail'); }
+  else warnings.push('thumbnail_missing');
+  return { score, tier: score >= 80 ? 'high' : score >= 50 ? 'medium' : 'low', signals, warnings };
+}
+
 export function groupDiscoveryDuplicates(items = []) {
   const groups = new Map();
   const unique = [];
   for (const item of items) {
     const titleKey = normalizeTitle(item.title);
     const urlKey = canonicalUrl(item.url);
-    const key = titleKey.length >= 32 ? 'title:' + titleKey : (urlKey ? 'url:' + urlKey : '');
+    const key = urlKey ? 'url:' + urlKey : (titleKey.length >= 32 ? 'title:' + titleKey : '');
     if (!key) { unique.push({ ...item, duplicateCount: 1, sourceCount: 1, duplicateSources: [] }); continue; }
     const group = groups.get(key);
     if (group) group.push(item); else groups.set(key, [item]);
