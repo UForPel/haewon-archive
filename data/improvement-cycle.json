@@ -17,12 +17,12 @@
   },
   "evidence": {
     "cumulativeDiscoveryCandidates": 381,
-    "currentRunCandidates": 67,
+    "currentRunCandidates": 100,
     "uniqueVideoRecords": 19,
     "queryYield": [
       {
         "query": "오해원 방송",
-        "candidates": 33
+        "candidates": 66
       },
       {
         "query": "해원 엔믹스 기사",

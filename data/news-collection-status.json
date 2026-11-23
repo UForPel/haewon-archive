@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-23T12:54:11.090Z",
+  "collectedAt": "2026-11-23T12:54:36.814Z",
   "searchPack": 2,
   "queries": [
     {
       "query": "오해원 방송",
-      "candidates": 33,
-      "uniqueCandidates": 33
+      "candidates": 66,
+      "uniqueCandidates": 66
     },
     {
       "query": "해원 엔믹스 기사",
@@ -27,8 +27,8 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "failedQueries": [],
-  "fetched": 67,
-  "uniqueIncoming": 67,
+  "fetched": 100,
+  "uniqueIncoming": 100,
   "added": 0,
   "totalCandidates": 381
 }
