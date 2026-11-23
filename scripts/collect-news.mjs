@@ -101,12 +101,17 @@ export function canonicalCandidateTitle(value=''){
  return String(value||'').replace(/<[^>]*>/g,' ').replace(/&amp;/gi,'&').normalize('NFKC').toLocaleLowerCase().replace(/\b(?:youtube|youtu\.be)\b/g,'').replace(/[\p{P}\p{S}\s]+/gu,'').trim();
 }
 export function mergeCandidates(existing,incoming){
- const map=new Map();
+ const map=new Map(),aliases=new Map();
  for(const item of [...existing,...incoming]){
-  const titleKey=canonicalCandidateTitle(item?.title);
-  const urlKey=canonicalCandidateUrl(item?.url);
-  const key=titleKey.length>=32?'title:'+titleKey:(urlKey?'url:'+urlKey:'');
-  if(item?.url&&key){const prior=map.get(key);if(!prior)map.set(key,item);else map.set(key,{...prior,thumbnailUrl:prior.thumbnailUrl||item.thumbnailUrl||'',publishedAt:prior.publishedAt||item.publishedAt||'',description:(prior.description||'').length>=(item.description||'').length?prior.description:item.description,sourceName:prior.sourceName||item.sourceName,relevanceScore:Math.max(Number(prior.relevanceScore||0),Number(item.relevanceScore||0))});}
+  const titleKey=canonicalCandidateTitle(item?.title),urlKey=canonicalCandidateUrl(item?.url);
+  const titleAlias=titleKey.length>=32?'title:'+titleKey:'';
+  const urlAlias=urlKey?'url:'+urlKey:'';
+  const key=aliases.get(urlAlias)||aliases.get(titleAlias)||titleAlias||urlAlias;
+  if(!item?.url||!key)continue;
+  const prior=map.get(key);
+  if(!prior)map.set(key,item);
+  else map.set(key,{...prior,thumbnailUrl:prior.thumbnailUrl||item.thumbnailUrl||'',publishedAt:prior.publishedAt||item.publishedAt||'',description:(prior.description||'').length>=(item.description||'').length?prior.description:item.description,sourceName:prior.sourceName||item.sourceName,relevanceScore:Math.max(Number(prior.relevanceScore||0),Number(item.relevanceScore||0))});
+  aliases.set(urlAlias,key);if(titleAlias)aliases.set(titleAlias,key);
  }
  return [...map.values()].sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
 }
