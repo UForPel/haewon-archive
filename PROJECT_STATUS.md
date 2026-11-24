@@ -549,3 +549,12 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Confirmed defect: `data/run-logs/<runId>.json` listed only `nmixx-youtube`, even though the same workflow also ran Google News RSS and Bing News RSS. Detailed RSS outcomes existed only in `data/news-collection-status.json`.
 - Implemented on `ops/include-news-sources-in-run-log`: run log now records separate `nmixx-youtube`, `google-news-rss`, and `bing-news-rss` source outcomes and item counts. Overall status becomes partial if one source fails while another succeeds; error codes are sanitized constants.
 - Added tests for complete, partial and mixed source outcomes. PR/Actions/Pages validation pending.
+
+
+## 2026-11-25 — RSS source outcomes now included in operational logs
+- PR #11 merged as `f86d3f72325873d0f6ffa25ffb4f6f20722e2abd`.
+- Actions #580 completed successfully: 142/142 tests passed; all collection, quality, validation, data-commit, artifact-upload and Pages-deployment stages succeeded.
+- The persisted `data/run-logs/45508560515.json` now records all three sources: NMIXX YouTube (15), Google News RSS (73), Bing News RSS (32); all three succeeded and validation passed.
+- Latest data commit: `92eb392cf8db69d0b6769528302df33dd2d30d65`.
+- Content baseline remains 701 candidates: 515 articles, 186 videos, 55 verified publisher articles, 49 verified Haewon articles, 39 verified Haewon articles with provenance-backed thumbnails. Thumbnail state: 317 assigned, 384 missing, 273 unverified shared legacy assignments retained but hidden from article previews.
+- Browser/mobile visual QA and human relevance/thumbnail labels remain unverified.

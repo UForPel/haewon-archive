@@ -1111,3 +1111,13 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - On branch `ops/include-news-sources-in-run-log`, updated `scripts/run-log.mjs` to read `data/news-collection-status.json` and emit separate source rows for `google-news-rss` and `bing-news-rss`, with requested/successful outcomes represented as success/partial/skipped/failed and sanitized error codes.
 - Overall run status is now aggregated across the three sources; e.g. one source failing while another succeeds yields `partial`, not a misleading overall failure or success.
 - Added tests covering successful RSS runs, partial query failures and mixed collector outcomes. PR and Actions/Pages validation pending.
+
+
+## 2026-11-25 — PR #11 and Actions #580 close the RSS run-log gap
+
+- PR #11 merged as `f86d3f72325873d0f6ffa25ffb4f6f20722e2abd`.
+- Actions #580: 142 tests passed, 0 failed; YouTube/RSS collection, quality generation, archive and run-log validation, data commit, Pages artifact upload and deployment all succeeded.
+- Verified `data/run-logs/45508560515.json`: `trigger=github_push`, `status=success`, validation passed; source rows now include `nmixx-youtube` (15 items), `google-news-rss` (73 items), and `bing-news-rss` (32 items).
+- Latest main data commit: `92eb392cf8db69d0b6769528302df33dd2d30d65`.
+- Content baseline remains 701 candidates, 515 articles, 186 video candidates, 55 verified publisher articles, 49 verified Haewon articles, and 39 verified Haewon articles with provenance-backed thumbnails.
+- Remaining product work: improve the actual source/content mix, resolve the 273-record shared legacy thumbnail cluster through human review, and perform real mobile-browser visual QA. No such visual QA is claimed here.
