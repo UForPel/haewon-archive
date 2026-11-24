@@ -639,7 +639,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e2fc4e04dd3e2178cbe5",
@@ -1142,7 +1144,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "1a8551e20d76d8e5146a",
@@ -1198,7 +1202,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f97525fa344eddf5cec2",
@@ -1258,7 +1264,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "4cc8da3d0e755fcc16f5",
@@ -1348,7 +1356,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c660795aa31c9937452f",
@@ -1470,7 +1480,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6b6eb2e649ee051d2e6b",
@@ -1484,7 +1496,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d22ca6e18ba4cad28ec2",
@@ -1544,7 +1558,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d01473dbe0f0558d6d99",
@@ -1602,7 +1618,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "3910bd80fc5e7b4cfb3e",
@@ -1616,7 +1634,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T23:33:36.161Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "52545fb3db375b641bad",
@@ -1675,7 +1695,9 @@
     "query": "오해원 방송",
     "discoveredAt": "2026-11-23T13:23:08.054Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f22c09aa883de99c81ac",
@@ -1735,7 +1757,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "40962882bdaeba1271ce",
@@ -1749,7 +1773,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "02a7a66badc0bc48433d",
@@ -1859,7 +1885,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6447c935045585aa5615",
@@ -1889,7 +1917,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "348b45c9b2d41189016e",
@@ -1903,7 +1933,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8eece5921ae450e4a874",
@@ -2061,7 +2093,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c5af5bb2b33c9a1b9d82",
@@ -2091,7 +2125,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "7150e13d00adf53ae65e",
@@ -2165,7 +2201,9 @@
     "query": "오해원 방송",
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b4c54e2e5c615454e1d2",
@@ -2267,7 +2305,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "25f24ed53a7bc9d5c2c5",
@@ -2474,7 +2514,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "81537112f491b1272c20",
@@ -3746,7 +3788,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "1fc74b046a2180c45c9d",
@@ -4852,7 +4896,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0a79e9b2c1bc6fa552c7",
@@ -5107,7 +5153,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "21423435129845518dc0",
@@ -5293,7 +5341,9 @@
     "query": "해원 엔믹스 기사",
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a56ad9a7f817afe40f5a",
@@ -5321,7 +5371,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "31e78ea7ffa147385a50",
@@ -5553,7 +5605,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "71eed313cd941f9a9ab8",
@@ -5902,7 +5956,9 @@
     "query": "오해원 방송",
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e9e652d917b96dda596a",
@@ -6434,7 +6490,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "22299f44ceea0b05d93e",
@@ -7174,7 +7232,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 3,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "49569c71c1d5417a8012",
@@ -7264,7 +7324,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5de9852ffd1e9346c40a",
@@ -7334,7 +7396,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6a07f752f857bd683ef8",
@@ -7348,7 +7412,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "1b150414d6337107bfda",
@@ -7376,7 +7442,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f9a1693ef0575d015c26",
@@ -7807,7 +7875,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "437c6c3e40f3cedcab7e",
@@ -7897,7 +7967,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "3595787b5231bf8fcd4e",
@@ -7941,7 +8013,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e706779f30fbad3119f5",
@@ -8011,7 +8085,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "43bb7950c61c09bf3e05",
@@ -8087,7 +8163,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "be37c06ed51e12adf06c",
@@ -8149,7 +8227,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "98723f763569c12bcc09",
@@ -8163,7 +8243,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "064cf81f6408c666333f",
@@ -8177,7 +8259,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "734fb67e4b8a31f5e210",
@@ -8191,7 +8275,9 @@
     "query": "오해원 방송",
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a0e68a62994dd2fa5699",
@@ -8205,7 +8291,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "ffe53007be1645d62304",
@@ -8219,7 +8307,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "08011936606ca1baaf8d",
@@ -8247,7 +8337,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "7640a088e4fd2b807651",
@@ -8355,7 +8447,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "968403ec3538c963ce32",
@@ -8369,7 +8463,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e6230eef8087eb94c8b5",
@@ -8429,7 +8525,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:39:15.230Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d2db4e5dee99d0b7a953",
@@ -8475,7 +8573,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5203c7709e364ec2bcb2",
@@ -8489,7 +8589,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "76c8d3cf01c04920bbbd",
@@ -8739,7 +8841,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a214cd3769b9f1ea090e",
@@ -8753,7 +8857,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b3528f5bd8d368cb56c9",
@@ -8840,7 +8946,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T23:33:36.161Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "36a5129f799356892c18",
@@ -8870,7 +8978,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "dcd51a052ff0c411f6a3",
