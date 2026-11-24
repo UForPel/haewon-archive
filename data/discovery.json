@@ -7762,7 +7762,9 @@
     "query": "Haewon NMIXX brand",
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b017bdaa003c1e3d1ead",
@@ -8053,7 +8055,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-23T23:33:07.030Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2a5cdce5f689c9a97d8e",
@@ -8499,7 +8503,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-23T23:33:07.030Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "37e3074fa36cff46fd71",
@@ -8527,7 +8533,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-23T23:33:07.030Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "956c97f88be8f754a08a",
@@ -8541,7 +8549,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-23T23:33:07.030Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8212fdc60bd2165a8b6c",
@@ -8635,7 +8645,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-20T23:56:31.147Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "4db7e37fa45f6746f7c7",
@@ -8695,7 +8707,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-23T23:33:07.030Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "eec8aac2f678701ad098",
@@ -8709,7 +8723,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-23T23:33:07.030Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "43a4044f89681ee73e5b",
@@ -8778,7 +8794,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-23T23:33:07.030Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8d0c042a1e8ed78e853e",
