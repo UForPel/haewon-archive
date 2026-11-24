@@ -1,4 +1,12 @@
 export function createThumbnailReviewKey(articleId,imageUrl){return String(articleId||'')+'|'+String(imageUrl||'');}
+const REVIEW_LABELS=['relevant','unrelated','generic','broken','rights-unclear','uncertain'];
+export function validateThumbnailReviewExport(payload){
+ const parsed=typeof payload==='string'?JSON.parse(payload):payload;
+ if(!parsed||typeof parsed!=='object'||!parsed.labels||typeof parsed.labels!=='object'||Array.isArray(parsed.labels))throw new Error('invalid thumbnail review export');
+ const labels={};for(const [key,value] of Object.entries(parsed.labels)){if(!key.includes('|')||!value||typeof value!=='object'||!REVIEW_LABELS.includes(value.label)||!value.articleId||!value.imageUrl)continue;labels[key]={articleId:String(value.articleId),imageUrl:String(value.imageUrl),source:String(value.source||'unknown'),label:value.label,reviewedAt:String(value.reviewedAt||'')};}
+ return {schemaVersion:1,labels};
+}
+export function mergeThumbnailReviewLabels(current={},incoming={}){return {...current,...validateThumbnailReviewExport({schemaVersion:1,labels:incoming}).labels};}
 export function summarizeThumbnailReviews(items=[],labels={}){
  const candidateKeys=new Set(),selectedKeys=new Set();
  for(const item of items){

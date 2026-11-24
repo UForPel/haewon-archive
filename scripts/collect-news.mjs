@@ -61,15 +61,23 @@ export function relevanceScore(title='',description=''){
  if(/fancam|직캠|인터뷰|interview|stage|무대|shorts|쇼츠/i.test(text))score+=1;
  return score;
 }
+function isGoogleNewsWrapperUrl(value=''){
+ try{const host=new URL(String(value)).hostname.toLowerCase();return host==='news.google.com'||host.endsWith('.news.google.com')||host==='google.com'||host.endsWith('.google.com')||host.endsWith('.googleusercontent.com')||host.endsWith('.gstatic.com');}catch{return true;}
+}
+function isPublisherArticleUrl(value=''){
+ try{const url=new URL(String(value));return url.protocol==='https:'&&!url.username&&!url.password&&!isGoogleNewsWrapperUrl(url.href)&&url.pathname!=='/';}catch{return false;}
+}
 export function parseRss(xml,query,now=new Date().toISOString()){
  if(typeof xml!=='string'||!/<rss\b/i.test(xml))throw new Error('RSS 응답이 아닙니다');
  const items=[...xml.matchAll(/<item\b[^>]*>(.*?)<\/item>/gis)].map(([,raw])=>{
-  const title=tag(raw,'title'),url=tag(raw,'link'),pub=tag(raw,'pubDate'),description=tag(raw,'description'),source=tag(raw,'source')||'Google News';
+  const title=tag(raw,'title'),url=tag(raw,'link'),pub=tag(raw,'pubDate'),description=tag(raw,'description'),sourceTag=raw.match(/<source\b[^>]*>/i)?.[0]||'',source=tag(raw,'source')||'Google News',sourceUrlCandidate=attr(sourceTag,'url');
+  const sourceUrl=/^https:\/\//i.test(sourceUrlCandidate)?sourceUrlCandidate:'';
+  const guid=tag(raw,'guid'),publisherArticleUrl=isPublisherArticleUrl(url)?url:isPublisherArticleUrl(guid)?guid:'';
   if(!title||!url||!/^https:\/\/\S+/i.test(url))return null;
   const date=pub?new Date(pub):null,publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const id=createHash('sha256').update(url).digest('hex').slice(0,20);
   const rssImageCandidates=extractRssThumbnailCandidates(raw,description+' '+tag(raw,'content:encoded'),url),thumbnail=rssImageCandidates[0];
-  return {id,title,url,publishedAt,description:description.slice(0,1200),thumbnailUrl:thumbnail?.url||'',thumbnailSource:thumbnail?.source||'',thumbnailCandidates:rssImageCandidates,sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
+  return {id,title,url,publisherArticleUrl,sourceUrl,publishedAt,description:description.slice(0,1200),thumbnailUrl:thumbnail?.url||'',thumbnailSource:thumbnail?.source||'',thumbnailCandidates:rssImageCandidates,sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
  }).filter(Boolean);
  return items;
 }
@@ -113,21 +121,21 @@ export function extractOpenGraphImageCandidates(html='',baseUrl=''){
 }
 export function extractOpenGraphImage(html=''){return extractOpenGraphImageCandidates(html)[0]?.url||'';}
 export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs=5000,concurrency=3,offset=0}={}){
- const missing=items.filter(item=>!item.thumbnailUrl&&/^https:\/\/news\.google\.com\//i.test(item.url||''));
+ const missing=items.filter(item=>!item.thumbnailUrl&&isPublisherArticleUrl(item.publisherArticleUrl));
  const start=missing.length?Math.abs(Number(offset)||0)%missing.length:0;
  const targets=Array.from({length:Math.min(limit,missing.length)},(_,index)=>missing[(start+index)%missing.length]);
  const results=new Array(targets.length);let cursor=0;
- async function worker(){while(true){const index=cursor++;if(index>=targets.length)return;const item=targets[index];try{
-  const response=await fetchImpl(item.url,{method:'GET',redirect:'follow',headers:{'user-agent':'Mozilla/5.0 (compatible; HaewonArchiveBot/0.2; thumbnail metadata)'},signal:AbortSignal.timeout(timeoutMs)});
+ async function worker(){while(true){const index=cursor++;if(index>=targets.length)return;const item=targets[index],articleUrl=item.publisherArticleUrl;try{
+  const response=await fetchImpl(articleUrl,{method:'GET',redirect:'follow',headers:{'user-agent':'Mozilla/5.0 (compatible; HaewonArchiveBot/0.2; thumbnail metadata)'},signal:AbortSignal.timeout(timeoutMs)});
   if(!response.ok)throw new Error('HTTP '+response.status);
   const finalUrl=String(response.url||item.url);
   if(new URL(finalUrl).protocol!=='https:')throw new Error('redirected article URL is not HTTPS');
-  const parsedUrl=new URL(finalUrl),isGoogleWrapper=Boolean(response.url)&&parsedUrl.hostname.toLowerCase()==='news.google.com';
+  const parsedUrl=new URL(finalUrl),isGoogleWrapper=isGoogleNewsWrapperUrl(finalUrl);
   const extracted=extractOpenGraphImageCandidates(await response.text(),finalUrl);
   const candidates=isGoogleWrapper?extracted.map(row=>({...row,source:'google-news-wrapper:'+row.source,priority:90})):extracted;
   const candidate=isGoogleWrapper?null:(candidates[0]||null);
-  results[index]={id:item.id,thumbnailUrl:candidate?.url||'',candidate,candidates,status:isGoogleWrapper&&extracted.length?'wrapper-only':candidate?'found':'missing',resolvedArticleUrl:finalUrl,resolvedArticleHost:parsedUrl.hostname,fetchedAt:new Date().toISOString()};
- }catch(error){results[index]={id:item.id,thumbnailUrl:'',status:'failed',error:String(error?.message||error)};}}
+  results[index]={id:item.id,thumbnailUrl:candidate?.url||'',candidate,candidates,status:isGoogleWrapper&&extracted.length?'wrapper-only':candidate?'found':'missing',publisherArticleUrl:articleUrl,sourceUrl:item.sourceUrl||'',resolvedArticleUrl:finalUrl,resolvedArticleHost:parsedUrl.hostname,fetchedAt:new Date().toISOString()};
+ }catch(error){results[index]={id:item.id,thumbnailUrl:'',status:'failed',publisherArticleUrl:articleUrl,sourceUrl:item.sourceUrl||'',error:String(error?.message||error)};}}
  }
  await Promise.all(Array.from({length:Math.min(concurrency,targets.length)},worker));
  const byId=new Map(results.filter(r=>r?.thumbnailUrl).map(r=>[r.id,r.thumbnailUrl]));
@@ -138,7 +146,7 @@ export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs
   const result=results.find(row=>row?.id===item.id);
   const metaCandidates=(result?.candidates||[]).slice(0,12);
   // Persist metadata candidates even when assignment is rejected as a duplicate.
-  const withMeta={...item,thumbnailMetaCandidates:metaCandidates.length?metaCandidates:item.thumbnailMetaCandidates||[],thumbnailMetaFetch:result?{status:result.status,resolvedArticleUrl:result.resolvedArticleUrl||'',resolvedArticleHost:result.resolvedArticleHost||'',fetchedAt:result.fetchedAt||''}:item.thumbnailMetaFetch||null};
+  const withMeta={...item,thumbnailMetaCandidates:metaCandidates.length?metaCandidates:item.thumbnailMetaCandidates||[],thumbnailMetaFetch:result?{status:result.status,publisherArticleUrl:result.publisherArticleUrl||'',sourceUrl:result.sourceUrl||'',resolvedArticleUrl:result.resolvedArticleUrl||'',resolvedArticleHost:result.resolvedArticleHost||'',fetchedAt:result.fetchedAt||''}:item.thumbnailMetaFetch||null};
   if(item.thumbnailUrl||!byId.has(item.id))return withMeta;
   const image=byId.get(item.id),candidate=result?.candidate;
   try{const url=new URL(image);if(url.protocol!=='https:')return withMeta;url.hash='';const normalized=url.href;
@@ -192,11 +200,11 @@ export function summarizeRssImageSignals(xml=''){
   descriptionImageTags+=descriptionImages;contentEncodedImageTags+=encodedImages;
   if(/<(?:media:thumbnail|media:content|enclosure)\b/i.test(item)||descriptionImages||encodedImages)itemsWithImageSignals++;
  }
- return {items:items.length,mediaThumbnailTags:count(/<media:thumbnail\b/gi,xml),mediaContentTags:count(/<media:content\b/gi,xml),enclosureTags:count(/<enclosure\b/gi,xml),contentEncodedItems:count(/<content:encoded\b/gi,xml),descriptionImageTags,contentEncodedImageTags,itemsWithImageSignals};
+ return {items:items.length,sourceUrlItems:items.filter(item=>/^https:\/\//i.test(attr(item.match(/<source\b[^>]*>/i)?.[0]||'','url'))).length,publisherArticleUrlItems:items.filter(item=>isPublisherArticleUrl(tag(item,'link'))||isPublisherArticleUrl(tag(item,'guid'))).length,mediaThumbnailTags:count(/<media:thumbnail\b/gi,xml),mediaContentTags:count(/<media:content\b/gi,xml),enclosureTags:count(/<enclosure\b/gi,xml),contentEncodedItems:count(/<content:encoded\b/gi,xml),descriptionImageTags,contentEncodedImageTags,itemsWithImageSignals};
 }
 export async function collectFeeds({queries=getDailySearches(),fetchImpl=fetch,now=new Date().toISOString()}={}){
  const incoming=[],failures=[];
- const rssImageSignals={items:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
+ const rssImageSignals={items:0,sourceUrlItems:0,publisherArticleUrlItems:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
  for(const query of queries){
   try{
    const response=await fetchImpl(newsFeedUrl(query),{headers:{'user-agent':'HaewonArchiveBot/0.2 (public RSS index)'},signal:AbortSignal.timeout(20000)});
@@ -230,7 +238,7 @@ async function main(){
  const incomingMerged=mergeCandidates([],incoming);
  const deduplicationComparison={before:incoming.length,after:incomingMerged.length,collapsed:Math.max(0,incoming.length-incomingMerged.length),method:'normalized exact headline first; canonical URL fallback'};
  await writeFile(path,JSON.stringify(mergedWithThumbnails,null,2)+'\n');
- await writeFile(resolve(ROOT,'data/news-collection-status.json'),JSON.stringify({schemaVersion:'1.0.0',collectedAt:now,searchPack:SEARCH_PACKS.findIndex(pack=>JSON.stringify(pack)===JSON.stringify(queriesList)),queries:perQuery,requestedQueries:queries,successfulQueries,failedQueries:failures.map(x=>({query:x.query,error:x.error})),fetched:incoming.length,uniqueIncoming:uniqueIncoming.size,added,rssImageSignals,rssImageCandidateArticles:incoming.filter(item=>(item.thumbnailCandidates||[]).length>0).length,rssImageCandidatesTotal:rssImageCandidateRows.length,rssImageCandidateSources,thumbnailEnrichment:{attempted:thumbnailEnrichment.attempted,found:thumbnailEnrichment.found,assigned:thumbnailEnrichment.assigned,duplicateRejected:thumbnailEnrichment.duplicateRejected,wrapperOnly:thumbnailEnrichment.wrapperOnly,missing:thumbnailEnrichment.missing,failed:thumbnailEnrichment.failed,results:thumbnailEnrichment.results.map(({id,status,candidate,candidates,assigned})=>({id,status,candidate,candidates,assigned}))},deduplicationComparison,totalCandidates:merged.length},null,2)+'\n');
+ await writeFile(resolve(ROOT,'data/news-collection-status.json'),JSON.stringify({schemaVersion:'1.0.0',collectedAt:now,searchPack:SEARCH_PACKS.findIndex(pack=>JSON.stringify(pack)===JSON.stringify(queriesList)),queries:perQuery,requestedQueries:queries,successfulQueries,failedQueries:failures.map(x=>({query:x.query,error:x.error})),fetched:incoming.length,uniqueIncoming:uniqueIncoming.size,added,rssImageSignals,rssImageCandidateArticles:incoming.filter(item=>(item.thumbnailCandidates||[]).length>0).length,rssImageCandidatesTotal:rssImageCandidateRows.length,rssImageCandidateSources,thumbnailEnrichment:{attempted:thumbnailEnrichment.attempted,found:thumbnailEnrichment.found,assigned:thumbnailEnrichment.assigned,duplicateRejected:thumbnailEnrichment.duplicateRejected,wrapperOnly:thumbnailEnrichment.wrapperOnly,missing:thumbnailEnrichment.missing,failed:thumbnailEnrichment.failed,results:thumbnailEnrichment.results.map(({id,status,candidate,candidates,assigned,publisherArticleUrl,sourceUrl,resolvedArticleUrl,resolvedArticleHost})=>({id,status,candidate,candidates,assigned,publisherArticleUrl,sourceUrl,resolvedArticleUrl,resolvedArticleHost}))},deduplicationComparison,totalCandidates:merged.length},null,2)+'\n');
  console.log(JSON.stringify({queries,successfulQueries,failedQueries:failures,rssImageSignals,fetched:incoming.length,uniqueIncoming:uniqueIncoming.size,added,duplicates:incoming.length-uniqueIncoming.size,thumbnailEnrichment,total:merged.length}));
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(e=>{console.error(e);process.exitCode=1});

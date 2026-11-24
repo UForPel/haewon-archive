@@ -48,7 +48,7 @@ test('collector dedupe aliases canonical URL even when headline keys differ',()=
 
 test('thumbnail enrichment does not assign one image URL to multiple newly enriched candidates',async()=>{
  const items=[{id:'a',url:'https://news.google.com/rss/articles/a',thumbnailUrl:''},{id:'b',url:'https://news.google.com/rss/articles/b',thumbnailUrl:''}];
- const report=await enrichThumbnails(items,{limit:2,fetchImpl:async()=>({ok:true,status:200,url:'https://publisher.example/article',text:async()=>'<meta property="og:image" content="https://cdn.example/shared.jpg">'})});
+ const report=await enrichThumbnails(items.map(item=>({...item,publisherArticleUrl:'https://publisher.example/article/'+item.id})),{limit:2,fetchImpl:async()=>({ok:true,status:200,url:'https://publisher.example/article',text:async()=>'<meta property="og:image" content="https://cdn.example/shared.jpg">'})});
  assert.equal(report.found,2);assert.equal(report.assigned,1);assert.equal(report.duplicateRejected,1);assert.equal(report.items.filter(item=>item.thumbnailUrl).length,1);
 });
 
@@ -64,7 +64,7 @@ test('OG and Twitter candidates preserve metadata provenance',()=>{
  assert.deepEqual(candidates.map(c=>c.source),['og:image','twitter:image']);
 });
 test('unique enriched thumbnails record source candidate and assignment status',async()=>{
- const report=await enrichThumbnails([{id:'a',url:'https://news.google.com/rss/articles/a',thumbnailUrl:''}],{fetchImpl:async()=>({ok:true,status:200,text:async()=>'<meta property="og:image" content="https://cdn.example/a.jpg"><meta name="twitter:image" content="https://cdn.example/b.jpg">'})});
+ const report=await enrichThumbnails([{id:'a',url:'https://publisher.example/article/a',publisherArticleUrl:'https://publisher.example/article/a',thumbnailUrl:''}],{fetchImpl:async()=>({ok:true,status:200,url:'https://publisher.example/article/a',text:async()=>'<meta property="og:image" content="https://cdn.example/a.jpg"><meta name="twitter:image" content="https://cdn.example/b.jpg">'})});
  assert.equal(report.assigned,1);assert.equal(report.items[0].thumbnailSource,'og:image');assert.equal(report.results[0].status,'assigned');assert.equal(report.results[0].candidate.source,'og:image');
 });
 
@@ -74,10 +74,16 @@ test('RSS candidates and selected thumbnail carry source provenance',()=>{
  const [item]=parseRss(xml,'query','2026-11-24T00:00:00Z');assert.equal(item.thumbnailSource,'media:thumbnail');assert.deepEqual(item.thumbnailCandidates.map(c=>c.source),['media:thumbnail','rss-description-html']);
 });
 
-test('Google News wrapper metadata is kept separate and never assigned as publisher image',async()=>{
- const report=await enrichThumbnails([{id:'wrapper',url:'https://news.google.com/rss/articles/wrapper',thumbnailUrl:''}],{fetchImpl:async()=>({ok:true,status:200,url:'https://news.google.com/rss/articles/wrapper?hl=en-US',text:async()=>'<meta property="og:image" content="https://lh3.googleusercontent.com/generic.jpg">'})});
- assert.equal(report.wrapperOnly,1);assert.equal(report.found,0);assert.equal(report.assigned,0);
- assert.equal(report.items[0].thumbnailUrl,'');
- assert.equal(report.items[0].thumbnailMetaCandidates[0].source,'google-news-wrapper:og:image');
- assert.equal(report.items[0].thumbnailMetaFetch.resolvedArticleHost,'news.google.com');
+test('Google News wrapper URLs are never fetched without explicit publisher article URL',async()=>{
+ let calls=0;const report=await enrichThumbnails([{id:'wrapper',url:'https://news.google.com/rss/articles/wrapper',thumbnailUrl:''}],{fetchImpl:async()=>{calls++;throw new Error('wrapper must not be fetched');}});
+ assert.equal(calls,0);assert.equal(report.attempted,0);assert.equal(report.wrapperOnly,0);assert.equal(report.items[0].thumbnailUrl,'');
 });
+test('RSS source homepage is preserved but never treated as an article URL',()=>{
+ const xml='<rss><channel><item><title>Haewon story</title><link>https://news.google.com/rss/articles/wrapper</link><source url="https://publisher.example/">Publisher</source><guid>https://news.google.com/rss/articles/wrapper</guid></item></channel></rss>';
+ const [item]=parseRss(xml,'query');assert.equal(item.sourceUrl,'https://publisher.example/');assert.equal(item.publisherArticleUrl,'');
+});
+test('direct HTTPS publisher article link is eligible for metadata fetch',()=>{
+ const xml='<rss><channel><item><title>Haewon story</title><link>https://publisher.example/article/123</link><source url="https://publisher.example/">Publisher</source></item></channel></rss>';
+ const [item]=parseRss(xml,'query');assert.equal(item.publisherArticleUrl,'https://publisher.example/article/123');assert.equal(item.sourceUrl,'https://publisher.example/');
+});
+

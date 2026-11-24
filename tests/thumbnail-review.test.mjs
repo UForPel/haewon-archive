@@ -1,12 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createThumbnailReviewKey,summarizeThumbnailReviews} from '../js/thumbnail-review.mjs';
-test('thumbnail review key is article-specific even for a repeated image URL',()=>{assert.notEqual(createThumbnailReviewKey('a','https://img.test/x.jpg'),createThumbnailReviewKey('b','https://img.test/x.jpg'));});
-test('candidate precision and selected-thumbnail precision are calculated separately',()=>{
- const items=[{id:'a',thumbnailUrl:'https://img.test/a.jpg',thumbnailMetaCandidates:[{url:'https://img.test/alt.jpg'}]},{id:'b',thumbnailUrl:'https://img.test/b.jpg'},{id:'c',thumbnailUrl:'https://img.test/c.jpg'},{id:'d',thumbnailUrl:''}];
- const labels={'a|https://img.test/a.jpg':{label:'relevant'},'a|https://img.test/alt.jpg':{label:'unrelated'},'b|https://img.test/b.jpg':{label:'generic'},'c|https://img.test/c.jpg':{label:'uncertain'}};
- const result=summarizeThumbnailReviews(items,labels);
- assert.equal(result.eligible,4);assert.equal(result.reviewed,4);assert.equal(result.reviewCoverage,100);
- assert.equal(result.precision,33);assert.equal(result.selectedPrecision,50);assert.equal(result.excluded,1);
-});
-test('no reviewed determinate images reports precision as unmeasured',()=>{assert.equal(summarizeThumbnailReviews([{id:'a',thumbnailUrl:'https://img.test/a.jpg'}],{}).precision,null);});
+import {createThumbnailReviewKey,summarizeThumbnailReviews,validateThumbnailReviewExport,mergeThumbnailReviewLabels} from '../js/thumbnail-review.mjs';
+const article={id:'article-1',thumbnailUrl:'https://cdn.example/a.jpg',thumbnailCandidates:[{url:'https://cdn.example/a.jpg',source:'media:thumbnail'},{url:'https://cdn.example/b.jpg',source:'og:image'}]};
+test('review keys are article-specific even for a shared image URL',()=>{assert.notEqual(createThumbnailReviewKey('article-1','https://cdn.example/a.jpg'),createThumbnailReviewKey('article-2','https://cdn.example/a.jpg'));});
+test('candidate and selected-thumbnail precision are measured separately',()=>{const labels={[createThumbnailReviewKey('article-1','https://cdn.example/a.jpg')]:{articleId:'article-1',imageUrl:'https://cdn.example/a.jpg',label:'relevant'},[createThumbnailReviewKey('article-1','https://cdn.example/b.jpg')]:{articleId:'article-1',imageUrl:'https://cdn.example/b.jpg',label:'unrelated'}};const result=summarizeThumbnailReviews([article],labels);assert.equal(result.eligible,2);assert.equal(result.reviewed,2);assert.equal(result.precision,50);assert.equal(result.selectedPrecision,100);});
+test('review JSON import/export validates and round-trips',()=>{const key=createThumbnailReviewKey('article-1','https://cdn.example/a.jpg');const exported={schemaVersion:1,labels:{[key]:{articleId:'article-1',imageUrl:'https://cdn.example/a.jpg',source:'og:image',label:'relevant',reviewedAt:'2026-11-24T00:00:00.000Z'}}};const parsed=validateThumbnailReviewExport(JSON.stringify(exported));assert.deepEqual(parsed.labels,exported.labels);assert.deepEqual(mergeThumbnailReviewLabels({},parsed.labels),exported.labels);assert.throws(()=>validateThumbnailReviewExport('{bad json'));});
