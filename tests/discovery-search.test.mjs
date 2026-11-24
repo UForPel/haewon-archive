@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { filterDiscoveryItems } from '../js/discovery-view.mjs';
-import { classifyDiscoveryItem, classifyDiscoveryCategory, classifyDiscoveryCategories, filterArticleCandidates, groupDiscoveryDuplicates, assessDiscoveryQuality } from '../js/discovery-kind.mjs';
+import { classifyDiscoveryItem, classifyDiscoveryCategory, classifyDiscoveryCategories, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText, classifyDiscoveryRelevance, groupDiscoveryDuplicates, assessDiscoveryQuality } from '../js/discovery-kind.mjs';
 const items=[{title:'Haewon interview',sourceName:'News A',description:'NMIXX interview'},{title:'Stage clip',sourceName:'News B',description:'NMIXX stage'}];
 test('query filters title, source and description case-insensitively',()=>{assert.equal(filterDiscoveryItems(items,'haewon').length,1);assert.equal(filterDiscoveryItems(items,'news b')[0].title,'Stage clip');assert.equal(filterDiscoveryItems(items,'stage').length,1);});
 test('empty and unmatched queries',()=>{assert.equal(filterDiscoveryItems(items,'').length,2);assert.deepEqual(filterDiscoveryItems(items,'missing'),[]);});
@@ -21,4 +21,30 @@ test('normalized long headline grouping takes priority over different opaque Goo
  const grouped=groupDiscoveryDuplicates([{title:'Same headline — a sufficiently long news article about Haewon',sourceName:'A',url:'https://news.google.com/rss/articles/token-one'},{title:'Same headline a sufficiently long news article about Haewon',sourceName:'B',url:'https://news.google.com/rss/articles/token-two'}]);
  assert.equal(grouped.length,1);
  assert.equal(grouped[0].duplicateCount,2);
+});
+
+
+test('RSS description HTML and wrapper URLs are converted to readable plain text',()=>{
+ const text=cleanDiscoveryText('<a href="https://news.google.com/rss/articles/opaque?oc=5" target="_blank">해원 인터뷰</a> &amp; NMIXX');
+ assert.equal(text,'해원 인터뷰 & NMIXX');
+ assert.ok(!text.includes('https://'));
+ assert.ok(!text.includes('<a'));
+});
+
+test('article relevance scopes separate Haewon, NMIXX and all article candidates',()=>{
+ const candidates=[
+  {title:'오해원 인터뷰'},
+  {title:'NMIXX 새 앨범 소식'},
+  {title:'Haewon pictorial'},
+  {title:'일반 연예 뉴스'},
+  {title:'Haewon fancam'}
+ ];
+ const articles=filterArticleCandidates(candidates);
+ assert.equal(articles.length,4);
+ assert.equal(filterDiscoveryRelevance(articles,'haewon').length,2);
+ assert.equal(filterDiscoveryRelevance(articles,'nmixx').length,3);
+ assert.equal(filterDiscoveryRelevance(articles,'all').length,4);
+ assert.equal(classifyDiscoveryRelevance(candidates[0]),'haewon');
+ assert.equal(classifyDiscoveryRelevance(candidates[1]),'nmixx');
+ assert.equal(classifyDiscoveryRelevance(candidates[3]),'other');
 });
