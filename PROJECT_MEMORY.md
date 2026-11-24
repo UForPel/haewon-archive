@@ -4,8 +4,8 @@ Last updated: 2026-11-24
 
 ## Current status — thumbnail provenance
 - Collector tracks RSS image candidate sources and article OG/Twitter image source, with bounded HTTPS candidate lists. New records carry provenance when an image is assigned; quality dashboard reports enrichment outcomes and recent source/host/status.
-- CI #450 passed unit tests, collection, validation, operational logging and Pages deployment. Live visual/mobile inspection remains unconfirmed.
-- Latest run metrics: 12 attempts; 9 metadata URLs found; 0 assigned; 9 duplicates rejected; 3 failed. Legacy data has 619 candidates, 273 thumbnails, 346 missing, and 273 sharing one exact URL (44% concentration). All 619 legacy records still have unknown source.
+- CI #455 passed unit tests, collection, validation, operational logging and Pages deployment after Pages-artifact metadata wait fix. Live visual/mobile inspection remains unconfirmed.
+- Latest run metrics: 12 attempts; 12 metadata URLs found; 0 assigned; 12 duplicates rejected; 0 failed. Legacy data has 619 candidates, 273 thumbnails, 346 missing, and 273 sharing one exact URL (44% concentration). All 619 legacy records still have unknown source.
 - Next: inspect RSS media candidates vs article metadata/redirect provenance, improve source comparison and cautiously audit legacy repeated URLs; do not delete existing thumbnails without evidence.
 
 ## Purpose
