@@ -1,41 +1,41 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T12:51:36.523Z",
+  "collectedAt": "2026-11-24T12:53:17.551Z",
   "searchPack": 0,
   "queries": [
     {
       "query": "오해원 NMIXX",
-      "candidates": 56,
-      "uniqueCandidates": 56
+      "candidates": 108,
+      "uniqueCandidates": 108
     },
     {
       "query": "해원 엔믹스",
-      "candidates": 61,
-      "uniqueCandidates": 61
+      "candidates": 60,
+      "uniqueCandidates": 60
     },
     {
       "query": "NMIXX Haewon",
-      "candidates": 58,
-      "uniqueCandidates": 58
+      "candidates": 112,
+      "uniqueCandidates": 112
     },
     {
       "query": "Haewon NMIXX news",
-      "candidates": 38,
-      "uniqueCandidates": 38
+      "candidates": 20,
+      "uniqueCandidates": 20
     }
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
-  "bingCandidates": 41,
+  "bingCandidates": 40,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 213,
-  "uniqueIncoming": 193,
-  "added": 5,
+  "fetched": 300,
+  "uniqueIncoming": 274,
+  "added": 9,
   "rssImageSignals": {
-    "items": 172,
-    "sourceUrlItems": 172,
+    "items": 260,
+    "sourceUrlItems": 258,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -49,42 +49,20 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 1,
-    "found": 1,
-    "assigned": 1,
+    "attempted": 0,
+    "found": 0,
+    "assigned": 0,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
     "failed": 0,
-    "results": [
-      {
-        "id": "a49267aceb6585e0f222",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
-            "source": "og:image",
-            "priority": 1
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://sports.khan.co.kr/article/202610240113003",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://sports.khan.co.kr/article/202610240113003",
-        "resolvedArticleHost": "sports.khan.co.kr"
-      }
-    ]
+    "results": []
   },
   "deduplicationComparison": {
-    "before": 213,
-    "after": 189,
-    "collapsed": 24,
+    "before": 300,
+    "after": 269,
+    "collapsed": 31,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 662
+  "totalCandidates": 664
 }

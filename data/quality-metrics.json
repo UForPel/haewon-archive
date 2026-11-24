@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-24T12:51:40.862Z",
+  "generatedAt": "2026-11-24T12:53:20.305Z",
   "articleUrlProvenance": {
-    "totalItems": 662,
+    "totalItems": 664,
     "itemsWithPublisherArticleUrl": 38,
     "bingNewsItems": 38,
     "candidateSourceCounts": {
@@ -57,7 +57,7 @@
       "news.google.com": 12
     },
     "sourceSiteHosts": {
-      "youtu.be": 98,
+      "youtu.be": 100,
       "sports.khan.co.kr": 15,
       "m.newsen.com": 14,
       "news.nate.com": 14,
@@ -145,9 +145,9 @@
     }
   },
   "thumbnailAudit": {
-    "items": 662,
+    "items": 664,
     "withThumbnail": 301,
-    "missing": 361,
+    "missing": 363,
     "uniqueThumbnailUrls": 29,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
@@ -240,60 +240,38 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 41,
+    "bingNewsCandidates": 40,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 662,
-    "newsUniqueFetched": 193,
-    "newsAddedLastRun": 5,
-    "duplicateBeforeMergeLastRun": 20,
-    "duplicateGroupsCurrent": 662,
+    "newsCandidatesTotal": 664,
+    "newsUniqueFetched": 274,
+    "newsAddedLastRun": 9,
+    "duplicateBeforeMergeLastRun": 26,
+    "duplicateGroupsCurrent": 664,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 213,
-      "after": 189,
-      "collapsed": 24,
+      "before": 300,
+      "after": 269,
+      "collapsed": 31,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 1,
-      "found": 1,
-      "assigned": 1,
+      "attempted": 0,
+      "found": 0,
+      "assigned": 0,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
       "failed": 0,
-      "results": [
-        {
-          "id": "a49267aceb6585e0f222",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
-              "source": "og:image",
-              "priority": 1
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://sports.khan.co.kr/article/202610240113003",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://sports.khan.co.kr/article/202610240113003",
-          "resolvedArticleHost": "sports.khan.co.kr"
-        }
-      ]
+      "results": []
     }
   },
   "thumbnailProvenance": {
     "assignedBySource": {
-      "unknown": 634,
+      "unknown": 636,
       "og:image": 26,
       "twitter:image": 2
     }
@@ -301,10 +279,10 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 624,
-      "withUrl": 624,
+      "items": 626,
+      "withUrl": 626,
       "withThumbnail": 273,
-      "withDate": 624,
+      "withDate": 626,
       "urlCoverage": 100,
       "thumbnailCoverage": 44,
       "dateCoverage": 100
@@ -591,9 +569,9 @@
     }
   ],
   "classification": {
-    "items": 662,
+    "items": 664,
     "categoryCounts": {
-      "video": 182,
+      "video": 184,
       "interview": 38,
       "news": 388,
       "brand": 20,
@@ -1025,9 +1003,9 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 5,
+    "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 361,
+    "thumbnailMissing": 363,
     "results": [
       {
         "kind": "article",
@@ -1164,20 +1142,20 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBsdUxKcmlBSkJLcWdBSGlQTEZtMVlia29GQ0hfYlh6YjNVcFpoU3dtWGI1Si1zeWJnRGZJRzQ4QzM1RW9YSENwOFNsTnltRnRWUlVySGtPUHoxMkZN?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE05RDlFY3JYUEtwc1hLaXNLbEE5RVhYMzFUM2tWZ0NUb1ZpRngweTRwcTFYNFBWaWxyX1V2QXJtYi11TkNsMGQ4ZUZScFhwUDc4Y2xFSjJyTlZxRUY5?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1yNzViMXkwVmhWR3RENklGM2I1X29rWThUWldfa081VUpnZi1ZaFowdTR4NXY4S2pXSkotb21CdHZCTVJ2dEtKYkpJLVhWTnJjR2RMQUxRRGwzV1pi?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -1206,8 +1184,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkQlMzX2loLTJLQldySXdGZVc3bGNLUFB1SklXLXRrM3Y0Qk5ZUjZ2NEkwYUo2ajRRR0R4MUY3akQySC0yS3BCLVBhZ2ZGNDZ0OThZMkpzd0Vzd0I1?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -1224,8 +1202,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9NLUswaEdhRU1HYWNWUnpqbnpWdHhXTGtyTTdmWFhTckxNSG03el9UMzVIZEpLSk0xcTk5bkEwMzJ6MjEyLWdYSg?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -1284,8 +1262,8 @@
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
     "metaFound": 28,
-    "metaAssigned": 1,
-    "assignmentRate": 4,
+    "metaAssigned": 0,
+    "assignmentRate": 0,
     "sourceCounts": {
       "og:image": 26,
       "jsonld:image": 44,
@@ -1368,8 +1346,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "db6ba77a0559952da2df",
@@ -2086,7 +2064,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T12:51:40.876Z",
+    "generatedAt": "2026-11-24T12:53:20.316Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
