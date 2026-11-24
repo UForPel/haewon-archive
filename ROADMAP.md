@@ -155,3 +155,12 @@
 - [ ] Inspect failed/missing article metadata fetches by host; do not infer absence of image metadata from fetch failures.
 - [ ] Run real-browser mobile and review JSON/localStorage checks when a browser automation environment is available.
 - [ ] Collect human labels; precision remains unmeasured until real labels are saved/exported and included in the repository's review dataset.
+
+
+### Official feed gate (2026-11-24)
+- SBS News entertainment RSS: `https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=14&plink=RSSREADER` — personal non-commercial scope only.
+- Sports Khan entertainment RSS: `https://sports.khan.co.kr/rss/entertainment` — personal subscription; public redistribution requires permission.
+- MK culture/entertainment RSS: `https://www.mk.co.kr/rss/30000023/` — endpoint published; usage terms and item-level links still need validation.
+- ETNews latest RSS: `http://rss.etnews.com/Section901.xml` — HTTP endpoint, not accepted in HTTPS-only pipeline.
+- [ ] Validate item-level RSS link fields and publisher permissions before integration; no public feed content should be copied or redistributed without a clear permitted basis.
+- [x] #547: 120/120 tests, collection/validation/data commit/Pages deploy succeeded.

@@ -109,3 +109,8 @@ For each substantial update include: changed paths; planned vs implemented items
 ## UI integration verification — 2026-11-24
 - A UI feature is not complete merely because a module or handler exists: verify the module is loaded by the actual HTML entry point and add a regression test for that wiring.
 - Distinguish automated test/deployment success from actual browser rendering, persistence, file-picker, and download behavior. Explicitly label unverified interactions.
+
+
+## Current verified review queue state — 2026-11-24
+- Actions #547 passed 120/120 tests and deployed Pages successfully.
+- Always re-check the latest data commit after a collection workflow; workflow pushes may advance `main` beyond the initiating feature commit.

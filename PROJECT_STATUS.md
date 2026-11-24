@@ -357,3 +357,15 @@ Last updated: 2026-11-20
 - [x] Open Graph protocol documents `og:image` and optional image metadata, but it does not guarantee that every publisher page exposes a usable image. Current sample found 0 candidates in 9 attempts; distinguish missing metadata from failed fetches.
 - [x] Added a static integration regression test to ensure the review queue remains wired to the module actually loaded by `index.html`.
 - [ ] Real-browser visual/mobile rendering, localStorage persistence across reload, and actual file-picker/download JSON round-trip remain unverified; web retrieval is not a substitute for browser interaction.
+
+
+### Official RSS candidate inventory (checked 2026-11-24)
+| Publisher | Official feed endpoint | Evidence / constraint | Decision |
+|---|---|---|---|
+| SBS News entertainment | `https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=14&plink=RSSREADER` | Official RSS directory; personal non-commercial use only | Do not redistribute feed content on public archive until scope is clarified |
+| Sports Khan entertainment | `https://sports.khan.co.kr/rss/entertainment` | Official RSS directory; personal subscription purpose; public sharing requires rights-holder permission | Not integrated |
+| Maeil Business culture/entertainment | `https://www.mk.co.kr/rss/30000023/` | Official RSS directory lists the feed; feed-specific reuse terms and item URL semantics not verified | Hold for permission and XML validation |
+| ETNews latest | `http://rss.etnews.com/Section901.xml` | Official directory lists HTTP feed endpoints | Do not use HTTP feed in the HTTPS-only collection pipeline |
+
+Official source directories: SBS `https://news.sbs.co.kr/news/rss.do`, Sports Khan `https://sports.khan.co.kr/rss`, MK `https://www.mk.co.kr/rss/`, ETNews `https://www.etnews.com/rss/`.
+The directory pages prove that feed endpoints are published, not that each RSS item's link is a direct HTTPS publisher article URL or that image/content republication is permitted. Item-level XML and reuse permissions remain unverified.

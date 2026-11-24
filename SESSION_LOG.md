@@ -842,3 +842,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Open Graph protocol documents `og:image` and related fields, but does not ensure publishers expose them. Zero candidates in this sample is not proof that the parser is wrong or that publishers have no images; inspect per-host fetch status and HTML when available.
 - Added `tests/review-queue-integration.test.mjs` so future changes fail CI if the review queue is implemented in an unreferenced module.
 - Browser automation remains unavailable: do not claim actual rendering, localStorage reload, or import/export file-picker testing. The public Pages deployment step passed, but this is not equivalent to manual browser verification.
+
+
+### Source URL inventory and latest run #547
+- Exact official endpoints recorded: SBS entertainment `https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=14&plink=RSSREADER`; Sports Khan entertainment `https://sports.khan.co.kr/rss/entertainment`; MK culture/entertainment `https://www.mk.co.kr/rss/30000023/`; ETNews latest `http://rss.etnews.com/Section901.xml`.
+- SBS official terms specify personal non-commercial use. Sports Khan official terms specify personal subscription and require permission for public sharing/republication. MK page lists the feed but its reuse terms and item-level URLs were not validated. ETNews publishes HTTP endpoints, excluded from the HTTPS-only pipeline.
+- Do not confuse a published RSS directory link with a verified feed payload or a direct HTTPS article link. No publisher feed was integrated this cycle.
+- Actions #547 succeeded with 120/120 tests; data collection, validation, data commit and Pages deployment succeeded. Latest main data commit: `a583d3283af770dfd23fb7c1ff038ffed1bb689a`.
+- Latest data: 658 discovery records; 36 explicit HTTPS article URLs (all Bing-origin); 41 Bing RSS candidates across 4/4 successful queries. Thumbnail audit: 299 records with thumbnails, 27 unique URLs, dominant shared URL still 273 records. Latest enrichment sample: 10 attempts, 0 found/assigned, 6 missing, 4 failed.
+- Review queue implementation commit `8f348f2`; integration test/documentation commit `98ad7e7`; #547 confirms 120 tests passed and Pages deployment succeeded.
