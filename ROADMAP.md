@@ -205,3 +205,10 @@
 - [x] Final metrics refreshed: 664 items, 38 direct HTTPS article URLs, 41 Bing candidates, 301 thumbnails, 29 unique URLs, 273 repeated uses.
 - [ ] Human review 0/369; accuracy remains unmeasured.
 - [ ] Browser/mobile and JSON/localStorage interactions remain unverified.
+
+## Actions #555 data follow-up
+- [x] 126/126 tests, collection, validation, data commit and Pages deployment passed.
+- [x] Google RSS source diagnosis refreshed: 328 items, 325 site-level source URLs, 0 direct article URLs, 0 RSS image signals.
+- [ ] Investigate Bing RSS non-RSS response for query "해원 엔믹스" using only later normal scheduled retries; current run was 3/4 successful, 30 candidates.
+- [ ] Keep 273 repeated image assignments intact until human review; 369 review candidates remain unreviewed.
+- [ ] Browser/mobile and local persistence/file-picker verification remains open.

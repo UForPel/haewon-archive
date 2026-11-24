@@ -901,3 +901,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Final review audit: 369 eligible candidate labels, 0 reviewed, 0% coverage; precision is null/unmeasured.
 - Enrichment made 0 attempts in #554 because eligible targets remained within retry windows. This is expected backoff behavior.
 - Browser visual/mobile rendering, localStorage reload and real file-picker/download round-trip remain unverified.
+## 2026-11-24 — Actions #555 final data diagnosis
+- Actions #555 run ID 45398346939 succeeded: 126/126 tests; collection, quality generation, validation, data commit and Pages deployment all passed.
+- Latest automated data commit: a469c116f6b0f4c3b5ae6f5d4cd7906d580ab010.
+- Latest data: 665 discovery records; 38 explicit HTTPS publisher article URLs; 38 Bing-origin article records; Bing News RSS 3/4 successful queries and 30 candidates. The failed Bing query '해원 엔믹스' returned a non-RSS body ('Bing RSS 응답이 아닙니다'); Google News RSS remained 4/4 successful.
+- Google RSS diagnostics: 328 item records, 325 site-level sourceUrl values, 0 item-level publisherArticleUrl values, and 0 media:thumbnail/media:content/enclosure/description/content:encoded image signals. Do not treat sourceUrl as a direct article URL or infer an image URL.
+- Latest thumbnail audit: 301/665 with thumbnails, 29 distinct URLs, one Google-hosted URL reused on 273 records; 364 records have no thumbnail. Human review remains 0/369 (0%); precision unmeasured.
+- Latest enrichment attempted 0 URLs because the retry backoff excluded all eligible targets. No new thumbnails were assigned in #555.
+- Deduplication report for this run: 358 incoming items to 316 normalized candidates (42 collapsed). This is candidate-level deduplication, not deletion of archive history.
+- The Bing non-RSS response is recorded as a source-specific transient response-format failure. Retry only on a later scheduled cycle; do not switch to wrapper decoding or bypass access controls.

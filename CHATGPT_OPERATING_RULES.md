@@ -139,3 +139,8 @@ For each substantial update include: changed paths; planned vs implemented items
 ## Final cycle state — Actions #554
 - Latest data commit 0046bb119be9d31b6702c0a80c43228d1752bae8; 664 records, 38 explicit HTTPS article URLs, 41 Bing candidates, 301 thumbnails, 29 unique image URLs, 273 repeated uses, 369 review candidates and 0 human labels.
 - Latest Actions #554 passed 126 tests and deployed Pages. Zero enrichment attempts means retry windows excluded all eligible targets.
+
+## Actions #555 latest source baseline
+- 665 discovery records, 38 explicit HTTPS publisher article URLs, 30 Bing candidates with 3/4 Bing query successes; one Bing response was not RSS.
+- Google RSS yielded 328 items, 325 source-site URLs, no direct article URLs, and no image metadata signals. Never infer article links from sourceUrl.
+- 301 thumbnail-bearing items, 29 unique URLs, one URL reused by 273 records; 369 review candidates and 0 human labels.
