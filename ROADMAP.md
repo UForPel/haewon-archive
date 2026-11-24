@@ -249,3 +249,15 @@
 - [ ] Verify this change set in Actions and confirm generated metrics.
 - [ ] Human-review the 273 repeated URL group without deletion or bulk labels.
 - [ ] Perform real-browser/mobile, keyboard, localStorage and JSON transfer checks.
+
+
+## 2026-11-25 — Verified recovery and next cycle
+- [x] Fix stale dashboard structural assertion; #566 confirms 133/133 tests.
+- [x] Verify YouTube + RSS discovery, improvement cycle, quality generation, archive validation, data commit and Pages deployment in Actions #566.
+- [x] Compare 38/666 (5.7%) -> 53/682 (7.8%) explicit HTTPS publisher URLs; confirm Google News 0/629 and Bing RSS metadata origin for all 53.
+- [x] Compare thumbnails 301/666 -> 312/682; retain 273 unverified legacy repeated assignments; do not auto-delete/replace.
+- [ ] Correct run-log push trigger normalization and schema/test (in current PR).
+- [ ] Expand operational run log to report news source outcomes separately from YouTube collector status.
+- [ ] Review repeated 273-image group per article; collect human labels before estimating precision.
+- [ ] Browser/mobile, keyboard, localStorage and JSON transfer checks remain manual and unverified.
+- [ ] Prioritize explicit publisher URL metadata and article-specific image metadata on sources where public metadata already exposes these fields; no wrapper token decoding or access-control bypass.
