@@ -91,3 +91,15 @@
 - [ ] Collect enough article-specific human labels before interpreting precision; no visual suitability accuracy is currently known.
 - [ ] Review the 273-item repeated URL group without deleting or replacing images automatically.
 - [ ] Manually inspect the deployed mobile review UI and local-storage import/export flow.
+
+
+## Live RSS evidence and Google News wrapper isolation — 2026-11-24
+- [x] Measure image-bearing structures in actual Google News RSS responses without retaining raw feed bodies.
+- [x] Confirm 227 RSS items yielded zero Media RSS, image Enclosure, content:encoded or description image tags.
+- [x] Confirm publisher metadata fetches remained on news.google.com; 12/12 returned wrapper-only metadata with the same Google-hosted OG image.
+- [x] Keep wrapper metadata as provenance evidence but exclude it from publisher-image candidate comparison and automatic assignment.
+- [x] Verify run #521 full tests, collection, validation, data commit and Pages deployment.
+- [ ] Verify the latest resolved-host provenance commit in pending Actions #525 and its Pages deployment.
+- [ ] Review article-level candidates manually; suitability precision remains unmeasured until labels are entered.
+- [ ] Manually inspect mobile review UI and JSON import/export.
+- [x] Preserve all 273 records in the repeated-URL group; no automatic deletion/replacement.
