@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T01:35:39.446Z",
+  "generatedAt": "2026-11-24T01:36:50.118Z",
   "thumbnailAudit": {
     "items": 619,
     "withThumbnail": 273,
@@ -40,17 +40,17 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 619,
-    "newsUniqueFetched": 191,
-    "newsAddedLastRun": 2,
-    "duplicateBeforeMergeLastRun": 16,
+    "newsUniqueFetched": 205,
+    "newsAddedLastRun": 1,
+    "duplicateBeforeMergeLastRun": 22,
     "duplicateGroupsCurrent": 619,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 207,
-      "after": 190,
-      "collapsed": 17,
+      "before": 227,
+      "after": 205,
+      "collapsed": 22,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -297,7 +297,7 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
+    "rateLimited": 1,
     "unreachable": 0,
     "thumbnailMissing": 346,
     "results": [
@@ -412,8 +412,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE54c0VLcEF2N21tY3pNdnNDLW94cGZwSDA1TTE2MllvN29mazU4eEoyV2V6czJIdjJNMUxZSlhyaHNoZVJ4NklNTU13ZHJSVTVUVV9zN2pkMTFVNXNC?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
