@@ -49,9 +49,11 @@
       "status": "failed",
       "publisherArticleUrl": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
       "sourceUrl": "",
-      "resolvedArticleUrl": "",
-      "resolvedArticleHost": "",
-      "fetchedAt": ""
+      "resolvedArticleUrl": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
+      "resolvedArticleHost": "www.famtimes.co.kr",
+      "fetchedAt": "2026-11-24T12:49:37.682Z",
+      "statusCode": 403,
+      "errorCode": "forbidden"
     }
   },
   {
@@ -2739,9 +2741,11 @@
       "status": "failed",
       "publisherArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
       "sourceUrl": "",
-      "resolvedArticleUrl": "",
-      "resolvedArticleHost": "",
-      "fetchedAt": ""
+      "resolvedArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
+      "resolvedArticleHost": "www.bntnews.co.kr",
+      "fetchedAt": "2026-11-24T12:49:37.682Z",
+      "statusCode": 403,
+      "errorCode": "forbidden"
     }
   },
   {
@@ -3656,9 +3660,11 @@
       "status": "failed",
       "publisherArticleUrl": "https://x.com/NMlXX_Haewon",
       "sourceUrl": "",
-      "resolvedArticleUrl": "",
-      "resolvedArticleHost": "",
-      "fetchedAt": ""
+      "resolvedArticleUrl": "https://x.com/NMlXX_Haewon",
+      "resolvedArticleHost": "x.com",
+      "fetchedAt": "2026-11-24T12:49:37.682Z",
+      "statusCode": 403,
+      "errorCode": "forbidden"
     }
   },
   {
@@ -5576,6 +5582,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "b400b99db49c62f2a418",
+    "title": "엔믹스 해원, '파격 숏컷' 변신 호불호 반응에 \"이 머리로 무대 안 설 것\" 심경 - 네이트",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE90Mkpua0Q0T1hXdVNDZ2Z6RlFwLVJsclRWVzNUT3BHeE1aVE5CeVNnbWJoUTBraWJza21KT1ZoZU5SWS1XMWsxbzVOY1pfS0w4eDVuWEE5ekdwUG55X01Jd0d3eEVJV2d0cmNUVA?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://news.nate.com",
+    "publishedAt": "2026-07-10T07:28:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTE90Mkpua0Q0T1hXdVNDZ2Z6RlFwLVJsclRWVzNUT3BHeE1aVE5CeVNnbWJoUTBraWJza21KT1ZoZU5SWS1XMWsxbzVOY1pfS0w4eDVuWEE5ekdwUG55X01Jd0d3eEVJV2d0cmNUVA?oc=5\" target=\"_blank\">엔믹스 해원, '파격 숏컷' 변신 호불호 반응에 \"이 머리로 무대 안 설 것\" 심경</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-24T12:49:36.961Z",
+    "status": "candidate",
+    "relevanceScore": 5
   },
   {
     "id": "4bacad32927935b069e3",
@@ -12569,6 +12593,24 @@
     "relevanceScore": 2,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null
+  },
+  {
+    "id": "6a30ab2d7ce2f772bad4",
+    "title": "'컴백' 엔믹스 \"연속 흥행, 건강한 부담감..더 열심히 하는 원동력\" [일문일답] - 미주중앙일보",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9LRDN4UmVGZ1cwVXd3U1BhQXJJcTZlV2JiQlQzc0tBZHJINDRRdVZsaDFQREhwREk4enMtUWlGajVfTGptR295SHBYWnRtOTRTdFRlRkk0VW1PeEFaWndsQ0NR?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.koreadaily.com",
+    "publishedAt": "2026-10-18T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE9LRDN4UmVGZ1cwVXd3U1BhQXJJcTZlV2JiQlQzc0tBZHJINDRRdVZsaDFQREhwREk4enMtUWlGajVfTGptR295SHBYWnRtOTRTdFRlRkk0VW1PeEFaWndsQ0NR?oc=5\" target=\"_blank\">'컴백' 엔믹스 \"연속 흥행, 건강한 부담감..더 열심히 하는 원동력\" [일문일답]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">미주중앙일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "NMIXX Haewon",
+    "discoveredAt": "2026-11-24T12:49:36.961Z",
+    "status": "candidate",
+    "relevanceScore": 2
   },
   {
     "id": "d5114e00432ebda3364c",

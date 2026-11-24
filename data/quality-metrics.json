@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-24T06:57:59.391Z",
+  "generatedAt": "2026-11-24T12:49:39.314Z",
   "articleUrlProvenance": {
-    "totalItems": 659,
+    "totalItems": 661,
     "itemsWithPublisherArticleUrl": 37,
     "bingNewsItems": 37,
     "candidateSourceCounts": {
@@ -40,8 +40,11 @@
       "en.sportalkorea.com": 2,
       "www.mk.co.kr": 2,
       "sbsstar.net": 2,
+      "www.famtimes.co.kr": 1,
+      "www.bntnews.co.kr": 1,
       "www.hankooki.com": 1,
       "www.wikitree.co.kr": 1,
+      "x.com": 1,
       "ca.news.yahoo.com": 1,
       "www.spotvnews.co.kr": 1,
       "www.tvdaily.co.kr": 1,
@@ -57,7 +60,7 @@
       "youtu.be": 98,
       "sports.khan.co.kr": 15,
       "m.newsen.com": 14,
-      "news.nate.com": 13,
+      "news.nate.com": 14,
       "www.chosun.com": 12,
       "enews.imbc.com": 11,
       "www.sedaily.com": 10,
@@ -76,6 +79,7 @@
       "www.sportsseoul.com": 4,
       "www.newsen.com": 4,
       "www.bntnews.co.kr": 3,
+      "www.koreadaily.com": 3,
       "www.marieclairekorea.com": 3,
       "www.news1.kr": 3,
       "www.fnnews.com": 3,
@@ -84,7 +88,6 @@
       "www.famtimes.co.kr": 2,
       "www.twig24.com": 2,
       "www.sportschosun.com": 2,
-      "www.koreadaily.com": 2,
       "www.xportsnews.com": 2,
       "www.newsis.com": 2,
       "www.mydaily.co.kr": 2,
@@ -142,9 +145,9 @@
     }
   },
   "thumbnailAudit": {
-    "items": 659,
+    "items": 661,
     "withThumbnail": 300,
-    "missing": 359,
+    "missing": 361,
     "uniqueThumbnailUrls": 28,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
@@ -241,169 +244,59 @@
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 659,
-    "newsUniqueFetched": 195,
-    "newsAddedLastRun": 5,
-    "duplicateBeforeMergeLastRun": 18,
-    "duplicateGroupsCurrent": 659,
+    "newsCandidatesTotal": 661,
+    "newsUniqueFetched": 244,
+    "newsAddedLastRun": 6,
+    "duplicateBeforeMergeLastRun": 19,
+    "duplicateGroupsCurrent": 661,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 213,
-      "after": 191,
-      "collapsed": 22,
+      "before": 263,
+      "after": 240,
+      "collapsed": 23,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 11,
-      "found": 1,
-      "assigned": 1,
+      "attempted": 3,
+      "found": 0,
+      "assigned": 0,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
-      "missing": 7,
+      "missing": 0,
       "failed": 3,
       "results": [
         {
-          "id": "66b75c4e48e22de59d0e",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_16v9.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_16v9.jpg",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_1280.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_1v1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_300.jpg",
-              "source": "jsonld:thumbnailUrl",
-              "priority": 5
-            },
-            {
-              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_141.jpg",
-              "source": "jsonld:thumbnailUrl",
-              "priority": 5
-            },
-            {
-              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_95.jpg",
-              "source": "jsonld:thumbnailUrl",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
+          "id": "651745f76b8469f7fe65",
+          "status": "failed",
+          "publisherArticleUrl": "https://x.com/NMlXX_Haewon",
           "sourceUrl": "",
-          "resolvedArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
-          "resolvedArticleHost": "news.sbs.co.kr"
-        },
-        {
-          "id": "e75ec45c6ffcf657d60d",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%8B%A0%EA%B3%A1-%EA%B8%B4-%EC%86%8C%EC%9B%90-birthday-wish-%EB%A9%9C%EB%A1%A0-%ED%86%B1-100-34%EC%9C%84-%EC%A7%84%EC%9E%85-%ED%86%B1-5-%EB%8B%AC%EC%84%B1/ar-AA2fDrrB",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%8B%A0%EA%B3%A1-%EA%B8%B4-%EC%86%8C%EC%9B%90-birthday-wish-%EB%A9%9C%EB%A1%A0-%ED%86%B1-100-34%EC%9C%84-%EC%A7%84%EC%9E%85-%ED%86%B1-5-%EB%8B%AC%EC%84%B1/ar-AA2fDrrB",
-          "resolvedArticleHost": "www.msn.com"
+          "resolvedArticleUrl": "https://x.com/NMlXX_Haewon",
+          "resolvedArticleHost": "x.com"
         },
         {
           "id": "573c328cd899cbdb983c",
           "status": "failed",
           "publisherArticleUrl": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
-          "sourceUrl": ""
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
+          "resolvedArticleHost": "www.famtimes.co.kr"
         },
         {
           "id": "3bbd95a333f1ae79efdc",
           "status": "failed",
           "publisherArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
-          "sourceUrl": ""
-        },
-        {
-          "id": "651745f76b8469f7fe65",
-          "status": "failed",
-          "publisherArticleUrl": "https://x.com/NMlXX_Haewon",
-          "sourceUrl": ""
-        },
-        {
-          "id": "937b773eb419381da3d0",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
           "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "0dce33409a82f8bfa806",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "f60f0f16157da91b9bf1",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
-          "resolvedArticleHost": "www.tvdaily.co.kr"
-        },
-        {
-          "id": "d6c5f93f622776e07642",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "95010dfd95888c029c5b",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "1410c1c68a3a1cfaa0f2",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://osen.co.kr/article/G1112907419",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://osen.co.kr/article/G1112907419",
-          "resolvedArticleHost": "osen.co.kr"
+          "resolvedArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
+          "resolvedArticleHost": "www.bntnews.co.kr"
         }
       ]
     }
   },
   "thumbnailProvenance": {
     "assignedBySource": {
-      "unknown": 632,
+      "unknown": 634,
       "og:image": 25,
       "twitter:image": 2
     }
@@ -411,10 +304,10 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 622,
-      "withUrl": 622,
+      "items": 624,
+      "withUrl": 624,
       "withThumbnail": 273,
-      "withDate": 622,
+      "withDate": 624,
       "urlCoverage": 100,
       "thumbnailCoverage": 44,
       "dateCoverage": 100
@@ -701,14 +594,14 @@
     }
   ],
   "classification": {
-    "items": 659,
+    "items": 661,
     "categoryCounts": {
       "video": 182,
       "interview": 37,
-      "news": 387,
+      "news": 388,
       "brand": 20,
       "event": 5,
-      "performance": 26,
+      "performance": 27,
       "official": 5
     },
     "reviewedSamples": 0,
@@ -745,6 +638,347 @@
       "uncertain": 0
     }
   },
+  "thumbnailEnrichmentByHost": [
+    {
+      "host": "news.google.com",
+      "attempted": 12,
+      "assigned": 0,
+      "found": 0,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 12,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "news.google.com": 12
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.msn.com",
+      "attempted": 5,
+      "assigned": 0,
+      "found": 1,
+      "missing": 4,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "sports.khan.co.kr": 1,
+        "www.msn.com": 4
+      },
+      "successRate": 0
+    },
+    {
+      "host": "sports.khan.co.kr",
+      "attempted": 4,
+      "assigned": 0,
+      "found": 3,
+      "missing": 1,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "sports.khan.co.kr": 3,
+        "www.msn.com": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "biz.chosun.com",
+      "attempted": 3,
+      "assigned": 0,
+      "found": 3,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "biz.chosun.com": 3
+      },
+      "successRate": 0
+    },
+    {
+      "host": "news.sbs.co.kr",
+      "attempted": 3,
+      "assigned": 0,
+      "found": 3,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "sbsstar.net": 2,
+        "news.sbs.co.kr": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "en.sportalkorea.com",
+      "attempted": 2,
+      "assigned": 0,
+      "found": 2,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "en.sportalkorea.com": 2
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.mk.co.kr",
+      "attempted": 2,
+      "assigned": 0,
+      "found": 2,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.mk.co.kr": 2
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.soompi.com",
+      "attempted": 2,
+      "assigned": 0,
+      "found": 2,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.soompi.com": 2
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.sportsseoul.com",
+      "attempted": 2,
+      "assigned": 0,
+      "found": 2,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.sportsseoul.com": 2
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.xportsnews.com",
+      "attempted": 2,
+      "assigned": 0,
+      "found": 2,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.xportsnews.com": 2
+      },
+      "successRate": 0
+    },
+    {
+      "host": "ca.news.yahoo.com",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "ca.news.yahoo.com": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "osen.co.kr",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 0,
+      "missing": 1,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "osen.co.kr": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.bntnews.co.kr",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 0,
+      "missing": 0,
+      "failed": 1,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {
+        "forbidden": 1
+      },
+      "finalHosts": {
+        "www.bntnews.co.kr": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.etnews.com",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.etnews.com": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.famtimes.co.kr",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 0,
+      "missing": 0,
+      "failed": 1,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {
+        "forbidden": 1
+      },
+      "finalHosts": {
+        "www.famtimes.co.kr": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.hankooki.com",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.hankooki.com": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.osen.co.kr",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "biz.chosun.com": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.spotvnews.co.kr",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.spotvnews.co.kr": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.starnewskorea.com",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.starnewskorea.com": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.tvdaily.co.kr",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 0,
+      "missing": 1,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.tvdaily.co.kr": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "www.wikitree.co.kr",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.wikitree.co.kr": 1
+      },
+      "successRate": 0
+    },
+    {
+      "host": "x.com",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 0,
+      "missing": 0,
+      "failed": 1,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {
+        "forbidden": 1
+      },
+      "finalHosts": {
+        "x.com": 1
+      },
+      "successRate": 0
+    }
+  ],
   "linkAudit": {
     "status": "completed",
     "sampledItems": 40,
@@ -752,7 +986,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 359,
+    "thumbnailMissing": 361,
     "results": [
       {
         "kind": "article",
@@ -1009,8 +1243,8 @@
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
     "metaFound": 27,
-    "metaAssigned": 1,
-    "assignmentRate": 4,
+    "metaAssigned": 0,
+    "assignmentRate": 0,
     "sourceCounts": {
       "og:image": 25,
       "jsonld:image": 44,
@@ -1696,8 +1930,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "12d2e1a63a52b149fac7",
@@ -1795,7 +2029,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T06:57:59.402Z",
+    "generatedAt": "2026-11-24T12:49:39.328Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
