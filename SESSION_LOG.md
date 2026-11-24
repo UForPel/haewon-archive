@@ -697,3 +697,20 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Confirm CI and Pages once Actions access is available.
 - Add regression coverage for duplicate candidate retention and unique metrics; execute full test suite.
 - Preserve legacy images pending visual review; no automatic replacement/deletion.
+## 2026-11-24 — CI failure diagnosis, repair and green deployment
+### CI diagnosis
+- Queried latest main and Actions API. Run #487 (`5e4c632`) failed in Unit tests. Job logs showed `SyntaxError: Invalid or unexpected token` at `scripts/quality-metrics.mjs:83`, caused by a literal newline splitting the `writeFile` output string.
+- Fixed output newline escaping in commit `91d48b9bcec6330095decd097eae34e053eef70e`. Run #488 found a second failure: the thumbnail audit no longer returned `repeatedUrlGroups` and `repeatedItems`, though existing tests required both.
+- Restored those fields in `scripts/quality-metrics.mjs` in commit `0fded07f7dbac86b6c853936ba4346abb4630b9a`.
+### Verified result
+- Run #489 passed all 86 tests. Collector, quality metrics, archive validation, run-log validation, data commit, Pages configure/artifact/deploy steps all succeeded.
+- Workflow: https://github.com/UForPel/haewon-archive/actions/runs/45319384393
+- The workflow's data commit advanced main to `8deedb0cfafda5e9a17161039291b4784dea6938`.
+### Data findings
+- 620 news candidates; 273 thumbnails; 347 missing; one unique thumbnail URL shared by 273 records.
+- 12 metadata candidate sets are now stored per article; 12 metadata-only, zero RSS candidates, zero assigned, 12 duplicate-rejected because the same Google-hosted image URL was returned.
+- This verifies persistence, not image diversity or relevance. Historical records do not have RSS candidate arrays. No article-level human suitability labels exist; do not invent an accuracy score.
+### Next
+- Expand metadata candidate extraction only with defensible source types (OG/Twitter, RSS media/enclosure/description, and structured image metadata); preserve per-article provenance and do not treat all candidates as equally valid.
+- Add a review workflow with explicit article-image suitability labels (relevant / unrelated / generic / unavailable / rights unclear) and report agreement only against reviewed records.
+- Investigate why Google News response returns one repeated image; retain the 273-row legacy group unchanged until review.
