@@ -583,3 +583,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Latest quality data: 168 thumbnails across 618 candidates but only 1 distinct URL; 167 are repeated URL assignments. 450 missing thumbnails. The distinct URL sampled returned HTTP 200 and `image/png`.
 - Repeated-URL heuristic is only a URL-level signal. It does not visually classify logo, image relevance, or visually duplicate images under different URLs.
 - CI #401 attempt 2: unit tests, collection, quality, validation, and artifact upload passed; deploy failed because two `github-pages` artifacts existed from retries. Fixed workflow to use unique artifact name per attempt for upload and deploy. Awaiting new CI.
+
+
+## 2026-11-24 — Thumbnail concentration source investigation
+- Re-read main collector, quality metrics, tests, data snapshot and workflow logs. Current sample: 192 assigned thumbnails / 618 candidates, 1 unique URL; 426 missing. Eight records sampled have distinct titles and article redirect URLs but identical image URL.
+- No thumbnail URL cache was found in the checked collector file/path. RSS extraction chooses the first eligible media/image candidate. OG/Twitter enrichment is only used for missing thumbnail fields and chooses the first eligible metadata image. Merge logic prefers an already stored thumbnail and does not replace a non-empty value with incoming metadata.
+- Therefore source attribution remains unproven: no raw RSS/HTML snapshots were stored to compare candidates or reproduce extraction. The shared URL could originate upstream or from enrichment; don't label either as root cause.
+- Added metrics: dominant URL count/share and a concentration warning (at least 5 items and at least 20% of candidates). Added tests for 80% concentration warning and balanced small sample; UI warns that visual inspection is required. Commits: 203105ff, 57f4f75e, adc19bb7.
+- CI #402 and #404 both failed deployment: upload artifact named github-pages-1 was finalized, while deploy-pages reported zero artifacts with that name. Workflow reverted to the standard github-pages artifact name; successful redeployment is still pending verification.
+- Local clone/test is unavailable in this environment; verification must come from Actions. This is an audit/triage improvement, not an image-source bug fix.
