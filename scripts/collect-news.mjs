@@ -21,8 +21,10 @@ function tag(raw,tagName){
  return m?decode(m[1]):'';
 }
 function attr(tag,name){
- const escaped=name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
- return tag.match(new RegExp('\\\\b'+escaped+'\\\\s*=\\\\s*(["\\\\'])([\\\\s\\\\S]*?)\\\\1','i'))?.[2]||'';
+ for(const match of String(tag).matchAll(/([^\s=]+)\s*=\s*(["'])(.*?)\2/gs)){
+  if(match[1].toLowerCase()===String(name).toLowerCase())return decode(match[3]);
+ }
+ return '';
 }
 function resolveImageUrl(value,baseUrl=''){
  try{const url=baseUrl?new URL(decode(String(value||'')),baseUrl):new URL(decode(String(value||'')));if(url.protocol!=='https:'||url.username||url.password||/(?:logo|avatar|icon|favicon)/i.test(url.pathname))return '';url.hash='';return url.href;}catch{return '';}
@@ -34,17 +36,17 @@ function dedupeImageCandidates(candidates,limit=12){
 }
 export function extractRssThumbnailCandidates(raw='',description='',baseUrl=''){
  const candidates=[];
- for(const match of String(raw).matchAll(/<(?:media:thumbnail|media:content|enclosure)\\b[^>]*>/gi)){
-  const tagText=match[0],name=tagText.match(/^<\\s*([^\\s>]+)/)?.[1]?.toLowerCase()||'rss-media';
+ for(const match of String(raw).matchAll(/<(?:media:thumbnail|media:content|enclosure)\b[^>]*>/gi)){
+  const tagText=match[0],name=tagText.match(/^<\s*([^\s>]+)/)?.[1]?.toLowerCase()||'rss-media';
   const url=attr(tagText,'url')||attr(tagText,'href'),type=attr(tagText,'type'),medium=attr(tagText,'medium');
-  const imageTag=name==='media:thumbnail'||(/^image\\//i.test(type))||medium.toLowerCase()==='image';
+  const imageTag=name==='media:thumbnail'||(/^image\//i.test(type))||medium.toLowerCase()==='image';
   if(url&&imageTag)candidates.push({url,source:name,priority:name==='media:thumbnail'?1:name==='media:content'?2:3});
  }
  const html=decode(description||'');
- for(const match of html.matchAll(/<(?:img|source)\\b[^>]*>/gi)){
+ for(const match of html.matchAll(/<(?:img|source)\b[^>]*>/gi)){
   const tagText=match[0],src=attr(tagText,'src')||attr(tagText,'data-src')||attr(tagText,'data-original')||attr(tagText,'data-lazy-src');
   const srcset=attr(tagText,'srcset');
-  const selected=src||srcset.split(',')[0]?.trim().split(/\\s+/)[0]||'';
+  const selected=src||srcset.split(',')[0]?.trim().split(/\s+/)[0]||'';
   if(selected)candidates.push({url:selected,source:'rss-description-html',priority:4});
  }
  return dedupeImageCandidates(candidates.map(c=>({...c,baseUrl})),8);
@@ -73,27 +75,26 @@ export function parseRss(xml,query,now=new Date().toISOString()){
 }
 export function extractOpenGraphImageCandidates(html='',baseUrl=''){
  const source=String(html||''),candidates=[];
- for(const tagText of source.matchAll(/<meta\\b[^>]*>/gi)){
-  const tag=tagText[0],key=(attr(tag,'property')||attr(tag,'name')||'').toLowerCase();
-  const content=attr(tag,'content');
+ for(const match of source.matchAll(/<meta\b[^>]*>/gi)){
+  const tag=match[0],key=(attr(tag,'property')||attr(tag,'name')||'').toLowerCase(),content=attr(tag,'content');
   const map={'og:image':1,'og:image:secure_url':1,'twitter:image':2,'twitter:image:src':2};
   if(content&&map[key])candidates.push({url:content,source:key,priority:map[key],baseUrl});
  }
- for(const tagText of source.matchAll(/<link\\b[^>]*>/gi)){
-  const tag=tagText[0],rel=attr(tag,'rel').toLowerCase().split(/\\s+/);
+ for(const match of source.matchAll(/<link\b[^>]*>/gi)){
+  const tag=match[0],rel=attr(tag,'rel').toLowerCase().split(/\s+/);
   if(rel.includes('image_src')){const href=attr(tag,'href');if(href)candidates.push({url:href,source:'link:image_src',priority:3,baseUrl});}
  }
- for(const tagText of source.matchAll(/<(?:meta|img)\\b[^>]*>/gi)){
-  const tag=tagText[0],itemprop=attr(tag,'itemprop').toLowerCase();
+ for(const match of source.matchAll(/<(?:meta|img)\b[^>]*>/gi)){
+  const tag=match[0],itemprop=attr(tag,'itemprop').toLowerCase();
   if(itemprop==='image'){
    const value=attr(tag,'content')||attr(tag,'src')||attr(tag,'data-src');
    if(value)candidates.push({url:value,source:'itemprop:image',priority:4,baseUrl});
   }
  }
- for(const script of source.matchAll(/<script\\b[^>]*type=["']application\\/ld\\+json["'][^>]*>([\\s\\S]*?)<\\/script>/gi)){
+ for(const match of source.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)){
   try{
-   const parsed=JSON.parse(script[1].replace(/^\\s*<!--|-->\\s*$/g,''));
-   const visit=(node)=>{
+   const parsed=JSON.parse(match[1].replace(/^\s*<!--|-->\s*$/g,''));
+   const visit=node=>{
     if(!node)return;
     if(Array.isArray(node)){node.forEach(visit);return;}
     if(typeof node!=='object')return;
