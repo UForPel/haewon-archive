@@ -3,14 +3,14 @@
 Last updated: 2026-11-24
 
 ## Current status — RSS image provenance and human review (2026-11-24)
-- Verified starting baseline: #493 and #490 both succeeded; their Pages deployment steps succeeded. #493: https://github.com/UForPel/haewon-archive/actions/runs/45319530313
-- Latest historical dataset before the new extractor: 620 articles, 273 thumbnails, 347 missing; one Google-hosted URL is shared by 273 articles. All 620 stored records have 0 RSS image candidates; 12 have stored article-meta candidates. Historical RSS XML bodies were not retained.
-- Collector now supports RSS Media RSS / image Enclosure / description HTML / content:encoded; article-page OG/Twitter, secure_url, image_src, itemprop and JSON-LD image properties. Candidates retain source and priority; candidate arrays are merged rather than overwritten.
-- Added aggregate RSS-response diagnostics (tag counts and item counts only; no raw feed body storage) so the next successful live collection can establish whether Google News RSS actually supplies image markup.
-- Added per-article candidate review UI. Labels: relevant, unrelated, generic/logo, broken, rights unclear, uncertain. Labels are browser-local and can be exported/imported as JSON; they are not centrally shared.
-- Review metrics distinguish candidate suitability precision from selected-thumbnail precision. No human labels exist yet, so both remain unmeasured; this is not a classifier accuracy score.
-- Preserve the 273-record repeated-URL group. No automatic deletion or replacement.
-- New parser/UI/test commits are on main; CI is still being repaired/verified. Latest pending run at this checkpoint: #516. Pages deployment for the new code is not yet verified. Live visual/mobile inspection remains unconfirmed.
+- Verified full run #521: unit tests, collection, metrics, data validation, operational log, data commit and GitHub Pages deployment all succeeded. https://github.com/UForPel/haewon-archive/actions/runs/45327828183
+- Latest live RSS sample: 227 items across four queries; 0 media:thumbnail, 0 media:content, 0 image enclosure, 0 content:encoded items, 0 description img/source tags, and 0 RSS image candidates. Raw RSS bodies are not stored.
+- Article metadata fetch sample: 12 attempts, 0 publisher-page metadata candidates, 0 assignments, 12 wrapper-only results. All 12 resolved response hosts were news.google.com; all carried the same Google-hosted OG image. They are now stored as google-news-wrapper:og:image and excluded from publisher candidate comparison/automatic assignment.
+- Latest historical dataset: 620 articles, 273 thumbnails, 347 missing; one URL is shared by 273 records. The 273-record legacy group remains unchanged.
+- Collector supports RSS Media RSS / image Enclosure / description HTML / content:encoded and article-page OG/Twitter, secure_url, image_src, itemprop and JSON-LD. Candidate source/priority and per-article fetch provenance are retained.
+- Article-level candidate review UI is implemented. Labels are browser-local and can be exported/imported as JSON. Candidate suitability precision and selected-thumbnail precision are available but remain unmeasured until labels are entered; these are not classifier accuracy.
+- No Google News opaque redirect decoding or access-control bypass is used. The collector does not treat Google News wrapper metadata as a publisher article image.
+- Latest main includes the data refresh from #521; #525 is pending for the latest metadata-host provenance code commit. Live visual/mobile inspection remains unconfirmed.
 
 ## Purpose
 First-read handoff document for every new ChatGPT conversation about this repository. Read it before proposing or changing project work, then follow links to detailed documents.
