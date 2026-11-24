@@ -146,7 +146,7 @@ if(list&&count){
    }else{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent=legacySharedImage?'기사별 이미지 확인 전':'이미지 미확인';thumbnail.append(fallback);}
    card.append(thumbnail);
    const details=document.createElement('div');details.className='photo-card-details';
-   const title=document.createElement('h3');const titleLink=document.createElement('a');titleLink.href=item.publisherArticleUrl||item.url;titleLink.target='_blank';titleLink.rel='noopener noreferrer';titleLink.textContent=item.title;titleLink.className='discovery-title-link';title.append(titleLink);
+   const title=document.createElement('h3');const titleLink=document.createElement('a');titleLink.href=item.publisherArticleUrl||item.url;titleLink.target='_blank';titleLink.rel='noopener noreferrer';titleLink.textContent=cleanDiscoveryText(item.title);titleLink.className='discovery-title-link';title.append(titleLink);
    const kind=document.createElement('span');kind.className='tag';kind.textContent=categoryOf(item).map(category=>categoryLabels[category]||category).join(' · ');
    const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):'')+' · '+(item.publisherArticleUrl?'원문 확인':'발견 후보');
    const note=document.createElement('p');note.className='photo-description';note.textContent=cleanDiscoveryText(item.description);
