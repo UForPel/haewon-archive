@@ -70,3 +70,11 @@
 
 - [x] Fix escaped-newline syntax issue discovered during code review in comparison/metrics modules; fetched source confirms no literal escape sequences remain.
 - [ ] Execute tests and inspect generated comparison metrics in CI; unverified due network/Actions visibility.
+## Thumbnail pipeline — CI repair and next measurement stage (2026-11-24)
+- [x] Fix `quality-metrics.mjs` output-string syntax error found by Actions.
+- [x] Restore `repeatedUrlGroups` and `repeatedItems` metrics required by existing tests.
+- [x] Verify full CI #489: 86 tests pass; collection, validation, run log, data commit and Pages deployment pass.
+- [x] Persisted metadata candidate evidence on 12 sampled article records; current evidence is 12 metadata-only and 0 RSS candidates.
+- [ ] Increase candidate diversity beyond repeated Google-hosted `og:image` responses; inspect allowed RSS/structured image sources and test against real articles.
+- [ ] Add a human-labeled article-image suitability review queue and measured accuracy/coverage; URL uniqueness is not image relevance.
+- [ ] Keep the 273-record repeated-URL group intact until human review; no automatic deletion or replacement.
