@@ -168,3 +168,11 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - This distinguishes three states: explicit original article URL, source-traceable thumbnail URL, and human-confirmed image relevance. They must not be conflated.
 - Latest deployed baseline after Actions #577: 49 verified Haewon articles; 39 with provenance-backed thumbnails; 10 without. Human image labels remain 0, so visual relevance precision is not measured.
 - The metric code/test refinement is pending its own Actions and Pages verification.
+
+
+## 2026-11-25 — Verified thumbnail metrics deployed
+- PR #9 and Actions #578 are complete. The collapsed **수집·품질 진단 보기** now reports verified publisher articles with provenance-backed thumbnails and verified Haewon articles with provenance-backed thumbnails.
+- Latest baseline: 49 verified Haewon articles, 39 with source-provenance thumbnails. This is source traceability, not a human judgment that the image is visually relevant.
+- The default scope remains **해원 원문 확인**; broader candidate scopes remain opt-in.
+- Operational note: run-log `sources` still only includes YouTube even when RSS/news collection succeeds; the news status file remains the detailed source record.
+- Mobile/browser visual checks and human image labels remain outstanding.
