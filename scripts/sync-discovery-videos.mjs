@@ -9,26 +9,20 @@ export function youtubeId(value=''){
   const url=new URL(String(value||''));
   if(url.protocol!=='https:'||url.username||url.password)return '';
   const host=url.hostname.toLowerCase();
+  const validId=id=>/^[A-Za-z0-9_-]{11}$/.test(id||'');
   if(host==='youtu.be'){
    const id=url.pathname.split('/').filter(Boolean)[0]||'';
-   return /^[\\w-]{11}$/.test(id)?id:'';
+   return validId(id)?id:'';
   }
   if(!['youtube.com','www.youtube.com','m.youtube.com','music.youtube.com'].includes(host))return '';
   if(url.pathname==='/watch'){
    const id=url.searchParams.get('v')||'';
-   return /^[\\w-]{11}$/.test(id)?id:'';
+   return validId(id)?id:'';
   }
-  const match=url.pathname.match(/^\\/(?:shorts|embed)\\/([\\w-]{11})(?:\\/|$)/);
-  return match?.[1]||'';
+  const parts=url.pathname.split('/').filter(Boolean);
+  if((parts[0]==='shorts'||parts[0]==='embed')&&validId(parts[1]))return parts[1];
+  return '';
  }catch{return '';}
-}
-export function resolveYoutubeCandidates(items=[]){
- const direct=[];
- for(const item of items){
-  const explicit=[item.publisherArticleUrl,item.url].find(value=>youtubeId(value));
-  if(explicit)direct.push({...item,url:explicit});
- }
- return direct;
 }
 export function discoveryVideos(items=[],now=new Date().toISOString()){
  return items.filter(item=>youtubeId(item.url)).map(item=>{
