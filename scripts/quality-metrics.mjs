@@ -80,8 +80,7 @@ async function main(){
  report.thumbnailCandidateComparison=compareThumbnailCandidates(discovery,newsStatus.thumbnailEnrichment?.results||[]);
  report.thumbnailReview=buildThumbnailReview(discovery,report.thumbnailAudit);
  report.linkAudit=await auditLinks(discovery);report.thumbnailResponseAudit=await auditThumbnailResponses(discovery);
- await writeFile(resolve(ROOT,'data/quality-metrics.json'),JSON.stringify(report,null,2)+'
-');
+ await writeFile(resolve(ROOT,'data/quality-metrics.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({sourceCount:report.sources.length,items:report.collection.newsCandidatesTotal,linkAuditChecked:report.linkAudit.checked,brokenLinks:report.linkAudit.broken.length,classificationAccuracy:report.classification.accuracy,accuracySamples:report.classification.reviewedSamples}));
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(error=>{console.error(error);process.exitCode=1});
