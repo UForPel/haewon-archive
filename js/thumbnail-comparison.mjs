@@ -6,7 +6,8 @@ export function compareThumbnailCandidates(items=[], enrichmentResults=[]) {
  for(const item of items){
   const rss=(item.thumbnailCandidates||[]).filter(c=>/^rss|^media:|^enclosure|^rss-description/i.test(String(c.source||'')));
   const metaResult=resultsById.get(String(item.id||''));
-  const persistedMeta=(item.thumbnailMetaCandidates||[]).filter(c=>/^og:image|^twitter:image/i.test(String(c.source||'')));\n  const meta=(persistedMeta.length?persistedMeta:(metaResult?.candidates||[])).filter(c=>/^og:image|^twitter:image/i.test(String(c.source||'')));
+  const persistedMeta=(item.thumbnailMetaCandidates||[]).filter(c=>/^og:image|^twitter:image/i.test(String(c.source||'')));
+  const meta=(persistedMeta.length?persistedMeta:(metaResult?.candidates||[])).filter(c=>/^og:image|^twitter:image/i.test(String(c.source||'')));
   const unique=(list)=>{const seen=new Set();return list.filter(c=>{try{const u=new URL(c.url);if(u.protocol!=='https:')return false;u.hash='';if(seen.has(u.href))return false;seen.add(u.href);return true;}catch{return false;}});};
   const r=unique(rss),m=unique(meta);
   if(!r.length&&!m.length)continue;
