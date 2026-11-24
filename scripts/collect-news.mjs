@@ -153,43 +153,54 @@ export function extractOpenGraphImageCandidates(html='',baseUrl=''){
  return dedupeImageCandidates(candidates,12).map(({url,source,priority})=>({url,source,priority}));
 }
 export function extractOpenGraphImage(html=''){return extractOpenGraphImageCandidates(html)[0]?.url||'';}
-export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs=5000,concurrency=3,offset=0}={}){
- const missing=items.filter(item=>!item.thumbnailUrl&&isPublisherArticleUrl(item.publisherArticleUrl));
+export function shouldRetryThumbnailFetch(meta,now=Date.now()){
+ if(!meta||!meta.status||!meta.fetchedAt)return true;
+ const fetchedAt=Date.parse(meta.fetchedAt),current=typeof now==='string'?Date.parse(now):Number(now);
+ if(!Number.isFinite(fetchedAt)||!Number.isFinite(current))return true;
+ const age=Math.max(0,current-fetchedAt),day=86400000;
+ if(['assigned','found','duplicate-rejected','wrapper-only'].includes(meta.status))return age>=30*day;
+ if(meta.status==='missing')return age>=7*day;
+ if(meta.status==='failed'){
+  if(meta.errorCode==='not-found'||meta.errorCode==='forbidden'||meta.errorCode==='rate-limited')return age>=7*day;
+  return age>=day;
+ }
+ return true;
+}
+export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs=5000,concurrency=3,offset=0,now=new Date().toISOString()}={}){
+ const missing=items.filter(item=>!item.thumbnailUrl&&isPublisherArticleUrl(item.publisherArticleUrl)&&shouldRetryThumbnailFetch(item.thumbnailMetaFetch,now));
  const start=missing.length?Math.abs(Number(offset)||0)%missing.length:0;
  const targets=Array.from({length:Math.min(limit,missing.length)},(_,index)=>missing[(start+index)%missing.length]);
  const results=new Array(targets.length);let cursor=0;
- async function worker(){while(true){const index=cursor++;if(index>=targets.length)return;const item=targets[index],articleUrl=item.publisherArticleUrl;try{
-  const response=await fetchImpl(articleUrl,{method:'GET',redirect:'follow',headers:{'user-agent':'Mozilla/5.0 (compatible; HaewonArchiveBot/0.2; thumbnail metadata)'},signal:AbortSignal.timeout(timeoutMs)});
-  if(!response.ok)throw new Error('HTTP '+response.status);
-  const finalUrl=String(response.url||articleUrl);
-  if(new URL(finalUrl).protocol!=='https:')throw new Error('redirected article URL is not HTTPS');
+ async function worker(){while(true){const index=cursor++;if(index>=targets.length)return;const item=targets[index],articleUrl=item.publisherArticleUrl;let response=null,finalUrl=articleUrl;try{
+  response=await fetchImpl(articleUrl,{method:'GET',redirect:'follow',headers:{'user-agent':'Mozilla/5.0 (compatible; HaewonArchiveBot/0.2; thumbnail metadata)'},signal:AbortSignal.timeout(timeoutMs)});
+  finalUrl=String(response.url||articleUrl);
+  if(!response.ok){const error=new Error('HTTP '+response.status);error.statusCode=response.status;throw error;}
+  if(new URL(finalUrl).protocol!=='https:'){const error=new Error('redirected article URL is not HTTPS');error.errorCode='redirect-non-https';throw error;}
   const parsedUrl=new URL(finalUrl),isGoogleWrapper=isGoogleNewsWrapperUrl(finalUrl);
   const extracted=extractOpenGraphImageCandidates(await response.text(),finalUrl);
   const candidates=isGoogleWrapper?extracted.map(row=>({...row,source:'google-news-wrapper:'+row.source,priority:90})):extracted;
   const candidate=isGoogleWrapper?null:(candidates[0]||null);
-  results[index]={id:item.id,thumbnailUrl:candidate?.url||'',candidate,candidates,status:isGoogleWrapper&&extracted.length?'wrapper-only':candidate?'found':'missing',publisherArticleUrl:articleUrl,sourceUrl:item.sourceUrl||'',resolvedArticleUrl:finalUrl,resolvedArticleHost:parsedUrl.hostname,fetchedAt:new Date().toISOString()};
- }catch(error){results[index]={id:item.id,thumbnailUrl:'',status:'failed',publisherArticleUrl:articleUrl,sourceUrl:item.sourceUrl||'',error:String(error?.message||error)};}}
+  results[index]={id:item.id,thumbnailUrl:candidate?.url||'',candidate,candidates,status:isGoogleWrapper&&extracted.length?'wrapper-only':candidate?'found':'missing',statusCode:response.status||200,errorCode:'',publisherArticleUrl:articleUrl,sourceUrl:item.sourceUrl||'',resolvedArticleUrl:finalUrl,resolvedArticleHost:parsedUrl.hostname,fetchedAt:now};
+ }catch(error){
+  const statusCode=Number(error?.statusCode||response?.status)||null;
+  const errorCode=error?.errorCode||(statusCode===429?'rate-limited':statusCode===403?'forbidden':statusCode===404||statusCode===410?'not-found':statusCode>=500?'server-error':/timeout|abort/i.test(String(error?.name||'')+' '+String(error?.message||''))?'timeout':'network-error');
+  let resolvedArticleHost='';try{resolvedArticleHost=new URL(finalUrl).hostname;}catch{}
+  results[index]={id:item.id,thumbnailUrl:'',status:'failed',statusCode,errorCode,publisherArticleUrl:articleUrl,sourceUrl:item.sourceUrl||'',resolvedArticleUrl:finalUrl,resolvedArticleHost,fetchedAt:now};
+ }}
  }
  await Promise.all(Array.from({length:Math.min(concurrency,targets.length)},worker));
- const byId=new Map(results.filter(r=>r?.thumbnailUrl).map(r=>[r.id,r.thumbnailUrl]));
- // Preserve existing thumbnails; only assign new unique HTTPS URLs.
  const usedUrls=new Set(items.map(item=>{try{const url=new URL(item.thumbnailUrl||'');if(url.protocol==='https:'){url.hash='';return url.href;}}catch{}return ''}).filter(Boolean));
  let assigned=0,duplicateRejected=0;
+ for(const result of results){if(!result?.thumbnailUrl)continue;try{const url=new URL(result.thumbnailUrl);if(url.protocol!=='https:')continue;url.hash='';if(usedUrls.has(url.href)){duplicateRejected++;result.status='duplicate-rejected';result.assigned=false;}else{usedUrls.add(url.href);assigned++;result.status='assigned';result.assigned=true;}}catch{}}
+ const resultById=new Map(results.filter(Boolean).map(row=>[String(row.id),row]));
  const enriched=items.map(item=>{
-  const result=results.find(row=>row?.id===item.id);
-  const metaCandidates=(result?.candidates||[]).slice(0,12);
-  // Persist metadata candidates even when assignment is rejected as a duplicate.
-  const withMeta={...item,thumbnailMetaCandidates:metaCandidates.length?metaCandidates:item.thumbnailMetaCandidates||[],thumbnailMetaFetch:result?{status:result.status,publisherArticleUrl:result.publisherArticleUrl||'',sourceUrl:result.sourceUrl||'',resolvedArticleUrl:result.resolvedArticleUrl||'',resolvedArticleHost:result.resolvedArticleHost||'',fetchedAt:result.fetchedAt||''}:item.thumbnailMetaFetch||null};
-  if(item.thumbnailUrl||!byId.has(item.id))return withMeta;
-  const image=byId.get(item.id),candidate=result?.candidate;
-  try{const url=new URL(image);if(url.protocol!=='https:')return withMeta;url.hash='';const normalized=url.href;
-   if(usedUrls.has(normalized)){duplicateRejected++;if(result)result.status='duplicate-rejected';return withMeta;}
-   usedUrls.add(normalized);assigned++;if(result)result.status='assigned';
-   return {...withMeta,thumbnailUrl:image,thumbnailSource:candidate?.source||'article-meta',thumbnailProvenance:{source:candidate?.source||'article-meta',url:image,articleUrl:result?.resolvedArticleUrl||item.url,observedAt:result?.fetchedAt||new Date().toISOString()}};
-  }catch{return withMeta;}
+  const result=resultById.get(String(item.id||''));if(!result)return item;
+  const metaCandidates=(result.candidates||[]).slice(0,12);
+  const withMeta={...item,thumbnailMetaCandidates:metaCandidates.length?metaCandidates:item.thumbnailMetaCandidates||[],thumbnailMetaFetch:{status:result.status,publisherArticleUrl:result.publisherArticleUrl||'',sourceUrl:result.sourceUrl||'',resolvedArticleUrl:result.resolvedArticleUrl||'',resolvedArticleHost:result.resolvedArticleHost||'',fetchedAt:result.fetchedAt||now,statusCode:result.statusCode??null,errorCode:result.errorCode||''}};
+  if(!result.assigned)return withMeta;
+  return {...withMeta,thumbnailUrl:result.thumbnailUrl,thumbnailSource:result.candidate?.source||'article-meta',thumbnailProvenance:{source:result.candidate?.source||'article-meta',url:result.thumbnailUrl,articleUrl:result.resolvedArticleUrl||item.publisherArticleUrl,observedAt:result.fetchedAt||now}};
  });
- for(const result of results){if(result?.thumbnailUrl)result.assigned=result.status==='assigned';}
- return {items:enriched,attempted:targets.length,found:byId.size,assigned,duplicateRejected,wrapperOnly:results.filter(r=>r?.status==='wrapper-only').length,missing:results.filter(r=>r?.status==='missing').length,failed:results.filter(r=>r?.status==='failed').length,results};
+ return {items:enriched,attempted:targets.length,found:results.filter(r=>r?.candidate).length,assigned,duplicateRejected,wrapperOnly:results.filter(r=>r?.status==='wrapper-only').length,missing:results.filter(r=>r?.status==='missing').length,failed:results.filter(r=>r?.status==='failed').length,results};
 }
 export function canonicalCandidateUrl(value){
  try{

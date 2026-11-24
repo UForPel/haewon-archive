@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { summarizeCollection, auditLinks, summarizeThumbnailUrls, auditThumbnailResponses } from '../scripts/quality-metrics.mjs';
+import { summarizeCollection, auditLinks, summarizeThumbnailUrls, auditThumbnailResponses, summarizeThumbnailEnrichmentByHost } from '../scripts/quality-metrics.mjs';
 test('source coverage and classification metrics are based on candidate data',()=>{
  const report=summarizeCollection({videos:[{id:'v1'}],discovery:[{title:'Haewon official interview',sourceName:'A',url:'https://example.com/a',thumbnailUrl:'https://example.com/t',publishedAt:'2026-11-23'},{title:'Haewon event',sourceName:'A',url:'https://example.com/b'}],newsStatus:{requestedQueries:4,successfulQueries:3,fetched:5,uniqueIncoming:4,added:2,totalCandidates:10},videoStatus:{status:'success'},reviews:[]});
  assert.equal(report.sources[0].source,'A');assert.equal(report.sources[0].items,2);assert.equal(report.sources[0].thumbnailCoverage,50);assert.equal(report.collection.newsQuerySuccessRate,75);assert.equal(report.sourceCollectionStatus[0].successRate,75);assert.equal(report.sourceCollectionStatus[1].successRate,100);assert.equal(report.collection.videosTotal,1);assert.equal(report.collection.duplicateGroupsCurrent,2);assert.equal(report.collection.duplicateItemsCollapsedCurrent,0);assert.equal(report.classification.reviewedSamples,0);assert.equal(report.classification.accuracy,null);assert.equal(report.classification.accuracyLabel,'not measured (no category review labels)');
@@ -54,4 +54,14 @@ test('article URL provenance separates publisher, final, source-site and discove
  assert.equal(report.articleUrlProvenance.discoveryWrapperHosts['www.bing.com'],1);
  assert.equal(report.collection.bingNewsQueriesSuccessful,4);
  assert.equal(report.collection.bingNewsCandidates,1);
+});
+
+test('publisher metadata diagnostics aggregate attempts, outcomes and final hosts by publisher',()=>{
+ const rows=summarizeThumbnailEnrichmentByHost([
+  {publisherHost:'news.example',thumbnailMetaFetch:{status:'assigned',resolvedArticleHost:'cdn.example',fetchedAt:'2026-11-24T00:00:00Z'}},
+  {publisherHost:'news.example',thumbnailMetaFetch:{status:'failed',errorCode:'forbidden',resolvedArticleHost:'news.example'}},
+  {publisherHost:'other.example',thumbnailMetaFetch:{status:'missing',resolvedArticleHost:'other.example'}}
+ ]);
+ assert.equal(rows[0].host,'news.example');assert.equal(rows[0].attempted,2);assert.equal(rows[0].assigned,1);assert.equal(rows[0].failed,1);assert.equal(rows[0].errorCodes.forbidden,1);assert.equal(rows[0].finalHosts['cdn.example'],1);
+ assert.equal(rows[1].missing,1);
 });

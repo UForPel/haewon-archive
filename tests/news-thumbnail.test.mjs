@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { extractRssThumbnail, extractRssThumbnailCandidates, parseRss, canonicalCandidateUrl, mergeCandidates, extractOpenGraphImage, extractOpenGraphImageCandidates, enrichThumbnails } from '../scripts/collect-news.mjs';
+import { extractRssThumbnail, extractRssThumbnailCandidates, parseRss, canonicalCandidateUrl, mergeCandidates, extractOpenGraphImage, extractOpenGraphImageCandidates, enrichThumbnails, shouldRetryThumbnailFetch } from '../scripts/collect-news.mjs';
 
 test('extracts image from media thumbnail metadata',()=>{
  assert.equal(extractRssThumbnail('<media:thumbnail url="https://cdn.example/news.jpg"/>'),'https://cdn.example/news.jpg');
@@ -88,3 +88,23 @@ test('direct HTTPS publisher article link is eligible for metadata fetch',()=>{
  const [item]=parseRss(xml,'query');assert.equal(item.publisherArticleUrl,'https://publisher.example/article/123');assert.equal(item.sourceUrl,'https://publisher.example/');
 });
 
+
+test('metadata retry policy backs off missing, failed and already-found candidates',()=>{
+ const now='2026-11-24T12:00:00.000Z';
+ assert.equal(shouldRetryThumbnailFetch({status:'missing',fetchedAt:'2026-11-23T12:00:00.000Z'},now),false);
+ assert.equal(shouldRetryThumbnailFetch({status:'missing',fetchedAt:'2026-11-10T12:00:00.000Z'},now),true);
+ assert.equal(shouldRetryThumbnailFetch({status:'failed',errorCode:'network-error',fetchedAt:'2026-11-23T00:00:00.000Z'},now),true);
+ assert.equal(shouldRetryThumbnailFetch({status:'failed',errorCode:'forbidden',fetchedAt:'2026-11-23T00:00:00.000Z'},now),false);
+ assert.equal(shouldRetryThumbnailFetch({status:'assigned',fetchedAt:'2026-10-01T00:00:00.000Z'},now),true);
+});
+test('metadata failures retain status code, error class, host and timestamp for diagnosis',async()=>{
+ const now='2026-11-24T12:00:00.000Z';
+ const report=await enrichThumbnails([{id:'blocked',publisherArticleUrl:'https://publisher.example/a',thumbnailUrl:''}],{now,fetchImpl:async()=>({ok:false,status:403,url:'https://publisher.example/a'})});
+ assert.equal(report.failed,1);assert.equal(report.results[0].statusCode,403);assert.equal(report.results[0].errorCode,'forbidden');
+ assert.equal(report.items[0].thumbnailMetaFetch.status,'failed');assert.equal(report.items[0].thumbnailMetaFetch.errorCode,'forbidden');
+ assert.equal(report.items[0].thumbnailMetaFetch.resolvedArticleHost,'publisher.example');assert.equal(report.items[0].thumbnailMetaFetch.fetchedAt,now);
+});
+test('recently checked article metadata is not fetched again before its retry window',async()=>{
+ let calls=0;const report=await enrichThumbnails([{id:'recent',publisherArticleUrl:'https://publisher.example/a',thumbnailUrl:'',thumbnailMetaFetch:{status:'missing',fetchedAt:'2026-11-23T12:00:00.000Z'}}],{now:'2026-11-24T12:00:00.000Z',fetchImpl:async()=>{calls++;throw new Error('must not retry yet');}});
+ assert.equal(calls,0);assert.equal(report.attempted,0);assert.equal(report.items[0].thumbnailMetaFetch.status,'missing');
+});
