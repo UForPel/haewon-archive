@@ -215,7 +215,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "e3abc4c0d0580aee5e64",
@@ -3985,7 +3989,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T06:17:23.155Z"
+      "fetchedAt": "2026-11-24T06:19:06.704Z"
     }
   },
   {
@@ -5895,7 +5899,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T06:17:23.266Z"
+      "fetchedAt": "2026-11-24T06:19:06.780Z"
     }
   },
   {
@@ -6108,12 +6112,12 @@
     "relevanceScore": 4,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": {
-      "status": "failed",
+      "status": "missing",
       "publisherArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
       "sourceUrl": "",
-      "resolvedArticleUrl": "",
-      "resolvedArticleHost": "",
-      "fetchedAt": ""
+      "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
+      "resolvedArticleHost": "www.tvdaily.co.kr",
+      "fetchedAt": "2026-11-24T06:19:07.737Z"
     }
   },
   {
@@ -6227,7 +6231,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T06:17:22.562Z"
+      "fetchedAt": "2026-11-24T06:19:06.400Z"
     }
   },
   {
@@ -6266,7 +6270,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T06:17:22.570Z"
+      "fetchedAt": "2026-11-24T06:19:06.433Z"
     }
   },
   {
@@ -6393,7 +6397,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://osen.co.kr/article/G1112907419",
       "resolvedArticleHost": "osen.co.kr",
-      "fetchedAt": "2026-11-24T06:17:24.007Z"
+      "fetchedAt": "2026-11-24T06:19:07.464Z"
     }
   },
   {
@@ -6742,7 +6746,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://mydaily.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "77db473416096271082d",
@@ -8452,7 +8460,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://m.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "5df9364bd800de08dcb9",
@@ -12239,7 +12251,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%8B%A0%EA%B3%A1-%EA%B8%B4-%EC%86%8C%EC%9B%90-birthday-wish-%EB%A9%9C%EB%A1%A0-%ED%86%B1-100-34%EC%9C%84-%EC%A7%84%EC%9E%85-%ED%86%B1-5-%EB%8B%AC%EC%84%B1/ar-AA2fDrrB",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T06:17:22.660Z"
+      "fetchedAt": "2026-11-24T06:19:06.513Z"
     }
   },
   {
@@ -14703,7 +14715,13 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.sportsworldi.com",
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "855e689ac0ec7455f794",

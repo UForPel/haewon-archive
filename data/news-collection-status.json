@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T06:17:21.466Z",
+  "collectedAt": "2026-11-24T06:19:05.293Z",
   "searchPack": 0,
   "queries": [
     {
       "query": "오해원 NMIXX",
-      "candidates": 56,
-      "uniqueCandidates": 56
+      "candidates": 108,
+      "uniqueCandidates": 108
     },
     {
       "query": "해원 엔믹스",
@@ -15,8 +15,8 @@
     },
     {
       "query": "NMIXX Haewon",
-      "candidates": 112,
-      "uniqueCandidates": 112
+      "candidates": 12,
+      "uniqueCandidates": 12
     },
     {
       "query": "Haewon NMIXX news",
@@ -25,17 +25,22 @@
     }
   ],
   "requestedQueries": 4,
-  "successfulQueries": 4,
+  "successfulQueries": 3,
   "bingSuccessfulQueries": 4,
   "bingCandidates": 41,
   "bingFailedQueries": [],
-  "failedQueries": [],
-  "fetched": 318,
-  "uniqueIncoming": 289,
-  "added": 7,
+  "failedQueries": [
+    {
+      "query": "NMIXX Haewon",
+      "error": "HTTP 429"
+    }
+  ],
+  "fetched": 270,
+  "uniqueIncoming": 259,
+  "added": 4,
   "rssImageSignals": {
-    "items": 277,
-    "sourceUrlItems": 275,
+    "items": 229,
+    "sourceUrlItems": 227,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -54,14 +59,18 @@
     "assigned": 0,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
-    "missing": 6,
-    "failed": 4,
+    "missing": 7,
+    "failed": 3,
     "results": [
       {
         "id": "f60f0f16157da91b9bf1",
-        "status": "failed",
+        "status": "missing",
+        "candidate": null,
+        "candidates": [],
         "publisherArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
-        "sourceUrl": ""
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
+        "resolvedArticleHost": "www.tvdaily.co.kr"
       },
       {
         "id": "d6c5f93f622776e07642",
@@ -144,9 +153,9 @@
     ]
   },
   "deduplicationComparison": {
-    "before": 318,
-    "after": 284,
-    "collapsed": 34,
+    "before": 270,
+    "after": 255,
+    "collapsed": 15,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 658
