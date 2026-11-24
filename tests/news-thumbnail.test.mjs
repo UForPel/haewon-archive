@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { extractRssThumbnail, parseRss, canonicalCandidateUrl, mergeCandidates, extractOpenGraphImage, enrichThumbnails } from '../scripts/collect-news.mjs';
+import { extractRssThumbnail, extractRssThumbnailCandidates, parseRss, canonicalCandidateUrl, mergeCandidates, extractOpenGraphImage, extractOpenGraphImageCandidates, enrichThumbnails } from '../scripts/collect-news.mjs';
 
 test('extracts image from media thumbnail metadata',()=>{
  assert.equal(extractRssThumbnail('<media:thumbnail url="https://cdn.example/news.jpg"/>'),'https://cdn.example/news.jpg');
@@ -50,4 +50,20 @@ test('thumbnail enrichment does not assign one image URL to multiple newly enric
  const items=[{id:'a',url:'https://news.google.com/rss/articles/a',thumbnailUrl:''},{id:'b',url:'https://news.google.com/rss/articles/b',thumbnailUrl:''}];
  const report=await enrichThumbnails(items,{limit:2,fetchImpl:async()=>({ok:true,status:200,text:async()=>'<meta property="og:image" content="https://cdn.example/shared.jpg">'})});
  assert.equal(report.found,2);assert.equal(report.assigned,1);assert.equal(report.duplicateRejected,1);assert.equal(report.items.filter(item=>item.thumbnailUrl).length,1);
+});
+
+
+test('RSS image candidates retain source provenance',()=>{
+ const raw='<media:thumbnail url="https://cdn.example/a.jpg"/><media:content url="https://cdn.example/b.jpg" type="image/jpeg"/><enclosure url="https://cdn.example/c.jpg" type="image/jpeg"/>';
+ const candidates=extractRssThumbnailCandidates(raw,'&lt;img src=&quot;https://cdn.example/d.jpg&quot;&gt;');
+ assert.deepEqual(candidates.map(c=>c.source),['media:thumbnail','media:content','enclosure','rss-description-html']);
+ assert.equal(extractRssThumbnail(raw),'https://cdn.example/a.jpg');
+});
+test('OG and Twitter candidates preserve metadata provenance',()=>{
+ const candidates=extractOpenGraphImageCandidates('<meta property="og:image" content="https://cdn.example/a.jpg"><meta name="twitter:image" content="https://cdn.example/b.jpg">');
+ assert.deepEqual(candidates.map(c=>c.source),['og:image','twitter:image']);
+});
+test('unique enriched thumbnails record source candidate and assignment status',async()=>{
+ const report=await enrichThumbnails([{id:'a',url:'https://news.google.com/rss/articles/a',thumbnailUrl:''}],{fetchImpl:async()=>({ok:true,status:200,text:async()=>'<meta property="og:image" content="https://cdn.example/a.jpg"><meta name="twitter:image" content="https://cdn.example/b.jpg">'})});
+ assert.equal(report.assigned,1);assert.equal(report.items[0].thumbnailSource,'og:image');assert.equal(report.results[0].status,'assigned');assert.equal(report.results[0].candidate.source,'og:image');
 });
