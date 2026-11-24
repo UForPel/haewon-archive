@@ -7378,6 +7378,24 @@
     "candidateSource": ""
   },
   {
+    "id": "5b851d4b7afd00d161f3",
+    "title": "이니스프리, 엔믹스 해원과 ‘레티놀 시카 앰플’ 화보 공개 - 안티에이징뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBiV19EZzJEODc2elo2VjhsYy14RFFjXzFTMEViSWhrcFEwcXJTQURDX0ptWk1rTmJVejZVeDlUYmczRjR2Mk9MUWY0T015Z1E5WG55TURuei0?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://medichacha.co.kr",
+    "publishedAt": "2026-09-22T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFBiV19EZzJEODc2elo2VjhsYy14RFFjXzFTMEViSWhrcFEwcXJTQURDX0ptWk1rTmJVejZVeDlUYmczRjR2Mk9MUWY0T015Z1E5WG55TURuei0?oc=5\" target=\"_blank\">이니스프리, 엔믹스 해원과 ‘레티놀 시카 앰플’ 화보 공개</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">안티에이징뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-24T12:56:36.238Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "edb07199d27444993dff",
     "title": "릴리·해원부터 지우·규진까지…엔믹스, 완전체 넘어 ‘유닛 맛집’ 노린다 - 스포츠동아",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE94UHA1Y01WVzZkYzk3aGU3ZGhwVjBsQWNYQ1V4UUo0WE5kN2R3bEdaWG9UUmhVY0VpSDF1eG1hZVpEYVNxUjlDVVNZVkhYQnJYUWlOOXRQZ21UaEZhT2NSTFBId2J6bGN6aV9JRXV3?oc=5",
@@ -8563,7 +8581,15 @@
     "status": "candidate",
     "relevanceScore": 4,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://m.newsen.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "6a8927dc7570e2cfcfb9",
@@ -13097,7 +13123,13 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-24T12:53:17.551Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "cad08dc0570a9e44a159",
@@ -14357,7 +14389,13 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-24T12:53:17.551Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "310895eea60e5aea58d7",

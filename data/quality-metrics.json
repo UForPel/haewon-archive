@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-24T12:55:05.292Z",
+  "generatedAt": "2026-11-24T12:56:38.947Z",
   "articleUrlProvenance": {
-    "totalItems": 664,
+    "totalItems": 665,
     "itemsWithPublisherArticleUrl": 38,
     "bingNewsItems": 38,
     "candidateSourceCounts": {
@@ -59,7 +59,7 @@
     "sourceSiteHosts": {
       "youtu.be": 100,
       "sports.khan.co.kr": 15,
-      "m.newsen.com": 14,
+      "m.newsen.com": 15,
       "news.nate.com": 14,
       "www.chosun.com": 12,
       "enews.imbc.com": 11,
@@ -122,6 +122,7 @@
       "www.ajunews.com": 1,
       "www.lawissue.co.kr": 1,
       "supple.kr": 1,
+      "medichacha.co.kr": 1,
       "article.topstarnews.net": 1,
       "www.ggilbo.com": 1,
       "www.yonhapnewstv.co.kr": 1,
@@ -145,9 +146,9 @@
     }
   },
   "thumbnailAudit": {
-    "items": 664,
+    "items": 665,
     "withThumbnail": 301,
-    "missing": 363,
+    "missing": 364,
     "uniqueThumbnailUrls": 29,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
@@ -239,23 +240,23 @@
     "newsQueriesRequested": 4,
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
-    "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 41,
+    "bingNewsQueriesSuccessful": 3,
+    "bingNewsCandidates": 30,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 664,
-    "newsUniqueFetched": 244,
-    "newsAddedLastRun": 4,
-    "duplicateBeforeMergeLastRun": 19,
-    "duplicateGroupsCurrent": 664,
+    "newsCandidatesTotal": 665,
+    "newsUniqueFetched": 321,
+    "newsAddedLastRun": 8,
+    "duplicateBeforeMergeLastRun": 37,
+    "duplicateGroupsCurrent": 665,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 263,
-      "after": 240,
-      "collapsed": 23,
+      "before": 358,
+      "after": 316,
+      "collapsed": 42,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -271,7 +272,7 @@
   },
   "thumbnailProvenance": {
     "assignedBySource": {
-      "unknown": 636,
+      "unknown": 637,
       "og:image": 26,
       "twitter:image": 2
     }
@@ -279,10 +280,10 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 626,
-      "withUrl": 626,
+      "items": 627,
+      "withUrl": 627,
       "withThumbnail": 273,
-      "withDate": 626,
+      "withDate": 627,
       "urlCoverage": 100,
       "thumbnailCoverage": 44,
       "dateCoverage": 100
@@ -564,17 +565,17 @@
     {
       "source": "Bing News RSS",
       "requested": 4,
-      "successful": 4,
-      "successRate": 100
+      "successful": 3,
+      "successRate": 75
     }
   ],
   "classification": {
-    "items": 664,
+    "items": 665,
     "categoryCounts": {
       "video": 184,
       "interview": 38,
       "news": 388,
-      "brand": 20,
+      "brand": 21,
       "event": 5,
       "performance": 27,
       "official": 5
@@ -1003,9 +1004,9 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 4,
+    "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 363,
+    "thumbnailMissing": 364,
     "results": [
       {
         "kind": "article",
@@ -1064,8 +1065,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA3OFc2c28yeThjbmduNC1oaWh2VkdSTmpPMTIxWDRXdlVVM1Z4UzhyQUZjNTZLWnNSNnFodmQxM3VzT19DNTZIb09tSTRlSmlWUTZoR0ROdlR2X1Nl?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -1112,8 +1113,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8xRklGMEQ3eGxRTWUwaWhBSEJkeTU3MjVxWk0xUmxHSEV5YkVUNUl4WS13c2tsU3lmT1ozRXJKakc3dWFVenNlZXF2ZWhWSGlUYzlwTkg2cC1lZEJo?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -1148,8 +1149,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE05RDlFY3JYUEtwc1hLaXNLbEE5RVhYMzFUM2tWZ0NUb1ZpRngweTRwcTFYNFBWaWxyX1V2QXJtYi11TkNsMGQ4ZUZScFhwUDc4Y2xFSjJyTlZxRUY5?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -1226,8 +1227,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MMVlCQ2JKOGxjSnpKbnBLOTkxQk1SMU00c21JS2FUakdjX1lLRXBydUdoTjBwaDM5MmRuUncxR0EtWTI1TEQwQmhjYl9PdjctcFEwd19zbXBJV1I0?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2064,7 +2065,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T12:55:05.303Z",
+    "generatedAt": "2026-11-24T12:56:38.956Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
