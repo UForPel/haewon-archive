@@ -67,12 +67,16 @@ if(list&&count){
    }else{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent='미리보기 이미지 없음';thumbnail.append(fallback);}
    card.append(thumbnail);
    const details=document.createElement('div');details.className='photo-card-details';
-   const title=document.createElement('h3');const titleLink=document.createElement('a');titleLink.href=item.url;titleLink.target='_blank';titleLink.rel='noopener noreferrer';titleLink.textContent=item.title;titleLink.className='discovery-title-link';title.append(titleLink);
+   const title=document.createElement('h3');const titleLink=document.createElement('a');titleLink.href=item.publisherArticleUrl||item.url;titleLink.target='_blank';titleLink.rel='noopener noreferrer';titleLink.textContent=item.title;titleLink.className='discovery-title-link';title.append(titleLink);
    const kind=document.createElement('span');kind.className='tag';kind.textContent=categoryOf(item).map(category=>categoryLabels[category]||category).join(' · ');
    const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):'')+' · 발견 후보'+(item.duplicateCount>1?' · 중복 '+item.duplicateCount+'건 / 출처 '+item.sourceCount+'곳':'');
    const note=document.createElement('p');note.className='photo-description';note.textContent=item.description||'검색 결과로 발견된 링크';
    const score=document.createElement('p');score.className='photo-meta';const quality=assessDiscoveryQuality(item);score.textContent='관련성 점수 '+(Number.isFinite(item.relevanceScore)?item.relevanceScore:'미평가')+' · 자료 완성도 '+quality.score+'/100 ('+(quality.tier==='high'?'높음':quality.tier==='medium'?'보통':'낮음')+') · 검토 전 후보';
    details.append(title,kind,meta,score,note);
+   const provenance=document.createElement('p');provenance.className='photo-meta';provenance.textContent=item.publisherArticleUrl?'원문 기사 URL 확인됨':'원문 기사 URL 미확인 · RSS 출처 사이트만 보존';
+   if(/^https:\/\//i.test(String(item.sourceUrl||''))){const sourceLink=document.createElement('a');sourceLink.href=item.sourceUrl;sourceLink.target='_blank';sourceLink.rel='noopener noreferrer';sourceLink.textContent='RSS 출처 사이트 열기';sourceLink.style.marginLeft='8px';provenance.append(sourceLink);}
+   if(item.thumbnailMetaFetch?.resolvedArticleHost){const hostNote=document.createElement('span');hostNote.textContent=' · 메타 응답 호스트 '+item.thumbnailMetaFetch.resolvedArticleHost;provenance.append(hostNote);}
+   details.append(provenance);
    const candidateList=[];for(const candidate of [...(item.thumbnailCandidates||[]),...(item.thumbnailMetaCandidates||[]),...(item.thumbnailUrl?[{url:item.thumbnailUrl,source:item.thumbnailSource||'assigned-thumbnail',priority:0}]:[])]){if(candidate?.url&&!candidateList.some(row=>row.url===candidate.url))candidateList.push(candidate);}
    const reviewSection=document.createElement('section');reviewSection.className='thumbnail-review-section';const reviewHeading=document.createElement('strong');reviewHeading.textContent='이미지 후보 검수 ('+candidateList.length+')';reviewSection.append(reviewHeading);
    if(!candidateList.length){const empty=document.createElement('p');empty.className='photo-meta';empty.textContent='수집된 이미지 후보 없음';reviewSection.append(empty);}
