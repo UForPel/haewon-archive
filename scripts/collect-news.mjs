@@ -106,7 +106,7 @@ export function parseBingNewsRss(xml,query,now=new Date().toISOString()){
   const sourceTag=raw.match(/<(?:news:)?source\b[^>]*>/i)?.[0]||'';
   const sourceName=tag(raw,'news:source')||tag(raw,'source')||'Bing News';
   const sourceUrlCandidate=attr(sourceTag,'url');
-  const sourceUrl=/^https:\\/\\//i.test(sourceUrlCandidate)?sourceUrlCandidate:'';
+  const sourceUrl=sourceUrlCandidate.startsWith('https://')?sourceUrlCandidate:'';
   const dateText=tag(raw,'pubDate'),date=dateText?new Date(dateText):null;
   const publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const host=new URL(articleUrl).hostname.toLowerCase();
