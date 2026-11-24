@@ -191,3 +191,11 @@
 - [x] Per-host candidate and assignment rates are exposed in the UI.
 - [ ] Manually review the repeated 273-record image group and candidate relevance; no human labels exist yet.
 - [ ] Validate real browser/mobile layout, persistence and JSON file transfer.
+
+## Actions #553 checkpoint
+- [x] 126/126 tests; collection, validation, data commit and Pages deploy succeeded.
+- [x] Current baseline refreshed: 664 records, 38 direct HTTPS article URLs, 40 Bing candidates, 301 thumbnails, 29 unique URLs.
+- [x] Retry backoff prevented unnecessary repeat requests in this run (0 due attempts).
+- [ ] Obtain human labels for 369 eligible thumbnail candidates.
+- [ ] Investigate and review the 273-record repeated thumbnail group without automatic deletion.
+- [ ] Real-browser/mobile and JSON/localStorage interaction testing remains open.

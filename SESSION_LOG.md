@@ -884,3 +884,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - The three prior HTTP 403 failures were not re-requested on #552 because the new seven-day forbidden backoff applied. This demonstrates the retry policy is active; it does not prove those publishers will become accessible later.
 - Cumulative historical host diagnostics are now displayed with candidate discovery rate, assignment-after-discovery rate, error classes and final redirect hosts. Do not mistake historical host aggregates for this run's one-item sample.
 - Human review remains 0/369 candidates (0%); image relevance precision remains unmeasured. Browser rendering, mobile appearance, localStorage reload and actual JSON file picker/download round-trip remain unverified.
+## 2026-11-24 — Actions #553 final verification
+- Actions #553 run ID 45397817669 succeeded: 126/126 tests; YouTube and news collection, bounded improvement cycle, quality generation, validation, data commit, Pages artifact upload and deploy all succeeded.
+- UI diagnostic rate display commit: cce994fe0b8deed8d33517332bd25af40bd7a1ea. Automated data commit after #553: 1907407858f6774979a232d0a0751ce906deb88c.
+- Latest data: 664 discovery records; 38 explicit HTTPS publisher article URLs, all from Bing News RSS; 40 Bing candidates; 4/4 Bing queries successful.
+- Latest thumbnail audit: 301/664 have thumbnails; 29 unique thumbnail URLs; the same legacy URL remains assigned to 273 records. Compared with #552, 2 records were added but no new thumbnail was assigned.
+- #553's enrichment sample made 0 new attempts because all eligible targets were still inside their retry windows. This is the intended backoff behavior, not a collection failure.
+- Human review: 369 eligible candidates, 0 reviewed, 0% coverage; precision remains unmeasured.
+- Per-host metrics include historical results. Google News has 12 wrapper-only metadata fetches, which remain excluded from article URL inference. The 273 repeated image records remain preserved for human review.
+- Actions confirms Pages deployment step succeeded. Interactive browser rendering and manual mobile/localStorage/file-picker checks remain unverified; the public page could not be independently rendered by the available text-only web viewer.

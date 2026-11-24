@@ -83,3 +83,8 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Per-publisher metadata rows now display candidate discovery rate and assignment-after-discovery rate in addition to attempt counts, outcomes, error codes and final redirect hosts.
 - Static regression coverage checks that these fields are rendered by the actual discovery page module.
 - Actions #552 passed 125/125 tests and deployed Pages; real browser rendering remains unverified.
+
+## Actions #553
+- Per-publisher diagnostics display candidate discovery and post-discovery assignment rates.
+- Actions #553: 126/126 tests and Pages deployment passed.
+- Latest review baseline: 369 eligible, 0 reviewed. Actual browser interaction remains unverified.

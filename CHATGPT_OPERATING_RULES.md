@@ -131,3 +131,7 @@ For each substantial update include: changed paths; planned vs implemented items
 - Current measured baseline: 662 discovery records; 38 direct HTTPS publisher article URLs; 301 thumbnail-bearing records; 29 distinct thumbnail URLs; 273 repeated uses of one URL; 369 eligible human-review candidates and 0 reviewed.
 - Latest collection sample: one attempt, one unique metadata candidate assigned; prior three forbidden sources were skipped by the retry backoff.
 - Separate cumulative host aggregates from the current run sample; never present historical totals as current-run success.
+
+## Latest verified checkpoint — Actions #553
+- Current data: 664 discovery records, 38 direct HTTPS article URLs, 40 Bing candidates, 301 thumbnail-bearing records, 29 unique image URLs, 273 repeated uses of one URL, 369 eligible review candidates and 0 reviewed.
+- Actions #553 passed 126 tests and Pages deployment. A zero-attempt enrichment cycle means all eligible URLs were inside retry windows; do not report it as a fetch failure.
