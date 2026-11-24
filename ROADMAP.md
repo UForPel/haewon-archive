@@ -316,3 +316,12 @@
 - [ ] Verify this metrics change in Actions and Pages.
 - [ ] Obtain human thumbnail labels; precision remains unmeasured.
 - [ ] Perform real browser/mobile visual and keyboard checks.
+
+
+## 2026-11-25 — Verified article thumbnail metrics closure
+- [x] Merge PR #9 and verify Actions #578: 139/139 tests, collection, validation and Pages deployment successful.
+- [x] Publish source-provenance thumbnail counts for verified publisher and verified Haewon article scopes.
+- [x] Update the default-scope baseline: 49 verified Haewon articles; 39 have provenance-backed thumbnails.
+- [ ] Extend operational run logs to include RSS/news source outcomes alongside YouTube.
+- [ ] Human-review thumbnail relevance and article categorization; do not infer precision from provenance.
+- [ ] Perform real mobile-browser visual QA and interaction checks.

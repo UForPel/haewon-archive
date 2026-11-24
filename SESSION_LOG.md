@@ -1069,7 +1069,7 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Actions #573 then failed on an incorrect NMIXX fixture expectation (expected 3, actual 1). Corrected the fixture expectation in `e0b6424`.
 - Actions #574 passed 138/138 tests; collection, validation, data commit, Pages artifact and deployment succeeded.
 - PR #8 changed the default to explicit verified publisher URLs. Actions #575 exposed an extra test-suite terminator and a stale structural-test phrase; #576 had only the stale phrase remaining. Both were corrected.
-- Actions #577 passed 139/139 tests and all 21 workflow steps, including data validation, data commit, Pages artifact upload and deployment. Artifact size: 424,033 bytes.
+- Actions #577 passed 139/139 tests and all workflow stages, including data validation, data commit, Pages artifact upload and deployment. Artifact size: 424,033 bytes.
 - Run log `data/run-logs/45507383261.json` confirms `github_push`, success and validation. It still records only the YouTube source; RSS/news outcomes are separately in `data/news-collection-status.json`.
 
 ### Latest deployed content baseline (#577 data)
@@ -1084,3 +1084,23 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Show the counts in the collapsed diagnostics so users can distinguish a verified original article from an article with a source-traceable image.
 - Add regression coverage; PR/Actions/Pages validation pending.
 - Browser/mobile visual checks and human relevance/thumbnail labels remain outstanding.
+
+
+## 2026-11-25 — PR #9 and Actions #578 closure
+
+- PR #9 merged as `4e37a7e41a2d4e834f81e283248d7c061dd2f28a`.
+- Actions #578 succeeded with 139 tests passed and 0 failures. All workflow stages, including public YouTube/RSS collection, quality metrics, archive validation, operational log validation, data commit, Pages artifact upload and deployment, completed successfully.
+- Data refresh commit: `373b72bb6e2c5b73faa13e3ab44c210ec4da642f`; Pages artifact size: 425,550 bytes.
+- Latest quality data: 701 total candidates; 515 articles; 186 video candidates; 55 verified publisher article URLs; 49 verified Haewon articles; 43 verified publisher articles with source-provenance thumbnails; 39 verified Haewon articles with source-provenance thumbnails.
+- Thumbnail state: 317 assignments, 384 missing, 273 unverified shared legacy assignments, 42 og:image and 2 twitter:image source-provenance assignments. Overall provenance coverage 14%.
+- Latest run log `data/run-logs/45507837408.json`: trigger `github_push`, status success, validation passed. It still only lists the YouTube source; RSS/news results are recorded in `data/news-collection-status.json`. This gap remains a follow-up.
+- Browser/mobile visual QA, keyboard interactions and human relevance labels remain unverified.
+
+### CI failure transparency
+- #572: duplicate relevance helper declarations; fixed in `c06ff45`.
+- #573: incorrect NMIXX test fixture expectation; fixed in `e0b6424`.
+- #574: 138/138 passed and Pages deployed.
+- #575: extra test terminator and stale structural assertion; #576 retained the stale assertion; fixed in `5e1671d`.
+- #577: 139/139 passed and Pages deployed.
+- #578: 139/139 passed and Pages deployed.
+- The #577 workflow has setup/teardown steps in addition to its core workflow stages; prior wording that said "21 workflow steps" was imprecise. The record is corrected to say all workflow stages succeeded.
