@@ -67,3 +67,9 @@ test('unique enriched thumbnails record source candidate and assignment status',
  const report=await enrichThumbnails([{id:'a',url:'https://news.google.com/rss/articles/a',thumbnailUrl:''}],{fetchImpl:async()=>({ok:true,status:200,text:async()=>'<meta property="og:image" content="https://cdn.example/a.jpg"><meta name="twitter:image" content="https://cdn.example/b.jpg">'})});
  assert.equal(report.assigned,1);assert.equal(report.items[0].thumbnailSource,'og:image');assert.equal(report.results[0].status,'assigned');assert.equal(report.results[0].candidate.source,'og:image');
 });
+
+
+test('RSS candidates and selected thumbnail carry source provenance',()=>{
+ const xml='<rss><channel><item><title>Haewon story</title><link>https://news.example/article</link><media:thumbnail url="https://cdn.example/rss.jpg"/><description><![CDATA[<img src="https://cdn.example/description.jpg">]]></description></item></channel></rss>';
+ const [item]=parseRss(xml,'query','2026-11-24T00:00:00Z');assert.equal(item.thumbnailSource,'media:thumbnail');assert.deepEqual(item.thumbnailCandidates.map(c=>c.source),['media:thumbnail','rss-description-html']);
+});
