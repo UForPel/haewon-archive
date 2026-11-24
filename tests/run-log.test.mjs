@@ -47,7 +47,8 @@ test('skipped collector remains skipped rather than being mislabeled failed', ()
   assert.equal(log.sources[0].errorCode, undefined);
 });
 
-test('manual and external scheduler triggers are preserved', () => {
+test('manual, GitHub push and external scheduler triggers are preserved', () => {
   assert.equal(buildRunLog({ ...base, trigger: 'manual' }).trigger, 'manual');
+  assert.equal(buildRunLog({ ...base, trigger: 'push' }).trigger, 'github_push');
   assert.equal(buildRunLog({ ...base, trigger: 'external_scheduler' }).trigger, 'external_scheduler');
 });
