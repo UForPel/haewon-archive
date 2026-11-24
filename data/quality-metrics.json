@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-24T13:28:51.498Z",
+  "generatedAt": "2026-11-24T13:29:40.871Z",
   "articleUrlProvenance": {
-    "totalItems": 665,
+    "totalItems": 666,
     "itemsWithPublisherArticleUrl": 38,
     "bingNewsItems": 38,
     "candidateSourceCounts": {
@@ -66,8 +66,8 @@
       "www.sedaily.com": 10,
       "mydaily.co.kr": 8,
       "programs.sbs.co.kr": 8,
+      "www.osen.co.kr": 8,
       "www.hankyung.com": 8,
-      "www.osen.co.kr": 7,
       "biz.chosun.com": 7,
       "www.breaknews.com": 7,
       "isplus.com": 6,
@@ -146,9 +146,9 @@
     }
   },
   "thumbnailAudit": {
-    "items": 665,
+    "items": 666,
     "withThumbnail": 301,
-    "missing": 364,
+    "missing": 365,
     "uniqueThumbnailUrls": 29,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
@@ -241,22 +241,22 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 41,
+    "bingNewsCandidates": 40,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 665,
-    "newsUniqueFetched": 193,
-    "newsAddedLastRun": 4,
-    "duplicateBeforeMergeLastRun": 20,
-    "duplicateGroupsCurrent": 665,
+    "newsCandidatesTotal": 666,
+    "newsUniqueFetched": 288,
+    "newsAddedLastRun": 5,
+    "duplicateBeforeMergeLastRun": 26,
+    "duplicateGroupsCurrent": 666,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 213,
-      "after": 189,
-      "collapsed": 24,
+      "before": 314,
+      "after": 284,
+      "collapsed": 30,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -272,7 +272,7 @@
   },
   "thumbnailProvenance": {
     "assignedBySource": {
-      "unknown": 637,
+      "unknown": 638,
       "og:image": 26,
       "twitter:image": 2
     }
@@ -280,12 +280,12 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 627,
-      "withUrl": 627,
+      "items": 628,
+      "withUrl": 628,
       "withThumbnail": 273,
-      "withDate": 627,
+      "withDate": 628,
       "urlCoverage": 100,
-      "thumbnailCoverage": 44,
+      "thumbnailCoverage": 43,
       "dateCoverage": 100
     },
     {
@@ -570,11 +570,11 @@
     }
   ],
   "classification": {
-    "items": 665,
+    "items": 666,
     "categoryCounts": {
       "video": 184,
       "interview": 38,
-      "news": 388,
+      "news": 389,
       "brand": 21,
       "event": 5,
       "performance": 27,
@@ -1006,7 +1006,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 364,
+    "thumbnailMissing": 365,
     "results": [
       {
         "kind": "article",
@@ -2065,7 +2065,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T13:28:51.512Z",
+    "generatedAt": "2026-11-24T13:29:40.888Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
