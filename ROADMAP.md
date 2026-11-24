@@ -199,3 +199,9 @@
 - [ ] Obtain human labels for 369 eligible thumbnail candidates.
 - [ ] Investigate and review the 273-record repeated thumbnail group without automatic deletion.
 - [ ] Real-browser/mobile and JSON/localStorage interaction testing remains open.
+
+## Final checkpoint — Actions #554
+- [x] 126/126 tests and Pages deploy passed.
+- [x] Final metrics refreshed: 664 items, 38 direct HTTPS article URLs, 41 Bing candidates, 301 thumbnails, 29 unique URLs, 273 repeated uses.
+- [ ] Human review 0/369; accuracy remains unmeasured.
+- [ ] Browser/mobile and JSON/localStorage interactions remain unverified.

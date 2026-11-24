@@ -408,3 +408,11 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Human review: 369 eligible candidates, 0 reviewed, 0% coverage; precision remains unmeasured.
 - Per-host metrics include historical results. Google News has 12 wrapper-only metadata fetches, which remain excluded from article URL inference. The 273 repeated image records remain preserved for human review.
 - Actions confirms Pages deployment step succeeded. Interactive browser rendering and manual mobile/localStorage/file-picker checks remain unverified; the public page could not be independently rendered by the available text-only web viewer.
+## 2026-11-24 — Actions #554 final check
+- Actions #554 run ID 45398079496 completed successfully: 126/126 tests, collection, improvement cycle, quality generation, validation, data commit and Pages deployment all passed.
+- Final automated data commit after #554: 0046bb119be9d31b6702c0a80c43228d1752bae8.
+- Final data: 664 discovery items; 38 explicit HTTPS publisher article URLs (38 Bing-origin); 41 Bing candidates; 4/4 Bing queries successful.
+- Final image audit: 301/664 records have thumbnails; 29 unique URLs; dominant legacy URL remains assigned to 273 records.
+- Final review audit: 369 eligible candidate labels, 0 reviewed, 0% coverage; precision is null/unmeasured.
+- Enrichment made 0 attempts in #554 because eligible targets remained within retry windows. This is expected backoff behavior.
+- Browser visual/mobile rendering, localStorage reload and real file-picker/download round-trip remain unverified.
