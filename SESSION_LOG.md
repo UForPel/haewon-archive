@@ -642,3 +642,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Live visual/mobile verification: not completed. Web open of Pages returned an internal/inaccessible result; CI deployment success is not visual proof.
 - Commits in this cycle: provenance collector `e1f7b77e`, regex correction `0cb34a4c`, persistence/status `711b2f0d`, privacy trim `35c03c75`, tests `cc394495` / `0072c5fb`, metrics `17a20daa` / `034b31f5`, dashboard `35fcf11f`, regression `841cc570` / `55acb484`, docs inventory/roadmap `b464b4ef` / `e16080e3`, shape test `482adafc` / `a39c16a8`.
 - Next: investigate RSS media candidates and Google News redirected article HTML without bypassing access restrictions; add per-source/candidate comparison and a safe review mechanism for existing shared URLs; then verify live mobile UI and buttons.
+
+
+## 2026-11-24 — Final provenance cycle verification and fresh data
+- Follow-up workflow #450 completed successfully after a preceding #448 documentation-triggered run failed at Pages deployment; #450 verified tests, collection, quality metrics, validation, operational logs and Pages deployment: https://github.com/UForPel/haewon-archive/actions/runs/45305590376.
+- Fresh run data: 619 candidates; 273 thumbnails; 346 missing; 1 unique URL; dominant image count 273 (44%). Enrichment: 12 attempts, 9 found, 0 assigned, 9 duplicate rejected, 3 failed. The 9 metadata results all repeat the same Google-hosted og:image; assignment guard correctly refuses to reassign that URL. 619 existing records still have unknown provenance.
+- Dashboard and quality metrics now include enrichment outcome and candidate provenance source/host/status. The source count for existing data is unknown: 619; this is honest because provenance predates the new collector fields. RSS and meta candidates are now tagged, but no existing image is retroactively labeled.
+- Pages deployment success verified by #450; public UI visual/mobile check remains unverified because web open failed.
+- Previous code/docs commits in this cycle: e1f7b77e, 0cb34a4c, 711b2f0d, 35c03c75, cc394495, 0072c5fb, 17a20daa, 034b31f5, 35fcf11f, 841cc570, 55acb484, 482adafc, a39c16a8, b464b4ef, e16080e3.
+- Next work: compare RSS media/description candidates with article meta images for the same candidate; inspect redirect behavior only through permitted requests; design non-destructive review/repair for existing shared URLs; verify mobile UI and controls.
