@@ -21,7 +21,7 @@ if(list&&count){
  const importReviews=document.createElement('input');importReviews.type='file';importReviews.accept='application/json,.json';importReviews.hidden=true;importReviews.addEventListener('change',async()=>{const file=importReviews.files?.[0];if(!file)return;try{const parsed=JSON.parse(await file.text());if(!parsed.labels||typeof parsed.labels!=='object')throw new Error('invalid');reviewLabels={...reviewLabels,...parsed.labels};localStorage.setItem(REVIEW_KEY,JSON.stringify(reviewLabels));render();}catch{alert('검수 JSON 파일을 읽지 못했습니다.');}finally{importReviews.value='';}});
  const importButton=document.createElement('button');importButton.type='button';importButton.textContent='검수 라벨 가져오기';importButton.addEventListener('click',()=>importReviews.click());
  reviewTools.append(exportReviews,importButton,importReviews);
- const searchHost=document.querySelector('#discovery-search')?.parentElement;if(searchHost)searchHost.append(reviewTools);
+ search?.insertAdjacentElement('afterend',reviewTools);
  const reviewSummary=document.createElement('p');reviewSummary.className='photo-meta';reviewTools.after(reviewSummary);
  const updateReviewSummary=()=>{const summary=summarizeThumbnailReviews(allItems,reviewLabels);reviewSummary.textContent='기사 썸네일 검수 · '+summary.reviewed+'/'+summary.eligible+'개 후보 검수 ('+summary.reviewCoverage+'%) · 후보 적합률 '+(summary.precision===null?'미측정':summary.precision+'%')+' · 현재 썸네일 정밀도 '+(summary.selectedPrecision===null?'미측정':summary.selectedPrecision+'%')+' ('+summary.selectedReviewed+'/'+summary.selectedEligible+'개) · 판단 보류/권리 확인 '+summary.excluded+' (모델 정확도와 별도)';};
  const PAGE_SIZE=12;
