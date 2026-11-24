@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T04:39:04.940Z",
+  "collectedAt": "2026-11-24T04:39:46.886Z",
   "searchPack": 0,
   "queries": [
     {
       "query": "오해원 NMIXX",
-      "candidates": 47,
-      "uniqueCandidates": 47
+      "candidates": 100,
+      "uniqueCandidates": 100
     },
     {
       "query": "해원 엔믹스",
@@ -20,18 +20,18 @@
     },
     {
       "query": "Haewon NMIXX news",
-      "candidates": 29,
-      "uniqueCandidates": 29
+      "candidates": 10,
+      "uniqueCandidates": 10
     }
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
   "failedQueries": [],
-  "fetched": 227,
-  "uniqueIncoming": 202,
-  "added": 2,
+  "fetched": 261,
+  "uniqueIncoming": 238,
+  "added": 3,
   "rssImageSignals": {
-    "items": 227,
+    "items": 261,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -199,9 +199,9 @@
     ]
   },
   "deduplicationComparison": {
-    "before": 227,
-    "after": 201,
-    "collapsed": 26,
+    "before": 261,
+    "after": 237,
+    "collapsed": 24,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 620
