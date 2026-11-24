@@ -3989,7 +3989,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T06:20:45.809Z"
+      "fetchedAt": "2026-11-24T06:57:55.739Z"
     }
   },
   {
@@ -5899,7 +5899,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T06:20:45.886Z"
+      "fetchedAt": "2026-11-24T06:57:55.755Z"
     }
   },
   {
@@ -6117,7 +6117,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
       "resolvedArticleHost": "www.tvdaily.co.kr",
-      "fetchedAt": "2026-11-24T06:20:46.842Z"
+      "fetchedAt": "2026-11-24T06:57:57.129Z"
     }
   },
   {
@@ -6231,7 +6231,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T06:20:45.160Z"
+      "fetchedAt": "2026-11-24T06:57:55.823Z"
     }
   },
   {
@@ -6270,7 +6270,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T06:20:45.162Z"
+      "fetchedAt": "2026-11-24T06:57:55.890Z"
     }
   },
   {
@@ -6397,7 +6397,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://osen.co.kr/article/G1112907419",
       "resolvedArticleHost": "osen.co.kr",
-      "fetchedAt": "2026-11-24T06:20:46.325Z"
+      "fetchedAt": "2026-11-24T06:57:56.984Z"
     }
   },
   {
@@ -8809,6 +8809,82 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "66b75c4e48e22de59d0e",
+    "title": "엔믹스 해원X설윤, 긍정파워 빛났다…'틈만나면', 화요 예능 1위 '굳건'",
+    "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
+    "publisherArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0535732ce14db2a523ef775a10621c&url=https%3a%2f%2fnews.sbs.co.kr%2fnews%2fendPage.do%3fnews_id%3dN1008412122&c=12006978159588577734&mkt=ko-kr",
+    "publisherHost": "news.sbs.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%ED%95%B4%EC%9B%90%20%EC%97%94%EB%AF%B9%EC%8A%A4&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0535732ce14db2a523ef775a10621c&url=https%3a%2f%2fnews.sbs.co.kr%2fnews%2fendPage.do%3fnews_id%3dN1008412122&c=12006978159588577734&mkt=ko-kr",
+        "articleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
+        "host": "news.sbs.co.kr"
+      }
+    ],
+    "publishedAt": "2026-01-21T01:24:00.000Z",
+    "description": "'틈만 나면,'이 독보적인 화요 예능 강자의 파워를 입증했다. 지난 20일 방송된 SBS '틈만 나면,'은 분당 최고 시청률 4.7%, 2049 시청률 1.5%를 기록하면서 2049 화요 예능 전체 1위를 차지했다.(닐슨 ...",
+    "thumbnailUrl": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_16v9.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "SBS",
+    "discoverySource": "bing-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-24T06:57:54.764Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_16v9.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_1280.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_1v1.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_300.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_141.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_95.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
+      "resolvedArticleHost": "news.sbs.co.kr",
+      "fetchedAt": "2026-11-24T06:57:56.143Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_16v9.jpg",
+      "articleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
+      "observedAt": "2026-11-24T06:57:56.143Z"
+    }
   },
   {
     "id": "2044f6dd67fc401e855d",
@@ -12251,7 +12327,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%8B%A0%EA%B3%A1-%EA%B8%B4-%EC%86%8C%EC%9B%90-birthday-wish-%EB%A9%9C%EB%A1%A0-%ED%86%B1-100-34%EC%9C%84-%EC%A7%84%EC%9E%85-%ED%86%B1-5-%EB%8B%AC%EC%84%B1/ar-AA2fDrrB",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T06:20:45.242Z"
+      "fetchedAt": "2026-11-24T06:57:55.671Z"
     }
   },
   {

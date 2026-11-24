@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-11-24T06:20:48.190Z",
+  "generatedAt": "2026-11-24T06:57:59.391Z",
   "articleUrlProvenance": {
-    "totalItems": 658,
-    "itemsWithPublisherArticleUrl": 36,
-    "bingNewsItems": 36,
+    "totalItems": 659,
+    "itemsWithPublisherArticleUrl": 37,
+    "bingNewsItems": 37,
     "candidateSourceCounts": {
-      "bing-news-rss-explicit-url-param": 40
+      "bing-news-rss-explicit-url-param": 41
     },
     "publisherHosts": {
       "www.msn.com": 5,
       "sports.khan.co.kr": 4,
       "biz.chosun.com": 3,
+      "news.sbs.co.kr": 3,
       "www.sportsseoul.com": 2,
       "www.xportsnews.com": 2,
       "www.soompi.com": 2,
       "en.sportalkorea.com": 2,
       "www.mk.co.kr": 2,
-      "news.sbs.co.kr": 2,
       "www.famtimes.co.kr": 1,
       "www.osen.co.kr": 1,
       "www.bntnews.co.kr": 1,
@@ -47,6 +47,7 @@
       "www.tvdaily.co.kr": 1,
       "osen.co.kr": 1,
       "www.starnewskorea.com": 1,
+      "news.sbs.co.kr": 1,
       "www.etnews.com": 1
     },
     "wrapperOnlyMetadataHosts": {
@@ -137,14 +138,14 @@
       "www.sportsworldi.com": 1
     },
     "discoveryWrapperHosts": {
-      "www.bing.com": 36
+      "www.bing.com": 37
     }
   },
   "thumbnailAudit": {
-    "items": 658,
-    "withThumbnail": 299,
+    "items": 659,
+    "withThumbnail": 300,
     "missing": 359,
-    "uniqueThumbnailUrls": 27,
+    "uniqueThumbnailUrls": 28,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 4,
@@ -182,6 +183,10 @@
         "count": 4
       },
       {
+        "host": "img.sbs.co.kr",
+        "count": 3
+      },
+      {
         "host": "file.sportsseoul.com",
         "count": 2
       },
@@ -199,10 +204,6 @@
       },
       {
         "host": "pimg.mk.co.kr",
-        "count": 2
-      },
-      {
-        "host": "img.sbs.co.kr",
         "count": 2
       },
       {
@@ -240,68 +241,74 @@
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 658,
-    "newsUniqueFetched": 230,
-    "newsAddedLastRun": 6,
-    "duplicateBeforeMergeLastRun": 19,
-    "duplicateGroupsCurrent": 658,
+    "newsCandidatesTotal": 659,
+    "newsUniqueFetched": 195,
+    "newsAddedLastRun": 5,
+    "duplicateBeforeMergeLastRun": 18,
+    "duplicateGroupsCurrent": 659,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 249,
-      "after": 225,
-      "collapsed": 24,
+      "before": 213,
+      "after": 191,
+      "collapsed": 22,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 10,
-      "found": 0,
-      "assigned": 0,
+      "attempted": 11,
+      "found": 1,
+      "assigned": 1,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 7,
       "failed": 3,
       "results": [
         {
-          "id": "f60f0f16157da91b9bf1",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
+          "id": "66b75c4e48e22de59d0e",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_16v9.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_16v9.jpg",
+              "source": "og:image",
+              "priority": 1
+            },
+            {
+              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_1280.jpg",
+              "source": "jsonld:image",
+              "priority": 5
+            },
+            {
+              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_1v1.jpg",
+              "source": "jsonld:image",
+              "priority": 5
+            },
+            {
+              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_300.jpg",
+              "source": "jsonld:thumbnailUrl",
+              "priority": 5
+            },
+            {
+              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_141.jpg",
+              "source": "jsonld:thumbnailUrl",
+              "priority": 5
+            },
+            {
+              "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_95.jpg",
+              "source": "jsonld:thumbnailUrl",
+              "priority": 5
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
           "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
-          "resolvedArticleHost": "www.tvdaily.co.kr"
-        },
-        {
-          "id": "d6c5f93f622776e07642",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "95010dfd95888c029c5b",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "1410c1c68a3a1cfaa0f2",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://osen.co.kr/article/G1112907419",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://osen.co.kr/article/G1112907419",
-          "resolvedArticleHost": "osen.co.kr"
+          "resolvedArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
+          "resolvedArticleHost": "news.sbs.co.kr"
         },
         {
           "id": "e75ec45c6ffcf657d60d",
@@ -350,6 +357,46 @@
           "sourceUrl": "",
           "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
           "resolvedArticleHost": "www.msn.com"
+        },
+        {
+          "id": "f60f0f16157da91b9bf1",
+          "status": "missing",
+          "candidate": null,
+          "candidates": [],
+          "publisherArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
+          "resolvedArticleHost": "www.tvdaily.co.kr"
+        },
+        {
+          "id": "d6c5f93f622776e07642",
+          "status": "missing",
+          "candidate": null,
+          "candidates": [],
+          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
+          "resolvedArticleHost": "www.msn.com"
+        },
+        {
+          "id": "95010dfd95888c029c5b",
+          "status": "missing",
+          "candidate": null,
+          "candidates": [],
+          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
+          "resolvedArticleHost": "www.msn.com"
+        },
+        {
+          "id": "1410c1c68a3a1cfaa0f2",
+          "status": "missing",
+          "candidate": null,
+          "candidates": [],
+          "publisherArticleUrl": "https://osen.co.kr/article/G1112907419",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://osen.co.kr/article/G1112907419",
+          "resolvedArticleHost": "osen.co.kr"
         }
       ]
     }
@@ -357,7 +404,7 @@
   "thumbnailProvenance": {
     "assignedBySource": {
       "unknown": 632,
-      "og:image": 24,
+      "og:image": 25,
       "twitter:image": 2
     }
   },
@@ -374,6 +421,16 @@
     },
     {
       "source": "조선일보",
+      "items": 3,
+      "withUrl": 3,
+      "withThumbnail": 3,
+      "withDate": 3,
+      "urlCoverage": 100,
+      "thumbnailCoverage": 100,
+      "dateCoverage": 100
+    },
+    {
+      "source": "SBS",
       "items": 3,
       "withUrl": 3,
       "withThumbnail": 3,
@@ -450,16 +507,6 @@
       "withDate": 2,
       "urlCoverage": 100,
       "thumbnailCoverage": 50,
-      "dateCoverage": 100
-    },
-    {
-      "source": "SBS",
-      "items": 2,
-      "withUrl": 2,
-      "withThumbnail": 2,
-      "withDate": 2,
-      "urlCoverage": 100,
-      "thumbnailCoverage": 100,
       "dateCoverage": 100
     },
     {
@@ -654,10 +701,10 @@
     }
   ],
   "classification": {
-    "items": 658,
+    "items": 659,
     "categoryCounts": {
       "video": 182,
-      "interview": 36,
+      "interview": 37,
       "news": 387,
       "brand": 20,
       "event": 5,
@@ -671,14 +718,14 @@
     "accuracyLabel": "not measured (no category review labels)"
   },
   "thumbnailReviewMetrics": {
-    "eligible": 362,
+    "eligible": 368,
     "reviewed": 0,
     "reviewCoverage": 0,
     "relevant": 0,
     "unsuitable": 0,
     "excluded": 0,
     "precision": null,
-    "selectedEligible": 299,
+    "selectedEligible": 300,
     "selectedReviewed": 0,
     "selectedPrecision": null,
     "counts": {
@@ -956,28 +1003,28 @@
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 26,
+    "articlesCompared": 27,
     "rssOnly": 0,
-    "metaOnly": 26,
+    "metaOnly": 27,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 26,
-    "metaAssigned": 0,
-    "assignmentRate": 0,
+    "metaFound": 27,
+    "metaAssigned": 1,
+    "assignmentRate": 4,
     "sourceCounts": {
-      "og:image": 24,
-      "jsonld:image": 42,
+      "og:image": 25,
+      "jsonld:image": 44,
       "twitter:image": 3,
-      "jsonld:thumbnailUrl": 8
+      "jsonld:thumbnailUrl": 11
     },
     "hostCounts": [
       {
-        "host": "images.khan.co.kr",
-        "count": 22
+        "host": "img.sbs.co.kr",
+        "count": 25
       },
       {
-        "host": "img.sbs.co.kr",
-        "count": 19
+        "host": "images.khan.co.kr",
+        "count": 22
       },
       {
         "host": "image.xportsnews.com",
@@ -1612,6 +1659,47 @@
         "metaStatus": "not-attempted"
       },
       {
+        "id": "66b75c4e48e22de59d0e",
+        "title": "엔믹스 해원X설윤, 긍정파워 빛났다…'틈만나면', 화요 예능 1위 '굳건'",
+        "articleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008412122",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_16v9.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_1280.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_1v1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_300.jpg",
+            "source": "jsonld:thumbnailUrl",
+            "priority": 5
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_141.jpg",
+            "source": "jsonld:thumbnailUrl",
+            "priority": 5
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_95.jpg",
+            "source": "jsonld:thumbnailUrl",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
         "id": "12d2e1a63a52b149fac7",
         "title": "엔믹스 \"신곡 '노 어바웃 미'로 올해의 노래 등극하고 싶어\" [일문일답]",
         "articleUrl": "https://www.etnews.com/20250317000132",
@@ -1707,7 +1795,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T06:20:48.200Z",
+    "generatedAt": "2026-11-24T06:57:59.402Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
