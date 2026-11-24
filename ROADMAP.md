@@ -103,3 +103,17 @@
 - [ ] Review article-level candidates manually; suitability precision remains unmeasured until labels are entered.
 - [ ] Manually inspect mobile review UI and JSON import/export.
 - [x] Preserve all 273 records in the repeated-URL group; no automatic deletion/replacement.
+
+
+## Explicit publisher URL gating and human review measurement — 2026-11-24
+- [x] Preserve RSS publisher/source site URL independently of article URL.
+- [x] Populate publisherArticleUrl only from explicit HTTPS article link/GUID; never infer article URL from a publisher homepage or decode Google News redirect tokens.
+- [x] Restrict metadata fetching to explicit publisherArticleUrl and preserve final host/provenance.
+- [x] Persist source provenance through candidate merges and show source status on article review cards.
+- [x] Add JSON schema validation and localStorage import/export for article-specific image review labels.
+- [x] Load committed data/thumbnail-reviews.json into quality metrics; report candidate and selected-thumbnail precision separately.
+- [x] Resolve quality metric key collision between thumbnailReview group audit and thumbnailReviewMetrics.
+- [x] Actions #537 green: 112/112 tests and Pages deploy succeeded.
+- [ ] Perform real-browser visual/mobile review and exercise UI controls.
+- [ ] Collect human review labels; no accuracy/precision claim until reviewed samples exist.
+- [ ] Investigate an independent permitted source for direct article URLs, since RSS source URL fields are site-level URLs only.

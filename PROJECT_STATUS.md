@@ -285,3 +285,25 @@ Last updated: 2026-11-20
 - Metadata: 12 attempts, 0 publisher candidates, 0 assignments, 12 wrapper-only; final response host news.google.com for all 12.
 - Historical archive: 620 items, 273 with thumbnails, 347 without; one URL repeated 273 times.
 - Browser-local review labels are not shared across devices; JSON export/import is the current static-site persistence mechanism.
+
+
+## Explicit publisher URL gating, source provenance and review metrics — 2026-11-24
+- [x] Parse and preserve RSS source URL separately from article URL.
+- [x] Only accept a direct HTTPS article link/GUID outside Google wrapper domains as publisherArticleUrl.
+- [x] Fetch article metadata only for explicitly identified publisherArticleUrl; do not fetch Google News wrappers or publisher homepages.
+- [x] Preserve sourceUrl, publisherArticleUrl, final response URL/host, metadata candidate source and priority.
+- [x] Preserve source and metadata provenance across archive merges.
+- [x] Add article-card provenance status and source-site link.
+- [x] Add review JSON schema validation, localStorage persistence, import/export and persistent repository JSON input for metrics.
+- [x] Wire candidate and selected-thumbnail precision into quality metrics without colliding with repeated-image review-group data.
+- [x] Verify Actions #537: 112/112 tests, collection, validation, data commit and Pages deployment succeeded.
+- [ ] Manually inspect deployed mobile UI and click through review/save/import/export in a real browser.
+- [ ] Gather human labels; current eligible=285, reviewed=0, precision=unmeasured.
+- [x] Preserve the legacy 273-record repeated URL group without deletion or replacement.
+
+### Latest measured evidence
+- RSS items=173; sourceUrl items=173; explicit publisherArticleUrl items=0.
+- RSS image signals=0 for Media RSS, image Enclosure, content:encoded and description image tags.
+- Metadata enrichment attempts=0 because no explicit article URLs were present; wrapper URL fetches are not attempted.
+- Archive=620 items; 273 with thumbnails; 347 missing; one URL repeated 273 times.
+- Review metrics=285 eligible article/image candidates; 0 reviewed; 0% coverage; precision=null.

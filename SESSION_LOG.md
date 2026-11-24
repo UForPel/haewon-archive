@@ -771,3 +771,26 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Run #521 also completed successfully with the Google News wrapper quarantine deployed: https://github.com/UForPel/haewon-archive/actions/runs/45327828183
 - Latest verified live data still reports 227 RSS items and zero image-bearing structures; 12 metadata fetches are wrapper-only, all final hosts news.google.com, and none are assigned.
 - Actions #529 completed successfully, including Pages deployment. The later consolidated documentation commit is being verified by #530; its Pages deployment is still in progress at this checkpoint.
+
+
+## 2026-11-24 — Explicit publisher URL gate, source provenance and review metrics
+
+- Confirmed #531 success and current main before changes.
+- Implemented sourceUrl extraction from RSS source url and separate publisherArticleUrl field. A publisher site homepage is not treated as an article URL.
+- Added a strict HTTPS article URL predicate: only direct item link or GUID on non-Google wrapper domains can become publisherArticleUrl. Google News wrapper links are not fetched; redirect tokens are not decoded.
+- Changed metadata enrichment to fetch only explicit publisherArticleUrl. Result records persist sourceUrl, publisherArticleUrl, resolvedArticleUrl, resolvedArticleHost and candidate source.
+- Updated mergeCandidates to preserve URL provenance from fresh RSS items; this fixed loss of source metadata when an existing article was merged with a new RSS result.
+- Actual RSS evidence from #537: 173 items; sourceUrl=173; explicit publisherArticleUrl=0; Media RSS thumbnail/content=0; image enclosure=0; content:encoded image=0; description image=0; image-bearing RSS items=0.
+- Consequently latest metadata enrichment attempted=0, found=0, assigned=0. This is intentional: no explicit publisher article URL was available. Publisher homepages are retained as provenance only.
+- Historical archive remained 620 items, 273 thumbnail assignments, 347 missing; one image URL remains used by 273 articles. No destructive cleanup or automatic replacement.
+- Added article-specific review labels and JSON validation/merge. UI uses localStorage, supports JSON export/import; quality script reads data/thumbnail-reviews.json.
+- Fixed quality metrics key collision: existing thumbnailReview remains repeated-URL audit; new thumbnailReviewMetrics carries eligible/reviewed/coverage/precision fields.
+- Tests: #535 passed 111/111; #536 and #537 passed 112/112, with #537 verifying the article-card source provenance display code. #537 Pages deploy succeeded.
+- #532 and #533 initially failed because legacy tests expected wrapper fetches; adjusted tests to explicit article URLs and corrected response URL fallback. Subsequent runs green.
+- Real browser visual/mobile interaction has not been manually verified. Browser-based testing is the remaining UI validation step.
+
+### Next
+1. Find an independent permitted source of direct article URLs, without decoding Google News wrappers.
+2. Manually verify deployed review cards, localStorage save, JSON export/import in a real browser.
+3. Start human review and measure precision from labeled samples only.
+4. Keep the repeated 273-record URL group intact until human review.
