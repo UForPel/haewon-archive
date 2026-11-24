@@ -794,3 +794,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 2. Manually verify deployed review cards, localStorage save, JSON export/import in a real browser.
 3. Start human review and measure precision from labeled samples only.
 4. Keep the repeated 273-record URL group intact until human review.
+
+
+## 2026-11-24 — Public article URL alternatives and faster human review
+- Rechecked repository main: `b5df8ffc243544637638329e2c31289b1ad5596a`.
+- Rechecked Actions #538: run `45329967108`, push commit `2236088041d812d6e1cb63ac7258888c425b40eb`, all 19 substantive steps including unit tests, collection, metrics, data validation, data commit, Pages artifact and Pages deploy completed successfully. The workflow's data commit advanced main after the run.
+- Google News RSS diagnosis remains 225 feed items, 224 site-level source URLs, zero explicit publisher article URLs, and zero image markup signals.
+- Compared public routes: publisher-owned RSS/Atom direct item links; Bing News RSS explicit `url` destination parameter; Google News RSS wrapper-only; manually visible HTTPS links from public search results. Bing's RSS format is undocumented/best-effort, not a stable API.
+- Implemented Bing News RSS parsing with strict HTTPS destination extraction and provenance fields; no Google token decoding and no redirect request.
+- Added tests and a review UI shortcut with auto-save on label selection. Real browser rendering and actual browser storage/file interactions remain explicitly unverified.
