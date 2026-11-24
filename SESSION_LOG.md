@@ -683,3 +683,17 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 
 ### Next
 - Re-check CI for the accumulated commits; if green, inspect the generated quality metrics and candidate evidence. Then test permitted public redirect samples and consider retaining final publisher URLs only after a privacy/source-access review.
+
+## 2026-11-24 — Recursive improvement continuation: syntax review
+### Starting checks
+- Re-fetched project memory, status, session log, roadmap, operating rules, button inventory, decisions, package scripts, collector, comparison module, quality metrics, dashboard, persistence test and current metrics from main.
+- Repo is public, default branch main. Latest metrics still report 620 candidates, 273 thumbnails, 347 missing, and one URL repeated 273 times. Prior 12 metadata enrichment results were found but none assigned due duplicate URL.
+- Local clone failed with `Could not resolve host: github.com`; Actions page fetch is blocked and available GitHub tool does not expose workflow-run listing.
+### Code review correction
+- Found literal backslash-n sequences embedded in js/thumbnail-comparison.mjs and scripts/quality-metrics.mjs (not actual newlines), a JavaScript syntax-breaking defect.
+- Replaced those sequences with real newlines and fetched both files after updates; each now has zero literal backslash-n sequences. Commits: 843a4900424bd617e81b3da21f3acb7578ef68b0 and b24bd7161462568df91deef28aa745a28b65cc74.
+- Syntax/tests/CI are not claimed passed because local execution could not access the repository.
+### Remaining
+- Confirm CI and Pages once Actions access is available.
+- Add regression coverage for duplicate candidate retention and unique metrics; execute full test suite.
+- Preserve legacy images pending visual review; no automatic replacement/deletion.
