@@ -592,3 +592,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Added metrics: dominant URL count/share and a concentration warning (at least 5 items and at least 20% of candidates). Added tests for 80% concentration warning and balanced small sample; UI warns that visual inspection is required. Commits: 203105ff, 57f4f75e, adc19bb7.
 - CI #402 and #404 both failed deployment: upload artifact named github-pages-1 was finalized, while deploy-pages reported zero artifacts with that name. Workflow reverted to the standard github-pages artifact name; successful redeployment is still pending verification.
 - Local clone/test is unavailable in this environment; verification must come from Actions. This is an audit/triage improvement, not an image-source bug fix.
+
+
+## 2026-11-24 — Button omission prevention
+- User reminded that buttons must not be forgotten and the requirement must persist in GitHub. This feedback is recorded as a project-wide UI rule, not just a conversational note.
+- Created `BUTTONS_AND_ACTIONS.md` listing the current controls, actions and behavior requirements.
+- Added static regression assertions to `tests/index-structure.test.mjs` for primary buttons, import control and both pagination containers.
+- Updated README, CHATGPT_OPERATING_RULES.md, PROJECT_STATUS.md and ROADMAP.md. UI changes must include working controls, accessible labels, state/error feedback, tests and inventory updates.
+- No new product button was added in this pass; existing controls were inventoried and omission prevention was implemented. Live visual/tap testing remains unverified.
+- Test commit `c2bdcbaf`; inventory commit `0e8a68aa`. Latest Actions run after final docs/test commits still needs verification.
