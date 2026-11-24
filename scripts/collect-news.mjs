@@ -138,7 +138,7 @@ export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs
   const result=results.find(row=>row?.id===item.id);
   const metaCandidates=(result?.candidates||[]).slice(0,12);
   // Persist metadata candidates even when assignment is rejected as a duplicate.
-  const withMeta={...item,thumbnailMetaCandidates:metaCandidates.length?metaCandidates:item.thumbnailMetaCandidates||[],thumbnailMetaFetch:result?{status:result.status,resolvedArticleUrl:result.resolvedArticleUrl||'',fetchedAt:result.fetchedAt||''}:item.thumbnailMetaFetch||null};
+  const withMeta={...item,thumbnailMetaCandidates:metaCandidates.length?metaCandidates:item.thumbnailMetaCandidates||[],thumbnailMetaFetch:result?{status:result.status,resolvedArticleUrl:result.resolvedArticleUrl||'',resolvedArticleHost:result.resolvedArticleHost||'',fetchedAt:result.fetchedAt||''}:item.thumbnailMetaFetch||null};
   if(item.thumbnailUrl||!byId.has(item.id))return withMeta;
   const image=byId.get(item.id),candidate=result?.candidate;
   try{const url=new URL(image);if(url.protocol!=='https:')return withMeta;url.hash='';const normalized=url.href;
