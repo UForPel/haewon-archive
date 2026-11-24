@@ -99,7 +99,7 @@
 - [x] Confirm publisher metadata fetches remained on news.google.com; 12/12 returned wrapper-only metadata with the same Google-hosted OG image.
 - [x] Keep wrapper metadata as provenance evidence but exclude it from publisher-image candidate comparison and automatic assignment.
 - [x] Verify run #521 full tests, collection, validation, data commit and Pages deployment.
-- [ ] Verify the latest resolved-host provenance commit in pending Actions #525 and its Pages deployment.
+- [x] Verify the latest resolved-host provenance commit in Actions #525; unit tests and Pages deployment succeeded.
 - [ ] Review article-level candidates manually; suitability precision remains unmeasured until labels are entered.
 - [ ] Manually inspect mobile review UI and JSON import/export.
 - [x] Preserve all 273 records in the repeated-URL group; no automatic deletion/replacement.
