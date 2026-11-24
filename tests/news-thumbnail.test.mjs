@@ -33,7 +33,7 @@ test('extracts safe OpenGraph image metadata',()=>{
 test('enriches bounded missing thumbnails from publisher metadata',async()=>{
  let calls=0;
  const items=[{id:'1',url:'https://news.google.com/rss/articles/a',thumbnailUrl:''},{id:'2',url:'https://news.google.com/rss/articles/b',thumbnailUrl:'https://existing.test/x.jpg'},{id:'3',url:'https://other.test/article',thumbnailUrl:''}];
- const report=await enrichThumbnails(items,{limit:1,fetchImpl:async()=>{calls++;return {ok:true,status:200,text:async()=>'<meta property="og:image" content="https://cdn.example/new.jpg">'}}});
+ const report=await enrichThumbnails(items,{limit:1,fetchImpl:async()=>{calls++;return {ok:true,status:200,url:'https://publisher.example/article',text:async()=>'<meta property="og:image" content="https://cdn.example/new.jpg">'}}});
  assert.equal(calls,1);assert.equal(report.attempted,1);assert.equal(report.found,1);assert.equal(report.items[0].thumbnailUrl,'https://cdn.example/new.jpg');assert.equal(report.items[1].thumbnailUrl,'https://existing.test/x.jpg');assert.equal(report.items[2].thumbnailUrl,'');
 });
 test('thumbnail enrichment keeps candidate on fetch error',async()=>{
@@ -48,7 +48,7 @@ test('collector dedupe aliases canonical URL even when headline keys differ',()=
 
 test('thumbnail enrichment does not assign one image URL to multiple newly enriched candidates',async()=>{
  const items=[{id:'a',url:'https://news.google.com/rss/articles/a',thumbnailUrl:''},{id:'b',url:'https://news.google.com/rss/articles/b',thumbnailUrl:''}];
- const report=await enrichThumbnails(items,{limit:2,fetchImpl:async()=>({ok:true,status:200,text:async()=>'<meta property="og:image" content="https://cdn.example/shared.jpg">'})});
+ const report=await enrichThumbnails(items,{limit:2,fetchImpl:async()=>({ok:true,status:200,url:'https://publisher.example/article',text:async()=>'<meta property="og:image" content="https://cdn.example/shared.jpg">'})});
  assert.equal(report.found,2);assert.equal(report.assigned,1);assert.equal(report.duplicateRejected,1);assert.equal(report.items.filter(item=>item.thumbnailUrl).length,1);
 });
 
@@ -72,4 +72,12 @@ test('unique enriched thumbnails record source candidate and assignment status',
 test('RSS candidates and selected thumbnail carry source provenance',()=>{
  const xml='<rss><channel><item><title>Haewon story</title><link>https://news.example/article</link><media:thumbnail url="https://cdn.example/rss.jpg"/><description><![CDATA[<img src="https://cdn.example/description.jpg">]]></description></item></channel></rss>';
  const [item]=parseRss(xml,'query','2026-11-24T00:00:00Z');assert.equal(item.thumbnailSource,'media:thumbnail');assert.deepEqual(item.thumbnailCandidates.map(c=>c.source),['media:thumbnail','rss-description-html']);
+});
+
+test('Google News wrapper metadata is kept separate and never assigned as publisher image',async()=>{
+ const report=await enrichThumbnails([{id:'wrapper',url:'https://news.google.com/rss/articles/wrapper',thumbnailUrl:''}],{fetchImpl:async()=>({ok:true,status:200,url:'https://news.google.com/rss/articles/wrapper?hl=en-US',text:async()=>'<meta property="og:image" content="https://lh3.googleusercontent.com/generic.jpg">'})});
+ assert.equal(report.wrapperOnly,1);assert.equal(report.found,0);assert.equal(report.assigned,0);
+ assert.equal(report.items[0].thumbnailUrl,'');
+ assert.equal(report.items[0].thumbnailMetaCandidates[0].source,'google-news-wrapper:og:image');
+ assert.equal(report.items[0].thumbnailMetaFetch.resolvedArticleHost,'news.google.com');
 });
