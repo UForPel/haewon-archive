@@ -5652,7 +5652,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-24T12:49:36.961Z",
     "status": "candidate",
-    "relevanceScore": 5
+    "relevanceScore": 5,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "4bacad32927935b069e3",
