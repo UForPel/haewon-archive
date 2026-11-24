@@ -651,3 +651,10 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Pages deployment success verified by #450; public UI visual/mobile check remains unverified because web open failed.
 - Previous code/docs commits in this cycle: e1f7b77e, 0cb34a4c, 711b2f0d, 35c03c75, cc394495, 0072c5fb, 17a20daa, 034b31f5, 35fcf11f, 841cc570, 55acb484, 482adafc, a39c16a8, b464b4ef, e16080e3.
 - Next work: compare RSS media/description candidates with article meta images for the same candidate; inspect redirect behavior only through permitted requests; design non-destructive review/repair for existing shared URLs; verify mobile UI and controls.
+
+
+## 2026-11-24 — Pages artifact metadata race diagnosis and mitigation
+- Repeated deploy-pages failures were investigated from run #454 logs. Upload-pages-artifact completed and emitted artifact ID 14880084615, but deploy-pages queried metadata immediately and received 0 artifacts. The REST artifacts endpoint later showed the same run's artifact (name github-pages, non-expired), confirming a metadata visibility race rather than missing upload.
+- Updated workflow to actions/upload-pages-artifact@v4 (official GitHub Pages workflow guidance) and added a 10-second bounded wait between artifact upload and deployment. Run #455 succeeded end-to-end with the wait step and Pages deploy: https://github.com/UForPel/haewon-archive/actions/runs/45306133839.
+- Latest fresh metrics from #455: 12/12 image metadata URLs found, 0 assigned, 12 duplicate rejected, 0 failed. All 12 were identical Google-hosted OG image URL. Candidate dataset 619; 273 thumbnail entries; 346 missing; unique URL count 1; 44% dominant share. Existing 619 records remain provenance-unknown.
+- Research basis: official GitHub Pages custom workflow guidance https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows recommends upload-pages-artifact v4; current action docs https://github.com/actions/deploy-pages. This does not guarantee all metadata races are eliminated, but #455 verified mitigation.
