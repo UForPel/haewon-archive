@@ -481,3 +481,9 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Additional log defect found in run `45490686021`: GitHub push trigger was normalized to `unknown`. This change maps it to `github_push`, extends the JSON schema and tests it. Run log only identifies the YouTube collector as a source; news-source outcomes remain in `data/news-collection-status.json` and are not conflated with the YouTube record.
 - Browser validation: Pages deployment succeeded, but a real browser session/mobile visual, keyboard, localStorage and file-picker round-trip were not available; a web text fetch of the Pages URL was inaccessible, so do not claim browser verification.
 - Research basis unchanged: RSS 2.0.11 and Media RSS 1.5.1 are format specifications; their optional metadata does not guarantee article/image availability. GitHub Actions/Pages results are authoritative for workflow/deployment status, not UI behavior.
+
+
+## 2026-11-25 — Run-log trigger correction merged; CI pending
+- PR #3 merged as `6e8e527f71be330dd38da169fc1f48153f724b4b`: GitHub push events now map to `github_push`; schema enum and regression test updated.
+- Actions #566 verified the preceding main revision end-to-end (133/133 tests, collection, validation, data commit, 406,791-byte Pages artifact and successful deployment). It predates PR #3, so it does not verify the new trigger test.
+- At this documentation update, no Actions run for PR #3's merge commit is visible in the Actions run list. Treat the trigger fix as merged but not yet CI-verified; do not claim a green run for it.

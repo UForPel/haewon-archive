@@ -130,7 +130,7 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 
 
 ## Operational log clarification — 2026-11-25
-- GitHub push runs are recorded as `github_push` (not `unknown`); schedule and manual dispatch retain separate trigger labels.
+- Implementation maps GitHub push runs to `github_push` (not `unknown`); schedule and manual dispatch retain separate trigger labels. Post-merge Actions verification is pending.
 - The run log currently summarizes the YouTube collector only. News RSS outcomes remain separately available in `data/news-collection-status.json`; do not interpret the single run-log source as the full list of all collection sources.
 - Dashboard metrics distinguish discovery links from explicit publisher article URLs and verified image metadata from unverified legacy assignments and missing thumbnails.
 - Manual browser/mobile behavior remains unverified even when Actions Pages deployment succeeds.

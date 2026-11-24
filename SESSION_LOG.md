@@ -980,3 +980,9 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Additional log defect found in run `45490686021`: GitHub push trigger was normalized to `unknown`. This change maps it to `github_push`, extends the JSON schema and tests it. Run log only identifies the YouTube collector as a source; news-source outcomes remain in `data/news-collection-status.json` and are not conflated with the YouTube record.
 - Browser validation: Pages deployment succeeded, but a real browser session/mobile visual, keyboard, localStorage and file-picker round-trip were not available; a web text fetch of the Pages URL was inaccessible, so do not claim browser verification.
 - Research basis unchanged: RSS 2.0.11 and Media RSS 1.5.1 are format specifications; their optional metadata does not guarantee article/image availability. GitHub Actions/Pages results are authoritative for workflow/deployment status, not UI behavior.
+
+
+## 2026-11-25 — Run-log trigger correction follow-through
+- PR #3 merged: `6e8e527f71be330dd38da169fc1f48153f724b4b`. Corrects `push` => `github_push`, expands the schema enum, adds regression assertion and updates operations docs.
+- This is a follow-up defect discovered by inspecting the generated run-log for #566: workflow event was push but run log said unknown.
+- #566 itself remains verified green end-to-end (133/133, collection, validation, data commit, Pages deploy). It ran before PR #3; the new trigger test still needs a post-merge Actions execution.

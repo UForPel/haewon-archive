@@ -256,7 +256,8 @@
 - [x] Verify YouTube + RSS discovery, improvement cycle, quality generation, archive validation, data commit and Pages deployment in Actions #566.
 - [x] Compare 38/666 (5.7%) -> 53/682 (7.8%) explicit HTTPS publisher URLs; confirm Google News 0/629 and Bing RSS metadata origin for all 53.
 - [x] Compare thumbnails 301/666 -> 312/682; retain 273 unverified legacy repeated assignments; do not auto-delete/replace.
-- [ ] Correct run-log push trigger normalization and schema/test (in current PR).
+- [x] Correct run-log push trigger normalization and schema/test; PR #3 merged.
+- [ ] Verify the push-trigger regression test in a post-PR #3 Actions run.
 - [ ] Expand operational run log to report news source outcomes separately from YouTube collector status.
 - [ ] Review repeated 273-image group per article; collect human labels before estimating precision.
 - [ ] Browser/mobile, keyboard, localStorage and JSON transfer checks remain manual and unverified.
