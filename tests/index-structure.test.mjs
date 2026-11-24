@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+const discoveryView=await readFile(new URL('../js/discovery-view.mjs',import.meta.url),'utf8');
 
 const html=await readFile(new URL('../index.html',import.meta.url),'utf8');
 const voidTags=new Set(['area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr']);
@@ -27,3 +28,6 @@ test('visible primary controls include named button actions and forms',()=>{
  assert.ok(html.includes('id="import-photos"'),'JSON import input must remain available');
  assert.ok(html.includes('id="discovery-pagination"')&&html.includes('id="video-pagination"'),'both result lists must expose pagination controls');
 });
+
+
+test('thumbnail provenance quality dashboard reports found, assigned, rejected and source details',()=>{for(const signal of ['actual 신규 배정','중복 거부','기존 이미지 출처 기록','최근 보강 출처 결과'])assert.ok(discoveryView.includes(signal),'missing dashboard signal '+signal);});
