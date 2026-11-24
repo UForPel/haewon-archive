@@ -183,3 +183,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Each RSS row records its outcome and item count; partial query failures are distinguished from full success and total failure.
 - Overall run status is aggregated across sources. A successful source plus a failed source yields **partial**.
 - Regression tests cover success, partial and mixed outcomes. PR/Actions validation pending.
+
+
+## 2026-11-25 — RSS source logging verified
+- PR #11 and Actions #580 are complete. Each run log now records **NMIXX YouTube**, **Google News RSS**, and **Bing News RSS** separately, including outcome and item count.
+- Verified run #580 recorded YouTube 15, Google News RSS 73, Bing News RSS 32; all succeeded.
+- Overall status is aggregated across sources; mixed success/failure is reported as **partial**.
+- Latest validation: 142/142 tests passed and Pages deployment succeeded.
