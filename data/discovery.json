@@ -101,7 +101,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://youtu.be",
+    "publisherArticleUrl": ""
   },
   {
     "id": "0921b4f7c807a79d354c",
@@ -354,7 +356,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://youtu.be",
+    "publisherArticleUrl": ""
   },
   {
     "id": "b9f0f943b0b91da7b6fa",
@@ -2605,7 +2609,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://programs.sbs.co.kr",
+    "publisherArticleUrl": ""
   },
   {
     "id": "0bb4d201145b231b35a4",
@@ -3926,7 +3932,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://m.ekn.kr",
+    "publisherArticleUrl": ""
   },
   {
     "id": "6fae603aedba6daabab9",
@@ -3964,7 +3972,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://youtu.be",
+    "publisherArticleUrl": ""
   },
   {
     "id": "0d0af19fe9597c2c272f",
@@ -4013,7 +4023,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.elle.co.kr",
+    "publisherArticleUrl": ""
   },
   {
     "id": "88ed33d7fd92eb226475",
@@ -4167,7 +4179,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.koreadaily.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "11140fe983ddde9f2e47",
@@ -6064,7 +6078,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.ggilbo.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "b94466577109a5d521c3",
@@ -6421,7 +6437,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.hankyung.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "9cf55b9b8f60c14ec37c",
@@ -7031,7 +7049,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://m.nocutnews.co.kr",
+    "publisherArticleUrl": ""
   },
   {
     "id": "27f7c3d5530d64ab0e94",
@@ -7065,7 +7085,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://sports.khan.co.kr",
+    "publisherArticleUrl": ""
   },
   {
     "id": "bacb6e570a86d73eb826",
@@ -7099,7 +7121,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://news.jtbc.co.kr",
+    "publisherArticleUrl": ""
   },
   {
     "id": "d7d5dfc21ed396a95861",
@@ -7165,7 +7189,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.fnnews.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "29e4aa508c81f2cae6de",
@@ -7286,7 +7312,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://news.jtbc.co.kr",
+    "publisherArticleUrl": ""
   },
   {
     "id": "6efc8cbc7f6f2c1e8b19",
@@ -7356,7 +7384,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.sedaily.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "e60ba569cec4bc718bf8",
@@ -7374,7 +7404,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.sedaily.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "b70be3a9a496587fee53",
@@ -7392,7 +7424,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.sedaily.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "c284aa3a39f2a6ace027",
@@ -7426,7 +7460,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.sedaily.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "b0ac1c78310692e42c8b",
@@ -7460,7 +7496,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.sedaily.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "aa869338e8a45def8d1d",
@@ -7557,7 +7595,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.newsis.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "2d6b7e490866c493905b",
@@ -7575,7 +7615,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.etnews.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "82b58e7406e2e7b2b392",
@@ -7609,7 +7651,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://m.sedaily.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "dfe5a4552002e96b8fb6",
@@ -7659,7 +7703,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.hankyung.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "6ed9bd9514d3da81ea3d",
@@ -7985,7 +8031,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.hankyung.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "078e0e7f607088c60161",
@@ -8003,7 +8051,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.sedaily.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "b768c3d5581b5257ecd3",
@@ -8181,7 +8231,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.hankyung.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "fbabdfd09af265cfb2b5",
@@ -8283,7 +8335,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.sedaily.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "1dca2488560369f169b0",
@@ -8333,7 +8387,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.hankyung.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "ad6b73255dd911ab5f58",
@@ -8511,7 +8567,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.hankyung.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "de3068502d1886167a60",
@@ -8529,7 +8587,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.hankyung.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "2f0bafd48512477655fb",
@@ -8547,7 +8607,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://m.imbc.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "d1da9e17ee71c2d622af",
@@ -8565,7 +8627,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.hankyung.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "b81292bc0048061b0bc8",
@@ -8615,7 +8679,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.yna.co.kr",
+    "publisherArticleUrl": ""
   },
   {
     "id": "5be6eebf4a5395310d70",
@@ -8633,7 +8699,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.fnnews.com",
+    "publisherArticleUrl": ""
   },
   {
     "id": "60644efe73799b9e95f3",
@@ -9109,7 +9177,9 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.topstarnews.net",
+    "publisherArticleUrl": ""
   },
   {
     "id": "5f90ff405814b411240b",
