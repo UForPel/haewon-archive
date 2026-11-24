@@ -325,3 +325,11 @@
 - [ ] Extend operational run logs to include RSS/news source outcomes alongside YouTube.
 - [ ] Human-review thumbnail relevance and article categorization; do not infer precision from provenance.
 - [ ] Perform real mobile-browser visual QA and interaction checks.
+
+
+## 2026-11-25 — Complete operational source reporting
+- [x] Identify run-log omission: RSS/news source outcomes were not represented in the top-level `sources` array.
+- [x] Add Google News RSS and Bing News RSS outcomes and item counts alongside YouTube.
+- [x] Aggregate overall run status as success/partial/skipped/failed across all sources.
+- [x] Add schema-backed tests for complete, partial and mixed source outcomes.
+- [ ] Verify code in Actions and Pages.
