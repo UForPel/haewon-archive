@@ -52,4 +52,5 @@
 - [x] Add static regression checks for required primary controls.
 - [ ] Add behavior tests for generated pagination/category controls and photo actions.
 - [x] Guard new thumbnail enrichment against assigning the same image URL to multiple records; report assigned vs duplicate-rejected outcomes.
+- [x] Track thumbnail source metadata for RSS and article OG/Twitter candidates; expose enrichment outcome and source provenance in the quality dashboard.
 - [ ] Manually verify mobile tap targets, focus/keyboard and live deployed controls.
