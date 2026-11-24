@@ -3,12 +3,10 @@
 Last updated: 2026-11-24
 
 ## Current status — thumbnail provenance
-- Implemented: RSS image candidate source tracking (`media:thumbnail`, `media:content`, `enclosure`, description HTML) and article metadata candidates (`og:image`, `twitter:image`); records/status preserve source and candidate URLs.
-- Dashboard: thumbnail enrichment counts (found/assigned/rejected/missing/failed), source counts for stored records, and recent candidate source/host outcomes.
-- Latest CI #447 passed tests, collection, validation and Pages deployment. Live visual/mobile inspection not confirmed.
-- Latest run: 12 metadata candidates found; 0 assigned, 12 rejected as duplicates; existing 619 candidates still have unknown thumbnail provenance. This prevents coverage inflation and confirms upstream metadata is repeating one image.
-- Next: compare RSS candidate sources against OG/Twitter candidates and diagnose Google News redirect/article resolution; do not delete existing thumbnails until provenance review.
-Status: archive video/photo record JSON Schema enforcement implemented; Gemini automation is NOT implemented.
+- Collector tracks RSS image candidate sources and article OG/Twitter image source, with bounded HTTPS candidate lists. New records carry provenance when an image is assigned; quality dashboard reports enrichment outcomes and recent source/host/status.
+- CI #450 passed unit tests, collection, validation, operational logging and Pages deployment. Live visual/mobile inspection remains unconfirmed.
+- Latest run metrics: 12 attempts; 9 metadata URLs found; 0 assigned; 9 duplicates rejected; 3 failed. Legacy data has 619 candidates, 273 thumbnails, 346 missing, and 273 sharing one exact URL (44% concentration). All 619 legacy records still have unknown source.
+- Next: inspect RSS media candidates vs article metadata/redirect provenance, improve source comparison and cautiously audit legacy repeated URLs; do not delete existing thumbnails without evidence.
 
 ## Purpose
 First-read handoff document for every new ChatGPT conversation about this repository. Read it before proposing or changing project work, then follow links to detailed documents.
