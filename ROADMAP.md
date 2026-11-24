@@ -67,3 +67,6 @@
 - [ ] Run full test suite and CI/Pages; repair failures.
 - [ ] Inspect mobile layout, focus/tap-target and deployed dashboard behavior.
 - [ ] Data limitation: historical records lack RSS candidate metadata, so current RSS-vs-meta comparison is not yet representative; new collection runs should accumulate comparable candidates.
+
+- [x] Fix escaped-newline syntax issue discovered during code review in comparison/metrics modules; fetched source confirms no literal escape sequences remain.
+- [ ] Execute tests and inspect generated comparison metrics in CI; unverified due network/Actions visibility.
