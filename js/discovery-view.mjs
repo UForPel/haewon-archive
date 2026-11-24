@@ -1,10 +1,10 @@
-import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality } from './discovery-kind.mjs';
+import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText } from './discovery-kind.mjs';
 import { createThumbnailReviewKey, summarizeThumbnailReviews, validateThumbnailReviewExport, mergeThumbnailReviewLabels, getThumbnailReviewCandidates, findNextUnreviewedThumbnail, groupRepeatedThumbnailAssignments, summarizeRepeatedThumbnailGroup, findNextUnreviewedInRepeatedGroup } from './thumbnail-review.mjs';
 
 export function filterDiscoveryItems(items,query='') {
  const q=String(query||'').trim().toLowerCase();
  if(!q)return items;
- return items.filter(item=>[item.title,item.description,item.sourceName,item.query].some(value=>String(value||'').toLowerCase().includes(q)));
+ return items.filter(item=>[item.title,cleanDiscoveryText(item.description),item.sourceName,item.query].some(value=>String(value||'').toLowerCase().includes(q)));
 }
 const list=typeof document!=='undefined'?document.querySelector('#discovery-list'):null;
 const count=typeof document!=='undefined'?document.querySelector('#discovery-count'):null;
@@ -100,12 +100,16 @@ if(list&&count){
   pagination.append(prev,label,next);
  };
  const categoryBar=document.querySelector('#discovery-categories');
+ const relevanceBar=document.querySelector('#discovery-relevance');
+ let selectedRelevance='haewon';
+ let unverifiedRepeatedThumbnailUrls=new Set();
+ const relevanceLabels={haewon:'해원 직접 관련',nmixx:'NMIXX 관련',all:'전체 기사 후보'};
  let selectedCategory='all';
  const categoryOf=classifyDiscoveryCategories;
- const categoryLabels={all:'전체',news:'뉴스',video:'영상',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
+ const categoryLabels={all:'전체 분류',news:'일반 뉴스',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
  const getVisibleItems=()=>{
   const q=search?.value||'';
-  return groupDiscoveryDuplicates(filterDiscoveryItems(allItems,q)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
+  return groupDiscoveryDuplicates(filterDiscoveryRelevance(filterDiscoveryItems(filterArticleCandidates(allItems),q),selectedRelevance)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
  };
  const renderCategories=()=>{
   if(!categoryBar)return;
@@ -117,24 +121,35 @@ if(list&&count){
    categoryBar.append(button);
   });
  };
+ const renderRelevanceFilters=()=>{
+  if(!relevanceBar)return;
+  relevanceBar.replaceChildren();
+  Object.entries(relevanceLabels).forEach(([key,label])=>{
+   const button=document.createElement('button');button.type='button';button.textContent=label;button.className=selectedRelevance===key?'active':'';
+   button.setAttribute('aria-pressed',String(selectedRelevance===key));
+   button.addEventListener('click',()=>{selectedRelevance=key;page=1;renderRelevanceFilters();render();});
+   relevanceBar.append(button);
+  });
+ };
  const render=()=>{
   const items=getVisibleItems();
   const pageCount=Math.max(1,Math.ceil(items.length/PAGE_SIZE));
   page=Math.min(page,pageCount);
-  count.textContent=items.length+'개 그룹'+(String(search?.value||'').trim()?' / 검색 결과':'')+' · '+categoryLabels[selectedCategory];
+  count.textContent=items.length+'개 기사'+(String(search?.value||'').trim()?' / 검색 결과':'')+' · '+relevanceLabels[selectedRelevance]+' · '+categoryLabels[selectedCategory];
   list.replaceChildren();
   items.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE).forEach(item=>{
    const card=document.createElement('article');card.className='photo-card discovery-card';
    const thumbnail=document.createElement('div');thumbnail.className='discovery-thumbnail-wrap';
-   if(/^https:\/\//i.test(String(item.thumbnailUrl||''))){
-    const image=document.createElement('img');image.className='discovery-thumbnail';image.src=item.thumbnailUrl;image.alt='기사 또는 영상 미리보기';image.loading='lazy';image.onerror=()=>{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent='미리보기 이미지 없음';image.replaceWith(fallback);};thumbnail.append(image);
-   }else{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent='미리보기 이미지 없음';thumbnail.append(fallback);}
+   const legacySharedImage=String(item.thumbnailUrl||'')&&unverifiedRepeatedThumbnailUrls.has(item.thumbnailUrl)&&!item.thumbnailSource&&!item.thumbnailMetaFetch&&!item.publisherArticleUrl;
+   if(/^https:\/\//i.test(String(item.thumbnailUrl||''))&&!legacySharedImage){
+    const image=document.createElement('img');image.className='discovery-thumbnail';image.src=item.thumbnailUrl;image.alt='기사 또는 영상 미리보기';image.loading='lazy';image.onerror=()=>{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent='이미지 불러오기 실패';image.replaceWith(fallback);};thumbnail.append(image);
+   }else{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent=legacySharedImage?'기사별 이미지 확인 전':'이미지 미확인';thumbnail.append(fallback);}
    card.append(thumbnail);
    const details=document.createElement('div');details.className='photo-card-details';
    const title=document.createElement('h3');const titleLink=document.createElement('a');titleLink.href=item.publisherArticleUrl||item.url;titleLink.target='_blank';titleLink.rel='noopener noreferrer';titleLink.textContent=item.title;titleLink.className='discovery-title-link';title.append(titleLink);
    const kind=document.createElement('span');kind.className='tag';kind.textContent=categoryOf(item).map(category=>categoryLabels[category]||category).join(' · ');
    const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):'')+' · '+(item.publisherArticleUrl?'원문 확인':'발견 후보');
-   const note=document.createElement('p');note.className='photo-description';note.textContent=item.description||'';
+   const note=document.createElement('p');note.className='photo-description';note.textContent=cleanDiscoveryText(item.description);
    details.append(title,kind,meta);
    if(note.textContent)details.append(note);
    const candidateList=getThumbnailReviewCandidates(item);
@@ -164,9 +179,14 @@ if(list&&count){
    reviewQueueStatus.textContent='미검수 후보 '+(next.itemIndex+1)+'번째 항목으로 이동했습니다. 라벨을 선택하면 자동 저장됩니다.';
   });
  });
+ renderCategories();
+ renderRelevanceFilters();
  if(search)search.addEventListener('input',()=>{page=1;render();});
  fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
   allItems=Array.isArray(items)?items:[];
+  const imageGroups=new Map();
+  for(const item of allItems){const url=String(item.thumbnailUrl||'');if(url)imageGroups.set(url,(imageGroups.get(url)||0)+1);}
+  unverifiedRepeatedThumbnailUrls=new Set([...imageGroups].filter(([url,n])=>n>=10&&allItems.filter(item=>item.thumbnailUrl===url).every(item=>!item.thumbnailSource&&!item.thumbnailMetaFetch&&!item.publisherArticleUrl)).map(([url])=>url));
   render();
  }).catch(()=>{count.textContent='불러오기 실패';const empty=document.createElement('p');empty.className='empty';empty.textContent='자동 발견 자료를 불러오지 못했습니다.';list.replaceChildren(empty);});
 }
