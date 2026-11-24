@@ -1,20 +1,22 @@
 {
-  "generatedAt": "2026-11-24T23:05:15.303Z",
+  "generatedAt": "2026-11-24T23:09:17.620Z",
   "discoveryRelevance": {
-    "totalCandidates": 699,
-    "articleCandidates": 514,
-    "videoCandidates": 185,
-    "haewonTitleMatches": 426,
+    "totalCandidates": 701,
+    "articleCandidates": 515,
+    "videoCandidates": 186,
+    "verifiedPublisherArticles": 55,
+    "verifiedHaewonArticles": 49,
+    "haewonTitleMatches": 427,
     "nmixxTitleMatches": 440,
     "otherArticleCandidates": 29,
-    "defaultScope": "haewon-title-match"
+    "defaultScope": "verified-haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 699,
-    "itemsWithPublisherArticleUrl": 55,
-    "bingNewsItems": 55,
+    "totalItems": 701,
+    "itemsWithPublisherArticleUrl": 56,
+    "bingNewsItems": 56,
     "candidateSourceCounts": {
-      "bing-news-rss-explicit-url-param": 59
+      "bing-news-rss-explicit-url-param": 60
     },
     "publisherHosts": {
       "sports.khan.co.kr": 5,
@@ -23,13 +25,13 @@
       "www.mk.co.kr": 4,
       "www.soompi.com": 3,
       "news.sbs.co.kr": 3,
+      "mydaily.co.kr": 2,
       "www.sportsseoul.com": 2,
       "www.xportsnews.com": 2,
       "x.com": 2,
       "en.sportalkorea.com": 2,
       "www.koreaboo.com": 2,
       "www.famtimes.co.kr": 1,
-      "mydaily.co.kr": 1,
       "www.osen.co.kr": 1,
       "www.bntnews.co.kr": 1,
       "www.hankooki.com": 1,
@@ -55,6 +57,7 @@
       "www.msn.com": 5,
       "www.mk.co.kr": 4,
       "www.soompi.com": 3,
+      "www.mydaily.co.kr": 2,
       "www.sportsseoul.com": 2,
       "www.xportsnews.com": 2,
       "x.com": 2,
@@ -62,7 +65,6 @@
       "www.koreaboo.com": 2,
       "sbsstar.net": 2,
       "www.famtimes.co.kr": 1,
-      "www.mydaily.co.kr": 1,
       "www.bntnews.co.kr": 1,
       "www.hankooki.com": 1,
       "www.wikitree.co.kr": 1,
@@ -86,7 +88,7 @@
       "news.google.com": 12
     },
     "sourceSiteHosts": {
-      "youtu.be": 102,
+      "youtu.be": 103,
       "m.newsen.com": 16,
       "sports.khan.co.kr": 15,
       "news.nate.com": 14,
@@ -182,25 +184,25 @@
       "news.sbs.co.kr": 1
     },
     "discoveryWrapperHosts": {
-      "www.bing.com": 55
+      "www.bing.com": 56
     }
   },
   "thumbnailProvenance": {
-    "assignedTotal": 316,
+    "assignedTotal": 317,
     "assignedBySource": {
       "unverified-legacy": 273,
-      "og:image": 41,
+      "og:image": 42,
       "twitter:image": 2
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 383,
+    "missingThumbnailCount": 384,
     "sourceProvenanceCoverage": 14
   },
   "thumbnailAudit": {
-    "items": 699,
-    "withThumbnail": 316,
-    "missing": 383,
-    "uniqueThumbnailUrls": 44,
+    "items": 701,
+    "withThumbnail": 317,
+    "missing": 384,
+    "uniqueThumbnailUrls": 45,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 6,
@@ -274,6 +276,10 @@
         "count": 1
       },
       {
+        "host": "mydaily.co.kr",
+        "count": 1
+      },
+      {
         "host": "cdn.hankooki.com",
         "count": 1
       },
@@ -324,43 +330,80 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 30,
+    "bingNewsCandidates": 31,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 699,
-    "newsUniqueFetched": 77,
-    "newsAddedLastRun": 1,
+    "newsCandidatesTotal": 701,
+    "newsUniqueFetched": 78,
+    "newsAddedLastRun": 4,
     "duplicateBeforeMergeLastRun": 8,
-    "duplicateGroupsCurrent": 699,
+    "duplicateGroupsCurrent": 701,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 85,
-      "after": 76,
+      "before": 86,
+      "after": 77,
       "collapsed": 9,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 0,
-      "found": 0,
-      "assigned": 0,
+      "attempted": 1,
+      "found": 1,
+      "assigned": 1,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
       "failed": 0,
-      "results": []
+      "results": [
+        {
+          "id": "d103d78ba96bc58b409f",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+              "source": "og:image",
+              "priority": 1
+            },
+            {
+              "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_s.jpg",
+              "source": "jsonld:image",
+              "priority": 5
+            },
+            {
+              "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_m.jpg",
+              "source": "jsonld:image",
+              "priority": 5
+            },
+            {
+              "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+              "source": "jsonld:image",
+              "priority": 5
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://mydaily.co.kr/page/view/2024092818150000890",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.mydaily.co.kr/page/view/2024092818150000890",
+          "resolvedArticleHost": "www.mydaily.co.kr"
+        }
+      ]
     }
   },
   "sources": [
     {
       "source": "Google News",
-      "items": 644,
-      "withUrl": 644,
+      "items": 645,
+      "withUrl": 645,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 644,
+      "withDate": 645,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
       "thumbnailCoverage": 42,
@@ -421,6 +464,18 @@
       "withPublisherArticleUrl": 3,
       "withThumbnail": 3,
       "withDate": 3,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 100,
+      "dateCoverage": 100
+    },
+    {
+      "source": "마이데일리",
+      "items": 2,
+      "withUrl": 2,
+      "withPublisherArticleUrl": 2,
+      "withThumbnail": 2,
+      "withDate": 2,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 100,
       "thumbnailCoverage": 100,
@@ -520,18 +575,6 @@
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 100,
       "thumbnailCoverage": 0,
-      "dateCoverage": 100
-    },
-    {
-      "source": "마이데일리",
-      "items": 1,
-      "withUrl": 1,
-      "withPublisherArticleUrl": 1,
-      "withThumbnail": 1,
-      "withDate": 1,
-      "urlCoverage": 100,
-      "publisherArticleUrlCoverage": 100,
-      "thumbnailCoverage": 100,
       "dateCoverage": 100
     },
     {
@@ -820,10 +863,10 @@
     }
   ],
   "classification": {
-    "items": 699,
+    "items": 701,
     "categoryCounts": {
-      "video": 185,
-      "interview": 43,
+      "video": 186,
+      "interview": 44,
       "news": 412,
       "brand": 21,
       "event": 5,
@@ -837,14 +880,14 @@
     "accuracyLabel": "not measured (no category review labels)"
   },
   "thumbnailReviewMetrics": {
-    "eligible": 405,
+    "eligible": 409,
     "reviewed": 0,
     "reviewCoverage": 0,
     "relevant": 0,
     "unsuitable": 0,
     "excluded": 0,
     "precision": null,
-    "selectedEligible": 316,
+    "selectedEligible": 317,
     "selectedReviewed": 0,
     "selectedPrecision": null,
     "counts": {
@@ -1005,6 +1048,23 @@
       "assignmentRate": 100
     },
     {
+      "host": "mydaily.co.kr",
+      "attempted": 2,
+      "assigned": 2,
+      "found": 2,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.mydaily.co.kr": 2
+      },
+      "successRate": 100,
+      "candidateRate": 100,
+      "assignmentRate": 100
+    },
+    {
       "host": "www.koreaboo.com",
       "attempted": 2,
       "assigned": 2,
@@ -1103,23 +1163,6 @@
       "errorCodes": {},
       "finalHosts": {
         "en.koreadaily.com": 1
-      },
-      "successRate": 100,
-      "candidateRate": 100,
-      "assignmentRate": 100
-    },
-    {
-      "host": "mydaily.co.kr",
-      "attempted": 1,
-      "assigned": 1,
-      "found": 1,
-      "missing": 0,
-      "failed": 0,
-      "wrapperOnly": 0,
-      "duplicateRejected": 0,
-      "errorCodes": {},
-      "finalHosts": {
-        "www.mydaily.co.kr": 1
       },
       "successRate": 100,
       "candidateRate": 100,
@@ -1428,9 +1471,9 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
-    "unreachable": 2,
-    "thumbnailMissing": 383,
+    "rateLimited": 3,
+    "unreachable": 1,
+    "thumbnailMissing": 384,
     "results": [
       {
         "kind": "article",
@@ -1471,8 +1514,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkU0R3WDVXZGx2eTFNYXV3QUdwX3pCaHFVcExyeExLSkNVSGx5RGF3cU04QnRJb2hIS1QzVmF0VXBxQkI3YTkxNDJaZGhZT0t4dDB4OGhSTkpRcG11?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -1609,8 +1652,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkQlMzX2loLTJLQldySXdGZVc3bGNLUFB1SklXLXRrM3Y0Qk5ZUjZ2NEkwYUo2ajRRR0R4MUY3akQySC0yS3BCLVBhZ2ZGNDZ0OThZMkpzd0Vzd0I1?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -1651,9 +1694,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MMVlCQ2JKOGxjSnpKbnBLOTkxQk1SMU00c21JS2FUakdjX1lLRXBydUdoTjBwaDM5MmRuUncxR0EtWTI1TEQwQmhjYl9PdjctcFEwd19zbXBJV1I0?oc=5",
-        "status": null,
-        "ok": false,
-        "error": "fetch failed"
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -1676,23 +1718,23 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB6QlB2OUFQYjk5cm1wY253WnlZbjZodVZoaElqZk9IamZiNUw1TmM2QU9pM1lJekxZT3Mzamw2ZzA3OTlRV2Q4UFY3Z3ZkcUNvbndCYm0wMkdQSkFY?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       }
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 43,
+    "articlesCompared": 44,
     "rssOnly": 0,
-    "metaOnly": 43,
+    "metaOnly": 44,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 43,
-    "metaAssigned": 0,
-    "assignmentRate": 0,
+    "metaFound": 44,
+    "metaAssigned": 1,
+    "assignmentRate": 2,
     "sourceCounts": {
-      "og:image": 41,
-      "jsonld:image": 56,
+      "og:image": 42,
+      "jsonld:image": 59,
       "twitter:image": 6,
       "jsonld:thumbnailUrl": 15,
       "og:image:secure_url": 2
@@ -1715,6 +1757,10 @@
         "count": 8
       },
       {
+        "host": "img.mydaily.co.kr",
+        "count": 7
+      },
+      {
         "host": "biz.chosun.com",
         "count": 6
       },
@@ -1725,10 +1771,6 @@
       {
         "host": "image.koreaboo.com",
         "count": 6
-      },
-      {
-        "host": "img.mydaily.co.kr",
-        "count": 4
       },
       {
         "host": "image.starnewskorea.com",
@@ -1765,6 +1807,10 @@
       {
         "host": "cdns.klimg.com",
         "count": 2
+      },
+      {
+        "host": "mydaily.co.kr",
+        "count": 1
       },
       {
         "host": "en.koreadaily.com",
@@ -1973,6 +2019,37 @@
         "sharedUrls": [],
         "assigned": false,
         "metaStatus": "not-attempted"
+      },
+      {
+        "id": "d103d78ba96bc58b409f",
+        "title": "오해원, 대체 못하는 게 뭐야? 그림 실력 '체크!' [런닝맨]",
+        "articleUrl": "https://mydaily.co.kr/page/view/2024092818150000890",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_s.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_m.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
       },
       {
         "id": "b37a5009be7372f08cbb",
@@ -2868,7 +2945,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T23:05:15.319Z",
+    "generatedAt": "2026-11-24T23:09:17.639Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -4866,6 +4943,13 @@
         "isImage": true
       },
       {
+        "url": "https://mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+        "status": 200,
+        "contentType": "image/jpeg",
+        "ok": true,
+        "isImage": true
+      },
+      {
         "url": "https://biz.chosun.com/resizer/v2/43WAK6KFC2DFV32XD5GOANDL5Q.jpg?auth=02dcafb5dd87372fb50c0c6643c883b16296ddbb77f24fc543cdbaf52cb755f2&width=572&height=300&smart=true",
         "status": 200,
         "contentType": "image/jpeg",
@@ -4881,13 +4965,6 @@
       },
       {
         "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/202303231117381775.jpg",
-        "status": 200,
-        "contentType": "image/jpeg",
-        "ok": true,
-        "isImage": true
-      },
-      {
-        "url": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg",
         "status": 200,
         "contentType": "image/jpeg",
         "ok": true,

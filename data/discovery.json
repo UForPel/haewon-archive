@@ -2766,6 +2766,74 @@
     "candidateSource": ""
   },
   {
+    "id": "d103d78ba96bc58b409f",
+    "title": "오해원, 대체 못하는 게 뭐야? 그림 실력 '체크!' [런닝맨]",
+    "url": "https://mydaily.co.kr/page/view/2024092818150000890",
+    "publisherArticleUrl": "https://mydaily.co.kr/page/view/2024092818150000890",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b06191ab35541459c26bdbea31c3eab&url=https%3a%2f%2fmydaily.co.kr%2fpage%2fview%2f2024092818150000890&c=13271026606608838964&mkt=ko-kr",
+    "publisherHost": "mydaily.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%98%A4%ED%95%B4%EC%9B%90%20%EC%9D%B8%ED%84%B0%EB%B7%B0&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b06191ab35541459c26bdbea31c3eab&url=https%3a%2f%2fmydaily.co.kr%2fpage%2fview%2f2024092818150000890&c=13271026606608838964&mkt=ko-kr",
+        "articleUrl": "https://mydaily.co.kr/page/view/2024092818150000890",
+        "host": "mydaily.co.kr"
+      }
+    ],
+    "publishedAt": "2024-09-28T21:00:00.000Z",
+    "description": "[마이데일리 = 이승길 기자] 그룹 엔믹스 해원이 SBS '런닝맨'에 출연한다. 이번 레이스는 MT 내내 통 아저씨와 함께하며, 화폐 대신 통 아저씨 칼을 사용해 하루를 보낸다. 멤버들은 MT 게임을 통해 ...",
+    "thumbnailUrl": "https://mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "마이데일리",
+    "discoverySource": "bing-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T23:09:14.426Z",
+    "status": "candidate",
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_s.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_m.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://mydaily.co.kr/page/view/2024092818150000890",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.mydaily.co.kr/page/view/2024092818150000890",
+      "resolvedArticleHost": "www.mydaily.co.kr",
+      "fetchedAt": "2026-11-24T23:09:15.530Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+      "articleUrl": "https://www.mydaily.co.kr/page/view/2024092818150000890",
+      "observedAt": "2026-11-24T23:09:15.530Z"
+    }
+  },
+  {
     "id": "2e464cfe31dda1df4628",
     "title": "[포토] 엔믹스 오해원, 긴장 됩니다 (아육대 B하인드) - iMBC 연예",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5jTWQ4YmpOT09uY3dqOVlneklIdHRBX3VVa3pVcVZHbnRmYTBwbnUtVjZra3NCNzY1Z1dNLTlaYXp1bTRGQ0pQNjlTSG1JZGpjVHNRQWt5X1BXbTNLZkkybA?oc=5",
@@ -4140,7 +4208,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "a377796d0c2321d50f9a",
@@ -13220,6 +13294,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "4bb558b8037ac1be8ed3",
+    "title": "(Interview) Interview with NMIXX エンミックス 엔믹스 [Music Bank] | KBS WORLD TV 260515 - YouTube",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0yX3VsaWgxMnU3ZS1ZUUVNZ1Z5SWd0V1RMZkFjTHRpbTJkbk9FRm9SRG94UDQ5UXdCRFE4Vk9mMldocm9NWmVBX0stU2F4NkZvbFNDMFhVM1Fabk9s?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://youtu.be",
+    "publishedAt": "2026-05-15T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE0yX3VsaWgxMnU3ZS1ZUUVNZ1Z5SWd0V1RMZkFjTHRpbTJkbk9FRm9SRG94UDQ5UXdCRFE4Vk9mMldocm9NWmVBX0stU2F4NkZvbFNDMFhVM1Fabk9s?oc=5\" target=\"_blank\">(Interview) Interview with NMIXX エンミックス 엔믹스 [Music Bank] | KBS WORLD TV 260515</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">YouTube</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "Haewon NMIXX interview",
+    "discoveredAt": "2026-11-24T23:09:14.426Z",
+    "status": "candidate",
+    "relevanceScore": 3
   },
   {
     "id": "4f417f562a8157cde0c5",

@@ -1,17 +1,17 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T23:05:13.941Z",
+  "collectedAt": "2026-11-24T23:09:14.426Z",
   "searchPack": 1,
   "queries": [
     {
       "query": "Haewon NMIXX interview",
-      "candidates": 13,
-      "uniqueCandidates": 13
+      "candidates": 15,
+      "uniqueCandidates": 15
     },
     {
       "query": "오해원 인터뷰",
-      "candidates": 45,
-      "uniqueCandidates": 45
+      "candidates": 44,
+      "uniqueCandidates": 44
     },
     {
       "query": "NMIXX Haewon magazine",
@@ -27,12 +27,12 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
-  "bingCandidates": 30,
+  "bingCandidates": 31,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 85,
-  "uniqueIncoming": 77,
-  "added": 1,
+  "fetched": 86,
+  "uniqueIncoming": 78,
+  "added": 4,
   "rssImageSignals": {
     "items": 55,
     "sourceUrlItems": 55,
@@ -49,20 +49,57 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 0,
-    "found": 0,
-    "assigned": 0,
+    "attempted": 1,
+    "found": 1,
+    "assigned": 1,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
     "failed": 0,
-    "results": []
+    "results": [
+      {
+        "id": "d103d78ba96bc58b409f",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_s.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_m.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://img.mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://mydaily.co.kr/page/view/2024092818150000890",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.mydaily.co.kr/page/view/2024092818150000890",
+        "resolvedArticleHost": "www.mydaily.co.kr"
+      }
+    ]
   },
   "deduplicationComparison": {
-    "before": 85,
-    "after": 76,
+    "before": 86,
+    "after": 77,
     "collapsed": 9,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 699
+  "totalCandidates": 701
 }
