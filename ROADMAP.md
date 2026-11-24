@@ -295,3 +295,13 @@
 - [ ] Inspect actual mobile browser rendering, keyboard focus, and title links.
 - [ ] Obtain human review labels before claiming article relevance or thumbnail precision.
 - [ ] Continue collecting explicitly identified publisher article URLs and per-article image metadata from public RSS/meta fields only.
+
+
+## 2026-11-25 — Prefer verified original articles by default
+- [x] Measure explicit publisher article URL availability inside the article-only dataset: 54 verified publisher articles, 48 with Haewon/해원 in the title.
+- [x] Change default view to verified Haewon publisher articles (48), not the wider 426 title-match candidate set.
+- [x] Preserve broader Haewon/NMIXX/all-article candidate scopes as opt-in filters.
+- [x] Reject HTTP, Google wrapper, root-only and credential-bearing URLs from the verified scope.
+- [x] Add quality metrics and regression tests for verified article counts and scope behavior.
+- [ ] Verify this refinement in Actions and Pages.
+- [ ] Perform real browser/mobile visual QA; not available in the current work environment.
