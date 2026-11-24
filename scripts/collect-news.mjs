@@ -20,25 +20,22 @@ function tag(raw,tagName){
  const m=raw.match(new RegExp('<'+tagName+'>([\\s\\S]*?)</'+tagName+'>','i'));
  return m?decode(m[1]):'';
 }
-export function extractRssThumbnail(raw='',description=''){
+export function extractRssThumbnailCandidates(raw='',description=''){
  const candidates=[];
- for(const tag of raw.matchAll(/<(?:media:thumbnail|media:content|enclosure)\b[^>]*>/gi)){
-  const attrs=tag[0];
-  const url=attrs.match(/\burl=["']([^"']+)["']/i)?.[1]||attrs.match(/\bhref=["']([^"']+)["']/i)?.[1]||'';
-  const type=attrs.match(/\btype=["']([^"']+)["']/i)?.[1]||'';
-  if(!type||/^image\//i.test(type))candidates.push(decode(url));
+ for(const tag of raw.matchAll(/<(?:media:thumbnail|media:content|enclosure)\\b[^>]*>/gi)){
+  const attrs=tag[0],url=attrs.match(/\\burl=["']([^"']+)["']/i)?.[1]||attrs.match(/\\bhref=["']([^"']+)["']/i)?.[1]||'',type=attrs.match(/\\btype=["']([^"']+)["']/i)?.[1]||'';
+  const source=tag[0].match(/^<\\s*([^\\s>]+)/)?.[1]?.toLowerCase()||'rss-media';
+  if((!type||/^image\\//i.test(type))&&url)candidates.push({url:decode(url),source});
  }
  const text=decode(description||raw);
- for(const match of text.matchAll(/<(?:img|source)\b[^>]*>/gi)){
-  const attrs=match[0];
-  const src=attrs.match(/\b(?:src|data-src|data-original|data-lazy-src)=["']([^"']+)["']/i)?.[1]||attrs.match(/\bsrcset=["']([^"']+)["']/i)?.[1]?.split(',')[0]?.trim().split(/\s+/)[0]||'';
-  candidates.push(decode(src));
+ for(const match of text.matchAll(/<(?:img|source)\\b[^>]*>/gi)){
+  const attrs=match[0],src=attrs.match(/\\b(?:src|data-src|data-original|data-lazy-src)=["']([^"']+)["']/i)?.[1]||attrs.match(/\\bsrcset=["']([^"']+)["']/i)?.[1]?.split(',')[0]?.trim().split(/\\s+/)[0]||'';
+  if(src)candidates.push({url:decode(src),source:'rss-description-html'});
  }
- for(const candidate of candidates){
-  try{const url=new URL(candidate);if(url.protocol==='https:'&&!/(?:logo|avatar|icon|favicon)/i.test(url.pathname))return url.href;}catch{}
- }
- return '';
+ const seen=new Set();
+ return candidates.filter(candidate=>{try{const url=new URL(candidate.url);if(url.protocol!=='https:'||/(?:logo|avatar|icon|favicon)/i.test(url.pathname))return false;url.hash='';if(seen.has(url.href))return false;seen.add(url.href);candidate.url=url.href;return true;}catch{return false;}}).slice(0,8);
 }
+export function extractRssThumbnail(raw='',description=''){return extractRssThumbnailCandidates(raw,description)[0]?.url||'';}
 export function relevanceScore(title='',description=''){
  const text=(title+' '+description).toLowerCase();
  let score=0;
@@ -55,20 +52,22 @@ export function parseRss(xml,query,now=new Date().toISOString()){
   if(!title||!url||!/^https:\/\/\S+/i.test(url))return null;
   const date=pub?new Date(pub):null,publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const id=createHash('sha256').update(url).digest('hex').slice(0,20);
-  return {id,title,url,publishedAt,description:description.slice(0,1200),thumbnailUrl:extractRssThumbnail(raw,description),sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
+  const rssImageCandidates=extractRssThumbnailCandidates(raw,description),thumbnail=rssImageCandidates[0];
+  return {id,title,url,publishedAt,description:description.slice(0,1200),thumbnailUrl:thumbnail?.url||'',thumbnailSource:thumbnail?.source||'',thumbnailCandidates:rssImageCandidates,sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
  }).filter(Boolean);
  return items;
 }
-export function extractOpenGraphImage(html=''){
- const metas=[...String(html).matchAll(/<meta\b[^>]*>/gi)].map(m=>m[0]);
+export function extractOpenGraphImageCandidates(html=''){
+ const metas=[...String(html).matchAll(/<meta\\b[^>]*>/gi)].map(m=>m[0]),candidates=[],seen=new Set();
  for(const meta of metas){
-  const property=meta.match(/\b(?:property|name)=["'](?:og:image|twitter:image|twitter:image:src)["']/i);
-  if(!property)continue;
-  const content=meta.match(/\bcontent=["']([^"']+)["']/i)?.[1]||'';
-  try{const url=new URL(decode(content));if(url.protocol==='https:'&&!/(?:logo|avatar|icon|favicon)/i.test(url.pathname))return url.href;}catch{}
+  const key=meta.match(/\\b(?:property|name)=["'](og:image|twitter:image|twitter:image:src)["']/i)?.[1]?.toLowerCase();
+  if(!key)continue;
+  const content=meta.match(/\\bcontent=["']([^"']+)["']/i)?.[1]||'';
+  try{const url=new URL(decode(content));if(url.protocol!=='https:'||/(?:logo|avatar|icon|favicon)/i.test(url.pathname))continue;url.hash='';if(seen.has(url.href))continue;seen.add(url.href);candidates.push({url:url.href,source:key});}catch{}
  }
- return '';
+ return candidates.slice(0,8);
 }
+export function extractOpenGraphImage(html=''){return extractOpenGraphImageCandidates(html)[0]?.url||'';}
 export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs=5000,concurrency=3,offset=0}={}){
  const missing=items.filter(item=>!item.thumbnailUrl&&/^https:\/\/news\.google\.com\//i.test(item.url||''));
  const start=missing.length?Math.abs(Number(offset)||0)%missing.length:0;
@@ -77,24 +76,25 @@ export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs
  async function worker(){while(true){const index=cursor++;if(index>=targets.length)return;const item=targets[index];try{
   const response=await fetchImpl(item.url,{method:'GET',redirect:'follow',headers:{'user-agent':'Mozilla/5.0 (compatible; HaewonArchiveBot/0.2; thumbnail metadata)'},signal:AbortSignal.timeout(timeoutMs)});
   if(!response.ok)throw new Error('HTTP '+response.status);
-  const image=extractOpenGraphImage(await response.text());
-  results[index]={id:item.id,thumbnailUrl:image,status:image?'found':'missing'};
+  const candidates=extractOpenGraphImageCandidates(await response.text()),candidate=candidates[0]||null;
+  results[index]={id:item.id,thumbnailUrl:candidate?.url||'',candidate,candidates,status:candidate?'found':'missing'};
  }catch(error){results[index]={id:item.id,thumbnailUrl:'',status:'failed',error:String(error?.message||error)};}}
  }
  await Promise.all(Array.from({length:Math.min(concurrency,targets.length)},worker));
  const byId=new Map(results.filter(r=>r?.thumbnailUrl).map(r=>[r.id,r.thumbnailUrl]));
- // Avoid spreading one publisher's generic image across unrelated candidate cards.
- // Existing thumbnails are preserved; only newly enriched assignments are guarded.
+ // Preserve existing thumbnails; only assign new unique HTTPS URLs.
  const usedUrls=new Set(items.map(item=>{try{const url=new URL(item.thumbnailUrl||'');if(url.protocol==='https:'){url.hash='';return url.href;}}catch{}return ''}).filter(Boolean));
  let assigned=0,duplicateRejected=0;
  const enriched=items.map(item=>{
   if(item.thumbnailUrl||!byId.has(item.id))return item;
-  const image=byId.get(item.id);
+  const result=results.find(row=>row?.id===item.id),image=byId.get(item.id),candidate=result?.candidate;
   try{const url=new URL(image);if(url.protocol!=='https:')return item;url.hash='';const normalized=url.href;
-   if(usedUrls.has(normalized)){duplicateRejected++;return item;}
-   usedUrls.add(normalized);assigned++;return {...item,thumbnailUrl:image};
+   if(usedUrls.has(normalized)){duplicateRejected++;if(result)result.status='duplicate-rejected';return item;}
+   usedUrls.add(normalized);assigned++;if(result)result.status='assigned';
+   return {...item,thumbnailUrl:image,thumbnailSource:candidate?.source||'article-meta',thumbnailCandidates:candidate?[candidate]:[]};
   }catch{return item;}
  });
+ for(const result of results){if(result?.thumbnailUrl)result.assigned=result.status==='assigned';}
  return {items:enriched,attempted:targets.length,found:byId.size,assigned,duplicateRejected,missing:results.filter(r=>r?.status==='missing').length,failed:results.filter(r=>r?.status==='failed').length,results};
 }
 export function canonicalCandidateUrl(value){
