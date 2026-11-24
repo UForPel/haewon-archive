@@ -522,3 +522,12 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Changed the default article scope from all 426 Haewon title matches to the 48 Haewon articles with an explicitly recorded, valid HTTPS publisher article URL. Broader candidate scopes remain available as separate controls; no records are deleted.
 - Added URL validation rejecting HTTP, root-only, credential-bearing and Google wrapper URLs from the verified default scope. Generated quality metrics now distinguish verified publisher articles and verified Haewon articles.
 - Pending PR/Actions/Pages validation. Browser/mobile visual checks remain unverified.
+
+
+## 2026-11-25 — Verified-article thumbnail coverage metric (PR/CI pending)
+- Latest deployed main: Actions #577, 139/139 tests passed; all collection, validation, data commit, artifact upload and Pages deployment steps succeeded. Run head `5e1671d260930dbddb3f75091fcc45260072ef5f`; data refresh commit `e6811cbe4652c60931971f74ae210701df8d10c5`. Pages artifact: 424,033 bytes.
+- Latest data: 701 candidates; 515 article candidates and 186 video candidates; 55 article candidates have explicit publisher HTTPS URLs; 49 have Haewon/해원 in the title and pass the verified-URL scope.
+- Among the 49 default-scope Haewon articles, 39 have an HTTPS thumbnail with recorded `og:image` or `twitter:image` provenance; 10 do not. This is provenance coverage, not a visual relevance judgment.
+- Overall thumbnail assignments: 317/701; 273 remain one shared unverified legacy URL; 42 `og:image` + 2 `twitter:image` are provenance-known; 384 records have no thumbnail. The shared 273 remain suppressed in article previews but retained in data.
+- Added generated metrics for provenance-backed thumbnail coverage within verified publisher articles and verified Haewon articles, and exposed those counts in the collapsed diagnostics. Tests added.
+- PR/Actions/Pages validation for this metric addition is pending. Browser/mobile visual verification and human relevance labels remain outstanding.
