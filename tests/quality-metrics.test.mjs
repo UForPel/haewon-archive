@@ -37,3 +37,19 @@ test('collection quality metrics retain thumbnail assignment and duplicate rejec
 
 
 test('quality metrics include thumbnail provenance counts and per-attempt source candidates',()=>{const report=summarizeCollection({discovery:[{thumbnailUrl:'https://cdn.test/rss.jpg',thumbnailSource:'media:thumbnail'},{thumbnailUrl:'https://cdn.test/og.jpg',thumbnailSource:'og:image'},{thumbnailUrl:'https://cdn.test/old.jpg'}],newsStatus:{thumbnailEnrichment:{attempted:2,found:2,assigned:1,duplicateRejected:1,missing:0,failed:0,results:[{id:'a',status:'assigned',candidate:{url:'https://cdn.test/og.jpg',source:'og:image'}},{id:'b',status:'duplicate-rejected',candidate:{url:'https://cdn.test/og.jpg',source:'og:image'}}]}}});assert.equal(report.thumbnailProvenance.assignedBySource['media:thumbnail'],1);assert.equal(report.thumbnailProvenance.assignedBySource['og:image'],1);assert.equal(report.thumbnailProvenance.assignedBySource.unknown,1);assert.equal(report.collection.thumbnailEnrichment.results.length,2);assert.equal(report.collection.thumbnailEnrichment.results[1].status,'duplicate-rejected');});
+
+test('article URL provenance separates publisher, final, source-site and discovery hosts',()=>{
+ const report=summarizeCollection({discovery:[
+  {id:'g',title:'Google wrapper story',url:'https://news.google.com/rss/articles/opaque',sourceUrl:'https://publisher.example/',discoveryUrl:'https://news.google.com/rss/articles/opaque'},
+  {id:'b',title:'Bing direct story',url:'https://publisher.example/story/1',publisherArticleUrl:'https://publisher.example/story/1',publisherHost:'publisher.example',discoverySource:'bing-news-rss',discoveryUrl:'http://www.bing.com/news/apiclick.aspx?url=x',candidateSource:'bing-news-rss-explicit-url-param',candidateSources:[{source:'bing-news-rss-explicit-url-param'}],thumbnailMetaFetch:{resolvedArticleHost:'www.publisher.example'}}
+ ],newsStatus:{bingSuccessfulQueries:4,bingFailedQueries:[],bingCandidates:1}});
+ assert.equal(report.articleUrlProvenance.itemsWithPublisherArticleUrl,1);
+ assert.equal(report.articleUrlProvenance.bingNewsItems,1);
+ assert.equal(report.articleUrlProvenance.candidateSourceCounts['bing-news-rss-explicit-url-param'],1);
+ assert.equal(report.articleUrlProvenance.publisherHosts['publisher.example'],1);
+ assert.equal(report.articleUrlProvenance.finalHosts['www.publisher.example'],1);
+ assert.equal(report.articleUrlProvenance.sourceSiteHosts['publisher.example'],1);
+ assert.equal(report.articleUrlProvenance.discoveryWrapperHosts['www.bing.com'],1);
+ assert.equal(report.collection.bingNewsQueriesSuccessful,4);
+ assert.equal(report.collection.bingNewsCandidates,1);
+});
