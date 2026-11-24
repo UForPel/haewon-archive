@@ -1060,3 +1060,27 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Product decision: the public article list should prioritize verified original publisher URLs, not Google News wrapper candidates. The default scope is now **해원 원문 확인** (48 current records). Users can still switch to Haewon article candidates, NMIXX article candidates or all article candidates.
 - Added validation for explicit HTTPS publisher URLs, rejecting Google wrapper hosts, HTTP, root-only and credential-bearing URLs from the verified scope. Added verified counts to generated quality metrics and tests.
 - This change filters the reading view only; no discovery records are removed. CI/Pages validation for this refinement is pending; browser/mobile visual QA remains unverified.
+
+
+## 2026-11-25 — Verified article default deployed; thumbnail provenance coverage added
+
+### CI history and correction record
+- Actions #572 failed because the first PR #7 build contained duplicate relevance helper declarations (`HAEWON_TITLE`/NMIXX helper block). Fixed in main commit `c06ff45`.
+- Actions #573 then failed on an incorrect NMIXX fixture expectation (expected 3, actual 1). Corrected the fixture expectation in `e0b6424`.
+- Actions #574 passed 138/138 tests; collection, validation, data commit, Pages artifact and deployment succeeded.
+- PR #8 changed the default to explicit verified publisher URLs. Actions #575 exposed an extra test-suite terminator and a stale structural-test phrase; #576 had only the stale phrase remaining. Both were corrected.
+- Actions #577 passed 139/139 tests and all 21 workflow steps, including data validation, data commit, Pages artifact upload and deployment. Artifact size: 424,033 bytes.
+- Run log `data/run-logs/45507383261.json` confirms `github_push`, success and validation. It still records only the YouTube source; RSS/news outcomes are separately in `data/news-collection-status.json`.
+
+### Latest deployed content baseline (#577 data)
+- Total discovery candidates: 701; article candidates 515; video/fancam candidates 186.
+- Explicit publisher HTTPS URLs among article candidates: 55; verified Haewon-title articles: 49. Broader title scopes: 427 Haewon and 440 NMIXX.
+- Of the 49 verified Haewon articles, 39 have an HTTPS thumbnail with recorded `og:image` or `twitter:image` provenance; 10 have no provenance-backed thumbnail.
+- Overall: 317 thumbnail assignments, 384 missing; 273 unverified legacy assignments still share one URL; 42 og:image and 2 twitter:image assignments are provenance-known. The shared 273 are hidden in individual card previews but retained for review.
+- The verified default is based on explicit publisher URL plus title keyword match. It is not a human relevance precision estimate. Thumbnail source provenance does not prove that the image depicts Haewon.
+
+### New metrics refinement on branch `metrics/verified-thumbnail-coverage`
+- Add `verifiedPublisherArticlesWithProvenanceThumbnail` and `verifiedHaewonWithProvenanceThumbnail` to generated quality metrics.
+- Show the counts in the collapsed diagnostics so users can distinguish a verified original article from an article with a source-traceable image.
+- Add regression coverage; PR/Actions/Pages validation pending.
+- Browser/mobile visual checks and human relevance/thumbnail labels remain outstanding.
