@@ -82,14 +82,15 @@ test('thumbnail provenance excludes missing images from unknown-source counts',(
 
 test('quality report measures Haewon, NMIXX and video candidate separation independently',()=>{
  const report=summarizeCollection({discovery:[
-  {id:'h',title:'오해원 단독 인터뷰',url:'https://publisher.test/h'},
-  {id:'n',title:'NMIXX 새 앨범 기사',url:'https://publisher.test/n'},
+  {id:'h',title:'오해원 단독 인터뷰',url:'https://publisher.test/h',publisherArticleUrl:'https://publisher.test/h'},
+  {id:'n',title:'NMIXX 새 앨범 기사',url:'https://publisher.test/n',publisherArticleUrl:'https://publisher.test/n'},
   {id:'v',title:'Haewon fancam stage',url:'https://news.google.com/rss/articles/video'},
   {id:'o',title:'일반 연예 뉴스',url:'https://publisher.test/o'}
  ]});
  assert.deepEqual(report.discoveryRelevance,{
   totalCandidates:4,articleCandidates:3,videoCandidates:1,
+  verifiedPublisherArticles:2,verifiedHaewonArticles:1,
   haewonTitleMatches:1,nmixxTitleMatches:1,otherArticleCandidates:1,
-  defaultScope:'haewon-title-match'
+  defaultScope:'verified-haewon-title-match'
  });
 });

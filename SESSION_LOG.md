@@ -1052,3 +1052,11 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Code and tests are committed to the branch, but PR Actions/Pages verification is still pending.
 - No real browser/mobile session is available in this work session. Responsive visual appearance, keyboard focus and title-link behavior remain unverified.
 - Hiding the shared legacy thumbnail is a presentation safety measure, not a correction to the underlying 273 data records. No bulk deletion, label propagation or Google News wrapper decoding occurred.
+
+
+## 2026-11-25 — Verified publisher articles become the default
+- Actions #574 verified the preceding article-first UX change: 138/138 tests passed; RSS/YouTube collection, validation, data commit and Pages deployment succeeded. Data commit: `8ea01f32315855e2672c7b2f8b9635e0698c905b`.
+- Re-evaluated the latest dataset before changing the default: 699 total records; 514 article candidates; 185 video candidates; 54 article candidates have explicit publisher HTTPS URLs; 48 of these have Haewon/해원 in the title. The broader title-match candidate counts remain 426 Haewon and 440 NMIXX.
+- Product decision: the public article list should prioritize verified original publisher URLs, not Google News wrapper candidates. The default scope is now **해원 원문 확인** (48 current records). Users can still switch to Haewon article candidates, NMIXX article candidates or all article candidates.
+- Added validation for explicit HTTPS publisher URLs, rejecting Google wrapper hosts, HTTP, root-only and credential-bearing URLs from the verified scope. Added verified counts to generated quality metrics and tests.
+- This change filters the reading view only; no discovery records are removed. CI/Pages validation for this refinement is pending; browser/mobile visual QA remains unverified.

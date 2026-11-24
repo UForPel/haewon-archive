@@ -514,3 +514,11 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Implemented on `ux/article-reading-filter`: sanitize titles/descriptions into plain text (strip HTML tags and embedded URLs); separate video candidates from article cards; default the article list to title-matched Haewon items; add NMIXX-related and all-article scopes; mount category filters; hide the unverified shared legacy thumbnail from per-article previews; add relevance counts to generated quality metrics; improve mobile filter touch targets.
 - Regression tests cover text sanitization, relevance scopes, video/article separation, metrics, mounted category controls and hidden unverified shared thumbnails.
 - Pending: PR Actions and Pages deployment for this branch. Real browser/mobile appearance, keyboard operation and link behavior remain unverified. No claim of visual QA is made.
+
+
+## 2026-11-25 — Verified-original-URL default (PR/CI pending)
+- Latest deployed main before this refinement: Actions #574, 138/138 tests, all collection/validation/data-commit/Pages-deploy steps successful; post-run data commit `8ea01f32315855e2672c7b2f8b9635e0698c905b`.
+- Recounted the 699-record dataset after #574: 514 article candidates, 185 video candidates; 54 article candidates have explicit publisher HTTPS URLs; 48 of those have Haewon/해원 in the title. The wider title-only scopes remain 426 Haewon and 440 NMIXX article candidates.
+- Changed the default article scope from all 426 Haewon title matches to the 48 Haewon articles with an explicitly recorded, valid HTTPS publisher article URL. Broader candidate scopes remain available as separate controls; no records are deleted.
+- Added URL validation rejecting HTTP, root-only, credential-bearing and Google wrapper URLs from the verified default scope. Generated quality metrics now distinguish verified publisher articles and verified Haewon articles.
+- Pending PR/Actions/Pages validation. Browser/mobile visual checks remain unverified.

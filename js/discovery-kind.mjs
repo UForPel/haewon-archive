@@ -38,8 +38,19 @@ export function classifyDiscoveryRelevance(item = {}) {
   if (NMIXX_TITLE.test(title)) return 'nmixx';
   return 'other';
 }
-export function filterDiscoveryRelevance(items = [], scope = 'haewon') {
+export function hasExplicitPublisherArticleUrl(item = {}) {
+  try {
+    const url = new URL(String(item.publisherArticleUrl || ''));
+    const host = url.hostname.toLowerCase();
+    return url.protocol === 'https:' && !url.username && !url.password && url.pathname !== '/' &&
+      host !== 'news.google.com' && !host.endsWith('.news.google.com') &&
+      host !== 'google.com' && !host.endsWith('.google.com') &&
+      !host.endsWith('.googleusercontent.com') && !host.endsWith('.gstatic.com');
+  } catch { return false; }
+}
+export function filterDiscoveryRelevance(items = [], scope = 'verified-haewon') {
   if (scope === 'all') return items;
+  if (scope === 'verified-haewon') return items.filter(item => HAEWON_TITLE.test(cleanDiscoveryText(item.title)) && hasExplicitPublisherArticleUrl(item));
   const pattern = scope === 'nmixx' ? NMIXX_TITLE : HAEWON_TITLE;
   return items.filter(item => pattern.test(cleanDiscoveryText(item.title)));
 }

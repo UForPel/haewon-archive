@@ -154,3 +154,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - A repeated legacy thumbnail URL is not displayed as an article-specific image when the entire group lacks article-level provenance. Original records remain intact for independent review.
 - Counts are keyword-based scopes only; they are not human relevance labels or precision measurements.
 - Regression tests cover sanitizer, relevance scopes, article/video separation, metrics and control mounting. Browser/mobile visual and keyboard checks remain unverified.
+
+
+## 2026-11-25 — Verified original article default
+- **해원 원문 확인** is the default article scope. It includes only article candidates with an explicit valid HTTPS publisher article URL and a Haewon/해원 title match.
+- **해원 기사 후보**, **NMIXX 기사 후보**, and **전체 기사 후보** remain available for broader discovery, including candidates that only have a Google News discovery wrapper.
+- The verified scope excludes Google wrapper hosts, HTTP URLs, root-only URLs and credential-bearing URLs. No records are deleted by changing scopes.
+- Current baseline after Actions #574: 48 verified Haewon article URLs; 54 explicit publisher article URLs across all article candidates; 426 Haewon title-match candidates and 440 NMIXX title-match candidates. Counts are dataset coverage, not relevance-precision measurements.
