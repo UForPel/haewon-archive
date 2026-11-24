@@ -83,8 +83,19 @@ export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs
  }
  await Promise.all(Array.from({length:Math.min(concurrency,targets.length)},worker));
  const byId=new Map(results.filter(r=>r?.thumbnailUrl).map(r=>[r.id,r.thumbnailUrl]));
- const enriched=items.map(item=>item.thumbnailUrl||!byId.has(item.id)?item:{...item,thumbnailUrl:byId.get(item.id)});
- return {items:enriched,attempted:targets.length,found:byId.size,missing:results.filter(r=>r?.status==='missing').length,failed:results.filter(r=>r?.status==='failed').length,results};
+ // Avoid spreading one publisher's generic image across unrelated candidate cards.
+ // Existing thumbnails are preserved; only newly enriched assignments are guarded.
+ const usedUrls=new Set(items.map(item=>{try{const url=new URL(item.thumbnailUrl||'');if(url.protocol==='https:'){url.hash='';return url.href;}}catch{}return ''}).filter(Boolean));
+ let assigned=0,duplicateRejected=0;
+ const enriched=items.map(item=>{
+  if(item.thumbnailUrl||!byId.has(item.id))return item;
+  const image=byId.get(item.id);
+  try{const url=new URL(image);if(url.protocol!=='https:')return item;url.hash='';const normalized=url.href;
+   if(usedUrls.has(normal)){duplicateRejected++;return item;}
+   usedUrls.add(normal);assigned++;return {...item,thumbnailUrl:image};
+  }catch{return item;}
+ });
+ return {items:enriched,attempted:targets.length,found:byId.size,assigned,duplicateRejected,missing:results.filter(r=>r?.status==='missing').length,failed:results.filter(r=>r?.status==='failed').length,results};
 }
 export function canonicalCandidateUrl(value){
  try{
