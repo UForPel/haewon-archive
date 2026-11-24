@@ -486,4 +486,13 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 ## 2026-11-25 — Run-log trigger correction merged; CI pending
 - PR #3 merged as `6e8e527f71be330dd38da169fc1f48153f724b4b`: GitHub push events now map to `github_push`; schema enum and regression test updated.
 - Actions #566 verified the preceding main revision end-to-end (133/133 tests, collection, validation, data commit, 406,791-byte Pages artifact and successful deployment). It predates PR #3, so it does not verify the new trigger test.
-- At this documentation update, no Actions run for PR #3's merge commit is visible in the Actions run list. Treat the trigger fix as merged but not yet CI-verified; do not claim a green run for it.
+- Actions #567 / run ID `45491071500` verified the PR #3 merge commit: 133/133 tests, all 19 workflow steps and Pages deployment succeeded. The persisted run log records `trigger: github_push`.
+
+
+## 2026-11-25 — Post-fix verification and second enrichment pass
+- Actions #567: run ID `45491071500`, head `6e8e527f71be330dd38da169fc1f48153f724b4b`; completed success. 133/133 tests passed; YouTube and RSS discovery, improvement cycle, quality report, archive validation, log validation, data commit, artifact upload and Pages deployment all succeeded.
+- Persisted run log confirms `trigger: github_push`, `status: success`, validation passed.
+- Pages artifact: 411,213 bytes; SHA-256 `d2e6843218154b1574aa946d681a34061d454643a1483c69462fe18add4b80ba`.
+- Latest metrics after #567: 682 records; explicit publisher HTTPS article URLs 53 (7.8%), Google News 0/629; thumbnails 315 (46.2%), missing 367, unverified legacy 273, verified provenance 42 (40 og:image, 2 twitter:image; 13% of assigned); unique image URLs 43. The 273 repeated image group remains review-required.
+- Latest bounded metadata enrichment: 3/3 assigned, 0 failures. This is a bounded sample, not a representative precision estimate. The earlier #566 pass was 11/12 assigned, 1 failure.
+- PR #4 documentation-only merge occurred after #567's workflow head; it did not change runtime code. Current main includes its documentation changes.
