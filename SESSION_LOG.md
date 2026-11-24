@@ -1023,3 +1023,32 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - A documented feature is not implemented until it appears in the actual user-facing surface and is exercised.
 - Report product outcomes separately from CI outcomes; do not call a deployment a UX success without visual interaction evidence.
 - Keep technical diagnostics and moderation tools out of the default reading path; progressive disclosure is the default for operational detail.
+
+
+## 2026-11-25 — Article-first reading view and relevance filtering
+
+### Pre-change verification
+- Inspected current main at base `cf732a816e0ea645df8b52160f32434ea60043b3`; PR #6 merged at `89d6ecf`.
+- Actions #570 (run `45504355549`) and #571 (run `45504392416`) completed successfully. #570: 134 tests passed, 0 failed. #571: 134 passed, 0 failed. Both completed the workflow's collection, validation, data commit, artifact upload and Pages deployment steps.
+- Actions #571 persisted run log records `github_push`, success and passed validation. Its run log still only lists the YouTube source; news-specific results remain in `data/news-collection-status.json`.
+
+### Dataset diagnosis (base main)
+- Discovery records: 699 total.
+- Article/video classifier: 514 article candidates, 185 video/fancam candidates. The article page had been rendering both types together.
+- Title keyword matches among article candidates: 426 Haewon/해원 matches; 440 NMIXX/엔믹스 matches; all-article scope 514. These are simple keyword scopes, not relevance precision or a model evaluation.
+- Descriptions with RSS HTML tags and embedded URL anchors: 644/699. The card used `textContent=item.description`, so tags and long Google News wrapper addresses appeared literally as text. This is the principal cause of the code-like clutter the user reported.
+- The category renderer existed but `renderCategories()` was never called, so the category control bar was not mounted.
+- Thumbnails: 316 assigned, 383 missing, 44 unique URLs. One shared URL appears 273 times without article-specific provenance; only 43 assignments have `og:image`/`twitter:image` provenance. Repeated legacy data is retained, not deleted.
+
+### Implemented on branch `ux/article-reading-filter`
+- `js/discovery-kind.mjs`: reusable HTML/URL-to-plain-text sanitizer; deterministic Haewon/NMIXX title relevance scopes.
+- `js/discovery-view.mjs`: article-only reading list; default Haewon title matches; NMIXX and all-article alternatives; category controls mounted and active state synchronized; card titles/descriptions sanitized; 273 unverified repeated legacy thumbnail previews suppressed while preserving the data and review path.
+- `index.html`: clear explanation of the relevance scopes and the separate video archive.
+- `assets/style.css`: touch-friendly mobile scope controls and category targets.
+- `scripts/quality-metrics.mjs`: generated `discoveryRelevance` counts for total, article, video, Haewon-title, NMIXX-title and other-article candidates.
+- Tests added for RSS markup sanitization, scope behavior, video separation, metrics and user-facing controls.
+
+### Verification and limitations
+- Code and tests are committed to the branch, but PR Actions/Pages verification is still pending.
+- No real browser/mobile session is available in this work session. Responsive visual appearance, keyboard focus and title-link behavior remain unverified.
+- Hiding the shared legacy thumbnail is a presentation safety measure, not a correction to the underlying 273 data records. No bulk deletion, label propagation or Google News wrapper decoding occurred.
