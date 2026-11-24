@@ -429,7 +429,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b9f0f943b0b91da7b6fa",
@@ -632,7 +636,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "bfe93f2498de3b5624a0",
@@ -4597,8 +4605,8 @@
     ],
     "publishedAt": "2025-10-10T10:35:00.000Z",
     "description": "Lily and Haewon, members of the group Nmixx, will appear as guests on the ENA variety show 'Salon de Idol: You Talk a Lot.' Episode 12 of ENA’s 'Salon de Idol: You Talk a Lot' (directed by Lee ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://pimg.mk.co.kr/news/cms/202510/10/news-p.v1.20251010.85c8fe76271847a7ad97e50026b3cd85_R.jpg",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "매일경제",
     "discoverySource": "bing-news-rss",
@@ -4606,8 +4614,27 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202510/10/news-p.v1.20251010.85c8fe76271847a7ad97e50026b3cd85_R.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://www.mk.co.kr/en/hot-issues/11438629",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.mk.co.kr/en/hot-issues/11438629",
+      "resolvedArticleHost": "www.mk.co.kr",
+      "fetchedAt": "2026-11-24T05:38:02.050Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://pimg.mk.co.kr/news/cms/202510/10/news-p.v1.20251010.85c8fe76271847a7ad97e50026b3cd85_R.jpg",
+      "articleUrl": "https://www.mk.co.kr/en/hot-issues/11438629",
+      "observedAt": "2026-11-24T05:38:02.050Z"
+    }
   },
   {
     "id": "0ca55b514bf4311053b5",
@@ -4668,8 +4695,8 @@
     ],
     "publishedAt": "2025-06-27T08:12:00.000Z",
     "description": "NMIXX's HAEWON was spotted at Incheon International Airport on the afternoon of the 27th, departing for Macao to attend an international fan concert schedule.",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999810_16v9.jpg",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "SBS",
     "discoverySource": "bing-news-rss",
@@ -4677,8 +4704,72 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999810_16v9.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999810_1280.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999810_700.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999810_500.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999809_700.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999808_700.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999805_700.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999810_95.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999810_141.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999810_300.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008155695",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://sbsstar.net/article/N1008155695/ephoto-nmixxs-haewon-leaving-for-macao-looking-stunning",
+      "resolvedArticleHost": "sbsstar.net",
+      "fetchedAt": "2026-11-24T05:38:02.090Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999810_16v9.jpg",
+      "articleUrl": "https://sbsstar.net/article/N1008155695/ephoto-nmixxs-haewon-leaving-for-macao-looking-stunning",
+      "observedAt": "2026-11-24T05:38:02.090Z"
+    }
   },
   {
     "id": "13a01c7188c265826865",
@@ -4760,8 +4851,8 @@
     ],
     "publishedAt": "2025-03-20T09:13:00.000Z",
     "description": "NMIXX member Haewon spoke about rumors regarding herself and her family. On the 20th, NMIXX's Haewon, Sullyoon, and Bae were invited as guests on the YouTube channel 'Tteun Tteun' to participate in a ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://biz.chosun.com/resizer/v2/FZHLQVUBG73H4PSF4BVOGGBU44.png?auth=a91266c6ed349a809c3f7441c78247bbccd11450de9ee5e78104b01a4288b3e2&width=650&height=341&smart=true",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "조선일보",
     "discoverySource": "bing-news-rss",
@@ -4769,8 +4860,27 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://biz.chosun.com/resizer/v2/FZHLQVUBG73H4PSF4BVOGGBU44.png?auth=a91266c6ed349a809c3f7441c78247bbccd11450de9ee5e78104b01a4288b3e2&width=650&height=341&smart=true",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/KLX7MY47U5A3RPES2JGB3YIW3Q/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/KLX7MY47U5A3RPES2JGB3YIW3Q/",
+      "resolvedArticleHost": "biz.chosun.com",
+      "fetchedAt": "2026-11-24T05:38:02.086Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://biz.chosun.com/resizer/v2/FZHLQVUBG73H4PSF4BVOGGBU44.png?auth=a91266c6ed349a809c3f7441c78247bbccd11450de9ee5e78104b01a4288b3e2&width=650&height=341&smart=true",
+      "articleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/KLX7MY47U5A3RPES2JGB3YIW3Q/",
+      "observedAt": "2026-11-24T05:38:02.086Z"
+    }
   },
   {
     "id": "9171aba5c73e611e910b",
@@ -5243,8 +5353,8 @@
     ],
     "publishedAt": "2023-07-11T08:31:00.000Z",
     "description": "On July 11, HAEWON of NMIXX lit up the photo line at a media showcase celebrating the release of the group’s third single, “A Midsummer NMIXX’s Dream,” held at Blue Square Mastercard Hall in Seoul’s ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860581_16v9.jpg",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "SBS",
     "discoverySource": "bing-news-rss",
@@ -5252,8 +5362,67 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860581_16v9.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860581_1280.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860581_700.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860581_500.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860582_700.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860580_700.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860581_95.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860581_141.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860581_300.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008299351",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://sbsstar.net/article/N1008299351/throwback-haewon-of-nmixx-channels-that-first-love-glow",
+      "resolvedArticleHost": "sbsstar.net",
+      "fetchedAt": "2026-11-24T05:38:02.362Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860581_16v9.jpg",
+      "articleUrl": "https://sbsstar.net/article/N1008299351/throwback-haewon-of-nmixx-channels-that-first-love-glow",
+      "observedAt": "2026-11-24T05:38:02.362Z"
+    }
   },
   {
     "id": "f4dc23fa0494291edeb2",
@@ -5655,7 +5824,14 @@
     "status": "candidate",
     "relevanceScore": 4,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": {
+      "status": "missing",
+      "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
+      "resolvedArticleHost": "www.msn.com",
+      "fetchedAt": "2026-11-24T05:38:02.262Z"
+    }
   },
   {
     "id": "acc3649085bc58237439",
@@ -5677,8 +5853,8 @@
     ],
     "publishedAt": "2026-11-18T15:04:00.000Z",
     "description": "(엑스포츠뉴스 장인영 기자) 그룹 엔믹스 멤버 해원이 외모에 대한 솔직한 생각을 내놨다. 최근 해원은 팬 소통 플랫폼을 통해 라이브 방송을 진행했다. 해원은 \"어쩌다 이렇게 나노단위로 사람의 얼굴을 보게 됐는지 잘 모르겠다\"면서도 \"가장 트렌드에 민감하고 예민한 산업에 종사하는 사람이다 보니 신경을 쓰게 되는데 모르겠다. 여러분은 그러지 마라\"라고 팬들에게 ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://image.xportsnews.com/contents/images/upload/article/2026/1118/1795007006448895.webp",
+    "thumbnailSource": "twitter:image",
     "thumbnailCandidates": [],
     "sourceName": "엑스포츠뉴스",
     "discoverySource": "bing-news-rss",
@@ -5686,8 +5862,32 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2026/1118/1795007006448895.webp",
+        "source": "twitter:image",
+        "priority": 2
+      },
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2026/1118/1795007085319850.webp",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://www.xportsnews.com/article/2220870",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.xportsnews.com/article/2220870",
+      "resolvedArticleHost": "www.xportsnews.com",
+      "fetchedAt": "2026-11-24T05:38:03.032Z"
+    },
+    "thumbnailProvenance": {
+      "source": "twitter:image",
+      "url": "https://image.xportsnews.com/contents/images/upload/article/2026/1118/1795007006448895.webp",
+      "articleUrl": "https://www.xportsnews.com/article/2220870",
+      "observedAt": "2026-11-24T05:38:03.032Z"
+    }
   },
   {
     "id": "8ad25a1d7ef55789344b",
@@ -5749,8 +5949,8 @@
     ],
     "publishedAt": "2026-11-18T06:40:00.000Z",
     "description": "최근 급격한 체중 감량으로 화제를 모았던 그룹 엔믹스 해원이 외모 강박에 대한 솔직한 생각을 밝혔다. 17일 SNS와 온라인 커뮤니티를 중심으로 과거 해원이 라이브 방송을 통해 팬들과 소통하던 중 외모 강박에 대해 언급했던 내용이 다시금 재조명됐다.",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://7lgigmttrjuyfehsudec15072.edge.naverncp.com/news/photo/202611/1020506_2043365_4529.png",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "SPOTV NEWS",
     "discoverySource": "bing-news-rss",
@@ -5758,8 +5958,27 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://7lgigmttrjuyfehsudec15072.edge.naverncp.com/news/photo/202611/1020506_2043365_4529.png",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1020506",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1020506",
+      "resolvedArticleHost": "www.spotvnews.co.kr",
+      "fetchedAt": "2026-11-24T05:38:04.066Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://7lgigmttrjuyfehsudec15072.edge.naverncp.com/news/photo/202611/1020506_2043365_4529.png",
+      "articleUrl": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1020506",
+      "observedAt": "2026-11-24T05:38:04.066Z"
+    }
   },
   {
     "id": "5c028482e381359cf3bd",
@@ -5811,7 +6030,14 @@
     "status": "candidate",
     "relevanceScore": 4,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": {
+      "status": "failed",
+      "publisherArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "",
+      "resolvedArticleHost": "",
+      "fetchedAt": ""
+    }
   },
   {
     "id": "0ffa4f472cdb2ae24b00",
@@ -5833,8 +6059,8 @@
     ],
     "publishedAt": "2026-11-18T02:28:00.000Z",
     "description": "[스포츠서울 | 홍희강 기자]그룹 엔믹스 해원이 팬 소통 라이브 방송에서 외모에 신경 쓰게 되는 속마음을 털어놓으며 팬들에게 “여러분들은 그러지 마세요”라고 당부해 화제를 모으고 있다. 17일 해원이 최근 라이브 방송을 통해 팬들과 소통하던 중 외모에 대한 부담감을 언급했던 장면이 ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://file.sportsseoul.com/news/cms/2026/11/18/news-p.v1.20261118.3416e0f121004526bd98cc7fdaeecd97_T1.png",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "스포츠서울",
     "discoverySource": "bing-news-rss",
@@ -5842,8 +6068,27 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://file.sportsseoul.com/news/cms/2026/11/18/news-p.v1.20261118.3416e0f121004526bd98cc7fdaeecd97_T1.png",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://www.sportsseoul.com/news/read/1650573",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.sportsseoul.com/news/read/1650573",
+      "resolvedArticleHost": "www.sportsseoul.com",
+      "fetchedAt": "2026-11-24T05:38:04.308Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://file.sportsseoul.com/news/cms/2026/11/18/news-p.v1.20261118.3416e0f121004526bd98cc7fdaeecd97_T1.png",
+      "articleUrl": "https://www.sportsseoul.com/news/read/1650573",
+      "observedAt": "2026-11-24T05:38:04.308Z"
+    }
   },
   {
     "id": "7193f0d5fd9c019aa485",
@@ -5901,7 +6146,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T05:33:31.755Z"
+      "fetchedAt": "2026-11-24T05:38:04.152Z"
     }
   },
   {
@@ -5934,7 +6179,14 @@
     "status": "candidate",
     "relevanceScore": 4,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": {
+      "status": "missing",
+      "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
+      "resolvedArticleHost": "www.msn.com",
+      "fetchedAt": "2026-11-24T05:38:04.228Z"
+    }
   },
   {
     "id": "ecdb925dfaace5d887f4",
@@ -6052,7 +6304,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://osen.co.kr/article/G1112907419",
       "resolvedArticleHost": "osen.co.kr",
-      "fetchedAt": "2026-11-24T05:33:32.630Z"
+      "fetchedAt": "2026-11-24T05:38:05.536Z"
     }
   },
   {
