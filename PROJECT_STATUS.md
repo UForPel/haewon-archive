@@ -173,3 +173,11 @@ Last updated: 2026-11-20
 - User explicitly called out button/action omission. Added `BUTTONS_AND_ACTIONS.md` as a permanent inventory of existing controls and mandatory behavior/testing checks.
 - Added regression assertions in `tests/index-structure.test.mjs` for main button markup and pagination/import control presence. Dynamic category/pagination behavior still needs module-level behavior tests and live visual/tap verification.
 - Operating rules now require checking and updating button inventory during UI work. This is a requirement/guardrail update, not a claim of new UI buttons being added.
+
+
+## Thumbnail enrichment duplicate-image safeguard (2026-11-24)
+- Collector now rejects a thumbnail assignment when its normalized HTTPS URL is already assigned to another existing record or another record enriched in the same run. Existing records are preserved; this guard is non-destructive and applies only to new enrichment assignments.
+- Enrichment outcome distinguishes raw metadata images found from images actually assigned and duplicate-image rejections. This prevents 'found' from overstating usable distinct assignments.
+- Code commit: 231f7c91; test commit: 8a5c8a6d; metrics/status commits: 5ee77c62, 45f3097d, 437fa274.
+- Research-informed rationale: closed-loop coding-agent literature emphasizes executable feedback and revision; this change is bounded and testable rather than adopting speculative autonomous behavior. See the 2026 self-evolving coding-agent survey and empirical software-agent trajectory study.
+- Limit: existing repeated thumbnail assignments are not automatically removed. Image similarity across different URLs is not detected. CI validation is pending.
