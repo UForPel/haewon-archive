@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T12:56:38.947Z",
+  "generatedAt": "2026-11-24T12:58:12.485Z",
   "articleUrlProvenance": {
     "totalItems": 665,
     "itemsWithPublisherArticleUrl": 38,
@@ -240,23 +240,23 @@
     "newsQueriesRequested": 4,
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
-    "bingNewsQueriesSuccessful": 3,
-    "bingNewsCandidates": 30,
+    "bingNewsQueriesSuccessful": 4,
+    "bingNewsCandidates": 40,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 665,
-    "newsUniqueFetched": 321,
-    "newsAddedLastRun": 8,
-    "duplicateBeforeMergeLastRun": 37,
+    "newsUniqueFetched": 192,
+    "newsAddedLastRun": 4,
+    "duplicateBeforeMergeLastRun": 20,
     "duplicateGroupsCurrent": 665,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 358,
-      "after": 316,
-      "collapsed": 42,
+      "before": 212,
+      "after": 188,
+      "collapsed": 24,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -565,8 +565,8 @@
     {
       "source": "Bing News RSS",
       "requested": 4,
-      "successful": 3,
-      "successRate": 75
+      "successful": 4,
+      "successRate": 100
     }
   ],
   "classification": {
@@ -1004,7 +1004,7 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
+    "rateLimited": 1,
     "unreachable": 1,
     "thumbnailMissing": 364,
     "results": [
@@ -1227,8 +1227,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MMVlCQ2JKOGxjSnpKbnBLOTkxQk1SMU00c21JS2FUakdjX1lLRXBydUdoTjBwaDM5MmRuUncxR0EtWTI1TEQwQmhjYl9PdjctcFEwd19zbXBJV1I0?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2065,7 +2065,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T12:56:38.956Z",
+    "generatedAt": "2026-11-24T12:58:12.498Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

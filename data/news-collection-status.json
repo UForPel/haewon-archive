@@ -1,22 +1,22 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T12:56:36.238Z",
+  "collectedAt": "2026-11-24T12:58:09.846Z",
   "searchPack": 0,
   "queries": [
     {
       "query": "오해원 NMIXX",
-      "candidates": 108,
-      "uniqueCandidates": 108
+      "candidates": 56,
+      "uniqueCandidates": 56
     },
     {
       "query": "해원 엔믹스",
-      "candidates": 100,
-      "uniqueCandidates": 100
+      "candidates": 60,
+      "uniqueCandidates": 60
     },
     {
       "query": "NMIXX Haewon",
-      "candidates": 112,
-      "uniqueCandidates": 112
+      "candidates": 58,
+      "uniqueCandidates": 58
     },
     {
       "query": "Haewon NMIXX news",
@@ -26,21 +26,16 @@
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
-  "bingSuccessfulQueries": 3,
-  "bingCandidates": 30,
-  "bingFailedQueries": [
-    {
-      "query": "해원 엔믹스",
-      "error": "Bing RSS 응답이 아닙니다"
-    }
-  ],
+  "bingSuccessfulQueries": 4,
+  "bingCandidates": 40,
+  "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 358,
-  "uniqueIncoming": 321,
-  "added": 8,
+  "fetched": 212,
+  "uniqueIncoming": 192,
+  "added": 4,
   "rssImageSignals": {
-    "items": 328,
-    "sourceUrlItems": 325,
+    "items": 172,
+    "sourceUrlItems": 172,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -64,9 +59,9 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 358,
-    "after": 316,
-    "collapsed": 42,
+    "before": 212,
+    "after": 188,
+    "collapsed": 24,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 665
