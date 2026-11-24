@@ -24,6 +24,14 @@ export function youtubeId(value=''){
   return '';
  }catch{return '';}
 }
+export function resolveYoutubeCandidates(items=[]){
+ const direct=[];
+ for(const item of items){
+  const explicit=[item.publisherArticleUrl,item.url].find(value=>youtubeId(value));
+  if(explicit)direct.push({...item,url:explicit});
+ }
+ return direct;
+}
 export function discoveryVideos(items=[],now=new Date().toISOString()){
  return items.filter(item=>youtubeId(item.url)).map(item=>{
   const id=youtubeId(item.url);
