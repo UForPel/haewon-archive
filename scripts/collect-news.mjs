@@ -120,7 +120,9 @@ export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs
  async function worker(){while(true){const index=cursor++;if(index>=targets.length)return;const item=targets[index];try{
   const response=await fetchImpl(item.url,{method:'GET',redirect:'follow',headers:{'user-agent':'Mozilla/5.0 (compatible; HaewonArchiveBot/0.2; thumbnail metadata)'},signal:AbortSignal.timeout(timeoutMs)});
   if(!response.ok)throw new Error('HTTP '+response.status);
-  const finalUrl=String(response.url||item.url);if(!/^https:\\/\\//i.test(finalUrl))throw new Error('redirected article URL is not HTTPS');\n  const candidates=extractOpenGraphImageCandidates(await response.text(),finalUrl),candidate=candidates[0]||null;
+  const finalUrl=String(response.url||item.url);
+  if(new URL(finalUrl).protocol!=='https:')throw new Error('redirected article URL is not HTTPS');
+  const candidates=extractOpenGraphImageCandidates(await response.text(),finalUrl),candidate=candidates[0]||null;
   results[index]={id:item.id,thumbnailUrl:candidate?.url||'',candidate,candidates,status:candidate?'found':'missing',resolvedArticleUrl:finalUrl,fetchedAt:new Date().toISOString()};
  }catch(error){results[index]={id:item.id,thumbnailUrl:'',status:'failed',error:String(error?.message||error)};}}
  }
