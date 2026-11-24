@@ -161,7 +161,8 @@ export function canonicalCandidateUrl(value){
 export function canonicalCandidateTitle(value=''){
  return String(value||'').replace(/<[^>]*>/g,' ').replace(/&amp;/gi,'&').normalize('NFKC').toLocaleLowerCase().replace(/\b(?:youtube|youtu\.be)\b/g,'').replace(/[\p{P}\p{S}\s]+/gu,'').trim();
 }
-export function mergeImageCandidateLists(...lists){const seen=new Set(),out=[];for(const candidate of lists.flat()){if(!candidate?.url)continue;const key=String(candidate.url)+'|'+String(candidate.source||'');if(seen.has(key))continue;seen.add(key);out.push(candidate);}return out.slice(0,16);}\nexport function mergeCandidates(existing,incoming){
+export function mergeImageCandidateLists(...lists){const seen=new Set(),out=[];for(const candidate of lists.flat()){if(!candidate?.url)continue;const key=String(candidate.url)+'|'+String(candidate.source||'');if(seen.has(key))continue;seen.add(key);out.push(candidate);}return out.slice(0,16);}
+export function mergeCandidates(existing,incoming){
  const map=new Map(),aliases=new Map();
  for(const item of [...existing,...incoming]){
   const titleKey=canonicalCandidateTitle(item?.title),urlKey=canonicalCandidateUrl(item?.url);
