@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T02:32:31.285Z",
+  "generatedAt": "2026-11-24T02:33:14.814Z",
   "thumbnailAudit": {
     "items": 620,
     "withThumbnail": 273,
@@ -40,26 +40,26 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 620,
-    "newsUniqueFetched": 251,
-    "newsAddedLastRun": 2,
-    "duplicateBeforeMergeLastRun": 26,
+    "newsUniqueFetched": 253,
+    "newsAddedLastRun": 1,
+    "duplicateBeforeMergeLastRun": 23,
     "duplicateGroupsCurrent": 620,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 277,
-      "after": 250,
-      "collapsed": 27,
+      "before": 276,
+      "after": 253,
+      "collapsed": 23,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
       "attempted": 12,
-      "found": 10,
+      "found": 12,
       "assigned": 0,
-      "duplicateRejected": 10,
+      "duplicateRejected": 12,
       "missing": 0,
-      "failed": 2,
+      "failed": 0,
       "results": [
         {
           "id": "5789f4d1c59b7bbe4602",
@@ -93,7 +93,18 @@
         },
         {
           "id": "424f0bfdc18f2914ffe3",
-          "status": "failed"
+          "status": "duplicate-rejected",
+          "candidate": {
+            "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+            "source": "og:image"
+          },
+          "candidates": [
+            {
+              "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+              "source": "og:image"
+            }
+          ],
+          "assigned": false
         },
         {
           "id": "2bf8863898c4ab821238",
@@ -217,7 +228,18 @@
         },
         {
           "id": "4de17e32340a417f9099",
-          "status": "failed"
+          "status": "duplicate-rejected",
+          "candidate": {
+            "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+            "source": "og:image"
+          },
+          "candidates": [
+            {
+              "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+              "source": "og:image"
+            }
+          ],
+          "assigned": false
         }
       ]
     }
@@ -275,7 +297,7 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 3,
+    "rateLimited": 0,
     "unreachable": 0,
     "thumbnailMissing": 347,
     "results": [
@@ -294,14 +316,14 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1VMzVhTVZRS0lYbGRsU2J4MklBVllkal9pbkNnb05DdExsNDlmV3FvalpxZDNBNDRnd3pjcVhfa3Z1S2RXRWxiNFlHeF9WZl9QbUtYV09sYWFRRFoz?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBNSXJFS1ZqVDV6c3lZUVFjTE5Gc2FhdExDZV9TbWZBWGRGTW1KRGJwT0o0anIxOWJoVUhvdVI5X1J0MVhueVRsOFdvT3BHNzVsWF9sNnVvMFdPOUJm?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -312,8 +334,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkU0R3WDVXZGx2eTFNYXV3QUdwX3pCaHFVcExyeExLSkNVSGx5RGF3cU04QnRJb2hIS1QzVmF0VXBxQkI3YTkxNDJaZGhZT0t4dDB4OGhSTkpRcG11?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -528,21 +550,21 @@
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 10,
+    "articlesCompared": 12,
     "rssOnly": 0,
-    "metaOnly": 10,
+    "metaOnly": 12,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 10,
+    "metaFound": 12,
     "metaAssigned": 0,
     "assignmentRate": 0,
     "sourceCounts": {
-      "og:image": 10
+      "og:image": 12
     },
     "hostCounts": [
       {
         "host": "lh3.googleusercontent.com",
-        "count": 10
+        "count": 12
       }
     ],
     "rows": [
@@ -565,6 +587,21 @@
         "id": "3749e5cb2966198e7064",
         "title": "엔믹스 해원, 사랑스러워[O! STAR 숏폼] - 조선일보",
         "articleUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWEhUVmxCSmo1a0RGUi14UW9KMVFwWUhWb3lNcjF3ZFZUZ2l1WWdoSkxyM29IaGwtUnpBWWJjWHZDS0hWeE55dlhKUE04WGhBamlRdWxPYV9lbmQwbzhSYzNOdC1jVlV1LTBhTlhFNnc2VmFQUzZBcEM3NXR1QkRoZW8wRGZHX0hSNGdPS2E0Yw?oc=5",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+            "source": "og:image"
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": false,
+        "metaStatus": "duplicate-rejected"
+      },
+      {
+        "id": "424f0bfdc18f2914ffe3",
+        "title": "[사진]엔믹스 해원, 순백의 피부 - 조선일보",
+        "articleUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcUxLUEM3MnRoYW4ya2JHRE1kTlJlSzFTa0lBR3ladjVyS2IzbHYzT1ZZYUJCVVFlRVgwRUFCWnZadi13c1U4bzYxeE5sc0dVV2ZtMmREWU41cU1nTnBWWU9FU1U0QkduYzRKN2F3WVJsWFc4dFVUMVl5MFVzNEhOa2txdG42N0ZWbUktSGoyMEhGbVJVWXE0?oc=5",
         "rssCandidates": [],
         "metaCandidates": [
           {
@@ -695,11 +732,26 @@
         "sharedUrls": [],
         "assigned": false,
         "metaStatus": "duplicate-rejected"
+      },
+      {
+        "id": "4de17e32340a417f9099",
+        "title": "엔믹스 해원 ‘예쁜 일자 어깨 라인’[포토엔HD] - 뉴스엔",
+        "articleUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9CTzhVZmI0OTV0di1icVB1Rl9oNkFma0Zwd1ZnY2dvODlMYzRacnZacFAwVWg1QnBkdk1xUkR4LWRRM2VmVXpOYTBQR1U5M3dJdkVWeUhEM0drTXJVTXRmVXlYS2Vqdw?oc=5",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+            "source": "og:image"
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": false,
+        "metaStatus": "duplicate-rejected"
       }
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T02:32:31.295Z",
+    "generatedAt": "2026-11-24T02:33:14.823Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
