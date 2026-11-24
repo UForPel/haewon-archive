@@ -12,7 +12,8 @@
     "status": "candidate",
     "relevanceScore": 9,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8db1a2f8d3b528f5b14f",
@@ -29,7 +30,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "484548a28daf266b0af0",
@@ -44,7 +46,8 @@
     "status": "candidate",
     "relevanceScore": 9,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "52450695704f8f37828a",
@@ -59,7 +62,8 @@
     "status": "candidate",
     "relevanceScore": 9,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ad80ba5c4044d322fefe",
@@ -76,7 +80,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "87bc658694fe794890b9",
@@ -93,7 +98,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0921b4f7c807a79d354c",
@@ -107,7 +113,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "474a77bf9c1da98fee63",
@@ -121,7 +128,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5c08969a0028839e2066",
@@ -135,7 +143,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "36dcfea4621f82670c2f",
@@ -152,7 +161,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e3abc4c0d0580aee5e64",
@@ -169,7 +179,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d1742223e50b1725ff29",
@@ -186,7 +197,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4ac87e629b799d717a93",
@@ -200,7 +212,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "608222ce3927a13180b4",
@@ -217,7 +230,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "00ad87a75e73cdd160d8",
@@ -231,7 +245,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "38b9b2d9ffae77bb62e4",
@@ -248,7 +263,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b31396fcb10916bd5072",
@@ -265,7 +281,8 @@
     "relevanceScore": 9,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d1e8542d4ab1aac88f57",
@@ -282,7 +299,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b95c00c16bd771c90cbb",
@@ -299,7 +317,8 @@
     "relevanceScore": 9,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "61096682960ace3efcad",
@@ -316,7 +335,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b9f0f943b0b91da7b6fa",
@@ -330,7 +350,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cc904ed24071ef9c4273",
@@ -347,7 +368,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "df06f9d1287502766ee8",
@@ -362,7 +384,8 @@
     "status": "candidate",
     "relevanceScore": 9,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fd6a38cba47ce0daa8e0",
@@ -379,7 +402,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d2e042d7824d8430f0f2",
@@ -394,7 +418,8 @@
     "status": "candidate",
     "relevanceScore": 9,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d938cb7f68f6b51b4768",
@@ -411,7 +436,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e938acff016d6d2bf908",
@@ -426,7 +452,8 @@
     "status": "candidate",
     "relevanceScore": 9,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "43ab4b0c7384824a2039",
@@ -443,7 +470,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0e3ebb0fd88427b1dc98",
@@ -460,7 +488,8 @@
     "relevanceScore": 9,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fd851db9252aee8393b4",
@@ -477,7 +506,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bfe93f2498de3b5624a0",
@@ -494,7 +524,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0fff91255b333953c3c5",
@@ -509,7 +540,8 @@
     "status": "candidate",
     "relevanceScore": 9,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b3d6878a1af4aba8ad29",
@@ -524,7 +556,8 @@
     "status": "candidate",
     "relevanceScore": 9,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "676ec129c9bd4d878695",
@@ -539,7 +572,8 @@
     "status": "candidate",
     "relevanceScore": 9,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c8d18a1f7568b1cf26b4",
@@ -556,7 +590,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6c853909fa9d443dd7d8",
@@ -573,7 +608,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3695e87cda965951daf6",
@@ -590,7 +626,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fc9ff6c82b5143ab35d7",
@@ -607,7 +644,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ad1148f7afe34403b0e0",
@@ -624,7 +662,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b14592968bb2e2438be5",
@@ -638,7 +677,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1e2f210c8ca76a621399",
@@ -655,7 +695,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e95b89c7e4e63d1417ea",
@@ -669,7 +710,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b1d4e1c4678e6002b2e0",
@@ -686,7 +728,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e2fc4e04dd3e2178cbe5",
@@ -700,7 +743,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b03417cda5a8454fdbd6",
@@ -714,7 +758,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7d12e7dcbdbffad9a523",
@@ -731,7 +776,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "99173f4aa0074930c2ff",
@@ -745,7 +791,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "acc3dacedbcdc1c9b8aa",
@@ -759,7 +806,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "83ba0b12007e6f63e7dd",
@@ -773,7 +821,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e49515bd8dde09fa3ae9",
@@ -787,7 +836,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5d029b10e958a22bc2bd",
@@ -801,7 +851,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2596243d4cbdf68cfbc8",
@@ -815,7 +866,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cb0050e4c950eccd21f3",
@@ -829,7 +881,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "349357dd02765f837ce7",
@@ -843,7 +896,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "43ae00f0c582e89d7033",
@@ -857,7 +911,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "71c7657a380bcb57802e",
@@ -871,7 +926,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "67bba590934fa24fac2d",
@@ -885,7 +941,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b428015e185c5fbd82df",
@@ -899,7 +956,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5a867ce8c828a6bdd314",
@@ -913,7 +971,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2895de96653834d148b0",
@@ -928,7 +987,10 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a08374d3d6fb3bcace25",
@@ -943,7 +1005,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bdc568387aaec606a9a6",
@@ -958,7 +1021,8 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5541e5616b7a0ca97e1c",
@@ -973,7 +1037,8 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ef64473ce8ad51a82b36",
@@ -990,7 +1055,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cf5d9bf0a8df1c81f973",
@@ -1005,7 +1071,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "323df05bb1d05f8af2c1",
@@ -1020,7 +1087,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2d113e9520d071570889",
@@ -1035,7 +1103,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6db5d74bc2cbe73936ff",
@@ -1050,7 +1119,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c52c1380da394c59dd19",
@@ -1065,7 +1135,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6f22626daec9c00e6291",
@@ -1082,7 +1153,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f0cb72c6f89a9ed1698e",
@@ -1099,7 +1171,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2850f77104152e43faa5",
@@ -1116,7 +1189,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d48caf1f84f9f95603d0",
@@ -1131,7 +1205,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cfebfbac6f7eda1e1f38",
@@ -1146,7 +1221,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "944b4a2d51b6e14eb64e",
@@ -1163,7 +1239,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d5d1b7ec891930a341d8",
@@ -1180,7 +1257,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c71a2d8737d6f52f7015",
@@ -1195,7 +1273,8 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fce649787a91816ae54d",
@@ -1210,7 +1289,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fe4ef23961b2f87012fb",
@@ -1227,7 +1307,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1a8551e20d76d8e5146a",
@@ -1242,7 +1323,8 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9931ffd8030cee38d6e9",
@@ -1257,7 +1339,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5102f3c56ed160dd4e27",
@@ -1272,7 +1355,8 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fc5a6f24fd45c6916f00",
@@ -1289,7 +1373,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f97525fa344eddf5cec2",
@@ -1304,7 +1389,8 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6d42ee5d398da61a22fa",
@@ -1321,7 +1407,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e978a9698da6bdc604a3",
@@ -1338,7 +1425,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d952d6faeab078dddd66",
@@ -1355,7 +1443,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4cc8da3d0e755fcc16f5",
@@ -1370,7 +1459,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a085f3116dfd76c69430",
@@ -1385,7 +1475,8 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9bf3c09914b564a8b611",
@@ -1402,7 +1493,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "384dd98c180f9b943d52",
@@ -1419,7 +1511,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a62eef40ff9366dc0372",
@@ -1436,7 +1529,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a14da2807f5df12bf54e",
@@ -1453,7 +1547,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c660795aa31c9937452f",
@@ -1470,7 +1565,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "36b931a0289838acf2c1",
@@ -1487,7 +1583,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7a324b2e72aef6da732c",
@@ -1504,7 +1601,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2ea1a293502cf469d87d",
@@ -1521,7 +1619,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8c8071b26ff901f4e0a0",
@@ -1536,7 +1635,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c20af95bfefcacd5310b",
@@ -1553,7 +1653,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d1bea97e80ebd7506127",
@@ -1570,7 +1671,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "eed5cc849368cefc2758",
@@ -1587,7 +1689,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6b6eb2e649ee051d2e6b",
@@ -1604,7 +1707,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d22ca6e18ba4cad28ec2",
@@ -1619,7 +1723,8 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a87dffda08b88715d8ae",
@@ -1636,7 +1741,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c537009f33477421814b",
@@ -1653,7 +1759,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "665f8736d63eaff0e48a",
@@ -1670,7 +1777,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d01473dbe0f0558d6d99",
@@ -1685,7 +1793,8 @@
     "discoveredAt": "2026-11-23T11:57:28.964Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d86aab0165fcbae56bd6",
@@ -1702,7 +1811,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7a07e6cc52496c1b10e1",
@@ -1719,7 +1829,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bab87c204fad9202f92d",
@@ -1736,7 +1847,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3910bd80fc5e7b4cfb3e",
@@ -1753,7 +1865,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "52545fb3db375b641bad",
@@ -1770,7 +1883,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2e464cfe31dda1df4628",
@@ -1787,7 +1901,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "505355ca283e7ea0c079",
@@ -1801,7 +1916,8 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d4036099b313192f4998",
@@ -1818,7 +1934,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f22c09aa883de99c81ac",
@@ -1835,7 +1952,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c071d209623dc8fd82a1",
@@ -1852,7 +1970,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bb6f7e5bb5cedcdc0dd4",
@@ -1867,7 +1986,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "38916009aac8f65430b4",
@@ -1884,7 +2004,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "40962882bdaeba1271ce",
@@ -1901,7 +2022,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "02a7a66badc0bc48433d",
@@ -1918,7 +2040,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6632d9ed283bc7350491",
@@ -1935,7 +2058,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ba47407acda4b40fb982",
@@ -1952,7 +2076,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f42c7fdb3017be0499a5",
@@ -1969,7 +2094,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "67cf389dc1863243b67f",
@@ -1986,7 +2112,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "751b666add777e37f7c4",
@@ -2003,7 +2130,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0604deeac3b53886faab",
@@ -2020,7 +2148,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6447c935045585aa5615",
@@ -2037,7 +2166,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a4f921579577e4063f6a",
@@ -2054,7 +2184,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "348b45c9b2d41189016e",
@@ -2071,7 +2202,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8eece5921ae450e4a874",
@@ -2086,7 +2218,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c01573c0fd43b6dcd366",
@@ -2103,7 +2236,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ef1d4fbed91aad570938",
@@ -2117,7 +2251,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "26b69982e97cebc0db7d",
@@ -2132,7 +2267,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "dbc804aa156c71691180",
@@ -2147,7 +2283,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3d3fa3553fbec78054f5",
@@ -2162,7 +2299,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ac110e4a4ed3b0265cc2",
@@ -2177,7 +2315,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6fc444c32cad4052d85c",
@@ -2194,7 +2333,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7e306349078324dc8bf9",
@@ -2211,7 +2351,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7dc9f3c3807d666e8adf",
@@ -2225,7 +2366,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2ad6c4f9e450850a9ba4",
@@ -2242,7 +2384,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c5af5bb2b33c9a1b9d82",
@@ -2259,7 +2402,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0c2e635f7b6d6cd99959",
@@ -2276,7 +2420,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7150e13d00adf53ae65e",
@@ -2291,7 +2436,8 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5cfc9cda94a1314a79d0",
@@ -2308,7 +2454,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0bb4d201145b231b35a4",
@@ -2325,7 +2472,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f5b42f65b800b97de202",
@@ -2342,7 +2490,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e366dd0bba521e4365de",
@@ -2359,7 +2508,8 @@
     "relevanceScore": 8,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b4c54e2e5c615454e1d2",
@@ -2374,7 +2524,8 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d3040552ea3d865593b6",
@@ -2391,7 +2542,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6ef79dfe4bb8fb33d81b",
@@ -2406,7 +2558,8 @@
     "discoveredAt": "2026-11-20T23:50:07.873Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5fca8cbc1a1a49dacec2",
@@ -2421,7 +2574,8 @@
     "status": "candidate",
     "relevanceScore": 7,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "16911c8e8c82c817d0c3",
@@ -2438,7 +2592,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5af8c4344a6cebd7f06d",
@@ -2453,7 +2608,8 @@
     "status": "candidate",
     "relevanceScore": 7,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "32c0d692185e0c4cb08f",
@@ -2470,7 +2626,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "25f24ed53a7bc9d5c2c5",
@@ -2485,7 +2642,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5c3289b04e31b07c7a1e",
@@ -2502,7 +2660,8 @@
     "relevanceScore": 6,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "531e60304c9b02cfe5d1",
@@ -2519,7 +2678,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "977f0619d188263873c7",
@@ -2536,7 +2696,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "36b7ef25f5b2e2457c3b",
@@ -2551,7 +2712,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d07b4360ee87f4d857e3",
@@ -2566,7 +2728,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "db53dcfe6cfc7f6df2c5",
@@ -2581,7 +2744,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "71ac8d6f10af266c79d9",
@@ -2596,7 +2760,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e560ecdeb55314f595dd",
@@ -2613,7 +2778,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9ed7062234125e6d26b6",
@@ -2627,7 +2793,8 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4a14d9e7e921ffc5403b",
@@ -2644,7 +2811,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5510cb962653963fde42",
@@ -2659,7 +2827,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7adb2eac5abada9987c7",
@@ -2676,7 +2845,8 @@
     "relevanceScore": 6,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0565ebb63ddc8d22ca5d",
@@ -2693,7 +2863,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "81537112f491b1272c20",
@@ -2708,7 +2879,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ca1746943edb1aa2285a",
@@ -2725,7 +2897,8 @@
     "relevanceScore": 6,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "dd3ff76131473b5aa9c2",
@@ -2740,7 +2913,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "af55e9e15faa24886090",
@@ -2757,7 +2931,8 @@
     "relevanceScore": 6,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0fa151c231c11e342675",
@@ -2774,7 +2949,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "caa2d141f03b89f5f280",
@@ -2789,7 +2965,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "54e1ce4435153c557fe9",
@@ -2803,7 +2980,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9e04fa9851f793ee7c7b",
@@ -2818,7 +2996,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4f7256ed824b6320907b",
@@ -2833,7 +3012,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0ca55b514bf4311053b5",
@@ -2847,7 +3027,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3316d4d66c276d60478b",
@@ -2864,7 +3045,8 @@
     "relevanceScore": 6,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "13a01c7188c265826865",
@@ -2879,7 +3061,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f8b8924239c6e71a2ae4",
@@ -2896,7 +3079,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cc71248832110124a002",
@@ -2913,7 +3097,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9171aba5c73e611e910b",
@@ -2927,7 +3112,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "93d986538d8c269dfe9c",
@@ -2944,7 +3130,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e4442b63bd18ad9c94d4",
@@ -2961,7 +3148,8 @@
     "relevanceScore": 6,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d1ead845fb2f7309acf5",
@@ -2976,7 +3164,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5cf63c9cb6ee9b3ba340",
@@ -2991,7 +3180,8 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9d0507f7bba930fbbc54",
@@ -3008,7 +3198,8 @@
     "relevanceScore": 6,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "486986438accf661ee2e",
@@ -3025,7 +3216,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1ca251e322ba944e803b",
@@ -3042,7 +3234,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7c55014ca55ca3160b14",
@@ -3057,7 +3250,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8a65d98eb7f669a8c038",
@@ -3072,7 +3266,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2fa80f964fca64d7dbd2",
@@ -3087,7 +3282,8 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8890aef09b5cc4dafb5c",
@@ -3102,7 +3298,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f45ba5a8858837961933",
@@ -3117,7 +3314,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4378f1503bbf7aef5d2d",
@@ -3134,7 +3332,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "febcd9132fa7aece89c3",
@@ -3151,7 +3350,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "46af486cd5a876e1583c",
@@ -3168,7 +3368,8 @@
     "relevanceScore": 6,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "204b9bb212cd4af83767",
@@ -3185,7 +3386,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f82a71d1e1bd3b4f6d9e",
@@ -3200,7 +3402,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9d5a138361e7e3e27ed7",
@@ -3215,7 +3418,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2164b855e04c405d9cb0",
@@ -3230,7 +3434,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "169f54ac8fc9ecda9b2d",
@@ -3245,7 +3450,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "595423b17eba104592e6",
@@ -3260,7 +3466,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "722f8d148b8ca865e191",
@@ -3275,7 +3482,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "973863447deb24ccd5f1",
@@ -3290,7 +3498,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f4dc23fa0494291edeb2",
@@ -3307,7 +3516,8 @@
     "relevanceScore": 6,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fe3d4b667cc7e0841613",
@@ -3322,7 +3532,8 @@
     "discoveredAt": "2026-11-20T23:56:31.147Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8bb372124be78864fa7d",
@@ -3337,7 +3548,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "87594a74c2c2ea5a72e5",
@@ -3352,7 +3564,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "94683f2727ed302a289e",
@@ -3369,7 +3582,8 @@
     "relevanceScore": 5,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4bacad32927935b069e3",
@@ -3386,7 +3600,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c7d6b2004e5ccc7d2605",
@@ -3403,7 +3618,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8e9b832d0adec733aad1",
@@ -3420,7 +3636,8 @@
     "relevanceScore": 5,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "99a15abb73e568fbc33b",
@@ -3437,7 +3654,8 @@
     "relevanceScore": 5,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6431f12aea24b934167a",
@@ -3451,7 +3669,8 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 5,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "835c6a1e4ed1c12099f4",
@@ -3468,7 +3687,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e91b6a5b1c357e7a2f35",
@@ -3485,7 +3705,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6fae603aedba6daabab9",
@@ -3502,7 +3723,8 @@
     "relevanceScore": 5,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5519b80b55535cb7a7c7",
@@ -3519,7 +3741,8 @@
     "relevanceScore": 5,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0d0af19fe9597c2c272f",
@@ -3534,7 +3757,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 5,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8786a1ded8d39418b0c3",
@@ -3548,7 +3772,8 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 5,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "72e67ba98e4aac09a9ca",
@@ -3565,7 +3790,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "88ed33d7fd92eb226475",
@@ -3582,7 +3808,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8ad25a1d7ef55789344b",
@@ -3599,7 +3826,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ef86a090cdb8d03071f0",
@@ -3616,7 +3844,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5c028482e381359cf3bd",
@@ -3633,7 +3862,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7193f0d5fd9c019aa485",
@@ -3650,7 +3880,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ecdb925dfaace5d887f4",
@@ -3665,7 +3896,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "db0a7149d6eb9e2a057f",
@@ -3682,7 +3914,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b5cc9b4054e658adb6c0",
@@ -3699,7 +3932,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "11140fe983ddde9f2e47",
@@ -3716,7 +3950,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a47bea7343e39bb03c33",
@@ -3733,7 +3968,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cbd4c75b2f95e45c5b54",
@@ -3750,7 +3986,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "75b4a1669d2a149c6b5f",
@@ -3767,7 +4004,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0c364dc099d75fecff0b",
@@ -3784,7 +4022,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c25e7442623aecd78ffb",
@@ -3801,7 +4040,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e2882f545504fb619441",
@@ -3818,7 +4058,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8e8ad12f0ef207f4b9f6",
@@ -3835,7 +4076,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0c35d876102ef0c10fad",
@@ -3850,7 +4092,8 @@
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "79ce2b20949686b60dc5",
@@ -3867,7 +4110,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f2bad6d2cd82f5ba4dce",
@@ -3884,7 +4128,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "be2e07bd120f697691b3",
@@ -3901,7 +4146,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8541ac4deb7419e96c90",
@@ -3918,7 +4164,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b75edaf9b9a60192880d",
@@ -3935,7 +4182,8 @@
     "discoveredAt": "2026-11-24T01:27:45.538Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f5ae3b0ea7fa5deda0f2",
@@ -3952,7 +4200,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ec7fa566869fb1b2c68d",
@@ -3969,7 +4218,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d545560f3893f0cfcc23",
@@ -3983,7 +4233,8 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ef6a106a04d46ebe7206",
@@ -4000,7 +4251,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b69019af21f3041cd4a9",
@@ -4017,7 +4269,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "abd5247b6a8f9230437b",
@@ -4034,7 +4287,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b0b293d5713f682bdf9a",
@@ -4051,7 +4305,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1fc74b046a2180c45c9d",
@@ -4068,7 +4323,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cfe35c7860703096c9ae",
@@ -4085,7 +4341,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "62d2dc746cb04fbd3f0a",
@@ -4102,7 +4359,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d785a26073de5b2a666e",
@@ -4119,7 +4377,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0a8f553b8f9d0b5cc893",
@@ -4136,7 +4395,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c043119257a5b5baa64d",
@@ -4153,7 +4413,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "02cfc047bf86fb1b13c0",
@@ -4170,7 +4431,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a33fcda55a912a33d098",
@@ -4187,7 +4449,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f7170871179d03ee1cc4",
@@ -4204,7 +4467,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7a308713dc4aa623ecb5",
@@ -4221,7 +4485,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "06054441df915641c7c8",
@@ -4238,7 +4503,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fdeffe0e9bdcbc3ea04e",
@@ -4255,7 +4521,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "17d2069a40b7b4316cf4",
@@ -4272,7 +4539,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "13da35e9ee2a9465d5fc",
@@ -4289,7 +4557,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "edb07199d27444993dff",
@@ -4306,7 +4575,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cb932b090de5a5644811",
@@ -4323,7 +4593,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2e3d13d5108cccf8c4cd",
@@ -4340,7 +4611,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f720dc04ac4c78fac8c1",
@@ -4357,7 +4629,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "69e5654e448b17546bba",
@@ -4374,7 +4647,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cf21f4d2c55fe4dc6c89",
@@ -4389,7 +4663,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "92eb4709630977b45fed",
@@ -4404,7 +4679,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1a8d3b3a380435d6bc57",
@@ -4421,7 +4697,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3404068d76b9e7aedf8d",
@@ -4438,7 +4715,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e0ae0b1fc968f0d0e956",
@@ -4455,7 +4733,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "06e4bdc269942b53009b",
@@ -4472,7 +4751,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "84ef1e89e439f8c66f8b",
@@ -4489,7 +4769,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "37d743a1c95deb1345d9",
@@ -4506,7 +4787,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0695c725590e3452bd85",
@@ -4523,7 +4805,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "842062180ddc2525d72d",
@@ -4540,7 +4823,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0275cc7bb2473b823656",
@@ -4557,7 +4841,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "738e0e8f49eba8b7f3d7",
@@ -4574,7 +4859,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8352a7e1a98ba5b0bbd8",
@@ -4591,7 +4877,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2fbeae3766958027a39c",
@@ -4608,7 +4895,8 @@
     "discoveredAt": "2026-11-24T01:37:35.806Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "76f9c9ba54bf172d7ab8",
@@ -4625,7 +4913,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a53d62d3826d14be2b2e",
@@ -4642,7 +4931,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f9a9d0ed7fe60b045e79",
@@ -4659,7 +4949,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5789f4d1c59b7bbe4602",
@@ -4679,9 +4970,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE55ZjY3aktZeGtjYkVpS0xaRnVENjRGM2RGQm4zam1yNlN5Y1ZCUXNsXy1ZbW0zaEpQYzFxT3BCLTRHcUE3cThoYm15ZnhOMmJPSFNz?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.134Z"
+    }
   },
   {
     "id": "3749e5cb2966198e7064",
@@ -4701,9 +4998,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWEhUVmxCSmo1a0RGUi14UW9KMVFwWUhWb3lNcjF3ZFZUZ2l1WWdoSkxyM29IaGwtUnpBWWJjWHZDS0hWeE55dlhKUE04WGhBamlRdWxPYV9lbmQwbzhSYzNOdC1jVlV1LTBhTlhFNnc2VmFQUzZBcEM3NXR1QkRoZW8wRGZHX0hSNGdPS2E0Yw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.122Z"
+    }
   },
   {
     "id": "424f0bfdc18f2914ffe3",
@@ -4725,7 +5028,12 @@
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
         "source": "og:image"
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "failed",
+      "resolvedArticleUrl": "",
+      "fetchedAt": ""
+    }
   },
   {
     "id": "2bf8863898c4ab821238",
@@ -4745,9 +5053,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOaHQzN25jVE42cDl2clJUNlBjXy1jVEJ1RWpPM0l3eVhyd194Mm1NSzJHQmZtRlptU19ocjQ4TkRlTFJTRURldVhiMjFKcG55M3BQa0VJU2dqdnVqQXBxRVlReExQdjBwcEN0U2Z0VUpSMWhDNktnaUt3WE41S1lxcHNDRWpDMC1MQ3pTdnQzTGFRZ1Zfa2FGbFhob9IBrwFBVV95cUxNZ3VwUnBBX3UwbXFIblg1dHlhSGdKS1I3eUtabkM1SUs1N245dWd2cjU4V0RHN1h3dVNDNWNwRVRyX1B2ZUx0QW45MUJFTk5HUkUzMTVMZFZMd3ZCb1d0dW5LT0k4S1lrRUlMbVBJY0QxelBmSkUwV1FJQlcyYkpTS0RiU2VrZ1FQSnA0VC1IeWhTb3lrdFFhT0hjdjUzQlowU1p0bUJVOS1xdk5SdF9V?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.272Z"
+    }
   },
   {
     "id": "4c0e4c953d11db9985bc",
@@ -4767,9 +5081,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPUExGVUViZXRPdnY5UFhPTDhfX0ttejFJNlBlZnJRM3AxTUczSTNoX3dKeHUxRWI1dG5zX0RfNzlVTHctQkZ6MGtUUHVXUHRpQWFXWFQ0UlRxMFJ5SjhndEVVU0sxakR4LVVMakwwbENnUHFNZERCOERiZy1XcFM0cm1CaERlNVJPQlcwRkZ1ZWt2TGfSAacBQVVfeXFMTW9hNC1EcF9sNnR1QlJ0NEJ4RG9qSXpqOXdCT0MweWR3Q3RIMHRVc05td1hrLUk0eFpCQmZnUy0tQWRnbHhaeGxBMVhJTnhMM2YzSjg0VVQtQnY5cDM3TkY3OFVNQTA4SkgwSi1Rd3dUeFZtWVQyWUd5RHBqYlN5VXBhSEhYcDZwNkl0SmlPNDRTbVNveVVsLVBZZ0pZNDNzYUE4M3FfaE0?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.261Z"
+    }
   },
   {
     "id": "50ceca27d7535a4d8025",
@@ -4789,9 +5109,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE16UFBjNW5xSUJGWWVONUctRzNhX0hqWDBEWEhybk1Uc1VicC1zdEtmQmlkZkszT2k1WHRXS1RnUGgxVjdsSnhhMEc1SThaNldVMkd1Qw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.389Z"
+    }
   },
   {
     "id": "f3839768de1ea652478e",
@@ -4811,9 +5137,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFAzZ19QM2VtN2taT1dzYWtuenU3TU5jSDN4eXRMck9LTk14dGF2Y0FNQ1FwSENONGFBbG83YmZkTEJTaHVFWm0zSDJyd1RVQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.395Z"
+    }
   },
   {
     "id": "f3c475d3e19ae1b484d2",
@@ -4833,9 +5165,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE00U3pGU0toYm1yVmVBTzU0VW1sTHctWDdUOG1nclF5eVF3RmJvd0Z3ekRkd0tTX3gzX2haanNpS2QzX0F0VVVNb3pPQmY1UQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.412Z"
+    }
   },
   {
     "id": "b17123034ead15446199",
@@ -4855,9 +5193,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE4tTDBYRXJIenJCWjRURzdKLW5OVTI2eHY5UElCNHlLRHlBSktOOEFvYTNkbndrVHMzZ2JSV3VYbUZMNGJEZnVObFFGUzhGZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.516Z"
+    }
   },
   {
     "id": "d843beb57165a2a70eec",
@@ -4877,9 +5221,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9XblJ5WGhtOUQ4VDBhNWhjekhhakNlUEI2UnpDUTZ4aG9zaC1vbF9ZZnlmZW4tNzJNMzg5bGNBQzNmdXRqaEZZSXl0MUFYQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.507Z"
+    }
   },
   {
     "id": "b525469e6211d49a3f21",
@@ -4899,9 +5249,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1lcUl0Q2ZNZnZncHNBNEhYaFQ1WjVVUDJHVmJwSmNDdDVZNWgzQ3hfMkZyRmdYQUZzMDk4N1FwM1R4ZWxfOTRtcEtBdnRsaFB2dmtBSlRxbW95dHZZNzhWaDNGUU5mZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.525Z"
+    }
   },
   {
     "id": "4de17e32340a417f9099",
@@ -4921,9 +5277,15 @@
     "thumbnailMetaCandidates": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "source": "og:image"
+        "source": "og:image",
+        "priority": 1
       }
-    ]
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "resolvedArticleUrl": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9CTzhVZmI0OTV0di1icVB1Rl9oNkFma0Zwd1ZnY2dvODlMYzRacnZacFAwVWg1QnBkdk1xUkR4LWRRM2VmVXpOYTBQR1U5M3dJdkVWeUhEM0drTXJVTXRmVXlYS2Vqdw?oc=5&hl=en-US&gl=US&ceid=US:en",
+      "fetchedAt": "2026-11-24T04:38:09.610Z"
+    }
   },
   {
     "id": "b1e1ae5339d5d8395f0f",
@@ -4940,7 +5302,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "10f410223a71ad24f168",
@@ -4957,7 +5320,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b360e201e65b71391c05",
@@ -4974,7 +5338,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2934c01e3757461b53fc",
@@ -4991,7 +5356,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d39473f4d9e8aa4c3f3d",
@@ -5008,7 +5374,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b1d5be19cd3c129040e8",
@@ -5025,7 +5392,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b88dfe6d3a23bb1a5c23",
@@ -5042,7 +5410,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "909b69436085d6f4cdc9",
@@ -5059,7 +5428,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "90df5ad1a8a9b1339907",
@@ -5076,7 +5446,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5df9364bd800de08dcb9",
@@ -5091,7 +5462,8 @@
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6a8927dc7570e2cfcfb9",
@@ -5108,7 +5480,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a691e3ca2ecad0a8b65f",
@@ -5125,7 +5498,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fc53dc31f09a2cb20387",
@@ -5140,7 +5514,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "69e28dcface3c9ea9c01",
@@ -5157,7 +5532,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "40e99783e9a54a7aae44",
@@ -5174,7 +5550,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8442c17fd7ce6d79fdb7",
@@ -5189,7 +5566,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "dd2f836b2b73b749b77f",
@@ -5206,7 +5584,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e55d0b52c8ffc6beec20",
@@ -5223,7 +5602,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "987c89ff7a3074a57d0d",
@@ -5238,7 +5618,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "55208a6c3b32c0b64513",
@@ -5255,7 +5636,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "58ac8413c9155ba09700",
@@ -5272,7 +5654,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b94466577109a5d521c3",
@@ -5289,7 +5672,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2b200ae3681bf347a00e",
@@ -5306,7 +5690,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0a79e9b2c1bc6fa552c7",
@@ -5321,7 +5706,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f3c9ffdff6e06a821484",
@@ -5338,7 +5724,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2044f6dd67fc401e855d",
@@ -5355,7 +5742,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2cc937784bab9b638ab1",
@@ -5370,7 +5758,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e45a01657615eaf68da8",
@@ -5384,7 +5773,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "78685b2d2fa47c05c355",
@@ -5399,7 +5789,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ad1ac08697616febe3fe",
@@ -5414,7 +5805,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bfaa46d3d8e57c76318e",
@@ -5429,7 +5821,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6bd79f1302dfeeb2b355",
@@ -5444,7 +5837,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5ab34f59cb2156d0a842",
@@ -5459,7 +5853,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "25b6279bf18574f613bc",
@@ -5474,7 +5869,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3a2fb5e95f83d69be88b",
@@ -5489,7 +5885,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7c5ae7782fc7692a04b2",
@@ -5504,7 +5901,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "53f27249054bcc579d03",
@@ -5519,7 +5917,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9f2d094e977a1155f997",
@@ -5534,7 +5933,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "964b7109a4560740cc9c",
@@ -5549,7 +5949,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0d3a79b2026bd8c52d30",
@@ -5564,7 +5965,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2a9838dbd9ecd315a4ab",
@@ -5581,7 +5983,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "21423435129845518dc0",
@@ -5598,7 +6001,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9cf55b9b8f60c14ec37c",
@@ -5613,7 +6017,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "06fd05eb63837e343194",
@@ -5628,7 +6033,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "17d30b6c72a1130f0d7e",
@@ -5643,7 +6049,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5aff90b0bea8cfb5124a",
@@ -5658,7 +6065,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c79b913cd5269566f6e2",
@@ -5673,7 +6081,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fa14ca4a0704a49b833e",
@@ -5688,7 +6097,8 @@
     "discoveredAt": "2026-11-20T23:56:31.147Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "51172d062831f6d64eee",
@@ -5705,7 +6115,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ae17aa98a31eebae1071",
@@ -5720,7 +6131,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "55361d9baad8fcb26598",
@@ -5735,7 +6147,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "95da8ee067f96b3dd7cd",
@@ -5750,7 +6163,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bab032981dad57a1a78e",
@@ -5765,7 +6179,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7f33bd676c26b832904a",
@@ -5782,7 +6197,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a56ad9a7f817afe40f5a",
@@ -5797,7 +6213,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7b62ae58ad755ae6e662",
@@ -5814,7 +6231,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "31e78ea7ffa147385a50",
@@ -5829,7 +6247,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "746bf867039996e9129f",
@@ -5844,7 +6263,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7fab2b203223feeaabed",
@@ -5859,7 +6279,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "16df2d10f517c8b81752",
@@ -5874,7 +6295,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "256e4fbbb1cf86bf83ec",
@@ -5889,7 +6311,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "999ee809a86a19a05a8f",
@@ -5904,7 +6327,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "47b9da25d1f6798d5cf7",
@@ -5919,7 +6343,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3899975550001b9d442e",
@@ -5936,7 +6361,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d9c0659f41dd8d37e67a",
@@ -5953,7 +6379,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fd7a97425929cc290a65",
@@ -5970,7 +6397,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5c21ee1d562f94711419",
@@ -5985,7 +6413,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2493b52e83a3563c7ab8",
@@ -6000,7 +6429,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f4922ecfee2a8962ad17",
@@ -6017,7 +6447,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b9faff8ef3f2dbbd8ec8",
@@ -6032,7 +6463,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e3185433ac99babfd884",
@@ -6047,7 +6479,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8692641e78276476e633",
@@ -6064,7 +6497,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "71eed313cd941f9a9ab8",
@@ -6079,7 +6513,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d6082c3c426212328ad1",
@@ -6094,7 +6529,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2e97fe4fbc3963c3cb94",
@@ -6109,7 +6545,8 @@
     "status": "candidate",
     "relevanceScore": 4,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bcd2515d1976224cf92d",
@@ -6124,7 +6561,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cb7e88e3e82ba1e4fc1b",
@@ -6139,7 +6577,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bff6720854f7eb4e3def",
@@ -6156,7 +6595,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "27f7c3d5530d64ab0e94",
@@ -6171,7 +6611,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d16e68a6befd3a456a0a",
@@ -6188,7 +6629,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bacb6e570a86d73eb826",
@@ -6203,7 +6645,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7e4075efc1b018aea1ac",
@@ -6220,7 +6663,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d7d5dfc21ed396a95861",
@@ -6235,7 +6679,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4eaa7d0ec2c29b1dab56",
@@ -6250,7 +6695,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d17979b34686db834438",
@@ -6265,7 +6711,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bc717bb845ce520a7f25",
@@ -6282,7 +6729,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "29e4aa508c81f2cae6de",
@@ -6299,7 +6747,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5654c50ab24f85195e42",
@@ -6316,7 +6765,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b6f6122371037d8b2010",
@@ -6331,7 +6781,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7b06fa1440f3f0e7f75f",
@@ -6345,7 +6796,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b750cee7501607b919c6",
@@ -6360,7 +6812,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "70357f213c66af66ea7e",
@@ -6375,7 +6828,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8bc46b4b6932baaa10d8",
@@ -6392,7 +6846,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6efc8cbc7f6f2c1e8b19",
@@ -6407,7 +6862,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6935dcfc3aced062050b",
@@ -6422,7 +6878,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "26225a3ef2b76347a881",
@@ -6439,7 +6896,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e9e652d917b96dda596a",
@@ -6456,7 +6914,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e60ba569cec4bc718bf8",
@@ -6473,7 +6932,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b70be3a9a496587fee53",
@@ -6490,7 +6950,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c284aa3a39f2a6ace027",
@@ -6505,7 +6966,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "122b920e9c1e791d6b76",
@@ -6522,7 +6984,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b0ac1c78310692e42c8b",
@@ -6537,7 +7000,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9bb7be00b05b291ef50c",
@@ -6554,7 +7018,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "aa869338e8a45def8d1d",
@@ -6569,7 +7034,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d44d9b269e275557e749",
@@ -6584,7 +7050,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9707f9362b031902672d",
@@ -6599,7 +7066,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "32a5cf06e53217f34898",
@@ -6614,7 +7082,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a73921e98c7f917c34d7",
@@ -6628,7 +7097,8 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6b6091eb083634909a69",
@@ -6645,7 +7115,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2d6b7e490866c493905b",
@@ -6662,7 +7133,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "82b58e7406e2e7b2b392",
@@ -6677,7 +7149,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "802f4f35ab16f6ef2ca2",
@@ -6694,7 +7167,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "dfe5a4552002e96b8fb6",
@@ -6709,7 +7183,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "eb99d98a2a87a41f204a",
@@ -6724,7 +7199,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "642ab52db7684ca29f7d",
@@ -6741,7 +7217,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6ed9bd9514d3da81ea3d",
@@ -6756,7 +7233,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "997293d43b704ede49f9",
@@ -6771,7 +7249,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b32c38c2da8c9dd065d3",
@@ -6786,7 +7265,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1daf8246832faf97708e",
@@ -6801,7 +7281,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1c7d7e3506428904ce07",
@@ -6816,7 +7297,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "580afa95c3c7db63d90a",
@@ -6831,7 +7313,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c0506a2be2916874bafa",
@@ -6846,7 +7329,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "dd28090bc742f0d08bb6",
@@ -6861,7 +7345,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3b8d2abb05fb94ed658d",
@@ -6876,7 +7361,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3a7669cb9d9f35f91d32",
@@ -6891,7 +7377,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ff8453b515d7c6784caa",
@@ -6906,7 +7393,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "99c45009f628be697831",
@@ -6921,7 +7409,8 @@
     "status": "candidate",
     "relevanceScore": 4,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "958ce5e6a5c89cc86680",
@@ -6936,7 +7425,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5d211400dc3b1089d2ea",
@@ -6951,7 +7441,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ee9a56de9f9a41f727ce",
@@ -6966,7 +7457,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a49d099f625d57ef3598",
@@ -6981,7 +7473,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "353f19df41775b3fc5fd",
@@ -6996,7 +7489,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "35a64282d549afa203b1",
@@ -7013,7 +7507,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "22299f44ceea0b05d93e",
@@ -7028,7 +7523,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "23336ce2636daacf0837",
@@ -7045,7 +7541,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "078e0e7f607088c60161",
@@ -7062,7 +7559,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b768c3d5581b5257ecd3",
@@ -7077,7 +7575,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d984024cf50dc6ff84ed",
@@ -7092,7 +7591,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "dd776d22b5997d29aec7",
@@ -7107,7 +7607,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cdbba5e11b059744f811",
@@ -7122,7 +7623,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e3af5c03b1f7270892ad",
@@ -7137,7 +7639,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8b4104f7d4c4602530cb",
@@ -7152,7 +7655,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "41fb0328027b70017c46",
@@ -7167,7 +7671,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5b3f1a232aa9056f1462",
@@ -7182,7 +7687,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6810722f81eb766d3d28",
@@ -7197,7 +7703,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f9c37fd52432a10ae053",
@@ -7212,7 +7719,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ee6edecb7f42aca0176d",
@@ -7229,7 +7737,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fbabdfd09af265cfb2b5",
@@ -7246,7 +7755,8 @@
     "relevanceScore": 4,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7b02def2d2209d68c499",
@@ -7261,7 +7771,8 @@
     "discoveredAt": "2026-11-23T13:17:52.359Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f439f96df4c2b82bcdbb",
@@ -7276,7 +7787,8 @@
     "status": "candidate",
     "relevanceScore": 4,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c940eaad1a24a48ad6cb",
@@ -7291,7 +7803,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ab925155e95b991f7a30",
@@ -7306,7 +7819,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "819d9741c9a45269a11f",
@@ -7323,7 +7837,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1dca2488560369f169b0",
@@ -7338,7 +7853,8 @@
     "discoveredAt": "2026-11-23T13:17:52.359Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5a691fb189398746f700",
@@ -7353,7 +7869,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "90ea09550d792ddf4ba4",
@@ -7370,7 +7887,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ad6b73255dd911ab5f58",
@@ -7385,7 +7903,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "22364b4c56f4ac1cd050",
@@ -7400,7 +7919,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "623b489239baf794b4c8",
@@ -7415,7 +7935,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f12098d55f1fbe148320",
@@ -7430,7 +7951,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "10f98211db302ef9ba08",
@@ -7445,7 +7967,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0418f51db3aac9435a2b",
@@ -7460,7 +7983,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fdd47563ddf669b99655",
@@ -7475,7 +7999,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "731a967aaff066a47930",
@@ -7490,7 +8015,8 @@
     "discoveredAt": "2026-11-23T13:32:48.446Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7a893a29d8b8b252a210",
@@ -7505,7 +8031,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a95a915b2de2d86ebcb0",
@@ -7520,7 +8047,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "03a4109869eb39230036",
@@ -7537,7 +8065,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "de3068502d1886167a60",
@@ -7554,7 +8083,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2f0bafd48512477655fb",
@@ -7571,7 +8101,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d1da9e17ee71c2d622af",
@@ -7588,7 +8119,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b81292bc0048061b0bc8",
@@ -7603,7 +8135,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "165a3ef3d92b6beaaee4",
@@ -7618,7 +8151,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b04ced3277c9b865a12a",
@@ -7635,7 +8169,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5be6eebf4a5395310d70",
@@ -7652,7 +8187,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "60644efe73799b9e95f3",
@@ -7667,7 +8203,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7fb5a7b53b6bf2f4ccda",
@@ -7682,7 +8219,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8b12fcdc49043d1b4db3",
@@ -7697,7 +8235,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d404b0f47048b18c69d8",
@@ -7712,7 +8251,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "500eb0d1a5fbbbc43b8f",
@@ -7727,7 +8267,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "079e711805a8622a00cc",
@@ -7742,7 +8283,8 @@
     "discoveredAt": "2026-11-23T03:44:03.473Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2fea96ff976d41018629",
@@ -7757,7 +8299,8 @@
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "81e91b99951b92a7d30b",
@@ -7774,7 +8317,8 @@
     "relevanceScore": 3,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bd57db9dfc7a9f22fa01",
@@ -7789,7 +8333,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 3,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4c81902994cb300f2f26",
@@ -7806,7 +8351,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "49569c71c1d5417a8012",
@@ -7823,7 +8369,8 @@
     "relevanceScore": 3,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "611095f69a8e22f826ec",
@@ -7840,7 +8387,8 @@
     "relevanceScore": 3,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "713c882167df4a43d78e",
@@ -7855,7 +8403,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 3,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4f417f562a8157cde0c5",
@@ -7872,7 +8421,8 @@
     "relevanceScore": 3,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0586394ba43678e94f7b",
@@ -7889,7 +8439,8 @@
     "relevanceScore": 3,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9348d203eba212859b5b",
@@ -7906,7 +8457,8 @@
     "relevanceScore": 3,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5de9852ffd1e9346c40a",
@@ -7921,7 +8473,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 3,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "20625ff7bedc1ba9bca0",
@@ -7936,7 +8489,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 3,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "43d061ffc340f94d1801",
@@ -7951,7 +8505,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 3,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f4e455c058fa1ebf3358",
@@ -7966,7 +8521,8 @@
     "status": "candidate",
     "relevanceScore": 3,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a3629564525d74e9ed9b",
@@ -7983,7 +8539,8 @@
     "relevanceScore": 3,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6a07f752f857bd683ef8",
@@ -8000,7 +8557,8 @@
     "relevanceScore": 3,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1b150414d6337107bfda",
@@ -8015,7 +8573,8 @@
     "status": "candidate",
     "relevanceScore": 3,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cb1201e0bdebc3559f2e",
@@ -8032,7 +8591,8 @@
     "relevanceScore": 3,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f9a1693ef0575d015c26",
@@ -8047,7 +8607,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 3,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f796533a0bd763dc729f",
@@ -8064,7 +8625,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f1b2da13f6773fc61551",
@@ -8081,7 +8643,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5f90ff405814b411240b",
@@ -8098,7 +8661,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "23e59a79deaa9ebbe579",
@@ -8115,7 +8679,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "df22c0d77881236817c8",
@@ -8132,7 +8697,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e20a0ecb6597206601fd",
@@ -8147,7 +8713,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "eafacadd063cc7b62616",
@@ -8164,7 +8731,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1719cb2ad2c2df31a1ae",
@@ -8181,7 +8749,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fbea33a1fd85aea24c09",
@@ -8198,7 +8767,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4fb7a7f09d028c271eda",
@@ -8213,7 +8783,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5f1e9b775451bdf62acf",
@@ -8230,7 +8801,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "352a774334e5912dce76",
@@ -8245,7 +8817,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d5114e00432ebda3364c",
@@ -8262,7 +8835,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "982beaa6c957dae22b09",
@@ -8279,7 +8853,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d82c25f677ce4fec4851",
@@ -8296,7 +8871,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "482e1d6b26bc4b632c05",
@@ -8311,7 +8887,8 @@
     "status": "candidate",
     "relevanceScore": 2,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "54881ff0859ebb66345e",
@@ -8328,7 +8905,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9f7af01896e15953241a",
@@ -8345,7 +8923,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0d564fc3a4a838386872",
@@ -8360,7 +8939,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3c42deb4bbd97ca86088",
@@ -8377,7 +8957,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3a45b62aecc6cd192aff",
@@ -8394,7 +8975,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d6e4cd1bf70769cbd429",
@@ -8411,7 +8993,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "56e8187782f327adf802",
@@ -8428,7 +9011,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b7828365b712c66fbe01",
@@ -8445,7 +9029,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b017bdaa003c1e3d1ead",
@@ -8462,7 +9047,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e7bdb8994875eef07c57",
@@ -8479,7 +9065,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bff6a990f1cff17dfe6e",
@@ -8496,7 +9083,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "437c6c3e40f3cedcab7e",
@@ -8513,7 +9101,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c6b0c84d57f6c0fa6835",
@@ -8530,7 +9119,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1be417d4350bbd0eda2f",
@@ -8547,7 +9137,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "cad08dc0570a9e44a159",
@@ -8562,7 +9153,8 @@
     "status": "candidate",
     "relevanceScore": 2,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5dbadce2084bdc2c4a27",
@@ -8577,7 +9169,8 @@
     "status": "candidate",
     "relevanceScore": 2,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "9e2d162fd7af13f2d9bd",
@@ -8594,7 +9187,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3595787b5231bf8fcd4e",
@@ -8609,7 +9203,8 @@
     "status": "candidate",
     "relevanceScore": 2,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "bdcdffa33522a1ee441e",
@@ -8626,7 +9221,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3c5a7fca8de45a95fbaf",
@@ -8643,7 +9239,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e706779f30fbad3119f5",
@@ -8658,7 +9255,8 @@
     "status": "candidate",
     "relevanceScore": 2,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0232e2ee3a7feab8e891",
@@ -8673,7 +9271,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "370497739e8cb32dfeec",
@@ -8688,7 +9287,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6d3a8addce668117f64a",
@@ -8703,7 +9303,8 @@
     "status": "candidate",
     "relevanceScore": 2,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4af3a681516d20985f22",
@@ -8720,7 +9321,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "43bb7950c61c09bf3e05",
@@ -8735,7 +9337,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f1b3becbcac977e26165",
@@ -8752,7 +9355,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "40527866584aac7f856f",
@@ -8769,7 +9373,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2a5cdce5f689c9a97d8e",
@@ -8786,7 +9391,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3b944e1f855a23acfb70",
@@ -8803,7 +9409,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "be37c06ed51e12adf06c",
@@ -8820,7 +9427,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "17caa150297102c6120f",
@@ -8837,7 +9445,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "729c3b5f8bbadba9d6d4",
@@ -8854,7 +9463,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c9fe812075c6c3da88aa",
@@ -8871,7 +9481,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "98723f763569c12bcc09",
@@ -8888,7 +9499,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "064cf81f6408c666333f",
@@ -8905,7 +9517,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "734fb67e4b8a31f5e210",
@@ -8922,7 +9535,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a0e68a62994dd2fa5699",
@@ -8939,7 +9553,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ffe53007be1645d62304",
@@ -8956,7 +9571,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "08011936606ca1baaf8d",
@@ -8971,7 +9587,8 @@
     "status": "candidate",
     "relevanceScore": 2,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fec617977efc9d5c00a8",
@@ -8988,7 +9605,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7640a088e4fd2b807651",
@@ -9003,7 +9621,8 @@
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "fb99b37b7e1a2fb89402",
@@ -9020,7 +9639,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "48b2d1ad17b1d971a657",
@@ -9037,7 +9657,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3a8ec5afad92fdf39a1a",
@@ -9054,7 +9675,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d81640c53922aa36b4a7",
@@ -9071,7 +9693,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "676edde6aeb7b7c24318",
@@ -9088,7 +9711,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4359850b38f5f1e3814e",
@@ -9105,7 +9729,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "968403ec3538c963ce32",
@@ -9122,7 +9747,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "e6230eef8087eb94c8b5",
@@ -9139,7 +9765,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "852f6ba00619a80af3ac",
@@ -9156,7 +9783,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a99ca16e361c35345a7c",
@@ -9173,7 +9801,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "45634a790d2a84bc65c9",
@@ -9190,7 +9819,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "d2db4e5dee99d0b7a953",
@@ -9207,7 +9837,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b76175feef717c860076",
@@ -9224,7 +9855,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "99d0530689ca72ea7caa",
@@ -9241,7 +9873,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "5203c7709e364ec2bcb2",
@@ -9258,7 +9891,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "76c8d3cf01c04920bbbd",
@@ -9275,7 +9909,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "37e3074fa36cff46fd71",
@@ -9290,7 +9925,8 @@
     "status": "candidate",
     "relevanceScore": 2,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a711e45950c0bee68a84",
@@ -9307,7 +9943,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "956c97f88be8f754a08a",
@@ -9324,7 +9961,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8212fdc60bd2165a8b6c",
@@ -9341,7 +9979,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c2b1ab6757efcd442c71",
@@ -9358,7 +9997,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "6f8970292623a24840f0",
@@ -9375,7 +10015,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4e8a9b5dc888eaaacbc2",
@@ -9392,7 +10033,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "08de3502c867886f4023",
@@ -9409,7 +10051,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8e72523ad86b80423d55",
@@ -9426,7 +10069,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4db7e37fa45f6746f7c7",
@@ -9443,7 +10087,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2b6d48f4ee666a91a8d3",
@@ -9458,7 +10103,8 @@
     "status": "candidate",
     "relevanceScore": 2,
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "2713b2f9c153b0c39d06",
@@ -9475,7 +10121,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "310895eea60e5aea58d7",
@@ -9492,7 +10139,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "eec8aac2f678701ad098",
@@ -9509,7 +10157,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "43a4044f89681ee73e5b",
@@ -9526,7 +10175,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "a214cd3769b9f1ea090e",
@@ -9543,7 +10193,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b3528f5bd8d368cb56c9",
@@ -9560,7 +10211,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "959d5cb11530908018d2",
@@ -9574,7 +10226,8 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "99aa54efe34a06c263f3",
@@ -9591,7 +10244,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8d0c042a1e8ed78e853e",
@@ -9608,7 +10262,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "65506b2ca1bd961d0129",
@@ -9625,7 +10280,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "b8367b216b0f784cbed4",
@@ -9642,7 +10298,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "36a5129f799356892c18",
@@ -9659,7 +10316,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "572bbfacf69e630d9a7c",
@@ -9676,7 +10334,8 @@
     "relevanceScore": 2,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "dcd51a052ff0c411f6a3",
@@ -9691,7 +10350,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 1,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1a56ee676db5f3385be3",
@@ -9706,7 +10366,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 1,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "3923ad97e318dc8f1e21",
@@ -9721,7 +10382,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 1,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "de3bb0a394ad19c5dfe3",
@@ -9736,7 +10398,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "16d724a7443c61d1eeec",
@@ -9751,7 +10414,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7149a4cb021a3c5dc047",
@@ -9766,7 +10430,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "7ed45c1fd0429af55c3b",
@@ -9781,7 +10446,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ccb3c424420fc02113d6",
@@ -9796,7 +10462,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "95608efdb71d88534151",
@@ -9811,7 +10478,8 @@
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ae7be3c0362faa0551c8",
@@ -9826,7 +10494,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "31b29d388ccc745eea62",
@@ -9843,7 +10512,8 @@
     "relevanceScore": 0,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "0f48102ec75578b1e720",
@@ -9860,7 +10530,8 @@
     "relevanceScore": 0,
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "c33c4eb915015adc0f50",
@@ -9875,7 +10546,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ab6905dd1558ed970ea7",
@@ -9890,7 +10562,8 @@
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "1e1dee41fda134c35038",
@@ -9907,7 +10580,8 @@
     "thumbnailUrl": "",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "aca75032a0f62b76e129",
@@ -9922,7 +10596,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4d144a32255944118912",
@@ -9939,7 +10614,8 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailSource": "",
     "thumbnailCandidates": [],
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "855e689ac0ec7455f794",
@@ -9954,7 +10630,8 @@
     "discoveredAt": "2026-11-23T11:57:28.964Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "8aeeea5a94861f5653ca",
@@ -9969,7 +10646,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "00641ccc59295ae597a1",
@@ -9984,7 +10662,8 @@
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "ec8625ba974a9f794f0c",
@@ -9999,7 +10678,8 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "4af0d240b39021e1a59b",
@@ -10014,6 +10694,7 @@
     "discoveredAt": "2026-11-23T12:49:05.770Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailMetaCandidates": []
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   }
 ]
