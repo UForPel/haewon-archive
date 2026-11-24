@@ -86,13 +86,17 @@ export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs
  const usedUrls=new Set(items.map(item=>{try{const url=new URL(item.thumbnailUrl||'');if(url.protocol==='https:'){url.hash='';return url.href;}}catch{}return ''}).filter(Boolean));
  let assigned=0,duplicateRejected=0;
  const enriched=items.map(item=>{
-  if(item.thumbnailUrl||!byId.has(item.id))return item;
-  const result=results.find(row=>row?.id===item.id),image=byId.get(item.id),candidate=result?.candidate;
-  try{const url=new URL(image);if(url.protocol!=='https:')return item;url.hash='';const normalized=url.href;
-   if(usedUrls.has(normalized)){duplicateRejected++;if(result)result.status='duplicate-rejected';return item;}
+  const result=results.find(row=>row?.id===item.id);
+  const metaCandidates=(result?.candidates||[]).slice(0,8);
+  // Persist metadata candidates even when assignment is rejected as a duplicate.
+  const withMeta={...item,thumbnailMetaCandidates:metaCandidates.length?metaCandidates:item.thumbnailMetaCandidates||[]};
+  if(item.thumbnailUrl||!byId.has(item.id))return withMeta;
+  const image=byId.get(item.id),candidate=result?.candidate;
+  try{const url=new URL(image);if(url.protocol!=='https:')return withMeta;url.hash='';const normalized=url.href;
+   if(usedUrls.has(normalized)){duplicateRejected++;if(result)result.status='duplicate-rejected';return withMeta;}
    usedUrls.add(normalized);assigned++;if(result)result.status='assigned';
-   return {...item,thumbnailUrl:image,thumbnailSource:candidate?.source||'article-meta',thumbnailCandidates:candidate?[candidate]:[]};
-  }catch{return item;}
+   return {...withMeta,thumbnailUrl:image,thumbnailSource:candidate?.source||'article-meta'};
+  }catch{return withMeta;}
  });
  for(const result of results){if(result?.thumbnailUrl)result.assigned=result.status==='assigned';}
  return {items:enriched,attempted:targets.length,found:byId.size,assigned,duplicateRejected,missing:results.filter(r=>r?.status==='missing').length,failed:results.filter(r=>r?.status==='failed').length,results};
