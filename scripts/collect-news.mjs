@@ -192,12 +192,15 @@ export function summarizeRssImageSignals(xml=''){
  return {items:items.length,mediaThumbnailTags:count(/<media:thumbnail\b/gi,xml),mediaContentTags:count(/<media:content\b/gi,xml),enclosureTags:count(/<enclosure\b/gi,xml),contentEncodedItems:count(/<content:encoded\b/gi,xml),descriptionImageTags,contentEncodedImageTags,itemsWithImageSignals};
 }
 export async function collectFeeds({queries=getDailySearches(),fetchImpl=fetch,now=new Date().toISOString()}={}){
- const incoming=[],failures=[];\n const rssImageSignals={items:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
+ const incoming=[],failures=[];
+ const rssImageSignals={items:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
  for(const query of queries){
   try{
    const response=await fetchImpl(newsFeedUrl(query),{headers:{'user-agent':'HaewonArchiveBot/0.2 (public RSS index)'},signal:AbortSignal.timeout(20000)});
    if(!response.ok)throw new Error('HTTP '+response.status);
-   const xml=await response.text(),signals=summarizeRssImageSignals(xml);\n   for(const [key,value] of Object.entries(signals))rssImageSignals[key]=(rssImageSignals[key]||0)+value;\n   incoming.push(...parseRss(xml,query,now));
+   const xml=await response.text(),signals=summarizeRssImageSignals(xml);
+   for(const [key,value] of Object.entries(signals))rssImageSignals[key]=(rssImageSignals[key]||0)+value;
+   incoming.push(...parseRss(xml,query,now));
   }catch(error){failures.push({query,error:String(error?.message||error)});}
  }
  return {incoming,failures,queries:queries.length,successfulQueries:queries.length-failures.length,rssImageSignals};
