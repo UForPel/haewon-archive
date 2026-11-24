@@ -531,3 +531,14 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Overall thumbnail assignments: 317/701; 273 remain one shared unverified legacy URL; 42 `og:image` + 2 `twitter:image` are provenance-known; 384 records have no thumbnail. The shared 273 remain suppressed in article previews but retained in data.
 - Added generated metrics for provenance-backed thumbnail coverage within verified publisher articles and verified Haewon articles, and exposed those counts in the collapsed diagnostics. Tests added.
 - PR/Actions/Pages validation for this metric addition is pending. Browser/mobile visual verification and human relevance labels remain outstanding.
+
+
+## 2026-11-25 — Verified article thumbnail provenance metrics deployed
+- PR #9 merged: `4e37a7e41a2d4e834f81e283248d7c061dd2f28a`.
+- Actions #578 completed successfully: 139/139 tests passed, 0 failures; RSS/YouTube collection, quality metrics, archive/run-log validation, data commit, Pages artifact and Pages deployment all succeeded.
+- Data refresh commit after the run: `373b72bb6e2c5b73faa13e3ab44c210ec4da642f`. Pages artifact: 425,550 bytes.
+- Latest quality report: 701 candidates; 515 articles; 186 video candidates; 55 verified publisher articles; 49 verified Haewon-title articles; 43 verified publisher articles with provenance-backed thumbnails; 39 verified Haewon articles with provenance-backed thumbnails.
+- Overall thumbnails: 317 assigned, 384 missing; 273 shared unverified legacy assignments remain suppressed from individual card previews; source provenance is 42 og:image + 2 twitter:image. Overall provenance coverage is 14%.
+- The default article view is the 49 verified Haewon publisher articles. Wider Haewon/NMIXX/all-article scopes remain available.
+- The run log records `github_push`, success and passed validation, but its `sources` array still only describes YouTube; news results remain in the separate news status file. This operational-log gap remains open.
+- Browser/mobile visual QA and human relevance/thumbnail labels remain unverified. Source provenance does not prove visual relevance.
