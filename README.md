@@ -80,3 +80,8 @@ npm run validate
 ## 권리 안내
 
 이 저장소는 비공식 팬 프로젝트입니다. 각 영상·이미지의 권리는 원저작자 및 권리자에게 있습니다. 썸네일은 제공자가 공개한 미리보기 주소를 허용 범위에서 사용하며, 영상은 원문으로 연결합니다. 권리자의 요청이나 플랫폼 정책 변경이 있으면 해당 항목을 검토하고 조정합니다.
+
+
+## UI action inventory
+
+Every user-facing button/control must be present, functional, accessible, tested where feasible, and documented. See [BUTTONS_AND_ACTIONS.md](BUTTONS_AND_ACTIONS.md); future UI work must update this inventory and session/status records.
