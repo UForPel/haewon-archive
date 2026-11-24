@@ -279,3 +279,19 @@
 - [ ] Verify new UI commit in Actions and Pages.
 - [ ] Inspect the deployed page on a real mobile browser; CI alone is not visual QA.
 - [ ] Improve the actual content result mix: obtain verified article-specific thumbnails and meaningful human labels; do not count repeated legacy image assignments as distinct content wins.
+
+
+## 2026-11-25 — Article-first discovery correction
+- [x] Verify PR #6 and Actions #570/#571: both green, 134/134 tests, Pages deploy succeeded.
+- [x] Inspect all 699 discovery records and quantify the article/video split and title-match scopes.
+- [x] Identify raw RSS HTML/anchor URLs in 644 descriptions as the direct cause of code-like card text.
+- [x] Identify that 185 video/fancam candidates were mixed into the article list.
+- [x] Fix category filter mounting; it was defined but never invoked.
+- [x] Sanitize article titles/descriptions; remove tags and embedded URLs from the reading surface.
+- [x] Default to 426 Haewon-title-match article candidates; expose NMIXX-title-match (440) and all-article (514) scopes.
+- [x] Hide the 273-record unverified shared legacy thumbnail from individual article previews without deleting records or review evidence.
+- [x] Add deterministic relevance-scope metrics and regression tests.
+- [ ] Verify this branch in Actions and deploy to Pages.
+- [ ] Inspect actual mobile browser rendering, keyboard focus, and title links.
+- [ ] Obtain human review labels before claiming article relevance or thumbnail precision.
+- [ ] Continue collecting explicitly identified publisher article URLs and per-article image metadata from public RSS/meta fields only.

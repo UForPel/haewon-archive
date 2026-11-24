@@ -78,3 +78,18 @@ test('publisher metadata assignment rate recognizes legacy persisted article pro
 
 test('source metrics distinguish discovery links from explicit publisher article URLs',()=>{const report=summarizeCollection({discovery:[{title:'Google wrapper',sourceName:'Google News',url:'https://news.google.com/rss/articles/opaque',sourceUrl:'https://publisher.example/'},{title:'Direct publisher article',sourceName:'Bing News',url:'https://publisher.example/story',publisherArticleUrl:'https://publisher.example/story'}]});const google=report.sources.find(row=>row.source==='Google News'),bing=report.sources.find(row=>row.source==='Bing News');assert.equal(google.urlCoverage,100);assert.equal(google.publisherArticleUrlCoverage,0);assert.equal(bing.urlCoverage,100);assert.equal(bing.publisherArticleUrlCoverage,100);assert.equal(report.articleUrlProvenance.itemsWithPublisherArticleUrl,1);});
 test('thumbnail provenance excludes missing images from unknown-source counts',()=>{const report=summarizeCollection({discovery:[{thumbnailUrl:'https://cdn.test/known.jpg',thumbnailSource:'og:image'},{thumbnailUrl:'https://cdn.test/legacy.jpg'},{thumbnailUrl:''}]});assert.deepEqual(report.thumbnailProvenance.assignedBySource,{'og:image':1,'unverified-legacy':1});assert.equal(report.thumbnailProvenance.assignedTotal,2);assert.equal(report.thumbnailProvenance.unverifiedLegacyAssignments,1);assert.equal(report.thumbnailProvenance.missingThumbnailCount,1);assert.equal(report.thumbnailProvenance.sourceProvenanceCoverage,50);});
+
+
+test('quality report measures Haewon, NMIXX and video candidate separation independently',()=>{
+ const report=summarizeCollection({discovery:[
+  {id:'h',title:'오해원 단독 인터뷰',url:'https://publisher.test/h'},
+  {id:'n',title:'NMIXX 새 앨범 기사',url:'https://publisher.test/n'},
+  {id:'v',title:'Haewon fancam stage',url:'https://news.google.com/rss/articles/video'},
+  {id:'o',title:'일반 연예 뉴스',url:'https://publisher.test/o'}
+ ]});
+ assert.deepEqual(report.discoveryRelevance,{
+  totalCandidates:4,articleCandidates:3,videoCandidates:1,
+  haewonTitleMatches:1,nmixxTitleMatches:1,otherArticleCandidates:1,
+  defaultScope:'haewon-title-match'
+ });
+});

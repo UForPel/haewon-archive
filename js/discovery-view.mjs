@@ -1,10 +1,10 @@
-import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality } from './discovery-kind.mjs';
+import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText } from './discovery-kind.mjs';
 import { createThumbnailReviewKey, summarizeThumbnailReviews, validateThumbnailReviewExport, mergeThumbnailReviewLabels, getThumbnailReviewCandidates, findNextUnreviewedThumbnail, groupRepeatedThumbnailAssignments, summarizeRepeatedThumbnailGroup, findNextUnreviewedInRepeatedGroup } from './thumbnail-review.mjs';
 
 export function filterDiscoveryItems(items,query='') {
  const q=String(query||'').trim().toLowerCase();
  if(!q)return items;
- return items.filter(item=>[item.title,item.description,item.sourceName,item.query].some(value=>String(value||'').toLowerCase().includes(q)));
+ return items.filter(item=>[item.title,cleanDiscoveryText(item.description),item.sourceName,item.query].some(value=>String(value||'').toLowerCase().includes(q)));
 }
 const list=typeof document!=='undefined'?document.querySelector('#discovery-list'):null;
 const count=typeof document!=='undefined'?document.querySelector('#discovery-count'):null;
@@ -100,12 +100,16 @@ if(list&&count){
   pagination.append(prev,label,next);
  };
  const categoryBar=document.querySelector('#discovery-categories');
+ const relevanceBar=document.querySelector('#discovery-relevance');
+ let selectedRelevance='haewon';
+ let unverifiedRepeatedThumbnailUrls=new Set();
+ const relevanceLabels={haewon:'해원 직접 관련',nmixx:'NMIXX 관련',all:'전체 기사 후보'};
  let selectedCategory='all';
  const categoryOf=classifyDiscoveryCategories;
- const categoryLabels={all:'전체',news:'뉴스',video:'영상',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
+ const categoryLabels={all:'전체 분류',news:'일반 뉴스',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
  const getVisibleItems=()=>{
   const q=search?.value||'';
-  return groupDiscoveryDuplicates(filterDiscoveryItems(allItems,q)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
+  return groupDiscoveryDuplicates(filterDiscoveryRelevance(filterDiscoveryItems(filterArticleCandidates(allItems),q),selectedRelevance)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
  };
  const renderCategories=()=>{
   if(!categoryBar)return;
@@ -113,28 +117,39 @@ if(list&&count){
   Object.entries(categoryLabels).forEach(([key,label])=>{
    const button=document.createElement('button');button.type='button';button.textContent=label;button.className=selectedCategory===key?'active':'';
    button.setAttribute('aria-pressed',String(selectedCategory===key));
-   button.addEventListener('click',()=>{selectedCategory=key;page=1;render();});
+   button.addEventListener('click',()=>{selectedCategory=key;page=1;renderCategories();render();});
    categoryBar.append(button);
+  });
+ };
+ const renderRelevanceFilters=()=>{
+  if(!relevanceBar)return;
+  relevanceBar.replaceChildren();
+  Object.entries(relevanceLabels).forEach(([key,label])=>{
+   const button=document.createElement('button');button.type='button';button.textContent=label;button.className=selectedRelevance===key?'active':'';
+   button.setAttribute('aria-pressed',String(selectedRelevance===key));
+   button.addEventListener('click',()=>{selectedRelevance=key;page=1;renderRelevanceFilters();render();});
+   relevanceBar.append(button);
   });
  };
  const render=()=>{
   const items=getVisibleItems();
   const pageCount=Math.max(1,Math.ceil(items.length/PAGE_SIZE));
   page=Math.min(page,pageCount);
-  count.textContent=items.length+'개 그룹'+(String(search?.value||'').trim()?' / 검색 결과':'')+' · '+categoryLabels[selectedCategory];
+  count.textContent=items.length+'개 기사'+(String(search?.value||'').trim()?' / 검색 결과':'')+' · '+relevanceLabels[selectedRelevance]+' · '+categoryLabels[selectedCategory];
   list.replaceChildren();
   items.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE).forEach(item=>{
    const card=document.createElement('article');card.className='photo-card discovery-card';
    const thumbnail=document.createElement('div');thumbnail.className='discovery-thumbnail-wrap';
-   if(/^https:\/\//i.test(String(item.thumbnailUrl||''))){
-    const image=document.createElement('img');image.className='discovery-thumbnail';image.src=item.thumbnailUrl;image.alt='기사 또는 영상 미리보기';image.loading='lazy';image.onerror=()=>{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent='미리보기 이미지 없음';image.replaceWith(fallback);};thumbnail.append(image);
-   }else{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent='미리보기 이미지 없음';thumbnail.append(fallback);}
+   const legacySharedImage=String(item.thumbnailUrl||'')&&unverifiedRepeatedThumbnailUrls.has(item.thumbnailUrl)&&!item.thumbnailSource&&!item.thumbnailMetaFetch&&!item.publisherArticleUrl;
+   if(/^https:\/\//i.test(String(item.thumbnailUrl||''))&&!legacySharedImage){
+    const image=document.createElement('img');image.className='discovery-thumbnail';image.src=item.thumbnailUrl;image.alt='기사 또는 영상 미리보기';image.loading='lazy';image.onerror=()=>{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent='이미지 불러오기 실패';image.replaceWith(fallback);};thumbnail.append(image);
+   }else{const fallback=document.createElement('div');fallback.className='discovery-thumbnail-fallback';fallback.textContent=legacySharedImage?'기사별 이미지 확인 전':'이미지 미확인';thumbnail.append(fallback);}
    card.append(thumbnail);
    const details=document.createElement('div');details.className='photo-card-details';
-   const title=document.createElement('h3');const titleLink=document.createElement('a');titleLink.href=item.publisherArticleUrl||item.url;titleLink.target='_blank';titleLink.rel='noopener noreferrer';titleLink.textContent=item.title;titleLink.className='discovery-title-link';title.append(titleLink);
+   const title=document.createElement('h3');const titleLink=document.createElement('a');titleLink.href=item.publisherArticleUrl||item.url;titleLink.target='_blank';titleLink.rel='noopener noreferrer';titleLink.textContent=cleanDiscoveryText(item.title);titleLink.className='discovery-title-link';title.append(titleLink);
    const kind=document.createElement('span');kind.className='tag';kind.textContent=categoryOf(item).map(category=>categoryLabels[category]||category).join(' · ');
    const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):'')+' · '+(item.publisherArticleUrl?'원문 확인':'발견 후보');
-   const note=document.createElement('p');note.className='photo-description';note.textContent=item.description||'';
+   const note=document.createElement('p');note.className='photo-description';note.textContent=cleanDiscoveryText(item.description);
    details.append(title,kind,meta);
    if(note.textContent)details.append(note);
    const candidateList=getThumbnailReviewCandidates(item);
@@ -164,9 +179,14 @@ if(list&&count){
    reviewQueueStatus.textContent='미검수 후보 '+(next.itemIndex+1)+'번째 항목으로 이동했습니다. 라벨을 선택하면 자동 저장됩니다.';
   });
  });
+ renderCategories();
+ renderRelevanceFilters();
  if(search)search.addEventListener('input',()=>{page=1;render();});
  fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
   allItems=Array.isArray(items)?items:[];
+  const imageGroups=new Map();
+  for(const item of allItems){const url=String(item.thumbnailUrl||'');if(url)imageGroups.set(url,(imageGroups.get(url)||0)+1);}
+  unverifiedRepeatedThumbnailUrls=new Set([...imageGroups].filter(([url,n])=>n>=10&&allItems.filter(item=>item.thumbnailUrl===url).every(item=>!item.thumbnailSource&&!item.thumbnailMetaFetch&&!item.publisherArticleUrl)).map(([url])=>url));
   render();
  }).catch(()=>{count.textContent='불러오기 실패';const empty=document.createElement('p');empty.className='empty';empty.textContent='자동 발견 자료를 불러오지 못했습니다.';list.replaceChildren(empty);});
 }
@@ -176,6 +196,7 @@ async function renderQualitySummary(){
  try{const response=await fetch('./data/quality-metrics.json');if(!response.ok)throw new Error('metrics unavailable');const metrics=await response.json();host.replaceChildren(); const panel=document.createElement('details');panel.className='quality-details';const panelTitle=document.createElement('summary');panelTitle.textContent='수집·품질 진단 보기';const panelBody=document.createElement('div');panelBody.className='quality-details-body';panel.append(panelTitle,panelBody);host.append(panel);
  const heading=document.createElement('h3');heading.textContent='자료 품질 현황';panelBody.append(heading);
  const summary=document.createElement('p');summary.textContent='뉴스 수집 성공률 '+(metrics.collection.newsQuerySuccessRate===null?'미측정':metrics.collection.newsQuerySuccessRate+'%')+' · 후보 '+metrics.collection.newsCandidatesTotal+'개 · 링크 검사 '+(metrics.linkAudit?.checked||0)+'개 · 깨진 링크 '+(metrics.linkAudit?.broken?.length||0)+'개 · 접근제한/오류 '+((metrics.linkAudit?.rateLimited||0)+(metrics.linkAudit?.unreachable||0))+'개 · 썸네일 누락 '+(metrics.linkAudit?.thumbnailMissing||0)+'개';summary.textContent+=' · 링크 검사는 최근 최대 40개 후보 표본';panelBody.append(summary);
+ const relevance=metrics.discoveryRelevance;if(relevance){const relevanceRow=document.createElement('p');relevanceRow.textContent='관련성 분리 · 해원 제목 일치 '+relevance.haewonTitleMatches+'개 · NMIXX 제목 일치 '+relevance.nmixxTitleMatches+'개 · 일반 기사 '+relevance.otherArticleCandidates+'개 · 영상 후보 '+relevance.videoCandidates+'개 (기사 목록과 분리)';panelBody.append(relevanceRow);}
  const articleUrls=metrics.articleUrlProvenance;if(articleUrls){const articleRow=document.createElement('p');articleRow.textContent='개별 기사 URL 확인 '+(articleUrls.itemsWithPublisherArticleUrl||0)+'개 · Bing News 후보 '+(articleUrls.bingNewsItems||0)+'개 · 후보 출처 '+Object.entries(articleUrls.candidateSourceCounts||{}).map(([name,count])=>name+' '+count).join(', ')+' · 출판사 호스트 '+Object.entries(articleUrls.publisherHosts||{}).slice(0,5).map(([name,count])=>name+' '+count).join(', ')+' · 메타 최종 호스트 표본 '+Object.entries(articleUrls.finalHosts||{}).map(([name,count])=>name+' '+count).join(', ');panelBody.append(articleRow);}
  const imageAudit=metrics.thumbnailAudit;if(imageAudit){const row=document.createElement('p');row.textContent='썸네일 URL 검사 · 확보 '+imageAudit.withThumbnail+'/'+imageAudit.items+' · 고유 이미지 URL '+imageAudit.uniqueThumbnailUrls+' · 고유 이미지 배정률 '+(imageAudit.uniqueThumbnailAssignmentRate??'미측정')+'% · 고유 이미지 전체 커버 '+(imageAudit.uniqueImageCoverage??'미측정')+'% · 반복 URL 그룹 '+imageAudit.repeatedUrlGroups+' ('+imageAudit.repeatedItems+'개 중복 사용) · URL 누락 '+imageAudit.missing;panelBody.append(row);if(imageAudit.concentrationWarning){const concentration=document.createElement('p');concentration.className='photo-meta';concentration.textContent='주의: 대표 썸네일 URL '+(imageAudit.dominantThumbnailShare||0)+'% ('+(imageAudit.dominantThumbnailCount||0)+'개) 집중. 실제 이미지 동일성/관련성은 시각 검수 필요';panelBody.append(concentration);}for(const source of (imageAudit.hosts||[]).slice(0,5)){const hostRow=document.createElement('p');hostRow.className='photo-meta';hostRow.textContent='이미지 호스트 '+source.host+' · '+source.count+'개';panelBody.append(hostRow);}} 
  const responseAudit=metrics.thumbnailResponseAudit;if(responseAudit){const responseRow=document.createElement('p');responseRow.textContent='썸네일 응답 검사 (고유 URL 표본 '+responseAudit.checked+'개) · 이미지 아닌 응답 '+responseAudit.nonImage.length+' · 깨진 '+responseAudit.broken.length+' · 접근 실패 '+responseAudit.unreachable.length+' · 제한 '+responseAudit.rateLimited.length;panelBody.append(responseRow);} if(imageAudit?.heuristicFlags?.length){const heuristicRow=document.createElement('p');heuristicRow.textContent='의심 URL 힌트 '+imageAudit.heuristicFlaggedUrls+'개 (반복 URL·로고/아이콘 이름·작은 크기 표기; 자동 확정 판정 아님)';panelBody.append(heuristicRow);} const thumbReview=metrics.thumbnailReviewMetrics||{};const thumbReviewRow=document.createElement('p');thumbReviewRow.textContent='기사 이미지 검수 · '+(thumbReview.reviewed||0)+'/'+(thumbReview.eligible||0)+'개 후보 ('+(thumbReview.reviewCoverage??0)+'%) · 후보 적합률 '+(thumbReview.precision===null||thumbReview.precision===undefined?'미측정':thumbReview.precision+'%')+' · 현재 썸네일 정밀도 '+(thumbReview.selectedPrecision===null||thumbReview.selectedPrecision===undefined?'미측정':thumbReview.selectedPrecision+'%')+' · 검수 데이터는 data/thumbnail-reviews.json';panelBody.append(thumbReviewRow);const classification=document.createElement('p');classification.textContent='분류 검토 정확도 '+(metrics.classification.accuracy===null?'미측정 (검토 라벨 없음)':metrics.classification.accuracy+'% · 검토 '+metrics.classification.reviewedSamples+'건');panelBody.append(classification); if(metrics.classification.reviewedSamples>0){const exact=document.createElement('p');exact.textContent='단일 분류 정확도 '+(metrics.classification.exactSingleLabelAccuracy??'미측정')+'%';panelBody.append(exact);for(const [category,review] of Object.entries(metrics.classification.perCategoryReview||{})){const row=document.createElement('p');row.textContent='검수 '+category+' · '+review.accuracy+'% ('+review.correct+'/'+review.samples+')';panelBody.append(row);}}
