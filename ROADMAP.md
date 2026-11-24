@@ -78,3 +78,16 @@
 - [ ] Increase candidate diversity beyond repeated Google-hosted `og:image` responses; inspect allowed RSS/structured image sources and test against real articles.
 - [ ] Add a human-labeled article-image suitability review queue and measured accuracy/coverage; URL uniqueness is not image relevance.
 - [ ] Keep the 273-record repeated-URL group intact until human review; no automatic deletion or replacement.
+
+## RSS image candidate and review cycle — 2026-11-24
+- [x] Parse RSS Media RSS, image Enclosure, description HTML and content:encoded image markup.
+- [x] Parse OG/Twitter, og:image:secure_url, link rel=image_src, itemprop=image and JSON-LD image properties.
+- [x] Keep candidate source and priority separate; preserve article-specific candidate arrays and metadata fetch provenance.
+- [x] Record aggregate RSS response image-tag diagnostics without persisting raw RSS bodies.
+- [x] Add article-level image candidate review labels, browser-local persistence and JSON export/import.
+- [x] Add review coverage, candidate suitability precision and selected-thumbnail precision calculations.
+- [ ] Repair/verify latest Actions run and Pages deploy.
+- [ ] Inspect the next live rssImageSignals result to determine whether Google News RSS items actually contain image tags or only text/link descriptions.
+- [ ] Collect enough article-specific human labels before interpreting precision; no visual suitability accuracy is currently known.
+- [ ] Review the 273-item repeated URL group without deleting or replacing images automatically.
+- [ ] Manually inspect the deployed mobile review UI and local-storage import/export flow.
