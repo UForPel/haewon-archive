@@ -2685,7 +2685,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "3910bd80fc5e7b4cfb3e",
@@ -2727,7 +2733,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "52545fb3db375b641bad",
@@ -4872,7 +4884,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "dd3ff76131473b5aa9c2",
@@ -5455,7 +5473,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "06ac98e60e168a848b41",
@@ -5473,7 +5497,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "cf07493efa5ea715c9cc",
@@ -5491,7 +5521,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "3316d4d66c276d60478b",
@@ -11405,7 +11441,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "6efc8cbc7f6f2c1e8b19",
@@ -15996,7 +16038,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 1
+    "relevanceScore": 1,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "171dc1df2d24a3ab4526",
@@ -16014,7 +16062,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 1
+    "relevanceScore": 1,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "1a56ee676db5f3385be3",
@@ -16080,7 +16134,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 1
+    "relevanceScore": 1,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "de3bb0a394ad19c5dfe3",
@@ -16130,7 +16190,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "7149a4cb021a3c5dc047",
@@ -16324,7 +16390,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "ab6905dd1558ed970ea7",
@@ -16454,7 +16526,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:27:33.421Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "00641ccc59295ae597a1",
