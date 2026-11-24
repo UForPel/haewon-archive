@@ -5,7 +5,7 @@ import {compareThumbnailCandidates} from '../js/thumbnail-comparison.mjs';
 
 const html='<meta property="og:image" content="https://img.example/story.jpg"><meta name="twitter:image" content="https://img.example/story-alt.jpg">';
 test('metadata candidates are retained per article even when shared image assignment is rejected',async()=>{
- const items=[{id:'a',url:'https://news.google.com/a',title:'A',thumbnailUrl:''},{id:'b',url:'https://news.google.com/b',title:'B',thumbnailUrl:''}];
+ const items=[{id:'a',url:'https://news.google.com/a',publisherArticleUrl:'https://publisher.example/article/a',title:'A',thumbnailUrl:''},{id:'b',url:'https://news.google.com/b',publisherArticleUrl:'https://publisher.example/article/b',title:'B',thumbnailUrl:''}];
  const result=await enrichThumbnails(items,{fetchImpl:async()=>new Response(html,{status:200}),limit:2,concurrency:1});
  assert.equal(result.found,2);
  assert.equal(result.assigned,1);
