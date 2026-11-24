@@ -72,7 +72,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "484548a28daf266b0af0",
@@ -329,7 +333,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b31396fcb10916bd5072",
@@ -349,7 +357,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "d1e8542d4ab1aac88f57",
@@ -393,7 +405,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "61096682960ace3efcad",
@@ -1155,7 +1171,11 @@
     "thumbnailCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://tvreport.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "a08374d3d6fb3bcace25",
@@ -2615,7 +2635,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "c071d209623dc8fd82a1",
@@ -2921,8 +2945,8 @@
     ],
     "publishedAt": "2024-07-18T05:51:00.000Z",
     "description": "8일 오후 그룹 엔믹스(Nmixx)가 2024 TMEA 페스티벌 참석을 위해 인천국제공항을 통해 마카오로 출국했다. 'TMEA 2024'는 중국 최대 음악 플랫폼을 보유한 텐센트 뮤직 엔터테인먼트가 주관하는 음악 ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://biz.chosun.com/resizer/v2/43WAK6KFC2DFV32XD5GOANDL5Q.jpg?auth=02dcafb5dd87372fb50c0c6643c883b16296ddbb77f24fc543cdbaf52cb755f2&width=572&height=300&smart=true",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "조선일보",
     "discoverySource": "bing-news-rss",
@@ -2930,8 +2954,27 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://biz.chosun.com/resizer/v2/43WAK6KFC2DFV32XD5GOANDL5Q.jpg?auth=02dcafb5dd87372fb50c0c6643c883b16296ddbb77f24fc543cdbaf52cb755f2&width=572&height=300&smart=true",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2024/07/18/XH24HR34ZQQDRAW7QI2RIQZMLM/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2024/07/18/XH24HR34ZQQDRAW7QI2RIQZMLM/",
+      "resolvedArticleHost": "biz.chosun.com",
+      "fetchedAt": "2026-11-24T05:36:15.674Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://biz.chosun.com/resizer/v2/43WAK6KFC2DFV32XD5GOANDL5Q.jpg?auth=02dcafb5dd87372fb50c0c6643c883b16296ddbb77f24fc543cdbaf52cb755f2&width=572&height=300&smart=true",
+      "articleUrl": "https://biz.chosun.com/entertainment/enter_general/2024/07/18/XH24HR34ZQQDRAW7QI2RIQZMLM/",
+      "observedAt": "2026-11-24T05:36:15.674Z"
+    }
   },
   {
     "id": "6447c935045585aa5615",
@@ -3019,8 +3062,8 @@
     ],
     "publishedAt": "2024-04-23T06:12:00.000Z",
     "description": "NMIXX (엔믹스) members Haewon (해원) and Bae (배) are captivating fans with their dynamic roles in web variety shows, truly brightening up weeknights with their engaging and diverse talents. Photo : NMIXX ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://cdn.hankooki.com/news/thumbnail/202404/153478_209428_1713845524_v150.jpg",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "HANKOOKI",
     "discoverySource": "bing-news-rss",
@@ -3028,8 +3071,32 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://cdn.hankooki.com/news/thumbnail/202404/153478_209428_1713845524_v150.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://cdn.hankooki.com/news/photo/202404/153478_209428_1713845524.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://www.hankooki.com/news/articleView.html?idxno=153478",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.hankooki.com/news/articleView.html?idxno=153478",
+      "resolvedArticleHost": "www.hankooki.com",
+      "fetchedAt": "2026-11-24T05:36:16.903Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://cdn.hankooki.com/news/thumbnail/202404/153478_209428_1713845524_v150.jpg",
+      "articleUrl": "https://www.hankooki.com/news/articleView.html?idxno=153478",
+      "observedAt": "2026-11-24T05:36:16.903Z"
+    }
   },
   {
     "id": "8eece5921ae450e4a874",
@@ -3357,8 +3424,8 @@
     ],
     "publishedAt": "2023-03-23T04:37:00.000Z",
     "description": "'환승연애2' 지수는 지난 22일 자신의 인스타그램에 \"엔믹스 컴백 축하 기념 오해원 님 커버 가보자고. 딩댕동 손가락은 실패\"라는 글과 함께 영상을 게재했다. 공개된 영상에는 엔믹스 멤버 오 ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/202303231117381775.jpg",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "위키트리",
     "discoverySource": "bing-news-rss",
@@ -3366,8 +3433,37 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/202303231117381775.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/img_20230323111529_6c3aaef8.webp",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/img_20230323111530_ef2688ce.webp",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://www.wikitree.co.kr/articles/839103",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.wikitree.co.kr/articles/839103",
+      "resolvedArticleHost": "www.wikitree.co.kr",
+      "fetchedAt": "2026-11-24T05:36:16.385Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/202303231117381775.jpg",
+      "articleUrl": "https://www.wikitree.co.kr/articles/839103",
+      "observedAt": "2026-11-24T05:36:16.385Z"
+    }
   },
   {
     "id": "f5b42f65b800b97de202",
@@ -3503,7 +3599,14 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": {
+      "status": "failed",
+      "publisherArticleUrl": "https://x.com/NMlXX_Haewon",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "",
+      "resolvedArticleHost": "",
+      "fetchedAt": ""
+    }
   },
   {
     "id": "f7fabbf8ab78fa7dce01",
@@ -3525,8 +3628,8 @@
     ],
     "publishedAt": "2026-09-12T16:54:00.000Z",
     "description": "NMIXX’s Haewon was unable to join her bandmates on stage at “Music Bank in Barcelona.” On September 12 local time, JYP Entertainment announced that Haewon would not be able to perform at “Music Bank ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "soompi.com",
     "discoverySource": "bing-news-rss",
@@ -3534,8 +3637,32 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 7,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg?w=140&h=140&crop=1",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://www.soompi.com/article/1870023wpp/nmixxs-haewon-sits-out-music-bank-in-barcelona-due-to-health",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.soompi.com/article/1870023wpp/nmixxs-haewon-sits-out-music-bank-in-barcelona-due-to-health",
+      "resolvedArticleHost": "www.soompi.com",
+      "fetchedAt": "2026-11-24T05:36:16.591Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg",
+      "articleUrl": "https://www.soompi.com/article/1870023wpp/nmixxs-haewon-sits-out-music-bank-in-barcelona-due-to-health",
+      "observedAt": "2026-11-24T05:36:16.591Z"
+    }
   },
   {
     "id": "5fca8cbc1a1a49dacec2",
@@ -3613,8 +3740,8 @@
     ],
     "publishedAt": "2026-11-19T09:21:00.000Z",
     "description": "Hae-won recently drew attention by appearing noticeably thinner. In particular, Haewon, who had been known for her distinctive cheekbones and cute image, caught attention with a completely changed ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://cdn.en.sportalkorea.com/news/photo/202611/48591_93671_1795067434.jpg",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "en.sportalkorea.com",
     "discoverySource": "bing-news-rss",
@@ -3622,8 +3749,27 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://cdn.en.sportalkorea.com/news/photo/202611/48591_93671_1795067434.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=48591",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=48591",
+      "resolvedArticleHost": "en.sportalkorea.com",
+      "fetchedAt": "2026-11-24T05:36:18.005Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://cdn.en.sportalkorea.com/news/photo/202611/48591_93671_1795067434.jpg",
+      "articleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=48591",
+      "observedAt": "2026-11-24T05:36:18.005Z"
+    }
   },
   {
     "id": "32c0d692185e0c4cb08f",
@@ -3685,8 +3831,8 @@
     ],
     "publishedAt": "2026-10-27T07:04:00.000Z",
     "description": "Park Joon-hyung made everyone laugh by saying to Oh Hae-won, \"I'll put you on trial for appearing more on variety shows than the four of us comedians,\" adding, \"I'll also add the charge of idols ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://cdn.en.sportalkorea.com/news/photo/202610/42092_81565_1793077817.jpg",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "en.sportalkorea.com",
     "discoverySource": "bing-news-rss",
@@ -3694,8 +3840,27 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://cdn.en.sportalkorea.com/news/photo/202610/42092_81565_1793077817.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=42092",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=42092",
+      "resolvedArticleHost": "en.sportalkorea.com",
+      "fetchedAt": "2026-11-24T05:36:18.424Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://cdn.en.sportalkorea.com/news/photo/202610/42092_81565_1793077817.jpg",
+      "articleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=42092",
+      "observedAt": "2026-11-24T05:36:18.424Z"
+    }
   },
   {
     "id": "5c3289b04e31b07c7a1e",
@@ -3765,7 +3930,14 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": {
+      "status": "missing",
+      "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+      "resolvedArticleHost": "www.msn.com",
+      "fetchedAt": "2026-11-24T05:36:17.197Z"
+    }
   },
   {
     "id": "531e60304c9b02cfe5d1",
@@ -3985,8 +4157,8 @@
     ],
     "publishedAt": "2026-09-19T22:06:00.000Z",
     "description": "Fans continue to express concern over the changed appearance of Haewon from the group NMIXX. On the 19th, NMIXX attended the ‘2026 The Fact Music Awards (TMA)’ held at Busan Asiad Main Stadium. That ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.e741b855f2fa49288a983fb2fdecb549_P1.png",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "MSN",
     "discoverySource": "bing-news-rss",
@@ -3994,8 +4166,42 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.e741b855f2fa49288a983fb2fdecb549_P1.png",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.a3c0f72887824b49a229bb31128ed037_P1.png",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.19d416a0e75b469f83e284f29797e571_P1.png",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.487b5ca6be8843cb92caea8a834e0204_P1.png",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202609201357007",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202609201357007",
+      "resolvedArticleHost": "sports.khan.co.kr",
+      "fetchedAt": "2026-11-24T05:36:19.022Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.e741b855f2fa49288a983fb2fdecb549_P1.png",
+      "articleUrl": "https://sports.khan.co.kr/en/article/202609201357007",
+      "observedAt": "2026-11-24T05:36:19.022Z"
+    }
   },
   {
     "id": "7adb2eac5abada9987c7",
@@ -4101,8 +4307,8 @@
     ],
     "publishedAt": "2026-07-10T10:40:00.000Z",
     "description": "NMIXX member Haewon spoke directly about the uproar over her short haircut. On the 9th, Haewon said on the fan communication platform \"Bubble\" that she cut her hair \"to tidy up damaged hair\" and added ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://biz.chosun.com/resizer/v2/G5RGKYRWMY4TIMJWME2DEYRWGQ.jpg?auth=ae910996af10194b83fc642a51995ea7b3a4f629e15fa8e0816dbca146ba9b20&width=650&height=341&smart=true",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "조선일보",
     "discoverySource": "bing-news-rss",
@@ -4110,8 +4316,27 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://biz.chosun.com/resizer/v2/G5RGKYRWMY4TIMJWME2DEYRWGQ.jpg?auth=ae910996af10194b83fc642a51995ea7b3a4f629e15fa8e0816dbca146ba9b20&width=650&height=341&smart=true",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/07/10/UEECI6QMJBGTFBWEOEIJHBBRNQ/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/07/10/UEECI6QMJBGTFBWEOEIJHBBRNQ/",
+      "resolvedArticleHost": "biz.chosun.com",
+      "fetchedAt": "2026-11-24T05:36:19.545Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://biz.chosun.com/resizer/v2/G5RGKYRWMY4TIMJWME2DEYRWGQ.jpg?auth=ae910996af10194b83fc642a51995ea7b3a4f629e15fa8e0816dbca146ba9b20&width=650&height=341&smart=true",
+      "articleUrl": "https://biz.chosun.com/en/en-entertainment/2026/07/10/UEECI6QMJBGTFBWEOEIJHBBRNQ/",
+      "observedAt": "2026-11-24T05:36:19.545Z"
+    }
   },
   {
     "id": "dd3ff76131473b5aa9c2",
@@ -4149,8 +4374,8 @@
     ],
     "publishedAt": "2026-05-09T20:40:00.000Z",
     "description": "Get ready for a fun episode of “Amazing Saturday” featuring members of NMIXX and LE SSERAFIM! On May 9, the popular tvN variety show aired a sneak peek of next week’s episode, which will feature NMIXX ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "soompi.com",
     "discoverySource": "bing-news-rss",
@@ -4158,8 +4383,32 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg?w=140&h=140&crop=1",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://www.soompi.com/article/1839633wpp/watch-nmixxs-haewon-and-bae-le-sserafims-chaewon-and-kazuha-come-together-in-amazing-saturday-preview",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.soompi.com/article/1839633wpp/watch-nmixxs-haewon-and-bae-le-sserafims-chaewon-and-kazuha-come-together-in-amazing-saturday-preview",
+      "resolvedArticleHost": "www.soompi.com",
+      "fetchedAt": "2026-11-24T05:36:19.113Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg",
+      "articleUrl": "https://www.soompi.com/article/1839633wpp/watch-nmixxs-haewon-and-bae-le-sserafims-chaewon-and-kazuha-come-together-in-amazing-saturday-preview",
+      "observedAt": "2026-11-24T05:36:19.113Z"
+    }
   },
   {
     "id": "af55e9e15faa24886090",
@@ -4276,8 +4525,8 @@
     ],
     "publishedAt": "2025-10-17T16:00:00.000Z",
     "description": "K-pop girl group NMIXX thrives on change. Consisting of members Haewon, Lily, Sullyoon, Bae, Jiwoo and Kyujin, NMIXX debuted in 2022 as Korean entertainment giant JYP Entertainment's latest girl group ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://s.yimg.com/lo/mysterio/api/5f88770d3f8e21213fb6bdc7043d1f7a1316fbd9b4ee0bd2c946c4238875f408/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hollywood_reporter_217%2Fb56840acfc85c0f0b109e2a3120a823a",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "Yahoo News",
     "discoverySource": "bing-news-rss",
@@ -4285,8 +4534,32 @@
     "discoveredAt": "2026-11-24T05:33:30.857Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://s.yimg.com/lo/mysterio/api/5f88770d3f8e21213fb6bdc7043d1f7a1316fbd9b4ee0bd2c946c4238875f408/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hollywood_reporter_217%2Fb56840acfc85c0f0b109e2a3120a823a",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://s.yimg.com/lo/mysterio/api/edbb85d9b7d1af1b15f5a09603359e1bdc185414947e94acca35fe66068bbccb/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hollywood_reporter_217%2Fb56840acfc85c0f0b109e2a3120a823a",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "found",
+      "publisherArticleUrl": "https://ca.news.yahoo.com/nmixx-thrives-change-first-full-230000106.html",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://ca.news.yahoo.com/nmixx-thrives-change-first-full-230000106.html",
+      "resolvedArticleHost": "ca.news.yahoo.com",
+      "fetchedAt": "2026-11-24T05:36:19.645Z"
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://s.yimg.com/lo/mysterio/api/5f88770d3f8e21213fb6bdc7043d1f7a1316fbd9b4ee0bd2c946c4238875f408/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hollywood_reporter_217%2Fb56840acfc85c0f0b109e2a3120a823a",
+      "articleUrl": "https://ca.news.yahoo.com/nmixx-thrives-change-first-full-230000106.html",
+      "observedAt": "2026-11-24T05:36:19.645Z"
+    }
   },
   {
     "id": "4f7256ed824b6320907b",
@@ -4369,7 +4642,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "aa1d73461e1a8ba8156f",
@@ -4804,7 +5081,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "204b9bb212cd4af83767",
@@ -5624,6 +5905,38 @@
     }
   },
   {
+    "id": "95010dfd95888c029c5b",
+    "title": "엔믹스 해원, '뼈말라' 우려 속 외모 강박 고백 \"나노 단위 얼굴 평가\"",
+    "url": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
+    "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b05224e39374cff8b3fa4c39324524c&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fentertainment%2f%25EC%259C%25A0%25EB%25AA%2585-%25EC%259D%25B8%25EC%2582%25AC%2f%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-%25ED%2595%25B4%25EC%259B%2590-%25EB%25BC%2588%25EB%25A7%2590%25EB%259D%25BC-%25EC%259A%25B0%25EB%25A0%25A4-%25EC%2586%258D-%25EC%2599%25B8%25EB%25AA%25A8-%25EA%25B0%2595%25EB%25B0%2595-%25EA%25B3%25A0%25EB%25B0%25B1-%25EB%2582%2598%25EB%2585%25B8-%25EB%258B%25A8%25EC%259C%2584-%25EC%2596%25BC%25EA%25B5%25B4-%25ED%258F%2589%25EA%25B0%2580%2far-AA2hFg9V&c=10436731740524583955&mkt=ko-kr",
+    "publisherHost": "www.msn.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%ED%95%B4%EC%9B%90%20%EC%97%94%EB%AF%B9%EC%8A%A4&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b05224e39374cff8b3fa4c39324524c&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fentertainment%2f%25EC%259C%25A0%25EB%25AA%2585-%25EC%259D%25B8%25EC%2582%25AC%2f%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-%25ED%2595%25B4%25EC%259B%2590-%25EB%25BC%2588%25EB%25A7%2590%25EB%259D%25BC-%25EC%259A%25B0%25EB%25A0%25A4-%25EC%2586%258D-%25EC%2599%25B8%25EB%25AA%25A8-%25EA%25B0%2595%25EB%25B0%2595-%25EA%25B3%25A0%25EB%25B0%25B1-%25EB%2582%2598%25EB%2585%25B8-%25EB%258B%25A8%25EC%259C%2584-%25EC%2596%25BC%25EA%25B5%25B4-%25ED%258F%2589%25EA%25B0%2580%2far-AA2hFg9V&c=10436731740524583955&mkt=ko-kr",
+        "articleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
+        "host": "www.msn.com"
+      }
+    ],
+    "publishedAt": "2026-11-17T21:42:36.000Z",
+    "description": "그룹 엔믹스 해원이 일명 '뼈말라' 몸매로 우려를 자아낸 가운데, 외모에 대한 부담감을 털어놓는 장면이 재조명되고 있다.지난 17일 온라인 커뮤니티와 SNS에서는 ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "스포츠조선 on MSN",
+    "discoverySource": "bing-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-24T05:36:14.695Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
+  },
+  {
     "id": "ecdb925dfaace5d887f4",
     "title": "NMIXX 해원, 쭈꾸미 먹방과 함께 전한 연말 드레스코드 제안 - famtimes.co.kr",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAzTm02M0hncV9USzV3MFFwcnluS210VGlDME5zYTVIdkh5eXd2RFgyYjd0MGxsaDVIZV9VakJuWU5pcEJ2S21LRDNlX2JhdXMzdHBFWTBTaFdfelFWMVVkVVY3UEY5Vkk3UTJJVWlB?oc=5",
@@ -6390,7 +6703,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.pap-magazine.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "f7170871179d03ee1cc4",
@@ -9024,7 +9341,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b6f6122371037d8b2010",
@@ -10773,7 +11094,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.breaknews.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "bd57db9dfc7a9f22fa01",
@@ -10851,7 +11176,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "713c882167df4a43d78e",
@@ -10887,7 +11216,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0586394ba43678e94f7b",
@@ -10907,7 +11240,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "9348d203eba212859b5b",
@@ -11167,7 +11504,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "23e59a79deaa9ebbe579",
@@ -11187,7 +11528,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.beyondpost.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "df22c0d77881236817c8",
@@ -11207,7 +11552,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://sports.khan.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "e20a0ecb6597206601fd",
@@ -11243,7 +11592,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://m.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "1719cb2ad2c2df31a1ae",
@@ -11263,7 +11616,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "fbea33a1fd85aea24c09",
@@ -11419,7 +11776,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://enews.imbc.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "352a774334e5912dce76",
@@ -11455,7 +11816,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://sports.khan.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "982beaa6c957dae22b09",
@@ -11539,7 +11904,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "9f7af01896e15953241a",
@@ -11559,7 +11928,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://mydaily.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0d564fc3a4a838386872",
@@ -11595,7 +11968,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "3a45b62aecc6cd192aff",
@@ -11615,7 +11992,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "d6e4cd1bf70769cbd429",
@@ -11635,7 +12016,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://sports.donga.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "56e8187782f327adf802",
@@ -11765,7 +12150,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "c6b0c84d57f6c0fa6835",
@@ -11803,7 +12192,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.rnx.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "cad08dc0570a9e44a159",
@@ -12047,7 +12440,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "40527866584aac7f856f",
@@ -12163,7 +12560,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://sports.khan.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "729c3b5f8bbadba9d6d4",
@@ -12183,7 +12584,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "c9fe812075c6c3da88aa",
@@ -12427,7 +12832,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "3a8ec5afad92fdf39a1a",
@@ -12471,7 +12880,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "676edde6aeb7b7c24318",
@@ -12491,7 +12904,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "4359850b38f5f1e3814e",
@@ -12577,7 +12994,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "a99ca16e361c35345a7c",
@@ -12597,7 +13018,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "45634a790d2a84bc65c9",
@@ -12617,7 +13042,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "d2db4e5dee99d0b7a953",
@@ -12869,7 +13298,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://programs.sbs.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "4e8a9b5dc888eaaacbc2",
@@ -12889,7 +13322,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://programs.sbs.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "08de3502c867886f4023",
@@ -12909,7 +13346,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://programs.sbs.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8e72523ad86b80423d55",
@@ -12993,7 +13434,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "310895eea60e5aea58d7",
@@ -13061,7 +13506,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "a214cd3769b9f1ea090e",
@@ -13105,7 +13554,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "959d5cb11530908018d2",
@@ -13164,7 +13617,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://programs.sbs.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "65506b2ca1bd961d0129",
@@ -13184,7 +13641,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://programs.sbs.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b8367b216b0f784cbed4",

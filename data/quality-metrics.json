@@ -1,14 +1,148 @@
 {
-  "generatedAt": "2026-11-24T05:33:35.380Z",
+  "generatedAt": "2026-11-24T05:36:21.191Z",
+  "articleUrlProvenance": {
+    "totalItems": 655,
+    "itemsWithPublisherArticleUrl": 35,
+    "bingNewsItems": 35,
+    "candidateSourceCounts": {
+      "bing-news-rss-explicit-url-param": 39
+    },
+    "publisherHosts": {
+      "sports.khan.co.kr": 4,
+      "www.msn.com": 4,
+      "biz.chosun.com": 3,
+      "www.sportsseoul.com": 2,
+      "www.xportsnews.com": 2,
+      "www.soompi.com": 2,
+      "en.sportalkorea.com": 2,
+      "www.mk.co.kr": 2,
+      "news.sbs.co.kr": 2,
+      "www.famtimes.co.kr": 1,
+      "www.osen.co.kr": 1,
+      "www.bntnews.co.kr": 1,
+      "www.hankooki.com": 1,
+      "www.wikitree.co.kr": 1,
+      "x.com": 1,
+      "ca.news.yahoo.com": 1,
+      "www.spotvnews.co.kr": 1,
+      "www.tvdaily.co.kr": 1,
+      "osen.co.kr": 1,
+      "www.starnewskorea.com": 1,
+      "www.etnews.com": 1
+    },
+    "finalHosts": {
+      "news.google.com": 12,
+      "sports.khan.co.kr": 4,
+      "biz.chosun.com": 3,
+      "www.soompi.com": 2,
+      "en.sportalkorea.com": 2,
+      "www.msn.com": 2,
+      "www.sportsseoul.com": 1,
+      "www.xportsnews.com": 1,
+      "www.hankooki.com": 1,
+      "www.wikitree.co.kr": 1,
+      "ca.news.yahoo.com": 1,
+      "osen.co.kr": 1,
+      "www.starnewskorea.com": 1,
+      "www.etnews.com": 1,
+      "www.mk.co.kr": 1
+    },
+    "sourceSiteHosts": {
+      "youtu.be": 97,
+      "sports.khan.co.kr": 15,
+      "m.newsen.com": 13,
+      "news.nate.com": 12,
+      "www.chosun.com": 12,
+      "enews.imbc.com": 11,
+      "www.sedaily.com": 10,
+      "mydaily.co.kr": 8,
+      "programs.sbs.co.kr": 8,
+      "www.hankyung.com": 8,
+      "www.osen.co.kr": 7,
+      "biz.chosun.com": 7,
+      "www.breaknews.com": 7,
+      "isplus.com": 6,
+      "www.rnx.kr": 6,
+      "www.hankooki.com": 5,
+      "www.slist.kr": 5,
+      "www.etnews.com": 5,
+      "www.topstarnews.net": 4,
+      "www.sportsseoul.com": 4,
+      "www.newsen.com": 4,
+      "www.bntnews.co.kr": 3,
+      "www.marieclairekorea.com": 3,
+      "www.news1.kr": 3,
+      "www.fnnews.com": 3,
+      "sports.donga.com": 3,
+      "news.tf.co.kr": 3,
+      "www.famtimes.co.kr": 2,
+      "www.twig24.com": 2,
+      "www.sportschosun.com": 2,
+      "www.koreadaily.com": 2,
+      "www.xportsnews.com": 2,
+      "www.newsis.com": 2,
+      "www.mydaily.co.kr": 2,
+      "newsen.com": 2,
+      "www.mk.co.kr": 2,
+      "news.jtbc.co.kr": 2,
+      "tvreport.co.kr": 1,
+      "www.imbc.com": 1,
+      "www.seoul.co.kr": 1,
+      "www.behindpress.com": 1,
+      "www.ytn.co.kr": 1,
+      "www.joynews24.com": 1,
+      "www.wikitree.co.kr": 1,
+      "enter.etoday.co.kr": 1,
+      "www.esquirekorea.co.kr": 1,
+      "www.thepublic.kr": 1,
+      "www.joongang.co.kr": 1,
+      "www.newswire.co.kr": 1,
+      "www.frame-less.co.kr": 1,
+      "www.spotvnews.co.kr": 1,
+      "www.etoday.co.kr": 1,
+      "m.ekn.kr": 1,
+      "www.elle.co.kr": 1,
+      "mhnse.com": 1,
+      "www.mt.co.kr": 1,
+      "www.peoplewatch.co.kr": 1,
+      "classian.co.kr": 1,
+      "www.cmn.co.kr": 1,
+      "www.pap-magazine.com": 1,
+      "www.nanumy.co.kr": 1,
+      "www.womentimes.co.kr": 1,
+      "www.ajunews.com": 1,
+      "www.lawissue.co.kr": 1,
+      "supple.kr": 1,
+      "article.topstarnews.net": 1,
+      "www.ggilbo.com": 1,
+      "www.yonhapnewstv.co.kr": 1,
+      "v.daum.net": 1,
+      "m.nocutnews.co.kr": 1,
+      "www.mhns.co.kr": 1,
+      "m.sedaily.com": 1,
+      "m.imbc.com": 1,
+      "www.yna.co.kr": 1,
+      "www.beyondpost.co.kr": 1,
+      "hypebae.com": 1,
+      "brunch.co.kr": 1,
+      "www.nc.press": 1,
+      "www.kdfnews.com": 1,
+      "leisurebyte.com": 1,
+      "rollingstone.co.kr": 1
+    },
+    "discoveryWrapperHosts": {
+      "www.bing.com": 35
+    }
+  },
   "thumbnailAudit": {
-    "items": 654,
-    "withThumbnail": 282,
-    "missing": 372,
-    "uniqueThumbnailUrls": 10,
+    "items": 655,
+    "withThumbnail": 292,
+    "missing": 363,
+    "uniqueThumbnailUrls": 20,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
-    "uniqueImageCoverage": 2,
-    "uniqueThumbnailAssignmentRate": 4,
+    "uniqueImageCoverage": 3,
+    "uniqueThumbnailAssignmentRate": 7,
     "dominantThumbnailCount": 273,
     "dominantThumbnailShare": 42,
     "concentrationWarning": true,
@@ -35,18 +169,38 @@
       },
       {
         "host": "images.khan.co.kr",
+        "count": 4
+      },
+      {
+        "host": "biz.chosun.com",
         "count": 3
+      },
+      {
+        "host": "0.soompi.io",
+        "count": 2
+      },
+      {
+        "host": "cdn.en.sportalkorea.com",
+        "count": 2
       },
       {
         "host": "file.sportsseoul.com",
         "count": 1
       },
       {
-        "host": "biz.chosun.com",
+        "host": "image.xportsnews.com",
         "count": 1
       },
       {
-        "host": "image.xportsnews.com",
+        "host": "cdn.hankooki.com",
+        "count": 1
+      },
+      {
+        "host": "cdnweb01.wikitree.co.kr",
+        "count": 1
+      },
+      {
+        "host": "s.yimg.com",
         "count": 1
       },
       {
@@ -66,374 +220,313 @@
   "collection": {
     "newsQueriesRequested": 4,
     "newsQueriesSuccessful": 4,
+    "bingNewsQueriesRequested": 4,
+    "bingNewsQueriesSuccessful": 4,
+    "bingNewsCandidates": 41,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 654,
-    "newsUniqueFetched": 242,
-    "newsAddedLastRun": 39,
-    "duplicateBeforeMergeLastRun": 24,
-    "duplicateGroupsCurrent": 654,
+    "newsCandidatesTotal": 655,
+    "newsUniqueFetched": 285,
+    "newsAddedLastRun": 8,
+    "duplicateBeforeMergeLastRun": 36,
+    "duplicateGroupsCurrent": 655,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 266,
-      "after": 238,
-      "collapsed": 28,
+      "before": 321,
+      "after": 280,
+      "collapsed": 41,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
       "attempted": 12,
-      "found": 9,
-      "assigned": 9,
+      "found": 10,
+      "assigned": 10,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
-      "missing": 2,
+      "missing": 1,
       "failed": 1,
       "results": [
         {
-          "id": "d6c5f93f622776e07642",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "1410c1c68a3a1cfaa0f2",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://osen.co.kr/article/G1112907419",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://osen.co.kr/article/G1112907419",
-          "resolvedArticleHost": "osen.co.kr"
-        },
-        {
-          "id": "77db473416096271082d",
+          "id": "b37a5009be7372f08cbb",
           "status": "assigned",
           "candidate": {
-            "url": "https://image.starnewskorea.com/cdn-cgi/image/f=auto,w=1200,h=670,fit=cover,q=high,sharpen=2/21/2026/10/2026103014300533060_1.jpg",
+            "url": "https://biz.chosun.com/resizer/v2/43WAK6KFC2DFV32XD5GOANDL5Q.jpg?auth=02dcafb5dd87372fb50c0c6643c883b16296ddbb77f24fc543cdbaf52cb755f2&width=572&height=300&smart=true",
             "source": "og:image",
             "priority": 1
           },
           "candidates": [
             {
-              "url": "https://image.starnewskorea.com/cdn-cgi/image/f=auto,w=1200,h=670,fit=cover,q=high,sharpen=2/21/2026/10/2026103014300533060_1.jpg",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://menu.starnewskorea.com/starnews24/static/images/og_starnews.jpg",
-              "source": "twitter:image",
-              "priority": 2
-            },
-            {
-              "url": "https://image.starnewskorea.com/cdn-cgi/image/f=jpeg,w=1200,h=675,fit=cover,g=face,q=high/21/2026/10/2026103014300533060_1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://image.starnewskorea.com/cdn-cgi/image/f=jpeg,w=1200,h=900,fit=cover,g=face,q=high/21/2026/10/2026103014300533060_1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://image.starnewskorea.com/cdn-cgi/image/f=jpeg,w=1200,h=1200,fit=cover,g=face,q=high/21/2026/10/2026103014300533060_1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.starnewskorea.com/culture-magazine/2026/10/30/2026103014300533060",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.starnewskorea.com/culture-magazine/2026/10/30/2026103014300533060",
-          "resolvedArticleHost": "www.starnewskorea.com"
-        },
-        {
-          "id": "12d2e1a63a52b149fac7",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://img.etnews.com/news/article/2025/03/17/cms_temp_article_17104654779973.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://img.etnews.com/news/article/2025/03/17/cms_temp_article_17104654779973.jpg",
+              "url": "https://biz.chosun.com/resizer/v2/43WAK6KFC2DFV32XD5GOANDL5Q.jpg?auth=02dcafb5dd87372fb50c0c6643c883b16296ddbb77f24fc543cdbaf52cb755f2&width=572&height=300&smart=true",
               "source": "og:image",
               "priority": 1
             }
           ],
           "assigned": true,
-          "publisherArticleUrl": "https://www.etnews.com/20250317000132",
+          "publisherArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2024/07/18/XH24HR34ZQQDRAW7QI2RIQZMLM/",
           "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.etnews.com/20250317000132",
-          "resolvedArticleHost": "www.etnews.com"
-        },
-        {
-          "id": "755bfff53f3d7af07524",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://pimg.mk.co.kr/news/cms/202406/28/news-p.v1.20240628.0f4b9a2cb5cd4f2eb17ecb679a3241b9_R.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://pimg.mk.co.kr/news/cms/202406/28/news-p.v1.20240628.0f4b9a2cb5cd4f2eb17ecb679a3241b9_R.jpg",
-              "source": "og:image",
-              "priority": 1
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.mk.co.kr/en/entertain/11053930",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.mk.co.kr/en/entertain/11053930",
-          "resolvedArticleHost": "www.mk.co.kr"
-        },
-        {
-          "id": "2f3bd3505026c6c9630e",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.45bebc1da5d442248006aeec16999189_P1.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.45bebc1da5d442248006aeec16999189_P1.jpg",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.8ca8ec3364b64563b953dd6d7cf8760b_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.9e09418c0a6244198bbf84354ae08b48_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.c2cdd1f027e447ea9be459087c99ff8e_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.64ffaf24892a48db0bb80b563f1d4eb_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.a83e11c5b7b64e45a526de6f1d8b885a_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.d5d738747f624e7f9d22c5f819181728_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.8767bc83f04b492ba35dbcd2986ebe63_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.a19d1c95348f47fd948b1a8fafc2a19a_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.cb65c19735e7491aa6c7c213bd0d85b0_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610190909007/",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202610190909007/",
-          "resolvedArticleHost": "sports.khan.co.kr"
-        },
-        {
-          "id": "573c328cd899cbdb983c",
-          "status": "failed",
-          "publisherArticleUrl": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
-          "sourceUrl": ""
-        },
-        {
-          "id": "db6ba77a0559952da2df",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://file.sportsseoul.com/news/cms/2026/10/22/news-p.v1.20261022.03dbd0cc4b894e54a8068bc0cb0a7a95_T1.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://file.sportsseoul.com/news/cms/2026/10/22/news-p.v1.20261022.03dbd0cc4b894e54a8068bc0cb0a7a95_T1.jpg",
-              "source": "og:image",
-              "priority": 1
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.sportsseoul.com/news/read/1643207",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.sportsseoul.com/news/read/1643207",
-          "resolvedArticleHost": "www.sportsseoul.com"
-        },
-        {
-          "id": "200468c61716e4ff96b3",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.5aa9371491a94372acee072f477d2c24_P1.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.5aa9371491a94372acee072f477d2c24_P1.jpg",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.ffa880a9c2404d0d8277dd8bb6711e46_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.314dfb815f734ab18489b232ece541ac_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.115c30f713d74b65b9bea487e20808ce_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://sports.khan.co.kr/article/202510231129003",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://sports.khan.co.kr/article/202510231129003",
-          "resolvedArticleHost": "sports.khan.co.kr"
-        },
-        {
-          "id": "7c01e17c474ffecfd111",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.bd28426ddb8d490bb89f8147dae5963e_P1.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.bd28426ddb8d490bb89f8147dae5963e_P1.jpg",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.0144971752214463adac5da8cb4644fa_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.b24533cd1d63405db63af90bb3a7e7d6_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.cb2bff4c61714df792080aaf297ed5c5_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://sports.khan.co.kr/article/202510231108013",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://sports.khan.co.kr/article/202510231108013",
-          "resolvedArticleHost": "sports.khan.co.kr"
-        },
-        {
-          "id": "de974fb311b152bc6141",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://biz.chosun.com/resizer/v2/7OA2WHY7EANUWEY4N55NIG6BMM.png?auth=c51b362771b0ad9a6eaf72177cd03a8bca2d9ed7a3bf56e3df5a35f075124a9a&width=650&height=341&smart=true",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://biz.chosun.com/resizer/v2/7OA2WHY7EANUWEY4N55NIG6BMM.png?auth=c51b362771b0ad9a6eaf72177cd03a8bca2d9ed7a3bf56e3df5a35f075124a9a&width=650&height=341&smart=true",
-              "source": "og:image",
-              "priority": 1
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2025/06/10/NHN5PSUOLY45XJL6ONHFTU3R6Y/",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2025/06/10/NHN5PSUOLY45XJL6ONHFTU3R6Y/",
+          "resolvedArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2024/07/18/XH24HR34ZQQDRAW7QI2RIQZMLM/",
           "resolvedArticleHost": "biz.chosun.com"
         },
         {
-          "id": "d3cf5f84705cc6c0971b",
+          "id": "2f3af607ca1ec5db5440",
           "status": "assigned",
           "candidate": {
-            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423157707985.jpg",
-            "source": "twitter:image",
-            "priority": 2
+            "url": "https://cdn.hankooki.com/news/thumbnail/202404/153478_209428_1713845524_v150.jpg",
+            "source": "og:image",
+            "priority": 1
           },
           "candidates": [
             {
-              "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423157707985.jpg",
-              "source": "twitter:image",
-              "priority": 2
+              "url": "https://cdn.hankooki.com/news/thumbnail/202404/153478_209428_1713845524_v150.jpg",
+              "source": "og:image",
+              "priority": 1
             },
             {
-              "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741424289493975.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423485467816.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741424151153491.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423964747776.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423518386208.jpg",
+              "url": "https://cdn.hankooki.com/news/photo/202404/153478_209428_1713845524.jpg",
               "source": "jsonld:image",
               "priority": 5
             }
           ],
           "assigned": true,
-          "publisherArticleUrl": "https://www.xportsnews.com/article/1970283",
+          "publisherArticleUrl": "https://www.hankooki.com/news/articleView.html?idxno=153478",
           "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.xportsnews.com/article/1970283",
-          "resolvedArticleHost": "www.xportsnews.com"
+          "resolvedArticleUrl": "https://www.hankooki.com/news/articleView.html?idxno=153478",
+          "resolvedArticleHost": "www.hankooki.com"
+        },
+        {
+          "id": "66c296a7f618669fd99b",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/202303231117381775.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/202303231117381775.jpg",
+              "source": "og:image",
+              "priority": 1
+            },
+            {
+              "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/img_20230323111529_6c3aaef8.webp",
+              "source": "jsonld:image",
+              "priority": 5
+            },
+            {
+              "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/img_20230323111530_ef2688ce.webp",
+              "source": "jsonld:image",
+              "priority": 5
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://www.wikitree.co.kr/articles/839103",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.wikitree.co.kr/articles/839103",
+          "resolvedArticleHost": "www.wikitree.co.kr"
+        },
+        {
+          "id": "651745f76b8469f7fe65",
+          "status": "failed",
+          "publisherArticleUrl": "https://x.com/NMlXX_Haewon",
+          "sourceUrl": ""
+        },
+        {
+          "id": "f7fabbf8ab78fa7dce01",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg",
+              "source": "og:image",
+              "priority": 1
+            },
+            {
+              "url": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg?w=140&h=140&crop=1",
+              "source": "jsonld:thumbnailUrl",
+              "priority": 5
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://www.soompi.com/article/1870023wpp/nmixxs-haewon-sits-out-music-bank-in-barcelona-due-to-health",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.soompi.com/article/1870023wpp/nmixxs-haewon-sits-out-music-bank-in-barcelona-due-to-health",
+          "resolvedArticleHost": "www.soompi.com"
+        },
+        {
+          "id": "9dca85b63514c793581e",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://cdn.en.sportalkorea.com/news/photo/202611/48591_93671_1795067434.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://cdn.en.sportalkorea.com/news/photo/202611/48591_93671_1795067434.jpg",
+              "source": "og:image",
+              "priority": 1
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=48591",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=48591",
+          "resolvedArticleHost": "en.sportalkorea.com"
+        },
+        {
+          "id": "4c30e8eab8286f86c364",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://cdn.en.sportalkorea.com/news/photo/202610/42092_81565_1793077817.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://cdn.en.sportalkorea.com/news/photo/202610/42092_81565_1793077817.jpg",
+              "source": "og:image",
+              "priority": 1
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=42092",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=42092",
+          "resolvedArticleHost": "en.sportalkorea.com"
+        },
+        {
+          "id": "937b773eb419381da3d0",
+          "status": "missing",
+          "candidate": null,
+          "candidates": [],
+          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+          "resolvedArticleHost": "www.msn.com"
+        },
+        {
+          "id": "8483bee976c1fb0427a8",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.e741b855f2fa49288a983fb2fdecb549_P1.png",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.e741b855f2fa49288a983fb2fdecb549_P1.png",
+              "source": "og:image",
+              "priority": 1
+            },
+            {
+              "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.a3c0f72887824b49a229bb31128ed037_P1.png",
+              "source": "jsonld:image",
+              "priority": 5
+            },
+            {
+              "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.19d416a0e75b469f83e284f29797e571_P1.png",
+              "source": "jsonld:image",
+              "priority": 5
+            },
+            {
+              "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.487b5ca6be8843cb92caea8a834e0204_P1.png",
+              "source": "jsonld:image",
+              "priority": 5
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202609201357007",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202609201357007",
+          "resolvedArticleHost": "sports.khan.co.kr"
+        },
+        {
+          "id": "f09df33b20baa8f03b54",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://biz.chosun.com/resizer/v2/G5RGKYRWMY4TIMJWME2DEYRWGQ.jpg?auth=ae910996af10194b83fc642a51995ea7b3a4f629e15fa8e0816dbca146ba9b20&width=650&height=341&smart=true",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://biz.chosun.com/resizer/v2/G5RGKYRWMY4TIMJWME2DEYRWGQ.jpg?auth=ae910996af10194b83fc642a51995ea7b3a4f629e15fa8e0816dbca146ba9b20&width=650&height=341&smart=true",
+              "source": "og:image",
+              "priority": 1
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/07/10/UEECI6QMJBGTFBWEOEIJHBBRNQ/",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/07/10/UEECI6QMJBGTFBWEOEIJHBBRNQ/",
+          "resolvedArticleHost": "biz.chosun.com"
+        },
+        {
+          "id": "eb1509691290e61b7637",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg",
+              "source": "og:image",
+              "priority": 1
+            },
+            {
+              "url": "https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg?w=140&h=140&crop=1",
+              "source": "jsonld:thumbnailUrl",
+              "priority": 5
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://www.soompi.com/article/1839633wpp/watch-nmixxs-haewon-and-bae-le-sserafims-chaewon-and-kazuha-come-together-in-amazing-saturday-preview",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.soompi.com/article/1839633wpp/watch-nmixxs-haewon-and-bae-le-sserafims-chaewon-and-kazuha-come-together-in-amazing-saturday-preview",
+          "resolvedArticleHost": "www.soompi.com"
+        },
+        {
+          "id": "b38c8711b2141792afa2",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://s.yimg.com/lo/mysterio/api/5f88770d3f8e21213fb6bdc7043d1f7a1316fbd9b4ee0bd2c946c4238875f408/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hollywood_reporter_217%2Fb56840acfc85c0f0b109e2a3120a823a",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://s.yimg.com/lo/mysterio/api/5f88770d3f8e21213fb6bdc7043d1f7a1316fbd9b4ee0bd2c946c4238875f408/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hollywood_reporter_217%2Fb56840acfc85c0f0b109e2a3120a823a",
+              "source": "og:image",
+              "priority": 1
+            },
+            {
+              "url": "https://s.yimg.com/lo/mysterio/api/edbb85d9b7d1af1b15f5a09603359e1bdc185414947e94acca35fe66068bbccb/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hollywood_reporter_217%2Fb56840acfc85c0f0b109e2a3120a823a",
+              "source": "jsonld:image",
+              "priority": 5
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://ca.news.yahoo.com/nmixx-thrives-change-first-full-230000106.html",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://ca.news.yahoo.com/nmixx-thrives-change-first-full-230000106.html",
+          "resolvedArticleHost": "ca.news.yahoo.com"
         }
       ]
     }
   },
   "thumbnailProvenance": {
     "assignedBySource": {
-      "unknown": 645,
-      "og:image": 8,
+      "unknown": 636,
+      "og:image": 18,
       "twitter:image": 1
     }
   },
@@ -452,10 +545,10 @@
       "source": "조선일보",
       "items": 3,
       "withUrl": 3,
-      "withThumbnail": 0,
+      "withThumbnail": 2,
       "withDate": 3,
       "urlCoverage": 100,
-      "thumbnailCoverage": 0,
+      "thumbnailCoverage": 67,
       "dateCoverage": 100
     },
     {
@@ -502,20 +595,20 @@
       "source": "soompi.com",
       "items": 2,
       "withUrl": 2,
-      "withThumbnail": 0,
+      "withThumbnail": 2,
       "withDate": 2,
       "urlCoverage": 100,
-      "thumbnailCoverage": 0,
+      "thumbnailCoverage": 100,
       "dateCoverage": 100
     },
     {
       "source": "en.sportalkorea.com",
       "items": 2,
       "withUrl": 2,
-      "withThumbnail": 0,
+      "withThumbnail": 2,
       "withDate": 2,
       "urlCoverage": 100,
-      "thumbnailCoverage": 0,
+      "thumbnailCoverage": 100,
       "dateCoverage": 100
     },
     {
@@ -562,20 +655,20 @@
       "source": "HANKOOKI",
       "items": 1,
       "withUrl": 1,
-      "withThumbnail": 0,
+      "withThumbnail": 1,
       "withDate": 1,
       "urlCoverage": 100,
-      "thumbnailCoverage": 0,
+      "thumbnailCoverage": 100,
       "dateCoverage": 100
     },
     {
       "source": "위키트리",
       "items": 1,
       "withUrl": 1,
-      "withThumbnail": 0,
+      "withThumbnail": 1,
       "withDate": 1,
       "urlCoverage": 100,
-      "thumbnailCoverage": 0,
+      "thumbnailCoverage": 100,
       "dateCoverage": 100
     },
     {
@@ -592,20 +685,20 @@
       "source": "MSN",
       "items": 1,
       "withUrl": 1,
-      "withThumbnail": 0,
+      "withThumbnail": 1,
       "withDate": 1,
       "urlCoverage": 100,
-      "thumbnailCoverage": 0,
+      "thumbnailCoverage": 100,
       "dateCoverage": 100
     },
     {
       "source": "Yahoo News",
       "items": 1,
       "withUrl": 1,
-      "withThumbnail": 0,
+      "withThumbnail": 1,
       "withDate": 1,
       "urlCoverage": 100,
-      "thumbnailCoverage": 0,
+      "thumbnailCoverage": 100,
       "dateCoverage": 100
     },
     {
@@ -659,6 +752,16 @@
       "dateCoverage": 100
     },
     {
+      "source": "스포츠조선 on MSN",
+      "items": 1,
+      "withUrl": 1,
+      "withThumbnail": 0,
+      "withDate": 1,
+      "urlCoverage": 100,
+      "thumbnailCoverage": 0,
+      "dateCoverage": 100
+    },
+    {
       "source": "스타뉴스",
       "items": 1,
       "withUrl": 1,
@@ -701,14 +804,20 @@
       "requested": 1,
       "successful": 1,
       "successRate": 100
+    },
+    {
+      "source": "Bing News RSS",
+      "requested": 4,
+      "successful": 4,
+      "successRate": 100
     }
   ],
   "classification": {
-    "items": 654,
+    "items": 655,
     "categoryCounts": {
       "video": 182,
       "interview": 36,
-      "news": 383,
+      "news": 384,
       "brand": 20,
       "event": 5,
       "performance": 26,
@@ -721,14 +830,14 @@
     "accuracyLabel": "not measured (no category review labels)"
   },
   "thumbnailReviewMetrics": {
-    "eligible": 318,
+    "eligible": 337,
     "reviewed": 0,
     "reviewCoverage": 0,
     "relevant": 0,
     "unsuitable": 0,
     "excluded": 0,
     "precision": null,
-    "selectedEligible": 282,
+    "selectedEligible": 292,
     "selectedReviewed": 0,
     "selectedPrecision": null,
     "counts": {
@@ -753,9 +862,9 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
+    "rateLimited": 1,
     "unreachable": 1,
-    "thumbnailMissing": 372,
+    "thumbnailMissing": 363,
     "results": [
       {
         "kind": "article",
@@ -850,8 +959,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBaeXhoMmlmeHFxNHJLc1VUb05ZWEljR2RXUVV3cC1hOFdfcWpiejFaTGdLaExZNF8tQ1lrYUplWHZHY2M4bkJQWi1OSnhmZG5ZYXAzVEpCaThySDNI?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -1006,38 +1115,59 @@
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 9,
+    "articlesCompared": 19,
     "rssOnly": 0,
-    "metaOnly": 9,
+    "metaOnly": 19,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 9,
-    "metaAssigned": 9,
-    "assignmentRate": 100,
+    "metaFound": 19,
+    "metaAssigned": 10,
+    "assignmentRate": 53,
     "sourceCounts": {
-      "og:image": 8,
-      "jsonld:image": 23,
-      "twitter:image": 2
+      "og:image": 18,
+      "jsonld:image": 30,
+      "twitter:image": 2,
+      "jsonld:thumbnailUrl": 2
     },
     "hostCounts": [
       {
         "host": "images.khan.co.kr",
-        "count": 18
+        "count": 22
       },
       {
         "host": "image.xportsnews.com",
         "count": 6
       },
       {
+        "host": "0.soompi.io",
+        "count": 4
+      },
+      {
         "host": "image.starnewskorea.com",
         "count": 4
       },
       {
-        "host": "file.sportsseoul.com",
-        "count": 1
+        "host": "biz.chosun.com",
+        "count": 3
       },
       {
-        "host": "biz.chosun.com",
+        "host": "cdnweb01.wikitree.co.kr",
+        "count": 3
+      },
+      {
+        "host": "cdn.hankooki.com",
+        "count": 2
+      },
+      {
+        "host": "cdn.en.sportalkorea.com",
+        "count": 2
+      },
+      {
+        "host": "s.yimg.com",
+        "count": 2
+      },
+      {
+        "host": "file.sportsseoul.com",
         "count": 1
       },
       {
@@ -1067,8 +1197,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "200468c61716e4ff96b3",
@@ -1098,8 +1228,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "7c01e17c474ffecfd111",
@@ -1129,8 +1259,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "de974fb311b152bc6141",
@@ -1145,8 +1275,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "d3cf5f84705cc6c0971b",
@@ -1181,6 +1311,211 @@
           },
           {
             "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423518386208.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": false,
+        "metaStatus": "not-attempted"
+      },
+      {
+        "id": "b37a5009be7372f08cbb",
+        "title": "엔믹스(NMIXX) 오해원,'외모췌크~ 이상무!' [O! STAR 숏폼]",
+        "articleUrl": "https://biz.chosun.com/entertainment/enter_general/2024/07/18/XH24HR34ZQQDRAW7QI2RIQZMLM/",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://biz.chosun.com/resizer/v2/43WAK6KFC2DFV32XD5GOANDL5Q.jpg?auth=02dcafb5dd87372fb50c0c6643c883b16296ddbb77f24fc543cdbaf52cb755f2&width=572&height=300&smart=true",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "2f3af607ca1ec5db5440",
+        "title": "NMIXX Haewon and BAE Illuminate with Variety Stardom",
+        "articleUrl": "https://www.hankooki.com/news/articleView.html?idxno=153478",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://cdn.hankooki.com/news/thumbnail/202404/153478_209428_1713845524_v150.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://cdn.hankooki.com/news/photo/202404/153478_209428_1713845524.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "66c296a7f618669fd99b",
+        "title": "'환승연애2' 지수, 엔믹스 오해원 닮은꼴 소리 듣더니 작정하고 커버했다 (영상)",
+        "articleUrl": "https://www.wikitree.co.kr/articles/839103",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/202303231117381775.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/img_20230323111529_6c3aaef8.webp",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/img_20230323111530_ef2688ce.webp",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "f7fabbf8ab78fa7dce01",
+        "title": "NMIXX's Haewon Sits Out \"Music Bank In Barcelona\" Due To Health",
+        "articleUrl": "https://www.soompi.com/article/1870023wpp/nmixxs-haewon-sits-out-music-bank-in-barcelona-due-to-health",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg?w=140&h=140&crop=1",
+            "source": "jsonld:thumbnailUrl",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "9dca85b63514c793581e",
+        "title": "NMIXX's Haewon confesses her obsession with appearance amid concerns over being 'skinny': \"It's hard\" [N Issue]",
+        "articleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=48591",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://cdn.en.sportalkorea.com/news/photo/202611/48591_93671_1795067434.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "4c30e8eab8286f86c364",
+        "title": "NMIXX's Haewon appears on 'Gag Concert'…\"The crime of an idol appearing more on variety shows than four comedians\"",
+        "articleUrl": "https://en.sportalkorea.com/news/articleView.html?idxno=42092",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://cdn.en.sportalkorea.com/news/photo/202610/42092_81565_1793077817.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "8483bee976c1fb0427a8",
+        "title": "Haewon of NMIXX, fans worry over a 'skin-and-bones' look... \"Where did Nongdamgom go?\"",
+        "articleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-fans-worry-over-a-skin-and-bones-look-where-did-nongdamgom-go/ar-AA2cAJfA",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.e741b855f2fa49288a983fb2fdecb549_P1.png",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.a3c0f72887824b49a229bb31128ed037_P1.png",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.19d416a0e75b469f83e284f29797e571_P1.png",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/09/20/news-p.v1.20260920.487b5ca6be8843cb92caea8a834e0204_P1.png",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "f09df33b20baa8f03b54",
+        "title": "NMIXX Haewon vows not to perform with short haircut, asks fans for support",
+        "articleUrl": "https://biz.chosun.com/en/en-entertainment/2026/07/10/UEECI6QMJBGTFBWEOEIJHBBRNQ/",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://biz.chosun.com/resizer/v2/G5RGKYRWMY4TIMJWME2DEYRWGQ.jpg?auth=ae910996af10194b83fc642a51995ea7b3a4f629e15fa8e0816dbca146ba9b20&width=650&height=341&smart=true",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "eb1509691290e61b7637",
+        "title": "Watch: NMIXX's Haewon And Bae + LE SSERAFIM's Chaewon And Kazuha Come Together In \"Amazing Saturday\" Preview",
+        "articleUrl": "https://www.soompi.com/article/1839633wpp/watch-nmixxs-haewon-and-bae-le-sserafims-chaewon-and-kazuha-come-together-in-amazing-saturday-preview",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg?w=140&h=140&crop=1",
+            "source": "jsonld:thumbnailUrl",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "b38c8711b2141792afa2",
+        "title": "NMIXX Thrives on Change With Their First Full-Length Album, ‘Blue Valentine’",
+        "articleUrl": "https://ca.news.yahoo.com/nmixx-thrives-change-first-full-230000106.html",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://s.yimg.com/lo/mysterio/api/5f88770d3f8e21213fb6bdc7043d1f7a1316fbd9b4ee0bd2c946c4238875f408/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hollywood_reporter_217%2Fb56840acfc85c0f0b109e2a3120a823a",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://s.yimg.com/lo/mysterio/api/edbb85d9b7d1af1b15f5a09603359e1bdc185414947e94acca35fe66068bbccb/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hollywood_reporter_217%2Fb56840acfc85c0f0b109e2a3120a823a",
             "source": "jsonld:image",
             "priority": 5
           }
@@ -1222,8 +1557,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "12d2e1a63a52b149fac7",
@@ -1238,8 +1573,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "755bfff53f3d7af07524",
@@ -1254,8 +1589,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "2f3bd3505026c6c9630e",
@@ -1315,13 +1650,13 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       }
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T05:33:35.393Z",
+    "generatedAt": "2026-11-24T05:36:21.204Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -3247,10 +3582,32 @@
     ]
   },
   "thumbnailResponseAudit": {
-    "sampledUniqueUrls": 10,
-    "checked": 10,
+    "sampledUniqueUrls": 12,
+    "checked": 12,
     "nonImage": [],
-    "broken": [],
+    "broken": [
+      {
+        "url": "https://cdn.hankooki.com/news/thumbnail/202404/153478_209428_1713845524_v150.jpg",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
+        "ok": false,
+        "isImage": false
+      },
+      {
+        "url": "https://cdn.en.sportalkorea.com/news/photo/202611/48591_93671_1795067434.jpg",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
+        "ok": false,
+        "isImage": false
+      },
+      {
+        "url": "https://cdn.en.sportalkorea.com/news/photo/202610/42092_81565_1793077817.jpg",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
+        "ok": false,
+        "isImage": false
+      }
+    ],
     "unreachable": [],
     "rateLimited": [],
     "results": [
@@ -3297,32 +3654,46 @@
         "isImage": true
       },
       {
-        "url": "https://image.starnewskorea.com/cdn-cgi/image/f=auto,w=1200,h=670,fit=cover,q=high,sharpen=2/21/2026/10/2026103014300533060_1.jpg",
+        "url": "https://biz.chosun.com/resizer/v2/43WAK6KFC2DFV32XD5GOANDL5Q.jpg?auth=02dcafb5dd87372fb50c0c6643c883b16296ddbb77f24fc543cdbaf52cb755f2&width=572&height=300&smart=true",
         "status": 200,
         "contentType": "image/jpeg",
         "ok": true,
         "isImage": true
       },
       {
-        "url": "https://img.etnews.com/news/article/2025/03/17/cms_temp_article_17104654779973.jpg",
+        "url": "https://cdn.hankooki.com/news/thumbnail/202404/153478_209428_1713845524_v150.jpg",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
+        "ok": false,
+        "isImage": false
+      },
+      {
+        "url": "https://cdnweb01.wikitree.co.kr/webdata/editor/202303/23/202303231117381775.jpg",
         "status": 200,
         "contentType": "image/jpeg",
         "ok": true,
         "isImage": true
       },
       {
-        "url": "https://pimg.mk.co.kr/news/cms/202406/28/news-p.v1.20240628.0f4b9a2cb5cd4f2eb17ecb679a3241b9_R.jpg",
+        "url": "https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg",
         "status": 200,
         "contentType": "image/jpeg",
         "ok": true,
         "isImage": true
       },
       {
-        "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.45bebc1da5d442248006aeec16999189_P1.jpg",
-        "status": 200,
-        "contentType": "image/jpeg",
-        "ok": true,
-        "isImage": true
+        "url": "https://cdn.en.sportalkorea.com/news/photo/202611/48591_93671_1795067434.jpg",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
+        "ok": false,
+        "isImage": false
+      },
+      {
+        "url": "https://cdn.en.sportalkorea.com/news/photo/202610/42092_81565_1793077817.jpg",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
+        "ok": false,
+        "isImage": false
       }
     ]
   }
