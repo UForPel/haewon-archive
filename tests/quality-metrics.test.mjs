@@ -31,3 +31,6 @@ test('thumbnail heuristic flags repeated URLs and obvious logo-like path hints w
 
 test('thumbnail audit warns when one image URL dominates a sample',()=>{const report=summarizeThumbnailUrls(Array.from({length:10},(_,i)=>({thumbnailUrl:i<8?'https://img.test/shared.jpg':'https://img.test/unique'+i+'.jpg'})));assert.equal(report.dominantThumbnailCount,8);assert.equal(report.dominantThumbnailShare,80);assert.equal(report.concentrationWarning,true);});
 test('thumbnail audit does not warn for evenly distributed small samples',()=>{const report=summarizeThumbnailUrls([{thumbnailUrl:'https://img.test/a.jpg'},{thumbnailUrl:'https://img.test/b.jpg'},{thumbnailUrl:'https://img.test/c.jpg'},{thumbnailUrl:'https://img.test/d.jpg'}]);assert.equal(report.concentrationWarning,false);});
+
+
+test('collection quality metrics retain thumbnail assignment and duplicate rejection outcomes',()=>{const report=summarizeCollection({newsStatus:{thumbnailEnrichment:{attempted:12,found:12,assigned:1,duplicateRejected:11,missing:0,failed:0}}});assert.equal(report.collection.thumbnailEnrichment.assigned,1);assert.equal(report.collection.thumbnailEnrichment.duplicateRejected,11);});
