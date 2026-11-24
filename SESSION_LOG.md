@@ -610,3 +610,15 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Commit: `9449d4d5` (`docs: define research-informed conversation follow-up buttons`).
 - Verification: GitHub contents commit confirmed; Actions and deployment triggered by this documentation update have not yet been checked.
 - Next: use this standard for the next continuation button and check the triggered workflow status.
+
+
+## 2026-11-24 — Duplicate thumbnail assignment guard
+- Baseline anomaly: current snapshot contained 273 thumbnail records sharing one exact URL among 618 candidates (44% concentration), with 345 missing. The 12-item enrichment batch reported 12 images found, but found alone does not prove images are distinct or suitable.
+- Hypothesis: publishers may reuse generic OG images; assigning one URL to several unrelated candidates inflates thumbnail coverage without improving visual information.
+- Implemented: new enrichment assignments are normalized by HTTPS URL and a URL already used by existing or newly enriched records is rejected. Existing thumbnails are untouched. Metrics now separate metadata images found, unique images assigned, and duplicate assignments rejected.
+- Tests added: two candidates receiving the same mocked OG image should report found=2, assigned=1, duplicateRejected=1; quality summary verifies metric propagation.
+- Research: evidence-informed agent engineering emphasizes executable feedback and iterative review, but cited self-evolving-agent work is not a production guarantee. Applied only a deterministic, reversible safeguard with tests. Research links: https://arxiv.org/abs/2608.03392 and https://arxiv.org/abs/2506.18824.
+- Commits: collector 231f7c91, test 8a5c8a6d, status/metrics 5ee77c62, 45f3097d, 437fa274.
+- CI/deployment: prior #421 unit tests and collection/data validation passed; Pages deploy failed because deploy-pages could not find the uploaded github-pages artifact (artifact upload itself succeeded). This is a recurring platform/artifact lookup issue, not evidence of test failure. Current code commits are awaiting fresh CI.
+- Limits: this guard does not visually compare images, identify generic/irrelevant imagery, or retroactively clean the 273 existing repeated assignments. Assigned/rejected counts are recorded, but UI display and deployed behavior remain to be verified.
+- Next: inspect fresh CI for the guard, compare assigned/rejected counts, then capture raw RSS/OG thumbnail provenance to diagnose the historical shared URL source.
