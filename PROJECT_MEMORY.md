@@ -2,11 +2,15 @@
 
 Last updated: 2026-11-24
 
-## Current status — thumbnail provenance
-- Collector tracks RSS image candidate sources and article OG/Twitter image source, with bounded HTTPS candidate lists. New records carry provenance when an image is assigned; quality dashboard reports enrichment outcomes and recent source/host/status.
-- CI #455 passed unit tests, collection, validation, operational logging and Pages deployment after Pages-artifact metadata wait fix. Live visual/mobile inspection remains unconfirmed.
-- Latest verified data snapshot: 620 candidates, 273 thumbnails, 347 missing; one URL is used by 273 records (44% concentration). Recent enrichment found 12 metadata URLs; 0 assigned, 12 duplicate-rejected. All 619 legacy records still have unknown source.
-- Next: inspect RSS media candidates vs article metadata/redirect provenance, improve source comparison and cautiously audit legacy repeated URLs; do not delete existing thumbnails without evidence.
+## Current status — RSS image provenance and human review (2026-11-24)
+- Verified starting baseline: #493 and #490 both succeeded; their Pages deployment steps succeeded. #493: https://github.com/UForPel/haewon-archive/actions/runs/45319530313
+- Latest historical dataset before the new extractor: 620 articles, 273 thumbnails, 347 missing; one Google-hosted URL is shared by 273 articles. All 620 stored records have 0 RSS image candidates; 12 have stored article-meta candidates. Historical RSS XML bodies were not retained.
+- Collector now supports RSS Media RSS / image Enclosure / description HTML / content:encoded; article-page OG/Twitter, secure_url, image_src, itemprop and JSON-LD image properties. Candidates retain source and priority; candidate arrays are merged rather than overwritten.
+- Added aggregate RSS-response diagnostics (tag counts and item counts only; no raw feed body storage) so the next successful live collection can establish whether Google News RSS actually supplies image markup.
+- Added per-article candidate review UI. Labels: relevant, unrelated, generic/logo, broken, rights unclear, uncertain. Labels are browser-local and can be exported/imported as JSON; they are not centrally shared.
+- Review metrics distinguish candidate suitability precision from selected-thumbnail precision. No human labels exist yet, so both remain unmeasured; this is not a classifier accuracy score.
+- Preserve the 273-record repeated-URL group. No automatic deletion or replacement.
+- New parser/UI/test commits are on main; CI is still being repaired/verified. Latest pending run at this checkpoint: #516. Pages deployment for the new code is not yet verified. Live visual/mobile inspection remains unconfirmed.
 
 ## Purpose
 First-read handoff document for every new ChatGPT conversation about this repository. Read it before proposing or changing project work, then follow links to detailed documents.
