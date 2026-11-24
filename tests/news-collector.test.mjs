@@ -52,3 +52,11 @@ test('image candidates reject non-HTTPS and logo-like image URLs',()=>{
  const html='<meta property="og:image" content="http://img.example/a.jpg"><meta property="og:image:secure_url" content="https://img.example/logo.png">';
  assert.deepEqual(extractOpenGraphImageCandidates(html),[]);
 });
+
+import {summarizeRssImageSignals} from '../scripts/collect-news.mjs';
+test('RSS response diagnostics count image-bearing structures without storing raw feed bodies',()=>{
+ const xml='<rss><channel><item><description><![CDATA[<img src="https://img.test/a.jpg"/>]]></description><media:thumbnail url="https://img.test/a.jpg"/></item><item><content:encoded><![CDATA[<img src="https://img.test/b.jpg"/>]]></content:encoded><enclosure url="https://img.test/b.jpg" type="image/jpeg"/></item></channel></rss>';
+ const result=summarizeRssImageSignals(xml);
+ assert.equal(result.items,2);assert.equal(result.mediaThumbnailTags,1);assert.equal(result.enclosureTags,1);
+ assert.equal(result.descriptionImageTags,1);assert.equal(result.contentEncodedImageTags,1);assert.equal(result.itemsWithImageSignals,2);
+});
