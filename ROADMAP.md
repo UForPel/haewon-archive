@@ -52,6 +52,10 @@
 - [x] Add static regression checks for required primary controls.
 - [ ] Add behavior tests for generated pagination/category controls and photo actions.
 - [x] Guard new thumbnail enrichment against assigning the same image URL to multiple records; report assigned vs duplicate-rejected outcomes.
+- [x] Persist selected article OG/Twitter image candidate evidence even when duplicate assignment is rejected.
+- [x] Measure URL-unique thumbnail assignment and unique coverage; label as URL metrics, not image quality.
+- [ ] Persist resolved publisher article URL and compare candidate host provenance without bypassing access restrictions.
+- [ ] Build reviewed source reliability labels and visual relevance sampling before any trust score.
 - [x] Track thumbnail source metadata for RSS and article OG/Twitter candidates; expose enrichment outcome and source provenance in the quality dashboard.
 - [ ] Manually verify mobile tap targets, focus/keyboard and live deployed controls.
 
