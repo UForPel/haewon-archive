@@ -986,3 +986,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - PR #3 merged: `6e8e527f71be330dd38da169fc1f48153f724b4b`. Corrects `push` => `github_push`, expands the schema enum, adds regression assertion and updates operations docs.
 - This is a follow-up defect discovered by inspecting the generated run-log for #566: workflow event was push but run log said unknown.
 - #566 itself remains verified green end-to-end (133/133, collection, validation, data commit, Pages deploy). It ran before PR #3; the new trigger test still needs a post-merge Actions execution.
+
+
+## 2026-11-25 — Actions #567 verified trigger fix and refreshed metrics
+- Run `45491071500` on `6e8e527f71be330dd38da169fc1f48153f724b4b` completed success. All 19 steps succeeded; tests 133/133; YouTube, RSS, improvement cycle, quality generation, data validation, log validation, data commit, artifact upload and Pages deployment passed.
+- Persisted run log verified: `trigger=github_push`, status success, validation passed. This confirms PR #3's trigger normalization and schema/test change.
+- Pages artifact: 411,213 bytes, SHA-256 `d2e6843218154b1574aa946d681a34061d454643a1483c69462fe18add4b80ba`.
+- Metrics #567: 53/682 explicit HTTPS publisher article URLs (7.8%); Google News 0/629. Thumbnails 315/682 (46.2%), 367 missing, 273 unverified legacy, 42 provenance-known (40 og:image, 2 twitter:image), 43 unique URLs, one repeated group of 273.
+- Bounded image metadata pass: 3 attempts, 3 assigned, 0 failures. Human review still pending; the repeated 273-record group remains unchanged.
+- Browser/mobile, keyboard, localStorage and file-picker round-trip remain unverified. Pages deployment success is not a substitute for those checks.
