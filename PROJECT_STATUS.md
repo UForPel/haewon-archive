@@ -267,3 +267,21 @@ Last updated: 2026-11-20
 - At this checkpoint #514 was running tests and #516 was queued. Do not treat these as passed.
 - Historical baseline: 620 articles; 273 thumbnail URLs assigned; 347 missing; 1 URL shared by 273 articles; 0 persisted RSS candidate articles; 12 metadata candidate sets. The new live RSS tag diagnostics have not yet run successfully.
 - Browser-local review labels are not a shared backend. JSON export/import is the current free static-site persistence path.
+
+
+## Live RSS diagnosis and Google News wrapper isolation — 2026-11-24
+- [x] Run the new RSS image-signal diagnostics against actual Google News RSS responses.
+- [x] Confirm 227 live RSS items contained 0 Media RSS thumbnail/content tags, 0 image Enclosure tags, 0 content:encoded entries, 0 description image tags and 0 image-bearing items.
+- [x] Confirm 12 metadata fetches stayed on news.google.com, returned the same generic OG image and did not reach publisher article pages.
+- [x] Quarantine wrapper-only metadata as google-news-wrapper:og:image; keep it as evidence, exclude it from publisher metadata comparisons and automatic thumbnail assignment.
+- [x] Verify run #521: unit tests, collection, data validation, data commit, Pages artifact and Pages deployment succeeded.
+- [ ] Verify latest metadata-host provenance commit with pending Actions #525.
+- [ ] Gather human review labels and measure candidate/selected-thumbnail precision; no image suitability accuracy is available yet.
+- [ ] Manually inspect deployed mobile review controls and browser-local label export/import.
+- [x] Preserve the 273-item repeated URL group without automatic deletion or replacement.
+
+### Current evidence
+- RSS: 227 items, 0 image-bearing structures, 0 RSS image candidates.
+- Metadata: 12 attempts, 0 publisher candidates, 0 assignments, 12 wrapper-only; final response host news.google.com for all 12.
+- Historical archive: 620 items, 273 with thumbnails, 347 without; one URL repeated 273 times.
+- Browser-local review labels are not shared across devices; JSON export/import is the current static-site persistence mechanism.
