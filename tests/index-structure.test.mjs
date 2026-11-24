@@ -23,8 +23,7 @@ test('index IDs are unique',()=>{
 });
 
 test('visible primary controls include named button actions and forms',()=>{
- const buttons=[...html.matchAll(/<button[^>]*>([\sS]*?)<\/button>/gi)].map(([,label])=>label.replace(/<[^>]+>/g,'').trim());
- for(const label of ['전체','해원 키워드','최근 7일','검색 열기','임시 링크 등록','JSON 내보내기'])assert.ok(buttons.includes(label),'missing button: '+label);
+ for(const markup of ['>전체</button>','>해원 키워드</button>','>최근 7일</button>','>검색 열기</button>','>임시 링크 등록</button>','>JSON 내보내기</button>'])assert.ok(html.includes(markup),'missing button markup: '+markup);
  assert.ok(html.includes('id="import-photos"'),'JSON import input must remain available');
  assert.ok(html.includes('id="discovery-pagination"')&&html.includes('id="video-pagination"'),'both result lists must expose pagination controls');
 });
