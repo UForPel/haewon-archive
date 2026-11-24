@@ -108,3 +108,9 @@ Do not enable a five-minute production loop until the external scheduler and sec
 - Redirect policy: only ordinary public HTTP GET with normal redirect following to the accessible publisher page; no decoding opaque Google redirect tokens, bypassing anti-bot/login/rate restrictions, or crawling beyond the article response. The current collector still stores Google News links as primary URLs; resolved publisher URLs are not yet persisted.
 - Research: Google News RSS endpoint is not documented as a stable public API in third-party testing; redirects can vary. Google publisher guidance recommends relevant images and OG/structured image metadata but cannot guarantee selection. No trust score is claimed without reviewed publisher labels.
 - Added `tests/thumbnail-persistence.test.mjs` for candidate persistence and comparison after duplicate rejection. Local execution not available; CI must verify.
+
+## Recursive improvement cycle — 2026-11-24 (continuation)
+- Re-read current main project docs and thumbnail implementation/data. Candidate persistence and unique-image metrics/dashboard were committed in the prior cycle.
+- Code review found literal escaped newline sequences in the comparison and metrics source files, which would break JavaScript parsing. Corrected them to real line breaks in commits 843a490 and b24bd71; fetched both files afterward and confirmed zero literal escaped-newline sequences remain.
+- Repository-wide tests and Actions/Pages status are not verified. GitHub Actions history and Pages inspection are unavailable in this session; local clone failed due DNS resolution.
+- Historical RSS candidates remain unavailable; trust/visual relevance scores not added because they need review labels. Redirect requests are ordinary public requests only; no token decoding or access bypass.
