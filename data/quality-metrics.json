@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T00:41:41.725Z",
+  "generatedAt": "2026-11-24T00:51:16.939Z",
   "thumbnailAudit": {
     "items": 618,
     "withThumbnail": 273,
@@ -40,24 +40,26 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 618,
-    "newsUniqueFetched": 286,
-    "newsAddedLastRun": 3,
-    "duplicateBeforeMergeLastRun": 24,
+    "newsUniqueFetched": 159,
+    "newsAddedLastRun": 0,
+    "duplicateBeforeMergeLastRun": 16,
     "duplicateGroupsCurrent": 618,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 310,
-      "after": 285,
-      "collapsed": 25,
+      "before": 175,
+      "after": 159,
+      "collapsed": 16,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
       "attempted": 12,
-      "found": 12,
+      "found": 11,
+      "assigned": 0,
+      "duplicateRejected": 11,
       "missing": 0,
-      "failed": 0
+      "failed": 1
     }
   },
   "sources": [
