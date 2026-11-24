@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { filterDiscoveryItems } from '../js/discovery-view.mjs';
-import { classifyDiscoveryItem, classifyDiscoveryCategory, classifyDiscoveryCategories, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText, classifyDiscoveryRelevance, groupDiscoveryDuplicates, assessDiscoveryQuality } from '../js/discovery-kind.mjs';
+import { classifyDiscoveryItem, classifyDiscoveryCategory, classifyDiscoveryCategories, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText, classifyDiscoveryRelevance, hasExplicitPublisherArticleUrl, groupDiscoveryDuplicates, assessDiscoveryQuality } from '../js/discovery-kind.mjs';
 const items=[{title:'Haewon interview',sourceName:'News A',description:'NMIXX interview'},{title:'Stage clip',sourceName:'News B',description:'NMIXX stage'}];
 test('query filters title, source and description case-insensitively',()=>{assert.equal(filterDiscoveryItems(items,'haewon').length,1);assert.equal(filterDiscoveryItems(items,'news b')[0].title,'Stage clip');assert.equal(filterDiscoveryItems(items,'stage').length,1);});
 test('empty and unmatched queries',()=>{assert.equal(filterDiscoveryItems(items,'').length,2);assert.deepEqual(filterDiscoveryItems(items,'missing'),[]);});
@@ -33,18 +33,28 @@ test('RSS description HTML and wrapper URLs are converted to readable plain text
 
 test('article relevance scopes separate Haewon, NMIXX and all article candidates',()=>{
  const candidates=[
-  {title:'오해원 인터뷰'},
-  {title:'NMIXX 새 앨범 소식'},
+  {title:'오해원 인터뷰',publisherArticleUrl:'https://publisher.test/haewon'},
+  {title:'NMIXX 새 앨범 소식',publisherArticleUrl:'https://publisher.test/nmixx'},
   {title:'Haewon pictorial'},
   {title:'일반 연예 뉴스'},
+  {title:'Haewon wrapper only',publisherArticleUrl:'https://news.google.com/rss/articles/opaque'},
   {title:'Haewon fancam'}
  ];
  const articles=filterArticleCandidates(candidates);
- assert.equal(articles.length,4);
- assert.equal(filterDiscoveryRelevance(articles,'haewon').length,2);
+ assert.equal(articles.length,5);
+ assert.equal(filterDiscoveryRelevance(articles,'verified-haewon').length,1);
+ assert.equal(filterDiscoveryRelevance(articles,'haewon').length,3);
  assert.equal(filterDiscoveryRelevance(articles,'nmixx').length,1);
- assert.equal(filterDiscoveryRelevance(articles,'all').length,4);
+ assert.equal(filterDiscoveryRelevance(articles,'all').length,5);
  assert.equal(classifyDiscoveryRelevance(candidates[0]),'haewon');
  assert.equal(classifyDiscoveryRelevance(candidates[1]),'nmixx');
  assert.equal(classifyDiscoveryRelevance(candidates[3]),'other');
+ assert.equal(hasExplicitPublisherArticleUrl(candidates[0]),true);
+ assert.equal(hasExplicitPublisherArticleUrl(candidates[4]),false);
+});
+test('verified publisher URL scope rejects HTTP, wrapper, root-only and credential URLs',()=>{
+ for(const publisherArticleUrl of ['http://publisher.test/story','https://news.google.com/rss/articles/opaque','https://publisher.test/','https://user:pass@publisher.test/story']){
+  assert.equal(hasExplicitPublisherArticleUrl({publisherArticleUrl}),false);
+ }
+});
 });
