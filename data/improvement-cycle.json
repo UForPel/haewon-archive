@@ -17,7 +17,7 @@
   },
   "evidence": {
     "cumulativeDiscoveryCandidates": 699,
-    "currentRunCandidates": 71,
+    "currentRunCandidates": 85,
     "uniqueVideoRecords": 19,
     "queryYield": [
       {
@@ -26,7 +26,7 @@
       },
       {
         "query": "오해원 인터뷰",
-        "candidates": 31
+        "candidates": 45
       },
       {
         "query": "NMIXX Haewon magazine",

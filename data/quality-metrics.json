@@ -1,5 +1,14 @@
 {
-  "generatedAt": "2026-11-24T22:49:51.318Z",
+  "generatedAt": "2026-11-24T23:05:15.303Z",
+  "discoveryRelevance": {
+    "totalCandidates": 699,
+    "articleCandidates": 514,
+    "videoCandidates": 185,
+    "haewonTitleMatches": 426,
+    "nmixxTitleMatches": 440,
+    "otherArticleCandidates": 29,
+    "defaultScope": "haewon-title-match"
+  },
   "articleUrlProvenance": {
     "totalItems": 699,
     "itemsWithPublisherArticleUrl": 55,
@@ -320,7 +329,7 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 699,
-    "newsUniqueFetched": 63,
+    "newsUniqueFetched": 77,
     "newsAddedLastRun": 1,
     "duplicateBeforeMergeLastRun": 8,
     "duplicateGroupsCurrent": 699,
@@ -328,8 +337,8 @@
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 71,
-      "after": 62,
+      "before": 85,
+      "after": 76,
       "collapsed": 9,
       "method": "normalized exact headline first; canonical URL fallback"
     },
@@ -1420,7 +1429,7 @@
     "checked": 41,
     "broken": [],
     "rateLimited": 0,
-    "unreachable": 1,
+    "unreachable": 2,
     "thumbnailMissing": 383,
     "results": [
       {
@@ -1642,8 +1651,9 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MMVlCQ2JKOGxjSnpKbnBLOTkxQk1SMU00c21JS2FUakdjX1lLRXBydUdoTjBwaDM5MmRuUncxR0EtWTI1TEQwQmhjYl9PdjctcFEwd19zbXBJV1I0?oc=5",
-        "status": 200,
-        "ok": true
+        "status": null,
+        "ok": false,
+        "error": "fetch failed"
       },
       {
         "kind": "article",
@@ -2858,7 +2868,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T22:49:51.329Z",
+    "generatedAt": "2026-11-24T23:05:15.319Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

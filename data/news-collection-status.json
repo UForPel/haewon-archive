@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T22:49:49.873Z",
+  "collectedAt": "2026-11-24T23:05:13.941Z",
   "searchPack": 1,
   "queries": [
     {
@@ -10,8 +10,8 @@
     },
     {
       "query": "오해원 인터뷰",
-      "candidates": 31,
-      "uniqueCandidates": 31
+      "candidates": 45,
+      "uniqueCandidates": 45
     },
     {
       "query": "NMIXX Haewon magazine",
@@ -30,12 +30,12 @@
   "bingCandidates": 30,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 71,
-  "uniqueIncoming": 63,
+  "fetched": 85,
+  "uniqueIncoming": 77,
   "added": 1,
   "rssImageSignals": {
-    "items": 41,
-    "sourceUrlItems": 41,
+    "items": 55,
+    "sourceUrlItems": 55,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -59,8 +59,8 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 71,
-    "after": 62,
+    "before": 85,
+    "after": 76,
     "collapsed": 9,
     "method": "normalized exact headline first; canonical URL fallback"
   },
