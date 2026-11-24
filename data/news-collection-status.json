@@ -1,67 +1,41 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T23:12:05.215Z",
+  "collectedAt": "2026-11-24T23:13:57.932Z",
   "searchPack": 1,
   "queries": [
     {
       "query": "Haewon NMIXX interview",
-      "candidates": 0,
-      "uniqueCandidates": 0
+      "candidates": 14,
+      "uniqueCandidates": 14
     },
     {
       "query": "오해원 인터뷰",
-      "candidates": 0,
-      "uniqueCandidates": 0
+      "candidates": 45,
+      "uniqueCandidates": 45
     },
     {
       "query": "NMIXX Haewon magazine",
-      "candidates": 10,
-      "uniqueCandidates": 10
+      "candidates": 13,
+      "uniqueCandidates": 13
     },
     {
       "query": "Haewon NMIXX brand",
-      "candidates": 11,
-      "uniqueCandidates": 11
+      "candidates": 14,
+      "uniqueCandidates": 14
     }
   ],
   "requestedQueries": 4,
-  "successfulQueries": 0,
-  "bingSuccessfulQueries": 2,
-  "bingCandidates": 21,
-  "bingFailedQueries": [
-    {
-      "query": "Haewon NMIXX interview",
-      "error": "Bing RSS 응답이 아닙니다"
-    },
-    {
-      "query": "오해원 인터뷰",
-      "error": "Bing RSS 응답이 아닙니다"
-    }
-  ],
-  "failedQueries": [
-    {
-      "query": "Haewon NMIXX interview",
-      "error": "HTTP 429"
-    },
-    {
-      "query": "오해원 인터뷰",
-      "error": "HTTP 429"
-    },
-    {
-      "query": "NMIXX Haewon magazine",
-      "error": "HTTP 429"
-    },
-    {
-      "query": "Haewon NMIXX brand",
-      "error": "HTTP 429"
-    }
-  ],
-  "fetched": 21,
-  "uniqueIncoming": 18,
-  "added": 0,
+  "successfulQueries": 4,
+  "bingSuccessfulQueries": 4,
+  "bingCandidates": 31,
+  "bingFailedQueries": [],
+  "failedQueries": [],
+  "fetched": 86,
+  "uniqueIncoming": 78,
+  "added": 2,
   "rssImageSignals": {
-    "items": 0,
-    "sourceUrlItems": 0,
+    "items": 55,
+    "sourceUrlItems": 55,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -85,9 +59,9 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 21,
-    "after": 18,
-    "collapsed": 3,
+    "before": 86,
+    "after": 77,
+    "collapsed": 9,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 701

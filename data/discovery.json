@@ -13311,7 +13311,13 @@
     "query": "Haewon NMIXX interview",
     "discoveredAt": "2026-11-24T23:09:14.426Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "4f417f562a8157cde0c5",
