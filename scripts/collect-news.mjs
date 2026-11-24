@@ -91,8 +91,8 @@ export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs
   if(item.thumbnailUrl||!byId.has(item.id))return item;
   const image=byId.get(item.id);
   try{const url=new URL(image);if(url.protocol!=='https:')return item;url.hash='';const normalized=url.href;
-   if(usedUrls.has(normal)){duplicateRejected++;return item;}
-   usedUrls.add(normal);assigned++;return {...item,thumbnailUrl:image};
+   if(usedUrls.has(normalized)){duplicateRejected++;return item;}
+   usedUrls.add(normalized);assigned++;return {...item,thumbnailUrl:image};
   }catch{return item;}
  });
  return {items:enriched,attempted:targets.length,found:byId.size,assigned,duplicateRejected,missing:results.filter(r=>r?.status==='missing').length,failed:results.filter(r=>r?.status==='failed').length,results};
