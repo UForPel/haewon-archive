@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-24T21:26:42.275Z",
+  "generatedAt": "2026-11-24T21:27:35.398Z",
   "articleUrlProvenance": {
-    "totalItems": 682,
-    "itemsWithPublisherArticleUrl": 53,
-    "bingNewsItems": 53,
+    "totalItems": 699,
+    "itemsWithPublisherArticleUrl": 55,
+    "bingNewsItems": 55,
     "candidateSourceCounts": {
-      "bing-news-rss-explicit-url-param": 57
+      "bing-news-rss-explicit-url-param": 59
     },
     "publisherHosts": {
       "sports.khan.co.kr": 5,
@@ -29,6 +29,7 @@
       "www.kapanlagi.com": 1,
       "ca.news.yahoo.com": 1,
       "tw.news.yahoo.com": 1,
+      "www.nme.com": 1,
       "www.allkpop.com": 1,
       "timesofindia.indiatimes.com": 1,
       "www.spotvnews.co.kr": 1,
@@ -36,6 +37,7 @@
       "osen.co.kr": 1,
       "www.starnewskorea.com": 1,
       "www.etnews.com": 1,
+      "www.forbes.com": 1,
       "www.hollywoodreporter.com": 1
     },
     "finalHosts": {
@@ -59,6 +61,7 @@
       "www.kapanlagi.com": 1,
       "ca.news.yahoo.com": 1,
       "tw.news.yahoo.com": 1,
+      "www.nme.com": 1,
       "www.allkpop.com": 1,
       "timesofindia.indiatimes.com": 1,
       "www.spotvnews.co.kr": 1,
@@ -67,6 +70,7 @@
       "www.starnewskorea.com": 1,
       "news.sbs.co.kr": 1,
       "www.etnews.com": 1,
+      "www.forbes.com": 1,
       "www.hollywoodreporter.com": 1
     },
     "wrapperOnlyMetadataHosts": {
@@ -77,47 +81,50 @@
       "m.newsen.com": 16,
       "sports.khan.co.kr": 15,
       "news.nate.com": 14,
-      "www.chosun.com": 12,
+      "www.chosun.com": 13,
       "enews.imbc.com": 11,
       "www.sedaily.com": 10,
-      "mydaily.co.kr": 9,
+      "mydaily.co.kr": 10,
+      "biz.chosun.com": 9,
       "www.hankyung.com": 9,
       "programs.sbs.co.kr": 8,
       "www.osen.co.kr": 8,
-      "biz.chosun.com": 8,
       "www.breaknews.com": 7,
+      "www.topstarnews.net": 6,
       "isplus.com": 6,
       "www.rnx.kr": 6,
       "www.sportsseoul.com": 5,
+      "www.mk.co.kr": 5,
       "www.hankooki.com": 5,
       "www.slist.kr": 5,
       "www.etnews.com": 5,
-      "www.topstarnews.net": 4,
+      "www.newsis.com": 4,
       "sports.donga.com": 4,
       "www.newsen.com": 4,
       "news.tf.co.kr": 4,
       "www.bntnews.co.kr": 3,
-      "www.mk.co.kr": 3,
       "www.koreadaily.com": 3,
       "www.marieclairekorea.com": 3,
       "www.news1.kr": 3,
       "www.fnnews.com": 3,
+      "www.munhwa.com": 3,
       "tvreport.co.kr": 2,
       "www.famtimes.co.kr": 2,
       "www.twig24.com": 2,
+      "www.joynews24.com": 2,
       "www.sportschosun.com": 2,
       "nwww.newsis.com": 2,
+      "www.mksports.co.kr": 2,
       "www.xportsnews.com": 2,
-      "www.newsis.com": 2,
       "www.mydaily.co.kr": 2,
       "newsen.com": 2,
       "news.jtbc.co.kr": 2,
       "www.ilyosisa.co.kr": 2,
+      "www.ize.co.kr": 1,
       "www.imbc.com": 1,
       "www.seoul.co.kr": 1,
       "www.behindpress.com": 1,
       "www.ytn.co.kr": 1,
-      "www.joynews24.com": 1,
       "www.wikitree.co.kr": 1,
       "enter.etoday.co.kr": 1,
       "www.esquirekorea.co.kr": 1,
@@ -149,6 +156,7 @@
       "v.daum.net": 1,
       "m.nocutnews.co.kr": 1,
       "www.mhns.co.kr": 1,
+      "www.cosmopolitan.co.kr": 1,
       "m.sedaily.com": 1,
       "m.imbc.com": 1,
       "www.yna.co.kr": 1,
@@ -158,37 +166,38 @@
       "www.nc.press": 1,
       "www.kdfnews.com": 1,
       "leisurebyte.com": 1,
+      "pann.nate.com": 1,
       "sports.news.nate.com": 1,
-      "www.munhwa.com": 1,
       "rollingstone.co.kr": 1,
-      "www.sportsworldi.com": 1
+      "www.sportsworldi.com": 1,
+      "news.sbs.co.kr": 1
     },
     "discoveryWrapperHosts": {
-      "www.bing.com": 53
+      "www.bing.com": 55
     }
   },
   "thumbnailProvenance": {
-    "assignedTotal": 315,
+    "assignedTotal": 316,
     "assignedBySource": {
       "unverified-legacy": 273,
-      "og:image": 40,
+      "og:image": 41,
       "twitter:image": 2
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 367,
-    "sourceProvenanceCoverage": 13
+    "missingThumbnailCount": 383,
+    "sourceProvenanceCoverage": 14
   },
   "thumbnailAudit": {
-    "items": 682,
-    "withThumbnail": 315,
-    "missing": 367,
-    "uniqueThumbnailUrls": 43,
+    "items": 699,
+    "withThumbnail": 316,
+    "missing": 383,
+    "uniqueThumbnailUrls": 44,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 6,
     "uniqueThumbnailAssignmentRate": 14,
     "dominantThumbnailCount": 273,
-    "dominantThumbnailShare": 40,
+    "dominantThumbnailShare": 39,
     "concentrationWarning": true,
     "repeatedUrls": [
       {
@@ -276,6 +285,10 @@
         "count": 1
       },
       {
+        "host": "nme.com",
+        "count": 1
+      },
+      {
         "host": "static.toiimg.com",
         "count": 1
       },
@@ -302,100 +315,61 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 30,
+    "bingNewsCandidates": 33,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 682,
-    "newsUniqueFetched": 63,
-    "newsAddedLastRun": 1,
+    "newsCandidatesTotal": 699,
+    "newsUniqueFetched": 82,
+    "newsAddedLastRun": 19,
     "duplicateBeforeMergeLastRun": 8,
-    "duplicateGroupsCurrent": 682,
+    "duplicateGroupsCurrent": 699,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 71,
-      "after": 62,
+      "before": 90,
+      "after": 81,
       "collapsed": 9,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 3,
-      "found": 3,
-      "assigned": 3,
+      "attempted": 2,
+      "found": 1,
+      "assigned": 1,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
-      "failed": 0,
+      "failed": 1,
       "results": [
         {
-          "id": "ce4468d1f0e09b93135d",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://s.yimg.com/lo/mysterio/api/1153401bb44443b3aa8ffc6a0dc8ee31c0152c6804c48a762b8406ce9f0bb178/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fca%2Febc.net.tw%2F99a768be2b678a27ad33ffa8710a22fd",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://s.yimg.com/lo/mysterio/api/1153401bb44443b3aa8ffc6a0dc8ee31c0152c6804c48a762b8406ce9f0bb178/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fca%2Febc.net.tw%2F99a768be2b678a27ad33ffa8710a22fd",
-              "source": "og:image",
-              "priority": 1
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
+          "id": "e3a83d764eaef54855a6",
+          "status": "failed",
+          "publisherArticleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
           "sourceUrl": "",
-          "resolvedArticleUrl": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
-          "resolvedArticleHost": "tw.news.yahoo.com"
+          "resolvedArticleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
+          "resolvedArticleHost": "www.forbes.com"
         },
         {
-          "id": "96579cf215e0e82b5ccf",
+          "id": "772e453cc3cd4b9b3a7e",
           "status": "assigned",
           "candidate": {
-            "url": "https://biz.chosun.com/resizer/v2/QRPEGR2B3RCBMKHQGM4YCBFJ6E.png?auth=bd8b5aee3461199876e3e35f98eb4a0d6a66c91d74cbe8ea289d4102be344010&width=650&height=341&smart=true",
+            "url": "https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg",
             "source": "og:image",
             "priority": 1
           },
           "candidates": [
             {
-              "url": "https://biz.chosun.com/resizer/v2/QRPEGR2B3RCBMKHQGM4YCBFJ6E.png?auth=bd8b5aee3461199876e3e35f98eb4a0d6a66c91d74cbe8ea289d4102be344010&width=650&height=341&smart=true",
+              "url": "https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg",
               "source": "og:image",
               "priority": 1
             }
           ],
           "assigned": true,
-          "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
+          "publisherArticleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
           "sourceUrl": "",
-          "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
-          "resolvedArticleHost": "biz.chosun.com"
-        },
-        {
-          "id": "288ac9019343bb06260d",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg?w=140&h=140&crop=1",
-              "source": "jsonld:thumbnailUrl",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
-          "resolvedArticleHost": "www.soompi.com"
+          "resolvedArticleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+          "resolvedArticleHost": "www.nme.com"
         }
       ]
     }
@@ -403,14 +377,14 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 629,
-      "withUrl": 629,
+      "items": 644,
+      "withUrl": 644,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 629,
+      "withDate": 644,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
-      "thumbnailCoverage": 43,
+      "thumbnailCoverage": 42,
       "dateCoverage": 100
     },
     {
@@ -678,6 +652,18 @@
       "dateCoverage": 100
     },
     {
+      "source": "NME",
+      "items": 1,
+      "withUrl": 1,
+      "withPublisherArticleUrl": 1,
+      "withThumbnail": 1,
+      "withDate": 1,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 100,
+      "dateCoverage": 100
+    },
+    {
       "source": "allkpop",
       "items": 1,
       "withUrl": 1,
@@ -798,6 +784,18 @@
       "dateCoverage": 100
     },
     {
+      "source": "Forbes",
+      "items": 1,
+      "withUrl": 1,
+      "withPublisherArticleUrl": 1,
+      "withThumbnail": 0,
+      "withDate": 1,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 0,
+      "dateCoverage": 100
+    },
+    {
       "source": "스타뉴스 on MSN",
       "items": 1,
       "withUrl": 1,
@@ -843,14 +841,14 @@
     }
   ],
   "classification": {
-    "items": 682,
+    "items": 699,
     "categoryCounts": {
       "video": 185,
-      "interview": 40,
-      "news": 399,
+      "interview": 43,
+      "news": 412,
       "brand": 21,
       "event": 5,
-      "performance": 28,
+      "performance": 29,
       "official": 7
     },
     "reviewedSamples": 0,
@@ -860,14 +858,14 @@
     "accuracyLabel": "not measured (no category review labels)"
   },
   "thumbnailReviewMetrics": {
-    "eligible": 404,
+    "eligible": 405,
     "reviewed": 0,
     "reviewCoverage": 0,
     "relevant": 0,
     "unsuitable": 0,
     "excluded": 0,
     "precision": null,
-    "selectedEligible": 315,
+    "selectedEligible": 316,
     "selectedReviewed": 0,
     "selectedPrecision": null,
     "counts": {
@@ -1274,6 +1272,25 @@
       "assignmentRate": null
     },
     {
+      "host": "www.forbes.com",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 0,
+      "missing": 0,
+      "failed": 1,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {
+        "forbidden": 1
+      },
+      "finalHosts": {
+        "www.forbes.com": 1
+      },
+      "successRate": 0,
+      "candidateRate": 0,
+      "assignmentRate": null
+    },
+    {
       "host": "www.hankooki.com",
       "attempted": 1,
       "assigned": 1,
@@ -1319,6 +1336,23 @@
       "errorCodes": {},
       "finalHosts": {
         "www.kapanlagi.com": 1
+      },
+      "successRate": 100,
+      "candidateRate": 100,
+      "assignmentRate": 100
+    },
+    {
+      "host": "www.nme.com",
+      "attempted": 1,
+      "assigned": 1,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.nme.com": 1
       },
       "successRate": 100,
       "candidateRate": 100,
@@ -1417,7 +1451,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 367,
+    "thumbnailMissing": 383,
     "results": [
       {
         "kind": "article",
@@ -1668,16 +1702,16 @@
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 42,
+    "articlesCompared": 43,
     "rssOnly": 0,
-    "metaOnly": 42,
+    "metaOnly": 43,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 42,
-    "metaAssigned": 3,
-    "assignmentRate": 7,
+    "metaFound": 43,
+    "metaAssigned": 1,
+    "assignmentRate": 2,
     "sourceCounts": {
-      "og:image": 40,
+      "og:image": 41,
       "jsonld:image": 56,
       "twitter:image": 6,
       "jsonld:thumbnailUrl": 15,
@@ -1758,6 +1792,10 @@
       },
       {
         "host": "pbs.twimg.com",
+        "count": 1
+      },
+      {
+        "host": "www.nme.com",
         "count": 1
       },
       {
@@ -2439,8 +2477,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "96579cf215e0e82b5ccf",
@@ -2455,8 +2493,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "fb392e4ba8879b947e36",
@@ -2489,6 +2527,22 @@
             "url": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg?w=140&h=140&crop=1",
             "source": "jsonld:thumbnailUrl",
             "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": false,
+        "metaStatus": "not-attempted"
+      },
+      {
+        "id": "772e453cc3cd4b9b3a7e",
+        "title": "Hear NMIXX’s Haewon cover Sabrina Carpenter’s ‘Please Please Please’",
+        "articleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg",
+            "source": "og:image",
+            "priority": 1
           }
         ],
         "sharedUrls": [],
@@ -2834,7 +2888,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T21:26:42.286Z",
+    "generatedAt": "2026-11-24T21:27:35.410Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

@@ -1281,7 +1281,15 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.ize.co.kr",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "323df05bb1d05f8af2c1",
@@ -2662,6 +2670,24 @@
     "candidateSource": ""
   },
   {
+    "id": "15907679ef42324e9925",
+    "title": "엔믹스 해원, ‘또 오해원’ (2024 SBS 가요대전 레드카펫) [HD포토] - 톱스타뉴스",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1wWGMtUk9iRm9vc1pKMWJDMUdoMEZOWGwwUDRFLS00eU94QzJJT1pjc1p4ZUswV2pzS3M0UjNudUZhMENiV3NYM09mTVpad0tXazNmcmhlcVlueTh6Z2Yya3pVSG1FdzRzX0s0bUFuYkpDdw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.topstarnews.net",
+    "publishedAt": "2025-01-02T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE1wWGMtUk9iRm9vc1pKMWJDMUdoMEZOWGwwUDRFLS00eU94QzJJT1pjc1p4ZUswV2pzS3M0UjNudUZhMENiV3NYM09mTVpad0tXazNmcmhlcVlueTh6Z2Yya3pVSG1FdzRzX0s0bUFuYkpDdw?oc=5\" target=\"_blank\">엔믹스 해원, ‘또 오해원’ (2024 SBS 가요대전 레드카펫) [HD포토]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">톱스타뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 8
+  },
+  {
     "id": "3910bd80fc5e7b4cfb3e",
     "title": "[포토] 엔믹스 오해원, '외모 체크' 필요 없는 대세돌 미모··· '2024 SBS 가요대전' - 비하인드",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1PNjRDdXVjTW9lb0ZOTXo3VERWN3dfaGtSNlNQYkxmMEdJMkFjT09wdzB4bXRicTNPaEcwNmlRSGlTYkhMRURESllhamRSdTRwY0NCczRQclhxRjk5dXpzQzFHeXc1a1JlcThDTWN3?oc=5",
@@ -2684,6 +2710,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "7e5d448615306531503c",
+    "title": "\"나야 오해원\"…'외모 체크' 밈 만든 엔믹스 해원, '워크돌' 시즌3도 함께 - 톱스타뉴스",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBDN2taZEFrZTBBeFYtNnJqWEkzOFBDbXhhWWUzYW9BM0JqLWdLWVFGN1pKSTlNMDAwZXNHUXUtN3hqRC1LZWk5QUlienRyR2ljRk1TbEMzOVdkck9haWVBQnNHbjcydVBSQnZreTY4SXdadw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.topstarnews.net",
+    "publishedAt": "2024-11-01T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFBDN2taZEFrZTBBeFYtNnJqWEkzOFBDbXhhWWUzYW9BM0JqLWdLWVFGN1pKSTlNMDAwZXNHUXUtN3hqRC1LZWk5QUlienRyR2ljRk1TbEMzOVdkck9haWVBQnNHbjcydVBSQnZreTY4SXdadw?oc=5\" target=\"_blank\">\"나야 오해원\"…'외모 체크' 밈 만든 엔믹스 해원, '워크돌' 시즌3도 함께</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">톱스타뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 8
   },
   {
     "id": "52545fb3db375b641bad",
@@ -4069,6 +4113,24 @@
     "candidateSource": ""
   },
   {
+    "id": "852f85fd97ef5c9bce5a",
+    "title": "너무 마른 오해원…야윈 모습에 팬들 걱정 - 뉴시스",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE15aFF0OUdkM1J2MWs4SFlINk5xd2xGdC1DM2Jhd0FTbDM5RU50ckR1clE0SVhQVEZvdzZIZEhZRkJLS3ZoY2phbWRtRFh4NUp5cHkwOGVwZUs2aGV6cU55MNIBeEFVX3lxTE5Kcl9jZTVLODVvT1czaE9uZGFZTUFqQ1czQi1oWUZHQkpjd0RPb1RIbVB3bDJRM0dUdE9FZERRM1BrVF81akFubWJBXzNZU2NQZGFlLVFfUU56ZDVWM3JQZjhyUUQ1eTNkOF9YWktzNUc4WlctUWk2Tw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.newsis.com",
+    "publishedAt": "2026-11-05T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE15aFF0OUdkM1J2MWs4SFlINk5xd2xGdC1DM2Jhd0FTbDM5RU50ckR1clE0SVhQVEZvdzZIZEhZRkJLS3ZoY2phbWRtRFh4NUp5cHkwOGVwZUs2aGV6cU55MNIBeEFVX3lxTE5Kcl9jZTVLODVvT1czaE9uZGFZTUFqQ1czQi1oWUZHQkpjd0RPb1RIbVB3bDJRM0dUdE9FZERRM1BrVF81akFubWJBXzNZU2NQZGFlLVFfUU56ZDVWM3JQZjhyUUQ1eTNkOF9YWktzNUc4WlctUWk2Tw?oc=5\" target=\"_blank\">너무 마른 오해원…야윈 모습에 팬들 걱정</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴시스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
     "id": "a377796d0c2321d50f9a",
     "title": "𝟼𝟸𝟼 on X: \"261025 BAE HAEWON ️ #배이 #엔믹스 #BAE #NMIXX #HAEWON\"",
     "url": "https://x.com/nmixx_626/status/2115785665971699750",
@@ -4795,6 +4857,24 @@
     }
   },
   {
+    "id": "4958e030fbc1f355c918",
+    "title": "오해원의 \"외모 체크!\", 리센느의 \"거제 야호!\"…잘 쓴 밈 하나, 열 마케팅 안 부럽다 [MD포커스] - 마이데일리",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxR3dERjFYcjZZS1pnZ1cxdnBDZEctSFhZY1BIaHg0TmNyTHpZSmZuQmJJNFhUaWhtMmNyY3J6c2llLU1DVDNqX093UWotREkyYkhaQTdoOGpsUWEzaE0yWg?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://mydaily.co.kr",
+    "publishedAt": "2026-06-10T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxR3dERjFYcjZZS1pnZ1cxdnBDZEctSFhZY1BIaHg0TmNyTHpZSmZuQmJJNFhUaWhtMmNyY3J6c2llLU1DVDNqX093UWotREkyYkhaQTdoOGpsUWEzaE0yWg?oc=5\" target=\"_blank\">오해원의 \"외모 체크!\", 리센느의 \"거제 야호!\"…잘 쓴 밈 하나, 열 마케팅 안 부럽다 [MD포커스]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">마이데일리</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
     "id": "dd3ff76131473b5aa9c2",
     "title": "‘놀라운 토요일’ 서울 상도전통시장 맛집, 푸팟퐁커리 & 모둠전 맛집 위치는? “오해원·배이·김채원·카즈하와 함께…” - 톱스타뉴스",
     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5FR1FxcnVfUlozdEd6aERkeExEQ2RWX21rMmpuT3h4b3NXc2hhX09LTFcwOWw2OHR1MW1lRkpYSHdWOUhRaXJFN3dndlJKUzVGNU1fbVd1Vzl2dDRKVnF5ZVBBWTdfQ01LU1otdXM4MkNTdw?oc=5",
@@ -5360,6 +5440,60 @@
     "thumbnailMetaFetch": null
   },
   {
+    "id": "f1d4fb7fe1bd1dd548db",
+    "title": "오해원 ‘엄지척! 귀요미’ [MK포토] - 매일경제",
+    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1FYjZMMVNRUzlpcDR3MHdRMUtCY1R6YXdBMjhIY3ZYbkdseXBBQWFzZnZid2F2ZkRtTDlBbnBYQWo5bk9UQmlWSUlfWXczRUZERTZYV1V3bw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.mk.co.kr",
+    "publishedAt": "2025-08-20T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE1FYjZMMVNRUzlpcDR3MHdRMUtCY1R6YXdBMjhIY3ZYbkdseXBBQWFzZnZid2F2ZkRtTDlBbnBYQWo5bk9UQmlWSUlfWXczRUZERTZYV1V3bw?oc=5\" target=\"_blank\">오해원 ‘엄지척! 귀요미’ [MK포토]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">매일경제</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
+    "id": "06ac98e60e168a848b41",
+    "title": "시구하며 놀라는 오해원 [MK포토] - m.mksports.co.kr",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBLUWdoSnNWb0JMVVFtbm1oMVpCUVRNZzJKTDJVaUxaamNxeFVoYUVJMThoQ0ZvTGVFOGNwY29FQ2xQeUJHNWtDVjBQR1ZsLTB4WlhjeTRXZUdVdkowczRn?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.mksports.co.kr",
+    "publishedAt": "2025-08-20T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTFBLUWdoSnNWb0JMVVFtbm1oMVpCUVRNZzJKTDJVaUxaamNxeFVoYUVJMThoQ0ZvTGVFOGNwY29FQ2xQeUJHNWtDVjBQR1ZsLTB4WlhjeTRXZUdVdkowczRn?oc=5\" target=\"_blank\">시구하며 놀라는 오해원 [MK포토]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">m.mksports.co.kr</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
+    "id": "cf07493efa5ea715c9cc",
+    "title": "오해원 ‘엄지척! 귀요미’ [MK포토] - m.mksports.co.kr",
+    "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0wMnBvSTdTU3NQbWF2LW5peWhsd1lGM2lWdGJmYWI5WDVNOHVOcUwySG9NTmwtbWt3eGV4YU5sUUcwZmlqVzJIZkFzcWFwTngybkNXcXlJTEM3TkdlSWE0?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.mksports.co.kr",
+    "publishedAt": "2025-08-20T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE0wMnBvSTdTU3NQbWF2LW5peWhsd1lGM2lWdGJmYWI5WDVNOHVOcUwySG9NTmwtbWt3eGV4YU5sUUcwZmlqVzJIZkFzcWFwTngybkNXcXlJTEM3TkdlSWE0?oc=5\" target=\"_blank\">오해원 ‘엄지척! 귀요미’ [MK포토]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">m.mksports.co.kr</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
     "id": "3316d4d66c276d60478b",
     "title": "그냥 내가 필요해서 만든 2시간 반복 | 54321(Feat. Haewon of nmixx)_pH-1 | 2 hour - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5oV3FabUM0NW9kY05BMHI4UVVVNUtCYkxqdGNrMEJDdmwwUHlIUkhEa2taYWVGdU5XajIwVUlpRlhQdWtlNzVyZVZwckJsTkF5c2FIWDdhZTV5b2p4?oc=5",
@@ -5835,7 +5969,68 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.mk.co.kr",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
+  },
+  {
+    "id": "772e453cc3cd4b9b3a7e",
+    "title": "Hear NMIXX’s Haewon cover Sabrina Carpenter’s ‘Please Please Please’",
+    "url": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+    "publisherArticleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060145efd64ef9a974a76936d052ae&url=https%3a%2f%2fwww.nme.com%2fnews%2fmusic%2fnmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592&c=140957484111509012&mkt=ko-kr",
+    "publisherHost": "www.nme.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20interview&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060145efd64ef9a974a76936d052ae&url=https%3a%2f%2fwww.nme.com%2fnews%2fmusic%2fnmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592&c=140957484111509012&mkt=ko-kr",
+        "articleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+        "host": "www.nme.com"
+      }
+    ],
+    "publishedAt": "2024-12-19T00:25:00.000Z",
+    "description": "NMIXX’s Haewon. Credits: Chosunilbo JNS via Getty. Haewon of K-pop girl group NMIXX has released a cover of Sabrina Carpenter’s hit single ‘Please Please Please ...",
+    "thumbnailUrl": "https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "NME",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX interview",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+      "resolvedArticleHost": "www.nme.com",
+      "fetchedAt": "2026-11-24T21:27:34.611Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg",
+      "articleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+      "observedAt": "2026-11-24T21:27:34.611Z"
+    }
   },
   {
     "id": "5cf63c9cb6ee9b3ba340",
@@ -11195,6 +11390,24 @@
     "candidateSource": ""
   },
   {
+    "id": "8cf414ef4672d45375a9",
+    "title": "엔믹스 해원! 안 나오는 데가 없잖아? - www.cosmopolitan.co.kr",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9nMXpwTVV4RDY3eHd5akEtS1R4VXkydGp4WWxadUxlNXpCMUtNM0FmUW5paEYydTU5bmMxaG1TRUs0TUdzZVpBMHZ2X3ZEY0ZLNjFNT2ZnUzRZQQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.cosmopolitan.co.kr",
+    "publishedAt": "2024-08-08T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9nMXpwTVV4RDY3eHd5akEtS1R4VXkydGp4WWxadUxlNXpCMUtNM0FmUW5paEYydTU5bmMxaG1TRUs0TUdzZVpBMHZ2X3ZEY0ZLNjFNT2ZnUzRZQQ?oc=5\" target=\"_blank\">엔믹스 해원! 안 나오는 데가 없잖아?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">www.cosmopolitan.co.kr</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "6efc8cbc7f6f2c1e8b19",
     "title": "못하는 게 없다…해원, 엔믹스 살리는 올라운더 [엑's 초점] - 엑스포츠뉴스",
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE8yWWVIYmZzb29ySEVmOHBpbXFfWmx0TS1IMGxTdUJtSG53dDJBRk5qdDFnRDBUR0dVQUZEWHBPM25rUUxUd0pod2ktZDh4NU1vTjU3dg?oc=5",
@@ -13245,6 +13458,47 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "e3a83d764eaef54855a6",
+    "title": "NMIXX World Tour Finale Coming To SCREENX Cinemas Worldwide",
+    "url": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
+    "publisherArticleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b06014669ba4614b63becb58f4c8e1e&url=https%3a%2f%2fwww.forbes.com%2fsites%2fjeffbenjamin%2f2026%2f11%2f12%2fnmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide%2f&c=13789977525221205774&mkt=ko-kr",
+    "publisherHost": "www.forbes.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20magazine&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b06014669ba4614b63becb58f4c8e1e&url=https%3a%2f%2fwww.forbes.com%2fsites%2fjeffbenjamin%2f2026%2f11%2f12%2fnmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide%2f&c=13789977525221205774&mkt=ko-kr",
+        "articleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
+        "host": "www.forbes.com"
+      }
+    ],
+    "publishedAt": "2026-11-11T23:50:00.000Z",
+    "description": "NMIXX will broadcast the Incheon, South Korea finale of their 1st world tour to cinemas in 17 countries on Nov. 29, launching CJ 4DPLEX’s new SCREENX LIVE concert format.",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Forbes",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon magazine",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "failed",
+      "publisherArticleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
+      "resolvedArticleHost": "www.forbes.com",
+      "fetchedAt": "2026-11-24T21:27:34.611Z",
+      "statusCode": 403,
+      "errorCode": "forbidden"
+    }
   },
   {
     "id": "f1b2da13f6773fc61551",
@@ -15727,6 +15981,42 @@
     "candidateSource": ""
   },
   {
+    "id": "8cd9d849aae04dacfcfd",
+    "title": "[단독] 김흥국 \"故송해, 진정한 국민MC...연예계 자상한 아버지\" (인터뷰) - 네이트 판",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1xNWRmVGJMb1NHcnp6SFppdGl4UmpmU0M4TzcxbVNyTDZKUHdkcjNBNWpjVXdHTkxfUHBHempqWTI3ZXdXNnRXSjRtSDY?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://pann.nate.com",
+    "publishedAt": "2024-12-10T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE1xNWRmVGJMb1NHcnp6SFppdGl4UmpmU0M4TzcxbVNyTDZKUHdkcjNBNWpjVXdHTkxfUHBHempqWTI3ZXdXNnRXSjRtSDY?oc=5\" target=\"_blank\">[단독] 김흥국 \"故송해, 진정한 국민MC...연예계 자상한 아버지\" (인터뷰)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트 판</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 1
+  },
+  {
+    "id": "171dc1df2d24a3ab4526",
+    "title": "[인터뷰] '바른생각' 박서원 빅앤트 대표 \"콘돔은 부끄러운게 아니예요\" - Chosunbiz",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE02NmE2aElNdVlvcy1EUV9lY21ESlFadUpuRUdtd1RQVUhNYVZ1UUR1RXFvYlhrdjdtV01fRFVCeVV4M05TbHNIaE9ZMHZYZ25tOVgycUlLS09XU1FRdWFzOThCVTlvOTlSMGkxb1pPMXJ6S01ldmhnaldXTdIBjwFBVV95cUxOdjlvc1BHaklNVy1jZHp5S0w2UXcxOEEzTzZrNkFCanJ2d3JyWThSbEpOM1ZQTmpsRWtPZnJ4ck96djFfcWRoQlc1NTFGMjUxWkpJYWVzUFdaWDk3Mi1YUXNTeU1ZWTEyX1hmSHZOYng0d3JudWpsM0tOMEFDT3VsWkxMXzU5T3ZnUDRHaWV2cw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://biz.chosun.com",
+    "publishedAt": "2014-06-05T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE02NmE2aElNdVlvcy1EUV9lY21ESlFadUpuRUdtd1RQVUhNYVZ1UUR1RXFvYlhrdjdtV01fRFVCeVV4M05TbHNIaE9ZMHZYZ25tOVgycUlLS09XU1FRdWFzOThCVTlvOTlSMGkxb1pPMXJ6S01ldmhnaldXTdIBjwFBVV95cUxOdjlvc1BHaklNVy1jZHp5S0w2UXcxOEEzTzZrNkFCanJ2d3JyWThSbEpOM1ZQTmpsRWtPZnJ4ck96djFfcWRoQlc1NTFGMjUxWkpJYWVzUFdaWDk3Mi1YUXNTeU1ZWTEyX1hmSHZOYng0d3JudWpsM0tOMEFDT3VsWkxMXzU5T3ZnUDRHaWV2cw?oc=5\" target=\"_blank\">[인터뷰] '바른생각' 박서원 빅앤트 대표 \"콘돔은 부끄러운게 아니예요\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Chosunbiz</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 1
+  },
+  {
     "id": "1a56ee676db5f3385be3",
     "title": "[인터뷰]한국인 첫 F1 드라이버 꿈꾸는 고교생 서주원 - 네이트",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1UdUJJbEtZWC1TNVlhZXJ1NENIZjhxV0tDQkhrYmpmaWZDWWJqWGNfNXFxR0ppbWdJMmR4TnlOZEhhY01NNXg2M0JqU1hrMzF6eHpiSy1jdl9ORXIy?oc=5",
@@ -15775,6 +16065,24 @@
     "candidateSource": ""
   },
   {
+    "id": "4a4f640b708708c97b7d",
+    "title": "김하늘 \"'통통 볼살' 성형 오해 속상해\"(인터뷰) - 조이뉴스24",
+    "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE8ydlJMVVRobzVWQWJ0MW9za0V5dGJnaUlQTDdER3NqOFZGUlROaExjSW9rR3JBQkpPVEpuZk5wcVdPWU5ibWhXQ0htenp4UQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.joynews24.com",
+    "publishedAt": "2009-04-22T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTE8ydlJMVVRobzVWQWJ0MW9za0V5dGJnaUlQTDdER3NqOFZGUlROaExjSW9rR3JBQkpPVEpuZk5wcVdPWU5ibWhXQ0htenp4UQ?oc=5\" target=\"_blank\">김하늘 \"'통통 볼살' 성형 오해 속상해\"(인터뷰)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조이뉴스24</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 1
+  },
+  {
     "id": "de3bb0a394ad19c5dfe3",
     "title": "IVE Jang Wonyoung’s Behavior At Luxury Brand Event Triggers Divided Response - Koreaboo",
     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNRVY3NzBWWjlNd1JvZXNrQUtmTExwVlltZC1ocl91SVdhUndBLUViNDRFUU1GM2J4WGZWQmtiYjhoZTRUampNUm1XYzB6cWVjMDdYSjNEdU5HUjRIbEEwaVZRSUFrOHczQkltSF9pOFpZT2g5cEFKNHJQUnRpRVdDdzEtbC1NR00wdEE?oc=5",
@@ -15805,6 +16113,24 @@
     "relevanceScore": 0,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null
+  },
+  {
+    "id": "0cc7735d9ba2f73e56e2",
+    "title": "셰플러와 내기마다 진 김시우… “둘째 기저귀값, 내가 다 낸 듯”[Golfer & Record] - 문화일보",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBvdnhXdGpKV2FRcWNwS0dVaEpGb1dOZXZIZl9HaW5aNGF3c2ZLcnJ6ZFZaZnRidnRycTA1eHZfWTUzQzI1Q3V2YWJrMm40aV9r?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.munhwa.com",
+    "publishedAt": "2026-08-28T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFBvdnhXdGpKV2FRcWNwS0dVaEpGb1dOZXZIZl9HaW5aNGF3c2ZLcnJ6ZFZaZnRidnRycTA1eHZfWTUzQzI1Q3V2YWJrMm40aV9r?oc=5\" target=\"_blank\">셰플러와 내기마다 진 김시우… “둘째 기저귀값, 내가 다 낸 듯”[Golfer & Record]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">문화일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 0
   },
   {
     "id": "7149a4cb021a3c5dc047",
@@ -15908,7 +16234,15 @@
     "status": "candidate",
     "relevanceScore": 0,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.chosun.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "31b29d388ccc745eea62",
@@ -15973,6 +16307,24 @@
     "relevanceScore": 0,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null
+  },
+  {
+    "id": "32eccb56c88abf6fde89",
+    "title": "라바리니 감독 “한국 女배구 언제나 응원할 것” - 문화일보",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBJSEpIakFjSl9aWHhBRkVhbjUzem0wbWlnRHdOczlpeDBibkx6ZkJsLVhWV2N4OVE2MDdCTjRnakhwLWx5dWQ3Rk9KNHFEa0Qw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.munhwa.com",
+    "publishedAt": "2026-02-24T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFBJSEpIakFjSl9aWHhBRkVhbjUzem0wbWlnRHdOczlpeDBibkx6ZkJsLVhWV2N4OVE2MDdCTjRnakhwLWx5dWQ3Rk9KNHFEa0Qw?oc=5\" target=\"_blank\">라바리니 감독 “한국 女배구 언제나 응원할 것”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">문화일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 0
   },
   {
     "id": "ab6905dd1558ed970ea7",
@@ -16087,6 +16439,24 @@
     "thumbnailMetaFetch": null
   },
   {
+    "id": "8433b66771727cca8f6d",
+    "title": "[D툰] SDF2019 x 퇴사원J 작가 / 4화 오해 - news.sbs.co.kr",
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5LaXh4REVmVTd6Q2lDOHFOanFQSTBFS1QyVktYTmdac3N1UHZFRmh0Wi10N3ZOLU9HcTV2MHIydVd2WmozY0w2RzRqZlg5QXhQeTJXN0xnV3Y0em1aVC1FNDVwV201amIzb2c?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://news.sbs.co.kr",
+    "publishedAt": "2019-08-28T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE5LaXh4REVmVTd6Q2lDOHFOanFQSTBFS1QyVktYTmdac3N1UHZFRmh0Wi10N3ZOLU9HcTV2MHIydVd2WmozY0w2RzRqZlg5QXhQeTJXN0xnV3Y0em1aVC1FNDVwV201amIzb2c?oc=5\" target=\"_blank\">[D툰] SDF2019 x 퇴사원J 작가 / 4화 오해</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.sbs.co.kr</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
     "id": "00641ccc59295ae597a1",
     "title": "[Y이슈] \"하지 않은 말로 오해\"...'해투4' 워너원, 방송사고 직접 해명 - YTN",
     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9LTm04NGQ4MnNRWXRHMU9pMk5KVG8xemdHcVBTNzE4MkF4RHpJcnFScnpuN0xJbzdneTNzOVV6OVZ2Y2o1RFVjY3E3aVVockpNSGxmQkxGZDNwRmNmdEE?oc=5",
@@ -16133,5 +16503,23 @@
     "relevanceScore": 0,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null
+  },
+  {
+    "id": "e20f5b73ec48017860a6",
+    "title": "유로2012 결승서 '자블라니' 뛰어넘는 마구(魔球) 공개된다 - 뉴시스",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE85a1kxY3g1UUFHankxa3VWTENmRHo0SHFBYXcyam9xQjJaQjg2eTVGbElsUzlpRWtZYlJDMmhyOUdxOWVJWGdxRlNYUDNBdTJ5bklkMV84eUFydlVOeEhONw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.newsis.com",
+    "publishedAt": "2011-10-11T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE85a1kxY3g1UUFHankxa3VWTENmRHo0SHFBYXcyam9xQjJaQjg2eTVGbElsUzlpRWtZYlJDMmhyOUdxOWVJWGdxRlNYUDNBdTJ5bklkMV84eUFydlVOeEhONw?oc=5\" target=\"_blank\">유로2012 결승서 '자블라니' 뛰어넘는 마구(魔球) 공개된다</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴시스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:27:33.421Z",
+    "status": "candidate",
+    "relevanceScore": 0
   }
 ]

@@ -1,22 +1,22 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T21:26:40.009Z",
+  "collectedAt": "2026-11-24T21:27:33.421Z",
   "searchPack": 1,
   "queries": [
     {
       "query": "Haewon NMIXX interview",
-      "candidates": 13,
-      "uniqueCandidates": 13
+      "candidates": 15,
+      "uniqueCandidates": 15
     },
     {
       "query": "오해원 인터뷰",
-      "candidates": 31,
-      "uniqueCandidates": 31
+      "candidates": 47,
+      "uniqueCandidates": 47
     },
     {
       "query": "NMIXX Haewon magazine",
-      "candidates": 13,
-      "uniqueCandidates": 13
+      "candidates": 14,
+      "uniqueCandidates": 14
     },
     {
       "query": "Haewon NMIXX brand",
@@ -27,15 +27,15 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
-  "bingCandidates": 30,
+  "bingCandidates": 33,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 71,
-  "uniqueIncoming": 63,
-  "added": 1,
+  "fetched": 90,
+  "uniqueIncoming": 82,
+  "added": 19,
   "rssImageSignals": {
-    "items": 41,
-    "sourceUrlItems": 41,
+    "items": 57,
+    "sourceUrlItems": 57,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -49,89 +49,50 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 3,
-    "found": 3,
-    "assigned": 3,
+    "attempted": 2,
+    "found": 1,
+    "assigned": 1,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
-    "failed": 0,
+    "failed": 1,
     "results": [
       {
-        "id": "ce4468d1f0e09b93135d",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://s.yimg.com/lo/mysterio/api/1153401bb44443b3aa8ffc6a0dc8ee31c0152c6804c48a762b8406ce9f0bb178/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fca%2Febc.net.tw%2F99a768be2b678a27ad33ffa8710a22fd",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://s.yimg.com/lo/mysterio/api/1153401bb44443b3aa8ffc6a0dc8ee31c0152c6804c48a762b8406ce9f0bb178/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fca%2Febc.net.tw%2F99a768be2b678a27ad33ffa8710a22fd",
-            "source": "og:image",
-            "priority": 1
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
+        "id": "e3a83d764eaef54855a6",
+        "status": "failed",
+        "publisherArticleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
         "sourceUrl": "",
-        "resolvedArticleUrl": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
-        "resolvedArticleHost": "tw.news.yahoo.com"
+        "resolvedArticleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
+        "resolvedArticleHost": "www.forbes.com"
       },
       {
-        "id": "96579cf215e0e82b5ccf",
+        "id": "772e453cc3cd4b9b3a7e",
         "status": "assigned",
         "candidate": {
-          "url": "https://biz.chosun.com/resizer/v2/QRPEGR2B3RCBMKHQGM4YCBFJ6E.png?auth=bd8b5aee3461199876e3e35f98eb4a0d6a66c91d74cbe8ea289d4102be344010&width=650&height=341&smart=true",
+          "url": "https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg",
           "source": "og:image",
           "priority": 1
         },
         "candidates": [
           {
-            "url": "https://biz.chosun.com/resizer/v2/QRPEGR2B3RCBMKHQGM4YCBFJ6E.png?auth=bd8b5aee3461199876e3e35f98eb4a0d6a66c91d74cbe8ea289d4102be344010&width=650&height=341&smart=true",
+            "url": "https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg",
             "source": "og:image",
             "priority": 1
           }
         ],
         "assigned": true,
-        "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
+        "publisherArticleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
         "sourceUrl": "",
-        "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
-        "resolvedArticleHost": "biz.chosun.com"
-      },
-      {
-        "id": "288ac9019343bb06260d",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          {
-            "url": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg?w=140&h=140&crop=1",
-            "source": "jsonld:thumbnailUrl",
-            "priority": 5
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
-        "resolvedArticleHost": "www.soompi.com"
+        "resolvedArticleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+        "resolvedArticleHost": "www.nme.com"
       }
     ]
   },
   "deduplicationComparison": {
-    "before": 71,
-    "after": 62,
+    "before": 90,
+    "after": 81,
     "collapsed": 9,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 682
+  "totalCandidates": 699
 }
