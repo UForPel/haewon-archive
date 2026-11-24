@@ -73,3 +73,8 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Human review: 362 eligible candidates, 0 reviewed, 0% coverage; no precision estimate.
 - The **다음 미검수 후보** button remains wired to the loaded discovery module and has static integration coverage.
 - Browser-visible layout and actual local file-picker behavior are still not manually verified.
+
+## Publisher metadata diagnostics — 2026-11-24
+- Quality summary now displays per-publisher attempts, discovered metadata candidates, assigned thumbnails, missing metadata, failures, duplicate rejections, error classes and final redirect hosts.
+- Collector retry policy: missing 7 days; forbidden/not-found/rate-limited 7 days; transient network/server 1 day; found/assigned/duplicate-rejected/wrapper-only 30 days.
+- The UI summary is still a static module-driven report. Real browser visual/mobile verification remains outstanding.

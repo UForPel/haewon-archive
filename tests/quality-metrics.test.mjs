@@ -65,3 +65,12 @@ test('publisher metadata diagnostics aggregate attempts, outcomes and final host
  assert.equal(rows[0].host,'news.example');assert.equal(rows[0].attempted,2);assert.equal(rows[0].assigned,1);assert.equal(rows[0].failed,1);assert.equal(rows[0].errorCodes.forbidden,1);assert.equal(rows[0].finalHosts['cdn.example'],1);
  assert.equal(rows[1].missing,1);
 });
+
+test('publisher metadata assignment rate recognizes legacy persisted article provenance',()=>{
+ const rows=summarizeThumbnailEnrichmentByHost([
+  {publisherHost:'news.example',thumbnailUrl:'https://cdn.example/a.jpg',thumbnailProvenance:{articleUrl:'https://news.example/a'},thumbnailMetaFetch:{status:'found',resolvedArticleUrl:'https://news.example/a'}},
+  {publisherHost:'news.example',thumbnailMetaFetch:{status:'found',resolvedArticleUrl:'https://news.example/b'}}
+ ]);
+ assert.equal(rows[0].attempted,2);assert.equal(rows[0].found,2);assert.equal(rows[0].assigned,1);
+ assert.equal(rows[0].successRate,50);assert.equal(rows[0].candidateRate,100);assert.equal(rows[0].assignmentRate,50);
+});

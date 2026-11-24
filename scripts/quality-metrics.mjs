@@ -18,12 +18,12 @@ export function summarizeThumbnailEnrichmentByHost(items=[]){
  const hosts=new Map();
  for(const item of items){const meta=item.thumbnailMetaFetch;if(!meta||!meta.status)continue;let host=String(item.publisherHost||'').toLowerCase();if(!host){try{host=new URL(item.publisherArticleUrl||meta.resolvedArticleUrl||'').hostname.toLowerCase();}catch{}}if(!host)host='unknown';
   const row=hosts.get(host)||{host,attempted:0,assigned:0,found:0,missing:0,failed:0,wrapperOnly:0,duplicateRejected:0,errorCodes:{},finalHosts:{}};
-  row.attempted++;if(meta.status==='assigned')row.assigned++;if(meta.status==='found'||meta.status==='assigned'||meta.status==='duplicate-rejected')row.found++;if(meta.status==='missing')row.missing++;if(meta.status==='failed')row.failed++;if(meta.status==='wrapper-only')row.wrapperOnly++;if(meta.status==='duplicate-rejected')row.duplicateRejected++;
+  row.attempted++;const isAssigned=meta.status==='assigned'||Boolean(item.thumbnailUrl&&item.thumbnailProvenance?.articleUrl&&(item.thumbnailProvenance.articleUrl===(meta.resolvedArticleUrl||item.publisherArticleUrl)));if(isAssigned)row.assigned++;if(meta.status==='found'||meta.status==='assigned'||meta.status==='duplicate-rejected')row.found++;if(meta.status==='missing')row.missing++;if(meta.status==='failed')row.failed++;if(meta.status==='wrapper-only')row.wrapperOnly++;if(meta.status==='duplicate-rejected')row.duplicateRejected++;
   if(meta.errorCode)row.errorCodes[meta.errorCode]=(row.errorCodes[meta.errorCode]||0)+1;
   if(meta.resolvedArticleHost)row.finalHosts[meta.resolvedArticleHost]=(row.finalHosts[meta.resolvedArticleHost]||0)+1;
   hosts.set(host,row);
  }
- return [...hosts.values()].map(row=>({...row,successRate:row.attempted?Math.round(row.assigned/row.attempted*100):0})).sort((a,b)=>b.attempted-a.attempted||a.host.localeCompare(b.host));
+ return [...hosts.values()].map(row=>({...row,successRate:row.attempted?Math.round(row.assigned/row.attempted*100):0,candidateRate:row.attempted?Math.round(row.found/row.attempted*100):0,assignmentRate:row.found?Math.round(row.assigned/row.found*100):null})).sort((a,b)=>b.attempted-a.attempted||a.host.localeCompare(b.host));
 }
 export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoStatus={},reviews=[],thumbnailReviews={}}={}){
  const sourceMap=new Map();

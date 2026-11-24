@@ -862,3 +862,16 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Latest metadata sample: 10 attempts, 0 found, 0 assigned, 7 missing, 3 failed.
 - Review metrics: 362 eligible candidates, 0 reviewed, 0% coverage, precision unmeasured. No human accuracy claim.
 - Browser interactions remain unverified; CI unit tests and Pages deploy do not prove visual rendering or local browser persistence/file-picker behavior.
+
+## 2026-11-24 — Metadata retry and host diagnostics cycle
+- Latest baseline before this change: 659 discovery items, 300 thumbnails, 28 distinct thumbnail URLs, dominant URL used by 273 items; 37 explicit HTTPS publisher article URLs and 41 Bing RSS candidates from 4/4 successful queries.
+- Google News RSS contributed 172 items with source-site metadata but 0 item-level publisher article URLs and 0 RSS image signals. The sourceUrl is a publisher/site URL, not an article URL; no inference or wrapper decoding is allowed.
+- Actions #551 passed its Unit tests, collection, bounded improvement, quality generation, validation, data commit, Pages artifact upload and deployment.
+- The new collector records fetch status code, stable error class, final article URL/host and timestamp. It now backs off: missing metadata 7 days; forbidden/not-found/rate-limited 7 days; transient network/server errors 1 day; found/assigned/duplicate-rejected/wrapper-only 30 days.
+- Latest #551 enrichment attempted 3 URLs and all 3 returned HTTP 403 (x.com, famtimes.co.kr, bntnews.co.kr); these are now classified as forbidden and deferred for 7 days rather than retried each run.
+- Historical publisher metadata records show 27 found results with matching article-level thumbnail provenance; host metrics now count these legacy successful assignments rather than incorrectly reporting 0%.
+- Added per-publisher diagnostics to the quality report and UI: attempts, metadata found, assigned, missing, failed, duplicate-rejected, error classes, and final redirect hosts.
+- Open Graph official protocol specifies og:image as basic metadata and allows multiple image values, but it is publisher-supplied metadata, not a guaranteed universal extraction endpoint. Source: https://ogp.me/ (checked 2026-11-24; authoritative protocol, limited to markup semantics).
+- Browser rendering, responsive/mobile appearance, localStorage persistence across reload, and real file-picker/download round-trip remain unverified. Static module integration tests do not replace a real browser test.
+- Code commit 298142d9d5bec1506cf8b2e3b11884dfbac3856f implemented backoff and structured failure evidence; Actions #551 run ID 45397213293 succeeded. Automated data commit after that run: d350b5876762c0f0cdf459285c84f837770ff620.
+- A follow-up correction in this commit makes the host diagnostic count prior successful assignments using thumbnailProvenance.articleUrl plus thumbnailMetaFetch.resolvedArticleUrl; legacy status found rows had been incorrectly shown as zero assignments.

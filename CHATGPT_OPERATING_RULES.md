@@ -120,3 +120,9 @@ For each substantial update include: changed paths; planned vs implemented items
 - Actions #548 is the latest verified successful collection/deployment run (120/120 tests).
 - Current data baseline: 658 items, 36 explicit HTTPS article URLs, 299 thumbnails, 27 unique image URLs, 273 repeated instances, 362 review candidates and 0 human labels.
 - Recompute the baseline from the latest main data after every scheduled/manual collection; never carry forward a previous run's counts.
+
+## Metadata collection safety and retry policy — 2026-11-24
+- Preserve status code, stable error class, fetch timestamp and final host for each publisher metadata request.
+- Do not retry known missing/forbidden pages on every run: missing and explicit access/not-found/rate-limit responses wait 7 days; transient errors wait 1 day; found candidates wait 30 days unless a new explicit user action requires recheck.
+- Do not interpret site-level RSS source URL as a direct article URL.
+- Host metrics must account for legacy thumbnail provenance; a historical status found plus matching thumbnailProvenance.articleUrl is evidence of assignment.

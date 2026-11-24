@@ -174,3 +174,12 @@
 - [ ] Prioritize diagnosing why 10 publisher metadata attempts yielded 0 image candidates (7 no candidate, 3 failed), segmented by host and response outcome.
 - [ ] Collect real human labels through the cross-page queue and export/import workflow.
 - [ ] Perform real-browser interaction checks when browser automation is available.
+
+## Next priorities after metadata backoff
+- [x] Preserve publisher metadata fetch status/errorCode/statusCode/final host/timestamp.
+- [x] Back off known no-image and forbidden/not-found/rate-limited URLs instead of re-fetching each collection run.
+- [x] Report metadata outcome by publisher host and final redirect host.
+- [ ] Add per-host sample review of the 273-item repeated Google-hosted thumbnail group; retain all URLs and records until human review.
+- [ ] Collect actual human review labels (currently 0) before making image relevance or classification accuracy claims.
+- [ ] Validate direct item links and reuse terms for any official publisher RSS before integration.
+- [ ] Perform real-browser responsive and local JSON import/export checks when browser automation is available.
