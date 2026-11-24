@@ -770,4 +770,4 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Actions #525 completed successfully after the resolvedArticleHost provenance addition. Unit tests, collection, validation, data commit, Pages artifact and Pages deployment all succeeded: https://github.com/UForPel/haewon-archive/actions/runs/45327853208
 - Run #521 also completed successfully with the Google News wrapper quarantine deployed: https://github.com/UForPel/haewon-archive/actions/runs/45327828183
 - Latest verified live data still reports 227 RSS items and zero image-bearing structures; 12 metadata fetches are wrapper-only, all final hosts news.google.com, and none are assigned.
-- The documentation refresh itself is running as Actions #529; its Pages deployment step is still in progress at this checkpoint.
+- Actions #529 completed successfully, including Pages deployment. The later consolidated documentation commit is being verified by #530; its Pages deployment is still in progress at this checkpoint.

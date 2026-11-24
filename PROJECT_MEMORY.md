@@ -10,7 +10,7 @@ Last updated: 2026-11-24
 - Collector supports RSS Media RSS / image Enclosure / description HTML / content:encoded and article-page OG/Twitter, secure_url, image_src, itemprop and JSON-LD. Candidate source/priority and per-article fetch provenance are retained.
 - Article-level candidate review UI is implemented. Labels are browser-local and can be exported/imported as JSON. Candidate suitability precision and selected-thumbnail precision are available but remain unmeasured until labels are entered; these are not classifier accuracy.
 - No Google News opaque redirect decoding or access-control bypass is used. The collector does not treat Google News wrapper metadata as a publisher article image.
-- Latest verified run #525 passed unit tests, collection, validation, data commit and Pages deployment after the resolved-host provenance change. Run #529 is verifying the documentation refresh; its Pages deployment is in progress at this checkpoint. Live visual/mobile inspection remains unconfirmed.
+- Latest verified run #525 passed unit tests, collection, validation, data commit and Pages deployment after the resolved-host provenance change. Run #529 completed successfully, including Pages deployment. The later consolidated documentation commit is being verified by #530; its deployment is still in progress at this checkpoint. Live visual/mobile inspection remains unconfirmed.
 
 ## Purpose
 First-read handoff document for every new ChatGPT conversation about this repository. Read it before proposing or changing project work, then follow links to detailed documents.
