@@ -127,3 +127,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Thumbnail provenance counts only records with an actual HTTPS thumbnail; unverified legacy assignments and records with no thumbnail are reported separately.
 - Candidate source and final-host evidence remain read-only. No automatic deletion, replacement or label propagation.
 - Regression coverage: `tests/quality-metrics.test.mjs`; Actions/Pages and browser/mobile verification are recorded separately.
+
+
+## Operational log clarification — 2026-11-25
+- GitHub push runs are recorded as `github_push` (not `unknown`); schedule and manual dispatch retain separate trigger labels.
+- The run log currently summarizes the YouTube collector only. News RSS outcomes remain separately available in `data/news-collection-status.json`; do not interpret the single run-log source as the full list of all collection sources.
+- Dashboard metrics distinguish discovery links from explicit publisher article URLs and verified image metadata from unverified legacy assignments and missing thumbnails.
+- Manual browser/mobile behavior remains unverified even when Actions Pages deployment succeeds.
