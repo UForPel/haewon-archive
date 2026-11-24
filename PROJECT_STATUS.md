@@ -459,3 +459,13 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Cumulative explicit HTTPS publisher article URLs remain 38, all from Bing News RSS metadata. Do not infer direct article URLs from Google News source-site links.
 - Thumbnail enrichment attempted 0 URLs because the eligible URLs remained inside retry windows. This is expected backoff, not a fetch failure.
 - The repeated-image panel and explicit-URL-only video resolver are included in the successfully deployed Pages artifact. Manual browser/mobile, localStorage and JSON transfer checks remain unverified.
+
+
+## 2026-11-25 — Metric integrity and explicit article URL coverage (implementation pending CI)
+- Main head before this change: c125d24b0c44dc0245893a13aeb0c97c4ebfcbc6; latest data snapshot: 666 discovery records.
+- Verified Actions #562 (run ID 45404066050) directly: job succeeded; all 19 steps succeeded, including 131/131 tests, collection, quality metrics, validation, data commit, Pages artifact upload and deployment. Artifact `github-pages`: 389,175 bytes, SHA-256 f518a69cf916e8ceabf4badfe23599a63baa29f4702b4bdb4659f2f505d78a7a.
+- Explicit HTTPS publisher article URLs: 38/666 (5.7%), all Bing News RSS. Google News RSS sample: 260 items, 0 direct publisher article URLs and 0 image-bearing RSS structures. Old URL coverage counted discovery wrapper links and was not article URL coverage.
+- Thumbnails: 301/666; 273 use one exact legacy URL; 365 missing. The 273 repeated records have no source/provenance evidence and remain untouched.
+- Corrected metric design: separate assigned thumbnails, unverified legacy assignments and missing thumbnails; source rows distinguish discovery-link coverage from explicit publisher article URL coverage.
+- Research checked 2026-11-25: RSS 2.0.11 canonical spec (2009-03-30): https://www.rssboard.org/rss-specification ; Media RSS 1.5.1 (2009-12-11): https://www.rssboard.org/media-rss ; GitHub Actions workflow-run API docs: https://docs.github.com/en/rest/actions/workflow-runs?apiVersion=2026-03-10 ; GitHub Pages deployment guide: https://docs.github.com/en/get-started/start-your-journey/deploying-your-website-automatically . RSS/Media RSS are authoritative format specifications but do not guarantee a publisher supplies item-level article/image metadata. CI success does not establish browser correctness.
+- Browser/mobile rendering, keyboard focus, localStorage reload and file-picker round-trip remain unverified. New metric changes require their own green Actions run.

@@ -238,3 +238,14 @@
 - [x] Confirmed Google News RSS 4/4 but no item-level article URLs or image signals in 260 items; Bing RSS 4/4 with 41 candidates.
 - [ ] Human review remains 0/369; obtain labels before claiming thumbnail relevance precision.
 - [ ] Manual browser/mobile and local JSON persistence/file-picker checks remain open.
+
+
+## 2026-11-25 — Provenance and URL metric integrity
+- [x] Verify Actions #562 run ID 45404066050: 131/131 tests, collection, validation, data commit, Pages artifact and deployment succeeded.
+- [x] Separate discovery-link coverage from explicit HTTPS publisher article URL coverage (38/666).
+- [x] Correct thumbnail provenance accounting to exclude records without thumbnails.
+- [x] Display unverified legacy assignments and missing thumbnails separately.
+- [x] Add regression tests for article URL coverage and provenance denominators.
+- [ ] Verify this change set in Actions and confirm generated metrics.
+- [ ] Human-review the 273 repeated URL group without deletion or bulk labels.
+- [ ] Perform real-browser/mobile, keyboard, localStorage and JSON transfer checks.
