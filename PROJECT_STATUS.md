@@ -247,3 +247,23 @@ Last updated: 2026-11-20
 - Run #489 passed: 86/86 unit tests; YouTube/news collection, metrics, data validation, run-log generation/validation, data commit, Pages artifact and Pages deployment all succeeded. https://github.com/UForPel/haewon-archive/actions/runs/45319384393
 - Generated snapshot: 620 candidates, 273 with thumbnail, 347 missing; 1 unique thumbnail URL shared by 273 records. New article metadata evidence persisted for 12 sampled records, but 0 RSS candidates, 12 metadata-only, 0 assignments, 12 duplicate rejections (same `lh3.googleusercontent.com` URL).
 - Candidate persistence is verified, candidate diversity and article-specific relevance are not. No image records were deleted or auto-replaced. A labeled human review process is still needed before publishing suitability accuracy.
+
+## RSS image candidate extraction and human review — 2026-11-24
+- [x] Extend RSS extraction to Media RSS thumbnail/content, image Enclosure, description HTML and content:encoded image markup.
+- [x] Extend article-page extraction to OG/Twitter (including secure_url), link rel=image_src, itemprop=image and JSON-LD image/thumbnailUrl/contentUrl.
+- [x] Persist per-article candidate source/priority and fetch provenance; merge candidate arrays instead of dropping later evidence.
+- [x] Add aggregate live RSS response diagnostics (item counts and image-bearing tag counts only; raw feed bodies are not stored).
+- [x] Add article-level candidate review UI and browser-local labels with JSON import/export.
+- [x] Add candidate suitability precision and selected-thumbnail precision metrics; both remain unmeasured until labels are entered.
+- [x] Preserve repeated legacy thumbnail URLs; no automatic delete or replacement.
+- [ ] Confirm current full CI and Pages deployment on the latest code.
+- [ ] Use the next successful collection to inspect rssImageSignals and compare actual RSS image tags/candidates with article metadata candidates.
+- [ ] Obtain human review labels before reporting suitability precision; do not call this classifier accuracy.
+- [ ] Inspect deployed mobile UI, keyboard focus and label persistence/export/import.
+
+### Verification and repair notes
+- #493 and #490 succeeded before this implementation batch, including Pages deployment.
+- #500–#510 included failed test runs caused by malformed escaped line breaks/regex in collector changes; #509 also exposed a test fixture count expectation error. These were identified from Actions logs and corrected in later commits.
+- At this checkpoint #514 was running tests and #516 was queued. Do not treat these as passed.
+- Historical baseline: 620 articles; 273 thumbnail URLs assigned; 347 missing; 1 URL shared by 273 articles; 0 persisted RSS candidate articles; 12 metadata candidate sets. The new live RSS tag diagnostics have not yet run successfully.
+- Browser-local review labels are not a shared backend. JSON export/import is the current free static-site persistence path.
