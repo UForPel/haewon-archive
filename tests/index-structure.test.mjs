@@ -30,4 +30,4 @@ test('visible primary controls include named button actions and forms',()=>{
 });
 
 
-test('thumbnail provenance quality dashboard reports found, assigned, rejected and source details',()=>{for(const signal of ['actual 신규 배정','중복 거부','기존 이미지 출처 기록','최근 보강 출처 결과'])assert.ok(discoveryView.includes(signal),'missing dashboard signal '+signal);});
+test('thumbnail provenance quality dashboard reports found, assigned, rejected and source details',()=>{for(const signal of ['실제 신규 배정','중복 거부','기존 이미지 출처 기록','최근 보강 출처 결과'])assert.ok(discoveryView.includes(signal),'missing dashboard signal '+signal);});
