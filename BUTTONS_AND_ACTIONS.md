@@ -120,3 +120,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The repeated-thumbnail review panel is included in the Pages artifact deployed successfully by Actions #562.
 - 131/131 tests passed. The deployment step succeeded.
 - Browser visual/mobile behavior, keyboard focus, localStorage reload and JSON file transfer remain unverified.
+
+
+## Quality dashboard metric clarification — 2026-11-25
+- No new control; the read-only dashboard distinguishes discovery-link coverage from explicit HTTPS publisher-article URL coverage.
+- Thumbnail provenance counts only records with an actual HTTPS thumbnail; unverified legacy assignments and records with no thumbnail are reported separately.
+- Candidate source and final-host evidence remain read-only. No automatic deletion, replacement or label propagation.
+- Regression coverage: `tests/quality-metrics.test.mjs`; Actions/Pages and browser/mobile verification are recorded separately.
