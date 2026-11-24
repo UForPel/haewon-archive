@@ -542,3 +542,10 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - The default article view is the 49 verified Haewon publisher articles. Wider Haewon/NMIXX/all-article scopes remain available.
 - The run log records `github_push`, success and passed validation, but its `sources` array still only describes YouTube; news results remain in the separate news status file. This operational-log gap remains open.
 - Browser/mobile visual QA and human relevance/thumbnail labels remain unverified. Source provenance does not prove visual relevance.
+
+
+## 2026-11-25 — Operational run log source coverage (PR/CI pending)
+- Latest main before this change: `c2b9707d0549b8fb881cb6f534146b3dd2f2faf0`; Actions #579 passed 139/139 tests and deployed Pages.
+- Confirmed defect: `data/run-logs/<runId>.json` listed only `nmixx-youtube`, even though the same workflow also ran Google News RSS and Bing News RSS. Detailed RSS outcomes existed only in `data/news-collection-status.json`.
+- Implemented on `ops/include-news-sources-in-run-log`: run log now records separate `nmixx-youtube`, `google-news-rss`, and `bing-news-rss` source outcomes and item counts. Overall status becomes partial if one source fails while another succeeds; error codes are sanitized constants.
+- Added tests for complete, partial and mixed source outcomes. PR/Actions/Pages validation pending.

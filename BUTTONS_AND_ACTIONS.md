@@ -176,3 +176,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The default scope remains **해원 원문 확인**; broader candidate scopes remain opt-in.
 - Operational note: run-log `sources` still only includes YouTube even when RSS/news collection succeeds; the news status file remains the detailed source record.
 - Mobile/browser visual checks and human image labels remain outstanding.
+
+
+## 2026-11-25 — Operational source log completeness
+- Run logs now include source rows for **NMIXX YouTube**, **Google News RSS**, and **Bing News RSS**, rather than only the YouTube collector.
+- Each RSS row records its outcome and item count; partial query failures are distinguished from full success and total failure.
+- Overall run status is aggregated across sources. A successful source plus a failed source yields **partial**.
+- Regression tests cover success, partial and mixed outcomes. PR/Actions validation pending.

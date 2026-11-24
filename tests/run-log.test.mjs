@@ -52,3 +52,42 @@ test('manual, GitHub push and external scheduler triggers are preserved', () => 
   assert.equal(buildRunLog({ ...base, trigger: 'push' }).trigger, 'github_push');
   assert.equal(buildRunLog({ ...base, trigger: 'external_scheduler' }).trigger, 'external_scheduler');
 });
+
+
+test('run log records Google News and Bing RSS outcomes separately from YouTube',()=>{
+ const log=buildRunLog({...base,newsStatus:{
+  requestedQueries:4,successfulQueries:3,fetched:71,
+  bingSuccessfulQueries:2,bingFailedQueries:[{query:'q1'},{query:'q2'}],bingCandidates:18
+ }});
+ assert.equal(log.status,'partial');
+ assert.deepEqual(log.sources.map(source=>source.sourceId),['nmixx-youtube','google-news-rss','bing-news-rss']);
+ assert.equal(log.sources[0].outcome,'success');
+ assert.equal(log.sources[1].outcome,'partial');
+ assert.equal(log.sources[1].itemsSeen,71);
+ assert.equal(log.sources[1].errorCode,'RSS_QUERY_FAILURES');
+ assert.equal(log.sources[2].outcome,'partial');
+ assert.equal(log.sources[2].itemsSeen,18);
+ assert.equal(log.sources[2].errorCode,'BING_RSS_QUERY_FAILURES');
+});
+
+test('run log marks RSS sources successful when all requested queries succeed',()=>{
+ const log=buildRunLog({...base,newsStatus:{
+  requestedQueries:4,successfulQueries:4,fetched:63,
+  bingSuccessfulQueries:4,bingFailedQueries:[],bingCandidates:30
+ }});
+ assert.equal(log.status,'success');
+ assert.equal(log.sources[1].outcome,'success');
+ assert.equal(log.sources[2].outcome,'success');
+ assert.equal(log.sources[1].itemsSeen,63);
+ assert.equal(log.sources[2].itemsSeen,30);
+});
+
+test('run log is partial when one collector fails but another source succeeds',()=>{
+ const log=buildRunLog({...base,status:{status:'error',source:'nmixx-youtube',itemsFetched:0,itemsAdded:0,itemsDuplicate:0},newsStatus:{
+  requestedQueries:4,successfulQueries:4,fetched:40,bingSuccessfulQueries:0,bingFailedQueries:[{query:'x'}],bingCandidates:0
+ }});
+ assert.equal(log.status,'partial');
+ assert.equal(log.sources[0].outcome,'failed');
+ assert.equal(log.sources[1].outcome,'success');
+ assert.equal(log.sources[2].outcome,'failed');
+});

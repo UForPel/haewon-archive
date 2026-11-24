@@ -12,11 +12,33 @@ function readJson(path) {
   return readFile(resolve(ROOT, path), 'utf8').then(JSON.parse);
 }
 
-export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, videoCount, photoCount, changedPaths = [] }) {
+export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, newsStatus = {}, videoCount, photoCount, changedPaths = [] }) {
   const itemsFetched = Number(status.itemsFetched) || 0;
   const itemsAdded = Number(status.itemsAdded) || 0;
   const itemsDuplicate = Number(status.itemsDuplicate) || 0;
   const sourceOutcome = status.status === 'success' ? 'success' : status.status === 'error' ? 'failed' : 'skipped';
+  const googleRequested = Math.max(0, Number(newsStatus.requestedQueries) || 0);
+  const googleSuccessful = Math.max(0, Number(newsStatus.successfulQueries) || 0);
+  const bingFailedCount = Array.isArray(newsStatus.bingFailedQueries) ? newsStatus.bingFailedQueries.length : 0;
+  const bingSuccessful = Math.max(0, Number(newsStatus.bingSuccessfulQueries) || 0);
+  const bingRequested = bingSuccessful + bingFailedCount;
+  const outcomeFor = (requested, successful) => requested === 0 ? 'skipped' : successful >= requested ? 'success' : successful > 0 ? 'partial' : 'failed';
+  const newsOutcome = outcomeFor(googleRequested, googleSuccessful);
+  const bingOutcome = outcomeFor(bingRequested, bingSuccessful);
+  const sourceRow = (sourceId, outcome, itemsSeen, errorCode) => ({
+    sourceId, outcome, itemsSeen: Math.max(0, Number(itemsSeen) || 0),
+    ...(errorCode ? { errorCode } : {})
+  });
+  const sources = [
+    sourceRow(status.source || 'nmixx-youtube', sourceOutcome, itemsFetched, status.status === 'error' ? 'COLLECTOR_FAILED' : ''),
+    sourceRow('google-news-rss', newsOutcome, newsStatus.fetched, newsOutcome === 'partial' || newsOutcome === 'failed' ? 'RSS_QUERY_FAILURES' : ''),
+    sourceRow('bing-news-rss', bingOutcome, newsStatus.bingCandidates, bingOutcome === 'partial' || bingOutcome === 'failed' ? 'BING_RSS_QUERY_FAILURES' : '')
+  ];
+  const hasSuccess = sources.some(source => source.outcome === 'success' || source.outcome === 'partial');
+  const hasFailure = sources.some(source => source.outcome === 'failed' || source.outcome === 'blocked');
+  const overallStatus = hasFailure ? (hasSuccess ? 'partial' : 'failed') :
+    sources.every(source => source.outcome === 'skipped') ? 'skipped' :
+    sources.some(source => source.outcome === 'partial') ? 'partial' : 'success';
   const record = {
     schemaVersion: '1.0.0',
     runId: String(runId),
@@ -24,13 +46,8 @@ export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, vid
     finishedAt,
     trigger: trigger === 'schedule' ? 'github_schedule' : trigger === 'workflow_dispatch' ? 'workflow_dispatch' : trigger === 'push' ? 'github_push' : trigger === 'manual' ? 'manual' : trigger === 'external_scheduler' ? 'external_scheduler' : 'unknown',
     mode: 'production',
-    status: sourceOutcome === 'success' ? 'success' : sourceOutcome === 'skipped' ? 'skipped' : 'failed',
-    sources: [{
-      sourceId: status.source || 'nmixx-youtube',
-      outcome: sourceOutcome,
-      itemsSeen: itemsFetched,
-      ...(status.status === 'error' ? { errorCode: 'COLLECTOR_FAILED' } : {})
-    }],
+    status: overallStatus,
+    sources,
     counts: {
       discovered: itemsFetched,
       accepted: itemsAdded,
@@ -53,6 +70,7 @@ async function main() {
   if (!startedAt || Number.isNaN(Date.parse(startedAt))) throw new Error('RUN_STARTED_AT must be a valid timestamp');
   const finishedAt = new Date().toISOString();
   const status = await readJson('data/collection-status.json');
+  const newsStatus = await readJson('data/news-collection-status.json');
   const videos = await readJson('data/videos.json');
   const photos = await readJson('data/photos.json');
   const changedPaths = execFileSync('git', ['status', '--porcelain', '--', 'data'], { cwd: ROOT, encoding: 'utf8' })
@@ -60,7 +78,7 @@ async function main() {
   const record = buildRunLog({
     runId, startedAt, finishedAt,
     trigger: process.env.GITHUB_EVENT_NAME || 'unknown',
-    status, videoCount: videos.length, photoCount: photos.length, changedPaths
+    status, newsStatus, videoCount: videos.length, photoCount: photos.length, changedPaths
   });
   await mkdir(LOG_DIR, { recursive: true });
   const path = resolve(LOG_DIR, `${runId}.json`);

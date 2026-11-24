@@ -1104,3 +1104,10 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - #577: 139/139 passed and Pages deployed.
 - #578: 139/139 passed and Pages deployed.
 - The #577 workflow has setup/teardown steps in addition to its core workflow stages; prior wording that said "21 workflow steps" was imprecise. The record is corrected to say all workflow stages succeeded.
+
+
+## 2026-11-25 — Operational run log now includes RSS sources (pending CI)
+- Audited `data/run-logs/45507837408.json` and `data/run-logs/45507383261.json`: both reported only the YouTube collector in `sources`, despite successful Google News RSS and Bing News RSS collection in the same workflow. This made the top-level operational log incomplete.
+- On branch `ops/include-news-sources-in-run-log`, updated `scripts/run-log.mjs` to read `data/news-collection-status.json` and emit separate source rows for `google-news-rss` and `bing-news-rss`, with requested/successful outcomes represented as success/partial/skipped/failed and sanitized error codes.
+- Overall run status is now aggregated across the three sources; e.g. one source failing while another succeeds yields `partial`, not a misleading overall failure or success.
+- Added tests covering successful RSS runs, partial query failures and mixed collector outcomes. PR and Actions/Pages validation pending.
