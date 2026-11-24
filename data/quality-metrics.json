@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-11-24T00:20:07.844Z",
+  "generatedAt": "2026-11-24T00:41:10.000Z",
   "thumbnailAudit": {
     "items": 618,
-    "withThumbnail": 252,
-    "missing": 366,
+    "withThumbnail": 261,
+    "missing": 357,
     "uniqueThumbnailUrls": 1,
     "repeatedUrlGroups": 1,
-    "repeatedItems": 251,
-    "dominantThumbnailCount": 252,
-    "dominantThumbnailShare": 41,
+    "repeatedItems": 260,
+    "dominantThumbnailCount": 261,
+    "dominantThumbnailShare": 42,
     "concentrationWarning": true,
     "repeatedUrls": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "count": 252
+        "count": 261
       }
     ],
     "heuristicFlaggedUrls": 1,
     "heuristicFlags": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "count": 252,
+        "count": 261,
         "flags": [
           "reused-url"
         ]
@@ -29,7 +29,7 @@
     "hosts": [
       {
         "host": "lh3.googleusercontent.com",
-        "count": 252
+        "count": 261
       }
     ]
   },
@@ -40,24 +40,24 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 618,
-    "newsUniqueFetched": 250,
-    "newsAddedLastRun": 2,
-    "duplicateBeforeMergeLastRun": 25,
+    "newsUniqueFetched": 238,
+    "newsAddedLastRun": 3,
+    "duplicateBeforeMergeLastRun": 23,
     "duplicateGroupsCurrent": 618,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 275,
-      "after": 249,
-      "collapsed": 26,
+      "before": 261,
+      "after": 237,
+      "collapsed": 24,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
       "attempted": 12,
-      "found": 12,
+      "found": 9,
       "missing": 0,
-      "failed": 0
+      "failed": 3
     }
   },
   "sources": [
@@ -65,10 +65,10 @@
       "source": "Google News",
       "items": 618,
       "withUrl": 618,
-      "withThumbnail": 252,
+      "withThumbnail": 261,
       "withDate": 618,
       "urlCoverage": 100,
-      "thumbnailCoverage": 41,
+      "thumbnailCoverage": 42,
       "dateCoverage": 100
     }
   ],
@@ -108,9 +108,9 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
+    "rateLimited": 15,
     "unreachable": 0,
-    "thumbnailMissing": 366,
+    "thumbnailMissing": 357,
     "results": [
       {
         "kind": "article",
@@ -127,8 +127,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1VMzVhTVZRS0lYbGRsU2J4MklBVllkal9pbkNnb05DdExsNDlmV3FvalpxZDNBNDRnd3pjcVhfa3Z1S2RXRWxiNFlHeF9WZl9QbUtYV09sYWFRRFoz?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -139,8 +139,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE15RHFobzdEazU1bUpUbXRFUjFDU3VZNk9NVFhKNXl4QjlDNzlrRkFscDJZYXNfTDJLYXJPcVlLQ0pXVmRBSm1qTlZxYjRmTzlESFNNYWIxdVYxQ0JmVk8wZUVTZE1INW5yVC1mT2xuU3dDdw?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -157,8 +157,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1lMTRNazY1SndpSm9Pdm9jOGtpajBCY1h3NENHRnZNLTFvMVpxSWpDRUI5LUh6bTQ0LXRkU3gzM2p1a3lKYS10WVBHV1lmR3VBRl9EVjI1eVhKNDdh?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -187,8 +187,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE95ZHNJWXdCeEVfdXp3NmktUnRydmg4N0ZkT0RqdGRyWFQwMmkxbVBTbnVqUmlVN2ROTUtvaGEwRF9XZDJSOWhpOEdzbkxxb1JWUG1RRzA4WlRtcjB5?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -199,8 +199,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBaeXhoMmlmeHFxNHJLc1VUb05ZWEljR2RXUVV3cC1hOFdfcWpiejFaTGdLaExZNF8tQ1lrYUplWHZHY2M4bkJQWi1OSnhmZG5ZYXAzVEpCaThySDNI?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -223,8 +223,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE54c0VLcEF2N21tY3pNdnNDLW94cGZwSDA1TTE2MllvN29mazU4eEoyV2V6czJIdjJNMUxZSlhyaHNoZVJ4NklNTU13ZHJSVTVUVV9zN2pkMTFVNXNC?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -247,8 +247,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE05RDlFY3JYUEtwc1hLaXNLbEE5RVhYMzFUM2tWZ0NUb1ZpRngweTRwcTFYNFBWaWxyX1V2QXJtYi11TkNsMGQ4ZUZScFhwUDc4Y2xFSjJyTlZxRUY5?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -259,14 +259,14 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1sTVNKcnAyc0hQdVBCcGxsTkg1ZVZtbUdFc3QzRV9RS1RmVlVxWC1ncXhfUmpNaWMtcFlSNmI1Q0FxZ1Z1NXZNMHdHSEg2bU9oclNrUXJDcnFBQjNf?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yTlEyVnlhMXdvY3NkSDhGWUVQUnZETXpwelU5WHIzS2FZU3RGdUJYTU8ybGhaR1ZLeDI1UlVBT2pBOWRtYWhQQ0Mxd1o5STNEcnc4eEw3SVF4S2Et?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -295,14 +295,14 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBHYXN1NXY1Xy12TXJ3YlNVYVF2QzgzQ2toR2JoQ0hEbmU5SnVoOEIzZ2hxYzVSYWtsYmhQWlVfS0FnbzlyQXJ4MDIwbkZ0OE1VajVqMkZFTDBLamo1?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9NLUswaEdhRU1HYWNWUnpqbnpWdHhXTGtyTTdmWFhTckxNSG03el9UMzVIZEpLSk0xcTk5bkEwMzJ6MjEyLWdYSg?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -313,14 +313,14 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9SSVBickxWbFFCWjcwOTJoVkxwd2R0Y1R3dUsyNC1uMzN5LW5odTh2eXJmcXpOc3RNR3BrQ295TkViSnlrZkJUcVRnbmI1MXlhdXdtUUtGb2RRQnRs?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1uNlBuWlRHX0UtMmhLN1BrMkl0OW1UaFRna2U1bTl2amh0Ym9qRkpBa1FCRjY3TmZVMEtYcjd0YVlSVTFmcEhkc1JPMGJPTEo3RXBoaGctdXJXT0VN?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -331,8 +331,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9CS2l5dEZPUHRjSFRlUHFnMngxSXVTNEh0V0ZwYzB6U0tsa1pEZXRhQjV5X2ZiQmFkZDhKek5mVjVxZWFkdTdUWkw2OWFwSEdrN1Z1V1JB?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -349,8 +349,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB6QlB2OUFQYjk5cm1wY253WnlZbjZodVZoaElqZk9IamZiNUw1TmM2QU9pM1lJekxZT3Mzamw2ZzA3OTlRV2Q4UFY3Z3ZkcUNvbndCYm0wMkdQSkFY?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
