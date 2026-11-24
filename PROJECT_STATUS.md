@@ -228,3 +228,11 @@ Last updated: 2026-11-20
 - Tests: full CI run #469 passed unit tests and all collection/metrics/validation/Pages steps. Run: https://github.com/UForPel/haewon-archive/actions/runs/45313154823. Live mobile visual verification not performed.
 - A prior #467 run failed due to an incorrect module import extension in quality-metrics; corrected in #468. #468 passed; #469 is the end-to-end success on final UI changes.
 - Research: Media RSS distinguishes item-level thumbnail metadata and can carry multiple candidate resources; RSS enclosure is generic attached media. Official sources: https://www.rssboard.org/media-rss and https://www.rssboard.org/rss-specification. This supports candidate provenance comparison but not image relevance itself. Image licensing/credit metadata preservation: https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata.
+
+
+## Thumbnail candidate persistence — 2026-11-24
+- Collector now persists article metadata candidate arrays on the selected enrichment records, including duplicate-rejected candidates; the dashboard comparator can read this per-record evidence. RSS candidates and metadata candidates remain separate.
+- Quality metrics now expose unique-thumbnail assignment rate and unique-image coverage alongside URL repetition/concentration. These measure URL uniqueness, not visual relevance, rights, or source trust.
+- Existing records were not deleted or auto-replaced. The 273-record repeated URL remains in the review evidence list.
+- Tests added for persistence and comparison; local test execution unavailable in this session. Final CI/Pages run is pending verification.
+- Google News redirect use is limited to ordinary public redirect-following requests; no opaque redirect decoding or access-control bypass is added. Resolved publisher URLs are not yet retained.
