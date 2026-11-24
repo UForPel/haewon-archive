@@ -17,19 +17,33 @@ const CATEGORY_RULES = [
 ];
 export function cleanDiscoveryText(value = '') {
   return String(value || '')
-    .replace(/<(script|style)\\b[^>]*>[\\s\\S]*?<\\/\\1>/gi, ' ')
+    .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ')
     .replace(/<[^>]*>/g, ' ')
     .replace(/&nbsp;|&#160;|&#xA0;/gi, ' ')
     .replace(/&amp;/gi, '&')
     .replace(/&quot;/gi, '"')
     .replace(/&#39;|&apos;/gi, "'")
-    .replace(/&#(\\d+);/g, (_, code) => { const n = Number(code); return Number.isFinite(n) && n > 0 && n <= 0x10ffff ? String.fromCodePoint(n) : ' '; })
+    .replace(/&#(\d+);/g, (_, code) => { const n = Number(code); return Number.isFinite(n) && n > 0 && n <= 0x10ffff ? String.fromCodePoint(n) : ' '; })
     .replace(/&#x([0-9a-f]+);/gi, (_, code) => { const n = Number.parseInt(code, 16); return Number.isFinite(n) && n > 0 && n <= 0x10ffff ? String.fromCodePoint(n) : ' '; })
-    .replace(/https?:\\/\\/[^\\s<>"']+/gi, ' ')
-    .replace(/[ \\t\\r\\n]+/g, ' ')
+    .replace(/https?:\/\/[^\s<>"']+/gi, ' ')
+    .replace(/[ \t\r\n]+/g, ' ')
     .trim();
 }
 const cleanDescription = cleanDiscoveryText;
+const HAEWON_TITLE = /오해원|해원|haewon/i;
+const NMIXX_TITLE = /nmixx|엔믹스/i;
+export function classifyDiscoveryRelevance(item = {}) {
+  const title = cleanDiscoveryText(item.title);
+  if (HAEWON_TITLE.test(title)) return 'haewon';
+  if (NMIXX_TITLE.test(title)) return 'nmixx';
+  return 'other';
+}
+export function filterDiscoveryRelevance(items = [], scope = 'haewon') {
+  if (scope === 'all') return items;
+  const pattern = scope === 'nmixx' ? NMIXX_TITLE : HAEWON_TITLE;
+  return items.filter(item => pattern.test(cleanDiscoveryText(item.title)));
+}
+
 const HAEWON_TITLE = /오해원|해원|haewon/i;
 const NMIXX_TITLE = /nmixx|엔믹스/i;
 export function classifyDiscoveryRelevance(item = {}) {
