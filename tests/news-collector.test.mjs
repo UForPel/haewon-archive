@@ -29,3 +29,26 @@ test('news collector search list does not include fancam query',async()=>{
 });
 
 test('RSS YouTube video link is retained as a candidate with its thumbnail',()=>{const xml='<rss><channel><item><title>Haewon official stage video</title><link>https://www.youtube.com/watch?v=video123</link><description>Official clip</description><media:thumbnail url="https://img.example/youtube.jpg" /></item></channel></rss>';const [item]=parseRss(xml,'Haewon');assert.equal(item.url,'https://www.youtube.com/watch?v=video123');assert.equal(item.thumbnailUrl,'https://img.example/youtube.jpg');});
+
+import {extractRssThumbnailCandidates,extractOpenGraphImageCandidates} from '../scripts/collect-news.mjs';
+test('RSS enclosure accepts image MIME types but ignores audio',()=>{
+ const xml='<item><enclosure url="https://img.example/a.jpg" type="image/jpeg"/><enclosure url="https://audio.example/a.mp3" type="audio/mpeg"/></item>';
+ const candidates=extractRssThumbnailCandidates(xml);
+ assert.equal(candidates.length,1);assert.equal(candidates[0].source,'enclosure');
+});
+test('RSS media and description images resolve relative HTTPS URLs with source priority',()=>{
+ const xml='<item><media:content url="/media.jpg" medium="image"/><media:thumbnail url="https://img.example/thumb.jpg"/></item>';
+ const candidates=extractRssThumbnailCandidates(xml,'<img src="/desc.jpg"/>','https://publisher.example/story');
+ assert.deepEqual(candidates.map(x=>x.source),['media:thumbnail','media:content','rss-description-html']);
+ assert.equal(candidates[1].url,'https://publisher.example/media.jpg');
+});
+test('article metadata parser extracts OG, Twitter, JSON-LD and itemprop candidates in priority order',()=>{
+ const html='<meta property="og:image" content="/og.jpg"><meta name="twitter:image:src" content="https://img.example/twitter.jpg"><meta itemprop="image" content="/schema.jpg"><script type="application/ld+json">{"@type":"NewsArticle","image":["/jsonld.jpg"]}</script>';
+ const candidates=extractOpenGraphImageCandidates(html,'https://publisher.example/article');
+ assert.deepEqual(candidates.map(x=>x.source),['og:image','twitter:image:src','itemprop:image','jsonld:image']);
+ assert.equal(candidates[0].url,'https://publisher.example/og.jpg');
+});
+test('image candidates reject non-HTTPS and logo-like image URLs',()=>{
+ const html='<meta property="og:image" content="http://img.example/a.jpg"><meta property="og:image:secure_url" content="https://img.example/logo.png">';
+ assert.deepEqual(extractOpenGraphImageCandidates(html),[]);
+});
