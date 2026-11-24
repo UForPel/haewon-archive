@@ -1348,6 +1348,59 @@
     "thumbnailMetaFetch": null
   },
   {
+    "id": "a49267aceb6585e0f222",
+    "title": "‘개그콘서트’ 최강창민&#183;엔믹스 오해원 출격",
+    "url": "https://sports.khan.co.kr/article/202610240113003",
+    "publisherArticleUrl": "https://sports.khan.co.kr/article/202610240113003",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b058859e92443bb8a8dbfde0bc38b44&url=https%3a%2f%2fsports.khan.co.kr%2farticle%2f202610240113003&c=15251057448181533813&mkt=ko-kr",
+    "publisherHost": "sports.khan.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%ED%95%B4%EC%9B%90%20%EC%97%94%EB%AF%B9%EC%8A%A4&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b058859e92443bb8a8dbfde0bc38b44&url=https%3a%2f%2fsports.khan.co.kr%2farticle%2f202610240113003&c=15251057448181533813&mkt=ko-kr",
+        "articleUrl": "https://sports.khan.co.kr/article/202610240113003",
+        "host": "sports.khan.co.kr"
+      }
+    ],
+    "publishedAt": "2026-10-23T18:12:00.000Z",
+    "description": "‘개그콘서트’에 최강창민이 ‘심곡 파출소’와 ‘시청자 방송 위원회’에 출격해 ‘최강휴먼’으로 변신한다. 최강창민은 능청 연기로 ‘신입사원이 알고 보니 회장님 아들’이라는 드라마를 재연한다. 또, ‘공개재판’ ...",
+    "thumbnailUrl": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "스포츠경향",
+    "discoverySource": "bing-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-24T12:51:36.523Z",
+    "status": "candidate",
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://sports.khan.co.kr/article/202610240113003",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://sports.khan.co.kr/article/202610240113003",
+      "resolvedArticleHost": "sports.khan.co.kr",
+      "fetchedAt": "2026-11-24T12:51:37.922Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
+      "articleUrl": "https://sports.khan.co.kr/article/202610240113003",
+      "observedAt": "2026-11-24T12:51:37.922Z"
+    }
+  },
+  {
     "id": "6f22626daec9c00e6291",
     "title": "“‘어른 여자’가 제 추구미”라더니…‘엔믹스’ 오해원, 몰라보게 살 빠진 근황 - 서울경제",
     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBVSjVzZjRndk95dUhJVjRLWnRsY1pDdDdEdHVBamtkWEJacklXa2xxbk4zXy1uSFlvMHBWQzhPdnd6RXZPenZ2ZEFwcmdZdzdqVXfSAVNBVV95cUxPYXlTTTFPTnRQRmJ4X0lfYnloTDlJR2piUXZlMnZYZEdJSFI4cHYxSmowNVpuUUw5anpPTVVEZGRUT0J2RU1FOFFiN2NacUkydFJYVQ?oc=5",
@@ -12610,7 +12663,13 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-24T12:49:36.961Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "d5114e00432ebda3364c",

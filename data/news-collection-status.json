@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T12:49:36.961Z",
+  "collectedAt": "2026-11-24T12:51:36.523Z",
   "searchPack": 0,
   "queries": [
     {
@@ -10,8 +10,8 @@
     },
     {
       "query": "해원 엔믹스",
-      "candidates": 111,
-      "uniqueCandidates": 111
+      "candidates": 61,
+      "uniqueCandidates": 61
     },
     {
       "query": "NMIXX Haewon",
@@ -30,12 +30,12 @@
   "bingCandidates": 41,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 263,
-  "uniqueIncoming": 244,
-  "added": 6,
+  "fetched": 213,
+  "uniqueIncoming": 193,
+  "added": 5,
   "rssImageSignals": {
-    "items": 222,
-    "sourceUrlItems": 221,
+    "items": 172,
+    "sourceUrlItems": 172,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -49,45 +49,42 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 3,
-    "found": 0,
-    "assigned": 0,
+    "attempted": 1,
+    "found": 1,
+    "assigned": 1,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
-    "failed": 3,
+    "failed": 0,
     "results": [
       {
-        "id": "651745f76b8469f7fe65",
-        "status": "failed",
-        "publisherArticleUrl": "https://x.com/NMlXX_Haewon",
+        "id": "a49267aceb6585e0f222",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://sports.khan.co.kr/article/202610240113003",
         "sourceUrl": "",
-        "resolvedArticleUrl": "https://x.com/NMlXX_Haewon",
-        "resolvedArticleHost": "x.com"
-      },
-      {
-        "id": "573c328cd899cbdb983c",
-        "status": "failed",
-        "publisherArticleUrl": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
-        "resolvedArticleHost": "www.famtimes.co.kr"
-      },
-      {
-        "id": "3bbd95a333f1ae79efdc",
-        "status": "failed",
-        "publisherArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
-        "resolvedArticleHost": "www.bntnews.co.kr"
+        "resolvedArticleUrl": "https://sports.khan.co.kr/article/202610240113003",
+        "resolvedArticleHost": "sports.khan.co.kr"
       }
     ]
   },
   "deduplicationComparison": {
-    "before": 263,
-    "after": 240,
-    "collapsed": 23,
+    "before": 213,
+    "after": 189,
+    "collapsed": 24,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 661
+  "totalCandidates": 662
 }
