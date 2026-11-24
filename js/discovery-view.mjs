@@ -117,7 +117,7 @@ if(list&&count){
   Object.entries(categoryLabels).forEach(([key,label])=>{
    const button=document.createElement('button');button.type='button';button.textContent=label;button.className=selectedCategory===key?'active':'';
    button.setAttribute('aria-pressed',String(selectedCategory===key));
-   button.addEventListener('click',()=>{selectedCategory=key;page=1;render();});
+   button.addEventListener('click',()=>{selectedCategory=key;page=1;renderCategories();render();});
    categoryBar.append(button);
   });
  };
