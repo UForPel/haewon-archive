@@ -17,12 +17,12 @@
   },
   "evidence": {
     "cumulativeDiscoveryCandidates": 682,
-    "currentRunCandidates": 72,
+    "currentRunCandidates": 71,
     "uniqueVideoRecords": 19,
     "queryYield": [
       {
         "query": "Haewon NMIXX interview",
-        "candidates": 14
+        "candidates": 13
       },
       {
         "query": "오해원 인터뷰",

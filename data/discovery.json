@@ -5515,15 +5515,38 @@
     ],
     "publishedAt": "2025-04-20T00:33:00.000Z",
     "description": "將 Yahoo 設為首選來源，在 Google 上查看更多我們的精彩報導 加入首選來源（另開新視窗） 韓國女團NMIXX於19、20日在林口體育館舉辦亞洲巡迴演唱會《NMIXX CHANGE UP MIXX LAB》，6位成員Haewon、Kyujin ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://s.yimg.com/lo/mysterio/api/1153401bb44443b3aa8ffc6a0dc8ee31c0152c6804c48a762b8406ce9f0bb178/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fca%2Febc.net.tw%2F99a768be2b678a27ad33ffa8710a22fd",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "Yahoo奇摩新聞",
     "discoverySource": "bing-news-rss",
     "query": "Haewon NMIXX brand",
     "discoveredAt": "2026-11-24T21:24:21.784Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://s.yimg.com/lo/mysterio/api/1153401bb44443b3aa8ffc6a0dc8ee31c0152c6804c48a762b8406ce9f0bb178/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fca%2Febc.net.tw%2F99a768be2b678a27ad33ffa8710a22fd",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
+      "resolvedArticleHost": "tw.news.yahoo.com",
+      "fetchedAt": "2026-11-24T21:26:40.652Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://s.yimg.com/lo/mysterio/api/1153401bb44443b3aa8ffc6a0dc8ee31c0152c6804c48a762b8406ce9f0bb178/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fca%2Febc.net.tw%2F99a768be2b678a27ad33ffa8710a22fd",
+      "articleUrl": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
+      "observedAt": "2026-11-24T21:26:40.652Z"
+    }
   },
   {
     "id": "f8b8924239c6e71a2ae4",
@@ -5593,15 +5616,38 @@
     ],
     "publishedAt": "2025-03-20T11:20:00.000Z",
     "description": "NMIXX member Haewon mentioned her unique coffee taste. On the 20th, NMIXX's Haewon, Seolyun, and Baee were invited as guests on the YouTube channel 'TteunTteun' to engage in 'Mini Pinggaego' with Yoo ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://biz.chosun.com/resizer/v2/QRPEGR2B3RCBMKHQGM4YCBFJ6E.png?auth=bd8b5aee3461199876e3e35f98eb4a0d6a66c91d74cbe8ea289d4102be344010&width=650&height=341&smart=true",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "조선일보",
     "discoverySource": "bing-news-rss",
     "query": "Haewon NMIXX brand",
     "discoveredAt": "2026-11-24T21:24:21.784Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://biz.chosun.com/resizer/v2/QRPEGR2B3RCBMKHQGM4YCBFJ6E.png?auth=bd8b5aee3461199876e3e35f98eb4a0d6a66c91d74cbe8ea289d4102be344010&width=650&height=341&smart=true",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
+      "resolvedArticleHost": "biz.chosun.com",
+      "fetchedAt": "2026-11-24T21:26:40.652Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://biz.chosun.com/resizer/v2/QRPEGR2B3RCBMKHQGM4YCBFJ6E.png?auth=bd8b5aee3461199876e3e35f98eb4a0d6a66c91d74cbe8ea289d4102be344010&width=650&height=341&smart=true",
+      "articleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
+      "observedAt": "2026-11-24T21:26:40.652Z"
+    }
   },
   {
     "id": "fb392e4ba8879b947e36",
@@ -5737,15 +5783,43 @@
     ],
     "publishedAt": "2025-02-20T20:09:00.000Z",
     "description": "NMIXX’s Haewon is sitting out today’s fan concert in Mexico due to health concerns. On February 20 local time, JYP Entertainment announced that Haewon would not be performing at NMIXX’s “NMIXX CHANGE ...",
-    "thumbnailUrl": "",
-    "thumbnailSource": "",
+    "thumbnailUrl": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg",
+    "thumbnailSource": "og:image",
     "thumbnailCandidates": [],
     "sourceName": "soompi.com",
     "discoverySource": "bing-news-rss",
     "query": "Haewon NMIXX interview",
     "discoveredAt": "2026-11-24T21:24:21.784Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg?w=140&h=140&crop=1",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
+      "resolvedArticleHost": "www.soompi.com",
+      "fetchedAt": "2026-11-24T21:26:40.652Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg",
+      "articleUrl": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
+      "observedAt": "2026-11-24T21:26:40.652Z"
+    }
   },
   {
     "id": "d1ead845fb2f7309acf5",
@@ -15644,7 +15718,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-24T21:24:21.784Z",
     "status": "candidate",
-    "relevanceScore": 1
+    "relevanceScore": 1,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "1a56ee676db5f3385be3",
