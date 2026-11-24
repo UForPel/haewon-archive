@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T21:27:35.398Z",
+  "generatedAt": "2026-11-24T21:28:29.416Z",
   "articleUrlProvenance": {
     "totalItems": 699,
     "itemsWithPublisherArticleUrl": 55,
@@ -315,63 +315,33 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 33,
+    "bingNewsCandidates": 30,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 699,
-    "newsUniqueFetched": 82,
-    "newsAddedLastRun": 19,
+    "newsUniqueFetched": 63,
+    "newsAddedLastRun": 1,
     "duplicateBeforeMergeLastRun": 8,
     "duplicateGroupsCurrent": 699,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 90,
-      "after": 81,
+      "before": 71,
+      "after": 62,
       "collapsed": 9,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 2,
-      "found": 1,
-      "assigned": 1,
+      "attempted": 0,
+      "found": 0,
+      "assigned": 0,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
-      "failed": 1,
-      "results": [
-        {
-          "id": "e3a83d764eaef54855a6",
-          "status": "failed",
-          "publisherArticleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
-          "resolvedArticleHost": "www.forbes.com"
-        },
-        {
-          "id": "772e453cc3cd4b9b3a7e",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg",
-              "source": "og:image",
-              "priority": 1
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
-          "resolvedArticleHost": "www.nme.com"
-        }
-      ]
+      "failed": 0,
+      "results": []
     }
   },
   "sources": [
@@ -1708,8 +1678,8 @@
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
     "metaFound": 43,
-    "metaAssigned": 1,
-    "assignmentRate": 2,
+    "metaAssigned": 0,
+    "assignmentRate": 0,
     "sourceCounts": {
       "og:image": 41,
       "jsonld:image": 56,
@@ -2546,8 +2516,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "b9889446cfd423ab2196",
@@ -2888,7 +2858,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T21:27:35.410Z",
+    "generatedAt": "2026-11-24T21:28:29.432Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
