@@ -1604,7 +1604,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "bab87c204fad9202f92d",
@@ -7845,7 +7847,10 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e7bdb8994875eef07c57",
@@ -9224,7 +9229,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "855e689ac0ec7455f794",

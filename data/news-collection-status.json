@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T01:31:06.309Z",
+  "collectedAt": "2026-11-24T01:31:33.429Z",
   "searchPack": 0,
   "queries": [
     {
@@ -15,43 +15,32 @@
     },
     {
       "query": "NMIXX Haewon",
-      "candidates": 100,
-      "uniqueCandidates": 100
+      "candidates": 46,
+      "uniqueCandidates": 46
     },
     {
       "query": "Haewon NMIXX news",
-      "candidates": 29,
-      "uniqueCandidates": 29
+      "candidates": 10,
+      "uniqueCandidates": 10
     }
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
   "failedQueries": [],
-  "fetched": 280,
-  "uniqueIncoming": 247,
-  "added": 3,
+  "fetched": 207,
+  "uniqueIncoming": 190,
+  "added": 0,
   "thumbnailEnrichment": {
     "attempted": 12,
-    "found": 12,
+    "found": 9,
     "assigned": 0,
-    "duplicateRejected": 12,
+    "duplicateRejected": 9,
     "missing": 0,
-    "failed": 0,
+    "failed": 3,
     "results": [
       {
         "id": "977f0619d188263873c7",
-        "status": "duplicate-rejected",
-        "candidate": {
-          "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-          "source": "og:image"
-        },
-        "candidates": [
-          {
-            "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-            "source": "og:image"
-          }
-        ],
-        "assigned": false
+        "status": "failed"
       },
       {
         "id": "36b7ef25f5b2e2457c3b",
@@ -85,18 +74,7 @@
       },
       {
         "id": "db53dcfe6cfc7f6df2c5",
-        "status": "duplicate-rejected",
-        "candidate": {
-          "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-          "source": "og:image"
-        },
-        "candidates": [
-          {
-            "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-            "source": "og:image"
-          }
-        ],
-        "assigned": false
+        "status": "failed"
       },
       {
         "id": "71ac8d6f10af266c79d9",
@@ -190,18 +168,7 @@
       },
       {
         "id": "0565ebb63ddc8d22ca5d",
-        "status": "duplicate-rejected",
-        "candidate": {
-          "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-          "source": "og:image"
-        },
-        "candidates": [
-          {
-            "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-            "source": "og:image"
-          }
-        ],
-        "assigned": false
+        "status": "failed"
       },
       {
         "id": "81537112f491b1272c20",
@@ -221,9 +188,9 @@
     ]
   },
   "deduplicationComparison": {
-    "before": 280,
-    "after": 246,
-    "collapsed": 34,
+    "before": 207,
+    "after": 190,
+    "collapsed": 17,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 619
