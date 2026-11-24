@@ -141,3 +141,16 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - In the website, quality diagnostics are now behind **수집·품질 진단 보기**; image review/import/export/queue tools are behind **이미지 검수 도구 · 라벨 가져오기/내보내기**; each article's candidate labels are behind **이미지 후보 검수**. These are native disclosure controls, not buttons.
 - The default article card is limited to title, category, source/date and optional description. Raw RSS source URL, internal relevance/completeness scores, metadata host and per-card review widgets are not part of the reading surface.
 - Regression tests check the loaded discovery module for these presentation boundaries. Live browser/mobile rendering is still unverified until a human checks the deployed page.
+
+
+## 2026-11-25 — Article relevance and clean reading controls
+- Article scope controls in `#discovery-relevance`:
+  - **해원 직접 관련** (default): article candidates whose title includes 해원/오해원/Haewon.
+  - **NMIXX 관련**: article candidates whose title includes NMIXX/엔믹스.
+  - **전체 기사 후보**: all candidates classified as articles.
+- Video/fancam candidates are excluded from the article list and remain available through the separate video archive/search surface.
+- Category controls in `#discovery-categories` are now explicitly mounted; category selection updates the active state and result list.
+- Article card title and description are rendered as plain text. RSS HTML tags and embedded URLs are stripped; no raw wrapper address is printed in the reading surface.
+- A repeated legacy thumbnail URL is not displayed as an article-specific image when the entire group lacks article-level provenance. Original records remain intact for independent review.
+- Counts are keyword-based scopes only; they are not human relevance labels or precision measurements.
+- Regression tests cover sanitizer, relevance scopes, article/video separation, metrics and control mounting. Browser/mobile visual and keyboard checks remain unverified.
