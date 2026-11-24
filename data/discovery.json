@@ -146,7 +146,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0921b4f7c807a79d354c",
@@ -1510,7 +1514,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://m.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "d5d1b7ec891930a341d8",
@@ -2096,7 +2104,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8c8071b26ff901f4e0a0",
@@ -2719,7 +2731,14 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": {
+      "status": "failed",
+      "publisherArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "",
+      "resolvedArticleHost": "",
+      "fetchedAt": ""
+    }
   },
   {
     "id": "38916009aac8f65430b4",
@@ -2835,7 +2854,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.topstarnews.net",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "f42c7fdb3017be0499a5",
@@ -3000,7 +3023,13 @@
     "thumbnailSource": "",
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://youtu.be",
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "a4f921579577e4063f6a",
@@ -3140,7 +3169,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.topstarnews.net",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "ef1d4fbed91aad570938",
@@ -3239,7 +3272,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.topstarnews.net",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "7e306349078324dc8bf9",
@@ -3410,7 +3447,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.wikitree.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "66c296a7f618669fd99b",
@@ -3944,7 +3985,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T05:36:17.197Z"
+      "fetchedAt": "2026-11-24T06:12:43.810Z"
     }
   },
   {
@@ -4229,7 +4270,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.koreadaily.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0565ebb63ddc8d22ca5d",
@@ -4829,7 +4874,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.xportsnews.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "fb392e4ba8879b947e36",
@@ -4995,7 +5044,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.xportsnews.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "486986438accf661ee2e",
@@ -5514,7 +5567,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.frame-less.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "4bacad32927935b069e3",
@@ -5582,7 +5639,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.osen.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "99a15abb73e568fbc33b",
@@ -5602,7 +5663,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://isplus.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "6431f12aea24b934167a",
@@ -5830,7 +5895,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T05:38:02.262Z"
+      "fetchedAt": "2026-11-24T06:12:43.791Z"
     }
   },
   {
@@ -5907,7 +5972,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://mhnse.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "ef86a090cdb8d03071f0",
@@ -5927,7 +5996,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.newsis.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "da2ca32f9a2115bbb975",
@@ -5998,7 +6071,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.sportschosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "f60f0f16157da91b9bf1",
@@ -6031,12 +6108,12 @@
     "relevanceScore": 4,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": {
-      "status": "failed",
+      "status": "missing",
       "publisherArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
       "sourceUrl": "",
-      "resolvedArticleUrl": "",
-      "resolvedArticleHost": "",
-      "fetchedAt": ""
+      "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
+      "resolvedArticleHost": "www.tvdaily.co.kr",
+      "fetchedAt": "2026-11-24T06:12:45.486Z"
     }
   },
   {
@@ -6108,7 +6185,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.sportsseoul.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "d6c5f93f622776e07642",
@@ -6146,7 +6227,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T05:38:04.152Z"
+      "fetchedAt": "2026-11-24T06:12:43.951Z"
     }
   },
   {
@@ -6185,7 +6266,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
       "resolvedArticleHost": "www.msn.com",
-      "fetchedAt": "2026-11-24T05:38:04.228Z"
+      "fetchedAt": "2026-11-24T06:12:43.869Z"
     }
   },
   {
@@ -6222,7 +6303,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://m.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b5cc9b4054e658adb6c0",
@@ -6266,7 +6351,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "1410c1c68a3a1cfaa0f2",
@@ -6304,7 +6393,7 @@
       "sourceUrl": "",
       "resolvedArticleUrl": "https://osen.co.kr/article/G1112907419",
       "resolvedArticleHost": "osen.co.kr",
-      "fetchedAt": "2026-11-24T05:38:05.536Z"
+      "fetchedAt": "2026-11-24T06:12:44.561Z"
     }
   },
   {
@@ -6325,7 +6414,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://m.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "cbd4c75b2f95e45c5b54",
@@ -6369,7 +6462,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.slist.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0c364dc099d75fecff0b",
@@ -6389,7 +6486,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.slist.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "c25e7442623aecd78ffb",
@@ -6409,7 +6510,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://isplus.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "e2882f545504fb619441",
@@ -6429,7 +6534,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://isplus.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8e8ad12f0ef207f4b9f6",
@@ -6449,7 +6558,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://isplus.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0c35d876102ef0c10fad",
@@ -6485,7 +6598,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.slist.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "f2bad6d2cd82f5ba4dce",
@@ -6505,7 +6622,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.slist.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "be2e07bd120f697691b3",
@@ -6525,7 +6646,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://m.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8541ac4deb7419e96c90",
@@ -6545,7 +6670,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://mydaily.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b75edaf9b9a60192880d",
@@ -6565,7 +6694,31 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
+  },
+  {
+    "id": "29d0e34f4e6ba25723ee",
+    "title": "효리수 효연, 6세대 걸그룹 세계관 잊고 엔믹스 해원 잡도리 “못 알아들어?”(가짜 김효연) - 뉴스엔",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAtNGxmenJjN3pFRXFJZllXMWZLRGZ6ZVcyV1N5RUpfeXhJSEFPa0gtaHJRaW52ZjFfVldyWHJtNjMtS1c2RE1sX1M0WGhRajZ5dnNSQWdtTnlYMS1QcjhpdGZuSUhVQ1Bs?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.newsen.com",
+    "publishedAt": "2026-11-04T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTFAtNGxmenJjN3pFRXFJZllXMWZLRGZ6ZVcyV1N5RUpfeXhJSEFPa0gtaHJRaW52ZjFfVldyWHJtNjMtS1c2RE1sX1M0WGhRajZ5dnNSQWdtTnlYMS1QcjhpdGZuSUhVQ1Bs?oc=5\" target=\"_blank\">효리수 효연, 6세대 걸그룹 세계관 잊고 엔믹스 해원 잡도리 “못 알아들어?”(가짜 김효연)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스엔</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-24T06:12:42.958Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f5ae3b0ea7fa5deda0f2",
@@ -6811,7 +6964,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.sportsseoul.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "cfe35c7860703096c9ae",
@@ -6831,7 +6988,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.famtimes.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "62d2dc746cb04fbd3f0a",
@@ -6851,7 +7012,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.peoplewatch.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "d785a26073de5b2a666e",
@@ -6895,7 +7060,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://youtu.be",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "c043119257a5b5baa64d",
@@ -6915,7 +7084,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://classian.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "02cfc047bf86fb1b13c0",
@@ -6935,7 +7108,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.cmn.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "a33fcda55a912a33d098",
@@ -6979,7 +7156,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.nanumy.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "7a308713dc4aa623ecb5",
@@ -6999,7 +7180,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.womentimes.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "06054441df915641c7c8",
@@ -7019,7 +7204,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.ajunews.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "fdeffe0e9bdcbc3ea04e",
@@ -7039,7 +7228,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.lawissue.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "17d2069a40b7b4316cf4",
@@ -7059,7 +7252,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "13da35e9ee2a9465d5fc",
@@ -7079,7 +7276,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://supple.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "edb07199d27444993dff",
@@ -7099,7 +7300,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://sports.donga.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "cb932b090de5a5644811",
@@ -7143,7 +7348,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.osen.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "f720dc04ac4c78fac8c1",
@@ -7163,7 +7372,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://article.topstarnews.net",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "69e5654e448b17546bba",
@@ -7239,7 +7452,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.osen.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "3404068d76b9e7aedf8d",
@@ -7259,7 +7476,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.osen.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "e0ae0b1fc968f0d0e956",
@@ -7279,7 +7500,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.mydaily.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "06e4bdc269942b53009b",
@@ -7299,7 +7524,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.mydaily.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "84ef1e89e439f8c66f8b",
@@ -7319,7 +7548,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://mydaily.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "37d743a1c95deb1345d9",
@@ -7339,7 +7572,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://mydaily.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0695c725590e3452bd85",
@@ -7359,7 +7596,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "842062180ddc2525d72d",
@@ -7379,7 +7620,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://mydaily.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0275cc7bb2473b823656",
@@ -7399,7 +7644,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://m.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "738e0e8f49eba8b7f3d7",
@@ -7419,7 +7668,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://biz.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8352a7e1a98ba5b0bbd8",
@@ -7439,7 +7692,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://m.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "2fbeae3766958027a39c",
@@ -7459,7 +7716,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "76f9c9ba54bf172d7ab8",
@@ -7479,7 +7740,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://news.nate.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "a53d62d3826d14be2b2e",
@@ -7499,7 +7764,31 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://news.nate.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
+  },
+  {
+    "id": "2bc8512ece2d274c4c73",
+    "title": "[TD포토] 엔믹스 해원-베이 '즐거운 출국길' - 네이트",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE54eDB4cnJzdGpVWjJYTXRaZU5OYm5FTTU2ME9kR0NsdEhLUUVlSFo1V0llNmNaNzRCbEMxNjZWeWU3LVhJSWl1eVFjakltRTFLSWZ1WWROT080QnZjdWxSMA?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://news.nate.com",
+    "publishedAt": "2026-09-11T02:16:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE54eDB4cnJzdGpVWjJYTXRaZU5OYm5FTTU2ME9kR0NsdEhLUUVlSFo1V0llNmNaNzRCbEMxNjZWeWU3LVhJSWl1eVFjakltRTFLSWZ1WWROT080QnZjdWxSMA?oc=5\" target=\"_blank\">[TD포토] 엔믹스 해원-베이 '즐거운 출국길'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-24T06:12:42.958Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null
   },
   {
     "id": "f9a9d0ed7fe60b045e79",
@@ -7519,7 +7808,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://news.nate.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "5789f4d1c59b7bbe4602",
@@ -7550,7 +7843,11 @@
       "fetchedAt": "2026-11-24T04:42:13.433Z"
     },
     "sourceUrl": "https://news.nate.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "3749e5cb2966198e7064",
@@ -7581,7 +7878,11 @@
       "fetchedAt": "2026-11-24T04:42:13.458Z"
     },
     "sourceUrl": "https://www.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "424f0bfdc18f2914ffe3",
@@ -7612,7 +7913,11 @@
       "fetchedAt": "2026-11-24T04:42:13.423Z"
     },
     "sourceUrl": "https://www.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "2bf8863898c4ab821238",
@@ -7643,7 +7948,11 @@
       "fetchedAt": "2026-11-24T04:42:13.570Z"
     },
     "sourceUrl": "https://biz.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "4c0e4c953d11db9985bc",
@@ -7674,7 +7983,11 @@
       "fetchedAt": "2026-11-24T04:42:13.575Z"
     },
     "sourceUrl": "https://biz.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "50ceca27d7535a4d8025",
@@ -7705,7 +8018,11 @@
       "fetchedAt": "2026-11-24T04:42:13.607Z"
     },
     "sourceUrl": "https://www.osen.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "f3839768de1ea652478e",
@@ -7806,7 +8123,11 @@
       "fetchedAt": "2026-11-24T04:42:13.745Z"
     },
     "sourceUrl": "https://www.etnews.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "d843beb57165a2a70eec",
@@ -7837,7 +8158,11 @@
       "fetchedAt": "2026-11-24T04:42:13.864Z"
     },
     "sourceUrl": "https://www.etnews.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b525469e6211d49a3f21",
@@ -7868,7 +8193,11 @@
       "fetchedAt": "2026-11-24T04:42:13.860Z"
     },
     "sourceUrl": "https://newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "4de17e32340a417f9099",
@@ -7899,7 +8228,11 @@
       "fetchedAt": "2026-11-24T04:42:13.877Z"
     },
     "sourceUrl": "https://newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b1e1ae5339d5d8395f0f",
@@ -7943,7 +8276,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://biz.chosun.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b360e201e65b71391c05",
@@ -7963,7 +8300,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.osen.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "2934c01e3757461b53fc",
@@ -8007,7 +8348,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://sports.khan.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b1d5be19cd3c129040e8",
@@ -8027,7 +8372,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://isplus.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b88dfe6d3a23bb1a5c23",
@@ -8047,7 +8396,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://news.nate.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "909b69436085d6f4cdc9",
@@ -8067,7 +8420,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.mk.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "90df5ad1a8a9b1339907",
@@ -8123,7 +8480,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "a691e3ca2ecad0a8b65f",
@@ -8143,7 +8504,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://m.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "fc53dc31f09a2cb20387",
@@ -8179,7 +8544,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://isplus.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "40e99783e9a54a7aae44",
@@ -8199,7 +8568,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8442c17fd7ce6d79fdb7",
@@ -8235,7 +8608,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://m.newsen.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "e55d0b52c8ffc6beec20",
@@ -8255,7 +8632,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.mk.co.kr",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "987c89ff7a3074a57d0d",
@@ -8291,7 +8672,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://enews.imbc.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "58ac8413c9155ba09700",
@@ -12292,7 +12677,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://enews.imbc.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b7828365b712c66fbe01",
@@ -14149,7 +14538,11 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://news.nate.com",
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0f48102ec75578b1e720",
