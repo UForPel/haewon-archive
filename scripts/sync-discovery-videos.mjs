@@ -4,34 +4,31 @@ import { fileURLToPath } from 'node:url';
 import { mergeVideos } from './collect-youtube.mjs';
 
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-export function youtubeId(url=''){
- const value=String(url||'');
- return value.match(/[?&]v=([\w-]{11})/)?.[1]||value.match(/youtu\.be\/([\w-]{11})/)?.[1]||value.match(/youtube\.com\/(?:shorts|embed)\/([\w-]{11})/)?.[1]||'';
-}
-export const MAX_REDIRECT_CANDIDATES=40;
-export const REDIRECT_CONCURRENCY=4;
-export async function resolveYoutubeCandidates(items=[],fetchImpl=fetch){
- const direct=[],eligible=[];
- for(const item of items){
-  if(youtubeId(item.url)){direct.push(item);continue;}
-  if(/youtube|유튜브|fancam|직캠|fan.?cam/i.test(String(item.title||'')))eligible.push(item);
- }
- const candidates=eligible.slice(0,MAX_REDIRECT_CANDIDATES),resolved=[];
- let cursor=0;
- async function worker(){
-  while(true){
-   const index=cursor++;
-   if(index>=candidates.length)return;
-   const item=candidates[index];
-   try{
-    const response=await fetchImpl(item.url,{redirect:'follow',headers:{'user-agent':'HaewonArchiveBot/0.3 (public link resolver)'},signal:AbortSignal.timeout(8000)});
-    const finalUrl=response.url||item.url;
-    if(youtubeId(finalUrl))resolved.push({...item,url:finalUrl});
-   }catch{}
+export function youtubeId(value=''){
+ try{
+  const url=new URL(String(value||''));
+  if(url.protocol!=='https:'||url.username||url.password)return '';
+  const host=url.hostname.toLowerCase();
+  if(host==='youtu.be'){
+   const id=url.pathname.split('/').filter(Boolean)[0]||'';
+   return /^[\\w-]{11}$/.test(id)?id:'';
   }
+  if(!['youtube.com','www.youtube.com','m.youtube.com','music.youtube.com'].includes(host))return '';
+  if(url.pathname==='/watch'){
+   const id=url.searchParams.get('v')||'';
+   return /^[\\w-]{11}$/.test(id)?id:'';
+  }
+  const match=url.pathname.match(/^\\/(?:shorts|embed)\\/([\\w-]{11})(?:\\/|$)/);
+  return match?.[1]||'';
+ }catch{return '';}
+}
+export function resolveYoutubeCandidates(items=[]){
+ const direct=[];
+ for(const item of items){
+  const explicit=[item.publisherArticleUrl,item.url].find(value=>youtubeId(value));
+  if(explicit)direct.push({...item,url:explicit});
  }
- await Promise.all(Array.from({length:Math.min(REDIRECT_CONCURRENCY,candidates.length)},()=>worker()));
- return [...direct,...resolved];
+ return direct;
 }
 export function discoveryVideos(items=[],now=new Date().toISOString()){
  return items.filter(item=>youtubeId(item.url)).map(item=>{
@@ -43,9 +40,9 @@ export function discoveryVideos(items=[],now=new Date().toISOString()){
 async function main(){
  const discoveryPath=resolve(ROOT,'data/discovery.json'),videosPath=resolve(ROOT,'data/videos.json');
  const discovery=JSON.parse(await readFile(discoveryPath,'utf8')),existing=JSON.parse(await readFile(videosPath,'utf8'));
- const now=new Date().toISOString(),resolved=await resolveYoutubeCandidates(discovery),incoming=discoveryVideos(resolved,now),merged=mergeVideos(existing,incoming);
+ const now=new Date().toISOString(),explicitYoutubeUrls=resolveYoutubeCandidates(discovery),incoming=discoveryVideos(explicitYoutubeUrls,now),merged=mergeVideos(existing,incoming);
  const existingIds=new Set(existing.map(item=>item.id)),added=merged.filter(item=>!existingIds.has(item.id)).length;
  await writeFile(videosPath,JSON.stringify(merged,null,2)+'\n');
- console.log(JSON.stringify({source:'news-discovery-youtube',discovered:incoming.length,added,total:merged.length,resolvedFromNewsLinks:resolved.length}));
+ console.log(JSON.stringify({source:'news-discovery-youtube',discovered:incoming.length,added,total:merged.length,explicitYoutubeUrls:explicitYoutubeUrls.length}));
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(error=>{console.error(error);process.exitCode=1});

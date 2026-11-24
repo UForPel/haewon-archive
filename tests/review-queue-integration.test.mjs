@@ -34,3 +34,10 @@ test('discovery render reads the search field locally instead of an out-of-scope
  assert.match(view,/String\(search\?\.value\|\|''\)\.trim\(\)\?' \/ 검색 결과'/);
  assert.doesNotMatch(view,/count\.textContent=[^;]*\bq\.trim\(\)/);
 });
+
+test('news-to-video sync accepts explicit YouTube metadata only and never follows Google News wrappers',async()=>{
+ const source=await readFile(new URL('scripts/sync-discovery-videos.mjs',root),'utf8');
+ assert.match(source,/const explicit=\[item\.publisherArticleUrl,item\.url\]\.find\(value=>youtubeId\(value\)\)/);
+ assert.doesNotMatch(source,/redirect:\s*['"]follow['"]/);
+ assert.doesNotMatch(source,/fetchImpl/);
+});

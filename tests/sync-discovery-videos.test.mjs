@@ -2,12 +2,16 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { youtubeId, discoveryVideos, resolveYoutubeCandidates } from '../scripts/sync-discovery-videos.mjs';
 
-test('extracts YouTube IDs from watch, short, shorts and embed links',()=>{
+test('extracts YouTube IDs only from explicit HTTPS YouTube watch, short, shorts and embed URLs',()=>{
  assert.equal(youtubeId('https://www.youtube.com/watch?v=abcdefghijk'),'abcdefghijk');
  assert.equal(youtubeId('https://youtu.be/abcdefghijk'),'abcdefghijk');
  assert.equal(youtubeId('https://youtube.com/shorts/abcdefghijk'),'abcdefghijk');
  assert.equal(youtubeId('https://youtube.com/embed/abcdefghijk'),'abcdefghijk');
+ assert.equal(youtubeId('http://youtu.be/abcdefghijk'),'');
+ assert.equal(youtubeId('https://example.com/watch?v=abcdefghijk'),'');
+ assert.equal(youtubeId('https://news.google.com/rss/articles/abcdefghijk'),'');
 });
+
 test('news discovered YouTube candidates become schema-shaped video records',()=>{
  const [video]=discoveryVideos([{title:'Haewon clip',url:'https://youtu.be/abcdefghijk',description:'clip',sourceName:'News RSS',discoveredAt:'2026-11-20T12:00:00Z'}],'2026-11-21T00:00:00Z');
  assert.equal(video.id,'abcdefghijk');
@@ -16,28 +20,26 @@ test('news discovered YouTube candidates become schema-shaped video records',()=
  assert.equal(video.publishedAt,'2026-11-20T12:00:00.000Z');
  assert.equal(video.relevance,true);
 });
+
 test('non-YouTube candidates are not copied to video archive',()=>{
  assert.deepEqual(discoveryVideos([{title:'News',url:'https://example.com/news'}]),[]);
 });
 
-test('Google News wrapper redirects are resolved to YouTube originals',async()=>{
- const items=[{title:'MBC Haewon fancam - YouTube',url:'https://news.google.com/rss/articles/example'}];
- const resolved=await resolveYoutubeCandidates(items,async()=>({url:'https://www.youtube.com/watch?v=abcdefghijk'}));
- assert.equal(resolved.length,1);
- assert.equal(resolved[0].url,'https://www.youtube.com/watch?v=abcdefghijk');
+test('only explicit HTTPS YouTube URLs from public item metadata are accepted',()=>{
+ const items=[
+  {id:'wrapper',title:'Haewon fancam - YouTube',url:'https://news.google.com/rss/articles/opaque-token'},
+  {id:'direct',title:'Direct YouTube link',url:'https://www.youtube.com/watch?v=abcdefghijk'},
+  {id:'publisher',title:'Publisher metadata URL',url:'https://news.google.com/rss/articles/another-token',publisherArticleUrl:'https://youtu.be/lmnopqrstuv'},
+  {id:'insecure',title:'Insecure direct URL',url:'http://youtu.be/abcdefghijk'}
+ ];
+ const accepted=resolveYoutubeCandidates(items);
+ assert.deepEqual(accepted.map(item=>[item.id,item.url]),[
+  ['direct','https://www.youtube.com/watch?v=abcdefghijk'],
+  ['publisher','https://youtu.be/lmnopqrstuv']
+ ]);
 });
 
-test('redirect resolution is concurrent but capped at four workers and forty candidates',async()=>{
- let active=0,maxActive=0,calls=0;
- const candidates=Array.from({length:55},(_,i)=>({title:'Haewon YouTube fancam '+i,url:'https://news.google.com/rss/articles/'+i}));
- const resolved=await resolveYoutubeCandidates(candidates,async()=>{
-  calls++;active++;maxActive=Math.max(maxActive,active);
-  await new Promise(resolve=>setTimeout(resolve,3));
-  active--;
-  return {url:'https://youtu.be/abcdefghijk'};
- });
- assert.equal(calls,40);
- assert.equal(resolved.length,40);
- assert.ok(maxActive>1);
- assert.ok(maxActive<=4);
+test('candidate resolver contains no HTTP fetch or redirect-following behavior',async()=>{
+ const source=await (await import('node:fs/promises')).readFile(new URL('../scripts/sync-discovery-videos.mjs',import.meta.url),'utf8');
+ assert.doesNotMatch(source,/fetchImpl|redirect:\\s*['"]follow['"]/);
 });
