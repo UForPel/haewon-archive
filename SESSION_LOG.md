@@ -818,3 +818,14 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Updated `CHATGPT_OPERATING_RULES.md`, `BUTTONS_AND_ACTIONS.md`, `PROJECT_STATUS.md`, `SESSION_LOG.md`, and `ROADMAP.md`.
 - Next substantial response must render a real clickable follow-up action, not merely mention it.
 - CI/Pages status for this documentation-only change: pending at time of this entry.
+
+
+## 2026-11-24 — Cross-page review queue and integration bug
+- Verified Actions #545 completed successfully: unit tests, YouTube and RSS collection, bounded improvement, quality metrics, data validation, operational log, data commit and GitHub Pages deployment all completed successfully.
+- Latest main was advanced by the workflow's data commit to `cf3eb2f481fa4bd9a179bb19667943dc14a4b43c`.
+- Audited the UI integration rather than trusting the prior report: `js/review-workflow.mjs` was not referenced by `index.html` or `js/app.js`. Its next-unreviewed shortcut and auto-save listener were dead code, so the deployed UI did not actually expose that shortcut. This corrects an earlier inaccurate completion claim.
+- Implemented the review queue directly in the loaded discovery view. It now searches the current filtered/sorted result set across pagination, jumps to the target page, scrolls to the exact image candidate and focuses its label selector.
+- Label selection now triggers the existing save handler automatically. Candidate enumeration is shared with queue logic and restricted to HTTPS candidates with duplicate URLs collapsed per article.
+- Added unit tests for candidate filtering, duplicate candidate suppression, cross-page queue progression and terminal review labels.
+- Baseline before this correction: 657 discovery items; 35 explicit publisher article URLs; 299 thumbnails; 27 unique thumbnail URLs; 273-item dominant repeated URL group; 9 enrichment attempts with 0 found/assigned in the latest collection record.
+- Browser automation tools were not available in this environment. Do not claim visual/mobile, actual localStorage reload, or file picker/download round-trip verification.

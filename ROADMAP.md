@@ -135,3 +135,12 @@
 - [x] Add ChatGPT conversation action to button inventory with behavior and regression requirement.
 - [x] Require the assistant to include the working action after each substantial project response.
 - [ ] Confirm CI and Pages after this documentation-only change.
+
+
+## 2026-11-24 — Human review queue correction
+- [x] Correct orphaned review shortcut: integrate into the module actually loaded by `index.html`.
+- [x] Search all current filtered/sorted candidates across pages; jump to and focus the next unreviewed image.
+- [x] Save labels immediately on selection using the existing validated localStorage path.
+- [x] Add unit tests for queue order, HTTPS filtering and duplicate image candidate handling.
+- [ ] Verify Actions and Pages after this implementation.
+- [ ] Perform real-browser mobile rendering, localStorage reload and JSON file import/export round-trip when browser automation is available.

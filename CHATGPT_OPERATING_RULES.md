@@ -98,3 +98,9 @@ For each substantial update include: changed paths; planned vs implemented items
 - The button belongs to the ChatGPT conversation UI, not the deployed archive website. Keep this distinction clear in reports.
 - If the client does not support a rendered action button, provide the exact prompt as a copyable fallback.
 - Update this contract whenever the continuation prompt's scope or safety constraints change.
+
+
+## Review queue integration invariant — 2026-11-24
+- Do not report a UI control as implemented merely because its module exists. Verify that the module is imported/referenced by the actual page entry point.
+- Human review queue must be implemented in a loaded module and navigate across pagination, not just the current page.
+- Label selection must save through the existing validated persistence path; test queue selection and storage logic separately.

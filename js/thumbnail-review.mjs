@@ -1,5 +1,21 @@
 export function createThumbnailReviewKey(articleId,imageUrl){return String(articleId||'')+'|'+String(imageUrl||'');}
 const REVIEW_LABELS=['relevant','unrelated','generic','broken','rights-unclear','uncertain'];
+export function getThumbnailReviewCandidates(item={}){
+ const rows=[...(item.thumbnailCandidates||[]),...(item.thumbnailMetaCandidates||[]),...(item.thumbnailUrl?[{url:item.thumbnailUrl,source:item.thumbnailSource||'assigned-thumbnail',priority:0}]:[])];
+ const seen=new Set(),out=[];
+ for(const candidate of rows){const url=String(candidate?.url||'');if(!/^https:\/\//i.test(url)||seen.has(url))continue;seen.add(url);out.push(candidate);}
+ return out;
+}
+export function findNextUnreviewedThumbnail(items=[],labels={}){
+ for(let itemIndex=0;itemIndex<items.length;itemIndex++){
+  const item=items[itemIndex];
+  for(const candidate of getThumbnailReviewCandidates(item)){
+   const reviewKey=createThumbnailReviewKey(item.id,candidate.url);
+   if(!REVIEW_LABELS.includes(labels[reviewKey]?.label))return {itemIndex,itemId:String(item.id||''),imageUrl:candidate.url,source:candidate.source||'unknown',reviewKey};
+  }
+ }
+ return null;
+}
 export function validateThumbnailReviewExport(payload){
  const parsed=typeof payload==='string'?JSON.parse(payload):payload;
  if(!parsed||typeof parsed!=='object'||!parsed.labels||typeof parsed.labels!=='object'||Array.isArray(parsed.labels))throw new Error('invalid thumbnail review export');
@@ -10,8 +26,7 @@ export function mergeThumbnailReviewLabels(current={},incoming={}){return {...cu
 export function summarizeThumbnailReviews(items=[],labels={}){
  const candidateKeys=new Set(),selectedKeys=new Set();
  for(const item of items){
-  const candidates=[...(item.thumbnailCandidates||[]),...(item.thumbnailMetaCandidates||[]),...(item.thumbnailUrl?[{url:item.thumbnailUrl}]:[])];
-  for(const candidate of candidates)if(/^https:\/\//i.test(String(candidate?.url||'')))candidateKeys.add(createThumbnailReviewKey(item.id,candidate.url));
+  for(const candidate of getThumbnailReviewCandidates(item))candidateKeys.add(createThumbnailReviewKey(item.id,candidate.url));
   if(/^https:\/\//i.test(String(item.thumbnailUrl||'')))selectedKeys.add(createThumbnailReviewKey(item.id,item.thumbnailUrl));
  }
  const valid=key=>labels[key]&&['relevant','unrelated','generic','broken','rights-unclear','uncertain'].includes(labels[key].label);

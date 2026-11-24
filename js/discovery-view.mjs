@@ -1,5 +1,5 @@
 import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality } from './discovery-kind.mjs';
-import { createThumbnailReviewKey, summarizeThumbnailReviews, validateThumbnailReviewExport, mergeThumbnailReviewLabels } from './thumbnail-review.mjs';
+import { createThumbnailReviewKey, summarizeThumbnailReviews, validateThumbnailReviewExport, mergeThumbnailReviewLabels, getThumbnailReviewCandidates, findNextUnreviewedThumbnail } from './thumbnail-review.mjs';
 
 export function filterDiscoveryItems(items,query='') {
  const q=String(query||'').trim().toLowerCase();
@@ -23,7 +23,10 @@ if(list&&count){
  reviewTools.append(exportReviews,importButton,importReviews);
  search?.insertAdjacentElement('afterend',reviewTools);
  const reviewSummary=document.createElement('p');reviewSummary.className='photo-meta';reviewTools.after(reviewSummary);
- const updateReviewSummary=()=>{const summary=summarizeThumbnailReviews(allItems,reviewLabels);reviewSummary.textContent='기사 썸네일 검수 · '+summary.reviewed+'/'+summary.eligible+'개 후보 검수 ('+summary.reviewCoverage+'%) · 후보 적합률 '+(summary.precision===null?'미측정':summary.precision+'%')+' · 현재 썸네일 정밀도 '+(summary.selectedPrecision===null?'미측정':summary.selectedPrecision+'%')+' ('+summary.selectedReviewed+'/'+summary.selectedEligible+'개) · 판단 보류/권리 확인 '+summary.excluded+' (모델 정확도와 별도)';};
+ const reviewQueueButton=document.createElement('button');reviewQueueButton.type='button';reviewQueueButton.className='review-next-button';reviewQueueButton.textContent='다음 미검수 후보';
+ const reviewQueueStatus=document.createElement('p');reviewQueueStatus.className='photo-meta';reviewQueueStatus.setAttribute('role','status');reviewQueueStatus.setAttribute('aria-live','polite');
+ reviewTools.append(reviewQueueButton,reviewQueueStatus);
+ const updateReviewSummary=()=>{const summary=summarizeThumbnailReviews(allItems,reviewLabels);reviewSummary.textContent='기사 썸네일 검수 · '+summary.reviewed+'/'+summary.eligible+'개 후보 검수 ('+summary.reviewCoverage+'%) · 후보 적합률 '+(summary.precision===null?'미측정':summary.precision+'%')+' · 현재 썸네일 정밀도 '+(summary.selectedPrecision===null?'미측정':summary.selectedPrecision+'%')+' ('+summary.selectedReviewed+'/'+summary.selectedEligible+'개) · 판단 보류/권리 확인 '+summary.excluded+' (모델 정확도와 별도)';reviewQueueStatus.textContent='전체 후보 '+summary.eligible+'개 · 검수 완료 '+summary.reviewed+'개 · 미검수 '+(summary.eligible-summary.reviewed)+'개';};
  const PAGE_SIZE=12;
  let page=1;
  const pagination=document.querySelector('#discovery-pagination');
@@ -41,6 +44,10 @@ if(list&&count){
  let selectedCategory='all';
  const categoryOf=classifyDiscoveryCategories;
  const categoryLabels={all:'전체',news:'뉴스',video:'영상',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
+ const getVisibleItems=()=>{
+  const q=search?.value||'';
+  return groupDiscoveryDuplicates(filterDiscoveryItems(allItems,q)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
+ };
  const renderCategories=()=>{
   if(!categoryBar)return;
   categoryBar.replaceChildren();
@@ -52,9 +59,7 @@ if(list&&count){
   });
  };
  const render=()=>{
-  const q=search?.value||'';
-  const filtered=groupDiscoveryDuplicates(filterDiscoveryItems(allItems,q)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory));
-  const items=filtered.slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
+  const items=getVisibleItems();
   const pageCount=Math.max(1,Math.ceil(items.length/PAGE_SIZE));
   page=Math.min(page,pageCount);
   count.textContent=items.length+'개 그룹'+(q.trim()?' / 검색 결과':'')+' · '+categoryLabels[selectedCategory];
@@ -77,10 +82,10 @@ if(list&&count){
    if(/^https:\/\//i.test(String(item.sourceUrl||''))){const sourceLink=document.createElement('a');sourceLink.href=item.sourceUrl;sourceLink.target='_blank';sourceLink.rel='noopener noreferrer';sourceLink.textContent='RSS 출처 사이트 열기';sourceLink.style.marginLeft='8px';provenance.append(sourceLink);}
    if(item.thumbnailMetaFetch?.resolvedArticleHost){const hostNote=document.createElement('span');hostNote.textContent=' · 메타 응답 호스트 '+item.thumbnailMetaFetch.resolvedArticleHost;provenance.append(hostNote);}
    details.append(provenance);
-   const candidateList=[];for(const candidate of [...(item.thumbnailCandidates||[]),...(item.thumbnailMetaCandidates||[]),...(item.thumbnailUrl?[{url:item.thumbnailUrl,source:item.thumbnailSource||'assigned-thumbnail',priority:0}]:[])]){if(candidate?.url&&!candidateList.some(row=>row.url===candidate.url))candidateList.push(candidate);}
+   const candidateList=getThumbnailReviewCandidates(item);
    const reviewSection=document.createElement('section');reviewSection.className='thumbnail-review-section';const reviewHeading=document.createElement('strong');reviewHeading.textContent='이미지 후보 검수 ('+candidateList.length+')';reviewSection.append(reviewHeading);
    if(!candidateList.length){const empty=document.createElement('p');empty.className='photo-meta';empty.textContent='수집된 이미지 후보 없음';reviewSection.append(empty);}
-   candidateList.forEach(candidate=>{const row=document.createElement('div');row.className='thumbnail-review-row';const image=document.createElement('img');image.src=candidate.url;image.alt='검수할 이미지 후보';image.loading='lazy';image.onerror=()=>{image.alt='이미지 불러오기 실패';image.classList.add('thumbnail-review-broken');};const info=document.createElement('div');info.className='thumbnail-review-info';const source=document.createElement('p');source.className='photo-meta';source.textContent=(candidate.source||'unknown')+(Number.isFinite(candidate.priority)?' · 우선순위 '+candidate.priority:'')+(candidate.url===item.thumbnailUrl?' · 현재 썸네일':'');const link=document.createElement('a');link.href=candidate.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='이미지 원본 열기';const key=createThumbnailReviewKey(item.id,candidate.url);const select=document.createElement('select');select.setAttribute('aria-label','이미지 적합성 검수');const blank=document.createElement('option');blank.value='';blank.textContent='검수 라벨 선택';select.append(blank);reviewLabelsAllowed.forEach(label=>{const option=document.createElement('option');option.value=label;option.textContent=reviewLabelNames[label];select.append(option);});select.value=reviewLabels[key]?.label||'';const save=document.createElement('button');save.type='button';save.textContent='라벨 저장';save.addEventListener('click',()=>{if(!select.value)return;reviewLabels[key]={articleId:item.id,imageUrl:candidate.url,source:candidate.source||'unknown',label:select.value,reviewedAt:new Date().toISOString()};try{localStorage.setItem(REVIEW_KEY,JSON.stringify(reviewLabels));updateReviewSummary();save.textContent='저장됨';}catch{save.textContent='저장 실패';}});info.append(source,link,select,save);row.append(image,info);reviewSection.append(row);});
+   candidateList.forEach(candidate=>{const row=document.createElement('div');row.className='thumbnail-review-row';const image=document.createElement('img');image.src=candidate.url;image.alt='검수할 이미지 후보';image.loading='lazy';image.onerror=()=>{image.alt='이미지 불러오기 실패';image.classList.add('thumbnail-review-broken');};const info=document.createElement('div');info.className='thumbnail-review-info';const source=document.createElement('p');source.className='photo-meta';source.textContent=(candidate.source||'unknown')+(Number.isFinite(candidate.priority)?' · 우선순위 '+candidate.priority:'')+(candidate.url===item.thumbnailUrl?' · 현재 썸네일':'');const link=document.createElement('a');link.href=candidate.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='이미지 원본 열기';const key=createThumbnailReviewKey(item.id,candidate.url);row.dataset.reviewKey=key;const select=document.createElement('select');select.setAttribute('aria-label','이미지 적합성 검수');const blank=document.createElement('option');blank.value='';blank.textContent='검수 라벨 선택';select.append(blank);reviewLabelsAllowed.forEach(label=>{const option=document.createElement('option');option.value=label;option.textContent=reviewLabelNames[label];select.append(option);});select.value=reviewLabels[key]?.label||'';const save=document.createElement('button');save.type='button';save.textContent='라벨 저장';save.addEventListener('click',()=>{if(!select.value)return;reviewLabels[key]={articleId:item.id,imageUrl:candidate.url,source:candidate.source||'unknown',label:select.value,reviewedAt:new Date().toISOString()};try{localStorage.setItem(REVIEW_KEY,JSON.stringify(reviewLabels));updateReviewSummary();save.textContent='저장됨';}catch{save.textContent='저장 실패';}});select.addEventListener('change',()=>{if(select.value)save.click();});info.append(source,link,select,save);row.append(image,info);reviewSection.append(row);});
    details.append(reviewSection);
    card.append(details);list.append(card);
   });
@@ -88,6 +93,18 @@ if(list&&count){
   updateReviewSummary();
   if(!items.length){const empty=document.createElement('p');empty.className='empty';empty.textContent=allItems.length?'검색 결과가 없습니다. 다른 검색어를 입력해 보세요.':'자동 발견 후보가 아직 없습니다.';list.append(empty);}
  };
+ reviewQueueButton.addEventListener('click',()=>{
+  const items=getVisibleItems(),next=findNextUnreviewedThumbnail(items,reviewLabels);
+  if(!next){reviewQueueStatus.textContent='현재 검색·분류 조건에 미검수 이미지 후보가 없습니다.';return;}
+  page=Math.floor(next.itemIndex/PAGE_SIZE)+1;render();
+  requestAnimationFrame(()=>{
+   const row=[...list.querySelectorAll('.thumbnail-review-row')].find(element=>element.dataset.reviewKey===next.reviewKey);
+   if(!row){reviewQueueStatus.textContent='후보 위치를 찾지 못했습니다. 목록을 새로고침해 주세요.';return;}
+   row.scrollIntoView({behavior:'smooth',block:'center'});
+   row.querySelector('select')?.focus({preventScroll:true});
+   reviewQueueStatus.textContent='미검수 후보 '+(next.itemIndex+1)+'번째 항목으로 이동했습니다. 라벨을 선택하면 자동 저장됩니다.';
+  });
+ });
  if(search)search.addEventListener('input',()=>{page=1;render();});
  fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
   allItems=Array.isArray(items)?items:[];

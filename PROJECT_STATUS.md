@@ -335,3 +335,12 @@ Last updated: 2026-11-20
 - [x] Recorded button label, surface, behavior, full prompt payload and omission-prevention rule in `CHATGPT_OPERATING_RULES.md` and `BUTTONS_AND_ACTIONS.md`.
 - [x] This control is a ChatGPT conversation action, not an archive website button.
 - [ ] Verify documentation commit's Actions/Pages run; actual button must be rendered in the assistant's next substantial project response.
+
+
+## 2026-11-24 — Review queue implementation correction
+- [x] Rechecked Actions #545: all 116 tests passed; collection, data validation, data commit, Pages artifact upload and deployment all succeeded.
+- [x] Verified latest main data commit `cf3eb2f` after the workflow's automated refresh.
+- [x] Found a real integration defect: `js/review-workflow.mjs` contained a review shortcut, but `index.html` did not load that module. The previously reported "next unreviewed" control was therefore not present in the deployed app.
+- [x] Moved the queue behavior into the already-loaded `js/discovery-view.mjs` module and made it search all currently filtered/sorted items, not only the visible page.
+- [x] Consolidated candidate enumeration and added pure tests for HTTPS filtering, duplicate image candidates, cross-page navigation and completed review labels.
+- [ ] Run CI and verify the new deployed UI. Real browser interaction and localStorage/file-picker testing remain pending unless an actual browser becomes available.

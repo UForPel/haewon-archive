@@ -44,3 +44,12 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - **Accessibility:** semantic button with this accessible name; never decorative/inert.
 - **Regression guard:** every substantial project completion reply must include the working ChatGPT follow-up action. If unavailable in a client, include the exact prompt as a copyable fallback.
 - **Important distinction:** this is a ChatGPT reply action, not a deployed-site control.
+
+
+## Discovery image-review queue — 2026-11-24
+- Visible app control: **다음 미검수 후보**.
+- Searches the current discovery search/category result set across all pagination pages, jumps to the containing page, scrolls to the image candidate and focuses its label selector.
+- Selecting a review label automatically invokes the existing save handler and persists the article-specific label in localStorage.
+- Progress text shows total eligible candidates, reviewed count and remaining count.
+- Candidate list is HTTPS-only and de-duplicates the same image URL within each article.
+- Regression guard: tests cover page-crossing, label completion and duplicate/invalid URL handling.
