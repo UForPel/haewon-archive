@@ -1,35 +1,38 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T04:58:06.837Z",
+  "collectedAt": "2026-11-24T05:33:30.857Z",
   "searchPack": 0,
   "queries": [
     {
       "query": "오해원 NMIXX",
-      "candidates": 100,
-      "uniqueCandidates": 100
+      "candidates": 108,
+      "uniqueCandidates": 108
     },
     {
       "query": "해원 엔믹스",
-      "candidates": 51,
-      "uniqueCandidates": 51
+      "candidates": 62,
+      "uniqueCandidates": 62
     },
     {
       "query": "NMIXX Haewon",
-      "candidates": 45,
-      "uniqueCandidates": 45
+      "candidates": 57,
+      "uniqueCandidates": 57
     },
     {
       "query": "Haewon NMIXX news",
-      "candidates": 29,
-      "uniqueCandidates": 29
+      "candidates": 39,
+      "uniqueCandidates": 39
     }
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
+  "bingSuccessfulQueries": 4,
+  "bingCandidates": 41,
+  "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 225,
-  "uniqueIncoming": 204,
-  "added": 1,
+  "fetched": 266,
+  "uniqueIncoming": 242,
+  "added": 39,
   "rssImageSignals": {
     "items": 225,
     "sourceUrlItems": 224,
@@ -46,20 +49,356 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 0,
-    "found": 0,
-    "assigned": 0,
+    "attempted": 12,
+    "found": 9,
+    "assigned": 9,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
-    "missing": 0,
-    "failed": 0,
-    "results": []
+    "missing": 2,
+    "failed": 1,
+    "results": [
+      {
+        "id": "d6c5f93f622776e07642",
+        "status": "missing",
+        "candidate": null,
+        "candidates": [],
+        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
+        "resolvedArticleHost": "www.msn.com"
+      },
+      {
+        "id": "1410c1c68a3a1cfaa0f2",
+        "status": "missing",
+        "candidate": null,
+        "candidates": [],
+        "publisherArticleUrl": "https://osen.co.kr/article/G1112907419",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://osen.co.kr/article/G1112907419",
+        "resolvedArticleHost": "osen.co.kr"
+      },
+      {
+        "id": "77db473416096271082d",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://image.starnewskorea.com/cdn-cgi/image/f=auto,w=1200,h=670,fit=cover,q=high,sharpen=2/21/2026/10/2026103014300533060_1.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://image.starnewskorea.com/cdn-cgi/image/f=auto,w=1200,h=670,fit=cover,q=high,sharpen=2/21/2026/10/2026103014300533060_1.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://menu.starnewskorea.com/starnews24/static/images/og_starnews.jpg",
+            "source": "twitter:image",
+            "priority": 2
+          },
+          {
+            "url": "https://image.starnewskorea.com/cdn-cgi/image/f=jpeg,w=1200,h=675,fit=cover,g=face,q=high/21/2026/10/2026103014300533060_1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.starnewskorea.com/cdn-cgi/image/f=jpeg,w=1200,h=900,fit=cover,g=face,q=high/21/2026/10/2026103014300533060_1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.starnewskorea.com/cdn-cgi/image/f=jpeg,w=1200,h=1200,fit=cover,g=face,q=high/21/2026/10/2026103014300533060_1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.starnewskorea.com/culture-magazine/2026/10/30/2026103014300533060",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.starnewskorea.com/culture-magazine/2026/10/30/2026103014300533060",
+        "resolvedArticleHost": "www.starnewskorea.com"
+      },
+      {
+        "id": "12d2e1a63a52b149fac7",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://img.etnews.com/news/article/2025/03/17/cms_temp_article_17104654779973.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://img.etnews.com/news/article/2025/03/17/cms_temp_article_17104654779973.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.etnews.com/20250317000132",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.etnews.com/20250317000132",
+        "resolvedArticleHost": "www.etnews.com"
+      },
+      {
+        "id": "755bfff53f3d7af07524",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://pimg.mk.co.kr/news/cms/202406/28/news-p.v1.20240628.0f4b9a2cb5cd4f2eb17ecb679a3241b9_R.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://pimg.mk.co.kr/news/cms/202406/28/news-p.v1.20240628.0f4b9a2cb5cd4f2eb17ecb679a3241b9_R.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.mk.co.kr/en/entertain/11053930",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.mk.co.kr/en/entertain/11053930",
+        "resolvedArticleHost": "www.mk.co.kr"
+      },
+      {
+        "id": "2f3bd3505026c6c9630e",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.45bebc1da5d442248006aeec16999189_P1.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.45bebc1da5d442248006aeec16999189_P1.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.8ca8ec3364b64563b953dd6d7cf8760b_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.9e09418c0a6244198bbf84354ae08b48_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.c2cdd1f027e447ea9be459087c99ff8e_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.64ffaf24892a48db0bb80b563f1d4eb_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.a83e11c5b7b64e45a526de6f1d8b885a_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.d5d738747f624e7f9d22c5f819181728_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.8767bc83f04b492ba35dbcd2986ebe63_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.a19d1c95348f47fd948b1a8fafc2a19a_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/19/news-p.v1.20261019.cb65c19735e7491aa6c7c213bd0d85b0_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610190909007/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202610190909007/",
+        "resolvedArticleHost": "sports.khan.co.kr"
+      },
+      {
+        "id": "573c328cd899cbdb983c",
+        "status": "failed",
+        "publisherArticleUrl": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
+        "sourceUrl": ""
+      },
+      {
+        "id": "db6ba77a0559952da2df",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://file.sportsseoul.com/news/cms/2026/10/22/news-p.v1.20261022.03dbd0cc4b894e54a8068bc0cb0a7a95_T1.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://file.sportsseoul.com/news/cms/2026/10/22/news-p.v1.20261022.03dbd0cc4b894e54a8068bc0cb0a7a95_T1.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.sportsseoul.com/news/read/1643207",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.sportsseoul.com/news/read/1643207",
+        "resolvedArticleHost": "www.sportsseoul.com"
+      },
+      {
+        "id": "200468c61716e4ff96b3",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.5aa9371491a94372acee072f477d2c24_P1.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.5aa9371491a94372acee072f477d2c24_P1.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.ffa880a9c2404d0d8277dd8bb6711e46_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.314dfb815f734ab18489b232ece541ac_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.115c30f713d74b65b9bea487e20808ce_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://sports.khan.co.kr/article/202510231129003",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://sports.khan.co.kr/article/202510231129003",
+        "resolvedArticleHost": "sports.khan.co.kr"
+      },
+      {
+        "id": "7c01e17c474ffecfd111",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.bd28426ddb8d490bb89f8147dae5963e_P1.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.bd28426ddb8d490bb89f8147dae5963e_P1.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.0144971752214463adac5da8cb4644fa_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.b24533cd1d63405db63af90bb3a7e7d6_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2025/10/23/news-p.v1.20251023.cb2bff4c61714df792080aaf297ed5c5_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://sports.khan.co.kr/article/202510231108013",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://sports.khan.co.kr/article/202510231108013",
+        "resolvedArticleHost": "sports.khan.co.kr"
+      },
+      {
+        "id": "de974fb311b152bc6141",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://biz.chosun.com/resizer/v2/7OA2WHY7EANUWEY4N55NIG6BMM.png?auth=c51b362771b0ad9a6eaf72177cd03a8bca2d9ed7a3bf56e3df5a35f075124a9a&width=650&height=341&smart=true",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://biz.chosun.com/resizer/v2/7OA2WHY7EANUWEY4N55NIG6BMM.png?auth=c51b362771b0ad9a6eaf72177cd03a8bca2d9ed7a3bf56e3df5a35f075124a9a&width=650&height=341&smart=true",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2025/06/10/NHN5PSUOLY45XJL6ONHFTU3R6Y/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2025/06/10/NHN5PSUOLY45XJL6ONHFTU3R6Y/",
+        "resolvedArticleHost": "biz.chosun.com"
+      },
+      {
+        "id": "d3cf5f84705cc6c0971b",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423157707985.jpg",
+          "source": "twitter:image",
+          "priority": 2
+        },
+        "candidates": [
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423157707985.jpg",
+            "source": "twitter:image",
+            "priority": 2
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741424289493975.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423485467816.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741424151153491.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423964747776.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423518386208.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.xportsnews.com/article/1970283",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.xportsnews.com/article/1970283",
+        "resolvedArticleHost": "www.xportsnews.com"
+      }
+    ]
   },
   "deduplicationComparison": {
-    "before": 225,
-    "after": 204,
-    "collapsed": 21,
+    "before": 266,
+    "after": 238,
+    "collapsed": 28,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 620
+  "totalCandidates": 654
 }
