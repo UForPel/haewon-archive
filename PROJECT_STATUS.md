@@ -219,3 +219,12 @@ Last updated: 2026-11-20
 - Discovery quality UI renders candidate comparison summary, source/host counts and repeated-thumbnail review groups. Existing 273 repeated URL records are not changed.
 - Added 3 module tests; isolated Node test execution passed (3/3). Full repository suite, CI and Pages deployment still pending. UI/mobile manual inspection not performed.
 
+
+## Article-level thumbnail comparison — verified 2026-11-24
+- Implemented `js/thumbnail-comparison.mjs`; per article ID it compares stored RSS candidates with OG/Twitter candidates from the enrichment result. It reports source and host counts, overlap, RSS-only/meta-only/both, metadata-found and assigned counts, and found-to-assigned rate.
+- `scripts/quality-metrics.mjs` emits comparison and non-destructive repeated-thumbnail evidence groups. `js/discovery-view.mjs` displays comparison totals/source/hosts and expandable evidence links (current image URL plus up to 30 article links per group). No automatic image deletion/replacement.
+- Fresh generated metrics: 12 compared articles, 0 RSS candidates, 12 metadata-only, 0 both-source, 0 shared RSS/meta URLs; 12 metadata candidates found, 0 assigned (0%). All 12 candidates use one Google-hosted URL. RSS candidate arrays are absent from legacy records; the collector can preserve candidates on new incoming records, but a longer data accumulation period is required for a representative comparison.
+- Re-review group: 1 repeated URL, 273 article records with source URLs preserved. Manual visual relevance and rights review is still required.
+- Tests: full CI run #469 passed unit tests and all collection/metrics/validation/Pages steps. Run: https://github.com/UForPel/haewon-archive/actions/runs/45313154823. Live mobile visual verification not performed.
+- A prior #467 run failed due to an incorrect module import extension in quality-metrics; corrected in #468. #468 passed; #469 is the end-to-end success on final UI changes.
+- Research: Media RSS distinguishes item-level thumbnail metadata and can carry multiple candidate resources; RSS enclosure is generic attached media. Official sources: https://www.rssboard.org/media-rss and https://www.rssboard.org/rss-specification. This supports candidate provenance comparison but not image relevance itself. Image licensing/credit metadata preservation: https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata.
