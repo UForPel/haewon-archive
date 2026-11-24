@@ -1,10 +1,21 @@
 export function createThumbnailReviewKey(articleId,imageUrl){return String(articleId||'')+'|'+String(imageUrl||'');}
 export function summarizeThumbnailReviews(items=[],labels={}){
- const eligible=items.filter(item=>/^https:\/\//i.test(String(item.thumbnailUrl||'')));
- const rows=eligible.map(item=>labels[createThumbnailReviewKey(item.id,item.thumbnailUrl)]).filter(Boolean);
+ const candidateKeys=new Set(),selectedKeys=new Set();
+ for(const item of items){
+  const candidates=[...(item.thumbnailCandidates||[]),...(item.thumbnailMetaCandidates||[]),...(item.thumbnailUrl?[{url:item.thumbnailUrl}]:[])];
+  for(const candidate of candidates)if(/^https:\/\//i.test(String(candidate?.url||'')))candidateKeys.add(createThumbnailReviewKey(item.id,candidate.url));
+  if(/^https:\/\//i.test(String(item.thumbnailUrl||'')))selectedKeys.add(createThumbnailReviewKey(item.id,item.thumbnailUrl));
+ }
+ const valid=key=>labels[key]&&['relevant','unrelated','generic','broken','rights-unclear','uncertain'].includes(labels[key].label);
+ const reviewed=[...candidateKeys].filter(valid);
+ const selectedReviewed=[...selectedKeys].filter(valid);
  const counts={relevant:0,unrelated:0,generic:0,broken:0,'rights-unclear':0,uncertain:0};
- for(const row of rows)if(Object.hasOwn(counts,row.label))counts[row.label]++;
+ const selectedCounts={relevant:0,unrelated:0,generic:0,broken:0,'rights-unclear':0,uncertain:0};
+ for(const key of reviewed)counts[labels[key].label]++;
+ for(const key of selectedReviewed)selectedCounts[labels[key].label]++;
  const unsuitable=counts.unrelated+counts.generic+counts.broken;
  const decided=counts.relevant+unsuitable;
- return {eligible:eligible.length,reviewed:rows.length,relevant:counts.relevant,unsuitable,excluded:counts['rights-unclear']+counts.uncertain,precision:decided?Math.round(counts.relevant/decided*100):null,counts};
+ const selectedUnsuitable=selectedCounts.unrelated+selectedCounts.generic+selectedCounts.broken;
+ const selectedDecided=selectedCounts.relevant+selectedUnsuitable;
+ return {eligible:candidateKeys.size,reviewed:reviewed.length,reviewCoverage:candidateKeys.size?Math.round(reviewed.length/candidateKeys.size*100):0,relevant:counts.relevant,unsuitable,excluded:counts['rights-unclear']+counts.uncertain,precision:decided?Math.round(counts.relevant/decided*100):null,selectedEligible:selectedKeys.size,selectedReviewed:selectedReviewed.length,selectedPrecision:selectedDecided?Math.round(selectedCounts.relevant/selectedDecided*100):null,counts,selectedCounts};
 }
