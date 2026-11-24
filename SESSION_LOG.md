@@ -661,3 +661,25 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 
 \n## 2026-11-24 — Article-level thumbnail comparison implementation\n- Rechecked main tree SHA `3562f151e598474cb513ce3be3b060c51a635e16`, governance docs, collector/metrics/UI/tests, data and latest Actions. Latest #458 success; #457 cancelled.\n- Added `js/thumbnail-comparison.mjs` and `tests/thumbnail-comparison.test.mjs`: article-ID comparison of RSS candidate provenance vs OG/Twitter candidates; source and host counts, shared URL overlap, RSS-only/meta-only/both, metadata found/assigned and assignment rate.\n- Wired metrics script to emit `thumbnailCandidateComparison` and non-destructive `thumbnailReview`; dashboard displays summaries and repeated URL groups. Review rows preserve article evidence and mark review-required; automatic deletion/replacement are false.\n- Isolated local Node tests: 3 passed, 0 failed. This was a standalone module test, not the repository-wide suite. CI/Pages for this commit not yet verified.\n- Current data limitation: historical discovery records lack RSS candidate arrays, so comparison will show metadata-only for old records until new RSS candidate data is persisted in future collection runs. Existing repeated URL group (273 items) untouched.\n- Next: full CI, inspect metrics output after collector run, verify dashboard deployment/mobile controls, and ensure RSS candidates are retained on newly collected/merged records.\n
 \n## 2026-11-24 — comparison dashboard final verification\n- Research sources: Media RSS specification (candidate thumbnail metadata, multiple candidates): https://www.rssboard.org/media-rss; RSS 2.0 enclosure (attached media): https://www.rssboard.org/rss-specification; Google image metadata/licensing and attribution: https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata. These support provenance and rights-aware handling, not claims of relevance.\n- Final generated metrics after workflow: 12 articles compared, 0 RSS candidates, 12 meta-only, 0 both, 0 shared URLs; 12 metadata found, 0 assigned, 0% found-to-assigned. All 12 candidates share the same Google-hosted image URL. Legacy records lack RSS candidate arrays; comparison is therefore currently meta-only.\n- Review UI now has expandable repeated URL group with the current image URL and article links (up to 30 shown in each group); metrics preserve 273 article rows for the 273-repeat group. No images removed/replaced.\n- CI correction: #467 failed unit tests because quality-metrics import referenced the truncated `.m` extension; corrected to `.mjs`. #468 passed tests; final UI commit #469 passed unit tests, RSS/YouTube collection, quality generation, data/run-log validation and Pages deployment: https://github.com/UForPel/haewon-archive/actions/runs/45313154823.\n- Full final UI visual/mobile check remains unverified; no live-browser inspection was performed.\n
+
+## 2026-11-24 — Thumbnail evidence persistence cycle
+
+### Findings
+- The 620-record dataset currently has 273 thumbnails and 347 missing; one URL appears on 273 records (44% concentration). This snapshot was inspected from `data/quality-metrics.json`.
+- RSS candidates are missing from historical data because legacy records did not retain candidate metadata; parser support for RSS media tags exists but cannot retroactively reconstruct it. Current Google News RSS description entries often lack image tags; this remains a hypothesis pending live feed samples.
+- The collector's ordinary GET follows Google News redirect links to public publisher pages for metadata. The code does not decode redirect tokens or bypass login, robots, rate limits, anti-bot, or paywalls. It currently does not persist the final publisher URL.
+
+### Implemented
+- `scripts/collect-news.mjs`: selected article metadata candidate lists now persist on article records even when a candidate is rejected due to URL reuse.
+- `js/thumbnail-comparison.mjs`: uses persisted article-level metadata candidates, falling back to run-status candidates.
+- `scripts/quality-metrics.mjs`: unique URL assignment rate and unique image coverage added.
+- `js/discovery-view.mjs`: displays the new metrics.
+- `tests/thumbnail-persistence.test.mjs`: regression for metadata candidates surviving duplicate rejection and being compared article-by-article.
+- Existing 273 repeated URLs are not deleted or auto-replaced; review UI remains evidence-only.
+
+### Verification
+- GitHub file updates/commits were successful. Tests have not run locally; Actions status/Pages deployment are not verified due to inability to read run history with available GitHub connector/web access.
+- No visual/mobile UI check performed.
+
+### Next
+- Re-check CI for the accumulated commits; if green, inspect the generated quality metrics and candidate evidence. Then test permitted public redirect samples and consider retaining final publisher URLs only after a privacy/source-access review.
