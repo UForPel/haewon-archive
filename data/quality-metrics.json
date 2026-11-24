@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-11-24T00:19:39.106Z",
+  "generatedAt": "2026-11-24T00:20:07.844Z",
   "thumbnailAudit": {
     "items": 618,
-    "withThumbnail": 240,
-    "missing": 378,
+    "withThumbnail": 252,
+    "missing": 366,
     "uniqueThumbnailUrls": 1,
     "repeatedUrlGroups": 1,
-    "repeatedItems": 239,
-    "dominantThumbnailCount": 240,
-    "dominantThumbnailShare": 39,
+    "repeatedItems": 251,
+    "dominantThumbnailCount": 252,
+    "dominantThumbnailShare": 41,
     "concentrationWarning": true,
     "repeatedUrls": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "count": 240
+        "count": 252
       }
     ],
     "heuristicFlaggedUrls": 1,
     "heuristicFlags": [
       {
         "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-        "count": 240,
+        "count": 252,
         "flags": [
           "reused-url"
         ]
@@ -29,7 +29,7 @@
     "hosts": [
       {
         "host": "lh3.googleusercontent.com",
-        "count": 240
+        "count": 252
       }
     ]
   },
@@ -40,17 +40,17 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 618,
-    "newsUniqueFetched": 205,
-    "newsAddedLastRun": 0,
-    "duplicateBeforeMergeLastRun": 22,
+    "newsUniqueFetched": 250,
+    "newsAddedLastRun": 2,
+    "duplicateBeforeMergeLastRun": 25,
     "duplicateGroupsCurrent": 618,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 227,
-      "after": 205,
-      "collapsed": 22,
+      "before": 275,
+      "after": 249,
+      "collapsed": 26,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -65,10 +65,10 @@
       "source": "Google News",
       "items": 618,
       "withUrl": 618,
-      "withThumbnail": 240,
+      "withThumbnail": 252,
       "withDate": 618,
       "urlCoverage": 100,
-      "thumbnailCoverage": 39,
+      "thumbnailCoverage": 41,
       "dateCoverage": 100
     }
   ],
@@ -110,7 +110,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 0,
-    "thumbnailMissing": 378,
+    "thumbnailMissing": 366,
     "results": [
       {
         "kind": "article",
