@@ -241,3 +241,9 @@ Last updated: 2026-11-20
 - Candidate persistence, URL uniqueness metrics and dashboard were committed previously. This continuation corrected escaped-newline syntax in js/thumbnail-comparison.mjs and scripts/quality-metrics.mjs (commits 843a490 and b24bd71). Post-update GitHub fetch confirms both files contain no literal escaped-newline sequences.
 - Local tests, Actions status, deployed Pages and visual/mobile checks remain unverified. Local clone failed because github.com DNS was unavailable. Actions page fetch was blocked.
 - RSS candidates cannot be reconstructed for historical records; trust/visual accuracy requires human review labels before any score is published.
+## Recursive improvement cycle — 2026-11-24 (CI repair and collection verification)
+- Run #487 failed: `scripts/quality-metrics.mjs` line 83 contained a newline inside a single-quoted string. Corrected in `91d48b9`.
+- Run #488 then surfaced two missing backwards-compatible fields in thumbnail URL audit (`repeatedUrlGroups`, `repeatedItems`). Restored in `0fded07`.
+- Run #489 passed: 86/86 unit tests; YouTube/news collection, metrics, data validation, run-log generation/validation, data commit, Pages artifact and Pages deployment all succeeded. https://github.com/UForPel/haewon-archive/actions/runs/45319384393
+- Generated snapshot: 620 candidates, 273 with thumbnail, 347 missing; 1 unique thumbnail URL shared by 273 records. New article metadata evidence persisted for 12 sampled records, but 0 RSS candidates, 12 metadata-only, 0 assignments, 12 duplicate rejections (same `lh3.googleusercontent.com` URL).
+- Candidate persistence is verified, candidate diversity and article-specific relevance are not. No image records were deleted or auto-replaced. A labeled human review process is still needed before publishing suitability accuracy.
