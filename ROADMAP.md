@@ -45,3 +45,10 @@
 - Bypassing platform login, access controls, rate limits, or anti-bot measures
 - Claiming comprehensive coverage of all Haewon appearances
 - Letting Gemini rewrite application code, workflows, schemas, validators or security rules
+
+
+## UI reliability
+- [x] Persist a button/action inventory and UI implementation requirement in `BUTTONS_AND_ACTIONS.md`.
+- [x] Add static regression checks for required primary controls.
+- [ ] Add behavior tests for generated pagination/category controls and photo actions.
+- [ ] Manually verify mobile tap targets, focus/keyboard and live deployed controls.
