@@ -12,6 +12,7 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Photo export: JSON export — downloads the browser-local draft data.
 - Photo import: JSON import — reads selected file, validates entries, updates local draft data.
 - Local photo entry deletion: Temporary entry delete — removes only the matching local draft and refreshes UI.
+- Read-only discovery quality dashboard: reports thumbnail candidates found, actually assigned, duplicate rejected, missing/failed; shows source counts and recent RSS/OG/Twitter candidate provenance. No new action button.
 - Date range, search, source and type controls are interactive filters, not buttons; they must still have clear labels and update results.
 
 ## Required behavior for every new or changed control
