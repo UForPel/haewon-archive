@@ -128,7 +128,7 @@ export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs
  async function worker(){while(true){const index=cursor++;if(index>=targets.length)return;const item=targets[index],articleUrl=item.publisherArticleUrl;try{
   const response=await fetchImpl(articleUrl,{method:'GET',redirect:'follow',headers:{'user-agent':'Mozilla/5.0 (compatible; HaewonArchiveBot/0.2; thumbnail metadata)'},signal:AbortSignal.timeout(timeoutMs)});
   if(!response.ok)throw new Error('HTTP '+response.status);
-  const finalUrl=String(response.url||item.url);
+  const finalUrl=String(response.url||articleUrl);
   if(new URL(finalUrl).protocol!=='https:')throw new Error('redirected article URL is not HTTPS');
   const parsedUrl=new URL(finalUrl),isGoogleWrapper=isGoogleNewsWrapperUrl(finalUrl);
   const extracted=extractOpenGraphImageCandidates(await response.text(),finalUrl);
