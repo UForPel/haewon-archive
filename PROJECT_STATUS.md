@@ -187,3 +187,13 @@ Last updated: 2026-11-20
 - CI #430: unit tests passed; YouTube/news collection, dedupe, improvement cycle, quality generation and data/log validation passed. Pages deployment failed at deploy-pages artifact lookup (upload succeeded, API returned zero matching artifacts).
 - Live generated metrics: enrichment attempted 12, found 11 metadata image URLs, assigned 0, duplicateRejected 11, failed 1. This means the guard successfully prevented 11 repeated assignments but did not improve thumbnail coverage; existing data still has 273 records sharing one URL and 345 missing thumbnails.
 - UI does not yet display the found/assigned/rejected distinction; metrics are in generated JSON. Next UI/UX improvement is to surface these outcomes and investigate provenance, not inflate coverage.
+
+
+## Thumbnail provenance and dashboard — 2026-11-24
+- Added RSS candidate source tracking: `media:thumbnail`, `media:content`, `enclosure`, RSS-description HTML. Article metadata candidates record `og:image`, `twitter:image`, or `twitter:image:src`. Candidate list is bounded to 8 and HTTPS-only; logo/icon-like URLs remain excluded.
+- New enrichment records include thumbnail source and candidates. Run status retains up to the bounded 12 recent attempts with candidate URL/source, assignment state, and status. Raw error messages are excluded from public provenance status.
+- Quality metrics expose source counts (`thumbnailProvenance.assignedBySource`) and per-attempt provenance. Dashboard now shows found vs assigned vs duplicate rejected vs missing/failed and source host/type details.
+- Existing records are not retroactively changed: latest data has 619 candidates, and all 619 report unknown provenance. This is an honest legacy-data limitation, not a missing new feature.
+- CI #447 passed unit tests, collection, improvement cycle, quality metrics, validation, data/log checks, and Pages deployment. Run: https://github.com/UForPel/haewon-archive/actions/runs/45305421956. Live UI visual/mobile check was not completed; web page open returned an inaccessible/internal error.
+- Latest enrichment: 12/12 metadata URLs found, 0 assigned, 12 duplicate-rejected; all candidate URLs were the same Google-hosted image. Thumbnail coverage remains 273/619 and missing 346; concentration remains 44%.
+- Research reviewed: IPTC MetaWatch provenance rationale (https://metawatch.iptc.org/about/) and recent software-agent process discipline/verification work (https://arxiv.org/abs/2606.22678; https://arxiv.org/abs/2610.39468). Applied bounded provenance and test/CI feedback; did not treat agent papers as image-quality evidence.
