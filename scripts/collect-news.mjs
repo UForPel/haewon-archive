@@ -204,7 +204,9 @@ async function main(){
  const existingUrls=new Set(existing.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const uniqueIncoming=new Set(incoming.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const added=[...uniqueIncoming].filter(url=>!existingUrls.has(url)).length;
- const perQuery=queriesList.map(query=>({query,candidates:incoming.filter(item=>item.query===query).length,uniqueCandidates:new Set(incoming.filter(item=>item.query===query).map(item=>item.url.toLowerCase())).size}));\n const rssImageCandidateRows=incoming.flatMap(item=>item.thumbnailCandidates||[]);\n const rssImageCandidateSources=Object.fromEntries(rssImageCandidateRows.reduce((map,candidate)=>map.set(candidate.source,(map.get(candidate.source)||0)+1),new Map()));
+ const perQuery=queriesList.map(query=>({query,candidates:incoming.filter(item=>item.query===query).length,uniqueCandidates:new Set(incoming.filter(item=>item.query===query).map(item=>item.url.toLowerCase())).size}));
+ const rssImageCandidateRows=incoming.flatMap(item=>item.thumbnailCandidates||[]);
+ const rssImageCandidateSources=Object.fromEntries(rssImageCandidateRows.reduce((map,candidate)=>map.set(candidate.source,(map.get(candidate.source)||0)+1),new Map()));
  const incomingMerged=mergeCandidates([],incoming);
  const deduplicationComparison={before:incoming.length,after:incomingMerged.length,collapsed:Math.max(0,incoming.length-incomingMerged.length),method:'normalized exact headline first; canonical URL fallback'};
  await writeFile(path,JSON.stringify(mergedWithThumbnails,null,2)+'\n');
