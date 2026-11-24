@@ -496,3 +496,11 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Latest metrics after #567: 682 records; explicit publisher HTTPS article URLs 53 (7.8%), Google News 0/629; thumbnails 315 (46.2%), missing 367, unverified legacy 273, verified provenance 42 (40 og:image, 2 twitter:image; 13% of assigned); unique image URLs 43. The 273 repeated image group remains review-required.
 - Latest bounded metadata enrichment: 3/3 assigned, 0 failures. This is a bounded sample, not a representative precision estimate. The earlier #566 pass was 11/12 assigned, 1 failure.
 - PR #4 documentation-only merge occurred after #567's workflow head; it did not change runtime code. Current main includes its documentation changes.
+
+
+## 2026-11-25 — Reading-view cleanup (PR validation pending)
+- Latest inspected main before UI work: `5e37b22a87e5f4ffb10426abdaa3f97778bb1e18`; latest observed Actions #569 succeeded (133/133 tests and Pages deploy). This is CI/deployment evidence only, not visual confirmation.
+- User feedback identified a product-level failure: article cards exposed internal relevance/completeness scores, URL provenance and per-item image review controls inline; the quality dashboard rendered dense technical diagnostics in the reading flow. The documented ChatGPT continuation action was also omitted from the actual response.
+- Implemented on branch `ux/presentation-cleanup`: concise article cards show title/category/source/date; per-article candidate review, global review tools and technical quality diagnostics are collapsed by default; raw RSS source links and internal scores are removed from the public card.
+- Added structural regression checks for collapsed disclosures and clean card content. Pending PR/Actions/Pages verification; real browser/mobile appearance and interaction remain unverified.
+- Honest scope: this improves presentation, not the underlying content coverage. The 273-record repeated legacy thumbnail group remains unverified and is not deleted or relabeled.
