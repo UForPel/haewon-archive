@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T01:37:35.806Z",
+  "collectedAt": "2026-11-24T02:32:27.915Z",
   "searchPack": 0,
   "queries": [
     {
       "query": "오해원 NMIXX",
-      "candidates": 100,
-      "uniqueCandidates": 100
+      "candidates": 48,
+      "uniqueCandidates": 48
     },
     {
       "query": "해원 엔믹스",
@@ -27,16 +27,16 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "failedQueries": [],
-  "fetched": 329,
-  "uniqueIncoming": 295,
-  "added": 3,
+  "fetched": 277,
+  "uniqueIncoming": 251,
+  "added": 2,
   "thumbnailEnrichment": {
     "attempted": 12,
-    "found": 12,
+    "found": 10,
     "assigned": 0,
-    "duplicateRejected": 12,
+    "duplicateRejected": 10,
     "missing": 0,
-    "failed": 0,
+    "failed": 2,
     "results": [
       {
         "id": "5789f4d1c59b7bbe4602",
@@ -70,18 +70,7 @@
       },
       {
         "id": "424f0bfdc18f2914ffe3",
-        "status": "duplicate-rejected",
-        "candidate": {
-          "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-          "source": "og:image"
-        },
-        "candidates": [
-          {
-            "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-            "source": "og:image"
-          }
-        ],
-        "assigned": false
+        "status": "failed"
       },
       {
         "id": "2bf8863898c4ab821238",
@@ -205,25 +194,14 @@
       },
       {
         "id": "4de17e32340a417f9099",
-        "status": "duplicate-rejected",
-        "candidate": {
-          "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-          "source": "og:image"
-        },
-        "candidates": [
-          {
-            "url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
-            "source": "og:image"
-          }
-        ],
-        "assigned": false
+        "status": "failed"
       }
     ]
   },
   "deduplicationComparison": {
-    "before": 329,
-    "after": 294,
-    "collapsed": 35,
+    "before": 277,
+    "after": 250,
+    "collapsed": 27,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 620
