@@ -221,6 +221,13 @@
 - [x] Add a dedicated repeated-image disclosure panel with one shared preview, per-article labels, search and next-unreviewed navigation.
 - [x] Keep review labels article-specific; do not propagate one judgment across the group.
 - [x] Restrict news-to-video sync to explicit HTTPS YouTube URLs in public item metadata; remove Google News wrapper redirect following and validate YouTube hostnames.
-- [ ] Confirm final explicit-URL changes with full Actions test run and Pages deployment.
+- [x] Confirm final explicit-URL changes with Actions #560: 131/131 tests and Pages deployment succeeded.
 - [ ] Obtain actual human labels for the 369 eligible candidates; accuracy remains unmeasured until labels exist.
 - [ ] Inspect live browser rendering, mobile layout, keyboard focus, localStorage reload and JSON file transfer.
+
+
+## Final verification — 2026-11-24
+- [x] Actions #557: 130/130 tests; collection, validation, data commit and Pages deploy succeeded.
+- [x] Actions #560: 131/131 tests; final explicit-URL code, collection, validation, data commit and Pages deploy succeeded.
+- [ ] Manual browser/mobile, keyboard focus, localStorage and JSON file-picker/download checks remain outstanding.
+- [ ] Human labels still needed for 369 candidates; no relevance precision claim is permitted before review.

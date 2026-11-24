@@ -936,3 +936,13 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - MDN details reference: native disclosure widget, with keyboard Space activation; established support across major browsers since 2020. This supports choosing a native disclosure panel but does not prove the custom styling is accessible.
 - W3C WCAG 2.2 focus-order understanding: sequential focus must preserve meaning and operability. Applied by keeping article links and per-article label controls in the same DOM order; not a formal conformance audit.
 - GitHub Docs Pages deployment guide: publish through Pages artifact upload and deploy steps. This describes expected workflow mechanics, not independent verification of the live page.
+
+
+## 2026-11-24 — Final CI and Pages verification
+- Actions #557 (run ID 45402689201): 130 tests passed, 0 failed; all collection, validation, data commit and Pages deployment steps succeeded. Data commit b5a2468e1f2067ef0f5d5cc43bb9bbc60ac95b36.
+- #557 source transient: Google News RSS 4/4 requests returned HTTP 503; Bing RSS 4/4 succeeded with 41 candidates. Do not treat this as a persistent source outage.
+- Actions #560 (run ID 45403295725): 131 tests passed, 0 failed; final explicit-HTTPS YouTube metadata policy, collection, validation, data commit and Pages deployment all succeeded. Data commit 4f0e17feea00adcf0398fdf4e3da7c8ef3842777.
+- #560 Google News RSS recovered to 4/4 successful queries and yielded 172 records; 172 source-site URLs, 0 direct publisher article URLs and 0 RSS image signals. Bing 4/4, 41 candidates; combined 213 fetched, 193 unique, 4 new discovery records.
+- Image baseline unchanged: 665 items, 301 thumbnail-bearing, 29 distinct URLs, dominant URL on 273 items, 364 without thumbnails; 369 review candidates and 0 human labels.
+- Thumbnail enrichment attempted 0 URLs due the configured retry backoff; do not report this as an error.
+- GitHub Pages deployment succeeded in #560. Browser visual verification remains open.

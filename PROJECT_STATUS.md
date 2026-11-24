@@ -438,3 +438,13 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Actions #557 initially passed its Unit tests, collection, discovery, validation and quality steps, but its final data-commit step was still running at this checkpoint. Actions #560 for the final explicit-URL code state was pending. Do not claim either final run or Pages deployment succeeded until the run records confirm it.
 - Research checked 2026-11-24: MDN documents native details/summary disclosure behavior and keyboard activation; W3C WCAG 2.2 focus-order guidance says focus order must preserve meaning and operability; GitHub's Pages deployment guide describes the artifact-upload/deploy workflow. These are authoritative platform/accessibility references, not proof of this app's live rendering or conformance.
 - Browser rendering, responsive/mobile layout, actual localStorage reload, and real JSON file-picker/download behavior remain unverified. The text-only web viewer could not open the deployed Pages URL.
+
+
+## Final verification update — Actions #557 and #560 (2026-11-24)
+- Actions #557 run ID 45402689201 completed successfully: 130/130 tests; collection, validation, operational run log, data commit, Pages artifact upload and Pages deployment all succeeded. Its data commit was b5a2468e1f2067ef0f5d5cc43bb9bbc60ac95b36.
+- Actions #557's Google News RSS requests returned HTTP 503 for all 4 queries. Bing News RSS succeeded 4/4 with 41 candidates. This was recorded as a transient source-specific response failure; no access workaround or wrapper decoding was attempted.
+- Actions #560 run ID 45403295725 completed successfully on the final explicit-URL code state: 131/131 tests, 0 failures; collection, validation, data commit, Pages artifact upload and deployment all succeeded. Its data commit was 4f0e17feea00adcf0398fdf4e3da7c8ef3842777.
+- #560 recovered Google News RSS to 4/4 successful queries. It returned 172 items with 172 site-level source URLs, 0 explicit publisher article URLs, and 0 RSS image signals. Bing was 4/4 with 41 candidates; total fetched 213, unique 193, and 4 additions.
+- The current measured image baseline remains 665 discovery items, 301 thumbnails, 29 unique URLs, 273 uses of the dominant legacy URL, and 364 missing thumbnails. Enrichment attempted 0 URLs because all eligible URLs remained within retry windows; this is expected backoff, not a fetch failure.
+- Human review remains 0/369 (0%); selected-thumbnail precision and candidate precision are unmeasured. The new group UI makes review easier but does not fabricate labels.
+- Pages deployment is verified by Actions #560. Live visual/mobile rendering, localStorage reload and actual file-picker/download behavior remain unverified.

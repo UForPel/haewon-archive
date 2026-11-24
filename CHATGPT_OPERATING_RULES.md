@@ -154,3 +154,13 @@ For each substantial update include: changed paths; planned vs implemented items
 - Keep labels per article even when image URLs repeat. Do not bulk-label, auto-delete or auto-replace.
 - Latest UI code adds the repeated-image review panel and fixes an out-of-scope search-count variable; wait for Actions #560 to verify the final code state and deployment.
 - Cite current official platform/accessibility guidance when applied, but distinguish platform documentation from a browser test or conformance audit.
+
+
+## Final implementation verification — Actions #560 (2026-11-24)
+- Actions #560 run ID 45403295725 passed 131/131 tests, 0 failed; data collection, validation, data commit and Pages deployment succeeded.
+- Current data baseline: 665 discovery records; 301 thumbnails; 29 distinct URLs; 273 records use one dominant URL; 364 records have no thumbnail; 369 human-review candidates and 0 reviewed.
+- Google News RSS recovered in #560 (4/4 queries), but its 172 items had only site-level source URLs and 0 direct article URLs or RSS image signals. Never infer publisher article URLs from those source-site links.
+- Bing RSS succeeded 4/4 with 41 candidates; total fetched 213, unique 193, 4 additions.
+- Metadata enrichment made 0 attempts because all eligible targets were inside retry windows.
+- The explicit-URL video resolver accepts only HTTPS YouTube URLs already present in item metadata and does not follow Google News wrapper redirects.
+- Pages deploy succeeded; actual browser/mobile and local file transfer remain unverified.

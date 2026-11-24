@@ -108,3 +108,9 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The same URL across articles does not imply the same relevance. Never bulk-apply labels, delete records, or replace thumbnails automatically.
 - Regression coverage: helper tests verify per-article label isolation, URL normalization and queue progression; integration tests verify the panel is wired into the loaded discovery view.
 - Manual browser, mobile, keyboard and localStorage/file-picker checks remain pending.
+
+
+## Latest review UI deployment — Actions #560 (2026-11-24)
+- The repeated-image cluster review panel and per-article labels are included in the Pages artifact deployed by Actions #560.
+- Actions #560 passed 131/131 tests and completed the Pages deploy step.
+- Deployment-step success is not a manual browser rendering, responsive layout, keyboard, localStorage or file-picker test; those remain unverified.
