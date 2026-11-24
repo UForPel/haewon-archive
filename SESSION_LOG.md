@@ -745,3 +745,22 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 2. Repair any remaining failures; rerun until unit tests, data validation and Pages deployment succeed.
 3. Inspect live Pages visually on mobile and verify label save/export/import.
 4. Keep the repeated-URL set intact until article-level human review.
+
+
+## 2026-11-24 — Live RSS evidence and Google News wrapper quarantine
+
+- Run #521 completed successfully: all unit tests, collection, quality metrics, archive validation, run-log validation, data commit and Pages deployment succeeded. https://github.com/UForPel/haewon-archive/actions/runs/45327828183
+- Actual RSS response diagnostics across 227 items and four search queries: media:thumbnail=0, media:content=0, image enclosure=0, content:encoded items=0, description img/source tags=0, items with any image-bearing structure=0. RSS candidate articles=0. Raw XML bodies were not retained.
+- Article metadata enrichment attempted 12 records. All 12 final response hosts were news.google.com; 12 wrapper-only metadata records had the same Google-hosted OG image. No publisher article page was reached and no image was assigned.
+- Collector now stores those results as google-news-wrapper:og:image with priority 90, marks status wrapper-only, excludes them from publisher metadata comparisons, and does not auto-assign them. This preserves evidence while preventing Google News wrapper metadata from masquerading as publisher article imagery.
+- The 620-item dataset still has 273 thumbnail assignments and 347 missing; one URL remains shared by 273 records. No records were deleted or replaced.
+- Added resolvedArticleHost to fetch provenance. Commit 05ddfc3; Actions #525 is pending verification at the time of this entry.
+- Review UI and labels remain browser-local; JSON import/export supports moving labels between devices. Candidate precision and selected-thumbnail precision remain unmeasured until a person labels samples.
+- The #516 run passed unit tests, collection and validation but failed its data push due concurrent main updates. #520 and #521 subsequently completed successfully; #521 is the verified full green run for wrapper quarantine.
+- Live visual/mobile review has not been performed.
+
+### Next
+1. Verify #525 and latest Pages deployment.
+2. Inspect the latest dashboard's wrapper-only metric and review UI on mobile.
+3. Begin article-level human review; report only measured precision from labeled samples.
+4. Keep the repeated 273-record group intact pending human review.
