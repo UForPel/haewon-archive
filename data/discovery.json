@@ -6011,7 +6011,10 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c284aa3a39f2a6ace027",
