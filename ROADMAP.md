@@ -305,3 +305,14 @@
 - [x] Add quality metrics and regression tests for verified article counts and scope behavior.
 - [ ] Verify this refinement in Actions and Pages.
 - [ ] Perform real browser/mobile visual QA; not available in the current work environment.
+
+
+## 2026-11-25 — Measure verified article thumbnail coverage
+- [x] Verify PR #8 default-scope deployment in Actions #577: 139/139 tests, full workflow and Pages deploy succeeded.
+- [x] Audit latest verified Haewon scope: 49 articles, 39 with provenance-backed thumbnails, 10 without.
+- [x] Keep provenance coverage distinct from visual relevance/precision.
+- [x] Add generated quality metrics for verified publisher/Haewon article thumbnails with recorded source provenance.
+- [x] Expose the counts in the collapsed diagnostics.
+- [ ] Verify this metrics change in Actions and Pages.
+- [ ] Obtain human thumbnail labels; precision remains unmeasured.
+- [ ] Perform real browser/mobile visual and keyboard checks.

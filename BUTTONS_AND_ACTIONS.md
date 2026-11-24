@@ -161,3 +161,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - **해원 기사 후보**, **NMIXX 기사 후보**, and **전체 기사 후보** remain available for broader discovery, including candidates that only have a Google News discovery wrapper.
 - The verified scope excludes Google wrapper hosts, HTTP URLs, root-only URLs and credential-bearing URLs. No records are deleted by changing scopes.
 - Current baseline after Actions #574: 48 verified Haewon article URLs; 54 explicit publisher article URLs across all article candidates; 426 Haewon title-match candidates and 440 NMIXX title-match candidates. Counts are dataset coverage, not relevance-precision measurements.
+
+
+## 2026-11-25 — Verified-scope thumbnail provenance metrics
+- The collapsed **수집·품질 진단 보기** panel now has a planned metric refinement: count verified publisher articles and verified Haewon articles that also have an HTTPS thumbnail with recorded `og:image`/`twitter:image` provenance.
+- This distinguishes three states: explicit original article URL, source-traceable thumbnail URL, and human-confirmed image relevance. They must not be conflated.
+- Latest deployed baseline after Actions #577: 49 verified Haewon articles; 39 with provenance-backed thumbnails; 10 without. Human image labels remain 0, so visual relevance precision is not measured.
+- The metric code/test refinement is pending its own Actions and Pages verification.
