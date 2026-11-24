@@ -31,3 +31,13 @@ test('visible primary controls include named button actions and forms',()=>{
 
 
 test('thumbnail provenance quality dashboard reports found, assigned, rejected and source details',()=>{for(const signal of ['실제 신규 배정','중복 거부','썸네일 출처 검증','출처 미확인 레거시','썸네일 없음','최근 보강 출처 결과'])assert.ok(discoveryView.includes(signal),'missing dashboard signal '+signal);});
+
+
+test('discovery reading view keeps technical diagnostics and image-review tools collapsed',()=>{
+ assert.ok(discoveryView.includes("className='quality-details'"),'quality diagnostics must be behind a disclosure');
+ assert.ok(discoveryView.includes("className='discovery-review-tools'"),'review tools must be behind a disclosure');
+ assert.ok(discoveryView.includes("className='thumbnail-review-disclosure'"),'per-article candidate review must be collapsed');
+ assert.ok(discoveryView.includes("textContent='수집·품질 진단 보기'"),'diagnostics disclosure must have a clear label');
+ assert.ok(!discoveryView.includes("sourceLink.href=item.sourceUrl"),'raw RSS source URL must not be rendered as a per-card link');
+ assert.ok(!discoveryView.includes("score.textContent='관련성 점수"),'internal relevance score must not clutter the public card');
+});
