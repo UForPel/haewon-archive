@@ -167,3 +167,9 @@ Last updated: 2026-11-20
 - Added concentration metrics (dominant URL count/share and warning) plus tests; dashboard displays a warning without claiming visual classification. Code/test/UI commits: 203105ff, 57f4f75e, adc19bb7.
 - Pages CI runs #402/#404 both failed at deployment: upload logged artifact name `github-pages-1`, but deploy-pages reported 0 matching artifacts. Workflow now restores the standard `github-pages` artifact name/input. This correction is not yet verified by a successful Pages deployment.
 - Next root-cause step: capture raw RSS and enrichment HTML for a controlled sample, record thumbnail provenance, then compare RSS media candidates vs OG metadata and persisted merge values before changing extraction logic.
+
+
+## 2026-11-24 — Persistent UI action inventory
+- User explicitly called out button/action omission. Added `BUTTONS_AND_ACTIONS.md` as a permanent inventory of existing controls and mandatory behavior/testing checks.
+- Added regression assertions in `tests/index-structure.test.mjs` for main button markup and pagination/import control presence. Dynamic category/pagination behavior still needs module-level behavior tests and live visual/tap verification.
+- Operating rules now require checking and updating button inventory during UI work. This is a requirement/guardrail update, not a claim of new UI buttons being added.
