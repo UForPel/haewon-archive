@@ -72,3 +72,11 @@ For each substantial update include: changed paths; planned vs implemented items
 - Treat CI success as only one evidence layer. Verify behavior and generated artifacts, data correctness, deployment, and user-visible UX separately when applicable. Report what is and is not verified.
 - Before making changes, check the workflow concurrency behavior and whether pushes will cancel active runs. Batch related changes and avoid rapid successive pushes unless necessary.
 - Provide a thoughtful, multi-angle report with findings, risks, actual changes/evidence, and next priorities; brevity must not remove important reasoning or verification.
+
+
+## UI buttons and actions — mandatory omission prevention
+- Before UI work, inspect existing controls and their handlers.
+- When a feature needs a button/action, implement it in the app, not only in a plan or report.
+- Maintain `BUTTONS_AND_ACTIONS.md` as the persistent control inventory; update it with every new/changed control.
+- Check that buttons are semantic, named, accessible, wired to real behavior, have sensible disabled/error/success states, and work on mobile.
+- Add regression tests for control markup and behavior where practical. Never report buttons as implemented based on mockups or documentation alone.
