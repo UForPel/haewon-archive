@@ -97,3 +97,5 @@ Do not enable a five-minute production loop until the external scheduler and sec
 - [Project status](PROJECT_STATUS.md)
 - [Session log](SESSION_LOG.md)
 - [Source policy](SOURCE_POLICY.md)
+
+\n## Thumbnail comparison implementation (2026-11-24)\n- `js/thumbnail-comparison.mjs` compares per-article RSS candidates against stored OG/Twitter enrichment results and emits source/host counts, URL overlap, RSS-only/meta-only/both, and found/assigned rate.\n- `scripts/quality-metrics.mjs` now includes `thumbnailCandidateComparison` and a non-destructive `thumbnailReview` evidence list. Dashboard renders both. No auto deletion/replacement.\n- Added 3 isolated tests (passed locally); full suite/CI/Pages not verified yet. Legacy records have no RSS candidate history; new runs are needed for valid comparative coverage.\n
