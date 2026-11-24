@@ -101,9 +101,9 @@ if(list&&count){
  };
  const categoryBar=document.querySelector('#discovery-categories');
  const relevanceBar=document.querySelector('#discovery-relevance');
- let selectedRelevance='haewon';
+ let selectedRelevance='verified-haewon';
  let unverifiedRepeatedThumbnailUrls=new Set();
- const relevanceLabels={haewon:'해원 직접 관련',nmixx:'NMIXX 관련',all:'전체 기사 후보'};
+ const relevanceLabels={'verified-haewon':'해원 원문 확인',haewon:'해원 기사 후보',nmixx:'NMIXX 기사 후보',all:'전체 기사 후보'};
  let selectedCategory='all';
  const categoryOf=classifyDiscoveryCategories;
  const categoryLabels={all:'전체 분류',news:'일반 뉴스',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
