@@ -22,14 +22,14 @@ function tag(raw,tagName){
 }
 export function extractRssThumbnailCandidates(raw='',description=''){
  const candidates=[];
- for(const tag of raw.matchAll(/<(?:media:thumbnail|media:content|enclosure)\\b[^>]*>/gi)){
-  const attrs=tag[0],url=attrs.match(/\\burl=["']([^"']+)["']/i)?.[1]||attrs.match(/\\bhref=["']([^"']+)["']/i)?.[1]||'',type=attrs.match(/\\btype=["']([^"']+)["']/i)?.[1]||'';
-  const source=tag[0].match(/^<\\s*([^\\s>]+)/)?.[1]?.toLowerCase()||'rss-media';
-  if((!type||/^image\\//i.test(type))&&url)candidates.push({url:decode(url),source});
+ for(const tag of raw.matchAll(/<(?:media:thumbnail|media:content|enclosure)\b[^>]*>/gi)){
+  const attrs=tag[0],url=attrs.match(/\burl=["']([^"']+)["']/i)?.[1]||attrs.match(/\bhref=["']([^"']+)["']/i)?.[1]||'',type=attrs.match(/\btype=["']([^"']+)["']/i)?.[1]||'';
+  const source=tag[0].match(/^<\s*([^\s>]+)/)?.[1]?.toLowerCase()||'rss-media';
+  if((!type||/^image\//i.test(type))&&url)candidates.push({url:decode(url),source});
  }
  const text=decode(description||raw);
- for(const match of text.matchAll(/<(?:img|source)\\b[^>]*>/gi)){
-  const attrs=match[0],src=attrs.match(/\\b(?:src|data-src|data-original|data-lazy-src)=["']([^"']+)["']/i)?.[1]||attrs.match(/\\bsrcset=["']([^"']+)["']/i)?.[1]?.split(',')[0]?.trim().split(/\\s+/)[0]||'';
+ for(const match of text.matchAll(/<(?:img|source)\b[^>]*>/gi)){
+  const attrs=match[0],src=attrs.match(/\b(?:src|data-src|data-original|data-lazy-src)=["']([^"']+)["']/i)?.[1]||attrs.match(/\bsrcset=["']([^"']+)["']/i)?.[1]?.split(',')[0]?.trim().split(/\s+/)[0]||'';
   if(src)candidates.push({url:decode(src),source:'rss-description-html'});
  }
  const seen=new Set();
@@ -58,11 +58,11 @@ export function parseRss(xml,query,now=new Date().toISOString()){
  return items;
 }
 export function extractOpenGraphImageCandidates(html=''){
- const metas=[...String(html).matchAll(/<meta\\b[^>]*>/gi)].map(m=>m[0]),candidates=[],seen=new Set();
+ const metas=[...String(html).matchAll(/<meta\b[^>]*>/gi)].map(m=>m[0]),candidates=[],seen=new Set();
  for(const meta of metas){
-  const key=meta.match(/\\b(?:property|name)=["'](og:image|twitter:image|twitter:image:src)["']/i)?.[1]?.toLowerCase();
+  const key=meta.match(/\b(?:property|name)=["'](og:image|twitter:image|twitter:image:src)["']/i)?.[1]?.toLowerCase();
   if(!key)continue;
-  const content=meta.match(/\\bcontent=["']([^"']+)["']/i)?.[1]||'';
+  const content=meta.match(/\bcontent=["']([^"']+)["']/i)?.[1]||'';
   try{const url=new URL(decode(content));if(url.protocol!=='https:'||/(?:logo|avatar|icon|favicon)/i.test(url.pathname))continue;url.hash='';if(seen.has(url.href))continue;seen.add(url.href);candidates.push({url:url.href,source:key});}catch{}
  }
  return candidates.slice(0,8);
