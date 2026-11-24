@@ -40,7 +40,7 @@ test('quality metrics include thumbnail provenance counts and per-attempt source
 
 test('article URL provenance separates publisher, final, source-site and discovery hosts',()=>{
  const report=summarizeCollection({discovery:[
-  {id:'g',title:'Google wrapper story',url:'https://news.google.com/rss/articles/opaque',sourceUrl:'https://publisher.example/',discoveryUrl:'https://news.google.com/rss/articles/opaque'},
+  {id:'g',title:'Google wrapper story',url:'https://news.google.com/rss/articles/opaque',sourceUrl:'https://publisher.example/',discoveryUrl:'https://news.google.com/rss/articles/opaque',thumbnailMetaFetch:{resolvedArticleHost:'news.google.com',status:'wrapper-only'}},
   {id:'b',title:'Bing direct story',url:'https://publisher.example/story/1',publisherArticleUrl:'https://publisher.example/story/1',publisherHost:'publisher.example',discoverySource:'bing-news-rss',discoveryUrl:'http://www.bing.com/news/apiclick.aspx?url=x',candidateSource:'bing-news-rss-explicit-url-param',candidateSources:[{source:'bing-news-rss-explicit-url-param'}],thumbnailMetaFetch:{resolvedArticleHost:'www.publisher.example'}}
  ],newsStatus:{bingSuccessfulQueries:4,bingFailedQueries:[],bingCandidates:1}});
  assert.equal(report.articleUrlProvenance.itemsWithPublisherArticleUrl,1);
@@ -48,6 +48,8 @@ test('article URL provenance separates publisher, final, source-site and discove
  assert.equal(report.articleUrlProvenance.candidateSourceCounts['bing-news-rss-explicit-url-param'],1);
  assert.equal(report.articleUrlProvenance.publisherHosts['publisher.example'],1);
  assert.equal(report.articleUrlProvenance.finalHosts['www.publisher.example'],1);
+ assert.equal(report.articleUrlProvenance.finalHosts['news.google.com'],undefined);
+ assert.equal(report.articleUrlProvenance.wrapperOnlyMetadataHosts['news.google.com'],1);
  assert.equal(report.articleUrlProvenance.sourceSiteHosts['publisher.example'],1);
  assert.equal(report.articleUrlProvenance.discoveryWrapperHosts['www.bing.com'],1);
  assert.equal(report.collection.bingNewsQueriesSuccessful,4);

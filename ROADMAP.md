@@ -117,3 +117,14 @@
 - [ ] Perform real-browser visual/mobile review and exercise UI controls.
 - [ ] Collect human review labels; no accuracy/precision claim until reviewed samples exist.
 - [ ] Investigate an independent permitted source for direct article URLs, since RSS source URL fields are site-level URLs only.
+
+
+## 2026-11-24 — Bing RSS and human-review workflow
+- [x] Compare free publisher RSS/Atom, Bing News RSS, Google News RSS and official public search-result paths.
+- [x] Add strict Bing explicit HTTPS destination extraction with provenance; retain Google wrapper isolation.
+- [x] Record article URL source counts, publisher hosts, discovery wrapper hosts and separate wrapper-only historical metadata hosts.
+- [x] Add review next-unreviewed shortcut and auto-save when selecting a label.
+- [x] Actions #543: 116/116 tests; collection, validation and Pages deploy succeeded.
+- [ ] Verify the deployed mobile page visually and exercise localStorage and JSON file import/export in a real browser.
+- [ ] Continue human labeling; do not report precision/accuracy until reviewed samples exist.
+- [ ] Investigate publisher-specific official RSS/Atom feeds where they expose direct article links; keep each feed URL and publisher site URL separately.

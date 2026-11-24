@@ -794,3 +794,18 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 2. Manually verify deployed review cards, localStorage save, JSON export/import in a real browser.
 3. Start human review and measure precision from labeled samples only.
 4. Keep the repeated 273-record URL group intact until human review.
+
+
+## 2026-11-24 — RSS alternative source implementation, regression repair and deployment
+- Baseline recheck: Actions #538 succeeded; its input commit was 2236088041d812d6e1cb63ac7258888c425b40eb and the workflow's data refresh subsequently advanced main.
+- Implemented Bing News RSS as an independent, free public candidate source. Only the explicit HTTPS value in the ordinary Bing `url` query parameter is accepted. The Bing click URL is preserved as discoveryUrl; no request is made to it and no Google opaque token is decoded.
+- Provenance fields include publisherArticleUrl, publisherHost, discoveryUrl, candidateSource/candidateSources, optional sourceUrl and metadata final response host. The publisher source URL is not conflated with article URL.
+- First two parser CI attempts (#539 and #540) exposed escaped-regex defects. Both were corrected before the green run #541. The metrics commit #542 then exposed a regression in the existing sourceCollectionStatus array ordering; the original Google/YouTube order was restored before #543. These failures were not treated as successful.
+- Actions #541 succeeded end-to-end, collecting 41 Bing RSS candidates (4/4 successful queries), retaining 34 Bing article rows at that run, and deploying Pages.
+- Added provenance metrics and UI summary. Actions #542 failed one existing test because Bing's new source row shifted the YouTube row index. Restored the prior row order and added explicit article URL/host assertions.
+- Actions #543 passed 116/116 tests, collected/validated data, committed the refreshed dataset and deployed GitHub Pages successfully.
+- Latest data after #543: 655 discovery items; 35 Bing-origin items with explicit publisherArticleUrl; 41 Bing RSS candidates; 4/4 successful Bing queries; thumbnail enrichment 12 attempts / 10 assigned / 1 missing / 1 failed.
+- Latest thumbnail audit: 292 items with thumbnails, 20 unique URLs, one legacy URL repeated 273 times. The repeated group remains untouched.
+- Added a separate wrapperOnlyMetadataHosts metric so historical Google News wrapper fetch hosts are not mislabeled as final publisher article hosts.
+- Review UI adds next-unreviewed navigation and auto-save on label selection. JSON import/export round-trip is covered by unit tests.
+- Not verified: real browser/mobile rendering, localStorage save across page reload, file picker import and actual downloaded JSON contents. Browser interaction tools were unavailable; no claim of manual browser verification is made.

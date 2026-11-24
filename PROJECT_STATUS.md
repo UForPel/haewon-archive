@@ -307,3 +307,24 @@ Last updated: 2026-11-20
 - Metadata enrichment attempts=0 because no explicit article URLs were present; wrapper URL fetches are not attempted.
 - Archive=620 items; 273 with thumbnails; 347 missing; one URL repeated 273 times.
 - Review metrics=285 eligible article/image candidates; 0 reviewed; 0% coverage; precision=null.
+
+
+## 2026-11-24 — Bing News RSS source expansion and review workflow
+- [x] Rechecked main and Actions #538 baseline; #538 succeeded on commit 2236088, followed by the automated data commit.
+- [x] Added Bing News RSS as a parallel public discovery source. Four of four query feeds succeeded in the measured run.
+- [x] Only accept an HTTPS article URL explicitly exposed by Bing's ordinary `url` query parameter; never decode Google News wrapper tokens or infer URLs from text.
+- [x] Persist discovery wrapper URL, candidate source, publisherArticleUrl, publisherHost, optional sourceUrl and metadata final-host evidence separately.
+- [x] Add source-level and host-level article URL provenance metrics, including separate historical wrapper-only metadata hosts.
+- [x] Add article URL provenance to the quality summary and preserve Google/YouTube metric ordering.
+- [x] Add a review queue shortcut; selecting a label auto-clicks the existing save action and the next-unreviewed action scrolls to the candidate row.
+- [x] Add Bing parser/provenance tests; Actions #543 passed 116/116 tests, collection, validation, data commit and Pages deployment.
+- [x] Keep JSON import/export validation and round-trip tests green.
+- [ ] Manually verify deployed mobile rendering, localStorage persistence and actual file picker/download round-trip in a real browser; CI unit tests do not verify these interactions.
+
+### Latest measured evidence (Actions #543)
+- Bing News RSS: 4/4 queries successful; 41 RSS candidates; 35 article-level HTTPS URLs retained in discovery data.
+- Archive: 655 discovery items; 35 items with explicit publisherArticleUrl; 35 Bing-origin items.
+- Thumbnail enrichment: 12 attempts; 10 assigned; 1 missing; 1 failed.
+- Thumbnail audit: 292/655 items have a thumbnail; 20 unique thumbnail URLs; one legacy URL remains repeated 273 times.
+- Candidate/image suitability precision remains unmeasured until human labels are submitted.
+- No destructive merge, deletion or replacement of the legacy repeated-URL group.

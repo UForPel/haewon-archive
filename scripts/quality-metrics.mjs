@@ -41,7 +41,8 @@ export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoS
   bingNewsItems:discovery.filter(item=>item.discoverySource==='bing-news-rss').length,
   candidateSourceCounts:countValues(candidateSources),
   publisherHosts:countValues(discovery.map(item=>item.publisherHost||hostOf(item.publisherArticleUrl))),
-  finalHosts:countValues(discovery.map(item=>item.thumbnailMetaFetch?.resolvedArticleHost||'')),
+  finalHosts:countValues(discovery.filter(item=>String(item.publisherArticleUrl||'').startsWith('https://')).map(item=>item.thumbnailMetaFetch?.resolvedArticleHost||'')),
+  wrapperOnlyMetadataHosts:countValues(discovery.filter(item=>!String(item.publisherArticleUrl||'').startsWith('https://')).map(item=>item.thumbnailMetaFetch?.resolvedArticleHost||'')),
   sourceSiteHosts:countValues(discovery.map(item=>hostOf(item.sourceUrl))),
   discoveryWrapperHosts:countValues(discovery.map(item=>hostOf(item.discoveryUrl)))
  };
