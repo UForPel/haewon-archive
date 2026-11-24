@@ -1,58 +1,41 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T13:26:57.707Z",
+  "collectedAt": "2026-11-24T13:28:50.131Z",
   "searchPack": 0,
   "queries": [
     {
       "query": "오해원 NMIXX",
-      "candidates": 8,
-      "uniqueCandidates": 8
+      "candidates": 56,
+      "uniqueCandidates": 56
     },
     {
       "query": "해원 엔믹스",
-      "candidates": 11,
-      "uniqueCandidates": 11
+      "candidates": 61,
+      "uniqueCandidates": 61
     },
     {
       "query": "NMIXX Haewon",
-      "candidates": 12,
-      "uniqueCandidates": 12
+      "candidates": 58,
+      "uniqueCandidates": 58
     },
     {
       "query": "Haewon NMIXX news",
-      "candidates": 10,
-      "uniqueCandidates": 10
+      "candidates": 38,
+      "uniqueCandidates": 38
     }
   ],
   "requestedQueries": 4,
-  "successfulQueries": 0,
+  "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
   "bingCandidates": 41,
   "bingFailedQueries": [],
-  "failedQueries": [
-    {
-      "query": "오해원 NMIXX",
-      "error": "HTTP 503"
-    },
-    {
-      "query": "해원 엔믹스",
-      "error": "HTTP 503"
-    },
-    {
-      "query": "NMIXX Haewon",
-      "error": "HTTP 503"
-    },
-    {
-      "query": "Haewon NMIXX news",
-      "error": "HTTP 503"
-    }
-  ],
-  "fetched": 41,
-  "uniqueIncoming": 38,
+  "failedQueries": [],
+  "fetched": 213,
+  "uniqueIncoming": 193,
   "added": 4,
   "rssImageSignals": {
-    "items": 0,
-    "sourceUrlItems": 0,
+    "items": 172,
+    "sourceUrlItems": 172,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -76,9 +59,9 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 41,
-    "after": 34,
-    "collapsed": 7,
+    "before": 213,
+    "after": 189,
+    "collapsed": 24,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 665
