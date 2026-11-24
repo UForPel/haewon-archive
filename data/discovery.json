@@ -67,7 +67,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "87bc658694fe794890b9",
@@ -81,7 +83,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0921b4f7c807a79d354c",
@@ -134,7 +138,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e3abc4c0d0580aee5e64",
@@ -148,7 +154,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d1742223e50b1725ff29",
@@ -162,7 +170,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "4ac87e629b799d717a93",
@@ -189,7 +199,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "00ad87a75e73cdd160d8",
@@ -244,7 +256,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b95c00c16bd771c90cbb",
@@ -299,7 +313,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "df06f9d1287502766ee8",
@@ -327,7 +343,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d2e042d7824d8430f0f2",
@@ -355,7 +373,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e938acff016d6d2bf908",
@@ -383,7 +403,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0e3ebb0fd88427b1dc98",
@@ -397,7 +419,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 9
+    "relevanceScore": 9,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "fd851db9252aee8393b4",
@@ -411,7 +435,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "bfe93f2498de3b5624a0",
@@ -425,7 +451,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0fff91255b333953c3c5",
@@ -481,7 +509,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6c853909fa9d443dd7d8",
@@ -495,7 +525,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "3695e87cda965951daf6",
@@ -509,7 +541,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "fc9ff6c82b5143ab35d7",
@@ -523,7 +557,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "ad1148f7afe34403b0e0",
@@ -537,7 +573,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b14592968bb2e2438be5",
@@ -564,7 +602,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e95b89c7e4e63d1417ea",
@@ -631,7 +671,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "99173f4aa0074930c2ff",
@@ -870,7 +912,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "cf5d9bf0a8df1c81f973",
@@ -954,7 +998,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f0cb72c6f89a9ed1698e",
@@ -968,7 +1014,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2850f77104152e43faa5",
@@ -982,7 +1030,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d48caf1f84f9f95603d0",
@@ -1038,7 +1088,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c71a2d8737d6f52f7015",
@@ -1164,7 +1216,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e978a9698da6bdc604a3",
@@ -1178,7 +1232,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d952d6faeab078dddd66",
@@ -1234,7 +1290,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "384dd98c180f9b943d52",
@@ -1248,7 +1306,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a62eef40ff9366dc0372",
@@ -1262,7 +1322,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a14da2807f5df12bf54e",
@@ -1290,7 +1352,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "36b931a0289838acf2c1",
@@ -1318,7 +1382,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2ea1a293502cf469d87d",
@@ -1332,7 +1398,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8c8071b26ff901f4e0a0",
@@ -1360,7 +1428,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d1bea97e80ebd7506127",
@@ -1374,7 +1444,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "eed5cc849368cefc2758",
@@ -1430,7 +1502,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c537009f33477421814b",
@@ -1444,7 +1518,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "665f8736d63eaff0e48a",
@@ -1486,7 +1562,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "7a07e6cc52496c1b10e1",
@@ -1542,7 +1620,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2e464cfe31dda1df4628",
@@ -1556,7 +1636,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "505355ca283e7ea0c079",
@@ -1611,7 +1693,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "bb6f7e5bb5cedcdc0dd4",
@@ -1667,7 +1751,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6632d9ed283bc7350491",
@@ -1681,7 +1767,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "ba47407acda4b40fb982",
@@ -1695,7 +1783,9 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f42c7fdb3017be0499a5",
@@ -1709,7 +1799,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "67cf389dc1863243b67f",
@@ -1723,7 +1815,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "751b666add777e37f7c4",
@@ -1737,7 +1831,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0604deeac3b53886faab",
@@ -1765,7 +1861,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a4f921579577e4063f6a",
@@ -1821,7 +1919,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "ef1d4fbed91aad570938",
@@ -1904,7 +2004,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "7e306349078324dc8bf9",
@@ -1918,7 +2020,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "7dc9f3c3807d666e8adf",
@@ -1959,7 +2063,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0c2e635f7b6d6cd99959",
@@ -2015,7 +2121,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f5b42f65b800b97de202",
@@ -2029,7 +2137,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e366dd0bba521e4365de",
@@ -2071,7 +2181,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6ef79dfe4bb8fb33d81b",
@@ -2113,7 +2225,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 7,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5af8c4344a6cebd7f06d",
@@ -2169,7 +2283,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "531e60304c9b02cfe5d1",
@@ -2183,7 +2299,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "977f0619d188263873c7",
@@ -2197,7 +2315,9 @@
     "discoveredAt": "2026-11-20T19:08:09.027Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "36b7ef25f5b2e2457c3b",
@@ -2267,7 +2387,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "9ed7062234125e6d26b6",
@@ -2294,7 +2416,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5510cb962653963fde42",
@@ -2364,7 +2488,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "dd3ff76131473b5aa9c2",
@@ -2392,7 +2518,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0fa151c231c11e342675",
@@ -2406,7 +2534,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "caa2d141f03b89f5f280",
@@ -2516,7 +2646,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "cc71248832110124a002",
@@ -2530,7 +2662,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "9171aba5c73e611e910b",
@@ -2557,7 +2691,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e4442b63bd18ad9c94d4",
@@ -2571,7 +2707,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d1ead845fb2f7309acf5",
@@ -2613,7 +2751,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "486986438accf661ee2e",
@@ -2627,7 +2767,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "1ca251e322ba944e803b",
@@ -2641,7 +2783,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "7c55014ca55ca3160b14",
@@ -2725,7 +2869,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "febcd9132fa7aece89c3",
@@ -2739,7 +2885,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "46af486cd5a876e1583c",
@@ -2767,7 +2915,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 6,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f82a71d1e1bd3b4f6d9e",
@@ -2879,7 +3029,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:50:07.873Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "fe3d4b667cc7e0841613",
@@ -2949,7 +3101,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 5,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c7d6b2004e5ccc7d2605",
@@ -2963,7 +3117,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 5,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8e9b832d0adec733aad1",
@@ -3018,7 +3174,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 5,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e91b6a5b1c357e7a2f35",
@@ -3032,7 +3190,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 5,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6fae603aedba6daabab9",
@@ -3046,7 +3206,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-20T23:56:31.147Z",
     "status": "candidate",
-    "relevanceScore": 5
+    "relevanceScore": 5,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5519b80b55535cb7a7c7",
@@ -3060,7 +3222,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 5
+    "relevanceScore": 5,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0d0af19fe9597c2c272f",
@@ -3101,7 +3265,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 5,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "88ed33d7fd92eb226475",
@@ -3115,7 +3281,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8ad25a1d7ef55789344b",
@@ -3213,7 +3381,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "11140fe983ddde9f2e47",
@@ -3255,7 +3425,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "75b4a1669d2a149c6b5f",
@@ -3423,7 +3595,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d545560f3893f0cfcc23",
@@ -3450,7 +3624,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b69019af21f3041cd4a9",
@@ -3478,7 +3654,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b0b293d5713f682bdf9a",
@@ -3506,7 +3684,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "cfe35c7860703096c9ae",
@@ -3548,7 +3728,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0a8f553b8f9d0b5cc893",
@@ -3716,7 +3898,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2e3d13d5108cccf8c4cd",
@@ -3758,7 +3942,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "cf21f4d2c55fe4dc6c89",
@@ -4080,7 +4266,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f3c475d3e19ae1b484d2",
@@ -4094,7 +4282,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b17123034ead15446199",
@@ -4164,7 +4354,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "10f410223a71ad24f168",
@@ -4206,7 +4398,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d39473f4d9e8aa4c3f3d",
@@ -4444,7 +4638,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b94466577109a5d521c3",
@@ -4458,7 +4654,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2b200ae3681bf347a00e",
@@ -4500,7 +4698,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2044f6dd67fc401e855d",
@@ -4514,7 +4714,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2cc937784bab9b638ab1",
@@ -4737,7 +4939,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "9cf55b9b8f60c14ec37c",
@@ -4835,7 +5039,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "ae17aa98a31eebae1071",
@@ -5045,7 +5251,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d9c0659f41dd8d37e67a",
@@ -5059,7 +5267,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "fd7a97425929cc290a65",
@@ -5073,7 +5283,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5c21ee1d562f94711419",
@@ -5115,7 +5327,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b9faff8ef3f2dbbd8ec8",
@@ -5241,7 +5455,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "27f7c3d5530d64ab0e94",
@@ -5269,7 +5485,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "bacb6e570a86d73eb826",
@@ -5297,7 +5515,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d7d5dfc21ed396a95861",
@@ -5353,7 +5573,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "29e4aa508c81f2cae6de",
@@ -5367,7 +5589,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5654c50ab24f85195e42",
@@ -5450,7 +5674,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6efc8cbc7f6f2c1e8b19",
@@ -5506,7 +5732,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e60ba569cec4bc718bf8",
@@ -5520,7 +5748,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b70be3a9a496587fee53",
@@ -5561,7 +5791,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b0ac1c78310692e42c8b",
@@ -5589,7 +5821,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "aa869338e8a45def8d1d",
@@ -5672,7 +5906,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2d6b7e490866c493905b",
@@ -5686,7 +5922,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "82b58e7406e2e7b2b392",
@@ -5714,7 +5952,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "dfe5a4552002e96b8fb6",
@@ -5756,7 +5996,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6ed9bd9514d3da81ea3d",
@@ -6036,7 +6278,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "078e0e7f607088c60161",
@@ -6050,7 +6294,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b768c3d5581b5257ecd3",
@@ -6204,7 +6450,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "fbabdfd09af265cfb2b5",
@@ -6218,7 +6466,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-20T23:56:31.147Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "7b02def2d2209d68c499",
@@ -6288,7 +6538,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "1dca2488560369f169b0",
@@ -6330,7 +6582,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "ad6b73255dd911ab5f58",
@@ -6484,7 +6738,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "de3068502d1886167a60",
@@ -6498,7 +6754,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2f0bafd48512477655fb",
@@ -6512,7 +6770,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d1da9e17ee71c2d622af",
@@ -6526,7 +6786,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b81292bc0048061b0bc8",
@@ -6568,7 +6830,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5be6eebf4a5395310d70",
@@ -6582,7 +6846,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "60644efe73799b9e95f3",
@@ -6946,7 +7212,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f1b2da13f6773fc61551",
@@ -6960,7 +7228,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5f90ff405814b411240b",
@@ -7058,7 +7328,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "4fb7a7f09d028c271eda",
@@ -7295,7 +7567,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "bff6a990f1cff17dfe6e",
@@ -7589,7 +7863,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-20T23:56:31.147Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "17caa150297102c6120f",
@@ -7785,7 +8061,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d81640c53922aa36b4a7",
@@ -7925,7 +8203,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 2,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "99d0530689ca72ea7caa",
@@ -8023,7 +8303,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c2b1ab6757efcd442c71",
@@ -8107,7 +8389,9 @@
     "query": "Haewon NMIXX news",
     "discoveredAt": "2026-11-20T23:56:31.147Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2b6d48f4ee666a91a8d3",
@@ -8288,7 +8572,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T21:23:33.161Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "572bbfacf69e630d9a7c",
@@ -8470,7 +8756,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c33c4eb915015adc0f50",
@@ -8512,7 +8800,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 0,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "aca75032a0f62b76e129",
