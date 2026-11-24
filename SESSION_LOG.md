@@ -995,3 +995,31 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Metrics #567: 53/682 explicit HTTPS publisher article URLs (7.8%); Google News 0/629. Thumbnails 315/682 (46.2%), 367 missing, 273 unverified legacy, 42 provenance-known (40 og:image, 2 twitter:image), 43 unique URLs, one repeated group of 273.
 - Bounded image metadata pass: 3 attempts, 3 assigned, 0 failures. Human review still pending; the repeated 273-record group remains unchanged.
 - Browser/mobile, keyboard, localStorage and file-picker round-trip remain unverified. Pages deployment success is not a substitute for those checks.
+
+
+## 2026-11-25 — User-facing UX regression acknowledged and corrected (pending verification)
+
+### User feedback / intent
+- The user reported the ChatGPT continuation button had disappeared, the archive looked like a wall of text and raw link/address clutter, and the work lacked visible outcomes.
+- Core expectation: each substantial session should leave tangible, usable results; when results are limited, report that honestly rather than treating collection counts or documentation as product progress.
+
+### Root-cause findings
+- The continuation button existed only as a requirement in `CHATGPT_OPERATING_RULES.md` and `BUTTONS_AND_ACTIONS.md`; I failed to render the actual conversation action. This was a direct execution omission.
+- The discovery view rendered internal relevance/completeness scores, source/provenance metadata and each article's full candidate-review controls inline. The quality dashboard printed dense source/host diagnostics in the main reading flow. This was an information-architecture failure, not merely unfinished data collection.
+- Previous reporting over-weighted test/deployment success and count metrics versus the user-visible product experience. CI success was incorrectly allowed to stand in for usable UI evidence.
+
+### Changes implemented on branch `ux/presentation-cleanup`
+- `js/discovery-view.mjs`: concise article cards; per-article review, global review tools and quality diagnostics are collapsed by default; RSS source URL and internal relevance score removed from the public card.
+- `assets/style.css`: disclosure, card and mobile presentation styles.
+- `tests/index-structure.test.mjs`: regression assertions for collapsed diagnostics/review tools and removal of noisy card fields.
+- Updated `PROJECT_STATUS.md`, `ROADMAP.md`, and `BUTTONS_AND_ACTIONS.md` to record the defect and changed behavior.
+
+### Verification state
+- Latest pre-change main: `5e37b22a87e5f4ffb10426abdaa3f97778bb1e18`; latest observed Actions #569 was green (133/133 tests and Pages deployment).
+- New UX changes have not yet run in Actions or deployed. No browser/mobile visual check is claimed.
+- The 273-record repeated legacy thumbnail cluster remains unverified and untouched; this presentation change does not manufacture content quality.
+
+### Prevention
+- A documented feature is not implemented until it appears in the actual user-facing surface and is exercised.
+- Report product outcomes separately from CI outcomes; do not call a deployment a UX success without visual interaction evidence.
+- Keep technical diagnostics and moderation tools out of the default reading path; progressive disclosure is the default for operational detail.
