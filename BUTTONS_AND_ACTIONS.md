@@ -29,3 +29,8 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Required markup controls are guarded by `tests/index-structure.test.mjs`.
 - Generated pagination/category controls require implementation-level tests in their owning module tests.
 - Live UI appearance, tap targets and keyboard behavior still require visual/manual verification.
+
+## Thumbnail comparison dashboard additions — 2026-11-24
+- The quality dashboard remains read-only (no new controls). It now displays article-level RSS/meta candidate coverage, shared URL count, source and host counts, metadata-found/assigned rate, and repeated-thumbnail review groups.
+- Review output is evidence-only. It preserves each article ID/title/source URL/current thumbnail and does not delete or replace images automatically.
+- Regression requirement: dashboard remains accessible through the existing discovery-quality region; new summaries are text, not inert buttons. Mobile and visual verification remain pending.
