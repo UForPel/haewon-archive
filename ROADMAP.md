@@ -269,3 +269,13 @@
 - [ ] Human-review the 273-record repeated-image group per article; no automatic deletion or bulk labeling.
 - [ ] Expand run log to include news source outcomes separately from the YouTube collector summary.
 - [ ] Complete manual browser/mobile, keyboard, localStorage and JSON import/export checks.
+
+
+## 2026-11-25 — Product UX correction
+- [x] Identify root cause of noisy article view: internal diagnostics, provenance, relevance scores and review controls were rendered inline for every article.
+- [x] Move quality diagnostics, review tooling and per-article image candidate review behind collapsed disclosures by default.
+- [x] Remove RSS URL and internal relevance/completeness score from public article cards; retain title, category, source and date.
+- [x] Add regression checks for the clean reading view.
+- [ ] Verify new UI commit in Actions and Pages.
+- [ ] Inspect the deployed page on a real mobile browser; CI alone is not visual QA.
+- [ ] Improve the actual content result mix: obtain verified article-specific thumbnails and meaningful human labels; do not count repeated legacy image assignments as distinct content wins.

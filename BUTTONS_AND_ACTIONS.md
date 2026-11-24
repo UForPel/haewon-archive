@@ -134,3 +134,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The run log currently summarizes the YouTube collector only. News RSS outcomes remain separately available in `data/news-collection-status.json`; do not interpret the single run-log source as the full list of all collection sources.
 - Dashboard metrics distinguish discovery links from explicit publisher article URLs and verified image metadata from unverified legacy assignments and missing thumbnails.
 - Manual browser/mobile behavior remains unverified even when Actions Pages deployment succeeds.
+
+
+## 2026-11-25 — Presentation and action visibility correction
+- The previous ChatGPT continuation action was documented but omitted from the actual assistant response. Documentation alone did not satisfy the requirement. The assistant must render a working one-tap conversation action at the end of substantial project work and provide the exact prompt if the client cannot render it.
+- In the website, quality diagnostics are now behind **수집·품질 진단 보기**; image review/import/export/queue tools are behind **이미지 검수 도구 · 라벨 가져오기/내보내기**; each article's candidate labels are behind **이미지 후보 검수**. These are native disclosure controls, not buttons.
+- The default article card is limited to title, category, source/date and optional description. Raw RSS source URL, internal relevance/completeness scores, metadata host and per-card review widgets are not part of the reading surface.
+- Regression tests check the loaded discovery module for these presentation boundaries. Live browser/mobile rendering is still unverified until a human checks the deployed page.
