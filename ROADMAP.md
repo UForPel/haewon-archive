@@ -54,3 +54,12 @@
 - [x] Guard new thumbnail enrichment against assigning the same image URL to multiple records; report assigned vs duplicate-rejected outcomes.
 - [x] Track thumbnail source metadata for RSS and article OG/Twitter candidates; expose enrichment outcome and source provenance in the quality dashboard.
 - [ ] Manually verify mobile tap targets, focus/keyboard and live deployed controls.
+
+## Thumbnail provenance follow-up — 2026-11-24
+- [x] Add article-ID RSS vs OG/Twitter candidate comparison metrics (RSS-only, meta-only, both, URL overlap, source/host counts, meta found/assigned rate).
+- [x] Add non-destructive repeated-URL review groups with source/article evidence; never auto-delete/replace.
+- [x] Render comparison and review summaries in discovery quality dashboard.
+- [x] Add comparison module unit tests; isolated run passed 3/3.
+- [ ] Run full test suite and CI/Pages; repair failures.
+- [ ] Inspect mobile layout, focus/tap-target and deployed dashboard behavior.
+- [ ] Data limitation: historical records lack RSS candidate metadata, so current RSS-vs-meta comparison is not yet representative; new collection runs should accumulate comparable candidates.
