@@ -66,7 +66,7 @@ export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoS
  const perCategoryReview={};let exactCorrect=0;
  for(const review of reviewed){const predicted=classifyDiscoveryCategories({title:review.title||'',description:review.description||'',url:review.url||''});const expected=review.expectedCategory;const exact=predicted.length===1&&predicted[0]===expected;if(exact)exactCorrect++;const row=perCategoryReview[expected]||{samples:0,correct:0};row.samples++;if(predicted.includes(expected))row.correct++;perCategoryReview[expected]=row;}
  for(const row of Object.values(perCategoryReview))row.accuracy=row.samples?Math.round(row.correct/row.samples*100):null;
- const assignedThumbnails=discovery.filter(item=>/^https:///i.test(String(item.thumbnailUrl||'')));
+ const assignedThumbnails=discovery.filter(item=>/^https:\/\//i.test(String(item.thumbnailUrl||'')));
  const missingThumbnailCount=discovery.length-assignedThumbnails.length;
  const unverifiedLegacyAssignments=assignedThumbnails.filter(item=>!item.thumbnailSource&&!item.thumbnailProvenance?.source).length;
  const thumbnailProvenance={assignedTotal:assignedThumbnails.length,assignedBySource:countValues(assignedThumbnails.map(item=>item.thumbnailSource||item.thumbnailProvenance?.source||'unverified-legacy')),unverifiedLegacyAssignments,missingThumbnailCount,sourceProvenanceCoverage:assignedThumbnails.length?Math.round((assignedThumbnails.length-unverifiedLegacyAssignments)/assignedThumbnails.length*100):null};
