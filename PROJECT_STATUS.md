@@ -206,3 +206,9 @@ Last updated: 2026-11-20
 - Latest data: 619 candidates; 273 thumbnail records; 346 missing; 1 unique thumbnail URL; 273 records share it (44%). Enrichment: 12 attempted, 9 found, 0 assigned, 9 duplicate-rejected, 3 failed. Every recent found candidate was the same Google-hosted og:image. All 619 existing records have thumbnailSource=unknown because historical source provenance was not saved.
 - Research references: IPTC MetaWatch provenance/metadata-loss context https://metawatch.iptc.org/about/; engineering process verification references RigorBench https://arxiv.org/abs/2606.22678 and Soei https://arxiv.org/abs/2610.39468. These do not directly prove image relevance; they support provenance and verification design.
 - Live page visual/mobile inspection was not completed: web open returned an inaccessible/internal result. CI deploy success is not a visual inspection.
+
+
+## Pages artifact lookup race — 2026-11-24
+- Deploy logs showed upload succeeded and artifact ID was issued, but deploy-pages immediately queried metadata and found 0 artifacts. Subsequent REST query confirmed the artifact existed for that same run. This is an artifact-metadata visibility race, not an upload failure.
+- Workflow updated to upload-pages-artifact v4 and adds a bounded 10-second metadata wait before deploy-pages. CI #455 verified the updated workflow and Pages deployment succeeded: https://github.com/UForPel/haewon-archive/actions/runs/45306133839.
+- Latest metrics from #455: 12 attempted, 12 image URLs found, 0 assigned, 12 duplicate rejected, 0 failed; 619 candidates, 273 thumbs, 346 missing, 1 unique URL, dominant share 44%, provenance unknown for all legacy records.
