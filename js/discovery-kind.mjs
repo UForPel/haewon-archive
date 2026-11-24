@@ -44,19 +44,6 @@ export function filterDiscoveryRelevance(items = [], scope = 'haewon') {
   return items.filter(item => pattern.test(cleanDiscoveryText(item.title)));
 }
 
-const HAEWON_TITLE = /오해원|해원|haewon/i;
-const NMIXX_TITLE = /nmixx|엔믹스/i;
-export function classifyDiscoveryRelevance(item = {}) {
-  const title = cleanDiscoveryText(item.title);
-  if (HAEWON_TITLE.test(title)) return 'haewon';
-  if (NMIXX_TITLE.test(title)) return 'nmixx';
-  return 'other';
-}
-export function filterDiscoveryRelevance(items = [], scope = 'haewon') {
-  if (scope === 'all') return items;
-  const pattern = scope === 'nmixx' ? NMIXX_TITLE : HAEWON_TITLE;
-  return items.filter(item => pattern.test(cleanDiscoveryText(item.title)));
-}
 export function classifyDiscoveryCategories(item = {}) {
   if (classifyDiscoveryItem(item) === 'video') return ['video'];
   const title = String(item.title || '');
