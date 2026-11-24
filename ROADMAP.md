@@ -183,3 +183,11 @@
 - [ ] Collect actual human review labels (currently 0) before making image relevance or classification accuracy claims.
 - [ ] Validate direct item links and reuse terms for any official publisher RSS before integration.
 - [ ] Perform real-browser responsive and local JSON import/export checks when browser automation is available.
+
+## 2026-11-24 — #552 measured outcome
+- [x] #552 passed 125/125 tests and completed collection, validation, data commit and Pages deploy.
+- [x] Retry backoff worked: 3 previous 403/forbidden URLs were skipped; one alternate Sports Khan article yielded one new unique thumbnail.
+- [x] Latest baseline: 662 records, 38 explicit HTTPS article URLs, 301 thumbnails, 29 unique URLs, 273 records still sharing the dominant legacy URL.
+- [x] Per-host candidate and assignment rates are exposed in the UI.
+- [ ] Manually review the repeated 273-record image group and candidate relevance; no human labels exist yet.
+- [ ] Validate real browser/mobile layout, persistence and JSON file transfer.

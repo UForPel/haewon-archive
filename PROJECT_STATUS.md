@@ -390,3 +390,12 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Added per-publisher diagnostics to the quality report and UI: attempts, metadata found, assigned, missing, failed, duplicate-rejected, error classes, and final redirect hosts.
 - Open Graph official protocol specifies og:image as basic metadata and allows multiple image values, but it is publisher-supplied metadata, not a guaranteed universal extraction endpoint. Source: https://ogp.me/ (checked 2026-11-24; authoritative protocol, limited to markup semantics).
 - Browser rendering, responsive/mobile appearance, localStorage persistence across reload, and real file-picker/download round-trip remain unverified. Static module integration tests do not replace a real browser test.
+## 2026-11-24 — Actions #552 verified improvement checkpoint
+- Actions #552 run ID 45397522807 completed successfully: 125/125 tests, public YouTube/news collection, bounded improvement cycle, quality report, validation, data commit, Pages artifact upload and deploy all passed.
+- Feature commit: 98552aa57eaecafab672dd68107cc324d45032f3. Automated data commit after #552: 08df9d43500aaef04c20fe4f1051fb5fab68c0d4.
+- Data baseline after #552: 662 discovery records; 38 explicit HTTPS publisher article URLs (38 Bing-origin); 41 Bing RSS candidates; 4/4 Bing queries successful.
+- Thumbnail baseline after #552: 301/662 records have thumbnails; 29 unique thumbnail URLs; dominant repeated URL still appears on 273 records. This is +1 thumbnail and +1 unique URL versus the pre-cycle baseline (300/659, 28 unique); the repeated group was not deleted or merged.
+- Latest enrichment cycle: 1 attempt, 1 metadata candidate found, 1 assigned, 0 missing, 0 failed. The newly assigned item is an explicitly linked Sports Khan HTTPS article with an HTTPS og:image candidate.
+- The three prior HTTP 403 failures were not re-requested on #552 because the new seven-day forbidden backoff applied. This demonstrates the retry policy is active; it does not prove those publishers will become accessible later.
+- Cumulative historical host diagnostics are now displayed with candidate discovery rate, assignment-after-discovery rate, error classes and final redirect hosts. Do not mistake historical host aggregates for this run's one-item sample.
+- Human review remains 0/369 candidates (0%); image relevance precision remains unmeasured. Browser rendering, mobile appearance, localStorage reload and actual JSON file picker/download round-trip remain unverified.

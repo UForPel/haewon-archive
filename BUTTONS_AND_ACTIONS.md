@@ -78,3 +78,8 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Quality summary now displays per-publisher attempts, discovered metadata candidates, assigned thumbnails, missing metadata, failures, duplicate rejections, error classes and final redirect hosts.
 - Collector retry policy: missing 7 days; forbidden/not-found/rate-limited 7 days; transient network/server 1 day; found/assigned/duplicate-rejected/wrapper-only 30 days.
 - The UI summary is still a static module-driven report. Real browser visual/mobile verification remains outstanding.
+
+## Latest UI diagnostics — Actions #552
+- Per-publisher metadata rows now display candidate discovery rate and assignment-after-discovery rate in addition to attempt counts, outcomes, error codes and final redirect hosts.
+- Static regression coverage checks that these fields are rendered by the actual discovery page module.
+- Actions #552 passed 125/125 tests and deployed Pages; real browser rendering remains unverified.

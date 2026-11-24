@@ -16,3 +16,10 @@ test('human review queue is wired into the module loaded by the actual page', ()
   assert.match(view, /row\.querySelector\('select'\)\?\.focus/);
   assert.match(view, /select\.addEventListener\('change',\(\)=>\{if\(select\.value\)save\.click\(\);\}\)/);
 });
+
+test('publisher metadata host diagnostics are surfaced in the live discovery view',()=>{
+ assert.match(view,/thumbnailEnrichmentByHost/);
+ assert.match(view,/rowData\.candidateRate/);
+ assert.match(view,/rowData\.assignmentRate/);
+ assert.match(view,/rowData\.finalHosts/);
+});

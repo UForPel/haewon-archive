@@ -126,3 +126,8 @@ For each substantial update include: changed paths; planned vs implemented items
 - Do not retry known missing/forbidden pages on every run: missing and explicit access/not-found/rate-limit responses wait 7 days; transient errors wait 1 day; found candidates wait 30 days unless a new explicit user action requires recheck.
 - Do not interpret site-level RSS source URL as a direct article URL.
 - Host metrics must account for legacy thumbnail provenance; a historical status found plus matching thumbnailProvenance.articleUrl is evidence of assignment.
+
+## Actions #552 verified checkpoint
+- Current measured baseline: 662 discovery records; 38 direct HTTPS publisher article URLs; 301 thumbnail-bearing records; 29 distinct thumbnail URLs; 273 repeated uses of one URL; 369 eligible human-review candidates and 0 reviewed.
+- Latest collection sample: one attempt, one unique metadata candidate assigned; prior three forbidden sources were skipped by the retry backoff.
+- Separate cumulative host aggregates from the current run sample; never present historical totals as current-run success.
