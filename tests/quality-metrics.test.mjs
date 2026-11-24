@@ -28,3 +28,6 @@ test('thumbnail heuristic flags repeated URLs and obvious logo-like path hints w
  const report=summarizeThumbnailUrls([{thumbnailUrl:'https://img.test/logo.png'},{thumbnailUrl:'https://img.test/logo.png'},{thumbnailUrl:'https://cdn.test/photo.jpg'},{thumbnailUrl:''}]);
  assert.equal(report.repeatedUrlGroups,1);assert.equal(report.repeatedItems,1);assert.equal(report.heuristicFlaggedUrls,1);assert.ok(report.heuristicFlags[0].flags.includes('name-suggests-logo-icon'));
 });
+
+test('thumbnail audit warns when one image URL dominates a sample',()=>{const report=summarizeThumbnailUrls(Array.from({length:10},(_,i)=>({thumbnailUrl:i<8?'https://img.test/shared.jpg':'https://img.test/unique'+i+'.jpg'})));assert.equal(report.dominantThumbnailCount,8);assert.equal(report.dominantThumbnailShare,80);assert.equal(report.concentrationWarning,true);});
+test('thumbnail audit does not warn for evenly distributed small samples',()=>{const report=summarizeThumbnailUrls([{thumbnailUrl:'https://img.test/a.jpg'},{thumbnailUrl:'https://img.test/b.jpg'},{thumbnailUrl:'https://img.test/c.jpg'},{thumbnailUrl:'https://img.test/d.jpg'}]);assert.equal(report.concentrationWarning,false);});
