@@ -236,3 +236,8 @@ Last updated: 2026-11-20
 - Existing records were not deleted or auto-replaced. The 273-record repeated URL remains in the review evidence list.
 - Tests added for persistence and comparison; local test execution unavailable in this session. Final CI/Pages run is pending verification.
 - Google News redirect use is limited to ordinary public redirect-following requests; no opaque redirect decoding or access-control bypass is added. Resolved publisher URLs are not yet retained.
+
+## Recursive improvement cycle — 2026-11-24 continuation
+- Candidate persistence, URL uniqueness metrics and dashboard were committed previously. This continuation corrected escaped-newline syntax in js/thumbnail-comparison.mjs and scripts/quality-metrics.mjs (commits 843a490 and b24bd71). Post-update GitHub fetch confirms both files contain no literal escaped-newline sequences.
+- Local tests, Actions status, deployed Pages and visual/mobile checks remain unverified. Local clone failed because github.com DNS was unavailable. Actions page fetch was blocked.
+- RSS candidates cannot be reconstructed for historical records; trust/visual accuracy requires human review labels before any score is published.
