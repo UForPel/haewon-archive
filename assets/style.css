@@ -115,3 +115,22 @@ main,section,.section-heading,.controls,.date-controls,.photo-card,.video-card,.
 .thumbnail-cluster-info select{max-width:100%;padding:8px;border:1px solid var(--line);border-radius:7px;background:#fff;font:inherit;font-size:12px}
 .thumbnail-cluster-info button{border:1px solid var(--line);border-radius:7px;padding:8px 10px;background:#fff;color:var(--ink);font:inherit;font-size:12px}
 @media(max-width:640px){.thumbnail-cluster-info{grid-template-columns:1fr}.thumbnail-cluster-info select,.thumbnail-cluster-info button{width:100%}.thumbnail-cluster-row{padding:8px}}
+
+
+/* 2026-11-25: keep the public discovery view editorial; move diagnostics and review tooling out of the reading flow. */
+.quality-details,.discovery-review-tools,.thumbnail-review-disclosure{margin:14px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface,#fff)}
+.quality-details>summary,.discovery-review-tools>summary,.thumbnail-review-disclosure>summary{padding:12px 14px;cursor:pointer;color:var(--muted);font-size:12px;font-weight:600;list-style-position:inside}
+.quality-details[open]>summary,.discovery-review-tools[open]>summary,.thumbnail-review-disclosure[open]>summary{border-bottom:1px solid var(--line);color:var(--ink)}
+.quality-details-body{padding:12px 14px;overflow-wrap:anywhere}
+.quality-details-body p{margin:7px 0;font-size:11px;line-height:1.6;color:var(--muted)}
+.discovery-review-tools{padding:0}
+.discovery-review-tools>.thumbnail-review-tools{padding:0 12px 12px}
+.thumbnail-review-disclosure{margin-top:12px;background:transparent}
+.thumbnail-review-disclosure>summary{padding:9px 11px}
+.thumbnail-review-disclosure .thumbnail-review-section{margin:0;border:0;border-top:1px solid var(--line);border-radius:0}
+.discovery-card{background:var(--surface,#fff);border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:0 2px 10px rgba(25,25,25,.035)}
+.discovery-card .photo-card-details h3{margin:0 0 8px;font-size:16px;line-height:1.5}
+.discovery-card .photo-meta{margin:7px 0;color:var(--muted);font-size:11px}
+.discovery-card .photo-description{margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.6}
+.discovery-card .tag{display:inline-flex;margin:0 0 4px}
+@media(max-width:600px){.discovery-card{padding:12px}.discovery-card .photo-card-details h3{font-size:15px}.quality-details-body{padding:10px 12px}}
