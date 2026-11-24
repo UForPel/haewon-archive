@@ -1,6 +1,13 @@
 # Haewon Archive — Persistent Project Memory
 
-Last updated: 2026-11-19
+Last updated: 2026-11-24
+
+## Current status — thumbnail provenance
+- Implemented: RSS image candidate source tracking (`media:thumbnail`, `media:content`, `enclosure`, description HTML) and article metadata candidates (`og:image`, `twitter:image`); records/status preserve source and candidate URLs.
+- Dashboard: thumbnail enrichment counts (found/assigned/rejected/missing/failed), source counts for stored records, and recent candidate source/host outcomes.
+- Latest CI #447 passed tests, collection, validation and Pages deployment. Live visual/mobile inspection not confirmed.
+- Latest run: 12 metadata candidates found; 0 assigned, 12 rejected as duplicates; existing 619 candidates still have unknown thumbnail provenance. This prevents coverage inflation and confirms upstream metadata is repeating one image.
+- Next: compare RSS candidate sources against OG/Twitter candidates and diagnose Google News redirect/article resolution; do not delete existing thumbnails until provenance review.
 Status: archive video/photo record JSON Schema enforcement implemented; Gemini automation is NOT implemented.
 
 ## Purpose
