@@ -257,8 +257,15 @@
 - [x] Compare 38/666 (5.7%) -> 53/682 (7.8%) explicit HTTPS publisher URLs; confirm Google News 0/629 and Bing RSS metadata origin for all 53.
 - [x] Compare thumbnails 301/666 -> 312/682; retain 273 unverified legacy repeated assignments; do not auto-delete/replace.
 - [x] Correct run-log push trigger normalization and schema/test; PR #3 merged.
-- [ ] Verify the push-trigger regression test in a post-PR #3 Actions run.
+- [x] Verify push-trigger regression in Actions #567 (133/133); persisted run log records `github_push`.
 - [ ] Expand operational run log to report news source outcomes separately from YouTube collector status.
 - [ ] Review repeated 273-image group per article; collect human labels before estimating precision.
 - [ ] Browser/mobile, keyboard, localStorage and JSON transfer checks remain manual and unverified.
 - [ ] Prioritize explicit publisher URL metadata and article-specific image metadata on sources where public metadata already exposes these fields; no wrapper token decoding or access-control bypass.
+
+- [x] Verify Actions #567 data validation, data commit, Pages artifact and deployment.
+- [x] Recheck article URL and thumbnail metrics after the second bounded enrichment pass.
+- [ ] Continue publisher-host sampling using only explicit public metadata; improve source coverage without wrapper decoding.
+- [ ] Human-review the 273-record repeated-image group per article; no automatic deletion or bulk labeling.
+- [ ] Expand run log to include news source outcomes separately from the YouTube collector summary.
+- [ ] Complete manual browser/mobile, keyboard, localStorage and JSON import/export checks.
