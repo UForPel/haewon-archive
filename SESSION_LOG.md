@@ -622,3 +622,10 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - CI/deployment: prior #421 unit tests and collection/data validation passed; Pages deploy failed because deploy-pages could not find the uploaded github-pages artifact (artifact upload itself succeeded). This is a recurring platform/artifact lookup issue, not evidence of test failure. Current code commits are awaiting fresh CI.
 - Limits: this guard does not visually compare images, identify generic/irrelevant imagery, or retroactively clean the 273 existing repeated assignments. Assigned/rejected counts are recorded, but UI display and deployed behavior remain to be verified.
 - Next: inspect fresh CI for the guard, compare assigned/rejected counts, then capture raw RSS/OG thumbnail provenance to diagnose the historical shared URL source.
+
+
+## 2026-11-24 — Test failure diagnosis and correction; CI #430
+- Initial guard commits had a variable-name typo (declared `normalized` but referenced `normal`), causing the assignment branch to throw and be caught; regression tests exposed this. Corrected in commit `7996ee66`.
+- CI #430: unit tests passed; collection, dedupe, bounded improvement cycle, quality metrics, data validation and operational log validation passed. Pages deploy failed again after artifact upload succeeded; deploy-pages API returned zero matching artifacts. Run link: https://github.com/UForPel/haewon-archive/actions/runs/45300472869.
+- Fresh metrics: 12 enrichment attempts, 11 metadata image URLs found, 0 assigned, 11 duplicate URLs rejected, 1 failed. Guard prevented repeated assignment but existing repeated image records remain: 273/618 share one exact URL (44%), 345 missing. No coverage improvement; next focus should be UI reporting of found-vs-assigned and raw RSS/OG provenance.
+- This failure was not hidden: test commits failed before correction, and corrected run unit tests passed. Deployment remains unverified/failed due artifact lookup.
