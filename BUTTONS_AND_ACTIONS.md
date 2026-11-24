@@ -53,3 +53,11 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Progress text shows total eligible candidates, reviewed count and remaining count.
 - Candidate list is HTTPS-only and de-duplicates the same image URL within each article.
 - Regression guard: tests cover page-crossing, label completion and duplicate/invalid URL handling.
+
+
+## Review queue deployment state — 2026-11-24
+- The **다음 미검수 후보** app control is now wired inside `js/discovery-view.mjs`, which is loaded by `index.html`; the previously separate `js/review-workflow.mjs` was not loaded and must not be treated as the UI implementation.
+- The control scans the current filtered/sorted list across pagination, navigates to the candidate page, scrolls and focuses the selector.
+- Choosing a label immediately invokes the existing save handler.
+- CI now has an integration regression test checking that the live page entry point loads the implementation.
+- Live browser appearance and real file-picker behavior remain manually unverified.

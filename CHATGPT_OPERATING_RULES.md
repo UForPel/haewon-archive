@@ -104,3 +104,8 @@ For each substantial update include: changed paths; planned vs implemented items
 - Do not report a UI control as implemented merely because its module exists. Verify that the module is imported/referenced by the actual page entry point.
 - Human review queue must be implemented in a loaded module and navigate across pagination, not just the current page.
 - Label selection must save through the existing validated persistence path; test queue selection and storage logic separately.
+
+
+## UI integration verification — 2026-11-24
+- A UI feature is not complete merely because a module or handler exists: verify the module is loaded by the actual HTML entry point and add a regression test for that wiring.
+- Distinguish automated test/deployment success from actual browser rendering, persistence, file-picker, and download behavior. Explicitly label unverified interactions.

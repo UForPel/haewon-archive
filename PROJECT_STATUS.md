@@ -344,3 +344,16 @@ Last updated: 2026-11-20
 - [x] Moved the queue behavior into the already-loaded `js/discovery-view.mjs` module and made it search all currently filtered/sorted items, not only the visible page.
 - [x] Consolidated candidate enumeration and added pure tests for HTTPS filtering, duplicate image candidates, cross-page navigation and completed review labels.
 - [ ] Run CI and verify the new deployed UI. Real browser interaction and localStorage/file-picker testing remain pending unless an actual browser becomes available.
+
+
+## 2026-11-24 — Cross-page review queue deployed; public RSS source audit
+- [x] Actions #546 passed 119/119 tests, collection, validation, data commit and Pages deployment.
+- [x] Code commit `8f348f2` implemented cross-page review queue in the actual loaded discovery view; latest automated data commit is `b675a1c173a664bb12772cefe834d384129b6927`.
+- [x] Latest data: 657 discovery records; 35 explicit HTTPS publisher article URLs; 40 Bing RSS candidates across 4/4 successful Bing queries.
+- [x] Thumbnail baseline unchanged: 299/657 have thumbnails; 27 distinct thumbnail URLs; one URL is assigned to 273 records. Latest enrichment sample: 9 attempts, 0 candidates found/assigned, 5 missing, 4 failed.
+- [x] Audited official publisher RSS landing pages: SBS News and Sports Khan expose RSS directories; MK exposes an entertainment/culture feed; ETNews exposes section feeds but its published endpoints are HTTP. The SBS page limits RSS to personal non-commercial use; Sports Khan describes personal reading and warns against public redistribution without rights-holder permission.
+- [x] Decision: do not add these feeds to the public repository until direct item URL behavior and reuse permissions are verified. Listing a feed endpoint is not proof that item-level URLs/images can be republished.
+- [x] Bing News RSS remains a best-effort free discovery source, not a guaranteed/versioned API. Accept only explicitly exposed HTTPS article URL values and preserve the wrapper as provenance; no Google opaque token decoding.
+- [x] Open Graph protocol documents `og:image` and optional image metadata, but it does not guarantee that every publisher page exposes a usable image. Current sample found 0 candidates in 9 attempts; distinguish missing metadata from failed fetches.
+- [x] Added a static integration regression test to ensure the review queue remains wired to the module actually loaded by `index.html`.
+- [ ] Real-browser visual/mobile rendering, localStorage persistence across reload, and actual file-picker/download JSON round-trip remain unverified; web retrieval is not a substitute for browser interaction.

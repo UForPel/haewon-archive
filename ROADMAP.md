@@ -144,3 +144,14 @@
 - [x] Add unit tests for queue order, HTTPS filtering and duplicate image candidate handling.
 - [ ] Verify Actions and Pages after this implementation.
 - [ ] Perform real-browser mobile rendering, localStorage reload and JSON file import/export round-trip when browser automation is available.
+
+
+## 2026-11-24 — Latest review queue and source audit
+- [x] Actions #546: 119/119 tests and GitHub Pages deploy passed.
+- [x] Cross-page review queue integrated in loaded discovery view; selection auto-saves; integration regression test added.
+- [x] Compare official SBS News, Sports Khan, MK and ETNews RSS offerings and document reuse/transport constraints.
+- [x] Keep feeds with unverified reuse terms or HTTP-only feed endpoints out of the public collection pipeline.
+- [ ] Add a publisher RSS only after validating item-level HTTPS links, feed stability, image fields, and explicit reuse terms.
+- [ ] Inspect failed/missing article metadata fetches by host; do not infer absence of image metadata from fetch failures.
+- [ ] Run real-browser mobile and review JSON/localStorage checks when a browser automation environment is available.
+- [ ] Collect human labels; precision remains unmeasured until real labels are saved/exported and included in the repository's review dataset.

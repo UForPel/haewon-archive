@@ -829,3 +829,16 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Added unit tests for candidate filtering, duplicate candidate suppression, cross-page queue progression and terminal review labels.
 - Baseline before this correction: 657 discovery items; 35 explicit publisher article URLs; 299 thumbnails; 27 unique thumbnail URLs; 273-item dominant repeated URL group; 9 enrichment attempts with 0 found/assigned in the latest collection record.
 - Browser automation tools were not available in this environment. Do not claim visual/mobile, actual localStorage reload, or file picker/download round-trip verification.
+
+
+## 2026-11-24 — Review queue correction, deployment and RSS permission audit
+- Actions #546 completed successfully with 119/119 tests; collection, validation, automated data commit, Pages artifact upload and deployment succeeded.
+- Review queue code commit: `8f348f2c949c212374e2f31086593069a4004348`. Automated data refresh advanced main to `b675a1c173a664bb12772cefe834d384129b6927`.
+- Added a real cross-page review queue to `js/discovery-view.mjs`, which is explicitly loaded by `index.html`. It scans the currently filtered/sorted list, moves to the correct page, scrolls to the candidate and focuses its selector. Label changes invoke the existing save button immediately.
+- Root cause of prior false claim: `js/review-workflow.mjs` was not loaded by the page. The shortcut code existed but was inert. Corrected by integrating the feature into the live module and adding an integration test that guards the entry-point reference.
+- Official feed source audit: SBS News official RSS directory states non-commercial personal-use limitation; Sports Khan official RSS directory states personal-use scope and rights-holder permission is needed for public sharing/republication; MK official RSS directory lists a culture/entertainment feed; ETNews official RSS directory lists section feeds via HTTP endpoints. No official feed was added because direct item URL semantics and public reuse permissions have not been established.
+- Bing News RSS remains a useful free candidate source, but current evidence treats it as a best-effort, undocumented/versionless feed surface. It returned 40 candidates in the latest run; 35 HTTPS article URLs were retained in the archive.
+- Latest metrics: 657 discovery records, 35 explicit article URLs, 299 thumbnail-bearing records, 27 distinct thumbnail URLs, 273 records sharing one URL. Latest metadata enrichment: 9 attempts / 0 found / 0 assigned / 5 missing / 4 failed.
+- Open Graph protocol documents `og:image` and related fields, but does not ensure publishers expose them. Zero candidates in this sample is not proof that the parser is wrong or that publishers have no images; inspect per-host fetch status and HTML when available.
+- Added `tests/review-queue-integration.test.mjs` so future changes fail CI if the review queue is implemented in an unreferenced module.
+- Browser automation remains unavailable: do not claim actual rendering, localStorage reload, or import/export file-picker testing. The public Pages deployment step passed, but this is not equivalent to manual browser verification.
