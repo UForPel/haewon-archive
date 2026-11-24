@@ -212,3 +212,10 @@ Last updated: 2026-11-20
 - Deploy logs showed upload succeeded and artifact ID was issued, but deploy-pages immediately queried metadata and found 0 artifacts. Subsequent REST query confirmed the artifact existed for that same run. This is an artifact-metadata visibility race, not an upload failure.
 - Workflow updated to upload-pages-artifact v4 and adds a bounded 10-second metadata wait before deploy-pages. CI #455 verified the updated workflow and Pages deployment succeeded: https://github.com/UForPel/haewon-archive/actions/runs/45306133839.
 - Latest metrics from #455: 12 attempted, 12 image URLs found, 0 assigned, 12 duplicate rejected, 0 failed; 619 candidates, 273 thumbs, 346 missing, 1 unique URL, dominant share 44%, provenance unknown for all legacy records.
+
+## Thumbnail candidate comparison — 2026-11-24
+- Implemented pure article-level comparison module `js/thumbnail-comparison.mjs`: pairs RSS candidates stored on discovery items with OG/Twitter candidates from enrichment results by article ID; reports source counts, host counts, shared URL overlap, RSS-only/meta-only/both-source counts, and found/assigned rate.
+- Quality metrics now add `thumbnailCandidateComparison` and `thumbnailReview`. The review groups preserve article ID/title/original URL/current thumbnail/source and are explicitly non-destructive: no automatic deletion or replacement.
+- Discovery quality UI renders candidate comparison summary, source/host counts and repeated-thumbnail review groups. Existing 273 repeated URL records are not changed.
+- Added 3 module tests; isolated Node test execution passed (3/3). Full repository suite, CI and Pages deployment still pending. UI/mobile manual inspection not performed.
+
