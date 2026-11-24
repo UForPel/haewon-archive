@@ -164,3 +164,13 @@
 - ETNews latest RSS: `http://rss.etnews.com/Section901.xml` — HTTP endpoint, not accepted in HTTPS-only pipeline.
 - [ ] Validate item-level RSS link fields and publisher permissions before integration; no public feed content should be copied or redistributed without a clear permitted basis.
 - [x] #547: 120/120 tests, collection/validation/data commit/Pages deploy succeeded.
+
+
+## 2026-11-24 — Actions #548 final baseline
+- [x] #548 passed 120/120 tests and Pages deployment.
+- [x] Latest baseline refreshed: 658 discovery records; 36 direct HTTPS article URLs; 41 Bing RSS candidates; 4/4 query success.
+- [x] Thumbnail baseline: 299 with thumbnails; 27 unique URLs; 273 records still share one legacy URL.
+- [x] Review queue baseline: 362 eligible, 0 reviewed; accuracy remains unmeasured.
+- [ ] Prioritize diagnosing why 10 publisher metadata attempts yielded 0 image candidates (7 no candidate, 3 failed), segmented by host and response outcome.
+- [ ] Collect real human labels through the cross-page queue and export/import workflow.
+- [ ] Perform real-browser interaction checks when browser automation is available.

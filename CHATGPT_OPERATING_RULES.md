@@ -114,3 +114,9 @@ For each substantial update include: changed paths; planned vs implemented items
 ## Current verified review queue state — 2026-11-24
 - Actions #547 passed 120/120 tests and deployed Pages successfully.
 - Always re-check the latest data commit after a collection workflow; workflow pushes may advance `main` beyond the initiating feature commit.
+
+
+## Latest cycle checkpoint — 2026-11-24
+- Actions #548 is the latest verified successful collection/deployment run (120/120 tests).
+- Current data baseline: 658 items, 36 explicit HTTPS article URLs, 299 thumbnails, 27 unique image URLs, 273 repeated instances, 362 review candidates and 0 human labels.
+- Recompute the baseline from the latest main data after every scheduled/manual collection; never carry forward a previous run's counts.
