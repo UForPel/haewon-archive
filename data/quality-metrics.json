@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-24T06:15:29.810Z",
+  "generatedAt": "2026-11-24T06:17:34.055Z",
   "articleUrlProvenance": {
-    "totalItems": 657,
-    "itemsWithPublisherArticleUrl": 35,
-    "bingNewsItems": 35,
+    "totalItems": 658,
+    "itemsWithPublisherArticleUrl": 36,
+    "bingNewsItems": 36,
     "candidateSourceCounts": {
-      "bing-news-rss-explicit-url-param": 39
+      "bing-news-rss-explicit-url-param": 40
     },
     "publisherHosts": {
+      "www.msn.com": 5,
       "sports.khan.co.kr": 4,
-      "www.msn.com": 4,
       "biz.chosun.com": 3,
       "www.sportsseoul.com": 2,
       "www.xportsnews.com": 2,
@@ -31,9 +31,9 @@
       "www.etnews.com": 1
     },
     "finalHosts": {
+      "www.msn.com": 5,
       "sports.khan.co.kr": 4,
       "biz.chosun.com": 4,
-      "www.msn.com": 4,
       "www.sportsseoul.com": 2,
       "www.xportsnews.com": 2,
       "www.soompi.com": 2,
@@ -135,20 +135,20 @@
       "rollingstone.co.kr": 1
     },
     "discoveryWrapperHosts": {
-      "www.bing.com": 35
+      "www.bing.com": 36
     }
   },
   "thumbnailAudit": {
-    "items": 657,
+    "items": 658,
     "withThumbnail": 299,
-    "missing": 358,
+    "missing": 359,
     "uniqueThumbnailUrls": 27,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 4,
     "uniqueThumbnailAssignmentRate": 9,
     "dominantThumbnailCount": 273,
-    "dominantThumbnailShare": 42,
+    "dominantThumbnailShare": 41,
     "concentrationWarning": true,
     "repeatedUrls": [
       {
@@ -234,65 +234,33 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 40,
+    "bingNewsCandidates": 41,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 657,
-    "newsUniqueFetched": 278,
-    "newsAddedLastRun": 5,
-    "duplicateBeforeMergeLastRun": 19,
-    "duplicateGroupsCurrent": 657,
+    "newsCandidatesTotal": 658,
+    "newsUniqueFetched": 289,
+    "newsAddedLastRun": 7,
+    "duplicateBeforeMergeLastRun": 29,
+    "duplicateGroupsCurrent": 658,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 297,
-      "after": 274,
-      "collapsed": 23,
+      "before": 318,
+      "after": 284,
+      "collapsed": 34,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 9,
+      "attempted": 10,
       "found": 0,
       "assigned": 0,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
-      "missing": 5,
+      "missing": 6,
       "failed": 4,
       "results": [
-        {
-          "id": "3bbd95a333f1ae79efdc",
-          "status": "failed",
-          "publisherArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
-          "sourceUrl": ""
-        },
-        {
-          "id": "651745f76b8469f7fe65",
-          "status": "failed",
-          "publisherArticleUrl": "https://x.com/NMlXX_Haewon",
-          "sourceUrl": ""
-        },
-        {
-          "id": "937b773eb419381da3d0",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "0dce33409a82f8bfa806",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
-          "resolvedArticleHost": "www.msn.com"
-        },
         {
           "id": "f60f0f16157da91b9bf1",
           "status": "failed",
@@ -330,17 +298,59 @@
           "resolvedArticleHost": "osen.co.kr"
         },
         {
+          "id": "e75ec45c6ffcf657d60d",
+          "status": "missing",
+          "candidate": null,
+          "candidates": [],
+          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%8B%A0%EA%B3%A1-%EA%B8%B4-%EC%86%8C%EC%9B%90-birthday-wish-%EB%A9%9C%EB%A1%A0-%ED%86%B1-100-34%EC%9C%84-%EC%A7%84%EC%9E%85-%ED%86%B1-5-%EB%8B%AC%EC%84%B1/ar-AA2fDrrB",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%8B%A0%EA%B3%A1-%EA%B8%B4-%EC%86%8C%EC%9B%90-birthday-wish-%EB%A9%9C%EB%A1%A0-%ED%86%B1-100-34%EC%9C%84-%EC%A7%84%EC%9E%85-%ED%86%B1-5-%EB%8B%AC%EC%84%B1/ar-AA2fDrrB",
+          "resolvedArticleHost": "www.msn.com"
+        },
+        {
           "id": "573c328cd899cbdb983c",
           "status": "failed",
           "publisherArticleUrl": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
           "sourceUrl": ""
+        },
+        {
+          "id": "3bbd95a333f1ae79efdc",
+          "status": "failed",
+          "publisherArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
+          "sourceUrl": ""
+        },
+        {
+          "id": "651745f76b8469f7fe65",
+          "status": "failed",
+          "publisherArticleUrl": "https://x.com/NMlXX_Haewon",
+          "sourceUrl": ""
+        },
+        {
+          "id": "937b773eb419381da3d0",
+          "status": "missing",
+          "candidate": null,
+          "candidates": [],
+          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+          "resolvedArticleHost": "www.msn.com"
+        },
+        {
+          "id": "0dce33409a82f8bfa806",
+          "status": "missing",
+          "candidate": null,
+          "candidates": [],
+          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
+          "resolvedArticleHost": "www.msn.com"
         }
       ]
     }
   },
   "thumbnailProvenance": {
     "assignedBySource": {
-      "unknown": 631,
+      "unknown": 632,
       "og:image": 24,
       "twitter:image": 2
     }
@@ -605,6 +615,16 @@
       "urlCoverage": 100,
       "thumbnailCoverage": 100,
       "dateCoverage": 100
+    },
+    {
+      "source": "스타뉴스 on MSN",
+      "items": 1,
+      "withUrl": 1,
+      "withThumbnail": 0,
+      "withDate": 1,
+      "urlCoverage": 100,
+      "thumbnailCoverage": 0,
+      "dateCoverage": 100
     }
   ],
   "sourceCollectionStatus": [
@@ -628,11 +648,11 @@
     }
   ],
   "classification": {
-    "items": 657,
+    "items": 658,
     "categoryCounts": {
       "video": 182,
       "interview": 36,
-      "news": 386,
+      "news": 387,
       "brand": 20,
       "event": 5,
       "performance": 26,
@@ -679,7 +699,7 @@
     "broken": [],
     "rateLimited": 1,
     "unreachable": 1,
-    "thumbnailMissing": 358,
+    "thumbnailMissing": 359,
     "results": [
       {
         "kind": "article",
@@ -816,14 +836,14 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBsdUxKcmlBSkJLcWdBSGlQTEZtMVlia29GQ0hfYlh6YjNVcFpoU3dtWGI1Si1zeWJnRGZJRzQ4QzM1RW9YSENwOFNsTnltRnRWUlVySGtPUHoxMkZN?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE05RDlFY3JYUEtwc1hLaXNLbEE5RVhYMzFUM2tWZ0NUb1ZpRngweTRwcTFYNFBWaWxyX1V2QXJtYi11TkNsMGQ4ZUZScFhwUDc4Y2xFSjJyTlZxRUY5?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -1681,7 +1701,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T06:15:29.826Z",
+    "generatedAt": "2026-11-24T06:17:34.068Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

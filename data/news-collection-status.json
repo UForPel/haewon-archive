@@ -1,41 +1,41 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T06:15:16.626Z",
+  "collectedAt": "2026-11-24T06:17:21.466Z",
   "searchPack": 0,
   "queries": [
     {
       "query": "오해원 NMIXX",
-      "candidates": 108,
-      "uniqueCandidates": 108
+      "candidates": 56,
+      "uniqueCandidates": 56
     },
     {
       "query": "해원 엔믹스",
-      "candidates": 110,
-      "uniqueCandidates": 110
+      "candidates": 111,
+      "uniqueCandidates": 111
     },
     {
       "query": "NMIXX Haewon",
-      "candidates": 59,
-      "uniqueCandidates": 59
+      "candidates": 112,
+      "uniqueCandidates": 112
     },
     {
       "query": "Haewon NMIXX news",
-      "candidates": 20,
-      "uniqueCandidates": 20
+      "candidates": 39,
+      "uniqueCandidates": 39
     }
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
-  "bingCandidates": 40,
+  "bingCandidates": 41,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 297,
-  "uniqueIncoming": 278,
-  "added": 5,
+  "fetched": 318,
+  "uniqueIncoming": 289,
+  "added": 7,
   "rssImageSignals": {
-    "items": 257,
-    "sourceUrlItems": 255,
+    "items": 277,
+    "sourceUrlItems": 275,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -49,46 +49,14 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 9,
+    "attempted": 10,
     "found": 0,
     "assigned": 0,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
-    "missing": 5,
+    "missing": 6,
     "failed": 4,
     "results": [
-      {
-        "id": "3bbd95a333f1ae79efdc",
-        "status": "failed",
-        "publisherArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
-        "sourceUrl": ""
-      },
-      {
-        "id": "651745f76b8469f7fe65",
-        "status": "failed",
-        "publisherArticleUrl": "https://x.com/NMlXX_Haewon",
-        "sourceUrl": ""
-      },
-      {
-        "id": "937b773eb419381da3d0",
-        "status": "missing",
-        "candidate": null,
-        "candidates": [],
-        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
-        "resolvedArticleHost": "www.msn.com"
-      },
-      {
-        "id": "0dce33409a82f8bfa806",
-        "status": "missing",
-        "candidate": null,
-        "candidates": [],
-        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
-        "resolvedArticleHost": "www.msn.com"
-      },
       {
         "id": "f60f0f16157da91b9bf1",
         "status": "failed",
@@ -126,18 +94,60 @@
         "resolvedArticleHost": "osen.co.kr"
       },
       {
+        "id": "e75ec45c6ffcf657d60d",
+        "status": "missing",
+        "candidate": null,
+        "candidates": [],
+        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%8B%A0%EA%B3%A1-%EA%B8%B4-%EC%86%8C%EC%9B%90-birthday-wish-%EB%A9%9C%EB%A1%A0-%ED%86%B1-100-34%EC%9C%84-%EC%A7%84%EC%9E%85-%ED%86%B1-5-%EB%8B%AC%EC%84%B1/ar-AA2fDrrB",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%8B%A0%EA%B3%A1-%EA%B8%B4-%EC%86%8C%EC%9B%90-birthday-wish-%EB%A9%9C%EB%A1%A0-%ED%86%B1-100-34%EC%9C%84-%EC%A7%84%EC%9E%85-%ED%86%B1-5-%EB%8B%AC%EC%84%B1/ar-AA2fDrrB",
+        "resolvedArticleHost": "www.msn.com"
+      },
+      {
         "id": "573c328cd899cbdb983c",
         "status": "failed",
         "publisherArticleUrl": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
         "sourceUrl": ""
+      },
+      {
+        "id": "3bbd95a333f1ae79efdc",
+        "status": "failed",
+        "publisherArticleUrl": "https://www.bntnews.co.kr/article/view/bnt202408300086",
+        "sourceUrl": ""
+      },
+      {
+        "id": "651745f76b8469f7fe65",
+        "status": "failed",
+        "publisherArticleUrl": "https://x.com/NMlXX_Haewon",
+        "sourceUrl": ""
+      },
+      {
+        "id": "937b773eb419381da3d0",
+        "status": "missing",
+        "candidate": null,
+        "candidates": [],
+        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+        "resolvedArticleHost": "www.msn.com"
+      },
+      {
+        "id": "0dce33409a82f8bfa806",
+        "status": "missing",
+        "candidate": null,
+        "candidates": [],
+        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
+        "resolvedArticleHost": "www.msn.com"
       }
     ]
   },
   "deduplicationComparison": {
-    "before": 297,
-    "after": 274,
-    "collapsed": 23,
+    "before": 318,
+    "after": 284,
+    "collapsed": 34,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 657
+  "totalCandidates": 658
 }
