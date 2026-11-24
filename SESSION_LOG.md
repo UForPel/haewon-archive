@@ -714,3 +714,34 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Expand metadata candidate extraction only with defensible source types (OG/Twitter, RSS media/enclosure/description, and structured image metadata); preserve per-article provenance and do not treat all candidates as equally valid.
 - Add a review workflow with explicit article-image suitability labels (relevant / unrelated / generic / unavailable / rights unclear) and report agreement only against reviewed records.
 - Investigate why Google News response returns one repeated image; retain the 273-row legacy group unchanged until review.
+
+## 2026-11-24 — RSS image candidate expansion and article-level review
+
+### Starting-state verification
+- Re-read PROJECT_MEMORY, CHATGPT_OPERATING_RULES, DECISIONS, SESSION_LOG, PROJECT_STATUS and ROADMAP, then inspected main, collector, comparator, dashboard, data and workflow.
+- #493 and #490 were both completed successfully. Their job steps included Pages artifact upload and Deploy to GitHub Pages success.
+- Latest historical data at start: 620 candidates, 273 thumbnails, 347 missing, one URL shared by 273 articles; 0 records had RSS candidate arrays; 12 had metadata candidate arrays. Stored Google News RSS descriptions were anchor/title HTML, not image markup. Raw historical RSS bodies were not saved, so absence of all possible tags cannot be retroactively proven.
+
+### Implementation commits
+- Expanded RSS extraction: Media RSS thumbnail/content, image Enclosure, description HTML, content:encoded HTML.
+- Expanded article metadata extraction: OG/Twitter including secure_url, link rel=image_src, itemprop=image, JSON-LD image/thumbnailUrl/contentUrl.
+- Candidate records now retain source and priority; candidate arrays merge across collection runs instead of replacing one another. Metadata fetch provenance stores resolved article URL, fetch time and status.
+- Added aggregate RSS response diagnostics: RSS item count, media thumbnail/content/enclosure counts, content:encoded count and image tags in descriptions/encoded content. Raw feed bodies are not stored.
+- Added article-level image candidate review controls and labels (relevant, unrelated, generic/logo, broken, rights unclear, uncertain), localStorage persistence and JSON import/export.
+- Added separate candidate suitability precision and selected-thumbnail precision calculations. These require manual labels and must not be represented as model/classifier accuracy.
+- Key commits: 4799c1e, 1582bc4, 902d86d, 7f8ba85, e6e54b6, 8d1ffe0, 032c33b, 0b2d72c, 5a2f15c, 654b0d9, 5039f60, e1708b4, 62499e4, bed265c, 0534747, 5811f14, ca90f16, 8052e55, 300c565, f683ba2 (and subsequent test/doc commits).
+- CI failures #500–#510 and #511/#512 were inspected through job logs. Root causes included malformed literal newline/regex escaping in collect-news.mjs and an incorrect candidate-count assertion. Fixes were committed; do not mark green until a later run proves it.
+- At the time of this log update, #514 was in progress and #516 was queued; subsequent commits trigger additional runs. Latest code has not yet been verified through full CI or Pages.
+- No local test result is claimed. GitHub Actions is the execution authority.
+
+### Measurement and safety boundaries
+- Existing 273 records using the repeated Google-hosted URL remain untouched.
+- The new RSS diagnostics will provide current response evidence on the next successful collector run; current stored data alone does not reveal all original XML tags.
+- Browser-local labels are not shared between devices. JSON export/import is provided; no paid service or backend was introduced.
+- Until manual labels exist, suitability precision is unmeasured. Visual relevance, actual image identity and reuse rights are separate questions.
+
+### Next actions
+1. Verify the latest CI run, collect its RSS image-signal counts and resulting per-article candidates.
+2. Repair any remaining failures; rerun until unit tests, data validation and Pages deployment succeed.
+3. Inspect live Pages visually on mobile and verify label save/export/import.
+4. Keep the repeated-URL set intact until article-level human review.
