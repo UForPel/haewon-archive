@@ -68,7 +68,7 @@ export function parseRss(xml,query,now=new Date().toISOString()){
   if(!title||!url||!/^https:\/\/\S+/i.test(url))return null;
   const date=pub?new Date(pub):null,publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const id=createHash('sha256').update(url).digest('hex').slice(0,20);
-  const rssImageCandidates=extractRssThumbnailCandidates(raw,description,url),thumbnail=rssImageCandidates[0];
+  const rssImageCandidates=extractRssThumbnailCandidates(raw,description+' '+tag(raw,'content:encoded'),url),thumbnail=rssImageCandidates[0];
   return {id,title,url,publishedAt,description:description.slice(0,1200),thumbnailUrl:thumbnail?.url||'',thumbnailSource:thumbnail?.source||'',thumbnailCandidates:rssImageCandidates,sourceName:source,discoverySource:'google-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,description)};
  }).filter(Boolean);
  return items;
