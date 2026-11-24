@@ -134,3 +134,5 @@ main,section,.section-heading,.controls,.date-controls,.photo-card,.video-card,.
 .discovery-card .photo-description{margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.6}
 .discovery-card .tag{display:inline-flex;margin:0 0 4px}
 @media(max-width:600px){.discovery-card{padding:12px}.discovery-card .photo-card-details h3{font-size:15px}.quality-details-body{padding:10px 12px}}
+
+.discovery-card .photo-description{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
