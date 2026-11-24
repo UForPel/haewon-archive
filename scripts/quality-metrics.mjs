@@ -64,8 +64,11 @@ export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoS
  const nmixxTitleMatches=filterDiscoveryRelevance(articleCandidates,'nmixx');
  const verifiedPublisherArticles=articleCandidates.filter(hasExplicitPublisherArticleUrl);
  const verifiedHaewonArticles=filterDiscoveryRelevance(articleCandidates,'verified-haewon');
+ const hasProvenanceThumbnail=item=>/^https:\/\//i.test(String(item.thumbnailUrl||''))&&Boolean(item.thumbnailSource||item.thumbnailProvenance?.source);
+ const verifiedPublisherArticlesWithProvenanceThumbnail=verifiedPublisherArticles.filter(hasProvenanceThumbnail);
+ const verifiedHaewonWithProvenanceThumbnail=verifiedHaewonArticles.filter(hasProvenanceThumbnail);
  const matchedArticleIds=new Set([...haewonTitleMatches,...nmixxTitleMatches].map(item=>item.id||item.url||item.title));
- const discoveryRelevance={totalCandidates:discovery.length,articleCandidates:articleCandidates.length,videoCandidates:discovery.length-articleCandidates.length,verifiedPublisherArticles:verifiedPublisherArticles.length,verifiedHaewonArticles:verifiedHaewonArticles.length,haewonTitleMatches:haewonTitleMatches.length,nmixxTitleMatches:nmixxTitleMatches.length,otherArticleCandidates:Math.max(0,articleCandidates.length-matchedArticleIds.size),defaultScope:'verified-haewon-title-match'};
+ const discoveryRelevance={totalCandidates:discovery.length,articleCandidates:articleCandidates.length,videoCandidates:discovery.length-articleCandidates.length,verifiedPublisherArticles:verifiedPublisherArticles.length,verifiedHaewonArticles:verifiedHaewonArticles.length,verifiedPublisherArticlesWithProvenanceThumbnail:verifiedPublisherArticlesWithProvenanceThumbnail.length,verifiedHaewonWithProvenanceThumbnail:verifiedHaewonWithProvenanceThumbnail.length,haewonTitleMatches:haewonTitleMatches.length,nmixxTitleMatches:nmixxTitleMatches.length,otherArticleCandidates:Math.max(0,articleCandidates.length-matchedArticleIds.size),defaultScope:'verified-haewon-title-match'};
  const fetched=Number(newsStatus.fetched||0), unique=Number(newsStatus.uniqueIncoming||0), deduped=groupDiscoveryDuplicates(discovery);
  const titleKey=item=>String(item.title||'').replace(/<[^>]*>/g,' ').replace(/&amp;/gi,'&').normalize('NFKC').toLocaleLowerCase().replace(/\b(?:youtube|youtu\.be)\b/g,'').replace(/[\p{P}\p{S}\s]+/gu,'').trim();
  const titleGroups=new Map();for(const item of discovery){const key=titleKey(item);if(key.length>=32)titleGroups.set(key,(titleGroups.get(key)||[]).concat(item));}
