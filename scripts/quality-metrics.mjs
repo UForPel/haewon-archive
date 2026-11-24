@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { classifyDiscoveryCategories, groupDiscoveryDuplicates } from '../js/discovery-kind.mjs';
-import { compareThumbnailCandidates, buildThumbnailReview } from '../js/thumbnail-comparison.m';
+import { compareThumbnailCandidates, buildThumbnailReview } from '../js/thumbnail-comparison.mjs';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const readJson=async path=>JSON.parse(await readFile(resolve(ROOT,path),'utf8'));
 export function summarizeThumbnailUrls(items=[]){
