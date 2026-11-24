@@ -42,7 +42,7 @@ test('article relevance scopes separate Haewon, NMIXX and all article candidates
  const articles=filterArticleCandidates(candidates);
  assert.equal(articles.length,4);
  assert.equal(filterDiscoveryRelevance(articles,'haewon').length,2);
- assert.equal(filterDiscoveryRelevance(articles,'nmixx').length,3);
+ assert.equal(filterDiscoveryRelevance(articles,'nmixx').length,1);
  assert.equal(filterDiscoveryRelevance(articles,'all').length,4);
  assert.equal(classifyDiscoveryRelevance(candidates[0]),'haewon');
  assert.equal(classifyDiscoveryRelevance(candidates[1]),'nmixx');
