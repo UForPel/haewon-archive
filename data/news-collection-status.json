@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T23:16:57.705Z",
+  "collectedAt": "2026-11-24T23:18:57.409Z",
   "searchPack": 1,
   "queries": [
     {
       "query": "Haewon NMIXX interview",
-      "candidates": 14,
-      "uniqueCandidates": 14
+      "candidates": 15,
+      "uniqueCandidates": 15
     },
     {
       "query": "오해원 인터뷰",
@@ -27,12 +27,12 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
-  "bingCandidates": 32,
+  "bingCandidates": 33,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 73,
-  "uniqueIncoming": 65,
-  "added": 1,
+  "fetched": 74,
+  "uniqueIncoming": 66,
+  "added": 2,
   "rssImageSignals": {
     "items": 41,
     "sourceUrlItems": 41,
@@ -59,8 +59,8 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 73,
-    "after": 64,
+    "before": 74,
+    "after": 65,
     "collapsed": 9,
     "method": "normalized exact headline first; canonical URL fallback"
   },
