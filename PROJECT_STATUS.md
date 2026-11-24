@@ -158,3 +158,12 @@ Last updated: 2026-11-20
 - URL heuristics flag repeated URLs; path-name and small-size hints are implemented but no visual classifier. Article/image relevance remains unverified.
 - Unit tests passed in CI #401 attempt 1 and attempt 2. Collection, metrics, validation, and artifact upload also succeeded.
 - Pages deploy failed because artifact name `github-pages` was duplicated across workflow attempts. Workflow now uses an attempt-specific artifact name and matching deploy input (`github-pages-${{ github.run_attempt }}`) to make retries deterministic. CI for this pipeline fix is pending.
+
+
+## 2026-11-24 — Thumbnail concentration follow-up (audit, not root-cause fix)
+- Current main dataset is 618 candidates: 192 have thumbnails, 426 are missing, and all 192 assignments point to one exact URL. This is a newer snapshot than the previous 168/450 report; counts changed during collection.
+- Eight inspected sample records have different video/article titles and Google News redirect URLs but the same stored image URL. This confirms the dataset-level concentration, not the image's visual relevance.
+- Collector review: no dedicated thumbnail URL cache was found in the checked collector path; RSS extraction takes the first eligible image candidate; OG enrichment only runs on missing thumbnails and also accepts the first eligible OG/Twitter image. Merge preserves an existing thumbnail first and only uses incoming when the prior value is empty, so it does not normally overwrite a non-empty thumbnail. The current sample does not contain raw RSS response snapshots, so whether upstream RSS supplies one shared image or OG enrichment is responsible cannot be conclusively reproduced yet.
+- Added concentration metrics (dominant URL count/share and warning) plus tests; dashboard displays a warning without claiming visual classification. Code/test/UI commits: 203105ff, 57f4f75e, adc19bb7.
+- Pages CI runs #402/#404 both failed at deployment: upload logged artifact name `github-pages-1`, but deploy-pages reported 0 matching artifacts. Workflow now restores the standard `github-pages` artifact name/input. This correction is not yet verified by a successful Pages deployment.
+- Next root-cause step: capture raw RSS and enrichment HTML for a controlled sample, record thumbnail provenance, then compare RSS media candidates vs OG metadata and persisted merge values before changing extraction logic.
