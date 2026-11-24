@@ -294,7 +294,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b9f0f943b0b91da7b6fa",
@@ -1388,7 +1390,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "7a324b2e72aef6da732c",
@@ -2157,7 +2161,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 8,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0bb4d201145b231b35a4",
@@ -7250,7 +7256,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "611095f69a8e22f826ec",
@@ -8484,7 +8492,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "852f6ba00619a80af3ac",
