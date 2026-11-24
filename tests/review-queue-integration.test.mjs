@@ -23,3 +23,14 @@ test('publisher metadata host diagnostics are surfaced in the live discovery vie
  assert.match(view,/rowData\.assignmentRate/);
  assert.match(view,/rowData\.finalHosts/);
 });
+
+test('repeated-image review panel is wired to per-article labels and does not pool shared URL decisions',()=>{
+ assert.match(view,/groupRepeatedThumbnailAssignments\(allItems\)/);
+ assert.match(view,/findNextUnreviewedInRepeatedGroup\(filtered,reviewLabels\)/);
+ assert.match(view,/기사별 판단 유지/);
+ assert.match(view,/repeatedReviewPanel\.addEventListener\('toggle'/);
+});
+test('discovery render reads the search field locally instead of an out-of-scope query variable',()=>{
+ assert.match(view,/String\(search\?\.value\|\|''\)\.trim\(\)\?' \/ 검색 결과'/);
+ assert.doesNotMatch(view,/count\.textContent=[^;]*\bq\.trim\(\)/);
+});

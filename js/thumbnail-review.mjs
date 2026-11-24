@@ -16,6 +16,24 @@ export function findNextUnreviewedThumbnail(items=[],labels={}){
  }
  return null;
 }
+export function groupRepeatedThumbnailAssignments(items=[],minimumCount=2){
+ const groups=new Map();
+ for(const item of items){
+  let url='';try{const parsed=new URL(String(item.thumbnailUrl||''));if(parsed.protocol!=='https:')continue;parsed.hash='';url=parsed.href;}catch{continue;}
+  const group=groups.get(url)||{url,count:0,records:[]};group.count++;group.records.push(item);groups.set(url,group);
+ }
+ return [...groups.values()].filter(group=>group.count>=minimumCount).sort((a,b)=>b.count-a.count||a.url.localeCompare(b.url));
+}
+export function summarizeRepeatedThumbnailGroup(group={},labels={}){
+ const records=Array.isArray(group.records)?group.records:[],counts={relevant:0,unrelated:0,generic:0,broken:0,'rights-unclear':0,uncertain:0};
+ for(const item of records){const key=createThumbnailReviewKey(item.id,group.url),label=labels[key]?.label;if(Object.hasOwn(counts,label))counts[label]++;}
+ const reviewed=Object.values(counts).reduce((sum,count)=>sum+count,0);
+ return {count:records.length,reviewed,pending:Math.max(0,records.length-reviewed),reviewCoverage:records.length?Math.round(reviewed/records.length*100):0,counts};
+}
+export function findNextUnreviewedInRepeatedGroup(group={},labels={}){
+ for(const item of group.records||[]){const reviewKey=createThumbnailReviewKey(item.id,group.url);if(!REVIEW_LABELS.includes(labels[reviewKey]?.label))return {itemId:String(item.id||''),imageUrl:group.url,reviewKey,item};}
+ return null;
+}
 export function validateThumbnailReviewExport(payload){
  const parsed=typeof payload==='string'?JSON.parse(payload):payload;
  if(!parsed||typeof parsed!=='object'||!parsed.labels||typeof parsed.labels!=='object'||Array.isArray(parsed.labels))throw new Error('invalid thumbnail review export');

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createThumbnailReviewKey,summarizeThumbnailReviews,validateThumbnailReviewExport,mergeThumbnailReviewLabels,getThumbnailReviewCandidates,findNextUnreviewedThumbnail} from '../js/thumbnail-review.mjs';
+import {createThumbnailReviewKey,summarizeThumbnailReviews,validateThumbnailReviewExport,mergeThumbnailReviewLabels,getThumbnailReviewCandidates,findNextUnreviewedThumbnail,groupRepeatedThumbnailAssignments,summarizeRepeatedThumbnailGroup,findNextUnreviewedInRepeatedGroup} from '../js/thumbnail-review.mjs';
 import {summarizeCollection} from '../scripts/quality-metrics.mjs';
 const article={id:'article-1',thumbnailUrl:'https://cdn.example/a.jpg',thumbnailCandidates:[{url:'https://cdn.example/a.jpg',source:'media:thumbnail'},{url:'https://cdn.example/b.jpg',source:'og:image'}]};
 test('review keys are article-specific even for a shared image URL',()=>{assert.notEqual(createThumbnailReviewKey('article-1','https://cdn.example/a.jpg'),createThumbnailReviewKey('article-2','https://cdn.example/a.jpg'));});
@@ -24,4 +24,19 @@ test('next-unreviewed queue treats uncertain and rights-unclear as reviewed deci
  const items=[{id:'a',thumbnailUrl:'https://img.test/a.jpg'}];
  const labels={[createThumbnailReviewKey('a','https://img.test/a.jpg')]:{label:'uncertain'}};
  assert.equal(findNextUnreviewedThumbnail(items,labels),null);
+});
+
+test('repeated thumbnail groups preserve article records and never pool article labels',()=>{
+ const url='https://img.test/shared.jpg';
+ const items=[{id:'a',thumbnailUrl:url,title:'A'},{id:'b',thumbnailUrl:url,title:'B'},{id:'c',thumbnailUrl:'https://img.test/unique.jpg'}];
+ const groups=groupRepeatedThumbnailAssignments(items);
+ assert.equal(groups.length,1);assert.equal(groups[0].count,2);assert.deepEqual(groups[0].records.map(row=>row.id),['a','b']);
+ const labels={[createThumbnailReviewKey('a',url)]:{label:'relevant'}};
+ const summary=summarizeRepeatedThumbnailGroup(groups[0],labels);
+ assert.equal(summary.reviewed,1);assert.equal(summary.pending,1);assert.equal(summary.reviewCoverage,50);
+ assert.equal(findNextUnreviewedInRepeatedGroup(groups[0],labels).itemId,'b');
+});
+test('repeated thumbnail grouping accepts only HTTPS and normalizes URL fragments',()=>{
+ const groups=groupRepeatedThumbnailAssignments([{id:'a',thumbnailUrl:'https://img.test/a.jpg#one'},{id:'b',thumbnailUrl:'https://img.test/a.jpg#two'},{id:'c',thumbnailUrl:'http://img.test/a.jpg'}]);
+ assert.equal(groups.length,1);assert.equal(groups[0].count,2);assert.equal(groups[0].url,'https://img.test/a.jpg');
 });
