@@ -1449,6 +1449,74 @@
     "candidateSource": ""
   },
   {
+    "id": "757ec3797d78fa2fe07b",
+    "title": "엔믹스 오해원, 몰라보게 슬림해졌네…\"추구미는 '어른 여자'\" [마데핫리뷰]",
+    "url": "https://mydaily.co.kr/page/view/2026102216341082713",
+    "publisherArticleUrl": "https://mydaily.co.kr/page/view/2026102216341082713",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060086811648e89072723d14f0dc7c&url=https%3a%2f%2fmydaily.co.kr%2fpage%2fview%2f2026102216341082713&c=15229739666720620283&mkt=ko-kr",
+    "publisherHost": "mydaily.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%98%A4%ED%95%B4%EC%9B%90%20%EC%9D%B8%ED%84%B0%EB%B7%B0&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060086811648e89072723d14f0dc7c&url=https%3a%2f%2fmydaily.co.kr%2fpage%2fview%2f2026102216341082713&c=15229739666720620283&mkt=ko-kr",
+        "articleUrl": "https://mydaily.co.kr/page/view/2026102216341082713",
+        "host": "mydaily.co.kr"
+      }
+    ],
+    "publishedAt": "2026-10-22T21:00:00.000Z",
+    "description": "[마이데일리 = 김하영 기자] 그룹 엔믹스(NMIXX) 멤버 오해원이 이전보다 한층 슬림해진 모습으로 근황을 전했다. 지난 20일 유튜브 채널 '룩삼'에는 '긴 소원을 이뤘습니다 | NMIXX 릴리&#183;해원 초대석 ...",
+    "thumbnailUrl": "https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_x.png",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "마이데일리",
+    "discoverySource": "bing-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_x.png",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_s.png",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_m.png",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_l.png",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://mydaily.co.kr/page/view/2026102216341082713",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.mydaily.co.kr/page/view/2026102216341082713",
+      "resolvedArticleHost": "www.mydaily.co.kr",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_x.png",
+      "articleUrl": "https://www.mydaily.co.kr/page/view/2026102216341082713",
+      "observedAt": "2026-11-24T21:24:22.469Z"
+    }
+  },
+  {
     "id": "2850f77104152e43faa5",
     "title": "엔믹스 오해원, 볼살 실종 ‘뼈말라’된 충격 근황…“추구미는 ‘어른 여자’” - 스포츠경향",
     "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1HV1liUG9ERXF4Rl8wcVZSN3pXclBsX0xtZUd5eF9zelRhQks3M1U0aHZpekxzVWgzell4QVlmSDRONFJLbGhRNkpaYmU4SG9DOGFoazBXRlJVMkZvOUHSAWNBVV95cUxQVUlmQTBfM0oxRlcxZ0c2QzJlZDZkOGtWV0dnZUFJWUpWSVBDSEZ6Ql9jLWtxSWNJYzdIQ1haYjZwczZEMEI0RHkySnlnRnY3aDJSWTRRaWVkcEdkUjlvMjdTLUU?oc=5",
@@ -1486,7 +1554,15 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.sportsseoul.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "db6ba77a0559952da2df",
@@ -3265,7 +3341,15 @@
     "status": "candidate",
     "relevanceScore": 8,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.mk.co.kr",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "dbc804aa156c71691180",
@@ -3884,6 +3968,59 @@
     }
   },
   {
+    "id": "9ac3fa84f552e7bd2510",
+    "title": "NMIXX Haewon — Slimmer Visuals and Surprising New Look Shock Fans",
+    "url": "https://en.koreadaily.com/nmixx-haewon-slimmer-visuals-surprising-new-look/",
+    "publisherArticleUrl": "https://en.koreadaily.com/nmixx-haewon-slimmer-visuals-surprising-new-look/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060086d1f74e298457905c4a7af283&url=https%3a%2f%2fen.koreadaily.com%2fnmixx-haewon-slimmer-visuals-surprising-new-look%2f&c=15890098212771002411&mkt=ko-kr",
+    "publisherHost": "en.koreadaily.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20magazine&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060086d1f74e298457905c4a7af283&url=https%3a%2f%2fen.koreadaily.com%2fnmixx-haewon-slimmer-visuals-surprising-new-look%2f&c=15890098212771002411&mkt=ko-kr",
+        "articleUrl": "https://en.koreadaily.com/nmixx-haewon-slimmer-visuals-surprising-new-look/",
+        "host": "en.koreadaily.com"
+      }
+    ],
+    "publishedAt": "2026-11-09T03:41:00.000Z",
+    "description": "Group NMIXX Haewon recently drew significant attention by sharing her recent updates, showcasing a noticeably more mature and striking atmosphere. In the photos recently posted through NMIXX’s ...",
+    "thumbnailUrl": "https://en.koreadaily.com/wp-content/uploads/2026/11/202611092008776718_6af1ae44f255f.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "en.koreadaily",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon magazine",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://en.koreadaily.com/wp-content/uploads/2026/11/202611092008776718_6af1ae44f255f.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://en.koreadaily.com/nmixx-haewon-slimmer-visuals-surprising-new-look/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://en.koreadaily.com/nmixx-haewon-slimmer-visuals-surprising-new-look/",
+      "resolvedArticleHost": "en.koreadaily.com",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://en.koreadaily.com/wp-content/uploads/2026/11/202611092008776718_6af1ae44f255f.jpg",
+      "articleUrl": "https://en.koreadaily.com/nmixx-haewon-slimmer-visuals-surprising-new-look/",
+      "observedAt": "2026-11-24T21:24:22.469Z"
+    }
+  },
+  {
     "id": "32c0d692185e0c4cb08f",
     "title": "“건강부터 챙겨야”… 오해원, 부쩍 야윈 근황에 팬들 걱정 쏟아졌다 - 스포츠서울",
     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1ycmRpYnVudXFBSFQ2UG5hTzRLSU1GVk1Gc0FnVjRGOTQwMUNILWhBU2NERnktVDBzRGY5LWU2Ukp0amttMGVEYlZmUERhRy10a25rQXk1V3U?oc=5",
@@ -3921,7 +4058,131 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://nwww.newsis.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
+  },
+  {
+    "id": "a377796d0c2321d50f9a",
+    "title": "𝟼𝟸𝟼 on X: \"261025 BAE HAEWON ️ #배이 #엔믹스 #BAE #NMIXX #HAEWON\"",
+    "url": "https://x.com/nmixx_626/status/2115785665971699750",
+    "publisherArticleUrl": "https://x.com/nmixx_626/status/2115785665971699750",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2fx.com%2fnmixx_626%2fstatus%2f2115785665971699750&c=1236106324603787663&mkt=ko-kr",
+    "publisherHost": "x.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20brand&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2fx.com%2fnmixx_626%2fstatus%2f2115785665971699750&c=1236106324603787663&mkt=ko-kr",
+        "articleUrl": "https://x.com/nmixx_626/status/2115785665971699750",
+        "host": "x.com"
+      }
+    ],
+    "publishedAt": "2026-10-29T05:39:00.000Z",
+    "description": "261025 BAE HAEWON 🪽🕊️ #배이 #엔믹스 #BAE #NMIXX #HAEWON ...",
+    "thumbnailUrl": "https://pbs.twimg.com/media/HVzH2PTakAABESt?format=webp&name=large",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "x",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX brand",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://pbs.twimg.com/media/HVzH2PTakAABESt?format=webp&name=large",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://x.com/nmixx_626/status/2115785665971699750",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://x.com/nmixx_626/status/2115785665971699750",
+      "resolvedArticleHost": "x.com",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://pbs.twimg.com/media/HVzH2PTakAABESt?format=webp&name=large",
+      "articleUrl": "https://x.com/nmixx_626/status/2115785665971699750",
+      "observedAt": "2026-11-24T21:24:22.469Z"
+    }
+  },
+  {
+    "id": "44a8773963a6cb3a4c68",
+    "title": "NMIXX Haewon’s Recent Messages To Fans Spark Divided Reactions",
+    "url": "https://www.koreaboo.com/news/nmixx-haewon-talks-health-issues-amid-recent-weight-loss/",
+    "publisherArticleUrl": "https://www.koreaboo.com/news/nmixx-haewon-talks-health-issues-amid-recent-weight-loss/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060086d1f74e298457905c4a7af283&url=https%3a%2f%2fwww.koreaboo.com%2fnews%2fnmixx-haewon-talks-health-issues-amid-recent-weight-loss%2f&c=10851151459275675752&mkt=ko-kr",
+    "publisherHost": "www.koreaboo.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20magazine&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060086d1f74e298457905c4a7af283&url=https%3a%2f%2fwww.koreaboo.com%2fnews%2fnmixx-haewon-talks-health-issues-amid-recent-weight-loss%2f&c=10851151459275675752&mkt=ko-kr",
+        "articleUrl": "https://www.koreaboo.com/news/nmixx-haewon-talks-health-issues-amid-recent-weight-loss/",
+        "host": "www.koreaboo.com"
+      }
+    ],
+    "publishedAt": "2026-10-29T00:04:00.000Z",
+    "description": "Recently, NMIXX’s Haewon has been a hot topic in the K-Pop industry regarding her physical appearance, particularly her drastic weight loss. Her public appearances sparked online discussion and even ...",
+    "thumbnailUrl": "https://image.koreaboo.com/2026/10/post4-2026-10-29T160301.313.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795618800&KeyName=kb&Signature=RLAqR9SxIYB0_UlyPQf7IHDhP5M=",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "koreaboo",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon magazine",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://image.koreaboo.com/2026/10/post4-2026-10-29T160301.313.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795618800&KeyName=kb&Signature=RLAqR9SxIYB0_UlyPQf7IHDhP5M=",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://image.koreaboo.com/2026/10/post4-2026-10-29T160301.313.jpg?imop=Convert%2Cformat%3Djpeg%3BCompress%2Cstrength%3Dmedium&",
+        "source": "og:image:secure_url",
+        "priority": 1
+      },
+      {
+        "url": "https://image.koreaboo.com/2026/10/post4-2026-10-29T160301.313.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&",
+        "source": "twitter:image",
+        "priority": 2
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.koreaboo.com/news/nmixx-haewon-talks-health-issues-amid-recent-weight-loss/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.koreaboo.com/news/nmixx-haewon-talks-health-issues-amid-recent-weight-loss/",
+      "resolvedArticleHost": "www.koreaboo.com",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://image.koreaboo.com/2026/10/post4-2026-10-29T160301.313.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795618800&KeyName=kb&Signature=RLAqR9SxIYB0_UlyPQf7IHDhP5M=",
+      "articleUrl": "https://www.koreaboo.com/news/nmixx-haewon-talks-health-issues-amid-recent-weight-loss/",
+      "observedAt": "2026-11-24T21:24:22.469Z"
+    }
   },
   {
     "id": "4c30e8eab8286f86c364",
@@ -4002,7 +4263,7 @@
     "id": "937b773eb419381da3d0",
     "title": "Haewon of NMIXX, from ‘skin-and-bones’ to eye hollows… Regarding the changed appearance, “Take care of your health”",
     "url": "https://sports.khan.co.kr/en/article/202610231530007",
-    "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+    "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610231530007",
     "sourceUrl": "",
     "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0521ab154742799db1c22930968c71&url=https%3a%2f%2fsports.khan.co.kr%2fen%2farticle%2f202610231530007&c=1238094118948107116&mkt=ko-kr",
     "publisherHost": "sports.khan.co.kr",
@@ -4113,7 +4374,15 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://nwww.newsis.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "d07b4360ee87f4d857e3",
@@ -4188,6 +4457,69 @@
     "candidateSource": ""
   },
   {
+    "id": "bfe53579db328d52b340",
+    "title": "NMIXX Haewon’s Body Proportions Spark Worry Amid Weight Loss Accusations",
+    "url": "https://www.koreaboo.com/news/nmixx-haewon-proportions-worry-weight-loss/",
+    "publisherArticleUrl": "https://www.koreaboo.com/news/nmixx-haewon-proportions-worry-weight-loss/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060086d1f74e298457905c4a7af283&url=https%3a%2f%2fwww.koreaboo.com%2fnews%2fnmixx-haewon-proportions-worry-weight-loss%2f&c=2123505732259791455&mkt=ko-kr",
+    "publisherHost": "www.koreaboo.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20magazine&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060086d1f74e298457905c4a7af283&url=https%3a%2f%2fwww.koreaboo.com%2fnews%2fnmixx-haewon-proportions-worry-weight-loss%2f&c=2123505732259791455&mkt=ko-kr",
+        "articleUrl": "https://www.koreaboo.com/news/nmixx-haewon-proportions-worry-weight-loss/",
+        "host": "www.koreaboo.com"
+      }
+    ],
+    "publishedAt": "2026-10-07T02:19:00.000Z",
+    "description": "While some fans hit back at the wording of the tweet, many did spark concerns about Haewon’s health. Some couldn’t believe the video wasn’t edited, worrying about how fast Haewon had lost weight and ...",
+    "thumbnailUrl": "https://image.koreaboo.com/2026/10/FD2870-1-3.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795618800&KeyName=kb&Signature=an_JaPu9CMJwQ3cOiRPhWAibXcc=",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "koreaboo",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon magazine",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://image.koreaboo.com/2026/10/FD2870-1-3.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795618800&KeyName=kb&Signature=an_JaPu9CMJwQ3cOiRPhWAibXcc=",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://image.koreaboo.com/2026/10/FD2870-1-3.jpg?imop=Convert%2Cformat%3Djpeg%3BCompress%2Cstrength%3Dmedium&",
+        "source": "og:image:secure_url",
+        "priority": 1
+      },
+      {
+        "url": "https://image.koreaboo.com/2026/10/FD2870-1-3.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&",
+        "source": "twitter:image",
+        "priority": 2
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.koreaboo.com/news/nmixx-haewon-proportions-worry-weight-loss/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.koreaboo.com/news/nmixx-haewon-proportions-worry-weight-loss/",
+      "resolvedArticleHost": "www.koreaboo.com",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://image.koreaboo.com/2026/10/FD2870-1-3.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795618800&KeyName=kb&Signature=an_JaPu9CMJwQ3cOiRPhWAibXcc=",
+      "articleUrl": "https://www.koreaboo.com/news/nmixx-haewon-proportions-worry-weight-loss/",
+      "observedAt": "2026-11-24T21:24:22.469Z"
+    }
+  },
+  {
     "id": "9ed7062234125e6d26b6",
     "title": "경복궁에서 한복입고 미모 고점 터진 오해원ㄷㄷ - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1JYldYZnQ4WXJpRE92MUV4eG1FcXBDTGhUMlhUYjNDSlVaUFY0T3VFb0hCNHFlcU5nNm5wMGlpU282bi1mOW5zdmR6b2tfWDlJX1dRWjZZQTRVRm9E?oc=5",
@@ -4240,7 +4572,15 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://biz.chosun.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8483bee976c1fb0427a8",
@@ -4527,6 +4867,59 @@
     }
   },
   {
+    "id": "2ef058c52f217413e90c",
+    "title": "NMIXX Haewon admits variety work pressures on SBS Whenever Possible",
+    "url": "https://biz.chosun.com/en/en-entertainment/2026/01/20/DIV5LTYEF5H4NGBB4NMDGMC5KA/",
+    "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/01/20/DIV5LTYEF5H4NGBB4NMDGMC5KA/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060085cd6c431392b9b3e3ee43143c&url=https%3a%2f%2fbiz.chosun.com%2fen%2fen-entertainment%2f2026%2f01%2f20%2fDIV5LTYEF5H4NGBB4NMDGMC5KA%2f&c=7378663988838408037&mkt=ko-kr",
+    "publisherHost": "biz.chosun.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20interview&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060085cd6c431392b9b3e3ee43143c&url=https%3a%2f%2fbiz.chosun.com%2fen%2fen-entertainment%2f2026%2f01%2f20%2fDIV5LTYEF5H4NGBB4NMDGMC5KA%2f&c=7378663988838408037&mkt=ko-kr",
+        "articleUrl": "https://biz.chosun.com/en/en-entertainment/2026/01/20/DIV5LTYEF5H4NGBB4NMDGMC5KA/",
+        "host": "biz.chosun.com"
+      }
+    ],
+    "publishedAt": "2026-01-19T15:22:00.000Z",
+    "description": "SBS 'Whenever Possible' NMIXX Haewon confesses the side effects of being a 'JYP official variety idol'. SBS variety show 'Whenever Possible' (directed by Choi Bo-pil, writer Chae Jin-ah) is a variety ...",
+    "thumbnailUrl": "https://biz.chosun.com/resizer/v2/GI3TOOLEHAYTSNRQHBQWMMBXMQ.jpg?auth=9a62a482a603424be064d37d94b6ee6c45f5ba11734bcd6ef76069ea40d9476e&width=572&height=300&smart=true",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "조선일보",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX interview",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://biz.chosun.com/resizer/v2/GI3TOOLEHAYTSNRQHBQWMMBXMQ.jpg?auth=9a62a482a603424be064d37d94b6ee6c45f5ba11734bcd6ef76069ea40d9476e&width=572&height=300&smart=true",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/01/20/DIV5LTYEF5H4NGBB4NMDGMC5KA/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/01/20/DIV5LTYEF5H4NGBB4NMDGMC5KA/",
+      "resolvedArticleHost": "biz.chosun.com",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://biz.chosun.com/resizer/v2/GI3TOOLEHAYTSNRQHBQWMMBXMQ.jpg?auth=9a62a482a603424be064d37d94b6ee6c45f5ba11734bcd6ef76069ea40d9476e&width=572&height=300&smart=true",
+      "articleUrl": "https://biz.chosun.com/en/en-entertainment/2026/01/20/DIV5LTYEF5H4NGBB4NMDGMC5KA/",
+      "observedAt": "2026-11-24T21:24:22.469Z"
+    }
+  },
+  {
     "id": "af55e9e15faa24886090",
     "title": "[繁中字幕版]음율(UmYull) - 피차일반(彼此一般)Covered by NMIXX HAEWON - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBJdnctRmE2WFg0WVZ6VkJLTGtiTVFuWTFXbklwSmlxb2NPYndZbEgtTmppdGxITlNQUzRRa3Z3dGJTOWl3VnpQd3pjYWJ0aS03MnBKbGhKSFkzTENp?oc=5",
@@ -4606,6 +4999,117 @@
     "thumbnailMetaFetch": null
   },
   {
+    "id": "fbcbd796f896e4e77e8a",
+    "title": "Haewon NMIXX Akhirnya Ungkap Asal Usul Meme Oemochek, Kaget Jadi Viral dan Tren di Kalangan Idol",
+    "url": "https://www.kapanlagi.com/korea/haewon-nmixx-akhirnya-ungkap-asal-usul-meme-oemochek-kaget-karena-jadi-viral-dan-tren-di-kalangan-idol-d0a1421e2b.html",
+    "publisherArticleUrl": "https://www.kapanlagi.com/korea/haewon-nmixx-akhirnya-ungkap-asal-usul-meme-oemochek-kaget-karena-jadi-viral-dan-tren-di-kalangan-idol-d0a1421e2b.html",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2fwww.kapanlagi.com%2fkorea%2fhaewon-nmixx-akhirnya-ungkap-asal-usul-meme-oemochek-kaget-karena-jadi-viral-dan-tren-di-kalangan-idol-d0a1421e2b.html&c=9115420022947684956&mkt=ko-kr",
+    "publisherHost": "www.kapanlagi.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20brand&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2fwww.kapanlagi.com%2fkorea%2fhaewon-nmixx-akhirnya-ungkap-asal-usul-meme-oemochek-kaget-karena-jadi-viral-dan-tren-di-kalangan-idol-d0a1421e2b.html&c=9115420022947684956&mkt=ko-kr",
+        "articleUrl": "https://www.kapanlagi.com/korea/haewon-nmixx-akhirnya-ungkap-asal-usul-meme-oemochek-kaget-karena-jadi-viral-dan-tren-di-kalangan-idol-d0a1421e2b.html",
+        "host": "www.kapanlagi.com"
+      }
+    ],
+    "publishedAt": "2025-11-05T06:55:00.000Z",
+    "description": "Kapanlagi.com - Pada 4 November KST, kanal YouTube TEO menayangkan episode terbaru dari SALON DRIP berjudul \"Effort-Type Meme Genius and Natural Queen | EP.113 NMIXX's Lily & Haewon\". Dalam episode ...",
+    "thumbnailUrl": "https://cdns.klimg.com/resized/1280x720/p/headline/haewon-nmixx-akhirnya-ungkap-a-e57a14bc3b.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "KapanLagi",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX brand",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://cdns.klimg.com/resized/1280x720/p/headline/haewon-nmixx-akhirnya-ungkap-a-e57a14bc3b.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://cdns.klimg.com/resized/180x90/p/headline/haewon-nmixx-akhirnya-ungkap-a-e57a14bc3b.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.kapanlagi.com/korea/haewon-nmixx-akhirnya-ungkap-asal-usul-meme-oemochek-kaget-karena-jadi-viral-dan-tren-di-kalangan-idol-d0a1421e2b.html",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.kapanlagi.com/korea/haewon-nmixx-akhirnya-ungkap-asal-usul-meme-oemochek-kaget-karena-jadi-viral-dan-tren-di-kalangan-idol-d0a1421e2b.html",
+      "resolvedArticleHost": "www.kapanlagi.com",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://cdns.klimg.com/resized/1280x720/p/headline/haewon-nmixx-akhirnya-ungkap-a-e57a14bc3b.jpg",
+      "articleUrl": "https://www.kapanlagi.com/korea/haewon-nmixx-akhirnya-ungkap-asal-usul-meme-oemochek-kaget-karena-jadi-viral-dan-tren-di-kalangan-idol-d0a1421e2b.html",
+      "observedAt": "2026-11-24T21:24:22.469Z"
+    }
+  },
+  {
+    "id": "5d3c5c4cf0431d5e577e",
+    "title": "‘Salon Drip’. Photo I Captured from YouTube channel ‘TEO’",
+    "url": "https://www.mk.co.kr/en/hot-issues/11459820",
+    "publisherArticleUrl": "https://www.mk.co.kr/en/hot-issues/11459820",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2fwww.mk.co.kr%2fen%2fhot-issues%2f11459820&c=1570087971138218779&mkt=ko-kr",
+    "publisherHost": "www.mk.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20brand&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2fwww.mk.co.kr%2fen%2fhot-issues%2f11459820&c=1570087971138218779&mkt=ko-kr",
+        "articleUrl": "https://www.mk.co.kr/en/hot-issues/11459820",
+        "host": "www.mk.co.kr"
+      }
+    ],
+    "publishedAt": "2025-11-04T12:53:00.000Z",
+    "description": "Haewon of NMIXX shared the story behind the creation of the ‘Oemo Check’ meme. On the 4th, Lily and Haewon from NMIXX appeared on ‘Salon Drip’ on the YouTube channel TEO. During the show, Jang Do-yeon ...",
+    "thumbnailUrl": "https://pimg.mk.co.kr/news/cms/202511/04/news-p.v1.20251104.dd8fd8432ffb481cb097326803da6595_R.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "매일경제",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX brand",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202511/04/news-p.v1.20251104.dd8fd8432ffb481cb097326803da6595_R.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.mk.co.kr/en/hot-issues/11459820",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.mk.co.kr/en/hot-issues/11459820",
+      "resolvedArticleHost": "www.mk.co.kr",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://pimg.mk.co.kr/news/cms/202511/04/news-p.v1.20251104.dd8fd8432ffb481cb097326803da6595_R.jpg",
+      "articleUrl": "https://www.mk.co.kr/en/hot-issues/11459820",
+      "observedAt": "2026-11-24T21:24:22.469Z"
+    }
+  },
+  {
     "id": "9e04fa9851f793ee7c7b",
     "title": "엄태구, 오해원에 지적받아…”일 딱히 안 해, 요즘 편해졌네요?” [RE:뷰] - TV리포트",
     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9EM1dNLXBQaUNIRlA4c0JMejNybC1aUlVPWUpoTmhjd2lfbmVpRTQ0cHg3bG1VVmYteW5GQnJVMk5yS2hOUEtFWWU4MDYxOF9sTUpneFlhakFoZ3fSAWBBVV95cUxQYW11Zk1WQUY1VkFNN3JNbm9EOFFGVkJoblNhZ1F3XzVUUmJYV2dBU0g1Qy11RzllTFhLZWlSYUJVbzVXRTYyQ2t6UzJuaHBlOGtvVHlFX0ZISnZHOUNtcHE?oc=5",
@@ -4619,7 +5123,15 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://tvreport.co.kr",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b38c8711b2141792afa2",
@@ -4675,6 +5187,94 @@
       "url": "https://s.yimg.com/lo/mysterio/api/5f88770d3f8e21213fb6bdc7043d1f7a1316fbd9b4ee0bd2c946c4238875f408/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hollywood_reporter_217%2Fb56840acfc85c0f0b109e2a3120a823a",
       "articleUrl": "https://ca.news.yahoo.com/nmixx-thrives-change-first-full-230000106.html",
       "observedAt": "2026-11-24T05:36:19.645Z"
+    }
+  },
+  {
+    "id": "01499265d4164c3f45b9",
+    "title": "[Photo] Haewon and Haewon Walk the Red Carpet as NMIXX Representatives",
+    "url": "https://www.mk.co.kr/en/photos/11444439",
+    "publisherArticleUrl": "https://www.mk.co.kr/en/photos/11444439",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2fwww.mk.co.kr%2fen%2fphotos%2f11444439&c=17965071709997919044&mkt=ko-kr",
+    "publisherHost": "www.mk.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20brand&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2fwww.mk.co.kr%2fen%2fphotos%2f11444439&c=17965071709997919044&mkt=ko-kr",
+        "articleUrl": "https://www.mk.co.kr/en/photos/11444439",
+        "host": "www.mk.co.kr"
+      }
+    ],
+    "publishedAt": "2025-10-17T10:00:00.000Z",
+    "description": "※ This article was translated using AI technology for reader convenience. Maeil Business Newpaper(MK) provides these translations \"as they are\" and makes no warranties of any kind, either explicitly ...",
+    "thumbnailUrl": "https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.8696bb6e80fc47769e37c1b11db59f48_R.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "매일경제",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX brand",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.8696bb6e80fc47769e37c1b11db59f48_R.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.22d8d002a0434fd3aeeed5f76f04b33c_R.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.51f920f3bd50451ea6165440b92552b3_R.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.dc381f5649b644cbb2fe2b453f0c223f_R.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.616171f1da064979b424ea182e0a5327_R.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.073655bf30614d0f91fc6510f595ea9e_R.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.f1afff15f54d46c28a34e2d9d2f72deb_R.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.af5c756d74144b71be0c879d66d57ae3_R.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.mk.co.kr/en/photos/11444439",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.mk.co.kr/en/photos/11444439",
+      "resolvedArticleHost": "www.mk.co.kr",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.8696bb6e80fc47769e37c1b11db59f48_R.jpg",
+      "articleUrl": "https://www.mk.co.kr/en/photos/11444439",
+      "observedAt": "2026-11-24T21:24:22.469Z"
     }
   },
   {
@@ -4896,6 +5496,36 @@
     "thumbnailMetaFetch": null
   },
   {
+    "id": "ce4468d1f0e09b93135d",
+    "title": "NMIXX Haewon豁出去示範迷因！Lily親解釋「無跟高跟鞋」危險系數",
+    "url": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
+    "publisherArticleUrl": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2ftw.news.yahoo.com%2fnmixx-haewon%25E8%25B1%2581%25E5%2587%25BA%25E5%258E%25BB%25E7%25A4%25BA%25E7%25AF%2584%25E8%25BF%25B7%25E5%259B%25A0-lily%25E8%25A6%25AA%25E8%25A7%25A3%25E9%2587%258B-%25E7%2584%25A1%25E8%25B7%259F%25E9%25AB%2598%25E8%25B7%259F%25E9%259E%258B-%25E5%258D%25B1%25E9%259A%25AA%25E7%25B3%25BB%25E6%2595%25B8-073300314.html&c=4933993227914318106&mkt=ko-kr",
+    "publisherHost": "tw.news.yahoo.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20brand&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2ftw.news.yahoo.com%2fnmixx-haewon%25E8%25B1%2581%25E5%2587%25BA%25E5%258E%25BB%25E7%25A4%25BA%25E7%25AF%2584%25E8%25BF%25B7%25E5%259B%25A0-lily%25E8%25A6%25AA%25E8%25A7%25A3%25E9%2587%258B-%25E7%2584%25A1%25E8%25B7%259F%25E9%25AB%2598%25E8%25B7%259F%25E9%259E%258B-%25E5%258D%25B1%25E9%259A%25AA%25E7%25B3%25BB%25E6%2595%25B8-073300314.html&c=4933993227914318106&mkt=ko-kr",
+        "articleUrl": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
+        "host": "tw.news.yahoo.com"
+      }
+    ],
+    "publishedAt": "2025-04-20T00:33:00.000Z",
+    "description": "將 Yahoo 設為首選來源，在 Google 上查看更多我們的精彩報導 加入首選來源（另開新視窗） 韓國女團NMIXX於19、20日在林口體育館舉辦亞洲巡迴演唱會《NMIXX CHANGE UP MIXX LAB》，6位成員Haewon、Kyujin ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Yahoo奇摩新聞",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX brand",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
     "id": "f8b8924239c6e71a2ae4",
     "title": "오해원, 데뷔 3년 만에 해명 “아버지, 판사 아닙니다” - 더퍼블릭",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9MZUNZT0diSUFUdHJEMXA1LWRCLTc5ajRTb1V3ODlJVm1RVHloYi0yczFudGItQW9iQ0Y4TlJ2ZENfVHR6alJjMkZwcVQ1UDRRNVdnUnVsQWRXZXkwV0lhSzZiczNKZEhrdzQ40gFvQVVfeXFMUGZ6ZGZsb3BGenNFRU52UU5HUHp0R0xIZWNGWkJ6MmVrZTR6cER6YzkyWDh1NmJhRkFXQXJtODJfLW9LNDdReS00Mno0VEd2eC1MVWI3YUo5bjd6NVdvck9GWEpGRlI0OFpsLTR6RkR3?oc=5",
@@ -4942,6 +5572,36 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "96579cf215e0e82b5ccf",
+    "title": "NMIXX's Haewon drinks 24 coffee packs daily, shocks Yoo Jae-suk",
+    "url": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
+    "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2fbiz.chosun.com%2fen%2fen-entertainment%2f2025%2f03%2f20%2fMV6ESV2335BQFGUZQU4UY46JVM%2f&c=4164483093422968284&mkt=ko-kr",
+    "publisherHost": "biz.chosun.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20brand&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0600867bbb4a40a34bf7af42e9c764&url=https%3a%2f%2fbiz.chosun.com%2fen%2fen-entertainment%2f2025%2f03%2f20%2fMV6ESV2335BQFGUZQU4UY46JVM%2f&c=4164483093422968284&mkt=ko-kr",
+        "articleUrl": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
+        "host": "biz.chosun.com"
+      }
+    ],
+    "publishedAt": "2025-03-20T11:20:00.000Z",
+    "description": "NMIXX member Haewon mentioned her unique coffee taste. On the 20th, NMIXX's Haewon, Seolyun, and Baee were invited as guests on the YouTube channel 'TteunTteun' to engage in 'Mini Pinggaego' with Yoo ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "조선일보",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX brand",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6
   },
   {
     "id": "fb392e4ba8879b947e36",
@@ -5056,6 +5716,36 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "288ac9019343bb06260d",
+    "title": "NMIXX's Haewon Sits Out Today's Concert In Mexico Due To Health",
+    "url": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
+    "publisherArticleUrl": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060085cd6c431392b9b3e3ee43143c&url=https%3a%2f%2fwww.soompi.com%2farticle%2f1724678wpp%2fnmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health&c=10889188579942716596&mkt=ko-kr",
+    "publisherHost": "www.soompi.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20interview&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060085cd6c431392b9b3e3ee43143c&url=https%3a%2f%2fwww.soompi.com%2farticle%2f1724678wpp%2fnmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health&c=10889188579942716596&mkt=ko-kr",
+        "articleUrl": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
+        "host": "www.soompi.com"
+      }
+    ],
+    "publishedAt": "2025-02-20T20:09:00.000Z",
+    "description": "NMIXX’s Haewon is sitting out today’s fan concert in Mexico due to health concerns. On February 20 local time, JYP Entertainment announced that Haewon would not be performing at NMIXX’s “NMIXX CHANGE ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "soompi.com",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX interview",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6
   },
   {
     "id": "d1ead845fb2f7309acf5",
@@ -5175,7 +5865,15 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://mydaily.co.kr",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8a65d98eb7f669a8c038",
@@ -5210,6 +5908,47 @@
     "thumbnailMetaFetch": null
   },
   {
+    "id": "6c1b35df3ea9538b743b",
+    "title": "NMIXX’s Haewon showcases variety show skills on ‘radio star’",
+    "url": "https://www.allkpop.com/article/2024/08/nmixxs-haewon-showcases-variety-show-skills-on-radio-star",
+    "publisherArticleUrl": "https://www.allkpop.com/article/2024/08/nmixxs-haewon-showcases-variety-show-skills-on-radio-star",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060085cd6c431392b9b3e3ee43143c&url=https%3a%2f%2fwww.allkpop.com%2farticle%2f2024%2f08%2fnmixxs-haewon-showcases-variety-show-skills-on-radio-star&c=12486364067182011546&mkt=ko-kr",
+    "publisherHost": "www.allkpop.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20interview&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060085cd6c431392b9b3e3ee43143c&url=https%3a%2f%2fwww.allkpop.com%2farticle%2f2024%2f08%2fnmixxs-haewon-showcases-variety-show-skills-on-radio-star&c=12486364067182011546&mkt=ko-kr",
+        "articleUrl": "https://www.allkpop.com/article/2024/08/nmixxs-haewon-showcases-variety-show-skills-on-radio-star",
+        "host": "www.allkpop.com"
+      }
+    ],
+    "publishedAt": "2024-08-27T23:29:00.000Z",
+    "description": "NMIXX leader Haewon is set to showcase her variety show skills on the upcoming episode of MBC’s ‘Radio Star,’ airing on August 28 at 10:30 PM KST. The episode features Haewon alongside guests Shin ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "allkpop",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX interview",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "failed",
+      "publisherArticleUrl": "https://www.allkpop.com/article/2024/08/nmixxs-haewon-showcases-variety-show-skills-on-radio-star",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.allkpop.com/article/2024/08/nmixxs-haewon-showcases-variety-show-skills-on-radio-star",
+      "resolvedArticleHost": "www.allkpop.com",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 403,
+      "errorCode": "forbidden"
+    }
+  },
+  {
     "id": "8890aef09b5cc4dafb5c",
     "title": "모르면 안 되는 밈 제조기! 오해원, 랄랄 밈 모음 - 캐릿 Careet",
     "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE55TWptaFp2SDljM25felFXZTNmTENrMXlHTVZKd3hKeHl4T1VuYjJvdDUxTl9fUF9LMklrV2Mxa1k?oc=5",
@@ -5223,7 +5962,15 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.careet.net",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "f45ba5a8858837961933",
@@ -5314,6 +6061,69 @@
     "candidateSource": ""
   },
   {
+    "id": "b9889446cfd423ab2196",
+    "title": "NMIXX's Haewon to perform seated after minor back injury at Midyear Special Music Core in Japan",
+    "url": "https://timesofindia.indiatimes.com/entertainment/k-pop/music/news/nmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan/articleshow/111332943.cms",
+    "publisherArticleUrl": "https://timesofindia.indiatimes.com/entertainment/k-pop/music/news/nmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan/articleshow/111332943.cms",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060086d1f74e298457905c4a7af283&url=https%3a%2f%2ftimesofindia.indiatimes.com%2fentertainment%2fk-pop%2fmusic%2fnews%2fnmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan%2farticleshow%2f111332943.cms&c=15883345115187994501&mkt=ko-kr",
+    "publisherHost": "timesofindia.indiatimes.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20magazine&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060086d1f74e298457905c4a7af283&url=https%3a%2f%2ftimesofindia.indiatimes.com%2fentertainment%2fk-pop%2fmusic%2fnews%2fnmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan%2farticleshow%2f111332943.cms&c=15883345115187994501&mkt=ko-kr",
+        "articleUrl": "https://timesofindia.indiatimes.com/entertainment/k-pop/music/news/nmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan/articleshow/111332943.cms",
+        "host": "timesofindia.indiatimes.com"
+      }
+    ],
+    "publishedAt": "2024-06-28T04:40:00.000Z",
+    "description": "NMIXX's Haewon recently sustained a minor back injury during practice. On June 28, JYP Entertainment announced that she will perform seated at MBC's 2024 midyear special \"Music Core in Japan\" this ...",
+    "thumbnailUrl": "https://static.toiimg.com/thumb/msid-111332937,width-1070,height-580,imgsize-27288,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "Indiatimes",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon magazine",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://static.toiimg.com/thumb/msid-111332937,width-1070,height-580,imgsize-27288,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-111332937/111332937.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://static.toiimg.com/thumb/msid-111332937,width-1280,height-720,imgsize-27288,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://timesofindia.indiatimes.com/entertainment/k-pop/music/news/nmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan/articleshow/111332943.cms",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://timesofindia.indiatimes.com/entertainment/k-pop/music/news/nmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan/articleshow/111332943.cms",
+      "resolvedArticleHost": "timesofindia.indiatimes.com",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://static.toiimg.com/thumb/msid-111332937,width-1070,height-580,imgsize-27288,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+      "articleUrl": "https://timesofindia.indiatimes.com/entertainment/k-pop/music/news/nmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan/articleshow/111332943.cms",
+      "observedAt": "2026-11-24T21:24:22.469Z"
+    }
+  },
+  {
     "id": "204b9bb212cd4af83767",
     "title": "NMIXX Haewon and BAE Illuminate with Variety Stardom - 한국아이닷컴",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBPeVVvWDctN0Q2MHhqVXdDLWNvSTJwRTJSQlR2cUxpeFR4WWxxeGczeldvYldCMEpLSHlvdWpPUTFUUjFTRkpNT3g3UzlfMVFTYU1iNzhpd19hbXhpNklDSzhFQmJZRUNSRmNN0gFvQVVfeXFMTi1BQmZqNnVTZXItVFladE5UQkUyTm9jcHozSlowbWMwUDR5UnhkaEF1MlRYYnpvTk9xcHluSGdSMDdBdC1RWkhCc1ZLeERSNmJRY2pxR3ZZZFB6aS1UVTZ6SWlSSm9HTTM1YVhRM3hB?oc=5",
@@ -5367,7 +6177,15 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://sports.donga.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "2164b855e04c405d9cb0",
@@ -5610,7 +6428,15 @@
     "status": "candidate",
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.nocutnews.co.kr",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "94683f2727ed302a289e",
@@ -12056,7 +12882,15 @@
     "status": "candidate",
     "relevanceScore": 3,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://youtu.be",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "4f417f562a8157cde0c5",
@@ -12144,7 +12978,15 @@
     "status": "candidate",
     "relevanceScore": 3,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://news.tf.co.kr",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "20625ff7bedc1ba9bca0",
@@ -12160,7 +13002,15 @@
     "status": "candidate",
     "relevanceScore": 3,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://youtu.be",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "43d061ffc340f94d1801",
@@ -14024,6 +14874,74 @@
     "candidateSource": ""
   },
   {
+    "id": "1755d9fe336fcc757579",
+    "title": "NMIXX on New EP ‘Fe3O4: Forward’ and What’s at the Core of Their Unique Concept",
+    "url": "https://www.hollywoodreporter.com/music/music-news/nmixx-fe3o4-forward-know-about-me-interview-kpop-1236170551/",
+    "publisherArticleUrl": "https://www.hollywoodreporter.com/music/music-news/nmixx-fe3o4-forward-know-about-me-interview-kpop-1236170551/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060085cd6c431392b9b3e3ee43143c&url=https%3a%2f%2fwww.hollywoodreporter.com%2fmusic%2fmusic-news%2fnmixx-fe3o4-forward-know-about-me-interview-kpop-1236170551%2f&c=760371101278332496&mkt=ko-kr",
+    "publisherHost": "www.hollywoodreporter.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20interview&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b060085cd6c431392b9b3e3ee43143c&url=https%3a%2f%2fwww.hollywoodreporter.com%2fmusic%2fmusic-news%2fnmixx-fe3o4-forward-know-about-me-interview-kpop-1236170551%2f&c=760371101278332496&mkt=ko-kr",
+        "articleUrl": "https://www.hollywoodreporter.com/music/music-news/nmixx-fe3o4-forward-know-about-me-interview-kpop-1236170551/",
+        "host": "www.hollywoodreporter.com"
+      }
+    ],
+    "publishedAt": "2025-03-25T11:11:00.000Z",
+    "description": "The six-member group, known for their signature genre-blending sound dubbed MIXX Pop, discusses growth, what they're most proud of and why teamwork matters: “The only people who can really relate to ...",
+    "thumbnailUrl": "https://www.hollywoodreporter.com/wp-content/uploads/2025/03/Nmixx-e1742758681594.jpg?w=1440&",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "The Hollywood Reporter",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX interview",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://www.hollywoodreporter.com/wp-content/uploads/2025/03/Nmixx-e1742758681594.jpg?w=1440&",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://www.hollywoodreporter.com/wp-content/uploads/2025/03/Nmixx-e1742758681594.jpg?w=1440&h=810&crop=1",
+        "source": "twitter:image",
+        "priority": 2
+      },
+      {
+        "url": "https://www.hollywoodreporter.com/wp-content/uploads/2025/03/Nmixx-e1742758681594.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://www.hollywoodreporter.com/wp-content/uploads/2025/03/Nmixx-e1742758681594.jpg?w=200&h=200&crop=1",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.hollywoodreporter.com/music/music-news/nmixx-fe3o4-forward-know-about-me-interview-kpop-1236170551/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.hollywoodreporter.com/music/music-news/nmixx-fe3o4-forward-know-about-me-interview-kpop-1236170551/",
+      "resolvedArticleHost": "www.hollywoodreporter.com",
+      "fetchedAt": "2026-11-24T21:24:22.469Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://www.hollywoodreporter.com/wp-content/uploads/2025/03/Nmixx-e1742758681594.jpg?w=1440&",
+      "articleUrl": "https://www.hollywoodreporter.com/music/music-news/nmixx-fe3o4-forward-know-about-me-interview-kpop-1236170551/",
+      "observedAt": "2026-11-24T21:24:22.469Z"
+    }
+  },
+  {
     "id": "b76175feef717c860076",
     "title": "[포토] \"외모 체크!\" 엔믹스, '박보검의 칸타빌레' 출근 완료 - iMBC 연예",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE13cnJFbjZaZUpqLVk5TVItenR6aGxQbnFqMW9OeXJURFYtbHRnZTZzeUJOTkZ0WVp4R2ZZV0FnWXQwT1VYMjU2YVJ6OTFBYVRnVk5HUU5WRXZTRGlhWENqOA?oc=5",
@@ -14711,6 +15629,24 @@
     "thumbnailMetaFetch": null
   },
   {
+    "id": "8c6004031f1c99ed935b",
+    "title": "홍진경·이정재 오해받았지만…김선화 \"잊을 수 없는 작업\" [인터뷰+] - 한국경제",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9rQ1Fady13MzhWeWNNc3FqSDQ0WDdSWWpsYU9WeVBXYzJuTWFINVlTT3R0bVdITVQ3VnNTZWhKdU9MajlfSUE0WHBFLVNGSWJvbm9iMVdkeFhKZw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.hankyung.com",
+    "publishedAt": "2024-12-24T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9rQ1Fady13MzhWeWNNc3FqSDQ0WDdSWWpsYU9WeVBXYzJuTWFINVlTT3R0bVdITVQ3VnNTZWhKdU9MajlfSUE0WHBFLVNGSWJvbm9iMVdkeFhKZw?oc=5\" target=\"_blank\">홍진경·이정재 오해받았지만…김선화 \"잊을 수 없는 작업\" [인터뷰+]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">한국경제</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-24T21:24:21.784Z",
+    "status": "candidate",
+    "relevanceScore": 1
+  },
+  {
     "id": "1a56ee676db5f3385be3",
     "title": "[인터뷰]한국인 첫 F1 드라이버 꿈꾸는 고교생 서주원 - 네이트",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1UdUJJbEtZWC1TNVlhZXJ1NENIZjhxV0tDQkhrYmpmaWZDWWJqWGNfNXFxR0ppbWdJMmR4TnlOZEhhY01NNXg2M0JqU1hrMzF6eHpiSy1jdl9ORXIy?oc=5",
@@ -14724,7 +15660,15 @@
     "status": "candidate",
     "relevanceScore": 1,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://sports.news.nate.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "3923ad97e318dc8f1e21",
@@ -14740,7 +15684,15 @@
     "status": "candidate",
     "relevanceScore": 1,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://m.newsen.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "de3bb0a394ad19c5dfe3",
@@ -14804,7 +15756,15 @@
     "status": "candidate",
     "relevanceScore": 0,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.munhwa.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "ccb3c424420fc02113d6",
@@ -14820,7 +15780,15 @@
     "status": "candidate",
     "relevanceScore": 0,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.ilyosisa.co.kr",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "95608efdb71d88534151",
@@ -14836,7 +15804,15 @@
     "status": "candidate",
     "relevanceScore": 0,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.ilyosisa.co.kr",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "ae7be3c0362faa0551c8",
