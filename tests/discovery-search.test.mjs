@@ -57,4 +57,3 @@ test('verified publisher URL scope rejects HTTP, wrapper, root-only and credenti
   assert.equal(hasExplicitPublisherArticleUrl({publisherArticleUrl}),false);
  }
 });
-});
