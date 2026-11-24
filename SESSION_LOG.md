@@ -601,3 +601,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Updated README, CHATGPT_OPERATING_RULES.md, PROJECT_STATUS.md and ROADMAP.md. UI changes must include working controls, accessible labels, state/error feedback, tests and inventory updates.
 - No new product button was added in this pass; existing controls were inventoried and omission prevention was implemented. Live visual/tap testing remains unverified.
 - Test commit `c2bdcbaf`; inventory commit `0e8a68aa`. Latest Actions run after final docs/test commits still needs verification.
+
+
+## 2026-11-24 — Conversation follow-up button prompt standard
+- Clarification: user meant the ChatGPT conversation follow-up button, not buttons inside the Haewon Archive website. These buttons are convenient and must not be omitted from substantial continuation offers.
+- Updated `CHATGPT_OPERATING_RULES.md` to require a research-informed recursive improvement prompt: recheck GitHub/CI and project constraints, consult recent relevant research/practice where useful, critically assess evidence, inspect code/data/tests, prioritize a bottleneck, implement and test a bounded improvement, compare outcomes, iterate, and log concrete results.
+- Guardrails: no claim that button text itself ensures research is current; research must be actually retrieved and assessed when the prompt runs. Do not blindly adopt speculative ideas. Keep free-first, privacy/security, actual implementation, separate meaningful commits, CI/deployment verification and honest status reporting.
+- Commit: `9449d4d5` (`docs: define research-informed conversation follow-up buttons`).
+- Verification: GitHub contents commit confirmed; Actions and deployment triggered by this documentation update have not yet been checked.
+- Next: use this standard for the next continuation button and check the triggered workflow status.
