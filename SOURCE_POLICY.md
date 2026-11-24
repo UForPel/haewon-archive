@@ -29,12 +29,3 @@ The relevance flag is a simple text-keyword match, not human verification. Group
 ## Corrections and removal
 
 For a broken link, incorrect attribution, or rights concern, update or remove the affected JSON entry and record the reason in a commit message.
-
-
-## 2026-11-24 — explicit article URL sources
-- Google News RSS `source@url` is a publisher/site-level URL, not an article permalink. Its `item/link` is commonly a Google News wrapper; opaque wrapper IDs are not decoded or resolved by this project.
-- Publisher-owned RSS/Atom is the preferred source when its item `link` or an explicitly permalink-marked GUID contains a public HTTPS article URL. Preserve the feed URL and publisher/site URL separately.
-- Bing News public RSS is a best-effort discovery surface, not a documented/versioned API. The collector accepts an article URL only when the Bing `news/apiclick.aspx` result explicitly exposes an HTTPS destination in its ordinary `url` query parameter. It does not follow the tracking URL or infer a URL from title/source text.
-- Bing candidate records retain the original discovery URL, publisherArticleUrl, publisherHost, feed provenance and candidate source. Treat this as a direct URL explicitly present in public RSS metadata, not as a verified final HTTP redirect host.
-- Official public search result pages can be used manually as evidence only when the result itself exposes a complete HTTPS article href. Search snippets, publisher homepages and redirect-only links do not qualify.
-- Free-route comparison: publisher RSS/Atom (best provenance and direct item links where available); Bing News RSS explicit destination parameter (broader coverage but undocumented and smaller result set); Google News RSS (broad discovery but wrapper-only under the current observed feed shape); manual official search result inspection (direct href when visible, but not a reliable unattended feed).

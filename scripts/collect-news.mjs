@@ -88,7 +88,7 @@ export function extractBingNewsArticleUrl(value=''){
  try{
   const wrapper=new URL(String(value||''));
   const host=wrapper.hostname.toLowerCase();
-  if(!['bing.com','www.bing.com'].includes(host)||!/^\\/news\\/apiclick\\.aspx$/i.test(wrapper.pathname))return '';
+  if(!['bing.com','www.bing.com'].includes(host)||wrapper.pathname.toLowerCase()!=='/news/apiclick.aspx')return '';
   const destination=wrapper.searchParams.get('url')||'';
   const article=new URL(destination);
   if(article.protocol!=='https:'||article.username||article.password||!article.hostname||article.pathname==='/')return '';
@@ -99,11 +99,11 @@ export function extractBingNewsArticleUrl(value=''){
  }catch{return '';}
 }
 export function parseBingNewsRss(xml,query,now=new Date().toISOString()){
- if(typeof xml!=='string'||!/<rss\\b/i.test(xml))throw new Error('Bing RSS 응답이 아닙니다');
- return [...xml.matchAll(/<item\\b[^>]*>([\\s\\S]*?)<\\/item>/gi)].map(([,raw])=>{
+ if(typeof xml!=='string'||!/<rss\b/i.test(xml))throw new Error('Bing RSS 응답이 아닙니다');
+ return [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map(([,raw])=>{
   const title=tag(raw,'title'),discoveryUrl=tag(raw,'link'),articleUrl=extractBingNewsArticleUrl(discoveryUrl);
   if(!title||!articleUrl)return null;
-  const sourceTag=raw.match(/<(?:news:)?source\\b[^>]*>/i)?.[0]||'';
+  const sourceTag=raw.match(/<(?:news:)?source\b[^>]*>/i)?.[0]||'';
   const sourceName=tag(raw,'news:source')||tag(raw,'source')||'Bing News';
   const sourceUrlCandidate=attr(sourceTag,'url');
   const sourceUrl=/^https:\\/\\//i.test(sourceUrlCandidate)?sourceUrlCandidate:'';
