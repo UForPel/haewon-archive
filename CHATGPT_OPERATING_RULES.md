@@ -164,3 +164,12 @@ For each substantial update include: changed paths; planned vs implemented items
 - Metadata enrichment made 0 attempts because all eligible targets were inside retry windows.
 - The explicit-URL video resolver accepts only HTTPS YouTube URLs already present in item metadata and does not follow Google News wrapper redirects.
 - Pages deploy succeeded; actual browser/mobile and local file transfer remain unverified.
+
+
+## Latest confirmed state — Actions #562 (2026-11-24)
+- Main data commit: d2b1a624e0666d677f07fdfd0b9e3cd985910904.
+- Actions #562 passed 131/131 tests and successfully deployed Pages.
+- Current data: 666 items; 301 thumbnails; 29 unique URLs; 273 dominant repeated assignments; 365 missing; 369 human-review candidates, 0 reviewed.
+- Google News RSS 4/4, 260 items, 258 site-level URLs, 0 direct article URLs and 0 image signals; Bing 4/4, 41 candidates; combined 301 fetched, 275 unique, 6 additions.
+- Metadata enrichment attempted 0 URLs due retry backoff. Do not characterize this as failure.
+- Keep Google News wrappers opaque and only use explicit HTTPS article/video URLs from public metadata.

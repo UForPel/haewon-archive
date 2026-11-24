@@ -231,3 +231,10 @@
 - [x] Actions #560: 131/131 tests; final explicit-URL code, collection, validation, data commit and Pages deploy succeeded.
 - [ ] Manual browser/mobile, keyboard focus, localStorage and JSON file-picker/download checks remain outstanding.
 - [ ] Human labels still needed for 369 candidates; no relevance precision claim is permitted before review.
+
+
+## Latest operational checkpoint — Actions #562 (2026-11-24)
+- [x] 131/131 tests, 0 failures; collection, validation, data commit and Pages deployment succeeded.
+- [x] Confirmed Google News RSS 4/4 but no item-level article URLs or image signals in 260 items; Bing RSS 4/4 with 41 candidates.
+- [ ] Human review remains 0/369; obtain labels before claiming thumbnail relevance precision.
+- [ ] Manual browser/mobile and local JSON persistence/file-picker checks remain open.

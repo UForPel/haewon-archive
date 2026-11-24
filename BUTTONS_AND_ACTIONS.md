@@ -114,3 +114,9 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The repeated-image cluster review panel and per-article labels are included in the Pages artifact deployed by Actions #560.
 - Actions #560 passed 131/131 tests and completed the Pages deploy step.
 - Deployment-step success is not a manual browser rendering, responsive layout, keyboard, localStorage or file-picker test; those remain unverified.
+
+
+## Actions #562 deployment confirmation — 2026-11-24
+- The repeated-thumbnail review panel is included in the Pages artifact deployed successfully by Actions #562.
+- 131/131 tests passed. The deployment step succeeded.
+- Browser visual/mobile behavior, keyboard focus, localStorage reload and JSON file transfer remain unverified.

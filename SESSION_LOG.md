@@ -946,3 +946,15 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Image baseline unchanged: 665 items, 301 thumbnail-bearing, 29 distinct URLs, dominant URL on 273 items, 364 without thumbnails; 369 review candidates and 0 human labels.
 - Thumbnail enrichment attempted 0 URLs due the configured retry backoff; do not report this as an error.
 - GitHub Pages deployment succeeded in #560. Browser visual verification remains open.
+
+
+## 2026-11-24 — Actions #562 final state
+## Latest data and deployment checkpoint — Actions #562 (2026-11-24)
+- Latest inspected main before this documentation checkpoint: d2b1a624e0666d677f07fdfd0b9e3cd985910904.
+- Actions #562 run ID 45404066050 completed successfully: 131/131 tests, 0 failed; collection, validation, data commit, Pages artifact upload and Pages deployment all succeeded.
+- Latest data: 666 discovery records; 301 thumbnail-bearing; 29 distinct thumbnail URLs; dominant legacy URL on 273 records; 365 records without thumbnails.
+- Human review remains 0/369, 0% coverage; candidate and selected-thumbnail precision are still unmeasured.
+- Google News RSS succeeded 4/4 and returned 260 items. 258 had site-level sourceUrl; 0 had direct publisher article URLs; 0 had image-bearing RSS signals. Bing succeeded 4/4 with 41 candidates. Combined collection: 301 fetched, 275 unique, 6 additions.
+- Cumulative explicit HTTPS publisher article URLs remain 38, all from Bing News RSS metadata. Do not infer direct article URLs from Google News source-site links.
+- Thumbnail enrichment attempted 0 URLs because the eligible URLs remained inside retry windows. This is expected backoff, not a fetch failure.
+- The repeated-image panel and explicit-URL-only video resolver are included in the successfully deployed Pages artifact. Manual browser/mobile, localStorage and JSON transfer checks remain unverified.
