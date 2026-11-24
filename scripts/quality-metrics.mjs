@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { classifyDiscoveryCategories, groupDiscoveryDuplicates } from '../js/discovery-kind.mjs';
+import { compareThumbnailCandidates, buildThumbnailReview } from '../js/thumbnail-comparison.m';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const readJson=async path=>JSON.parse(await readFile(resolve(ROOT,path),'utf8'));
 export function summarizeThumbnailUrls(items=[]){
@@ -75,6 +76,8 @@ export async function auditLinks(items,{fetchImpl=fetch,limit=40,timeoutMs=3500,
 async function main(){
  const [videos,discovery,newsStatus,videoStatus,reviews]=await Promise.all(['data/videos.json','data/discovery.json','data/news-collection-status.json','data/collection-status.json','data/category-reviews.json'].map(async path=>{try{return await readJson(path)}catch{return path.endsWith('category-reviews.json')?[]:{}}}));
  const report=summarizeCollection({videos,discovery,newsStatus,videoStatus,reviews});
+ report.thumbnailCandidateComparison=compareThumbnailCandidates(discovery,newsStatus.thumbnailEnrichment?.results||[]);
+ report.thumbnailReview=buildThumbnailReview(discovery,report.thumbnailAudit);
  report.linkAudit=await auditLinks(discovery);report.thumbnailResponseAudit=await auditThumbnailResponses(discovery);
  await writeFile(resolve(ROOT,'data/quality-metrics.json'),JSON.stringify(report,null,2)+'\n');
  console.log(JSON.stringify({sourceCount:report.sources.length,items:report.collection.newsCandidatesTotal,linkAuditChecked:report.linkAudit.checked,brokenLinks:report.linkAudit.broken.length,classificationAccuracy:report.classification.accuracy,accuracySamples:report.classification.reviewedSamples}));
