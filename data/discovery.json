@@ -8888,7 +8888,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:40:45.386Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "959d5cb11530908018d2",
@@ -8947,7 +8949,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:40:45.386Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b8367b216b0f784cbed4",
