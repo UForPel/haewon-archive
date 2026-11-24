@@ -34,3 +34,13 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The quality dashboard remains read-only (no new controls). It now displays article-level RSS/meta candidate coverage, shared URL count, source and host counts, metadata-found/assigned rate, and repeated-thumbnail review groups.
 - Review output is evidence-only. It preserves each article ID/title/source URL/current thumbnail and does not delete or replace images automatically.
 - Regression requirement: dashboard remains accessible through the existing discovery-quality region; new summaries are text, not inert buttons. Mobile and visual verification remain pending.
+
+
+## ChatGPT conversation continuation button — 2026-11-24 (mandatory)
+- **Visible label:** 🔄 연구 기반 재귀개선 계속하기
+- **Surface:** ChatGPT conversation reply (not a button inside the Haewon Archive website).
+- **Action:** submits the exact evidence-informed continuation prompt recorded in `CHATGPT_OPERATING_RULES.md`.
+- **Expected behavior:** one tap starts a new user turn that rechecks main/CI/Pages, evaluates relevant recent research and official guidance, diagnoses current code/data, implements and tests a bounded improvement, compares metrics, records work in GitHub and reports verified vs unverified outcomes.
+- **Accessibility:** semantic button with this accessible name; never decorative/inert.
+- **Regression guard:** every substantial project completion reply must include the working ChatGPT follow-up action. If unavailable in a client, include the exact prompt as a copyable fallback.
+- **Important distinction:** this is a ChatGPT reply action, not a deployed-site control.

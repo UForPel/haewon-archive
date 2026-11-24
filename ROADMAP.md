@@ -128,3 +128,10 @@
 - [ ] Verify the deployed mobile page visually and exercise localStorage and JSON file import/export in a real browser.
 - [ ] Continue human labeling; do not report precision/accuracy until reviewed samples exist.
 - [ ] Investigate publisher-specific official RSS/Atom feeds where they expose direct article links; keep each feed URL and publisher site URL separately.
+
+
+## 2026-11-24 — Conversation continuity UX
+- [x] Persist exact one-tap ChatGPT recursive-improvement prompt and label in operating rules.
+- [x] Add ChatGPT conversation action to button inventory with behavior and regression requirement.
+- [x] Require the assistant to include the working action after each substantial project response.
+- [ ] Confirm CI and Pages after this documentation-only change.

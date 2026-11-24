@@ -809,3 +809,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Added a separate wrapperOnlyMetadataHosts metric so historical Google News wrapper fetch hosts are not mislabeled as final publisher article hosts.
 - Review UI adds next-unreviewed navigation and auto-save on label selection. JSON import/export round-trip is covered by unit tests.
 - Not verified: real browser/mobile rendering, localStorage save across page reload, file picker import and actual downloaded JSON contents. Browser interaction tools were unavailable; no claim of manual browser verification is made.
+
+
+## 2026-11-24 — User-facing one-tap continuation button restored
+- User correctly pointed out that the promised ChatGPT continuation button was missing from the prior substantial project report.
+- Root cause: operating rules described the requirement, but the exact reusable prompt was not registered as a distinct control in `BUTTONS_AND_ACTIONS.md`; the previous response omitted the action entirely.
+- Added exact button label **🔄 연구 기반 재귀개선 계속하기**, full prompt payload, behavior, surface distinction (ChatGPT reply vs archive website), and regression requirement.
+- Updated `CHATGPT_OPERATING_RULES.md`, `BUTTONS_AND_ACTIONS.md`, `PROJECT_STATUS.md`, `SESSION_LOG.md`, and `ROADMAP.md`.
+- Next substantial response must render a real clickable follow-up action, not merely mention it.
+- CI/Pages status for this documentation-only change: pending at time of this entry.

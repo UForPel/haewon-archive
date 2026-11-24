@@ -328,3 +328,10 @@ Last updated: 2026-11-20
 - Thumbnail audit: 292/655 items have a thumbnail; 20 unique thumbnail URLs; one legacy URL remains repeated 273 times.
 - Candidate/image suitability precision remains unmeasured until human labels are submitted.
 - No destructive merge, deletion or replacement of the legacy repeated-URL group.
+
+
+## 2026-11-24 — Restore persistent one-tap conversation continuation
+- [x] Confirmed operating rules required a ChatGPT follow-up button, but the exact reusable prompt and explicit control inventory entry were not persisted together.
+- [x] Recorded button label, surface, behavior, full prompt payload and omission-prevention rule in `CHATGPT_OPERATING_RULES.md` and `BUTTONS_AND_ACTIONS.md`.
+- [x] This control is a ChatGPT conversation action, not an archive website button.
+- [ ] Verify documentation commit's Actions/Pages run; actual button must be rendered in the assistant's next substantial project response.

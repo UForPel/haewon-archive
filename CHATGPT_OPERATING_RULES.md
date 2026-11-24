@@ -87,3 +87,14 @@ For each substantial update include: changed paths; planned vs implemented items
 - The button's submitted prompt must request an evidence-informed improvement cycle, not a generic "continue": re-check the latest repository/CI state; review the project's goal, constraints and architecture; search for relevant recent research, engineering practice or documented success cases when it materially informs the task; distinguish evidence from speculation and verify the recency/quality of sources; extract applicable principles; inspect current code/data/tests; identify high-impact bottlenecks and competing hypotheses; implement a bounded improvement; test and inspect results; compare against baseline or expected behavior; iterate on failures or weak results; and persist concrete changes, metrics, decisions and next actions in GitHub.
 - Do not claim that a button prompt guarantees the latest research is applied. Research must be fetched and assessed during the triggered work, only relevant findings should be adapted, and novel/uncertain ideas must be labeled and tested rather than blindly copied. Preserve free-first, privacy, security and project-scope constraints.
 - The continuation prompt must explicitly request actual work (code/config/tests/UI/docs as appropriate), separate commits where meaningful, status/log updates, CI/deployment verification and honest reporting of completed vs pending items. Never substitute a research summary or a verbal plan for implementation.
+
+
+## One-tap ChatGPT continuation prompt — persistent contract (2026-11-24)
+- Required visible ChatGPT follow-up control label: **🔄 연구 기반 재귀개선 계속하기**.
+- Exact reusable prompt payload:
+  
+  > Haewon Archive 재귀개선 계속. 최신 main, 미완료 작업, GitHub Actions와 Pages 배포 상태를 먼저 실제로 확인해. 프로젝트 목표·제약·아키텍처·품질 지표를 다시 검토하고, 이번 병목에 관련된 최신 연구·공식 문서·검증된 엔지니어링 사례를 조사해 근거의 날짜·신뢰도·적용 한계를 구분해. 기존 코드와 실제 데이터에서 원인을 진단하고 경쟁 가설을 비교한 뒤, 무료·개인정보 보호·접근 제한 준수 원칙 안에서 영향이 큰 개선을 선택해 실제 코드/UI/테스트/문서로 구현해. Google News 래퍼 토큰 해독이나 접근 제한 우회는 하지 말고, 개별 HTTPS 기사 URL이 공개 메타데이터에 명시된 경우만 수집하며 출처·최종 호스트·후보 출처를 보존해. 사람 검수 흐름과 실제 브라우저 동작도 검증 가능한 범위에서 확인하고, 미검증은 명시해. 기준선과 개선 후 지표를 비교하고 실패·회귀가 있으면 원인을 찾아 수정한 뒤 재검증해. 관련 변경은 의미 있는 단위로 커밋하고 PROJECT_STATUS.md, SESSION_LOG.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md 및 필요한 운영 규칙을 갱신해. Actions 테스트·수집·검증·데이터 커밋·Pages 배포를 실제로 확인한 후 결과와 다음 우선순위를 보고해. 계획이나 말뿐인 보고로 끝내지 말고 실제 결과물을 만들어.
+- At the end of every substantial Haewon Archive work response, render a real clickable ChatGPT continuation button using this prompt (not a decorative label or plain-text suggestion). Do not omit it.
+- The button belongs to the ChatGPT conversation UI, not the deployed archive website. Keep this distinction clear in reports.
+- If the client does not support a rendered action button, provide the exact prompt as a copyable fallback.
+- Update this contract whenever the continuation prompt's scope or safety constraints change.
