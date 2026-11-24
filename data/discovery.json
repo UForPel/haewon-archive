@@ -25,7 +25,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+    "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "484548a28daf266b0af0",
@@ -228,7 +230,9 @@
     "discoveredAt": "2026-11-20T12:53:37.166Z",
     "status": "candidate",
     "relevanceScore": 9,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b31396fcb10916bd5072",
@@ -242,7 +246,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 9
+    "relevanceScore": 9,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d1e8542d4ab1aac88f57",
@@ -272,7 +278,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 9
+    "relevanceScore": 9,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "61096682960ace3efcad",
@@ -1074,7 +1082,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d5d1b7ec891930a341d8",
@@ -1679,7 +1689,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c071d209623dc8fd82a1",
@@ -2446,7 +2458,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0565ebb63ddc8d22ca5d",
@@ -2618,7 +2632,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "13a01c7188c265826865",
@@ -2901,7 +2917,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "204b9bb212cd4af83767",
@@ -3087,7 +3105,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 5
+    "relevanceScore": 5,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "4bacad32927935b069e3",
@@ -3133,7 +3153,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 5
+    "relevanceScore": 5,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "99a15abb73e568fbc33b",
@@ -3147,7 +3169,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 5
+    "relevanceScore": 5,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6431f12aea24b934167a",
@@ -3297,7 +3321,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "ef86a090cdb8d03071f0",
@@ -3311,7 +3337,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5c028482e381359cf3bd",
@@ -3325,7 +3353,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "7193f0d5fd9c019aa485",
@@ -3339,7 +3369,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "ecdb925dfaace5d887f4",
@@ -3367,7 +3399,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b5cc9b4054e658adb6c0",
@@ -3397,7 +3431,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a47bea7343e39bb03c33",
@@ -3411,7 +3447,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "cbd4c75b2f95e45c5b54",
@@ -3441,7 +3479,9 @@
     "query": "해원 엔믹스 기사",
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0c364dc099d75fecff0b",
@@ -3455,7 +3495,9 @@
     "query": "해원 엔믹스 기사",
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c25e7442623aecd78ffb",
@@ -3469,7 +3511,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e2882f545504fb619441",
@@ -3483,7 +3527,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8e8ad12f0ef207f4b9f6",
@@ -3497,7 +3543,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0c35d876102ef0c10fad",
@@ -3525,7 +3573,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f2bad6d2cd82f5ba4dce",
@@ -3539,7 +3589,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "be2e07bd120f697691b3",
@@ -3553,7 +3605,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8541ac4deb7419e96c90",
@@ -3566,6 +3620,24 @@
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
+  },
+  {
+    "id": "b75edaf9b9a60192880d",
+    "title": "엔믹스 NMIXX, 지우x릴리x해원, 찰칵 부르는 포즈 [포토엔HD] - 뉴스엔",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBMZDJnWUdLNDRqWW5GNTZlVkQwVThIQ0pHNjBDbG1mR3RxNnk4ZTJWdkNaY25EM05pVzFVcGg1alZLSi0xQjhDbElGV3ptVVNHTGc1N19uWnd3Y3R2Z1V6V0oxTklLQ2daV1M4?oc=5",
+    "publishedAt": "2026-11-04T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFBMZDJnWUdLNDRqWW5GNTZlVkQwVThIQ0pHNjBDbG1mR3RxNnk4ZTJWdkNaY25EM05pVzFVcGg1alZLSi0xQjhDbElGV3ptVVNHTGc1N19uWnd3Y3R2Z1V6V0oxTklLQ2daV1M4?oc=5\" target=\"_blank\">엔믹스 NMIXX, 지우x릴리x해원, 찰칵 부르는 포즈 [포토엔HD]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스엔</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-24T01:27:45.538Z",
     "status": "candidate",
     "relevanceScore": 4
   },
@@ -3581,7 +3653,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "ec7fa566869fb1b2c68d",
@@ -3640,7 +3714,9 @@
     "discoveredAt": "2026-11-20T13:22:59.272Z",
     "status": "candidate",
     "relevanceScore": 4,
-    "thumbnailUrl": ""
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "abd5247b6a8f9230437b",
@@ -3700,7 +3776,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "62d2dc746cb04fbd3f0a",
@@ -3714,7 +3792,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d785a26073de5b2a666e",
@@ -3744,7 +3824,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c043119257a5b5baa64d",
@@ -3758,7 +3840,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "02cfc047bf86fb1b13c0",
@@ -3772,7 +3856,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a33fcda55a912a33d098",
@@ -3786,7 +3872,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f7170871179d03ee1cc4",
@@ -3800,7 +3888,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "7a308713dc4aa623ecb5",
@@ -3814,7 +3904,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "06054441df915641c7c8",
@@ -3828,7 +3920,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "fdeffe0e9bdcbc3ea04e",
@@ -3842,7 +3936,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "17d2069a40b7b4316cf4",
@@ -3856,7 +3952,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "13da35e9ee2a9465d5fc",
@@ -3870,7 +3968,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T23:43:30.461Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "edb07199d27444993dff",
@@ -3884,7 +3984,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "cb932b090de5a5644811",
@@ -3914,7 +4016,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f720dc04ac4c78fac8c1",
@@ -3928,7 +4032,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "69e5654e448b17546bba",
@@ -3986,7 +4092,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "3404068d76b9e7aedf8d",
@@ -4000,7 +4108,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e0ae0b1fc968f0d0e956",
@@ -4014,7 +4124,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "06e4bdc269942b53009b",
@@ -4028,7 +4140,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "84ef1e89e439f8c66f8b",
@@ -4042,7 +4156,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "37d743a1c95deb1345d9",
@@ -4056,7 +4172,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0695c725590e3452bd85",
@@ -4070,7 +4188,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "842062180ddc2525d72d",
@@ -4084,7 +4204,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0275cc7bb2473b823656",
@@ -4098,7 +4220,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "738e0e8f49eba8b7f3d7",
@@ -4112,7 +4236,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8352a7e1a98ba5b0bbd8",
@@ -4126,7 +4252,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "76f9c9ba54bf172d7ab8",
@@ -4140,7 +4268,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a53d62d3826d14be2b2e",
@@ -4154,7 +4284,9 @@
     "query": "해원 엔믹스 기사",
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f9a9d0ed7fe60b045e79",
@@ -4168,7 +4300,9 @@
     "query": "해원 엔믹스 기사",
     "discoveredAt": "2026-11-23T13:22:32.991Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5789f4d1c59b7bbe4602",
@@ -4182,7 +4316,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "3749e5cb2966198e7064",
@@ -4196,7 +4332,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "424f0bfdc18f2914ffe3",
@@ -4210,7 +4348,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2bf8863898c4ab821238",
@@ -4224,7 +4364,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "4c0e4c953d11db9985bc",
@@ -4238,7 +4380,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "50ceca27d7535a4d8025",
@@ -4252,7 +4396,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "f3839768de1ea652478e",
@@ -4298,7 +4444,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d843beb57165a2a70eec",
@@ -4312,7 +4460,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b525469e6211d49a3f21",
@@ -4326,7 +4476,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "4de17e32340a417f9099",
@@ -4340,7 +4492,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b1e1ae5339d5d8395f0f",
@@ -4370,7 +4524,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b360e201e65b71391c05",
@@ -4384,7 +4540,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T23:43:30.461Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "2934c01e3757461b53fc",
@@ -4414,7 +4572,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b1d5be19cd3c129040e8",
@@ -4428,7 +4588,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b88dfe6d3a23bb1a5c23",
@@ -4442,7 +4604,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "909b69436085d6f4cdc9",
@@ -4456,7 +4620,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "90df5ad1a8a9b1339907",
@@ -4470,7 +4636,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "5df9364bd800de08dcb9",
@@ -4498,7 +4666,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a691e3ca2ecad0a8b65f",
@@ -4512,7 +4682,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "fc53dc31f09a2cb20387",
@@ -4540,7 +4712,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "40e99783e9a54a7aae44",
@@ -4554,7 +4728,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8442c17fd7ce6d79fdb7",
@@ -4582,7 +4758,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e55d0b52c8ffc6beec20",
@@ -4596,7 +4774,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "987c89ff7a3074a57d0d",
@@ -4624,7 +4804,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "58ac8413c9155ba09700",
@@ -5605,7 +5787,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b6f6122371037d8b2010",
@@ -6960,7 +7144,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "bd57db9dfc7a9f22fa01",
@@ -7016,7 +7202,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "713c882167df4a43d78e",
@@ -7044,7 +7232,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0586394ba43678e94f7b",
@@ -7058,7 +7248,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "9348d203eba212859b5b",
@@ -7244,7 +7436,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "23e59a79deaa9ebbe579",
@@ -7258,7 +7452,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "df22c0d77881236817c8",
@@ -7272,7 +7468,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "e20a0ecb6597206601fd",
@@ -7300,7 +7498,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "1719cb2ad2c2df31a1ae",
@@ -7314,7 +7514,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "fbea33a1fd85aea24c09",
@@ -7358,7 +7560,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "352a774334e5912dce76",
@@ -7386,7 +7590,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "982beaa6c957dae22b09",
@@ -7400,7 +7606,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d82c25f677ce4fec4851",
@@ -7414,7 +7622,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "482e1d6b26bc4b632c05",
@@ -7442,7 +7652,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "9f7af01896e15953241a",
@@ -7456,7 +7668,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0d564fc3a4a838386872",
@@ -7484,7 +7698,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "3a45b62aecc6cd192aff",
@@ -7498,7 +7714,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "d6e4cd1bf70769cbd429",
@@ -7512,7 +7730,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "56e8187782f327adf802",
@@ -7526,7 +7746,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b7828365b712c66fbe01",
@@ -7597,7 +7819,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c6b0c84d57f6c0fa6835",
@@ -7611,7 +7835,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "1be417d4350bbd0eda2f",
@@ -7625,7 +7851,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "cad08dc0570a9e44a159",
@@ -7695,7 +7923,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "3c5a7fca8de45a95fbaf",
@@ -7807,7 +8037,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "40527866584aac7f856f",
@@ -7835,7 +8067,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "3b944e1f855a23acfb70",
@@ -7879,7 +8113,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "729c3b5f8bbadba9d6d4",
@@ -7893,7 +8129,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-20T23:40:03.309Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "c9fe812075c6c3da88aa",
@@ -8033,7 +8271,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T21:24:44.213Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "48b2d1ad17b1d971a657",
@@ -8047,7 +8287,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "3a8ec5afad92fdf39a1a",
@@ -8077,7 +8319,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "676edde6aeb7b7c24318",
@@ -8091,7 +8335,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "4359850b38f5f1e3814e",
@@ -8147,7 +8393,9 @@
     "query": "Haewon NMIXX brand",
     "discoveredAt": "2026-11-22T03:11:48.963Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "a99ca16e361c35345a7c",
@@ -8161,7 +8409,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "45634a790d2a84bc65c9",
@@ -8189,7 +8439,9 @@
     "query": "오해원 NMIXX",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "b76175feef717c860076",
@@ -8319,7 +8571,9 @@
     "query": "Haewon NMIXX event",
     "discoveredAt": "2026-11-22T18:33:31.775Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "6f8970292623a24840f0",
@@ -8333,7 +8587,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "4e8a9b5dc888eaaacbc2",
@@ -8347,7 +8603,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "08de3502c867886f4023",
@@ -8361,7 +8619,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "8e72523ad86b80423d55",
@@ -8419,7 +8679,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "310895eea60e5aea58d7",
@@ -8530,7 +8792,9 @@
     "query": "NMIXX Haewon",
     "discoveredAt": "2026-11-23T23:34:30.997Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "65506b2ca1bd961d0129",
@@ -8742,7 +9006,9 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-23T22:41:57.316Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailSource": "",
+    "thumbnailCandidates": []
   },
   {
     "id": "0f48102ec75578b1e720",
