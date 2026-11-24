@@ -144,3 +144,13 @@ For each substantial update include: changed paths; planned vs implemented items
 - 665 discovery records, 38 explicit HTTPS publisher article URLs, 30 Bing candidates with 3/4 Bing query successes; one Bing response was not RSS.
 - Google RSS yielded 328 items, 325 source-site URLs, no direct article URLs, and no image metadata signals. Never infer article links from sourceUrl.
 - 301 thumbnail-bearing items, 29 unique URLs, one URL reused by 273 records; 369 review candidates and 0 human labels.
+
+
+## Current data and URL boundary checkpoint — 2026-11-24
+- Latest inspected baseline before this cycle: 665 discovery records, 301 thumbnail assignments, 29 distinct URLs, 273 records on one dominant URL, 364 missing thumbnails, 369 eligible human-review candidates and 0 reviewed.
+- The 273 dominant-URL records are all Google News RSS rows without direct publisher article URL or article-specific thumbnail provenance. Treat as unresolved legacy assignments; preserve them.
+- Never infer an article URL from a Google News wrapper or site-level RSS source URL. Do not decode wrapper tokens or follow wrapper redirects to infer publisher or YouTube destinations.
+- News-to-video synchronization now accepts only explicit HTTPS YouTube URLs in public publisherArticleUrl or url metadata and validates the YouTube hostname. Do not perform HTTP fetch/redirect resolution for candidate discovery.
+- Keep labels per article even when image URLs repeat. Do not bulk-label, auto-delete or auto-replace.
+- Latest UI code adds the repeated-image review panel and fixes an out-of-scope search-count variable; wait for Actions #560 to verify the final code state and deployment.
+- Cite current official platform/accessibility guidance when applied, but distinguish platform documentation from a browser test or conformance audit.

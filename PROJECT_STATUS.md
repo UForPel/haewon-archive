@@ -1,6 +1,6 @@
 # Project status
 
-Last updated: 2026-11-20
+Last updated: 2026-11-24
 
 ## Governance documentation update (2026-11-19)
 - Added protected `SECURITY_POLICY.md` and `COLLECTION_RULES.md`.
@@ -425,3 +425,16 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Latest enrichment attempted 0 URLs because the retry backoff excluded all eligible targets. No new thumbnails were assigned in #555.
 - Deduplication report for this run: 358 incoming items to 316 normalized candidates (42 collapsed). This is candidate-level deduplication, not deletion of archive history.
 - The Bing non-RSS response is recorded as a source-specific transient response-format failure. Retry only on a later scheduled cycle; do not switch to wrapper decoding or bypass access controls.
+
+## 2026-11-24 — Repeated-thumbnail review and URL provenance hardening
+- Recomputed the live main data baseline before implementation: 665 discovery records; 301 records with thumbnails; 29 distinct thumbnail URLs; one dominant URL used by 273 records (41% of all candidates); 364 records without thumbnails.
+- The dominant 273-record group is not merely a generic repeated URL statistic: all 273 rows are Google News RSS records, all have no publisherArticleUrl, no thumbnailSource, no thumbnailProvenance, no metadata-fetch evidence and no article-specific image candidate. Preserve them as unresolved legacy assignments; do not infer image origin, relevance, or rights.
+- Human review baseline: 369 eligible image candidates, 0 reviewed, 0% coverage; candidate and selected-thumbnail precision remain unmeasured.
+- Latest RSS sample: 172 Google News RSS items, 172 site-level sourceUrl values, 0 item-level publisher article URLs, 0 RSS media/enclosure/description image signals. The site URL is not an article URL. Latest Bing collection sample was 4/4 queries successful, 40 Bing candidates, and 38 explicit HTTPS publisher article URLs retained in the cumulative archive.
+- Static source inspection found a discovery-view render bug: render() referenced q outside the scope where q was declared. The count update now reads the current search field directly; a regression test guards against the out-of-scope reference.
+- Added a dedicated repeated-thumbnail review disclosure panel. It shows the shared preview once, exposes per-article title/source/link and independent labels, supports search and next-unreviewed navigation, and never applies a label to every article in the group.
+- Hardened news-to-video synchronization: accept only explicit HTTPS YouTube URLs present in publisherArticleUrl or url metadata on recognized YouTube hosts. Do not fetch or follow Google News wrapper URLs to infer a destination. Existing videos remain intact; this only restricts new additions.
+- Commits: 6e7b612045dbd63f87d326ae5efdf334cdcdb2e6 (review UI, helper, tests, styles); b9f8ac9063f1769c2fc743b033a20cd716760a25, 159a8890a76e299fafa739c1c89cf7847f5ac9b5, and 379d5e3757f4b33406bfb78aff91c0aeb9a82b9d are the URL-policy implementation and corrective follow-ups; the final source state is at 379d5e3.
+- Actions #557 initially passed its Unit tests, collection, discovery, validation and quality steps, but its final data-commit step was still running at this checkpoint. Actions #560 for the final explicit-URL code state was pending. Do not claim either final run or Pages deployment succeeded until the run records confirm it.
+- Research checked 2026-11-24: MDN documents native details/summary disclosure behavior and keyboard activation; W3C WCAG 2.2 focus-order guidance says focus order must preserve meaning and operability; GitHub's Pages deployment guide describes the artifact-upload/deploy workflow. These are authoritative platform/accessibility references, not proof of this app's live rendering or conformance.
+- Browser rendering, responsive/mobile layout, actual localStorage reload, and real JSON file-picker/download behavior remain unverified. The text-only web viewer could not open the deployed Pages URL.

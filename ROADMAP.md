@@ -212,3 +212,15 @@
 - [ ] Investigate Bing RSS non-RSS response for query "해원 엔믹스" using only later normal scheduled retries; current run was 3/4 successful, 30 candidates.
 - [ ] Keep 273 repeated image assignments intact until human review; 369 review candidates remain unreviewed.
 - [ ] Browser/mobile and local persistence/file-picker verification remains open.
+
+
+## 2026-11-24 — Repeated-thumbnail review and explicit metadata boundaries
+- [x] Diagnose the 273-record dominant image group from actual discovery records: all 273 are Google News RSS rows with no direct article URL, image source, provenance or metadata-fetch evidence.
+- [x] Keep all 273 legacy image assignments unchanged; no automatic deletion or replacement.
+- [x] Fix the discovery-view search-count reference that read q outside its declaration scope; add a regression guard.
+- [x] Add a dedicated repeated-image disclosure panel with one shared preview, per-article labels, search and next-unreviewed navigation.
+- [x] Keep review labels article-specific; do not propagate one judgment across the group.
+- [x] Restrict news-to-video sync to explicit HTTPS YouTube URLs in public item metadata; remove Google News wrapper redirect following and validate YouTube hostnames.
+- [ ] Confirm final explicit-URL changes with full Actions test run and Pages deployment.
+- [ ] Obtain actual human labels for the 369 eligible candidates; accuracy remains unmeasured until labels exist.
+- [ ] Inspect live browser rendering, mobile layout, keyboard focus, localStorage reload and JSON file transfer.

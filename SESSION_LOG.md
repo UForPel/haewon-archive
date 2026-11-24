@@ -910,3 +910,29 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Latest enrichment attempted 0 URLs because the retry backoff excluded all eligible targets. No new thumbnails were assigned in #555.
 - Deduplication report for this run: 358 incoming items to 316 normalized candidates (42 collapsed). This is candidate-level deduplication, not deletion of archive history.
 - The Bing non-RSS response is recorded as a source-specific transient response-format failure. Retry only on a later scheduled cycle; do not switch to wrapper decoding or bypass access controls.
+
+## 2026-11-24 — Repeated image cluster review and explicit URL policy
+### Baseline evidence
+- Inspected latest pre-change main c8dc14320babd14ef0119a2ba026ce743ebb98ee and actual data/discovery.json / data/quality-metrics.json.
+- 665 discovery items; 301 thumbnail-bearing; 29 unique thumbnail URLs; 273 uses of one lh3.googleusercontent.com URL; 364 missing thumbnails.
+- The 273 dominant-URL records are all Google News RSS, with no explicit publisher article URL, thumbnail source, provenance, metadata fetch record, or article-level candidate evidence. This is legacy data of unknown origin, not proof that the image is relevant or irrelevant.
+- 369 review candidates, 0 labels; accuracy/precision unmeasured.
+- Latest Google News RSS sample: 172 items, all 172 have source-site URLs but 0 direct article URLs and 0 image signals. Bing: 4/4 successful queries, 40 current candidates; cumulative direct HTTPS publisher URLs: 38.
+### Diagnosis and competing hypotheses
+- Strong evidence: Google News RSS records in the measured sample omit direct article links and image-bearing fields; sourceUrl is a site-level value and must not be promoted to an article URL.
+- Strong evidence: the 273 repeated image assignments lack article-level source/provenance fields. Their origin cannot be established from current records.
+- Expected behavior, not a failure: metadata enrichment made 0 attempts in the prior run because all eligible URLs were inside the configured retry windows.
+- Unproven: whether the repeated image visually matches any individual article, whether it is generic, and whether rights permit reuse. No automatic deletion or replacement.
+### Implementation
+- 6e7b612045dbd63f87d326ae5efdf334cdcdb2e6: repeated-image review panel, per-article independent labels, group progress/search/next-unreviewed action, helper functions, responsive styles, and a regression test for the out-of-scope q reference in discovery rendering.
+- b9f8ac9063f1769c2fc743b033a20cd716760a25 and 159a8890a76e299fafa739c1c89cf7847f5ac9b5 were intermediate URL-policy edits superseded by the final correction.
+- 379d5e3757f4b33406bfb78aff91c0aeb9a82b9d: final news-to-video resolver only accepts explicit HTTPS YouTube URLs from publisherArticleUrl or url, validates recognized YouTube hostnames and 11-character IDs, and does not fetch/follow Google News wrapper redirects.
+### Verification checkpoint
+- Actions #557 run ID 45402689201: unit-test and initial collection/validation/quality steps passed; final data-commit step remained in progress at the time this log was written.
+- Actions #558/#559 were cancelled; do not interpret cancelled runs as code/test failures.
+- Actions #560 run ID 45403295725 was pending for the final explicit-URL code commit. Final suite count, data commit and Pages deployment remain pending until confirmed.
+- Browser-level rendering, mobile layout, focus order, localStorage persistence, and real JSON import/export remain unverified.
+### Research checked 2026-11-24
+- MDN details reference: native disclosure widget, with keyboard Space activation; established support across major browsers since 2020. This supports choosing a native disclosure panel but does not prove the custom styling is accessible.
+- W3C WCAG 2.2 focus-order understanding: sequential focus must preserve meaning and operability. Applied by keeping article links and per-article label controls in the same DOM order; not a formal conformance audit.
+- GitHub Docs Pages deployment guide: publish through Pages artifact upload and deploy steps. This describes expected workflow mechanics, not independent verification of the live page.

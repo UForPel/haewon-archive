@@ -97,3 +97,14 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - 126/126 tests and Pages deployment passed.
 - Latest source diagnostics: Bing RSS 3/4 successful (one non-RSS response); Google News RSS 4/4 successful but still 0 direct article URLs and 0 image signals.
 - Thumbnail review remains 0/369; no browser visual verification is claimed.
+
+
+## Repeated-thumbnail cluster review — 2026-11-24
+- Native disclosure control: **반복 이미지 묶음 검수**. Opens a focused view of the dominant repeated-image group; it is hidden when no repeated HTTPS thumbnail group exists.
+- Shared preview is shown once; each article row retains its own title, source, original discovered link and independent label selector.
+- **묶음 안에서 기사 찾기** filters only the repeated group by title/source.
+- **다음 미검수 기사** moves focus to the next unreviewed article within the currently filtered repeated group.
+- Labels persist in the existing browser-local review store. Import/export remains the cross-device handoff mechanism; no server-side shared labels are implied.
+- The same URL across articles does not imply the same relevance. Never bulk-apply labels, delete records, or replace thumbnails automatically.
+- Regression coverage: helper tests verify per-article label isolation, URL normalization and queue progression; integration tests verify the panel is wired into the loaded discovery view.
+- Manual browser, mobile, keyboard and localStorage/file-picker checks remain pending.
