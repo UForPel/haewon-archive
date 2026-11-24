@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T06:12:46.961Z",
+  "generatedAt": "2026-11-24T06:15:29.810Z",
   "articleUrlProvenance": {
     "totalItems": 657,
     "itemsWithPublisherArticleUrl": 35,
@@ -44,7 +44,6 @@
       "www.wikitree.co.kr": 1,
       "ca.news.yahoo.com": 1,
       "www.spotvnews.co.kr": 1,
-      "www.tvdaily.co.kr": 1,
       "osen.co.kr": 1,
       "www.starnewskorea.com": 1,
       "www.etnews.com": 1
@@ -235,22 +234,22 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 41,
+    "bingNewsCandidates": 40,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 657,
-    "newsUniqueFetched": 229,
-    "newsAddedLastRun": 6,
-    "duplicateBeforeMergeLastRun": 13,
+    "newsUniqueFetched": 278,
+    "newsAddedLastRun": 5,
+    "duplicateBeforeMergeLastRun": 19,
     "duplicateGroupsCurrent": 657,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 242,
-      "after": 225,
-      "collapsed": 17,
+      "before": 297,
+      "after": 274,
+      "collapsed": 23,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -259,8 +258,8 @@
       "assigned": 0,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
-      "missing": 6,
-      "failed": 3,
+      "missing": 5,
+      "failed": 4,
       "results": [
         {
           "id": "3bbd95a333f1ae79efdc",
@@ -296,13 +295,9 @@
         },
         {
           "id": "f60f0f16157da91b9bf1",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
+          "status": "failed",
           "publisherArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
-          "resolvedArticleHost": "www.tvdaily.co.kr"
+          "sourceUrl": ""
         },
         {
           "id": "d6c5f93f622776e07642",
@@ -821,8 +816,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBsdUxKcmlBSkJLcWdBSGlQTEZtMVlia29GQ0hfYlh6YjNVcFpoU3dtWGI1Si1zeWJnRGZJRzQ4QzM1RW9YSENwOFNsTnltRnRWUlVySGtPUHoxMkZN?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -899,8 +894,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1uNlBuWlRHX0UtMmhLN1BrMkl0OW1UaFRna2U1bTl2amh0Ym9qRkpBa1FCRjY3TmZVMEtYcjd0YVlSVTFmcEhkc1JPMGJPTEo3RXBoaGctdXJXT0VN?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -1686,7 +1681,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T06:12:46.974Z",
+    "generatedAt": "2026-11-24T06:15:29.826Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
