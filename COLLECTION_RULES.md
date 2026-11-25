@@ -124,3 +124,9 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Google RSS current sample contains site-level `sourceUrl` values but no direct article URLs or image signals. Do not treat `sourceUrl` as article URL or infer hidden image URLs.
 - Do not add SBS or Yonhap RSS to the public automated allowlist based only on endpoint availability. SBS terms specify personal noncommercial use; Yonhap terms restrict content to personal/noncommercial use; the Korean Digital News Content Use Rules restrict RSS to personal PC use and prohibit redistribution/re-RSS without permission. Obtain explicit written permission for public-site collection/use before any addition.
 - PR #28's Media RSS parser must use the PR #27 shared publisher URL predicate. Do not merge the parser patch independently while it can classify X posts as publisher articles.
+
+## 2026-11-26 — Source-rights evidence links
+- SBS official RSS index and terms: https://news.sbs.co.kr/news/rss.do (personal, noncommercial use only; commercial use requires prior contact).
+- Yonhap copyright terms: https://en.yna.co.kr/view/AEN20260905001800315 (content is owned by Yonhap; other use beyond personal/noncommercial requires written consent).
+- Korean Digital News Content Use Rules: https://www.newstore.or.kr/store/copyRight/useRule.do (RSS is for personal subscription on a personal PC; redistribution and re-RSS without permission are prohibited).
+- These sources establish that an RSS endpoint being public does not authorize redistribution through this public Pages archive. Written permission or a clear applicable license is required before adding a publisher feed.
