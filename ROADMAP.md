@@ -498,3 +498,8 @@
 - [ ] Update production collect-and-deploy action versions separately from PR #15's Node 24 CI.
 - [ ] Verify live rendering and actual Android browser behavior.
 - [ ] Keep all original PRs unmerged until explicit approval; no bulk migration of the 273 legacy assignments.
+
+
+## Conversation continuity safeguard
+- [ ] At the end of every Haewon Archive work response, render the actual clickable `🔄 연구 기반 재귀개선 계속하기` control; do not substitute plain text.
+- [ ] Preserve the control even when the user types a new instruction or correction. Typing does not cancel the continuation affordance.
