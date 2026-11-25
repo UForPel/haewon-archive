@@ -1,0 +1,7 @@
+name = "haewon-archive-dispatch-dry-run"
+main = "dispatch-worker.mjs"
+compatibility_date = "2026-11-25"
+workers_dev = false
+
+[triggers]
+crons = ["17 11,23 * * *"]
