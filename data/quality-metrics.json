@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-11-24T23:18:59.094Z",
+  "generatedAt": "2026-11-25T03:54:07.824Z",
   "discoveryRelevance": {
-    "totalCandidates": 701,
-    "articleCandidates": 515,
+    "totalCandidates": 704,
+    "articleCandidates": 518,
     "videoCandidates": 186,
-    "verifiedPublisherArticles": 55,
+    "verifiedPublisherArticles": 58,
     "verifiedHaewonArticles": 49,
-    "verifiedPublisherArticlesWithProvenanceThumbnail": 43,
+    "verifiedPublisherArticlesWithProvenanceThumbnail": 46,
     "verifiedHaewonWithProvenanceThumbnail": 39,
     "haewonTitleMatches": 427,
-    "nmixxTitleMatches": 440,
+    "nmixxTitleMatches": 443,
     "otherArticleCandidates": 29,
     "defaultScope": "verified-haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 701,
-    "itemsWithPublisherArticleUrl": 56,
-    "bingNewsItems": 56,
+    "totalItems": 704,
+    "itemsWithPublisherArticleUrl": 59,
+    "bingNewsItems": 59,
     "candidateSourceCounts": {
-      "bing-news-rss-explicit-url-param": 60
+      "bing-news-rss-explicit-url-param": 63
     },
     "publisherHosts": {
-      "sports.khan.co.kr": 5,
+      "sports.khan.co.kr": 7,
       "biz.chosun.com": 5,
       "www.msn.com": 5,
       "www.mk.co.kr": 4,
@@ -50,12 +50,13 @@
       "osen.co.kr": 1,
       "www.starnewskorea.com": 1,
       "www.etnews.com": 1,
+      "www.broadwayworld.com": 1,
       "www.forbes.com": 1,
       "www.hollywoodreporter.com": 1
     },
     "finalHosts": {
+      "sports.khan.co.kr": 7,
       "biz.chosun.com": 6,
-      "sports.khan.co.kr": 5,
       "www.msn.com": 5,
       "www.mk.co.kr": 4,
       "www.soompi.com": 3,
@@ -83,6 +84,7 @@
       "www.starnewskorea.com": 1,
       "news.sbs.co.kr": 1,
       "www.etnews.com": 1,
+      "www.broadwayworld.com": 1,
       "www.forbes.com": 1,
       "www.hollywoodreporter.com": 1
     },
@@ -186,29 +188,29 @@
       "news.sbs.co.kr": 1
     },
     "discoveryWrapperHosts": {
-      "www.bing.com": 56
+      "www.bing.com": 59
     }
   },
   "thumbnailProvenance": {
-    "assignedTotal": 317,
+    "assignedTotal": 320,
     "assignedBySource": {
       "unverified-legacy": 273,
-      "og:image": 42,
+      "og:image": 45,
       "twitter:image": 2
     },
     "unverifiedLegacyAssignments": 273,
     "missingThumbnailCount": 384,
-    "sourceProvenanceCoverage": 14
+    "sourceProvenanceCoverage": 15
   },
   "thumbnailAudit": {
-    "items": 701,
-    "withThumbnail": 317,
+    "items": 704,
+    "withThumbnail": 320,
     "missing": 384,
-    "uniqueThumbnailUrls": 45,
+    "uniqueThumbnailUrls": 48,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
-    "uniqueImageCoverage": 6,
-    "uniqueThumbnailAssignmentRate": 14,
+    "uniqueImageCoverage": 7,
+    "uniqueThumbnailAssignmentRate": 15,
     "dominantThumbnailCount": 273,
     "dominantThumbnailShare": 39,
     "concentrationWarning": true,
@@ -234,12 +236,12 @@
         "count": 273
       },
       {
-        "host": "biz.chosun.com",
-        "count": 6
+        "host": "images.khan.co.kr",
+        "count": 7
       },
       {
-        "host": "images.khan.co.kr",
-        "count": 5
+        "host": "biz.chosun.com",
+        "count": 6
       },
       {
         "host": "pimg.mk.co.kr",
@@ -322,6 +324,10 @@
         "count": 1
       },
       {
+        "host": "cloudimages2.broadwayworld.com",
+        "count": 1
+      },
+      {
         "host": "hollywoodreporter.com",
         "count": 1
       }
@@ -332,33 +338,122 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 33,
+    "bingNewsCandidates": 32,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 701,
-    "newsUniqueFetched": 66,
-    "newsAddedLastRun": 2,
+    "newsCandidatesTotal": 704,
+    "newsUniqueFetched": 77,
+    "newsAddedLastRun": 5,
     "duplicateBeforeMergeLastRun": 8,
-    "duplicateGroupsCurrent": 701,
+    "duplicateGroupsCurrent": 704,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 74,
-      "after": 65,
-      "collapsed": 9,
+      "before": 85,
+      "after": 77,
+      "collapsed": 8,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 0,
-      "found": 0,
-      "assigned": 0,
+      "attempted": 3,
+      "found": 3,
+      "assigned": 3,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
       "failed": 0,
-      "results": []
+      "results": [
+        {
+          "id": "d9f9b241f275fda266c0",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.3c5c2d9217ad49b598cf5d2bb142858e_P1.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.3c5c2d9217ad49b598cf5d2bb142858e_P1.jpg",
+              "source": "og:image",
+              "priority": 1
+            },
+            {
+              "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.9cf4fda5cac14428a86b7bf8f52ce9a6_P1.jpg",
+              "source": "jsonld:image",
+              "priority": 5
+            },
+            {
+              "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.6890818a83d04e8d904766f0e64c084e_P1.jpg",
+              "source": "jsonld:image",
+              "priority": 5
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
+          "resolvedArticleHost": "sports.khan.co.kr"
+        },
+        {
+          "id": "ea9921421f66eb71868d",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.31a8dcc1b53b4a56a3048eda8bb717ad_P1.jpeg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.31a8dcc1b53b4a56a3048eda8bb717ad_P1.jpeg",
+              "source": "og:image",
+              "priority": 1
+            },
+            {
+              "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.29768728f855489b98f20588c1de429c_P1.jpeg",
+              "source": "jsonld:image",
+              "priority": 5
+            },
+            {
+              "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.7c3c3bdc143a4c67a80730a0c93e50a3_P1.jpeg",
+              "source": "jsonld:image",
+              "priority": 5
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
+          "resolvedArticleHost": "sports.khan.co.kr"
+        },
+        {
+          "id": "289fa93f30d1c9322619",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://cloudimages2.broadwayworld.com/columnpiccloud/Interview-NMIXX-1792599723.jpg?format=jpeg&quality=80&width=1200",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://cloudimages2.broadwayworld.com/columnpiccloud/Interview-NMIXX-1792599723.jpg?format=jpeg&quality=80&width=1200",
+              "source": "og:image",
+              "priority": 1
+            },
+            {
+              "url": "https://cloudimages2.broadwayworld.com/heads/1793096532_IMG_7262.jpeg?format=auto&width=400",
+              "source": "jsonld:image",
+              "priority": 5
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+          "resolvedArticleHost": "www.broadwayworld.com"
+        }
+      ]
     }
   },
   "sources": [
@@ -375,6 +470,18 @@
       "dateCoverage": 100
     },
     {
+      "source": "스포츠경향",
+      "items": 5,
+      "withUrl": 5,
+      "withPublisherArticleUrl": 5,
+      "withThumbnail": 4,
+      "withDate": 5,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 80,
+      "dateCoverage": 100
+    },
+    {
       "source": "조선일보",
       "items": 5,
       "withUrl": 5,
@@ -384,18 +491,6 @@
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 100,
       "thumbnailCoverage": 100,
-      "dateCoverage": 100
-    },
-    {
-      "source": "스포츠경향",
-      "items": 3,
-      "withUrl": 3,
-      "withPublisherArticleUrl": 3,
-      "withThumbnail": 2,
-      "withDate": 3,
-      "urlCoverage": 100,
-      "publisherArticleUrlCoverage": 100,
-      "thumbnailCoverage": 67,
       "dateCoverage": 100
     },
     {
@@ -771,6 +866,18 @@
       "dateCoverage": 100
     },
     {
+      "source": "BroadwayWorld",
+      "items": 1,
+      "withUrl": 1,
+      "withPublisherArticleUrl": 1,
+      "withThumbnail": 1,
+      "withDate": 1,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 100,
+      "dateCoverage": 100
+    },
+    {
       "source": "Forbes",
       "items": 1,
       "withUrl": 1,
@@ -828,15 +935,15 @@
     }
   ],
   "classification": {
-    "items": 701,
+    "items": 704,
     "categoryCounts": {
       "video": 186,
-      "interview": 44,
-      "news": 412,
+      "interview": 45,
+      "news": 413,
       "brand": 21,
       "event": 5,
       "performance": 29,
-      "official": 7
+      "official": 8
     },
     "reviewedSamples": 0,
     "accuracy": null,
@@ -845,14 +952,14 @@
     "accuracyLabel": "not measured (no category review labels)"
   },
   "thumbnailReviewMetrics": {
-    "eligible": 409,
+    "eligible": 417,
     "reviewed": 0,
     "reviewCoverage": 0,
     "relevant": 0,
     "unsuitable": 0,
     "excluded": 0,
     "precision": null,
-    "selectedEligible": 317,
+    "selectedEligible": 320,
     "selectedReviewed": 0,
     "selectedPrecision": null,
     "counts": {
@@ -891,6 +998,24 @@
       "assignmentRate": null
     },
     {
+      "host": "sports.khan.co.kr",
+      "attempted": 7,
+      "assigned": 6,
+      "found": 6,
+      "missing": 1,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "sports.khan.co.kr": 6,
+        "www.msn.com": 1
+      },
+      "successRate": 86,
+      "candidateRate": 86,
+      "assignmentRate": 100
+    },
+    {
       "host": "biz.chosun.com",
       "attempted": 5,
       "assigned": 5,
@@ -905,24 +1030,6 @@
       },
       "successRate": 100,
       "candidateRate": 100,
-      "assignmentRate": 100
-    },
-    {
-      "host": "sports.khan.co.kr",
-      "attempted": 5,
-      "assigned": 4,
-      "found": 4,
-      "missing": 1,
-      "failed": 0,
-      "wrapperOnly": 0,
-      "duplicateRejected": 0,
-      "errorCodes": {},
-      "finalHosts": {
-        "sports.khan.co.kr": 4,
-        "www.msn.com": 1
-      },
-      "successRate": 80,
-      "candidateRate": 80,
       "assignmentRate": 100
     },
     {
@@ -1221,6 +1328,23 @@
       "successRate": 0,
       "candidateRate": 0,
       "assignmentRate": null
+    },
+    {
+      "host": "www.broadwayworld.com",
+      "attempted": 1,
+      "assigned": 1,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.broadwayworld.com": 1
+      },
+      "successRate": 100,
+      "candidateRate": 100,
+      "assignmentRate": 100
     },
     {
       "host": "www.etnews.com",
@@ -1689,29 +1813,29 @@
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 44,
+    "articlesCompared": 47,
     "rssOnly": 0,
-    "metaOnly": 44,
+    "metaOnly": 47,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 44,
-    "metaAssigned": 0,
-    "assignmentRate": 0,
+    "metaFound": 47,
+    "metaAssigned": 3,
+    "assignmentRate": 6,
     "sourceCounts": {
-      "og:image": 42,
-      "jsonld:image": 59,
+      "og:image": 45,
+      "jsonld:image": 64,
       "twitter:image": 6,
       "jsonld:thumbnailUrl": 15,
       "og:image:secure_url": 2
     },
     "hostCounts": [
       {
-        "host": "img.sbs.co.kr",
-        "count": 25
+        "host": "images.khan.co.kr",
+        "count": 29
       },
       {
-        "host": "images.khan.co.kr",
-        "count": 23
+        "host": "img.sbs.co.kr",
+        "count": 25
       },
       {
         "host": "pimg.mk.co.kr",
@@ -1771,6 +1895,10 @@
       },
       {
         "host": "cdns.klimg.com",
+        "count": 2
+      },
+      {
+        "host": "cloudimages2.broadwayworld.com",
         "count": 2
       },
       {
@@ -2816,6 +2944,79 @@
         "metaStatus": "not-attempted"
       },
       {
+        "id": "289fa93f30d1c9322619",
+        "title": "Interview: NMIXX Talks New EP 'Strange Muse', First Unit Songs, and 'Birthday Wish' For the Future",
+        "articleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://cloudimages2.broadwayworld.com/columnpiccloud/Interview-NMIXX-1792599723.jpg?format=jpeg&quality=80&width=1200",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://cloudimages2.broadwayworld.com/heads/1793096532_IMG_7262.jpeg?format=auto&width=400",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "d9f9b241f275fda266c0",
+        "title": "NMIXX(NMIXX), opens ticket reservations for the encore that will cap their first world tour",
+        "articleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.3c5c2d9217ad49b598cf5d2bb142858e_P1.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.9cf4fda5cac14428a86b7bf8f52ce9a6_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.6890818a83d04e8d904766f0e64c084e_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
+        "id": "ea9921421f66eb71868d",
+        "title": "Oh Hae-won of NMIXX, chubby cheeks gone and a shockingly ‘skin-and-bones’ recent update…“The image she aims for is ‘adult woman’”",
+        "articleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.31a8dcc1b53b4a56a3048eda8bb717ad_P1.jpeg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.29768728f855489b98f20588c1de429c_P1.jpeg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.7c3c3bdc143a4c67a80730a0c93e50a3_P1.jpeg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
+      },
+      {
         "id": "2f3bd3505026c6c9630e",
         "title": "NMIXX release 6th mini album “We sing Birthday Wish, answer us! NSWER”",
         "articleUrl": "https://sports.khan.co.kr/en/article/202610190909007/",
@@ -2910,7 +3111,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-24T23:18:59.106Z",
+    "generatedAt": "2026-11-25T03:54:07.835Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

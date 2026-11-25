@@ -4411,7 +4411,7 @@
     "id": "937b773eb419381da3d0",
     "title": "Haewon of NMIXX, from ‘skin-and-bones’ to eye hollows… Regarding the changed appearance, “Take care of your health”",
     "url": "https://sports.khan.co.kr/en/article/202610231530007",
-    "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610231530007",
+    "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9D%BC%EB%B0%98/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
     "sourceUrl": "",
     "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0521ab154742799db1c22930968c71&url=https%3a%2f%2fsports.khan.co.kr%2fen%2farticle%2f202610231530007&c=1238094118948107116&mkt=ko-kr",
     "publisherHost": "sports.khan.co.kr",
@@ -13206,6 +13206,64 @@
     "thumbnailMetaFetch": null
   },
   {
+    "id": "289fa93f30d1c9322619",
+    "title": "Interview: NMIXX Talks New EP 'Strange Muse', First Unit Songs, and 'Birthday Wish' For the Future",
+    "url": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+    "publisherArticleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b065bdedb274d2d8d372a18cdffc933&url=https%3a%2f%2fwww.broadwayworld.com%2fbwwmusic%2farticle%2fInterview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021&c=275272960684141053&mkt=ko-kr",
+    "publisherHost": "www.broadwayworld.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20interview&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b065bdedb274d2d8d372a18cdffc933&url=https%3a%2f%2fwww.broadwayworld.com%2fbwwmusic%2farticle%2fInterview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021&c=275272960684141053&mkt=ko-kr",
+        "articleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+        "host": "www.broadwayworld.com"
+      }
+    ],
+    "publishedAt": "2026-10-21T09:51:00.000Z",
+    "description": "Breaking news to your phone. US mobile only. No password required. Broadway + NYC Broadway Off-Broadway Off-Off Broadway Cabaret Dance Opera Classical Music West End / UK NMIXX is back with their new ...",
+    "thumbnailUrl": "https://cloudimages2.broadwayworld.com/columnpiccloud/Interview-NMIXX-1792599723.jpg?format=jpeg&quality=80&width=1200",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "BroadwayWorld",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX interview",
+    "discoveredAt": "2026-11-25T03:54:06.707Z",
+    "status": "candidate",
+    "relevanceScore": 3,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://cloudimages2.broadwayworld.com/columnpiccloud/Interview-NMIXX-1792599723.jpg?format=jpeg&quality=80&width=1200",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://cloudimages2.broadwayworld.com/heads/1793096532_IMG_7262.jpeg?format=auto&width=400",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+      "resolvedArticleHost": "www.broadwayworld.com",
+      "fetchedAt": "2026-11-25T03:54:07.332Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://cloudimages2.broadwayworld.com/columnpiccloud/Interview-NMIXX-1792599723.jpg?format=jpeg&quality=80&width=1200",
+      "articleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+      "observedAt": "2026-11-25T03:54:07.332Z"
+    }
+  },
+  {
     "id": "4c81902994cb300f2f26",
     "title": "[TMA 인터뷰] '첫 대상' 엔믹스 \"TMA 10주년에 두 번째 대상 받으러 올게요\" - 더팩트",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBiQ0VCSjBkWUk0WHl1WUE5LUhKbkFjY1ZnRnJFakJ0cW1EVlZldkotSTRrMjJoZG1lMldMZlMzS3V4WjdMellJSlFzeEVXel91NVRxdmRiU3Y5N2NZ0gFXQVVfeXFMT0J6Q1B0WXBjOUJVbHJHS3BfRHpQdnltNGtLUTV0c0U0Wnc0VTlFU004ZGFYSTlmQkFTbzJUQ0NhR0hOQ2NZT2drYjJXNzRrRDZMNnE1WUVj?oc=5",
@@ -13713,6 +13771,69 @@
     "candidateSource": ""
   },
   {
+    "id": "d9f9b241f275fda266c0",
+    "title": "NMIXX(NMIXX), opens ticket reservations for the encore that will cap their first world tour",
+    "url": "https://sports.khan.co.kr/en/article/202610261936007/",
+    "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b065bdfc88344988e749d5aea4e6c6d&url=https%3a%2f%2fsports.khan.co.kr%2fen%2farticle%2f202610261936007%2f&c=6636640389927940928&mkt=ko-kr",
+    "publisherHost": "sports.khan.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20magazine&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b065bdfc88344988e749d5aea4e6c6d&url=https%3a%2f%2fsports.khan.co.kr%2fen%2farticle%2f202610261936007%2f&c=6636640389927940928&mkt=ko-kr",
+        "articleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
+        "host": "sports.khan.co.kr"
+      }
+    ],
+    "publishedAt": "2026-10-26T12:36:00.000Z",
+    "description": "Girl group NMIXX (NMIXX) has opened ticket reservations for the encore performances of their first world tour < EPISODE 1: ZERO FRONTIER >. From November 27 to 29, NMIXX will hold the finale ...",
+    "thumbnailUrl": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.3c5c2d9217ad49b598cf5d2bb142858e_P1.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "스포츠경향",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon magazine",
+    "discoveredAt": "2026-11-25T03:54:06.707Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.3c5c2d9217ad49b598cf5d2bb142858e_P1.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.9cf4fda5cac14428a86b7bf8f52ce9a6_P1.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.6890818a83d04e8d904766f0e64c084e_P1.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
+      "resolvedArticleHost": "sports.khan.co.kr",
+      "fetchedAt": "2026-11-25T03:54:07.332Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.3c5c2d9217ad49b598cf5d2bb142858e_P1.jpg",
+      "articleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
+      "observedAt": "2026-11-25T03:54:07.332Z"
+    }
+  },
+  {
     "id": "df22c0d77881236817c8",
     "title": "“Japanese fans like it when you are not good at something”… Sung Si-kyung offers unexpected advice to NMIXX ahead of their debut (I Will Sing) - 스포츠경향",
     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBxRHpPeVFYT2dUcnRZaGNkcC1Dc3lEay12T2lkb3U4bnQ4czVwZmZQbk1HelZ4bTBxVDg1eGJhcGxwS2VjNTVNNDBrck5EUDdmblVzQ2syYi1kUWV0ZUVMc3J3?oc=5",
@@ -13735,6 +13856,69 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "ea9921421f66eb71868d",
+    "title": "Oh Hae-won of NMIXX, chubby cheeks gone and a shockingly ‘skin-and-bones’ recent update…“The image she aims for is ‘adult woman’”",
+    "url": "https://sports.khan.co.kr/en/article/202610221724007/",
+    "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b065bdedb274d2d8d372a18cdffc933&url=https%3a%2f%2fsports.khan.co.kr%2fen%2farticle%2f202610221724007%2f&c=15187239315500115028&mkt=ko-kr",
+    "publisherHost": "sports.khan.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20interview&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b065bdedb274d2d8d372a18cdffc933&url=https%3a%2f%2fsports.khan.co.kr%2fen%2farticle%2f202610221724007%2f&c=15187239315500115028&mkt=ko-kr",
+        "articleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
+        "host": "sports.khan.co.kr"
+      }
+    ],
+    "publishedAt": "2026-10-22T10:27:00.000Z",
+    "description": "Oh Hae-won of the group NMIXX, appearing noticeably slimmer, is drawing attention online. In the past, Oh Hae-won drew reactions that she resembled the character ‘Nongdamgom’ thanks to her fair ...",
+    "thumbnailUrl": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.31a8dcc1b53b4a56a3048eda8bb717ad_P1.jpeg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "스포츠경향",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX interview",
+    "discoveredAt": "2026-11-25T03:54:06.707Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.31a8dcc1b53b4a56a3048eda8bb717ad_P1.jpeg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.29768728f855489b98f20588c1de429c_P1.jpeg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.7c3c3bdc143a4c67a80730a0c93e50a3_P1.jpeg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
+      "resolvedArticleHost": "sports.khan.co.kr",
+      "fetchedAt": "2026-11-25T03:54:07.332Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.31a8dcc1b53b4a56a3048eda8bb717ad_P1.jpeg",
+      "articleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
+      "observedAt": "2026-11-25T03:54:07.332Z"
+    }
   },
   {
     "id": "e75ec45c6ffcf657d60d",

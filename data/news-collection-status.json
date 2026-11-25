@@ -1,41 +1,41 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-24T23:18:57.409Z",
+  "collectedAt": "2026-11-25T03:54:06.707Z",
   "searchPack": 1,
   "queries": [
     {
       "query": "Haewon NMIXX interview",
-      "candidates": 15,
-      "uniqueCandidates": 15
+      "candidates": 14,
+      "uniqueCandidates": 14
     },
     {
       "query": "오해원 인터뷰",
-      "candidates": 31,
-      "uniqueCandidates": 31
+      "candidates": 43,
+      "uniqueCandidates": 43
     },
     {
       "query": "NMIXX Haewon magazine",
-      "candidates": 14,
-      "uniqueCandidates": 14
+      "candidates": 13,
+      "uniqueCandidates": 13
     },
     {
       "query": "Haewon NMIXX brand",
-      "candidates": 14,
-      "uniqueCandidates": 14
+      "candidates": 15,
+      "uniqueCandidates": 15
     }
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
-  "bingCandidates": 33,
+  "bingCandidates": 32,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 74,
-  "uniqueIncoming": 66,
-  "added": 2,
+  "fetched": 85,
+  "uniqueIncoming": 77,
+  "added": 5,
   "rssImageSignals": {
-    "items": 41,
-    "sourceUrlItems": 41,
+    "items": 53,
+    "sourceUrlItems": 53,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -49,20 +49,109 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 0,
-    "found": 0,
-    "assigned": 0,
+    "attempted": 3,
+    "found": 3,
+    "assigned": 3,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
     "failed": 0,
-    "results": []
+    "results": [
+      {
+        "id": "d9f9b241f275fda266c0",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.3c5c2d9217ad49b598cf5d2bb142858e_P1.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.3c5c2d9217ad49b598cf5d2bb142858e_P1.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.9cf4fda5cac14428a86b7bf8f52ce9a6_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.6890818a83d04e8d904766f0e64c084e_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
+        "resolvedArticleHost": "sports.khan.co.kr"
+      },
+      {
+        "id": "ea9921421f66eb71868d",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.31a8dcc1b53b4a56a3048eda8bb717ad_P1.jpeg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.31a8dcc1b53b4a56a3048eda8bb717ad_P1.jpeg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.29768728f855489b98f20588c1de429c_P1.jpeg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.7c3c3bdc143a4c67a80730a0c93e50a3_P1.jpeg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
+        "resolvedArticleHost": "sports.khan.co.kr"
+      },
+      {
+        "id": "289fa93f30d1c9322619",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://cloudimages2.broadwayworld.com/columnpiccloud/Interview-NMIXX-1792599723.jpg?format=jpeg&quality=80&width=1200",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://cloudimages2.broadwayworld.com/columnpiccloud/Interview-NMIXX-1792599723.jpg?format=jpeg&quality=80&width=1200",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://cloudimages2.broadwayworld.com/heads/1793096532_IMG_7262.jpeg?format=auto&width=400",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
+        "resolvedArticleHost": "www.broadwayworld.com"
+      }
+    ]
   },
   "deduplicationComparison": {
-    "before": 74,
-    "after": 65,
-    "collapsed": 9,
+    "before": 85,
+    "after": 77,
+    "collapsed": 8,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 701
+  "totalCandidates": 704
 }
