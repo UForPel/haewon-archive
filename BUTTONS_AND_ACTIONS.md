@@ -206,3 +206,9 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 
 - A new current-main branch adds the focused read-only pull-request verification workflow. It has no write permissions or deploy actions.
 - Do not represent the new workflow as active on main until the PR is approved and merged. The PR's own event run is the acceptance check.
+
+
+
+### PR #30 verification status — 2026-11-25
+- PR #30's actual `pull_request` event run #45570038033 passed checkout, Node setup, unit tests and data validation.
+- The workflow remains a proposed change until user approval and merge; do not describe it as an active main-branch gate yet.
