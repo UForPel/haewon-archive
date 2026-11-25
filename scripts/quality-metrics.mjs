@@ -54,7 +54,7 @@ export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoS
   candidateSourceCounts:countValues(candidateSources),
   publisherHosts:countValues(discovery.filter(hasExplicitPublisherArticleUrl).map(item=>item.publisherHost||hostOf(item.publisherArticleUrl))),
   finalHosts:countValues(discovery.filter(hasExplicitPublisherArticleUrl).map(item=>item.thumbnailMetaFetch?.resolvedArticleHost||'')),
-  wrapperOnlyMetadataHosts:countValues(discovery.filter(item=>!String(item.publisherArticleUrl||'').startsWith('https://')).map(item=>item.thumbnailMetaFetch?.resolvedArticleHost||'')),
+  wrapperOnlyMetadataHosts:countValues(discovery.filter(item=>item.thumbnailMetaFetch?.status==='wrapper-only').map(item=>item.thumbnailMetaFetch?.resolvedArticleHost||'')),
   sourceSiteHosts:countValues(discovery.map(item=>hostOf(item.sourceUrl))),
   discoveryWrapperHosts:countValues(discovery.map(item=>hostOf(item.discoveryUrl)))
  };
