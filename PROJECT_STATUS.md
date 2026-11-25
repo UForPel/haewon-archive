@@ -714,3 +714,16 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - PR #16 HEAD `fbac15bcd4142ce943cc23df236176a4a1ba4725` was verified through temporary PR #18, which added only the PR #15 read-only workflow on top of that exact code HEAD.
 - Actions #12 / run `45542878538` succeeded: 143/143 tests, 0 failures; data validation passed for 19 videos, 0 photos, 701 discovery candidates, 0 human relevance labels, 154 run logs, and quality metrics (37 source summaries, 41 links checked).
 - Temporary PR #18 was closed after verification and never merged. PR #16 remains open/unmerged; no PR merge was performed.
+
+
+## Final verification and collection follow-up (2026-11-25)
+- Main HEAD after the two completed collection runs: `7dba74e89d9b5b8e727f0ac5ff94a554aad9e9d6`; 704 discovery candidates. PR #13/#14/#15/#16 remain open and unmerged.
+- Temporary verification PRs #17/#18/#19 are closed and unmerged. PR #13 exact HEAD passed Actions #11 (154/154); PR #16 prior HEAD passed #12 (143/143), and updated UI/metric HEAD `b1fff8174e60ae3a8b852ace8a439cf9edcb54ad` passed Actions #15 (145/145) plus archive validation. No verification PR was merged.
+- PR #16 now passes latest-run summary into the comparison function and visibly separates persisted candidate evidence from latest-run attempted/found/assigned metrics. Current main data re-evaluated with the updated branch logic: 47 compared; 47 persisted metadata candidate records; 47 persisted thumbnails; 47 URL matches; 0 mismatches; latest run 0/0/0; rate null. PR #16 remains unmerged, so this UI is not yet on main.
+- An accidental temporary workflow commit briefly triggered main's production workflow. The workflow file was removed by restoring main to its prior HEAD before the collector's data commit; the file is absent from current main. The already-started run #582 completed successfully (5 records added; thumbnail enrichment 3/3/3; Pages deployment success). The queued reset-triggered run #583 also completed successfully (2 records added; latest enrichment 0/0/0; Pages deployment success). Final main HEAD is data-only follow-up; no PR merge occurred.
+- The two production runs were unintended side effects and are explicitly recorded in SESSION_LOG. They did not run any access-control bypass, bulk deletion or legacy-thumbnail replacement.
+- Current 49-record review scope remains 47 publisher article pages and 2 X URLs. Heuristic category counts: news 24, interview 13, official 5, performance 5, event 2. Human review labels remain 0; these are not accuracy results.
+- Current thumbnail state: 10 missing in the 49-record scope (4 recorded 403, 6 missing); 32-image visual audit unchanged (8 rendered, 1 HTTP 403, 23 inspection-tool internal errors; 24 unavailable). No suitability labels were inferred.
+- Legacy shared image URL still occurs 273 times; no automatic deletion or replacement.
+- PR #15's Node 24 SHA-pinned read-only workflow passed Actions #10 (142/142), but production collect-and-deploy workflow still emits Node 20 deprecation warnings from its separate action versions. Updating production workflow actions is a separate follow-up.
+- Pages deployments #582 and #583 reported success. This does not establish public browser rendering; Android browser QA remains outstanding.
