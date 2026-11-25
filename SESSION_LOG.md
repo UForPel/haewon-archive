@@ -1371,3 +1371,29 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 - Temporary PR #18 Actions #12 / run `45542878538` completed successfully: 143/143 tests, 0 failures; archive validation passed (19 videos, 0 photos, 701 discovery candidates, 0 human relevance labels, 154 run logs, 37 source summaries and 41 checked links).
 - Closed PR #18 after recording the result; it was never merged. PR #16 remains open/unmerged. No production code or main branch changes were made by this verification harness.
 - PR #13 was separately verified in temporary PR #17 (Actions #11: 154/154); PR #17 is also closed/unmerged.
+
+
+## 2026-11-25 — PR #16 UI split, latest CI, and main workflow side-effect audit
+
+### PR #16 implementation follow-up
+- Found that PR #16's comparison calculation had new persisted-candidate fields but the main dashboard still rendered only the legacy mixed summary.
+- Updated PR #16 branch `fix/thumbnail-candidate-metrics` at HEAD `b1fff8174e60ae3a8b852ace8a439cf9edcb54ad`: pass the full latest enrichment summary into `compareThumbnailCandidates`; add `latestRunAttempted`; keep `latestRunFound`, `latestRunAssigned` and nullable rate separate; render persisted metadata candidate count, persisted thumbnail count, URL matches/mismatches and latest-run metrics separately.
+- Added regression tests for 0/0/0 with null rate and a UI structure test for the distinct labels.
+- Exact updated code was tested through temporary PR #19 (workflow-only addition on a branch based on the PR #16 head). Actions #15 / run `45543128633`: 145/145 tests, 0 failures; data validation passed for 704 discovery candidates and 0 human labels. PR #19 was closed without merge. PR #16 remains open/unmerged.
+
+### Accidental main workflow trigger — transparent record
+- While preparing the PR #16 temporary CI harness, one `create_file` call omitted the branch argument and briefly created the read-only workflow on main at commit `919242d49c97fcbea4e38eca624fae6112088c56`.
+- Detected immediately; restored main ref to its exact pre-operation HEAD `32832e57e9e1023c62eefa4a1e8b4a76550e451b`. Confirmed the workflow file is absent from current main.
+- The push had already triggered production Actions #582; the reset triggered queued run #583. These runs could not be cancelled with the available GitHub actions interface. Both completed successfully and produced data-only commits:
+  - #582 / `45543072797`: 142/142 tests, 5 new records, 3 thumbnail metadata attempts / 3 found / 3 assigned, Pages deployment success.
+  - #583 / `45543108685`: collection and validation success, 2 new records, latest thumbnail enrichment 0/0/0, Pages deployment success.
+- Main's final data-only HEAD is `7dba74e89d9b5b8e727f0ac5ff94a554aad9e9d6`. No workflow file remains on main. No PR was merged. Record both production runs as unintended side effects rather than planned verification.
+
+### Current data and safeguards
+- Current discovery records: 704. 49 verified-publisher-URL Haewon review records: 47 publisher pages + 2 X URLs.
+- PR #16 comparison logic applied to current main data: 47 compared; 47 persisted metadata candidate records; 47 persisted HTTPS thumbnails; 47 candidate URL matches; 0 mismatches. Latest run 0 attempts / 0 found / 0 assigned; assignment rate null.
+- The 44/44 snapshot was valid before the accidental #582 collection; after three new enriched records, the current comparable set is 47/47.
+- The 273 repeated legacy image assignments remain unchanged.
+- 10 missing thumbnails in the 49-record scope: 4 recorded 403 and 6 missing. 32-image audit remains 8 rendered, 1 403 and 23 inspection-tool internal errors; 24 unavailable. No labels, bypass, automatic assignment, deletion or replacement.
+- PR #15 Actions #10 passed 142/142 with Node 24 SHA-pinned actions and read-only permissions. The separate production workflow still warns that some actions target Node 20.
+- Pages deployment success is confirmed for #582/#583; live browser rendering and Android QA remain unverified.
