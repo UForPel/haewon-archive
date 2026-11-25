@@ -1,0 +1,44 @@
+name: Thumbnail response audit sample
+
+on:
+  push:
+    branches:
+      - audit/thumbnail-head-sample-20261126
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: HEAD-check first 12 unique thumbnail URLs
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+          const data = JSON.parse(await readFile('data/discovery.json', 'utf8'));
+          const urls = [...new Set(data.map(x => x.thumbnailUrl).filter(x => /^https?:\\/\\//i.test(String(x || ''))))].slice(0, 12);
+          const rows = await Promise.all(urls.map(async url => {
+            try {
+              const r = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: AbortSignal.timeout(5000) });
+              const type = r.headers.get('content-type') || '';
+              return { url, status: r.status, contentType: type, isImage: /^image\\//i.test(type) };
+            } catch (e) { return { url, status: null, error: String(e?.message || e), isImage: false }; }
+          }));
+          console.log(JSON.stringify({
+            sampledUniqueUrls: urls.length,
+            checked: rows.length,
+            broken: rows.filter(x => [404, 410].includes(x.status)),
+            unreachable: rows.filter(x => x.status === null),
+            rateLimited: rows.filter(x => x.status === 429),
+            nonImage: rows.filter(x => x.status !== null && x.status >= 200 && x.status < 400 && !x.isImage),
+            results: rows
+          }, null, 2));
+          NODE
