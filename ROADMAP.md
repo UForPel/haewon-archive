@@ -341,3 +341,12 @@
 - [x] Confirm successful run recorded 15 YouTube items, 73 Google News RSS items and 32 Bing News RSS candidates.
 - [ ] Continue improving the actual content mix and source-verified article/image coverage.
 - [ ] Perform real browser/mobile visual QA and human review.
+
+## 2026-11-25 — Metadata fetch error classification
+- [x] Inspect latest main and production Actions run #45556461352, including all collection, validation, data-commit and Pages-deploy steps.
+- [x] Trace actual HTTP 405 evidence to `scripts/collect-news.mjs`: it was incorrectly mapped to `network-error` and retried after one day.
+- [x] Implement distinct `method-not-allowed` classification and seven-day backoff; preserve article/link and metadata failure provenance; do not try alternate methods.
+- [x] Add regression tests for classification, retry timing, article retention and no method fallback.
+- [ ] Await read-only PR Actions for the new tests and validator; no merge without user approval.
+- [ ] Continue the larger bottleneck: increase distinct, source-traceable article thumbnails and verified original URLs without increasing prohibited/blocked requests. Provenance is not human visual relevance.
+- [ ] Human image/relevance labels and real mobile-browser QA remain outstanding.
