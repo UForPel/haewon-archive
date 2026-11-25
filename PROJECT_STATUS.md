@@ -586,3 +586,15 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Corrected a session-end omission: the prior response updated BUTTONS_AND_ACTIONS.md but failed to render the actual clickable ChatGPT follow-up button. Documentation alone did not satisfy the requirement.
 - Recorded the exact button label and full continuation directive in BUTTONS_AND_ACTIONS.md and CHATGPT_OPERATING_RULES.md on this documentation PR branch.
 - From this response onward, the final answer must render the button **🔄 연구 기반 재귀개선 계속하기** as an actual clickable control that submits the next-cycle instruction. Missing rendered control is a session-completion failure.
+
+
+## 2026-11-25 — Recursive review cycle: PR CI failure diagnosed and review dimensions corrected
+
+- Fresh main commit remains 32832e57e9e1023c62eefa4a1e8b4a76550e451b. The most recent main production workflow observed is Actions #581 (run ID 45508856109), successful through unit tests, all collectors, improvement cycle, quality generation, both validation passes, run-log generation, Pages configuration, artifact upload, and Pages deployment. No newer main run was present in the latest Actions list.
+- PR #13 Actions run #2 (45529878362) failed before the latest fixes. The log identifies SyntaxError: Identifier auditVerifiedPublisherArticles has already been declared; 113/116 tests passed and three test files failed to load the module. The duplicate exported function was removed on the PR #13 branch. Do not report the corrected branch as CI-passing: no post-fix Actions run exists yet.
+- PR #13 now includes a sixth human-review dimension, thumbnail suitability (suitable / unsuitable / not-present / uncertain), displayed alongside the actual per-article image and thumbnail provenance. The prior five dimensions remain original-page human accessibility, relevance, date, source, and category.
+- Corrected a measurement overclaim: a successful HEAD status is now http-responded, not accessible. HTTP HEAD returns headers without the article body (RFC 9110 §9.3.2); this does not prove that a reader can view the actual article. Human accessibility review remains independent.
+- Removed GET fallback after a 403 from the generic link audit. A 405 may still receive one GET because it specifically means the method is not allowed; a 403 is no longer retried. No wrapper decoding or access-control bypass.
+- PR #13 latest code commit: 00578614125f2994ed0e65da33f5e4d6ae021323; PR remains open. PR #15 remains open and its own CI run #1 passed 142/142 tests plus data validation, but the workflow is not on main, so it has not yet rerun PR #13.
+- PR #14 remains the separate documentation PR. Actual browser/mobile QA remains unverified. The Pages deployment step succeeded in run #581, but no real browser visual inspection was possible in this session.
+- Content baseline remains the last generated dataset (701 discovery records; 49 verified Haewon publisher articles; 39 provenance-backed thumbnails among those 49; 273 repeated legacy assignments). No post-fix production data run occurred, so no verified content increase is claimed.
