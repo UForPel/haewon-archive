@@ -485,3 +485,16 @@
 - [x] Run read-only CI against PR #16 exact code HEAD through temporary PR #18: Actions #12, 143/143 tests, archive validation passed; close without merge.
 - [x] Run read-only CI against PR #13 exact code HEAD through temporary PR #17: Actions #11, 154/154 tests, archive validation passed; close without merge.
 - [ ] Merge PR #15 only after explicit user approval; until then, its read-only CI is not part of main.
+
+
+## 2026-11-25 final verification state
+- [x] PR #13 exact HEAD read-only CI: 154/154 tests, validation passed (temporary PR #17 closed unmerged).
+- [x] PR #16 initial exact HEAD read-only CI: 143/143 tests, validation passed (temporary PR #18 closed unmerged).
+- [x] PR #16 persisted/latest metrics UI follow-up: 145/145 tests, validation passed (temporary PR #19 closed unmerged).
+- [x] Current data comparison: 47/47 persisted metadata candidates match saved thumbnails; latest enrichment 0/0/0; rate null.
+- [x] Confirm accidental temporary workflow was removed from main and record the already-triggered Actions #582/#583; both completed and deployed Pages successfully.
+- [ ] Complete 49-record human source/date/category/direct-vs-indirect review; no human labels exist yet.
+- [ ] Review article context for rendered thumbnail previews; inaccessible preview results remain unknown.
+- [ ] Update production collect-and-deploy action versions separately from PR #15's Node 24 CI.
+- [ ] Verify live rendering and actual Android browser behavior.
+- [ ] Keep all original PRs unmerged until explicit approval; no bulk migration of the 273 legacy assignments.
