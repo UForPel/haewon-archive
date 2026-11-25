@@ -1150,3 +1150,10 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 
 
 - After the six documentation status updates, GitHub emitted synchronize runs for PR #30. Superseded run `45570112539` was cancelled as expected by concurrency; run `45570124386` passed an intermediate docs head; final head `de53462e6fc814213bce325de1cb00150e1683fa` was tested by run `45570147672`, event `pull_request`, associated with PR #30, conclusion `success`. Its sole job passed checkout, Node setup, unit tests and archive validation. This is the final-head acceptance result.
+
+
+## 2026-11-26 — Refresh PR verification against current main
+- Current main is `3c93903c6e37839fd69e0a1a74851a3dac3e6174`; scheduled production run #45695468167 completed 142/142 tests, all collection/validation/data-commit steps, and Pages deploy. Artifact: 446,580 bytes, SHA-256 `ea394ffa5add0d8ffc8bdfc88673b145cf64fc6d7ebbb9870badc5ffe8d50bcc`.
+- Main still emits the GitHub Node20 deprecation warning for checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4; the runner forces them to Node24. PR #26 proposes immutable Node24 action pins.
+- Previous PR #30 run #45570252997 passed 142 tests and validation but its merge commit was based on main `37998b31`, one data commit behind current main. This commit refreshes the PR head so the read-only workflow can be re-evaluated against current main.
+- This workflow must remain read-only (`contents: read`), with no secrets, data writes, artifact upload or deployment. A successful PR run is not a production deployment.
