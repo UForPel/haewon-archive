@@ -752,3 +752,11 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - PR #20 branch: `fix/news-chronology-video-candidates`; no data files changed. 273 repeated legacy thumbnail occurrences remain untouched.
 - Validation limitation: PR checks did not run because the read-only verification workflow is still confined to unmerged PR #15 and is absent from main. Five focused Node assertions for sort and explicit-URL classification passed; the complete repository `npm test` suite has not been run on PR #20. Android/browser rendering remains unverified.
 - GitHub Pages deploy job succeeded in run #583; live page fetch via the available web inspection path was unavailable. Do not claim visual verification.
+
+## 2026-11-25 — Expanded editorial search coverage (PR #22, not merged)
+
+- PR #22 adds 6 rotating packs × 6 queries (36 unique editorial phrases) and selects different packs for the two daily Actions runs using Korea Standard Time run slot.
+- Expected request volume changes from 4 queries/run × 2 RSS engines × 2 runs/day = 16 RSS requests/day to 6 × 2 × 2 = 24/day (+50%). This is a bounded request increase, not a guarantee of more unique/relevant results.
+- Video/fancam discovery remains separate from editorial RSS. The new packs deliberately do not include fancam terms.
+- Branch: `feat/expand-news-search-packs`; PR https://github.com/UForPel/haewon-archive/pull/22. No data mutation or merge.
+- Four focused Node assertions for pack count, query count and distinct run-slot rotation passed. Full `npm test` and PR Actions checks remain pending because CI workflow is not present on main.
