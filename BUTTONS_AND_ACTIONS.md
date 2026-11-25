@@ -190,3 +190,14 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Verified run #580 recorded YouTube 15, Google News RSS 73, Bing News RSS 32; all succeeded.
 - Overall status is aggregated across sources; mixed success/failure is reported as **partial**.
 - Latest validation: 142/142 tests passed and Pages deployment succeeded.
+
+
+## 2026-11-25 — Verified article quality review (PR #13 pending)
+
+- A separate 검증 기사 49건 품질 검수 panel is added for records with explicit publisher HTTPS URLs and Haewon title matches; video candidates and wrapper-only links are excluded.
+- Each article exposes its publisher URL, publication date, source, rule-inferred category, and its current thumbnail when present.
+- Four independent labels are available: relevance (relevant/unrelated/uncertain), date accuracy (accurate/inaccurate/missing/uncertain), source accuracy (accurate/inaccurate/uncertain), and category accuracy (correct/incorrect/uncertain).
+- Labels are stored in the current browser and can be exported/imported as JSON. They are not automatically committed to the public repository.
+- The review progress separates articles touched from fully reviewed records and reports per-dimension coverage.
+- The repeated legacy thumbnail group is audited, not destructively modified. No group-level label propagation, automatic deletion, or automatic replacement is performed.
+- PR #13: https://github.com/UForPel/haewon-archive/pull/13. CI and actual browser/mobile interaction checks are pending; no visual completion claim is made.
