@@ -70,3 +70,13 @@ test('unresolved wrapper fancam candidates remain visible separately without bei
  assert.equal(isExplicitYoutubeVideoUrl(rows[2].url),true);
  assert.equal(isExplicitYoutubeVideoUrl(rows[0].url),false);
 });
+
+test('date mode keeps the newest publication as the representative of a duplicate group',()=>{
+ const grouped=groupDiscoveryDuplicates([
+  {title:'Haewon news headline with enough normalized characters to group',sourceName:'Older source',publishedAt:'2026-11-01',relevanceScore:10},
+  {title:'Haewon news headline with enough normalized characters to group',sourceName:'Newer source',publishedAt:'2026-11-24',relevanceScore:1}
+ ],'date');
+ assert.equal(grouped.length,1);
+ assert.equal(grouped[0].sourceName,'Newer source');
+ assert.equal(grouped[0].publishedAt,'2026-11-24');
+});
