@@ -362,3 +362,6 @@
 
 - [x] Add a one-request direct publisher URL accessibility audit for the 49 verified Haewon articles; no retry, wrapper decoding, or access-control workaround.
 - [ ] Review the audit's actual status results after PR validation and the next quality-data generation run.
+
+- [x] Verify the new PR CI workflow itself: PR #15 Actions #1 passed 142/142 existing tests and archive-data validation.
+- [ ] Re-run CI against PR #13's new article-review tests after the workflow is available on main.
