@@ -359,3 +359,6 @@
 - [x] Distinguish 148 legacy records with publisher source-site root hints from article-specific URLs (0); preserve these hints without treating them as replacements.
 
 - [x] Add an explicit original publisher-page accessibility label; URL presence is not treated as proof of access.
+
+- [x] Add a one-request direct publisher URL accessibility audit for the 49 verified Haewon articles; no retry, wrapper decoding, or access-control workaround.
+- [ ] Review the audit's actual status results after PR validation and the next quality-data generation run.
