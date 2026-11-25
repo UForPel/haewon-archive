@@ -1404,3 +1404,10 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 - The exact button and full execution prompt were already present in `BUTTONS_AND_ACTIONS.md` and `CHATGPT_OPERATING_RULES.md` on this documentation branch. The failure was that the assistant did not render the control in the final response.
 - Reaffirmed the hard invariant: every Haewon Archive response ends with a real ChatGPT clickable control labelled `🔄 연구 기반 재귀개선 계속하기`. A user message typed into chat does not remove or suspend it.
 - Do not close a work cycle until the actual control is present in the rendered final answer. Verify both the documentation and final response, independently.
+
+
+## 2026-11-25 — Ten missing-thumbnail records rechecked
+- Read the ten missing-thumbnail records directly from current main's `data/discovery.json`.
+- Four have recorded HTTP 403: Famtimes, BNT News, X profile, Allkpop. Six have a `missing` metadata-fetch outcome: three MSN syndicated pages, TVDaily, OSEN, and another MSN page.
+- All ten currently have no stored RSS candidates and no stored `thumbnailMetaCandidates`. Targeted exact-title/article-ID public search did not return a usable image metadata candidate.
+- Left all ten unchanged. Did not retry 403s, probe alternate access routes, decode Google News wrappers, infer thumbnail URLs, or mark any image unsuitable.
