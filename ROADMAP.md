@@ -545,3 +545,5 @@
 7. Keep Gemini off by default. Only consider it for public/sanitized metadata after accepting the free-tier product-improvement data terms and verifying active project/model limits in AI Studio. Never make Gemini a core dependency.
 8. Keep photo archive manual-link-first: public, permitted original post/page URLs with source attribution and date. Do not use paid APIs, login-gated scraping, hidden endpoints, or image rehosting as core paths.
 9. Preserve all 273 legacy repeated image URL occurrences until an evidence-backed, reviewed per-record migration is available.
+## Video provenance UI follow-up
+- PR #23 now exposes channel identity and verification status directly on video cards. Keep all non-official channels visibly `채널 미검수` until a human review process supplies a verified label. Do not infer that a channel is a fan channel merely because it is not the official channel.
