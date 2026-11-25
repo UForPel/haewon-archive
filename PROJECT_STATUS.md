@@ -578,3 +578,16 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - PRs #13–#16 are 8 commits behind main; #20/#22–#24 are 6 commits behind. PR #14 is mergeable=false and its 8-file diff is documentation-only. Main's 8 intervening commits changed BUTTONS_AND_ACTIONS.md, PROJECT_STATUS.md and SESSION_LOG.md, overlapping PR #14's edits to all three; do not merge the stale branch wholesale.
 - Pages API read was rejected by the GitHub connector, so Pages configuration is verified by the workflow step, not by an independent API read. Mobile browser, visual layout, keyboard and deployed content QA remain unverified.
 - Official GitHub notice: Node 20 was removed from Actions runners on 2026-09-23; JavaScript actions now run on Node 24. Keep PR #26 as a production compatibility gate. Source: https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/
+
+
+## 2026-11-25 — Late-session live audit
+- Main remains 37998b31b12b2eb9980cff6df616b2f677a10de6. Main workflow still uses checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4.
+- PRs #13–#30 are open and unmerged. Ahead/behind main: #13 59/8; #14 134/8; #15 3/8; #16 13/8; #20 17/6; #22 13/6; #23 15/6; #24 9/6; #25 17/0; #26 8/0; #27 19/0; #28 4/0; #29 7/0; #30 19/0. PR #14 remains mergeable=false; do not merge its stale documentation branch wholesale.
+- PR #30 head 243a676b730772bbf74fec2827b9fe6f17f1d06f received genuine pull_request run #45570252997; checkout, setup, unit tests and archive validation succeeded. The workflow is not active on main until approved and merged.
+- Production run #587 / #45556461352: 142/142 tests; collection, quality, validation, data commit, Pages configuration, 434,230-byte artifact upload and deploy step succeeded. Artifact SHA-256 8ffb3b7cbb28e53622ee348bddc50a8264a8cc5f270d81feb1a93bc0742bb6df. Browser/mobile QA remains unverified.
+- The exact Sportskeeda article URL was re-opened on 2026-11-25 and returned HTTP 405. PR #25 tests simulate 405 and assert method-not-allowed, seven-day backoff, article retention and no method fallback; latest PR head has no genuine PR-event run.
+- PR #26 snapshot #45564928105 passed 142 tests and validation, but did not exercise production Pages deployment. Its Node24-compatible action pins remain a proposal pending approval.
+- PR #27 head fb531e4a4d22ed050f0b6242e76fec2d0550f74f is 19 ahead/0 behind. Push snapshot #45616074455 passed 148/148 and validation; it is not a PR-event run or production result. The Bing X-status fix preserves the candidate but excludes publisherArticleUrl and metadata enrichment.
+- PR #28 live Google/Bing RSS sample has zero image signals. Parser support cannot create absent feed metadata. Preserve all 273 shared legacy thumbnails.
+- Production data remains 707 candidates, 61 publisherArticleUrl values including 3 X/social URLs, 60 verified publisher articles, 51 verified Haewon articles, 321 thumbnail assignments (273 shared legacy), 386 missing and 49 unique thumbnail URLs. Human image labels remain zero.
+- No PR merged; main data and deployment were not changed by this audit.
