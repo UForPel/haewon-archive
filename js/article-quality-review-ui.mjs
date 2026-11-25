@@ -14,9 +14,9 @@ if (host) {
     categoryAccuracy: { correct: '정확', incorrect: '잘못됨', uncertain: '판단 보류' }
   };
   const details = document.createElement('details'); details.className = 'article-quality-review';
-  const summary = document.createElement('summary'); summary.textContent = '검증 기사 49건 품질 검수 · 관련성 / 날짜 / 출처 / 분류';
+  const summary = document.createElement('summary'); summary.textContent = '검증 기사 49건 품질 검수 · 원문 접근성 / 관련성 / 날짜 / 출처 / 분류';
   const body = document.createElement('div'); body.className = 'article-quality-review-body';
-  const intro = document.createElement('p'); intro.textContent = '개별 HTTPS 원문 주소가 명시된 해원 기사만 대상으로 합니다. 각 항목을 원문에서 직접 확인하고 네 항목을 따로 평가하세요. 라벨은 이 브라우저에 저장되며 JSON으로 내보내 다른 기기 또는 저장소 검수 자료에 옮길 수 있습니다.';
+  const intro = document.createElement('p'); intro.textContent = '개별 HTTPS 원문 주소가 명시된 해원 기사만 대상으로 합니다. 각 항목을 원문에서 직접 확인하고 다섯 항목을 따로 평가하세요. 라벨은 이 브라우저에 저장되며 JSON으로 내보내 다른 기기 또는 저장소 검수 자료에 옮길 수 있습니다.';
   const progress = document.createElement('p'); progress.className = 'photo-meta'; progress.setAttribute('role', 'status'); progress.setAttribute('aria-live', 'polite');
   const actions = document.createElement('div'); actions.className = 'photo-actions';
   const exportButton = document.createElement('button'); exportButton.type = 'button'; exportButton.textContent = '기사 검수 JSON 내보내기';
@@ -36,8 +36,8 @@ if (host) {
   let articles = [];
   function render() {
     const report = summarizeArticleReviews(articles, labels);
-    progress.textContent = '검수 진행 · 기사 '+report.reviewedArticles+'/'+report.eligible+' · 네 항목 완료 '+report.fullyReviewed+'/'+report.eligible+
-      ' · 접근성 '+report.dimensions.originalAccess.reviewed+'/'+report.eligible+' · 관련성 '+report.dimensions.relevance.reviewed+'/'+report.eligible+
+    progress.textContent = '검수 진행 · 기사 '+report.reviewedArticles+'/'+report.eligible+' · 다섯 항목 완료 '+report.fullyReviewed+'/'+report.eligible+
+      ' · 접근성 '+report.dimensions.originalAccess.reviewed+'/'+report.eligible+' · 접근성 '+report.dimensions.originalAccess.reviewed+'/'+report.eligible+' · 관련성 '+report.dimensions.relevance.reviewed+'/'+report.eligible+
       ' · 날짜 '+report.dimensions.dateAccuracy.reviewed+'/'+report.eligible+
       ' · 출처 '+report.dimensions.sourceAccuracy.reviewed+'/'+report.eligible+
       ' · 분류 '+report.dimensions.categoryAccuracy.reviewed+'/'+report.eligible;
