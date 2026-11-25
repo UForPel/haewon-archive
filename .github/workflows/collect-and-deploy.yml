@@ -63,13 +63,14 @@ jobs:
           GITHUB_RUN_ID: ${{ github.run_id }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           RUN_STARTED_AT: ${{ env.RUN_STARTED_AT }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
           # Always regenerate against the latest main to avoid stale JSON rebase conflicts.
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
             npm run collect
-            YOUTUBE_API_KEY="${{ secrets.YOUTUBE_API_KEY }}" npm run collect-youtube-search
+            npm run collect-youtube-search
             npm run collect-news
             npm run sync-discovery-videos
             npm run improve
