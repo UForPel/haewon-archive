@@ -573,3 +573,10 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - The workflow runs only on `pull_request` targeting main, grants `contents: read`, uses pinned checkout v7.0.1 and setup-node v7.1.0 (Node 24 action runtimes), disables checkout credential persistence and package-manager cache, and runs `npm test` plus `npm run validate` on Node 22.
 - This branch is a focused replacement for stale PR #15; it contains no application code, archive data, secrets, deployment permissions, or Pages deployment steps.
 - A PR-event run is pending after opening the PR. Do not claim CI passed until that event is observed.
+
+
+
+### PR #30 acceptance result — 2026-11-25
+- Opened PR #30 from the current-main branch. Its actual GitHub Actions run `45570038033` is confirmed as event `pull_request`, associated with PR #30, and completed successfully.
+- Job `test-and-validate`: checkout, Node setup, `npm test`, and `npm run validate` all succeeded. This is a real PR-event pass for #30, not a push snapshot.
+- The workflow remains only proposed on the PR branch; it is not active on main until the user approves and merges it.
