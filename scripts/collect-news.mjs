@@ -161,7 +161,7 @@ export function shouldRetryThumbnailFetch(meta,now=Date.now()){
  if(['assigned','found','duplicate-rejected','wrapper-only'].includes(meta.status))return age>=30*day;
  if(meta.status==='missing')return age>=7*day;
  if(meta.status==='failed'){
-  if(['not-found','forbidden','rate-limited','method-not-allowed'].includes(meta.errorCode))return age>=7*day;
+  if(Number(meta.statusCode)===405||['not-found','forbidden','rate-limited','method-not-allowed'].includes(meta.errorCode))return age>=7*day;
   return age>=day;
  }
  return true;
