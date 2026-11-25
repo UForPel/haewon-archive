@@ -1138,3 +1138,11 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Added only `.github/workflows/pull-request-verification.yml`: PRs targeting main, `contents: read`, pinned checkout v7.0.1 and setup-node v7.1.0, `persist-credentials: false`, `package-manager-cache: false`, Node 22, `npm test`, `npm run validate`, concurrency cancellation and 10-minute timeout.
 - No `package-lock.json` or npm-shrinkwrap exists in main; the repository has no dependency-install step in its existing workflows, so this minimal job does not invent an install step.
 - No code/data/deploy permissions were added. PR-event CI for this new branch is pending PR creation and must be reported separately from PR #15 run #10.
+
+
+
+### PR #30 actual PR-event validation — 2026-11-25
+- PR #30: `https://github.com/UForPel/haewon-archive/pull/30`; base SHA `37998b31...`; head SHA `e07785e56679b58a826d7b872b9f977f16b76d57`.
+- GitHub run `45570038033` was inspected through the Actions API: `event=pull_request`, PR association `[30]`, conclusion `success`.
+- Job `test-and-validate` succeeded. Checkout, Node setup, `npm test`, and `npm run validate` each completed successfully.
+- This validates the workflow as proposed in PR #30. It does not make the workflow active on main, and does not replace independent approval/merge. No PR was merged.
