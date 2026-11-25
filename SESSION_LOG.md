@@ -1203,3 +1203,38 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 4. Generate a fresh quality snapshot and compare counts and quality to the baseline; preserve all 273 legacy records absent verified replacements.
 
 - Follow-up CI: temporary validation run #4 / 45531573683 completed successfully against the corrected PR #13 code: 150/150 tests passed and npm run validate passed (19 videos, 0 photos, 154 run logs). A temporary copy of the PR #15 workflow was used to trigger this run, then removed from PR #13 to preserve PR separation. Only the workflow file was removed after testing; code and test sources were unchanged. Latest PR #13 branch head after cleanup: 86c9e95b4b8f807bc2f5ec223443a354e0d97e2c.
+
+
+## 2026-11-25 — Second recursive cycle: 49 URL audit, 273 legacy investigation, UI and metric fixes
+
+### Live GitHub / Pages
+- Main SHA: 32832e57e9e1023c62eefa4a1e8b4a76550e451b.
+- Production Actions #581 / run 45508856109: all steps succeeded through GitHub Pages deployment.
+- Operational run log source totals: NMIXX YouTube Atom 15, Google News RSS 74, Bing News RSS 33. Counts: discovered 15, accepted 0, rejected 0, duplicates 15, uncertain 0.
+- PRs #13, #14, #15, #16 remain open; no code or docs from these PRs is on main or Pages.
+- PR #13 temporary read-only Actions run #5 passed 152/152 tests and archive validation. Temporary workflow was removed after the run.
+- PR #16 temporary read-only Actions run #1 passed 143/143 tests and archive validation. Temporary workflow was removed after the run. PR #15 remains the separate permanent CI proposal.
+
+### Article metadata audit
+- Main data has 49 explicit HTTPS Haewon-related publisher/source URLs. All 49 have a publication timestamp and sourceName, but none stores a category array or category scalar.
+- URL structure: 47 publisher article pages, one X profile, one X social post. This is why PR #13 now records content type as a separate review dimension instead of assuming every source URL is an article.
+- 39/49 have provenance-backed HTTPS thumbnail URLs, and all 39 match a persisted metadata candidate URL. This does not mean the thumbnails visually match their articles.
+- The remaining 10 have no HTTPS thumbnail: 4 recorded as failed with HTTP 403, 6 recorded as missing. None currently has a stored alternative thumbnail candidate.
+- No human labels have been entered. Date/source/category correctness, original-page readability and per-image visual suitability remain unmeasured.
+
+### Legacy cluster audit
+- 273 records share the exact same Googleusercontent thumbnail, all from Google News RSS, and all retain opaque Google News RSS wrapper URLs.
+- 148 contain only a root-domain sourceUrl clue; 125 contain no sourceUrl. None contains an article-specific publisher URL, thumbnail candidates, or thumbnail metadata-fetch result.
+- 270 distinct titles; 3 duplicate-title rows; 91 titles contain YouTube; 7 titles contain neither Haewon nor NMIXX terms. These counts are triage signals only, not grounds for automatic deletion.
+- All legacy entries remain unchanged. No replacement was assigned.
+
+### Code changes
+- PR #13 adds contentType as the seventh review dimension, includes all seven fields in the progress summary, and exposes an optional corrected-category selector.
+- PR #16 fixes the interpretation of thumbnailCandidateComparison: persisted candidate matches are now counted separately from assignments performed in the latest collection run. The old metaAssigned=0 and 0% reflected zero enrichment attempts in the last run, not a lack of persisted thumbnails.
+- Latest code branch heads after temporary workflow cleanup: PR #13 0fe3047978424390c9ba19d6a13264304d9c02be; PR #16 fbac15bcd4142ce943cc23df236176a4a1ba4725.
+
+### Research and limits
+- RFC 9110 §9.3.2 defines HEAD as GET without response content. It is appropriate for metadata/link checks but cannot establish human-readable page access: https://www.rfc-editor.org/rfc/rfc9110.html
+- Playwright documents mobile device emulation of viewport, screen size, user agent and touch. Use it for automated responsive checks, but do not claim physical-device validation: https://playwright.dev/docs/emulation
+- GitHub Actions documents workflow permissions and pull_request event controls: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
+- This session did not visually inspect the 39 thumbnails or execute the review UI in a real browser. Mobile/browser QA remains unverified.
