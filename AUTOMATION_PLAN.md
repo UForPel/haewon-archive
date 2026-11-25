@@ -82,3 +82,27 @@ Status: DESIGN ONLY. No external scheduler, Gemini API integration, Worker or fi
 - Gemini integration and constrained policy updater do not exist.
 - No automated fan-video or photo collector has been implemented.
 - The archive-record schema is enforced for video and photo records. The run-log schema remains a future contract until machine logging is implemented.
+
+## 2026-11-25 — Updated free-first scheduler/Gemini feasibility
+
+### Evidence checked
+- Cloudflare Workers Cron Triggers support minute-level cron expressions such as `*/5 * * * *`; executions use UTC. Current Free plan docs list 100,000 requests/day, 10 ms CPU/request and 5 Cron Triggers/account.
+- This makes a single Worker a candidate to combine external scheduling and a narrow authenticated dispatch gateway, rather than requiring cron-job.org plus a separate gateway. This has not been deployed or tested against the repository.
+- Gemini API free tier is not unlimited: only selected models and rate limits are available, and Google's current pricing documentation says free-tier content may be used to improve products. Grounding availability/quotas differ by model and paid/free tier; do not assume free Search grounding for newer models.
+- YouTube Data API `search.list` currently documents 100 default calls/day and 1 quota unit/call. A five-minute schedule would produce 288 trigger attempts/day, so the API must use a bounded rotating search budget, not one search call per trigger.
+
+### Revised proposal
+1. Start with a Cloudflare Worker dry-run Cron Trigger at a conservative interval (e.g. 30 minutes) and a manual authenticated test endpoint.
+2. Use a GitHub App installed only on this repository with only the minimum workflow-dispatch permission; mint short-lived installation tokens inside the Worker. Avoid a broad personal access token. Store private key and shared dispatch secret as Worker secrets; never commit them.
+3. Dispatch a dedicated GitHub Actions dry-run workflow that has concurrency, idempotency, cooldown, execution budget and a manual pause switch.
+4. Add Gemini only after the dry-run trigger is reliable. The model returns schema-limited candidate analysis and search-policy proposals; deterministic code validates all fields. Gemini receives public/sanitized candidate metadata only and cannot write repository files or modify code/workflows/security policies.
+5. For YouTube search, evaluate an optional user-managed YouTube Data API key and daily quota budget separately from Gemini. Never make it mandatory for archive browsing or official Atom feed collection.
+6. Measure trigger delivery delay, workflow queue delay, completion latency, duplicate dispatches, failed invocations, API calls, quota consumption and new verified candidate yield before increasing cadence.
+7. Only consider a 5-minute target after at least several days of dry-run evidence. A 5-minute trigger does not guarantee a completed 5-minute collection cycle.
+
+### Current blockers
+- No Cloudflare Worker or Cron Trigger deployed.
+- No GitHub App or narrow dispatch token configured.
+- No Gemini API key configured in Actions Secrets.
+- No YouTube Data API key configured.
+- No dry-run workflow on main. PR #15's read-only CI is also still unmerged.
