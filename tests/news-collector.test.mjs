@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {parseRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds} from '../scripts/collect-news.mjs';
+import {parseRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,enrichThumbnails} from '../scripts/collect-news.mjs';
+import {hasExplicitPublisherArticleUrl} from '../js/discovery-kind.mjs';
 const fixture='<rss><channel><item><title>오해원 인터뷰</title><link>https://news.example/a</link><pubDate>Thu, 20 Nov 2026 02:00:00 GMT</pubDate><description>Haewon interview</description><source>News</source><media:thumbnail url="https://img.example/thumb.jpg" /></item></channel></rss>';
 test('RSS에서 제목, 링크, 날짜, 검색 출처 메타데이터를 추출한다',()=>{const [item]=parseRss(fixture,'오해원', '2026-11-20T00:00:00Z');assert.equal(item.title,'오해원 인터뷰');assert.equal(item.url,'https://news.example/a');assert.equal(item.sourceName,'News');assert.equal(item.status,'candidate');assert.equal(item.thumbnailUrl,'https://img.example/thumb.jpg');});
 test('중복 URL 후보는 하나로 합친다',()=>{const a=parseRss(fixture,'오해원')[0];assert.equal(mergeCandidates([a],[a]).length,1);});
@@ -59,4 +60,42 @@ test('RSS response diagnostics count image-bearing structures without storing ra
  const result=summarizeRssImageSignals(xml);
  assert.equal(result.items,2);assert.equal(result.mediaThumbnailTags,1);assert.equal(result.enclosureTags,1);
  assert.equal(result.descriptionImageTags,1);assert.equal(result.contentEncodedImageTags,1);assert.equal(result.itemsWithImageSignals,2);
+});
+
+
+test('X profile URLs remain discovery candidates but are not verified publisher articles',()=>{
+ const profileUrl='https://x.com/NMlXX_Haewon';
+ const xml='<rss><channel><item><title>NMIXX HAEWON profile</title><link>'+profileUrl+'</link><description>Public profile</description></item></channel></rss>';
+ const [item]=parseRss(xml,'Haewon');
+ assert.equal(item.url,profileUrl);
+ assert.equal(item.publisherArticleUrl,'');
+ assert.equal(hasExplicitPublisherArticleUrl(item),false);
+});
+
+test('explicit X status URLs remain eligible publisher article links',()=>{
+ const statusUrl='https://x.com/nmixxiee/status/2112842130163114298';
+ const xml='<rss><channel><item><title>NMIXX Haewon public post</title><link>'+statusUrl+'</link><description>Public post</description></item></channel></rss>';
+ const [item]=parseRss(xml,'Haewon');
+ assert.equal(item.publisherArticleUrl,statusUrl);
+ assert.equal(hasExplicitPublisherArticleUrl(item),true);
+});
+
+test('merging an existing X profile candidate clears its invalid publisher article URL',()=>{
+ const profileUrl='https://x.com/NMlXX_Haewon';
+ const [merged]=mergeCandidates(
+  [{id:'profile',title:'NMIXX HAEWON profile',url:profileUrl,publisherArticleUrl:profileUrl}],
+  [{id:'profile',title:'NMIXX HAEWON profile',url:profileUrl,publisherArticleUrl:''}]
+ );
+ assert.equal(merged.url,profileUrl);
+ assert.equal(merged.publisherArticleUrl,'');
+});
+
+test('thumbnail enrichment never fetches an X profile URL as an article',async()=>{
+ let calls=0;
+ const profileUrl='https://x.com/NMlXX_Haewon';
+ const item={id:'profile',title:'NMIXX HAEWON profile',url:profileUrl,publisherArticleUrl:profileUrl,thumbnailUrl:''};
+ const result=await enrichThumbnails([item],{fetchImpl:async()=>{calls++;return new Response('');}});
+ assert.equal(result.attempted,0);
+ assert.equal(calls,0);
+ assert.equal(result.items[0].url,profileUrl);
 });
