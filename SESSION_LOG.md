@@ -1337,3 +1337,30 @@ The URL column below is copied from the matching record's current `thumbnailUrl`
 | `755bfff53f3d7af07524` | https://pimg.mk.co.kr/news/cms/202406/28/news-p.v1.20240628.0f4b9a2cb5cd4f2eb17ecb679a3241b9_R.jpg | inspection tool internal error; not classified as source-side failure |
 
 Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-tool internal errors (24 not visually available in this inspection). No new suitability labels or thumbnail assignments were persisted.
+
+
+## 2026-11-25 — PR #13 read-only CI verification and source/date recheck
+
+### Current state
+- Rechecked main: `32832e57e9e1023c62eefa4a1e8b4a76550e451b`. PR #13/#14/#15/#16 remain open and unmerged.
+- Production Actions #581 (`45508856109`) succeeded through tests, collection, validation, run-log validation, Pages artifact upload and deployment. Artifact: 429,321 bytes. Deployment status reported success; no live Android/browser QA is claimed.
+- PR #15 HEAD `d095da244c97fcbea4e38eca624fae6112088c56`; Actions #10 (`45541326160`) succeeded with 142/142 tests and data validation. Workflow pins checkout v7.0.1 and setup-node v7.1.0 to verified SHAs; read-only permissions and no persisted checkout credentials.
+- To verify PR #13 without merging PR #15, created temporary branch `verify/pr13-readonly-ci-20261125` from exact PR #13 HEAD `b926e8fab1d9338bf08d7c2568f49b40f99a1767`, copied the exact read-only workflow from PR #15, and opened temporary PR #17. Actions #11 (`45542683996`) passed 154/154 tests, 0 failures, and archive validation (19 videos, 0 photos, 154 run logs). Closed PR #17 after recording the result; it was never merged. This is a verification harness only.
+ 
+### Source/date evidence
+- PR #13's `getArticleUrlContext` reports publisher article host, discovery URL host and recorded publisher host separately. Its regression tests cover OSEN→ChosunBiz and MSN→Sports Kyunghyang host differences, plus invalid/non-HTTPS URLs.
+- OSEN record `de974fb311b152bc6141` was checked against the original OSEN page, the ChosunBiz syndication page and NATE's OSEN-attributed copy. OSEN original: 2025-06-10 06:20; ChosunBiz: input 2025-06-10 06:20, update 06:21, author credit `[OSEN=김수형 기자]`; NATE: OSEN source, 2025-06-10 06:21. Stored timestamp `2025-06-09T14:20:00Z` converts to 2025-06-09 23:20 KST, one calendar day earlier and seven hours earlier. Mark as a date discrepancy for human review; do not silently rewrite source data.
+- This is a syndicated-copy example, not evidence that the discovery URL host and publisher page host must always match. Preserve all three host values.
+ 
+### Metrics and review baseline
+- Recomputed PR #16 comparison against main's discovery data using the branch's source filtering and HTTPS deduplication: 44 compared; 44 persisted metadata candidates; 44 persisted HTTPS thumbnails; 44 exact URL matches; 0 mismatches. Current news status says latest enrichment attempted/found/assigned = 0/0/0; assignment rate is null because no latest-run found denominator exists.
+- Review scope: 49 records = 47 publisher article pages + 2 X URLs (one profile, one post). No stored explicit category and no human labels. Inferred category distribution: news 24, interview 13, official 5, performance 5, event 2. These are heuristic counts only, not accuracy.
+- Wikitree record `66c296a7f618669fd99b` is still an indirect cover/lookalike story. No human labels were written.
+- Exact 32-image audit remains 8 rendered (article-context pending), 1 HTTP 403 and 23 inspection-tool internal errors. 24 were unavailable; no new suitability labels. Ten missing thumbnails remain 4 recorded 403 and 6 missing. No retry, bypass, alternate assignment or deletion.
+- The 273 legacy shared-thumbnail records remain unchanged; evidence remains 270 unique titles, 148 sourceUrl clues and 125 without sourceUrl. No wrapper decoding, bulk deletion or replacement.
+
+### Remaining verification
+- PR #13 now has a successful read-only CI result through temporary PR #17, but PR #15 itself remains unmerged and the workflow is not on main.
+- PR #16 still requires a fresh CI run on its exact current head; previous 143/143 result predates the latest PR #16 head.
+- Pages #581 deployment success is separate from live rendering. Actual Android browser QA, keyboard/focus checks and human article/thumbnail labels remain outstanding.
+- No PR was merged.
