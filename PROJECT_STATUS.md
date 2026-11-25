@@ -570,3 +570,5 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - CI for PR #13 is pending because the current workflow runs only on pushes to main or manual/scheduled events, not pull_request. Local clone/test execution was unavailable in this environment. Do not report PR tests as passed until Actions actually runs them.
 - Browser/mobile visual QA is unverified. No browser session was available; CI/Pages deployment is not visual QA.
 - Latest verified operational log data/run-logs/45508856109.json records all three sources: YouTube 15, Google News RSS 74, Bing News RSS 33; overall success and validation passed.
+
+- Follow-up CI proposal opened as separate PR #15: https://github.com/UForPel/haewon-archive/pull/15. It adds a read-only pull_request workflow running npm test and npm run validate; it does not collect, write data, or deploy Pages. This workflow must be merged before PR #13 can receive automatic PR checks.
