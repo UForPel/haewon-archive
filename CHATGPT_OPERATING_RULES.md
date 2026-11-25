@@ -186,3 +186,13 @@ For each substantial update include: changed paths; planned vs implemented items
 - Keep 273 shared legacy thumbnails intact. Human relevance and image suitability precision are unmeasured.
 - No PR may be merged without explicit user approval. Rebase or split stale documentation PRs rather than merging broad historical text.
 - Every substantial response ends with the real ChatGPT conversation action **🔄 연구 기반 재귀개선 계속하기**.
+
+
+## 2026-11-25 — Late-session audit operating rules
+- Reconfirm current main, PR heads, ahead/behind counts, workflow run event, jobs, artifacts and deployment steps before reporting state.
+- Distinguish genuine pull_request runs from push snapshots. PR #30 run #45570252997 is a genuine PR event; PR #27 run #45616074455 is a push snapshot.
+- Main production run #45556461352 succeeded with a 434,230-byte Pages artifact and deploy step, but the published UI has not received independent browser/mobile QA.
+- A fresh fetch of the Sportskeeda article URL returned HTTP 405. Respect the method boundary; no alternate method, endpoint or proxy. PR #25's mock-response test is separate evidence from the live endpoint observation.
+- PR #26's Node24 action pins have not been used in a production Pages deployment. Do not call them deployed until an approved merge and successful main run.
+- PR #28's Google/Bing sample has zero image signals. Research feed metadata and source terms, but do not expand the automated source allowlist without explicit source-policy review.
+- No PR may be merged without explicit user approval. Preserve the 273 shared legacy thumbnail assignments.
