@@ -75,9 +75,9 @@ test('news search packs rotate between twice-daily runs and expand topic coverag
 test('per-query quality metrics measure unique URLs, duplicate titles, relevance proxy and publication lag',()=>{
  const now='2026-11-25T00:00:00Z';
  const rows=[
-  {query:'q1',url:'https://news.test/a?utm_source=rss',title:'오해원 인터뷰 특별 기사 제목입니다',publisherArticleUrl:'https://news.test/a',publishedAt:'2026-11-24T00:00:00Z'},
+  {query:'q1',url:'https://news.test/a?utm_source=rss',title:'오해원 인터뷰 특별 기획 기사 내용과 현장 취재를 담은 상세 보도 제목입니다',publisherArticleUrl:'https://news.test/a',publishedAt:'2026-11-24T00:00:00Z'},
   {query:'q1',url:'https://news.test/a',title:'오해원 인터뷰 특별 기사 제목입니다',publisherArticleUrl:'',publishedAt:'2026-11-20T00:00:00Z'},
-  {query:'q2',url:'https://news.test/a',title:'Haewon interview special story',publisherArticleUrl:'https://news.test/a',publishedAt:'2026-11-23T00:00:00Z'},
+  {query:'q2',url:'https://news.test/a',title:'Haewon interview special story with additional context and a longer headline',publisherArticleUrl:'https://news.test/a',publishedAt:'2026-11-23T00:00:00Z'},
   {query:'q2',url:'https://news.test/b',title:'General unrelated article headline',publisherArticleUrl:'',publishedAt:'not-a-date'}
  ];
  const report=summarizeQueryPerformance(rows,['q1','q2'],now);
@@ -88,7 +88,7 @@ test('per-query quality metrics measure unique URLs, duplicate titles, relevance
  assert.equal(report[0].titleKeywordMatches,2);
  assert.equal(report[0].explicitPublisherUrls,1);
  assert.equal(report[0].crossQueryDuplicateUrls,1);
- assert.equal(report[0].medianPublicationLagHours,120);
+ assert.equal(report[0].medianPublicationLagHours,72);
  assert.equal(report[1].crossQueryDuplicateUrls,1);
  assert.equal(report[1].unknownDates,1);
 });
