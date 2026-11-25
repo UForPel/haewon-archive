@@ -1411,3 +1411,44 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 - Four have recorded HTTP 403: Famtimes, BNT News, X profile, Allkpop. Six have a `missing` metadata-fetch outcome: three MSN syndicated pages, TVDaily, OSEN, and another MSN page.
 - All ten currently have no stored RSS candidates and no stored `thumbnailMetaCandidates`. Targeted exact-title/article-ID public search did not return a usable image metadata candidate.
 - Left all ten unchanged. Did not retry 403s, probe alternate access routes, decode Google News wrappers, infer thumbnail URLs, or mark any image unsuitable.
+
+## 2026-11-25 — Correct news chronology and restore visibility of unresolved video candidates
+
+### Verified baseline
+- main: `7dba74e89d9b5b8e727f0ac5ff94a554aad9e9d6`
+- PR #13 `b926e8f...`, #14 `aacc7f2...`, #15 `d095da2...`, #16 `b1fff81...`: all open/unmerged.
+- Latest completed main workflow run #583: all steps succeeded, including tests, collection, validation, data commit, and Pages deploy.
+- Discovery: 704 records; latest observed publishedAt `2026-11-19T09:21:00Z`.
+- Candidate audit: 186 title/URL-hinted unresolved video candidates (185 Google News, 1 Maeil Business); these are not verified video URLs.
+- Main has 19 persisted official-channel videos; fan-video discovery was not connected to an independent video search collector. Photo data remains a separate, currently empty archive.
+
+### Root cause
+- `js/discovery-view.mjs` ranked article cards by relevance score before publication date, so newest articles were not guaranteed to appear first.
+- `js/discovery-kind.mjs` classified fancam/title hints as video and removed them from article cards.
+- `scripts/sync-discovery-videos.mjs` only accepts explicit HTTPS YouTube URLs from `url` or `publisherArticleUrl`; Google News wrapper tokens are intentionally not decoded or redirected.
+- As a result, wrapper-only fancam candidates were absent from both the article card list and persisted video archive.
+
+### Implemented on code PR #20 (not merged)
+- Added date-descending sort helper with missing dates last and relevance sort as an explicit opt-in.
+- Added visible sort control to the news section.
+- Added a separate unresolved video-discovery candidate list, clearly marked as needing an explicit original YouTube URL. The list shows the 12 newest candidates and total count; it does not claim these are verified videos.
+- Added explicit HTTPS YouTube URL validation and regression tests.
+- Changed files: `js/discovery-kind.mjs`, `js/discovery-view.mjs`, `index.html`, `tests/discovery-search.test.mjs`, `tests/index-structure.test.mjs`.
+- PR: https://github.com/UForPel/haewon-archive/pull/20
+
+### Test and deployment evidence
+- Five focused Node assertions for date sort, relevance sort, wrapper-only preservation and explicit YouTube URL validation passed.
+- Full `npm test` on PR #20 is pending: no PR workflow is active on main because PR #15's read-only CI workflow remains unmerged. A Git clone attempt was unavailable in the execution environment due to DNS/network resolution failure.
+- Main run #583 deployed Pages successfully. This does not test PR #20 because it is not merged. Android/mobile visual verification is not performed.
+- No data files changed; 273 repeated legacy image URL occurrences remain unchanged; no PR merged.
+
+### Research and architecture findings
+- Cloudflare Workers Cron Triggers support minute-level schedules (including `*/5 * * * *`) and execute in UTC. Current Free plan documentation lists 100,000 requests/day, 10 ms CPU time/request, and 5 Cron Triggers/account. A Worker could combine the scheduler and narrow dispatch gateway; this remains a design candidate, not a deployment.
+- Gemini API free access is limited to selected models/rate limits; Google states free-tier content may be used to improve products. Do not rely on free-tier grounding for a guaranteed search pipeline or send private data.
+- Current YouTube Data API documentation lists 100 default `search.list` calls/day, at 1 quota unit/call. This is suitable only for a small rotating query budget, not 5-minute exhaustive search. It requires a user-managed API key if adopted.
+- Sources: Cloudflare Cron Triggers https://developers.cloudflare.com/workers/configuration/cron-triggers/ ; Cloudflare limits https://developers.cloudflare.com/workers/platform/limits/ ; Gemini pricing https://ai.google.dev/gemini-api/docs/pricing ; YouTube search.list https://developers.google.com/youtube/data/reference/rest/v3/search
+
+### Errors / omissions / prevention
+- Prior UI hid unresolved video candidates while the sync pipeline correctly refused to guess wrapper URLs. Fix is to retain the candidate in a separate, clearly unverified list; never fabricate or decode a video URL.
+- PR CI status must not be inferred from older successful runs. PR #20 has no checks until a PR workflow exists on main; record this explicitly.
+- Continuation button requirement remains mandatory: always render the actual one-tap ChatGPT control at the end of every substantial Haewon Archive work response, even when the user sends intermediate messages.
