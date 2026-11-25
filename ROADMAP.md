@@ -348,3 +348,10 @@
 - [x] Preserve Node 22 for project scripts and explicitly disable unnecessary package-manager caching.
 - [ ] Await PR review and read-only validation; no merge without user approval.
 - [ ] After approved merge, verify the complete production collection, validation, data commit, artifact upload and Pages deployment.
+
+## 2026-11-25 — Verification boundaries after PR #25/#26
+- [x] Recheck PR #25 and PR #26 against latest main; both are open, unmerged, and have no status checks.
+- [x] Reconfirm production Actions #45556461352: 142/142 tests, full collection/validation/data commit/Pages deployment successful.
+- [x] Confirm the live workflow's Pages deployment source SHA differs from the post-run data commit; keep the identifiers distinct in reporting.
+- [ ] Run `npm test` and `npm run validate` on PR #25 and PR #26 through a working PR CI or local checkout. Current environment DNS prevents Git clone, and main has no pull_request workflow.
+- [ ] Inspect the published Pages site in a real browser/mobile viewport; web viewer access failed, so visual QA is still open.
