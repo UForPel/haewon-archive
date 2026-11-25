@@ -4,38 +4,124 @@
   "title": "Haewon Archive record",
   "description": "Target contract for archive video and photo-link records. This schema documents the data contract; the enforced by scripts/validate-data.mjs using the repository's supported JSON Schema subset.",
   "oneOf": [
-    { "$ref": "#/$defs/video" },
-    { "$ref": "#/$defs/photoLink" }
+    {
+      "$ref": "#/$defs/video"
+    },
+    {
+      "$ref": "#/$defs/photoLink"
+    }
   ],
   "$defs": {
     "video": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "title", "url", "thumbnailUrl", "publishedAt", "channelName", "sourceId", "collectedAt", "relevance"],
+      "required": [
+        "id",
+        "title",
+        "url",
+        "thumbnailUrl",
+        "publishedAt",
+        "channelName",
+        "sourceId",
+        "collectedAt",
+        "relevance"
+      ],
       "properties": {
-        "id": { "type": "string", "minLength": 1, "maxLength": 128 },
-        "title": { "type": "string", "minLength": 1, "maxLength": 500 },
-        "url": { "type": "string", "format": "uri", "pattern": "^https://www\\.youtube\\.com/watch\\?v=" },
-        "thumbnailUrl": { "type": "string", "format": "uri", "pattern": "^https://(?:i\\.ytimg\\.com|i[0-9]+\\.ytimg\\.com)/vi/" },
-        "publishedAt": { "type": "string", "format": "date-time" },
-        "description": { "type": "string", "maxLength": 10000 },
-        "channelName": { "type": "string", "minLength": 1, "maxLength": 200 },
-        "sourceId": { "type": "string", "minLength": 1, "maxLength": 100 },
-        "collectedAt": { "type": "string", "format": "date-time" },
-        "relevance": { "type": "boolean" }
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://www\\.youtube\\.com/watch\\?v="
+        },
+        "thumbnailUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://(?:i\\.ytimg\\.com|i[0-9]+\\.ytimg\\.com)/vi/"
+        },
+        "publishedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 10000
+        },
+        "channelName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "collectedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "relevance": {
+          "type": "boolean"
+        },
+        "channelId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "origin": {
+          "type": "string",
+          "maxLength": 32
+        }
       }
     },
     "photoLink": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "title", "sourceName", "url", "publishedAt", "notes"],
+      "required": [
+        "id",
+        "title",
+        "sourceName",
+        "url",
+        "publishedAt",
+        "notes"
+      ],
       "properties": {
-        "id": { "type": "string", "maxLength": 128 },
-        "title": { "type": "string", "minLength": 1, "maxLength": 120 },
-        "sourceName": { "type": "string", "minLength": 1, "maxLength": 80 },
-        "url": { "type": "string", "format": "uri", "pattern": "^https://" },
-        "publishedAt": { "type": "string", "format": "date" },
-        "notes": { "type": "string", "maxLength": 300 }
+        "id": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "sourceName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "publishedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 300
+        }
       }
     }
   }
