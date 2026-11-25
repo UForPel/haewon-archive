@@ -59,3 +59,11 @@ test('generic link audit does not retry a forbidden publisher response', async (
   assert.equal(result.unreachable,1);
   assert.deepEqual(calls,[{url:'https://publisher.test/story',method:'HEAD'}]);
 });
+
+test('publisher HEAD success is only an HTTP response, not proof of readable article content', async () => {
+  const rows=await auditVerifiedPublisherArticles([base],{
+    fetchImpl:async url=>({status:200,url})
+  });
+  assert.equal(rows.counts['http-responded'],1);
+  assert.equal(rows.counts.accessible,undefined);
+});
