@@ -564,3 +564,12 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Reaffirmed the mandatory bottom-of-response ChatGPT action label **🔄 연구 기반 재귀개선 계속하기**.
 - User-typed messages and corrections must not suppress the action. The action submits the full reusable recursive-improvement prompt from `CHATGPT_OPERATING_RULES.md`; a textual label alone is insufficient.
 - The requirement was already present in operating guidance; this update addresses the failure to render the action in the actual assistant response. Documentation commit: `653405c1f422e53d67cf43ea13250d6abe7332d9`; follow-up session-log commit is being recorded separately. Verify Actions/Pages for the resulting commits.
+
+## 2026-11-25 — HTTP 405 metadata-fetch diagnosis and correction (PR validation pending)
+- Latest main inspected: `37998b31b12b2eb9980cff6df616b2f677a10de6`; latest data commit contains 707 discovery candidates, 521 article candidates, 186 video candidates, 61 explicit HTTPS publisher article URLs, 51 verified Haewon-title articles, and 40 of those with source-provenance thumbnails.
+- Latest production collection run `45556461352` completed successfully: 15 YouTube items, 77 Google News RSS items, 36 Bing RSS candidates; validation passed and the Pages artifact was uploaded/deployed successfully (434,230 bytes).
+- Diagnosed a concrete metadata-fetch classification defect: an actual Sportskeeda response `HTTP 405` was persisted as `network-error`, causing the transient one-day retry policy to re-request a method the server explicitly does not allow.
+- Implemented on `fix/metadata-method-not-allowed-backoff`: classify HTTP 405 as `method-not-allowed`; apply the existing seven-day backoff used for explicit non-transient access/method responses; retain the article and fetch provenance; do not probe another HTTP method or bypass publisher restrictions.
+- Added regression tests for the distinct error code, seven-day retry window, article retention and no HEAD/method fallback. PR CI has not yet run; tests and validation remain pending until the read-only PR workflow reports results.
+- Current quality limits remain: 321 thumbnail assignments include 273 unverified legacy uses of one shared URL; 49 distinct URLs across 707 candidates; 386 have no thumbnail. Human thumbnail labels remain zero, so visual relevance precision is unmeasured.
+- PRs #13/#14/#15/#16/#20/#22/#23/#24 remain open and unmerged; no merge was performed. Browser/mobile visual QA remains unverified.
