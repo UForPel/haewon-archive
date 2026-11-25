@@ -600,3 +600,40 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Content baseline remains the last generated dataset (701 discovery records; 49 verified Haewon publisher articles; 39 provenance-backed thumbnails among those 49; 273 repeated legacy assignments). No post-fix production data run occurred, so no verified content increase is claimed.
 
 - Follow-up verification: PR #13 temporary CI run #4 (45531573683) passed 150/150 tests and npm run validate (19 video records, 0 photo records, 154 run-log records). The temporary workflow file was removed from the code PR afterward so the CI workflow remains isolated in PR #15. The tested code was unchanged by that removal. PR #13's latest branch head is now 86c9e95b4b8f807bc2f5ec223443a354e0d97e2c; check mergeability before merge.
+
+
+## 2026-11-25 — Second recursive cycle: article taxonomy, review progress and thumbnail metric semantics
+
+### Live repository state
+- Main remains 32832e57e9e1023c62eefa4a1e8b4a76550e451b; no PR was merged during this cycle.
+- Main production Actions #581 / run 45508856109 succeeded end-to-end, including tests, all collectors, bounded improvement, quality generation, both validations, run-log creation, Pages artifact upload and Pages deployment.
+- Run-log source counts: NMIXX YouTube Atom 15, Google News RSS 74, Bing News RSS 33. Overall 15 discovered, 0 accepted, 0 rejected, 15 duplicates, 0 uncertain. Successful collection execution did not add new candidates in this run.
+- PR #13 article review, PR #14 docs, PR #15 read-only CI and PR #16 thumbnail metric semantics remain open and mergeable/clean. None is deployed to Pages.
+- PR #13 code/tests passed temporary read-only Actions run #5: 152/152 tests and archive validation. Temporary workflow was removed afterward; permanent workflow stays isolated in PR #15.
+- PR #16 metrics/tests passed temporary read-only Actions run #1: 143/143 tests and archive validation. Temporary workflow was removed afterward; permanent workflow stays isolated in PR #15.
+
+### 49 explicit Haewon source URLs — metadata audit (not human accuracy claims)
+- All 49 records have a publishedAt value and sourceName; zero have a stored category or categories value. The category currently shown in UI is inferred from title/description rules, not an authoritative publisher classification.
+- URL-shape review separates 47 publisher article pages, one X profile URL and one X post URL. Keep all 49 explicit source URLs in the review queue but ask the reviewer to label content type; do not call all 49 articles.
+- 39/49 have HTTPS thumbnails with provenance. All 39 existing thumbnail URLs match a persisted metadata candidate URL. This confirms provenance linkage only; it does not establish visual relevance or suitability.
+- The 10 without HTTPS thumbnails split into 4 metadata fetch failures with HTTP 403 and 6 missing outcomes. No alternative image candidates are currently stored for these 10. Do not retry 403 or seek access workarounds.
+- Human review labels remain 0; date/source/category accuracy and visual thumbnail suitability are not yet measured. Field presence is not accuracy.
+
+### 273 legacy repeated image assignments
+- All 273 records still point to one repeated Googleusercontent thumbnail and all 273 discovery URLs remain opaque Google News RSS wrapper URLs.
+- 148 retain only sourceUrl root-domain clues; 125 have no sourceUrl. None has an article-specific publisherArticleUrl; none has image candidates or thumbnailMetaFetch evidence.
+- The 148 root clues are not article URLs and do not justify assigning a replacement image.
+- 270 distinct titles among 273 records (3 duplicate-title rows); 91 titles explicitly include YouTube; 7 titles contain neither Haewon nor NMIXX terms. 184 titles include Haewon terms and 248 include NMIXX terms. These are title signals, not verified content labels.
+- No legacy record was deleted or automatically replaced.
+
+### Code and metric improvements
+- PR #13 adds a seventh review dimension, content type (article, social-post, profile, other, uncertain), because the 49 URL set contains one X profile and one X post. It now displays all seven progress dimensions, and allows reviewers to record the corrected category when the inferred category is wrong.
+- PR #16 separates existing/persisted thumbnail-candidate matches from assignments performed in the latest enrichment run. The previous metaAssigned=0 / assignmentRate=0 was scoped to the latest run (which attempted 0 enrichments), not proof that 44 existing metadata candidates were unassigned.
+- PR #13 latest branch head after temporary-workflow removal: 0fe3047978424390c9ba19d6a13264304d9c02be.
+- PR #16 latest branch head after temporary-workflow removal: fbac15bcd4142ce943cc23df236176a4a1ba4725.
+- Actual mobile browser QA remains unverified. Pages deployment success is not visual QA.
+
+### Research references
+- RFC 9110 §9.3.2: HEAD responses do not contain response content; a 2xx HEAD response is not proof a reader can view article content: https://www.rfc-editor.org/rfc/rfc9110.html
+- Playwright device emulation can simulate viewport, screen size, user agent and touch; it is not a physical-device test: https://playwright.dev/docs/emulation
+- GitHub Actions workflow permissions and pull_request security model: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
