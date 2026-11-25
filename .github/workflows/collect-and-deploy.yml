@@ -36,6 +36,10 @@ jobs:
         run: npm test
       - name: Collect public YouTube feed
         run: npm run collect
+      - name: Search public YouTube videos when optional API key is configured
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: npm run collect-youtube-search
       - name: Discover public news RSS candidates
         run: npm run collect-news
       - name: Merge YouTube links discovered from news
@@ -65,6 +69,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             npm run collect
+            YOUTUBE_API_KEY="${{ secrets.YOUTUBE_API_KEY }}" npm run collect-youtube-search
             npm run collect-news
             npm run sync-discovery-videos
             npm run improve
