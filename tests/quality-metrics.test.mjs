@@ -105,3 +105,14 @@ test('legacy thumbnail audit reports per-record replacement evidence without del
  assert.equal(audit.recordsWithAlternativeCandidates,0);assert.equal(audit.distinctAlternativeUrls,0);
  assert.deepEqual(audit.metadataOutcomes,{failed:3});assert.equal(audit.records.length,3);
 });
+
+test('generic link audit does not retry a forbidden publisher response', async () => {
+ const calls=[];
+ const result=await auditLinks([{url:'https://publisher.test/story',thumbnailUrl:''}],{
+  fetchImpl:async (url,options)=>{calls.push({url,method:options.method});return {status:403};},
+  limit:1
+ });
+ assert.equal(result.checked,1);
+ assert.equal(result.unreachable,1);
+ assert.deepEqual(calls,[{url:'https://publisher.test/story',method:'HEAD'}]);
+});
