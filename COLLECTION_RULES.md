@@ -100,3 +100,7 @@ Gemini does not have permission to alter these rules or the validators enforcing
 ### PR #30 CI evidence — 2026-11-25
 - The proposed read-only workflow was exercised by its own PR #30 event run #45570038033. Unit tests and archive-data validation passed.
 - Its permissions remain `contents: read`; it does not run collection, commit data, or deploy Pages. It is not active on main until approved and merged.
+
+
+
+- Final PR #30 head was revalidated by pull_request run #45570147672; tests and archive validation passed. No collection, data mutation, or Pages deployment is part of this CI.
