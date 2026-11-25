@@ -796,3 +796,7 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - #22: six rotating editorial search packs.
 - #23: optional public YouTube Data API search.
 - #24: Cloudflare Cron + repository-scoped GitHub App dispatch dry-run.
+## Video channel provenance UI follow-up — 2026-11-25
+- PR #23 follow-up now displays the channel name and a visible status tag on every video card: the known NMIXX official channel is marked `공식 채널`; all other channels are marked `채널 미검수`. Older official Atom-feed records are identified by the known source ID; other legacy records default to unverified.
+- Added a structural regression test. Temporary read-only Actions run #45551380432 passed **150/150 tests** and archive validation; temporary workflow removed. No API key, live YouTube API call, or data mutation.
+- This corrects an important UI gap: storing `origin: unverified` alone was insufficient if the public card did not show it. Actual mobile rendering remains unverified.
