@@ -199,3 +199,9 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The user typing a new message, asking a question, correcting a mistake, or changing the immediate task does **not** cancel or replace this standing end-of-response requirement. Continue answering the immediate request and doing project work, then render the continuation action at the bottom.
 - If a rendered action cannot be supported by the client, include the exact full prompt as a copyable fallback. Never silently omit the action.
 - Regression cause: the requirement already existed in operating documentation, but the assistant omitted the actual conversation control. This is an execution/response-composition failure, not an absence of a documented requirement.
+
+## 2026-11-25 — Node 24 production workflow proposal
+- Branch `ci/upgrade-pages-actions-node24` upgrades five first-party actions to verified full immutable SHAs whose action metadata declares Node 24.
+- The application/runtime Node version remains 22. This change only upgrades the runtime used internally by JavaScript GitHub Actions.
+- Do not claim the change is deployed or verified until PR CI and an approved main production deployment succeed. No PR merge is authorized by this work.
+- The mandatory bottom-of-response conversation action **🔄 연구 기반 재귀개선 계속하기** remains required regardless of user-typed follow-up messages.
