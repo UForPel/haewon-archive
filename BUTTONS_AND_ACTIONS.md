@@ -340,3 +340,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The YouTube public-search collector is invoked by the scheduled workflow and skips without `YOUTUBE_API_KEY`.
 - If enabled later, the key must be added by the repository owner directly as a GitHub Actions Secret. The assistant must not request the raw key in chat, create a key, or log it.
 - PR #20's news sort and unresolved-video candidate list are code-branch controls only until merge/deploy; they are not currently live in main.
+
+## 2026-11-25 operational additions
+- PR #24 adds a Cloudflare Cron dry-run dispatcher and a separate workflow_dispatch target. It is inert until manually deployed/configured; no Worker endpoint is exposed.
+- User-managed setup, if approved later: create GitHub App for only UForPel/haewon-archive; grant Actions: write; install only on that repository; create Cloudflare Worker secrets GITHUB_APP_ID, GITHUB_INSTALLATION_ID, GITHUB_APP_PRIVATE_KEY; deploy cloudflare/wrangler.toml. Never send private keys to ChatGPT.
+- The target workflow only validates dispatch metadata and explicitly reports writes=false, collection=false, deployment=false.
+- PR #13 review UI has a branch-level syntax fix verified by Actions #45550626122. PR #20 invalid publication-date fallback verified by Actions #45551065801.
+- Actual Android browser QA is still outstanding; CI and Pages deployment success are not a substitute.
