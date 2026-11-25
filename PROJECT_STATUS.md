@@ -580,3 +580,7 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Opened PR #30 from the current-main branch. Its actual GitHub Actions run `45570038033` is confirmed as event `pull_request`, associated with PR #30, and completed successfully.
 - Job `test-and-validate`: checkout, Node setup, `npm test`, and `npm run validate` all succeeded. This is a real PR-event pass for #30, not a push snapshot.
 - The workflow remains only proposed on the PR branch; it is not active on main until the user approves and merges it.
+
+
+
+- Final PR #30 head `de53462e6fc814213bce325de1cb00150e1683fa` was rechecked after the documentation-only follow-up commits. The latest run `45570147672` is a genuine `pull_request` event for PR #30 and passed the full job, including `npm test` and `npm run validate`. Earlier synchronize runs include a cancelled superseded run; the latest head run is successful.
