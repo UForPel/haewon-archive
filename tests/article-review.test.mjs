@@ -8,10 +8,10 @@ test('review scope contains only explicit publisher HTTPS Haewon articles and ex
   assert.deepEqual(rows.map(row=>row.id), ['a']);
 });
 test('review summary separates per-dimension coverage and full completion', () => {
-  const labels = { a: {articleId:'a',relevance:'relevant',originalAccess:'accessible',dateAccuracy:'accurate',sourceAccuracy:'accurate'} };
+  const labels = { a: {articleId:'a',relevance:'relevant',originalAccess:'accessible',dateAccuracy:'accurate',sourceAccuracy:'accurate',thumbnailAccuracy:'suitable'} };
   const report = summarizeArticleReviews([base], labels);
   assert.equal(report.eligible,1); assert.equal(report.reviewedArticles,1); assert.equal(report.fullyReviewed,0);
-  assert.equal(report.dimensions.relevance.coverage,100); assert.equal(report.dimensions.originalAccess.coverage,100); assert.equal(report.dimensions.categoryAccuracy.coverage,0);
+  assert.equal(report.dimensions.relevance.coverage,100); assert.equal(report.dimensions.originalAccess.coverage,100); assert.equal(report.dimensions.categoryAccuracy.coverage,0); assert.equal(report.dimensions.thumbnailAccuracy.coverage,100); assert.equal(report.dimensions.thumbnailAccuracy.accuracy,100);
 });
 test('review export accepts only known labels and optionally limits IDs', () => {
   const payload = {schemaVersion:1,labels:{a:{articleId:'a',relevance:'relevant',sourceAccuracy:'accurate'},b:{articleId:'b',relevance:'invalid'}}};
@@ -35,4 +35,16 @@ test('publisher accessibility audit checks only verified direct HTTPS article UR
   ],{fetchImpl:async (url,options)=>{calls.push({url,method:options.method,redirect:options.redirect});return {status:403,url};}});
   assert.equal(rows.checked,1); assert.equal(rows.counts.blocked,1); assert.equal(rows.bypassAttempted,false);
   assert.deepEqual(calls,[{url:base.publisherArticleUrl,method:'HEAD',redirect:'follow'}]);
+});
+
+test('thumbnail suitability accuracy excludes absent images and uncertain judgments', () => {
+  const rows = [base, {...base,id:'b',thumbnailUrl:''}, {...base,id:'c'}];
+  const labels = {
+    a: {articleId:'a',thumbnailAccuracy:'suitable'},
+    b: {articleId:'b',thumbnailAccuracy:'not-present'},
+    c: {articleId:'c',thumbnailAccuracy:'uncertain'}
+  };
+  const report = summarizeArticleReviews(rows, labels);
+  assert.equal(report.dimensions.thumbnailAccuracy.reviewed,3);
+  assert.equal(report.dimensions.thumbnailAccuracy.accuracy,100);
 });
