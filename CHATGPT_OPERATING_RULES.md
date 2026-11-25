@@ -260,3 +260,14 @@ For each substantial update include: changed paths; planned vs implemented items
 - Fresh Actions #10 / run `45541326160` on exact head `d095da244c97fcbea4e38eca624fae6112088c56`: success; 142/142 tests passed, 0 failed; archive validation passed (19 videos, 701 discovery candidates, 154 run logs, 37 source summaries, 41 links checked). No Node 20 deprecation warning in this run's log.
 - This is PR #15 branch validation only; PR #15 is still not merged and does not yet provide main-wide automatic CI.
 - PR #13 latest code branch `b926e8fab1d9338bf08d7c2568f49b40f99a1767` still has no fresh Actions run after its URL-host-context helper/test addition. PR #16 latest branch `fbac15bcd4142ce943cc23df236176a4a1ba4725` retains prior Actions #6 (143/143) and has no newer run.
+
+
+## Evidence and CI handling for article-quality work
+- Never report a PR as CI-verified from a different branch's run. Record exact HEAD SHA, workflow SHA, run URL, test count and validation result.
+- If a read-only workflow exists only in a separate unmerged PR, a temporary verification branch/PR may combine the target code HEAD with the exact workflow for test-only CI. Clearly label it temporary, never merge it, and close it after recording the result.
+- Keep implementation, CI and documentation PRs separate. Do not merge any PR without explicit user approval.
+- Distinguish persisted metadata candidates and current-run enrichment outcomes. A zero-attempt run has no assignment-rate denominator; report rate as null, not 0%.
+- Distinguish image URL provenance, successful image rendering and article-context suitability. Never label an inaccessible preview unsuitable.
+- Keep publisher article URL host, discovery URL host and recorded source host separate. A syndicated publisher page may carry an originating publisher's byline; do not treat host mismatch alone as a source error.
+- Store source timestamps as observed. When the page date disagrees with the persisted timestamp, record evidence and request human review rather than silently changing the source record.
+- Pages artifact/deployment success does not prove public rendering. Actual Android/browser QA must be reported separately.
