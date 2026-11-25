@@ -365,3 +365,9 @@
 
 - [x] Verify the new PR CI workflow itself: PR #15 Actions #1 passed 142/142 existing tests and archive-data validation.
 - [ ] Re-run CI against PR #13's new article-review tests after the workflow is available on main.
+
+
+## 2026-11-25 — Conversation handoff button
+- [x] Restore exact follow-up button contract in BUTTONS_AND_ACTIONS.md and CHATGPT_OPERATING_RULES.md.
+- [x] Record that documentation-only is insufficient; final response must render an actual clickable control.
+- [ ] Verify the button is present at the end of every future Haewon Archive session.
