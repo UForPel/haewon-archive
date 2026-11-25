@@ -1146,3 +1146,8 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - PR #15 adds a proposed read-only `pull_request` workflow with `contents: read`, `npm test`, and `npm run validate`, but PR #15 is itself still open and unmerged. No PR was merged and no workflow was enabled by this work.
 - Main's latest production run #45556461352 is independently green: 142/142 tests; collection, validation, data commit, artifact upload and Pages deployment succeeded. It does not test PR #25.
 - Direct browser/mobile inspection of the published site remains unverified; deployment job success and artifact upload are the verified deployment evidence.
+
+## 2026-11-25 — Production workflow runtime warning
+- The latest main run #45556461352 succeeded, but its log explicitly warned that `actions/checkout@v4`, `actions/setup-node@v4`, `actions/configure-pages@v5`, `actions/deploy-pages@v4` and an upload-artifact dependency target Node 20 and are being forced to Node 24. It also emitted Node's `punycode` deprecation warning in the Pages action runtime.
+- GitHub's official 2026-09-23 changelog confirms Node 20 is no longer available on Actions runners and recommends updating workflow users to latest Node 24-compatible action versions. This is a maintenance/compatibility warning, not a failure in the verified run.
+- Recorded a separate follow-up rather than mixing workflow runtime upgrades into the HTTP 405 collector fix. Verify action versions and immutable SHAs before changing the production deploy workflow.
