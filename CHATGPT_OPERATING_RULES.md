@@ -186,3 +186,7 @@ For each substantial update include: changed paths; planned vs implemented items
 ### PR #30 CI result — 2026-11-25
 - The new current-main PR #30 received a genuine `pull_request` run #45570038033, and the job passed `npm test` and `npm run validate`.
 - Report this as a successful PR-specific acceptance run, not as a main-branch required check. It becomes an active repository gate only after explicit user approval and merge.
+
+
+
+- Final PR #30 head `de53462e...` passed pull_request run #45570147672 after documentation synchronization. An intermediate cancelled run is superseded and must not be reported as the final result.
