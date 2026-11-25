@@ -49,10 +49,10 @@ test('thumbnail suitability accuracy excludes absent images and uncertain judgme
   assert.equal(report.dimensions.thumbnailAccuracy.accuracy,100);
 });
 
-test('review progress includes all eight dimensions including indirect relevance and thumbnail', () => {
+test('review progress includes all seven dimensions including indirect relevance and thumbnail', () => {
   const report = summarizeArticleReviews([base], {});
   const progress = formatArticleReviewProgress(report);
-  assert.match(progress, /여덟 항목 완료 0\/1/);
+  assert.match(progress, /일곱 항목 완료 0\/1/);
   assert.match(progress, /자료 유형 0\/1/);
   assert.match(progress, /썸네일 0\/1/);
 });
