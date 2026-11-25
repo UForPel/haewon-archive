@@ -199,3 +199,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The user typing a new message, asking a question, correcting a mistake, or changing the immediate task does **not** cancel or replace this standing end-of-response requirement. Continue answering the immediate request and doing project work, then render the continuation action at the bottom.
 - If a rendered action cannot be supported by the client, include the exact full prompt as a copyable fallback. Never silently omit the action.
 - Regression cause: the requirement already existed in operating documentation, but the assistant omitted the actual conversation control. This is an execution/response-composition failure, not an absence of a documented requirement.
+
+## 2026-11-25 — Social URL / publisher article boundary
+- Branch `fix/exclude-social-profile-from-article-scope` centralizes publisher article URL validation and excludes X/Twitter profile and post URLs from the verified publisher-article scope.
+- Keep the candidate and original source URL; do not delete social-source records. Do not fetch publisher article metadata for X/Twitter URLs under this field.
+- Generated metrics will be corrected on the next collection/quality run. Current reclassification counts are estimates until persisted and validated.
+- This change is separate from PR #25's HTTP 405 retry fix and PR #26's Node 24 Actions upgrade. All PRs remain subject to user approval; no merge.
+- The required ChatGPT continuation action **🔄 연구 기반 재귀개선 계속하기** remains mandatory at the end of every substantial response.
