@@ -49,10 +49,10 @@ test('thumbnail suitability accuracy excludes absent images and uncertain judgme
   assert.equal(report.dimensions.thumbnailAccuracy.accuracy,100);
 });
 
-test('review progress includes all seven dimensions including thumbnail and content type', () => {
+test('review progress includes all eight dimensions including indirect relevance and thumbnail', () => {
   const report = summarizeArticleReviews([base], {});
   const progress = formatArticleReviewProgress(report);
-  assert.match(progress, /일곱 항목 완료 0\/1/);
+  assert.match(progress, /여덟 항목 완료 0\/1/);
   assert.match(progress, /자료 유형 0\/1/);
   assert.match(progress, /썸네일 0\/1/);
 });
@@ -67,4 +67,12 @@ test('content type is recorded without pretending its labels are an accuracy sco
   }},['a']);
   assert.equal(imported.labels.a.contentType,'profile');
   assert.equal(imported.labels.a.expectedCategory,'performance');
+});
+
+test('indirect relevance is distinct from direct relevance and reduces direct-match accuracy', () => {
+  const report = summarizeArticleReviews([base], {
+    a: {articleId:'a',relevance:'indirect'}
+  });
+  assert.equal(report.dimensions.relevance.counts.indirect,1);
+  assert.equal(report.dimensions.relevance.accuracy,0);
 });
