@@ -637,3 +637,13 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - RFC 9110 §9.3.2: HEAD responses do not contain response content; a 2xx HEAD response is not proof a reader can view article content: https://www.rfc-editor.org/rfc/rfc9110.html
 - Playwright device emulation can simulate viewport, screen size, user agent and touch; it is not a physical-device test: https://playwright.dev/docs/emulation
 - GitHub Actions workflow permissions and pull_request security model: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
+
+
+### Direct-page and thumbnail spot-check follow-up (2026-11-25)
+- Standard public-page opens were attempted for all 49 explicit source URLs. Some pages were readable and exposed title/date/source context; others returned 403, timeout, disabled access, redirect-only or empty text. These tool fetch outcomes are not a definitive statement about what a normal reader can access. No access workaround was attempted.
+- Seven exact currently assigned thumbnail URLs were opened and compared with their publisher-page context: two Sports Kyunghyang images, one Sportal Korea image, one Khan image from 2026-09-20, one KapanLagi image and one Xports image, plus the 2026-10-24 Khan image. These seven spot checks aligned with their article/page context. 32/39 exact assigned previews remain unchecked; no formal labels were saved.
+- The Wikitree item (ID 66c296a7f618669fd99b) is a story about another person covering a Haewon lookalike, rather than a direct Haewon story. This is an indirect relevance candidate, not a direct article. The review taxonomy now distinguishes indirect mentions. The exact assigned OG thumbnail still needs its own check.
+- Source-name/host mismatches need careful interpretation: an aggregator host does not automatically mean a wrong source label. One Sports Kyunghyang page is recorded with sourceName MSN, so it should be manually reviewed; publisher attribution and hosting domain must be kept separate.
+- The date/source accuracy scores remain unmeasured. Several readable pages show matching calendar dates after timezone normalization, but no 49-item human review has been completed.
+- PR #13 now has 7 review dimensions (not 8): content type, original access, relevance, date accuracy, source accuracy, category accuracy and thumbnail suitability. Relevance includes direct, indirect, unrelated and uncertain labels.
+- Final PR #13 verification run #8 / 45537353569 passed 153/153 tests and archive validation; temporary workflow removed afterward. Latest branch head after cleanup: 9cd73121750458d723b1e433ed0661f595560323.
