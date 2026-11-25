@@ -24,12 +24,15 @@ jobs:
           node --input-type=module <<'NODE'
           import { readFile } from 'node:fs/promises';
           const data = JSON.parse(await readFile('data/discovery.json', 'utf8'));
-          const urls = [...new Set(data.map(x => x.thumbnailUrl).filter(x => /^https?:\\/\\//i.test(String(x || ''))))].slice(0, 12);
+          const urls = [...new Set(data.map(x => x.thumbnailUrl).filter(x => {
+            const value = String(x || '');
+            return value.startsWith('https://') || value.startsWith('http://');
+          }))].slice(0, 12);
           const rows = await Promise.all(urls.map(async url => {
             try {
               const r = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: AbortSignal.timeout(5000) });
               const type = r.headers.get('content-type') || '';
-              return { url, status: r.status, contentType: type, isImage: /^image\\//i.test(type) };
+              return { url, status: r.status, contentType: type, isImage: type.toLowerCase().startsWith('image/') };
             } catch (e) { return { url, status: null, error: String(e?.message || e), isImage: false }; }
           }));
           console.log(JSON.stringify({
