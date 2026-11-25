@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-11-25T03:54:55.161Z",
+  "generatedAt": "2026-11-25T05:26:38.894Z",
   "discoveryRelevance": {
-    "totalCandidates": 704,
-    "articleCandidates": 518,
+    "totalCandidates": 705,
+    "articleCandidates": 519,
     "videoCandidates": 186,
     "verifiedPublisherArticles": 58,
     "verifiedHaewonArticles": 49,
     "verifiedPublisherArticlesWithProvenanceThumbnail": 46,
     "verifiedHaewonWithProvenanceThumbnail": 39,
-    "haewonTitleMatches": 427,
+    "haewonTitleMatches": 428,
     "nmixxTitleMatches": 443,
     "otherArticleCandidates": 29,
     "defaultScope": "verified-haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 704,
+    "totalItems": 705,
     "itemsWithPublisherArticleUrl": 59,
     "bingNewsItems": 59,
     "candidateSourceCounts": {
@@ -131,6 +131,7 @@
       "nwww.newsis.com": 2,
       "www.mksports.co.kr": 2,
       "www.xportsnews.com": 2,
+      "pann.nate.com": 2,
       "www.mydaily.co.kr": 2,
       "newsen.com": 2,
       "news.jtbc.co.kr": 2,
@@ -181,8 +182,8 @@
       "www.nc.press": 1,
       "www.kdfnews.com": 1,
       "leisurebyte.com": 1,
-      "pann.nate.com": 1,
       "sports.news.nate.com": 1,
+      "www.koreaboo.com": 1,
       "rollingstone.co.kr": 1,
       "www.sportsworldi.com": 1,
       "news.sbs.co.kr": 1
@@ -199,13 +200,13 @@
       "twitter:image": 2
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 384,
+    "missingThumbnailCount": 385,
     "sourceProvenanceCoverage": 15
   },
   "thumbnailAudit": {
-    "items": 704,
+    "items": 705,
     "withThumbnail": 320,
-    "missing": 384,
+    "missing": 385,
     "uniqueThumbnailUrls": 48,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
@@ -338,21 +339,21 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 32,
+    "bingNewsCandidates": 31,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 704,
-    "newsUniqueFetched": 65,
-    "newsAddedLastRun": 2,
+    "newsCandidatesTotal": 705,
+    "newsUniqueFetched": 79,
+    "newsAddedLastRun": 3,
     "duplicateBeforeMergeLastRun": 8,
-    "duplicateGroupsCurrent": 704,
+    "duplicateGroupsCurrent": 705,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 73,
-      "after": 65,
+      "before": 87,
+      "after": 79,
       "collapsed": 8,
       "method": "normalized exact headline first; canonical URL fallback"
     },
@@ -370,11 +371,11 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 645,
-      "withUrl": 645,
+      "items": 646,
+      "withUrl": 646,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 645,
+      "withDate": 646,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
       "thumbnailCoverage": 42,
@@ -846,11 +847,11 @@
     }
   ],
   "classification": {
-    "items": 704,
+    "items": 705,
     "categoryCounts": {
       "video": 186,
       "interview": 45,
-      "news": 413,
+      "news": 414,
       "brand": 21,
       "event": 5,
       "performance": 29,
@@ -1471,9 +1472,9 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
+    "rateLimited": 2,
     "unreachable": 1,
-    "thumbnailMissing": 384,
+    "thumbnailMissing": 385,
     "results": [
       {
         "kind": "article",
@@ -1520,8 +1521,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9QV2NTb0dWN2NqNmtzQV9ZNFJkaV80QkVmZW91R1djcjNheGxwZUtPUWx4ZTcxTjRoZ2FMMUJnVkRhQmR2cWpaQW9KZDY1ZHJ5ZlRGYVhTeUNudDNV?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -1634,8 +1635,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yTlEyVnlhMXdvY3NkSDhGWUVQUnZETXpwelU5WHIzS2FZU3RGdUJYTU8ybGhaR1ZLeDI1UlVBT2pBOWRtYWhQQ0Mxd1o5STNEcnc4eEw3SVF4S2Et?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -3022,7 +3023,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-25T03:54:55.175Z",
+    "generatedAt": "2026-11-25T05:26:38.910Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

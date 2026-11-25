@@ -6503,6 +6503,24 @@
     }
   },
   {
+    "id": "29a49d587599bebed167",
+    "title": "오해원 안경 - 네이트 판",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9qZjAwakNEOVpiQmdUV3hGRHprSkU2bjlERkpteFBNSjRLTlJod3phdFVKSVZuU09QV0JQWHJLdlZ2RlFSdDgwa2NMdkg?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://pann.nate.com",
+    "publishedAt": "2024-05-26T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE9qZjAwakNEOVpiQmdUV3hGRHprSkU2bjlERkpteFBNSjRLTlJod3phdFVKSVZuU09QV0JQWHJLdlZ2RlFSdDgwa2NMdkg?oc=5\" target=\"_blank\">오해원 안경</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트 판</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-25T05:26:37.550Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
     "id": "204b9bb212cd4af83767",
     "title": "NMIXX Haewon and BAE Illuminate with Variety Stardom - 한국아이닷컴",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBPeVVvWDctN0Q2MHhqVXdDLWNvSTJwRTJSQlR2cUxpeFR4WWxxeGczeldvYldCMEpLSHlvdWpPUTFUUjFTRkpNT3g3UzlfMVFTYU1iNzhpd19hbXhpNklDSzhFQmJZRUNSRmNN0gFvQVVfeXFMTi1BQmZqNnVTZXItVFladE5UQkUyTm9jcHozSlowbWMwUDR5UnhkaEF1MlRYYnpvTk9xcHluSGdSMDdBdC1RWkhCc1ZLeERSNmJRY2pxR3ZZZFB6aS1UVTZ6SWlSSm9HTTM1YVhRM3hB?oc=5",
@@ -16438,7 +16456,15 @@
     "status": "candidate",
     "relevanceScore": 0,
     "thumbnailMetaCandidates": [],
-    "thumbnailMetaFetch": null
+    "thumbnailMetaFetch": null,
+    "sourceUrl": "https://www.koreaboo.com",
+    "publisherArticleUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "16d724a7443c61d1eeec",

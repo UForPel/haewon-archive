@@ -1,17 +1,17 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-25T03:54:53.985Z",
+  "collectedAt": "2026-11-25T05:26:37.550Z",
   "searchPack": 1,
   "queries": [
     {
       "query": "Haewon NMIXX interview",
-      "candidates": 15,
-      "uniqueCandidates": 15
+      "candidates": 13,
+      "uniqueCandidates": 13
     },
     {
       "query": "오해원 인터뷰",
-      "candidates": 30,
-      "uniqueCandidates": 30
+      "candidates": 45,
+      "uniqueCandidates": 45
     },
     {
       "query": "NMIXX Haewon magazine",
@@ -20,22 +20,22 @@
     },
     {
       "query": "Haewon NMIXX brand",
-      "candidates": 15,
-      "uniqueCandidates": 15
+      "candidates": 16,
+      "uniqueCandidates": 16
     }
   ],
   "requestedQueries": 4,
   "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
-  "bingCandidates": 32,
+  "bingCandidates": 31,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 73,
-  "uniqueIncoming": 65,
-  "added": 2,
+  "fetched": 87,
+  "uniqueIncoming": 79,
+  "added": 3,
   "rssImageSignals": {
-    "items": 41,
-    "sourceUrlItems": 41,
+    "items": 56,
+    "sourceUrlItems": 56,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -59,10 +59,10 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 73,
-    "after": 65,
+    "before": 87,
+    "after": 79,
     "collapsed": 8,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 704
+  "totalCandidates": 705
 }
