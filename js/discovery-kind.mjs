@@ -115,9 +115,21 @@ export function assessDiscoveryQuality(item = {}) {
   return { score, tier: score >= 80 ? 'high' : score >= 50 ? 'medium' : 'low', signals, warnings };
 }
 
-export function groupDiscoveryDuplicates(items = []) {
+export function groupDiscoveryDuplicates(items = [], mode = 'relevance') {
   const groups = new Map();
   const unique = [];
+  const compare = (a, b) => {
+    const aDate = Date.parse(a.publishedAt || a.discoveredAt || '');
+    const bDate = Date.parse(b.publishedAt || b.discoveredAt || '');
+    const aValid = Number.isFinite(aDate), bValid = Number.isFinite(bDate);
+    if (mode === 'date') {
+      if (aValid !== bValid) return aValid ? -1 : 1;
+      if (aValid && aDate !== bDate) return bDate - aDate;
+      return Number(b.relevanceScore || 0) - Number(a.relevanceScore || 0);
+    }
+    return Number(b.relevanceScore || 0) - Number(a.relevanceScore || 0) ||
+      (aValid !== bValid ? (aValid ? -1 : 1) : aValid ? bDate - aDate : 0);
+  };
   for (const item of items) {
     const titleKey = normalizeTitle(item.title);
     const urlKey = canonicalUrl(item.url);
@@ -127,9 +139,9 @@ export function groupDiscoveryDuplicates(items = []) {
     if (group) group.push(item); else groups.set(key, [item]);
   }
   const grouped = [...groups.values()].map(group => {
-    const ranked = group.slice().sort((a,b) => Number(b.relevanceScore || 0) - Number(a.relevanceScore || 0) || String(b.publishedAt || b.discoveredAt || '').localeCompare(String(a.publishedAt || a.discoveredAt || '')));
+    const ranked = group.slice().sort(compare);
     const sources = [...new Set(group.map(item => String(item.sourceName || item.discoverySource || '출처 미상')))];
     return { ...ranked[0], duplicateCount: group.length, sourceCount: sources.length, duplicateSources: sources };
   });
-  return [...unique, ...grouped].sort((a,b) => Number(b.relevanceScore || 0) - Number(a.relevanceScore || 0) || String(b.publishedAt || b.discoveredAt || '').localeCompare(String(a.publishedAt || a.discoveredAt || '')));
+  return [...unique, ...grouped].sort(compare);
 }
