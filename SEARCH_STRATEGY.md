@@ -154,3 +154,11 @@ Google News RSS wrapper links whose titles indicate YouTube/fancam are condition
 - PR #22: six packs of six phrases, selected by Korea date and a morning/evening run slot. This gives 36 unique editorial phrases and 12 distinct phrases per day.
 - Expected feed requests: 24/day (six queries × Google News and Bing × two runs), compared with 16/day previously. This is a +50% request budget; do not infer a +50% gain in unique coverage.
 - Evaluate per-query unique candidates, newest publication timestamp, age lag, duplicate collapse, publisher diversity and human-reviewed relevance after collection runs. Keep video/fancam query budget separate.
+
+## 2026-11-25 — Cross-channel public YouTube discovery
+
+- PR #23 adds 12 Korean/English query phrases, four per run, rotating by Korea-time morning/evening slot. The two current daily Actions runs make eight documented YouTube `search.list` calls/day.
+- The official default quota is 100 `search.list` calls/day at one quota unit per call. Do not add pagination or increase query count without measuring the incremental yield and budget.
+- Save channel ID and channel title from the API. Only the known official channel ID is automatically marked official; other results remain unverified pending human origin review.
+- This collector requires optional `YOUTUBE_API_KEY` and has not made a live API request. No secret means no change to the existing official Atom collector.
+- Keep editorial RSS and YouTube video search separate; keep photos as a distinct source-link/attribution pipeline.
