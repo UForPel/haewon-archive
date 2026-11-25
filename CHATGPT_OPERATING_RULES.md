@@ -322,3 +322,11 @@ For each substantial update include: changed paths; planned vs implemented items
 - Always end Haewon Archive responses with the working next-conversation button labelled exactly “🔄 연구 기반 재귀개선 계속하기”.
 ## Video provenance display rule
 - Do not only store unverified channel state in JSON; display it on the video card. Only the known official channel is marked official. All other channel records remain visibly unverified until human review. A successful test run does not establish mobile visual correctness.
+
+## 2026-11-25 — measurement and deployment guardrails
+- When reporting search effectiveness, separate exact unique URLs, duplicate URL/title rates, cross-query overlap, title-keyword proxy, explicit publisher URL coverage, and publication-age lag. Never call title-keyword matches human-confirmed direct relevance.
+- Do not claim PR #22 improved live search yield until the PR is merged and at least two real collection cycles have run.
+- Report both global persisted-thumbnail count and candidate-comparable persisted-thumbnail count. Do not let records without metadata candidates disappear from the global denominator.
+- Node CI JWT tests establish signature correctness, not Cloudflare Free Cron CPU consumption. The 10ms CPU budget requires Cloudflare invocation telemetry after authorized deployment.
+- GitHub App, Cloudflare secrets, YOUTUBE_API_KEY and GEMINI_API_KEY remain owner-managed; never request them in chat. Do not deploy Cloudflare without explicit approval.
+- Actions/Pages success is not Android browser QA. State the distinction every time.
