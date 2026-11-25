@@ -1121,3 +1121,33 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Latest main data commit: `92eb392cf8db69d0b6769528302df33dd2d30d65`.
 - Content baseline remains 701 candidates, 515 articles, 186 video candidates, 55 verified publisher articles, 49 verified Haewon articles, and 39 verified Haewon articles with provenance-backed thumbnails.
 - Remaining product work: improve the actual source/content mix, resolve the 273-record shared legacy thumbnail cluster through human review, and perform real mobile-browser visual QA. No such visual QA is claimed here.
+
+
+## 2026-11-25 — Article-level quality review and legacy image audit
+
+### Fresh main / operations check
+- Re-read repository main at 32832e57e9e1023c62eefa4a1e8b4a76550e451b.
+- Actions #581 succeeded. Inspected its job steps: Pages configured, artifact uploaded and deployment completed successfully.
+- Run log 45508856109 has three separate source rows: nmixx-youtube 15, google-news-rss 74, bing-news-rss 33; validation passed.
+- Open PR list was empty before this cycle.
+
+### Data-level audit (701 records)
+- 49 records meet the explicit publisher HTTPS + article + Haewon title scope. 39/49 have provenance-backed HTTPS thumbnails; this is not visual relevance accuracy.
+- All 49 have publishedAt and sourceName values, but none has an explicit stored category array. Date/source correctness has not been human checked; category remains rule-inferred.
+- The repeated legacy image group contains 273 records. It has no overlap with the 49 verified Haewon articles; all 273 lack publisherArticleUrl and both thumbnailCandidates and thumbnailMetaCandidates in the stored record. No automatic deletion, replacement, wrapper decoding, or access-control bypass.
+- Overall discovery: 701 records, 515 article candidates and 186 video candidates. Overall image assignment 317, including 273 unverified shared legacy assignments; provenance-backed assignments 44. (The 39 count is the verified-Haewon subset.)
+
+### Implementation on review/verified-article-quality-audit
+- Added js/article-review.mjs: strict verified-Haewon eligibility, independent four-dimension review schema, validated JSON import and per-record legacy image evidence audit.
+- Added js/article-quality-review-ui.mjs: 49-article review queue, original publisher links, date/source/automated category context, optional thumbnail preview, localStorage persistence, JSON import/export and progress.
+- Mounted the review panel in index.html, added responsive review styles, and added tests for scope, dimension coverage, import validation and legacy candidate evidence.
+- Extended generated quality metrics with a non-destructive summary of the repeated legacy image cluster.
+- Opened PR #13: https://github.com/UForPel/haewon-archive/pull/13. The branch has 7 changed files, 233 additions and 1 deletion at the time of PR creation.
+- Verification remains pending: Actions workflow has no pull_request trigger; local clone failed because network DNS was unavailable. Do not claim tests pass.
+- Real browser/mobile visual QA is unverified. The UI is implemented but not inspected in an actual browser.
+
+### Next
+- Run a testable CI path for PR #13 before merge (e.g. an authorized workflow dispatch or temporary PR CI workflow, with no secrets required).
+- Review the 49 records against their actual publisher pages; do not infer correctness from field presence.
+- Collect individual human thumbnail labels for the 39 source-traceable images and review missing-image cases for the remaining 10.
+- For the 273 legacy records, improve source data only when a direct publisher article URL or article-specific image candidate is explicitly present in permitted public RSS/meta fields. Otherwise preserve and mark unresolved.
