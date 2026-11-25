@@ -93,3 +93,8 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - X/Twitter profiles and posts are not publisher articles for the verified article view or article metadata-enrichment fetch. Keep the candidate's original `url`, title and source, but leave `publisherArticleUrl` empty.
 - Do not delete social-source candidates; they may remain visible in broader discovery scopes. A future dedicated social-post source type may be added separately if needed.
 - Use the shared `isExplicitPublisherArticleUrl` predicate in ingestion, merge, quality metrics and UI scope logic. Do not duplicate weaker URL checks.
+ 
+## Bing RSS social URL ingestion guard — 2026-11-25
+- An explicit HTTPS destination in Bing RSS is not automatically a publisher article. Apply the shared `isExplicitPublisherArticleUrl` predicate before setting `publisherArticleUrl`, exactly as for Google RSS.
+- X/Twitter profile and status URLs remain discovery candidates with their original URLs and Bing provenance, but must not enter publisher-article metrics or publisher-page thumbnail enrichment.
+- Never infer that a social-hosted image is an article thumbnail. Keep social content separate from publisher-article image provenance.

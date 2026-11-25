@@ -206,3 +206,8 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Generated metrics will be corrected on the next collection/quality run. Current reclassification counts are estimates until persisted and validated.
 - This change is separate from PR #25's HTTP 405 retry fix and PR #26's Node 24 Actions upgrade. All PRs remain subject to user approval; no merge.
 - The required ChatGPT continuation action **🔄 연구 기반 재귀개선 계속하기** remains mandatory at the end of every substantial response.
+ 
+## 2026-11-25 — Bing RSS social URL correction
+- The current main dataset demonstrated that Bing RSS can explicitly disclose an X status URL which the parser was incorrectly treating as a publisher article. Its X-hosted `og:image` was then assigned as an article thumbnail.
+- PR #27 now applies the shared publisher-URL predicate to Bing ingestion as well as Google RSS, preserving the social candidate while preventing publisher metadata enrichment. A focused end-to-end regression test is being added.
+- This correction remains on the unmerged PR branch. Do not claim production data or Pages has changed; no PR merge is authorized.

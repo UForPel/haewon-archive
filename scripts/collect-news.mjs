@@ -109,7 +109,7 @@ export function parseBingNewsRss(xml,query,now=new Date().toISOString()){
   const publishedAt=date&&!Number.isNaN(date.getTime())?date.toISOString():'';
   const host=new URL(articleUrl).hostname.toLowerCase();
   const id=createHash('sha256').update(articleUrl).digest('hex').slice(0,20);
-  return {id,title,url:articleUrl,publisherArticleUrl:articleUrl,sourceUrl,discoveryUrl,publisherHost:host,candidateSource:'bing-news-rss-explicit-url-param',candidateSources:[{source:'bing-news-rss-explicit-url-param',feedUrl:bingNewsFeedUrl(query),discoveryUrl,articleUrl,host}],publishedAt,description:tag(raw,'description').slice(0,1200),thumbnailUrl:'',thumbnailSource:'',thumbnailCandidates:[],sourceName,discoverySource:'bing-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,tag(raw,'description'))};
+  return {id,title,url:articleUrl,publisherArticleUrl:isPublisherArticleUrl(articleUrl)?articleUrl:'',sourceUrl,discoveryUrl,publisherHost:host,candidateSource:'bing-news-rss-explicit-url-param',candidateSources:[{source:'bing-news-rss-explicit-url-param',feedUrl:bingNewsFeedUrl(query),discoveryUrl,articleUrl,host}],publishedAt,description:tag(raw,'description').slice(0,1200),thumbnailUrl:'',thumbnailSource:'',thumbnailCandidates:[],sourceName,discoverySource:'bing-news-rss',query,discoveredAt:now,status:'candidate',relevanceScore:relevanceScore(title,tag(raw,'description'))};
  }).filter(Boolean);
 }
 export function extractOpenGraphImageCandidates(html='',baseUrl=''){

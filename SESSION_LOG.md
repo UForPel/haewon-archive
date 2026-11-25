@@ -1136,3 +1136,10 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Added tests for profile URL retention/exclusion, post URL exclusion, stale-value cleanup during merge (including existing-only data), no metadata fetch for social profile URLs, and corrected quality-metric counts.
 - Recomputed existing data with the stricter rule without writing data: 707 total, 521 article, 186 video candidates unchanged; verified publisher articles 60→57, verified Haewon articles 51→48, provenance-backed verified publisher thumbnails 47→45, verified Haewon thumbnails 40→38. Three social candidates remain in the archive. This is a deterministic reclassification estimate; the next collection/quality run must persist the new metrics.
 - Branch `fix/exclude-social-profile-from-article-scope` is based on main `37998b3`. PR CI and local test execution remain pending; the available environment cannot resolve github.com for a clone. No merge performed.
+ 
+## 2026-11-25 — Bing RSS social URL ingestion regression
+- Re-read main data after the latest production collection. A newly added Bing candidate used `https://x.com/nmixxiee/status/2112842130163114298` as `publisherArticleUrl`; the collector fetched its public page metadata and assigned an `og:image` from `pbs.twimg.com`. The item was therefore miscounted as a publisher article and received a social-post thumbnail.
+- Traced the discrepancy to the Bing parser in PR #27: the Google RSS parser called the shared `isPublisherArticleUrl` predicate, while `parseBingNewsRss()` unconditionally copied its explicit Bing destination into `publisherArticleUrl`.
+- Fixed the Bing parser to apply the same predicate. The original `url`, Bing discovery URL, candidate source and host provenance remain available; only the publisher-article field is blank for social URLs.
+- Added an end-to-end regression test using the observed X status URL. It checks parsing, stale merge cleanup, and that thumbnail enrichment performs zero fetches and assigns no image.
+- No production data was changed and no legacy thumbnail assignment was deleted. PR branch test/validation and Actions confirmation are pending.

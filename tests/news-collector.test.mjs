@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {parseRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,enrichThumbnails} from '../scripts/collect-news.mjs';
+import {parseRss,parseBingNewsRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,enrichThumbnails} from '../scripts/collect-news.mjs';
 import {hasExplicitPublisherArticleUrl} from '../js/discovery-kind.mjs';
 const fixture='<rss><channel><item><title>오해원 인터뷰</title><link>https://news.example/a</link><pubDate>Thu, 20 Nov 2026 02:00:00 GMT</pubDate><description>Haewon interview</description><source>News</source><media:thumbnail url="https://img.example/thumb.jpg" /></item></channel></rss>';
 test('RSS에서 제목, 링크, 날짜, 검색 출처 메타데이터를 추출한다',()=>{const [item]=parseRss(fixture,'오해원', '2026-11-20T00:00:00Z');assert.equal(item.title,'오해원 인터뷰');assert.equal(item.url,'https://news.example/a');assert.equal(item.sourceName,'News');assert.equal(item.status,'candidate');assert.equal(item.thumbnailUrl,'https://img.example/thumb.jpg');});
@@ -101,4 +101,22 @@ test('thumbnail enrichment never fetches an X profile URL as an article',async()
  assert.equal(result.attempted,0);
  assert.equal(calls,0);
  assert.equal(result.items[0].url,profileUrl);
+});
+
+test('Bing RSS X status candidates are retained but excluded from publisher metadata enrichment',async()=>{
+ const postUrl='https://x.com/nmixxiee/status/2112842130163114298';
+ const discoveryUrl='https://www.bing.com/news/apiclick.aspx?url='+encodeURIComponent(postUrl);
+ const xml='<rss><channel><item><title>NMIXX Haewon public post</title><link>'+discoveryUrl+'</link><description>Public social post</description></item></channel></rss>';
+ const [item]=parseBingNewsRss(xml,'NMIXX Haewon magazine','2026-11-25T00:00:00.000Z');
+ assert.equal(item.url,postUrl);
+ assert.equal(item.publisherArticleUrl,'');
+ assert.equal(hasExplicitPublisherArticleUrl(item),false);
+ const [merged]=mergeCandidates([{...item,publisherArticleUrl:postUrl}], [item]);
+ assert.equal(merged.url,postUrl);
+ assert.equal(merged.publisherArticleUrl,'');
+ let fetchCount=0;
+ const enriched=await enrichThumbnails([item],{fetchImpl:async()=>{fetchCount++;return new Response('<meta property="og:image" content="https://pbs.twimg.com/example.jpg">');},now:'2026-11-25T00:00:00.000Z'});
+ assert.equal(enriched.attempted,0);
+ assert.equal(fetchCount,0);
+ assert.equal(enriched.items[0].thumbnailUrl,'');
 });

@@ -350,3 +350,9 @@
 - [x] Add regression tests for X profile/post exclusion, merge cleanup, thumbnail fetch eligibility and metric counts.
 - [ ] Run PR tests and data validation in CI; main has no pull_request workflow and local GitHub clone is blocked by DNS in this environment.
 - [ ] Confirm regenerated quality metrics on the next production collection run; expected verified counts above are computed against current data but not yet persisted.
+ 
+## 2026-11-25 — Bing RSS social URL regression
+- [x] Trace a newly persisted X status URL and social-hosted thumbnail to the Bing RSS parser.
+- [x] Apply the shared publisher-article URL predicate to Bing RSS destinations while retaining discovery candidates and provenance.
+- [x] Add an end-to-end regression test for Bing parsing, stale-record cleanup and zero social metadata fetches.
+- [ ] Run branch tests and archive validation; verify the corrected counts on a subsequent production collection after approval.

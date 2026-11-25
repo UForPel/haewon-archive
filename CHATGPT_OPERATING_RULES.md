@@ -178,3 +178,8 @@ For each substantial update include: changed paths; planned vs implemented items
 - A non-root HTTPS URL is not sufficient proof that a candidate is a publisher article. Exclude X/Twitter profile and post URLs from `publisherArticleUrl` and the verified article scope.
 - Preserve social discovery candidates and original `url` fields; do not delete them. Do not run publisher article thumbnail metadata enrichment against social URLs under the article URL field.
 - Reuse the shared URL predicate across collector, merge, quality metrics and default verified scope. Add tests for candidate retention and stale-data cleanup.
+ 
+## Bing RSS parser parity — 2026-11-25
+- Verify that both Google RSS and Bing RSS ingestion use the same centralized publisher-article URL predicate. A Bing RSS item may explicitly disclose an X/Twitter status URL; explicit disclosure alone does not make it a publisher article.
+- Preserve social discovery records and source provenance, but keep `publisherArticleUrl` empty and do not fetch social pages for publisher article metadata thumbnails.
+- Treat the newly observed X status / `pbs.twimg.com` assignment as a confirmed regression in main until a corrected production collection proves otherwise. PR #27's fix is not active on main before approval and merge.

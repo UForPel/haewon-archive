@@ -572,3 +572,9 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Recomputed current 707-record data against the stricter predicate without mutating data: verified publisher articles 60→57; verified Haewon articles 51→48; provenance-backed verified publisher thumbnails 47→45; provenance-backed verified Haewon thumbnails 40→38. Three social-link candidates remain in the 707 total. These are reclassification estimates; the generated metrics will update on the next collector/quality run.
 - Added regression tests for X profile/post exclusion, candidate retention, merge cleanup, no social-profile metadata fetch and quality-metric coverage. PR/CI validation pending; local clone/test is unavailable because this environment cannot resolve github.com.
 - Existing thumbnail baseline remains 321 assigned (273 unverified shared legacy), 49 unique URLs, 386 missing; RSS image signals were 0/41 in the last run. Human image relevance labels remain 0.
+ 
+## Bing RSS social-URL regression correction — 2026-11-25
+- A fresh main collection persisted an X status URL as `publisherArticleUrl` and assigned its X-hosted `og:image` as an article thumbnail. This is direct evidence of a live ingestion gap, not a hypothetical risk.
+- Root cause found in PR #27: Google RSS ingestion used the shared publisher-URL predicate, but `parseBingNewsRss()` assigned every explicitly disclosed Bing destination to `publisherArticleUrl` without applying that predicate.
+- Corrected Bing ingestion to preserve the original social candidate and provenance while leaving `publisherArticleUrl` empty for X/Twitter URLs. Added an end-to-end Bing RSS regression test covering merge cleanup and zero article-metadata fetches.
+- This is a PR-branch correction only until approved and merged. Fresh Actions verification is pending; main data has not been rewritten.
