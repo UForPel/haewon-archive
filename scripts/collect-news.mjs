@@ -268,7 +268,9 @@ function normalizeQueryMetricTitle(value=''){
 function percentile(values,p){
  if(!values.length)return null;
  const sorted=[...values].sort((a,b)=>a-b);
- return Math.round(sorted[Math.min(sorted.length-1,Math.ceil(sorted.length*p)-1)]*10)/10;
+ const position=(sorted.length-1)*p,lower=Math.floor(position),upper=Math.ceil(position);
+ const value=sorted[lower]+(sorted[upper]-sorted[lower])*(position-lower);
+ return Math.round(value*10)/10;
 }
 export function summarizeQueryPerformance(items=[],queries=[],now=new Date().toISOString()){
  const rows=new Map(queries.map(query=>[query,{query,candidates:0,urls:new Set(),titles:new Map(),titleKeywordMatches:0,explicitPublisherUrls:0,publicationLagHours:[],unknownDates:0,futureDated:0}]));
