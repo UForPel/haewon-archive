@@ -85,7 +85,7 @@ async function main(){
  const uniqueIncoming=result.incoming.filter(item=>!existingIds.has(item.id));
  const merged=mergeVideos(existing,uniqueIncoming);
  const added=merged.filter(item=>!existingIds.has(item.id)).length;
- if(added)await writeFile(videosPath,JSON.stringify(merged,null,2)+'\\n');
+ if(added)await writeFile(videosPath,JSON.stringify(merged,null,2)+'\n');
  console.log(JSON.stringify({status:'success',queries:result.queries,successfulQueries:result.successfulQueries,failedQueries:result.failedQueries.length,received:result.incoming.length,added,total:merged.length,source:'youtube-data-api-search'}));
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(error=>{console.error(error);process.exitCode=1});
