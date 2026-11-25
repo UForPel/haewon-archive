@@ -52,3 +52,12 @@ test('article discovery has explicit relevance scopes and a sanitized reading su
  assert.ok(discoveryView.includes('unverifiedRepeatedThumbnailUrls.has(item.thumbnailUrl)'),'unverified shared legacy thumbnails must not be shown as article-specific images');
  assert.ok(discoveryView.includes('renderCategories();'),'category controls must be mounted');
 });
+
+
+test('thumbnail candidate diagnostics show persisted evidence and latest-run outcomes separately',()=>{
+ for(const signal of ['저장된 메타 후보','저장된 HTTPS 썸네일','메타 후보 URL 일치','최신 실행 메타 보강','시도 ','후보 발견 ','신규 배정 ','발견 후 배정률'])assert.ok(discoveryView.includes(signal),'missing metric distinction '+signal);
+ assert.ok(discoveryView.includes('candidateCompare.latestRunAttempted'));
+ assert.ok(discoveryView.includes('candidateCompare.latestRunFound'));
+ assert.ok(discoveryView.includes('candidateCompare.latestRunAssigned'));
+ assert.ok(discoveryView.includes('candidateCompare.persistedThumbnailMatchesMetaCandidate'));
+});
