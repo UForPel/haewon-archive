@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { isExplicitPublisherArticleUrl as isPublisherArticleUrl } from '../js/discovery-kind.mjs';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export const SEARCH_PACKS = [
   ['오해원 NMIXX','해원 엔믹스','NMIXX Haewon','Haewon NMIXX news'],
@@ -63,9 +64,6 @@ export function relevanceScore(title='',description=''){
 }
 function isGoogleNewsWrapperUrl(value=''){
  try{const host=new URL(String(value)).hostname.toLowerCase();return host==='news.google.com'||host.endsWith('.news.google.com')||host==='google.com'||host.endsWith('.google.com')||host.endsWith('.googleusercontent.com')||host.endsWith('.gstatic.com');}catch{return true;}
-}
-function isPublisherArticleUrl(value=''){
- try{const url=new URL(String(value));return url.protocol==='https:'&&!url.username&&!url.password&&!isGoogleNewsWrapperUrl(url.href)&&url.pathname!=='/';}catch{return false;}
 }
 export function parseRss(xml,query,now=new Date().toISOString()){
  if(typeof xml!=='string'||!/<rss\b/i.test(xml))throw new Error('RSS 응답이 아닙니다');
@@ -227,7 +225,7 @@ export function mergeCandidates(existing,incoming){
   if(!item?.url||!key)continue;
   const prior=map.get(key);
   if(!prior)map.set(key,item);
-  else map.set(key,{...prior,thumbnailUrl:prior.thumbnailUrl||item.thumbnailUrl||'',publishedAt:prior.publishedAt||item.publishedAt||'',description:(prior.description||'').length>=(item.description||'').length?prior.description:item.description,sourceName:prior.sourceName||item.sourceName,sourceUrl:item.sourceUrl||prior.sourceUrl||'',publisherArticleUrl:item.publisherArticleUrl||prior.publisherArticleUrl||'',thumbnailSource:prior.thumbnailSource||item.thumbnailSource||'',thumbnailCandidates:mergeImageCandidateLists(prior.thumbnailCandidates,item.thumbnailCandidates),thumbnailMetaCandidates:mergeImageCandidateLists(prior.thumbnailMetaCandidates,item.thumbnailMetaCandidates),thumbnailMetaFetch:item.thumbnailMetaFetch||prior.thumbnailMetaFetch||null,candidateSources:[...(prior.candidateSources||[]),...(item.candidateSources||[])].filter((row,index,array)=>array.findIndex(other=>other.source===row.source&&other.articleUrl===row.articleUrl)===index),publisherHost:prior.publisherHost||item.publisherHost||'',discoveryUrl:prior.discoveryUrl||item.discoveryUrl||'',candidateSource:prior.candidateSource||item.candidateSource||'',relevanceScore:Math.max(Number(prior.relevanceScore||0),Number(item.relevanceScore||0))});
+  else map.set(key,{...prior,thumbnailUrl:prior.thumbnailUrl||item.thumbnailUrl||'',publishedAt:prior.publishedAt||item.publishedAt||'',description:(prior.description||'').length>=(item.description||'').length?prior.description:item.description,sourceName:prior.sourceName||item.sourceName,sourceUrl:item.sourceUrl||prior.sourceUrl||'',publisherArticleUrl:isPublisherArticleUrl(item.publisherArticleUrl)?item.publisherArticleUrl:isPublisherArticleUrl(prior.publisherArticleUrl)?prior.publisherArticleUrl:'',thumbnailSource:prior.thumbnailSource||item.thumbnailSource||'',thumbnailCandidates:mergeImageCandidateLists(prior.thumbnailCandidates,item.thumbnailCandidates),thumbnailMetaCandidates:mergeImageCandidateLists(prior.thumbnailMetaCandidates,item.thumbnailMetaCandidates),thumbnailMetaFetch:item.thumbnailMetaFetch||prior.thumbnailMetaFetch||null,candidateSources:[...(prior.candidateSources||[]),...(item.candidateSources||[])].filter((row,index,array)=>array.findIndex(other=>other.source===row.source&&other.articleUrl===row.articleUrl)===index),publisherHost:prior.publisherHost||item.publisherHost||'',discoveryUrl:prior.discoveryUrl||item.discoveryUrl||'',candidateSource:prior.candidateSource||item.candidateSource||'',relevanceScore:Math.max(Number(prior.relevanceScore||0),Number(item.relevanceScore||0))});
   aliases.set(urlAlias,key);if(titleAlias)aliases.set(titleAlias,key);
  }
  return [...map.values()].sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
