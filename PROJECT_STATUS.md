@@ -564,3 +564,9 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Reaffirmed the mandatory bottom-of-response ChatGPT action label **🔄 연구 기반 재귀개선 계속하기**.
 - User-typed messages and corrections must not suppress the action. The action submits the full reusable recursive-improvement prompt from `CHATGPT_OPERATING_RULES.md`; a textual label alone is insufficient.
 - The requirement was already present in operating guidance; this update addresses the failure to render the action in the actual assistant response. Documentation commit: `653405c1f422e53d67cf43ea13250d6abe7332d9`; follow-up session-log commit is being recorded separately. Verify Actions/Pages for the resulting commits.
+
+## 2026-11-25 — Node 24-compatible production workflow proposal (PR validation pending)
+- Verified official action metadata and immutable tag commit SHAs for checkout v7.0.1 (`3d3c42e5...`), setup-node v7.1.0 (`949feb24...`), configure-pages v6.0.0 (`45bfe019...`), upload-pages-artifact v5.0.0 (`fc324d35...`) and deploy-pages v5.0.1 (`368f8252...`). Each JavaScript action declares Node 24; the Pages upload composite uses upload-artifact v7.0.0 internally.
+- Updated `.github/workflows/collect-and-deploy.yml` on `ci/upgrade-pages-actions-node24`, pinning all five actions to full immutable commit SHAs and release comments. Kept the project runtime at Node 22; this is separate from the JavaScript runtime used to execute Actions themselves.
+- Added `package-manager-cache: false` to setup-node because the workflow does not require dependency caching. Existing schedule, collection concurrency, write permissions, validation, data commit and Pages deploy gates are unchanged.
+- PR CI/production deployment has not run on this branch. No workflow change is live until approved merge and successful run.
