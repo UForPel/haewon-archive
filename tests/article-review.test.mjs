@@ -22,6 +22,6 @@ test('legacy thumbnail audit measures alternatives without deleting or pooling l
   const legacy='https://img.test/shared.jpg';
   const rows=[{...base,thumbnailUrl:legacy,thumbnailCandidates:[]},{...base,id:'b',thumbnailUrl:legacy,thumbnailCandidates:[{url:'https://img.test/b.jpg'}]}];
   const report=buildLegacyThumbnailAudit(rows,legacy);
-  assert.equal(report.assignments,2); assert.equal(report.recordsWithAlternativeCandidates,1); assert.equal(report.recordsWithPublisherArticleUrl,2);
+  assert.equal(report.assignments,2); assert.equal(report.recordsWithAlternativeCandidates,1); assert.equal(report.recordsWithPublisherArticleUrl,2); assert.equal(report.recordsWithSourceSiteUrl,0);
   assert.equal(report.distinctAlternativeUrls,1); assert.equal(report.records.length,2);
 });
