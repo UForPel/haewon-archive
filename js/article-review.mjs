@@ -134,3 +134,17 @@ export function buildLegacyThumbnailAudit(items = [], legacyUrl = '') {
     records: alternatives
   };
 }
+
+export function getArticleUrlContext(item = {}) {
+  const host = value => {
+    try {
+      const url = new URL(String(value || ''));
+      return url.protocol === 'https:' ? url.hostname.toLowerCase() : '';
+    } catch { return ''; }
+  };
+  return {
+    publisherArticleHost: host(item.publisherArticleUrl),
+    discoveryUrlHost: host(item.url),
+    recordedPublisherHost: String(item.publisherHost || '')
+  };
+}
