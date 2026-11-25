@@ -251,3 +251,12 @@ For each substantial update include: changed paths; planned vs implemented items
 - Legacy cluster unchanged: 273 repeated image assignments, 270 unique titles, 148 sourceUrl hints, 125 without sourceUrl, zero article-specific publisher URLs, zero discovery URLs, zero image candidates, zero metadata fetches. No wrapper decoding, deletion or replacement.
 - Main data remains 701 candidates, 515 articles and 186 video candidates. No new accepted discovery in Actions #581.
 - Next: obtain fresh CI for latest PR #13 and #15 heads after safe workflow availability; consider narrowing the category rules only after a labeled sample exists; manually complete 49 source/date/category/relevance labels; preserve unverified thumbnail and legacy states; verify Pages in a real browser and Android device.
+
+
+## 2026-11-25 — PR #15 Node 24 CI hardening verification
+
+- PR #15 latest head: `d095da244c97fcbea4e38eca624fae6112088c56`; still open and unmerged.
+- Updated the read-only workflow to verified upstream immutable action commits: checkout v7.0.1 `3d3c42e5aac5ba805825da76410c181273ba90b1`, setup-node v7.1.0 `949feb2413d6458794dcd2491c4babbbce0c15c1`. Both use Node 24 action runtimes. `persist-credentials: false` remains; `package-manager-cache: false` avoids unused automatic caching. Workflow retains `contents: read`, Node 22 project runtime, `npm test`, and `npm run validate` only.
+- Fresh Actions #10 / run `45541326160` on exact head `d095da244c97fcbea4e38eca624fae6112088c56`: success; 142/142 tests passed, 0 failed; archive validation passed (19 videos, 701 discovery candidates, 154 run logs, 37 source summaries, 41 links checked). No Node 20 deprecation warning in this run's log.
+- This is PR #15 branch validation only; PR #15 is still not merged and does not yet provide main-wide automatic CI.
+- PR #13 latest code branch `b926e8fab1d9338bf08d7c2568f49b40f99a1767` still has no fresh Actions run after its URL-host-context helper/test addition. PR #16 latest branch `fbac15bcd4142ce943cc23df236176a4a1ba4725` retains prior Actions #6 (143/143) and has no newer run.
