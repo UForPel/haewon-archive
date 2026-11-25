@@ -647,3 +647,5 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - The date/source accuracy scores remain unmeasured. Several readable pages show matching calendar dates after timezone normalization, but no 49-item human review has been completed.
 - PR #13 now has 7 review dimensions (not 8): content type, original access, relevance, date accuracy, source accuracy, category accuracy and thumbnail suitability. Relevance includes direct, indirect, unrelated and uncertain labels.
 - Final PR #13 verification run #8 / 45537353569 passed 153/153 tests and archive validation; temporary workflow removed afterward. Latest branch head after cleanup: 9cd73121750458d723b1e433ed0661f595560323.
+
+- Independent fetch of the public Pages URL through the available web inspection path returned an internal access error; GitHub Actions #581's Pages deployment step is confirmed successful, but the live site was not independently rendered/visually checked in this session.
