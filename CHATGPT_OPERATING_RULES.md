@@ -271,3 +271,10 @@ For each substantial update include: changed paths; planned vs implemented items
 - Keep publisher article URL host, discovery URL host and recorded source host separate. A syndicated publisher page may carry an originating publisher's byline; do not treat host mismatch alone as a source error.
 - Store source timestamps as observed. When the page date disagrees with the persisted timestamp, record evidence and request human review rather than silently changing the source record.
 - Pages artifact/deployment success does not prove public rendering. Actual Android/browser QA must be reported separately.
+
+
+## Temporary verification harness record
+- PR #13 exact HEAD: temporary PR #17, Actions #11, 154/154 tests, archive validation passed; closed without merge.
+- PR #16 exact HEAD: temporary PR #18, Actions #12, 143/143 tests, archive validation passed; closed without merge.
+- The temporary PRs each added the exact SHA-pinned read-only workflow from PR #15 and no production code changes. They must never be merged.
+- PR #15 remains a separate CI PR and requires explicit user approval before merge. Keep all original PRs open/unmerged unless the user explicitly authorizes a merge.
