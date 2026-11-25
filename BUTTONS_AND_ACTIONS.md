@@ -230,3 +230,16 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Actual mobile browser inspection remains unverified. CI and Pages deployment are not substitutes for visual testing.
 
 - Corrected PR #13 code now passed a temporary read-only Actions verification: 150/150 tests and archive-data validation. The temporary workflow was removed afterward; the permanent workflow proposal remains separately in PR #15.
+
+
+## 2026-11-25 — Seven-dimension source review
+
+- PR #13 review queue covers 49 explicit HTTPS Haewon-related source URLs, not 49 guaranteed article pages.
+- Seven labels: content type, original-page accessibility, relevance, date accuracy, source accuracy, category accuracy, thumbnail suitability.
+- Content type options distinguish article, social post, profile, other and uncertain. Current URL audit identifies 47 article pages, one X profile and one X post.
+- A corrected-category selector records the intended category when the automatic title/description rule is wrong.
+- The progress line now includes all seven dimensions, including content type and thumbnail suitability.
+- All 39 currently assigned Haewon thumbnails match persisted metadata candidates. Human visual suitability remains unreviewed.
+- The 10 missing thumbnails split into 4 HTTP 403 failures and 6 missing metadata outcomes; no retry after 403 and no bypass.
+- 273 repeated legacy image assignments remain untouched. 148 have root-domain source clues only; 125 have no sourceUrl; none has an article-specific publisher URL or image candidate.
+- PR #13 verification: 152/152 tests and archive validation. PR #16 verification: 143/143 tests and archive validation. Temporary verification workflows removed; permanent CI remains separate in PR #15.
