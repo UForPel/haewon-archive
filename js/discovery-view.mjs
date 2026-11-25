@@ -1,9 +1,17 @@
 import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText, filterUnresolvedVideoCandidates } from './discovery-kind.mjs';
 import { createThumbnailReviewKey, summarizeThumbnailReviews, validateThumbnailReviewExport, mergeThumbnailReviewLabels, getThumbnailReviewCandidates, findNextUnreviewedThumbnail, groupRepeatedThumbnailAssignments, summarizeRepeatedThumbnailGroup, findNextUnreviewedInRepeatedGroup } from './thumbnail-review.mjs';
 
+function getDiscoveryTimestamp(item) {
+ for (const value of [item?.publishedAt, item?.discoveredAt]) {
+  const timestamp = Date.parse(value || '');
+  if (Number.isFinite(timestamp)) return timestamp;
+ }
+ return Number.NaN;
+}
+
 export function sortDiscoveryItems(items=[],mode='date') {
  return items.map((item,index)=>({item,index})).sort((a,b)=>{
-  const aDate=Date.parse(a.item.publishedAt||a.item.discoveredAt||''),bDate=Date.parse(b.item.publishedAt||b.item.discoveredAt||'');
+  const aDate=getDiscoveryTimestamp(a.item),bDate=getDiscoveryTimestamp(b.item);
   const aValid=Number.isFinite(aDate),bValid=Number.isFinite(bDate);
   if(mode==='relevance'){const score=Number(b.item.relevanceScore||0)-Number(a.item.relevanceScore||0);if(score)return score;}
   if(aValid!==bValid)return aValid?-1:1;
