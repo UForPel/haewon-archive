@@ -1,5 +1,5 @@
 import { classifyDiscoveryCategories } from './discovery-kind.mjs';
-import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport } from './article-review.mjs';
+import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, getArticleUrlContext } from './article-review.mjs';
 
 const host = document.querySelector('#article-quality-review');
 if (host) {
@@ -50,7 +50,7 @@ if (host) {
       const title = document.createElement('a'); title.href = item.publisherArticleUrl; title.target = '_blank'; title.rel = 'noopener noreferrer'; title.textContent = item.title; title.className = 'article-quality-review-title';
       const meta = document.createElement('p'); meta.className = 'photo-meta';
       const date = item.publishedAt ? new Date(item.publishedAt).toLocaleDateString('ko-KR') : '날짜 없음';
-      meta.textContent = (item.sourceName || '출처 미상')+' · '+date+' · '+(item.publisherHost || new URL(item.publisherArticleUrl).hostname)+' · 자동 분류 '+classifyDiscoveryCategories(item).join(', ')+' · 이미지 출처 '+(item.thumbnailSource || item.thumbnailProvenance?.source || '미확인');
+      const urlContext = getArticleUrlContext(item);\n      meta.textContent = (item.sourceName || '출처 미상')+' · '+date+' · 원문 URL '+(urlContext.publisherArticleHost || '확인 불가')+' · 검색 URL '+(urlContext.discoveryUrlHost || '확인 불가')+' · 등록 출처 호스트 '+(urlContext.recordedPublisherHost || '미기록')+' · 자동 분류 '+classifyDiscoveryCategories(item).join(', ')+' · 이미지 출처 '+(item.thumbnailSource || item.thumbnailProvenance?.source || '미확인');
       const image = document.createElement('img'); image.className = 'article-quality-review-image'; image.alt = '기사 썸네일 후보'; image.loading = 'lazy';
       if (/^https:\/\//i.test(item.thumbnailUrl || '')) image.src = item.thumbnailUrl; else image.hidden = true;
       const fields = document.createElement('div'); fields.className = 'article-quality-review-fields';
