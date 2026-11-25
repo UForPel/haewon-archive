@@ -1247,3 +1247,5 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - A sourceName of MSN paired with a Sports Kyunghyang publisher URL is a source-attribution review candidate. Keep source publisher, syndication platform and URL host distinct; do not assume every host/name difference is an error.
 - The review UI still has zero saved human labels. Seven spot-checks do not establish a complete 39-image suitability score.
 - PR #13 relevance options now distinguish direct, indirect, unrelated and uncertain. Its final temporary read-only Actions run #8 passed 153/153 tests and archive validation; the temporary workflow was removed afterward. Latest branch head: 9cd73121750458d723b1e433ed0661f595560323.
+
+- Pages verification limit: the public GitHub Pages URL could not be independently opened by the available web inspection tool (internal access error). The production Actions deployment step succeeded, but no live rendering or mobile visual QA is claimed.
