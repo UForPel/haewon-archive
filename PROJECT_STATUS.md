@@ -578,3 +578,5 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - The article review queue includes a fifth independent dimension for original-page accessibility (accessible / blocked / paywall / not-found / uncertain), in addition to relevance, date, source, and category accuracy.
 
 - The code PR now also adds a bounded, direct-URL accessibility audit for all 49 verified Haewon publisher articles. It sends one standard HEAD request per explicit HTTPS publisherArticleUrl, follows ordinary HTTP redirects, records status/final host, and performs no retry, wrapper decoding, or access-control workaround. This audit is implemented but awaits PR CI and the next successful data-generation run.
+
+- PR #15's own Actions run #1 succeeded (142/142 tests; archive-data validation passed). This validates the new workflow against the main-based PR #15 branch, not the unmerged PR #13 code; PR #13's newly added tests remain pending until the CI workflow is available on main and the PR is rerun.
