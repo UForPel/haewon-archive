@@ -76,3 +76,30 @@ test('indirect relevance is distinct from direct relevance and reduces direct-ma
   assert.equal(report.dimensions.relevance.counts.indirect,1);
   assert.equal(report.dimensions.relevance.accuracy,0);
 });
+
+import { getArticleUrlContext } from '../js/article-review.mjs';
+test('article review exposes publisher URL, discovery URL and recorded source hosts separately', () => {
+  assert.deepEqual(getArticleUrlContext({
+    sourceName: 'OSEN',
+    url: 'https://www.osen.co.kr/article/G1112588404',
+    publisherArticleUrl: 'https://biz.chosun.com/entertainment/enter_general/2025/06/10/story/',
+    publisherHost: 'www.osen.co.kr'
+  }), {
+    publisherArticleHost: 'biz.chosun.com',
+    discoveryUrlHost: 'www.osen.co.kr',
+    recordedPublisherHost: 'www.osen.co.kr'
+  });
+  assert.deepEqual(getArticleUrlContext({
+    sourceName: 'MSN',
+    url: 'https://www.msn.com/story',
+    publisherArticleUrl: 'https://sports.khan.co.kr/en/article/202609201357007',
+    publisherHost: 'www.msn.com'
+  }), {
+    publisherArticleHost: 'sports.khan.co.kr',
+    discoveryUrlHost: 'www.msn.com',
+    recordedPublisherHost: 'www.msn.com'
+  });
+  assert.deepEqual(getArticleUrlContext({ publisherArticleUrl: 'http://bad.test/a', url: 'not-a-url' }), {
+    publisherArticleHost: '', discoveryUrlHost: '', recordedPublisherHost: ''
+  });
+});
