@@ -180,3 +180,9 @@ For each substantial update include: changed paths; planned vs implemented items
 
 - Prefer rebasing a narrow workflow proposal from current main over merging a stale branch with unrelated commit history.
 - The read-only PR workflow is not active on main until its PR is approved and merged. Validate the PR using its own `pull_request` event run; never substitute a push snapshot or another PR's run.
+
+
+
+### PR #30 CI result — 2026-11-25
+- The new current-main PR #30 received a genuine `pull_request` run #45570038033, and the job passed `npm test` and `npm run validate`.
+- Report this as a successful PR-specific acceptance run, not as a main-branch required check. It becomes an active repository gate only after explicit user approval and merge.
