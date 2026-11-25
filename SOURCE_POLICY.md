@@ -37,3 +37,11 @@ For a broken link, incorrect attribution, or rights concern, update or remove th
 - Google News wrapper-only video candidates may be shown as unresolved links, but they are not verified YouTube videos. Do not decode opaque wrapper tokens, infer IDs, follow redirects for access workarounds, or auto-promote them to `videos.json`.
 - A separate optional YouTube Data API collector may be evaluated for broad channel/video search. It must use documented API endpoints, explicit quota budgets, and a user-managed secret. API quota and rate limits must be measured; no API key is created or requested by the assistant.
 - Photo discovery means indexing public source posts and attribution, not copying or rehosting original photographs. Keep Instagram/X/TikTok/fansite content as links unless the platform explicitly provides permitted preview metadata or an authorized API. Public visibility alone is not blanket permission to scrape.
+
+## 2026-11-25 — Public API boundaries for video and photo discovery
+
+- PR #23 proposes YouTube Data API `search.list` for cross-channel public video discovery. The API result's channel ID/name are preserved. Only the known official channel is labeled official; other channels remain unverified until reviewed. The collector uses a user-managed optional secret and a small daily quota budget.
+- Do not infer fan status from a non-official channel, and do not add videos from wrapper URLs without an explicit canonical YouTube video ID.
+- X API reads are paid per returned post; do not use it as a required source under the free-first policy.
+- Meta Content Library is a research-oriented secure environment, not a general public consumer API; its current public-data geographic scope excludes South Korea.
+- Photo collection remains source-link/attribution only unless a provider explicitly permits preview/embedding or an authorized API is available. No rehosting, login-wall scraping or hidden endpoint use.
