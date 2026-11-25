@@ -46,11 +46,9 @@ export function isExplicitPublisherArticleUrl(value = '') {
     if (host === 'news.google.com' || host.endsWith('.news.google.com') ||
       host === 'google.com' || host.endsWith('.google.com') ||
       host.endsWith('.googleusercontent.com') || host.endsWith('.gstatic.com')) return false;
-    // X profile pages are not articles. Accept only an explicit public post URL.
+    // Social-network profiles and posts are source content, not publisher articles.
     if (host === 'x.com' || host.endsWith('.x.com') || host === 'twitter.com' ||
-      host.endsWith('.twitter.com')) {
-      return /^\/(?:[^/]+\/status\/\d+|i\/web\/status\/\d+)\/?$/.test(url.pathname);
-    }
+      host.endsWith('.twitter.com')) return false;
     return true;
   } catch { return false; }
 }
