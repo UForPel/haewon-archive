@@ -27,6 +27,8 @@ test('visible primary controls include named button actions and forms',()=>{
  for(const markup of ['>전체</button>','>해원 키워드</button>','>최근 7일</button>','>검색 열기</button>','>임시 링크 등록</button>','>JSON 내보내기</button>'])assert.ok(html.includes(markup),'missing button markup: '+markup);
  assert.ok(html.includes('id="import-photos"'),'JSON import input must remain available');
  assert.ok(html.includes('id="discovery-pagination"')&&html.includes('id="video-pagination"'),'both result lists must expose pagination controls');
+ assert.ok(html.includes('id="discovery-sort"'),'news list must expose date/relevance sort selection');
+ assert.ok(html.includes('id="video-discovery-list"'),'unresolved video candidates must have a separate visible list');
 });
 
 
@@ -48,6 +50,8 @@ test('article discovery has explicit relevance scopes and a sanitized reading su
  assert.ok(html.includes('개별 HTTPS 원문 주소가 공개 메타데이터로 확인된 해원 기사를 기본 표시'),'default relevance behavior must be explained');
  assert.ok(discoveryView.includes("let selectedRelevance='verified-haewon'"),'Haewon-related articles must be the default scope');
  assert.ok(discoveryView.includes('filterArticleCandidates(allItems)'),'video candidates must not be mixed into article cards');
+ assert.ok(discoveryView.includes('filterUnresolvedVideoCandidates(allItems)'),'unresolved wrapper video candidates must be preserved in their own list');
+ assert.ok(discoveryView.includes('sortDiscoveryItems'),'news must use explicit date/relevance sort');
  assert.ok(discoveryView.includes('cleanDiscoveryText(item.description)'),'RSS HTML descriptions must be rendered as clean text');
  assert.ok(discoveryView.includes('unverifiedRepeatedThumbnailUrls.has(item.thumbnailUrl)'),'unverified shared legacy thumbnails must not be shown as article-specific images');
  assert.ok(discoveryView.includes('renderCategories();'),'category controls must be mounted');
