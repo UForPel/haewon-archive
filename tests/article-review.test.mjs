@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { getVerifiedHaewonArticles, summarizeArticleReviews, validateArticleReviewExport, buildLegacyThumbnailAudit, auditVerifiedPublisherArticles } from '../js/article-review.mjs';
+import { getVerifiedHaewonArticles, summarizeArticleReviews, validateArticleReviewExport, buildLegacyThumbnailAudit, auditVerifiedPublisherArticles, formatArticleReviewProgress } from '../js/article-review.mjs';
 
 const base = { id: 'a', title: '오해원 인터뷰', url: 'https://news.test/a', publisherArticleUrl: 'https://news.test/a', publishedAt: '2026-11-20T00:00:00Z', sourceName: '뉴스', thumbnailUrl: 'https://img.test/a.jpg' };
 test('review scope contains only explicit publisher HTTPS Haewon articles and excludes videos', () => {
@@ -47,4 +47,24 @@ test('thumbnail suitability accuracy excludes absent images and uncertain judgme
   const report = summarizeArticleReviews(rows, labels);
   assert.equal(report.dimensions.thumbnailAccuracy.reviewed,3);
   assert.equal(report.dimensions.thumbnailAccuracy.accuracy,100);
+});
+
+test('review progress includes all seven dimensions including thumbnail and content type', () => {
+  const report = summarizeArticleReviews([base], {});
+  const progress = formatArticleReviewProgress(report);
+  assert.match(progress, /일곱 항목 완료 0\/1/);
+  assert.match(progress, /자료 유형 0\/1/);
+  assert.match(progress, /썸네일 0\/1/);
+});
+test('content type is recorded without pretending its labels are an accuracy score', () => {
+  const report = summarizeArticleReviews([base], {
+    a: {articleId:'a',contentType:'social-post',categoryAccuracy:'incorrect',expectedCategory:'news'}
+  });
+  assert.equal(report.dimensions.contentType.counts['social-post'],1);
+  assert.equal(report.dimensions.contentType.accuracy,null);
+  const imported = validateArticleReviewExport({schemaVersion:1,labels:{
+    a:{articleId:'a',contentType:'profile',categoryAccuracy:'incorrect',expectedCategory:'performance'}
+  }},['a']);
+  assert.equal(imported.labels.a.contentType,'profile');
+  assert.equal(imported.labels.a.expectedCategory,'performance');
 });
