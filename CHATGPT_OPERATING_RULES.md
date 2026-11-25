@@ -235,3 +235,12 @@ For each substantial update include: changed paths; planned vs implemented items
 - PR #22 expands the search vocabulary to 36 terms with four-query run rotation; current production still requests four news queries per run and records searchPack 2. PR #23 adds optional YouTube Data API discovery; it is not active in main and must remain optional, quota-bounded and nonessential to the free core.
 - PR #24 is a Cloudflare/GitHub App dispatch dry-run only. It does not implement the external scheduler or automated collection; no App, Worker or secret configuration is active.
 - PR #15 is an older read-only PR-CI proposal and is 9 commits behind; PR #30 is the newer tested version. Keep #15 unmerged rather than duplicating the CI gate.
+
+## 2026-11-26 — Evidence and CI execution safeguards
+- Recheck current main SHA and latest runs before reporting. A scheduled workflow may start from an older source SHA and advance main with a generated data commit; report both SHAs.
+- For repositories without package-lock.json, use `npm test` and `npm run validate`; do not use `npm ci`. Record the exact run and test count.
+- A branch-only verification workflow can test an isolated snapshot but does not establish a main CI gate. Do not imply PR #30 is active on main until approved and merged.
+- Keep PR #26 Node24 production-action migration separate from PR #30 read-only CI. Verify action pins and deployment outcomes independently.
+- Never merge without explicit user approval. Keep branch-only tests and audits read-only; distinguish code/test commits, collection/data commits, Pages deployment and browser/mobile QA.
+- For Bing RSS, apply the shared publisher URL predicate after extracting the explicit destination. X/Twitter post/profile candidates may remain in discovery but must not be counted or enriched as publisher articles.
+- Current audit sample is 12 HEAD-only requests: 1 HTTP 404, 11 image responses. Do not generalize this sample to all images.

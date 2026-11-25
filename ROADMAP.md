@@ -411,3 +411,15 @@
 - PR #22 expands the search vocabulary to 36 terms with four-query run rotation; current production still requests four news queries per run and records searchPack 2. PR #23 adds optional YouTube Data API discovery; it is not active in main and must remain optional, quota-bounded and nonessential to the free core.
 - PR #24 is a Cloudflare/GitHub App dispatch dry-run only. It does not implement the external scheduler or automated collection; no App, Worker or secret configuration is active.
 - PR #15 is an older read-only PR-CI proposal and is 9 commits behind; PR #30 is the newer tested version. Keep #15 unmerged rather than duplicating the CI gate.
+
+## 2026-11-26 — Verification and next implementation priorities
+- [x] Reconfirm main `3c93903c...`, Production run `45695468167` and PR #30 read-only run `45704287050`.
+- [x] Execute PR #25 head `b152ebc4...` in an isolated read-only Actions workflow: `45718220250`, 145/145 tests and validation passed.
+- [x] Re-measure first 12 unique thumbnail URLs with HEAD-only requests: `45718297315`, 1 HTTP 404, 11 image responses, no unreachable or rate-limited URLs.
+- [ ] Integrate PR #27 shared X/Twitter article predicate into PR #28 Bing parser; keep original candidate URL/provenance, blank publisherArticleUrl for social destinations, add profile/post regression cases, and run tests on a current-main snapshot.
+- [ ] Port PR #16 stored-vs-latest-run metric separation to current main; ensure latest run summary is passed explicitly and historical candidates never inflate current-run assignment rates.
+- [ ] Port PR #20 date-first default sort; keep relevance as explicit alternate sort and retain publishedAt → discoveredAt fallback; test invalid dates and unresolved video filtering.
+- [ ] Evaluate PR #26 Node24 action pins independently from PR #30 read-only CI. Verify the actual production workflow after any approved rollout.
+- [ ] Run the main data collector only when intentionally requested; then independently verify tests, collection, data commit, artifact, Pages deployment and live mobile UI.
+- [ ] Preserve 273 legacy thumbnail assignments, avoid automatic deletion/replacement, and keep human review labels per article.
+- [ ] Do not add SBS, Yonhap or other new RSS feeds without explicit applicable permission.

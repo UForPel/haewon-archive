@@ -143,3 +143,10 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - PR #22 expands the search vocabulary to 36 terms with four-query run rotation; current production still requests four news queries per run and records searchPack 2. PR #23 adds optional YouTube Data API discovery; it is not active in main and must remain optional, quota-bounded and nonessential to the free core.
 - PR #24 is a Cloudflare/GitHub App dispatch dry-run only. It does not implement the external scheduler or automated collection; no App, Worker or secret configuration is active.
 - PR #15 is an older read-only PR-CI proposal and is 9 commits behind; PR #30 is the newer tested version. Keep #15 unmerged rather than duplicating the CI gate.
+
+## 2026-11-26 — Audit and source-boundary checkpoint
+- The current 12-URL thumbnail audit is HEAD-only and read-only. It must not switch methods after a 403/405, follow hidden wrappers, or write audit outcomes into archive data unless a separate reviewed data migration is approved.
+- Latest measured sample: 12 unique URLs checked; one HTTP 404 from a Sportalkorea CDN image URL; 11 returned image content; no unreachable or rate-limited responses. A 12-URL sample is diagnostic only, not a global availability estimate.
+- Preserve all 273 legacy shared-thumbnail records; do not bulk delete, replace or auto-label them.
+- Bing RSS image candidates may be parsed from explicit public item metadata, but an explicit Bing destination hosted on X/Twitter is still a social post, not a publisher article. Apply the shared social-host predicate before setting publisherArticleUrl or including it in publisher metrics. Preserve original candidate URL and provenance.
+- No SBS or Yonhap RSS source is approved for collection. Do not add any new publisher feed until explicit applicable usage permission is documented.

@@ -242,3 +242,9 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - PR #22 expands the search vocabulary to 36 terms with four-query run rotation; current production still requests four news queries per run and records searchPack 2. PR #23 adds optional YouTube Data API discovery; it is not active in main and must remain optional, quota-bounded and nonessential to the free core.
 - PR #24 is a Cloudflare/GitHub App dispatch dry-run only. It does not implement the external scheduler or automated collection; no App, Worker or secret configuration is active.
 - PR #15 is an older read-only PR-CI proposal and is 9 commits behind; PR #30 is the newer tested version. Keep #15 unmerged rather than duplicating the CI gate.
+
+## 2026-11-26 — Verification workflow inventory
+- Temporary branch-only workflow `verify/pr25-http405-b152ebc4`: read-only `npm test` + `npm run validate`; run `45718220250` passed 145/145. First attempt's `npm ci` failed because no lockfile exists; corrected workflow does not install dependencies.
+- Temporary branch-only workflow `audit/thumbnail-head-sample-20261126`: read-only HEAD checks for first 12 unique thumbnail URLs; run `45718297315` succeeded with 1 HTTP 404 and 11 image responses. No app UI controls changed.
+- PR #30 adds read-only pull_request CI but is not on main; PR #26 separately changes production deployment action versions. Neither is merged or deployed.
+- The mandatory ChatGPT conversation follow-up action remains **🔄 연구 기반 재귀개선 계속하기**. It is a ChatGPT conversation control, not a button in the deployed archive. Keep rendering it at the end of substantial project work.
