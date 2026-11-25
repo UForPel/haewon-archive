@@ -1185,3 +1185,7 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Commits: `3911e6238c0d352ab2aa2b78ea0216549a8d3e69` (code), `b152ebc4a291b824b6aef6dc3fc782b5f1412967` (test). PR #25 remains open; current compare 19 ahead/1 behind. No PR-triggered Actions run for the latest SHA, and local execution was unavailable in this session; do not claim the new test passed.
 - PR #30 run #45570252997 log confirms 142 tests passed and validation succeeded on merge commit `ba98774` based on old main `37998b31`. Since main is now `3c93903`, refresh/re-run is required before treating the CI workflow as validated against current main.
 - Main run #45695468167 is successful but logs a Node20 deprecation warning for five existing Actions; runner forced them to Node24. PR #26 has correct Node24 pins but no production deployment.
+
+## 2026-11-26 — Quality evidence precision
+- Latest `thumbnailResponseAudit`: 12 unique thumbnail URLs sampled, 12 checked, 1 broken (Sportalkorea image URL HTTP 404), 0 non-image, 0 unreachable and 0 rate-limited. Do not extrapolate this sample to all 57 unique URLs.
+- The latest host metrics still show Sportskeeda `errorCode:network-error`; the current summary view does not expose its stored `statusCode`. Earlier live HTTP observation was 405. The PR #25 compatibility test covers a persisted 405 status code when available, but whether the current persisted record contains it or needs migration is not yet confirmed.
