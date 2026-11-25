@@ -87,3 +87,10 @@ Before any automated write:
 10. If any gate fails, write no candidate records; emit a sanitized failure summary.
 
 Gemini does not have permission to alter these rules or the validators enforcing them.
+
+
+
+## 2026-11-25 — CI boundary
+
+- Pull-request verification is read-only: it may run unit tests and validate committed archive data. It must not collect external feeds, mutate archive JSON, commit data, access Pages deployment permissions, or use secrets.
+- The proposed workflow grants only `contents: read`, disables persisted checkout credentials, and has no collection or deployment steps.
