@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {parseRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,getDailySearches,SEARCH_PACKS,SEARCHES} from '../scripts/collect-news.mjs';
+import {parseRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,getDailySearches,SEARCH_PACKS,SEARCHES,summarizeQueryPerformance} from '../scripts/collect-news.mjs';
 const fixture='<rss><channel><item><title>오해원 인터뷰</title><link>https://news.example/a</link><pubDate>Thu, 20 Nov 2026 02:00:00 GMT</pubDate><description>Haewon interview</description><source>News</source><media:thumbnail url="https://img.example/thumb.jpg" /></item></channel></rss>';
 test('RSS에서 제목, 링크, 날짜, 검색 출처 메타데이터를 추출한다',()=>{const [item]=parseRss(fixture,'오해원', '2026-11-20T00:00:00Z');assert.equal(item.title,'오해원 인터뷰');assert.equal(item.url,'https://news.example/a');assert.equal(item.sourceName,'News');assert.equal(item.status,'candidate');assert.equal(item.thumbnailUrl,'https://img.example/thumb.jpg');});
 test('중복 URL 후보는 하나로 합친다',()=>{const a=parseRss(fixture,'오해원')[0];assert.equal(mergeCandidates([a],[a]).length,1);});
@@ -70,4 +70,25 @@ test('news search packs rotate between twice-daily runs and expand topic coverag
  assert.ok(SEARCHES.some(query=>/interview/i.test(query)));
  assert.ok(SEARCHES.some(query=>/광고|brand|campaign/i.test(query)));
  assert.ok(SEARCHES.some(query=>/방송|broadcast|radio/i.test(query)));
+});
+
+test('per-query quality metrics measure unique URLs, duplicate titles, relevance proxy and publication lag',()=>{
+ const now='2026-11-25T00:00:00Z';
+ const rows=[
+  {query:'q1',url:'https://news.test/a?utm_source=rss',title:'오해원 인터뷰 특별 기사 제목입니다',publisherArticleUrl:'https://news.test/a',publishedAt:'2026-11-24T00:00:00Z'},
+  {query:'q1',url:'https://news.test/a',title:'오해원 인터뷰 특별 기사 제목입니다',publisherArticleUrl:'',publishedAt:'2026-11-20T00:00:00Z'},
+  {query:'q2',url:'https://news.test/a',title:'Haewon interview special story',publisherArticleUrl:'https://news.test/a',publishedAt:'2026-11-23T00:00:00Z'},
+  {query:'q2',url:'https://news.test/b',title:'General unrelated article headline',publisherArticleUrl:'',publishedAt:'not-a-date'}
+ ];
+ const report=summarizeQueryPerformance(rows,['q1','q2'],now);
+ assert.equal(report[0].candidates,2);
+ assert.equal(report[0].uniqueCandidates,1);
+ assert.equal(report[0].duplicateUrlOccurrences,1);
+ assert.equal(report[0].duplicateTitleOccurrences,1);
+ assert.equal(report[0].titleKeywordMatches,2);
+ assert.equal(report[0].explicitPublisherUrls,1);
+ assert.equal(report[0].crossQueryDuplicateUrls,1);
+ assert.equal(report[0].medianPublicationLagHours,120);
+ assert.equal(report[1].crossQueryDuplicateUrls,1);
+ assert.equal(report[1].unknownDates,1);
 });
