@@ -1295,3 +1295,45 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Fresh Actions #10 / run `45541326160` on exact head `d095da244c97fcbea4e38eca624fae6112088c56`: success; 142/142 tests passed, 0 failed; archive validation passed (19 videos, 701 discovery candidates, 154 run logs, 37 source summaries, 41 links checked). No Node 20 deprecation warning in this run's log.
 - This is PR #15 branch validation only; PR #15 is still not merged and does not yet provide main-wide automatic CI.
 - PR #13 latest code branch `b926e8fab1d9338bf08d7c2568f49b40f99a1767` still has no fresh Actions run after its URL-host-context helper/test addition. PR #16 latest branch `fbac15bcd4142ce943cc23df236176a4a1ba4725` retains prior Actions #6 (143/143) and has no newer run.
+
+
+### Exact URL outcomes: 32 previously unchecked assigned thumbnails (2026-11-25)
+
+The URL column below is copied from the matching record's current `thumbnailUrl` in main `data/discovery.json`. An image payload rendering does not by itself prove article suitability; the eight rendered items still need article-context confirmation. Inspection-tool errors are not evidence that the publisher blocks ordinary readers. One 403 was not retried.
+
+| Record ID | Exact assigned thumbnail URL | Inspection result |
+|---|---|---|
+| `757ec3797d78fa2fe07b` | https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_x.png | inspection tool internal error; not classified as source-side failure |
+| `db6ba77a0559952da2df` | https://file.sportsseoul.com/news/cms/2026/10/22/news-p.v1.20261022.03dbd0cc4b894e54a8068bc0cb0a7a95_T1.jpg | inspection tool internal error; not classified as source-side failure |
+| `de974fb311b152bc6141` | https://biz.chosun.com/resizer/v2/7OA2WHY7EANUWEY4N55NIG6BMM.png?auth=c51b362771b0ad9a6eaf72177cd03a8bca2d9ed7a3bf56e3df5a35f075124a9a&width=650&height=341&smart=true | inspection tool internal error; not classified as source-side failure |
+| `d3cf5f84705cc6c0971b` | https://image.xportsnews.com/contents/images/upload/article/2025/0308/1741423157707985.jpg | image payload rendered; article-context review pending |
+| `d103d78ba96bc58b409f` | https://mydaily.co.kr/photos/2024/09/28/2024092818171020439_l.jpg | 403 Forbidden; no retry |
+| `b37a5009be7372f08cbb` | https://biz.chosun.com/resizer/v2/43WAK6KFC2DFV32XD5GOANDL5Q.jpg?auth=02dcafb5dd87372fb50c0c6643c883b16296ddbb77f24fc543cdbaf52cb755f2&width=572&height=300&smart=true | inspection tool internal error; not classified as source-side failure |
+| `2f3af607ca1ec5db5440` | https://cdn.hankooki.com/news/thumbnail/202404/153478_209428_1713845524_v150.jpg | inspection tool internal error; not classified as source-side failure |
+| `f7fabbf8ab78fa7dce01` | https://0.soompi.io/wp-content/uploads/2026/09/12165309/Haewon.jpg | inspection tool internal error; not classified as source-side failure |
+| `9dca85b63514c793581e` | https://cdn.en.sportalkorea.com/news/photo/202611/48591_93671_1795067434.jpg | inspection tool internal error; not classified as source-side failure |
+| `9ac3fa84f552e7bd2510` | https://en.koreadaily.com/wp-content/uploads/2026/11/202611092008776718_6af1ae44f255f.jpg | inspection tool internal error; not classified as source-side failure |
+| `a377796d0c2321d50f9a` | https://pbs.twimg.com/media/HVzH2PTakAABESt?format=webp&name=large | inspection tool internal error; not classified as source-side failure |
+| `44a8773963a6cb3a4c68` | https://image.koreaboo.com/2026/10/post4-2026-10-29T160301.313.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795618800&KeyName=kb&Signature=RLAqR9SxIYB0_UlyPQf7IHDhP5M= | inspection tool internal error; not classified as source-side failure |
+| `4c30e8eab8286f86c364` | https://cdn.en.sportalkorea.com/news/photo/202610/42092_81565_1793077817.jpg | inspection tool internal error; not classified as source-side failure |
+| `bfe53579db328d52b340` | https://image.koreaboo.com/2026/10/FD2870-1-3.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795618800&KeyName=kb&Signature=an_JaPu9CMJwQ3cOiRPhWAibXcc= | inspection tool internal error; not classified as source-side failure |
+| `f09df33b20baa8f03b54` | https://biz.chosun.com/resizer/v2/G5RGKYRWMY4TIMJWME2DEYRWGQ.jpg?auth=ae910996af10194b83fc642a51995ea7b3a4f629e15fa8e0816dbca146ba9b20&width=650&height=341&smart=true | image payload rendered; article-context review pending |
+| `eb1509691290e61b7637` | https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg | inspection tool internal error; not classified as source-side failure |
+| `2ef058c52f217413e90c` | https://biz.chosun.com/resizer/v2/GI3TOOLEHAYTSNRQHBQWMMBXMQ.jpg?auth=9a62a482a603424be064d37d94b6ee6c45f5ba11734bcd6ef76069ea40d9476e&width=572&height=300&smart=true | inspection tool internal error; not classified as source-side failure |
+| `01499265d4164c3f45b9` | https://pimg.mk.co.kr/news/cms/202510/17/news-p.v1.20251017.8696bb6e80fc47769e37c1b11db59f48_R.jpg | inspection tool internal error; not classified as source-side failure |
+| `9c336218ce8f6660018a` | https://pimg.mk.co.kr/news/cms/202510/10/news-p.v1.20251010.85c8fe76271847a7ad97e50026b3cd85_R.jpg | inspection tool internal error; not classified as source-side failure |
+| `aa1d73461e1a8ba8156f` | https://img.sbs.co.kr/newsnet/etv/upload/2025/06/27/30000999810_16v9.jpg | image payload rendered; article-context review pending |
+| `ce4468d1f0e09b93135d` | https://s.yimg.com/lo/mysterio/api/1153401bb44443b3aa8ffc6a0dc8ee31c0152c6804c48a762b8406ce9f0bb178/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fca%2Febc.net.tw%2F99a768be2b678a27ad33ffa8710a22fd | inspection tool internal error; not classified as source-side failure |
+| `96579cf215e0e82b5ccf` | https://biz.chosun.com/resizer/v2/QRPEGR2B3RCBMKHQGM4YCBFJ6E.png?auth=bd8b5aee3461199876e3e35f98eb4a0d6a66c91d74cbe8ea289d4102be344010&width=650&height=341&smart=true | image payload rendered; article-context review pending |
+| `fb392e4ba8879b947e36` | https://biz.chosun.com/resizer/v2/FZHLQVUBG73H4PSF4BVOGGBU44.png?auth=a91266c6ed349a809c3f7441c78247bbccd11450de9ee5e78104b01a4288b3e2&width=650&height=341&smart=true | image payload rendered; article-context review pending |
+| `288ac9019343bb06260d` | https://0.soompi.io/wp-content/uploads/2025/02/20200842/Haewon.jpg | image payload rendered; article-context review pending |
+| `772e453cc3cd4b9b3a7e` | https://www.nme.com/wp-content/uploads/2024/12/nmixx-haewon-sabrina-carpenter-cover-191224.jpg | image payload rendered; article-context review pending |
+| `b9889446cfd423ab2196` | https://static.toiimg.com/thumb/msid-111332937,width-1070,height-580,imgsize-27288,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg | inspection tool internal error; not classified as source-side failure |
+| `01d43afc81bf8da93d4a` | https://img.sbs.co.kr/newsnet/etv/upload/2023/07/11/30000860581_16v9.jpg | inspection tool internal error; not classified as source-side failure |
+| `da2ca32f9a2115bbb975` | https://7lgigmttrjuyfehsudec15072.edge.naverncp.com/news/photo/202611/1020506_2043365_4529.png | inspection tool internal error; not classified as source-side failure |
+| `0ffa4f472cdb2ae24b00` | https://file.sportsseoul.com/news/cms/2026/11/18/news-p.v1.20261118.3416e0f121004526bd98cc7fdaeecd97_T1.png | inspection tool internal error; not classified as source-side failure |
+| `77db473416096271082d` | https://image.starnewskorea.com/cdn-cgi/image/f=auto,w=1200,h=670,fit=cover,q=high,sharpen=2/21/2026/10/2026103014300533060_1.jpg | inspection tool internal error; not classified as source-side failure |
+| `66b75c4e48e22de59d0e` | https://img.sbs.co.kr/newsnet/etv/upload/2026/01/21/30001039558_16v9.jpg | image payload rendered; article-context review pending |
+| `755bfff53f3d7af07524` | https://pimg.mk.co.kr/news/cms/202406/28/news-p.v1.20240628.0f4b9a2cb5cd4f2eb17ecb679a3241b9_R.jpg | inspection tool internal error; not classified as source-side failure |
+
+Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-tool internal errors (24 not visually available in this inspection). No new suitability labels or thumbnail assignments were persisted.
