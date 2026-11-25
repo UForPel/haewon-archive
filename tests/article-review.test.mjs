@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { getVerifiedHaewonArticles, summarizeArticleReviews, validateArticleReviewExport, buildLegacyThumbnailAudit } from '../js/article-review.mjs';
+import { getVerifiedHaewonArticles, summarizeArticleReviews, validateArticleReviewExport, buildLegacyThumbnailAudit, auditVerifiedPublisherArticles } from '../js/article-review.mjs';
 
 const base = { id: 'a', title: '오해원 인터뷰', url: 'https://news.test/a', publisherArticleUrl: 'https://news.test/a', publishedAt: '2026-11-20T00:00:00Z', sourceName: '뉴스', thumbnailUrl: 'https://img.test/a.jpg' };
 test('review scope contains only explicit publisher HTTPS Haewon articles and excludes videos', () => {
@@ -24,4 +24,15 @@ test('legacy thumbnail audit measures alternatives without deleting or pooling l
   const report=buildLegacyThumbnailAudit(rows,legacy);
   assert.equal(report.assignments,2); assert.equal(report.recordsWithAlternativeCandidates,1); assert.equal(report.recordsWithPublisherArticleUrl,2); assert.equal(report.recordsWithSourceSiteUrl,0);
   assert.equal(report.distinctAlternativeUrls,1); assert.equal(report.records.length,2);
+});
+
+test('publisher accessibility audit checks only verified direct HTTPS article URLs once with HEAD', async () => {
+  const calls=[];
+  const rows=await auditVerifiedPublisherArticles([
+    base,
+    {...base,id:'wrapper',url:'https://news.google.com/rss/articles/opaque',publisherArticleUrl:''},
+    {...base,id:'bad-protocol',publisherArticleUrl:'http://news.test/a'}
+  ],{fetchImpl:async (url,options)=>{calls.push({url,method:options.method,redirect:options.redirect});return {status:403,url};}});
+  assert.equal(rows.checked,1); assert.equal(rows.counts.blocked,1); assert.equal(rows.bypassAttempted,false);
+  assert.deepEqual(calls,[{url:base.publisherArticleUrl,method:'HEAD',redirect:'follow'}]);
 });
