@@ -1157,3 +1157,5 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Refinement: added a fifth independent review dimension for original publisher-page accessibility (accessible, blocked, paywall, not-found, uncertain), rather than assuming that a recorded HTTPS URL is accessible.
 
 - Added a direct accessibility audit for all verified Haewon publisher URLs: one HEAD request per explicit HTTPS publisherArticleUrl, ordinary redirects only, no retry or fallback request. Results distinguish accessible, blocked, paywall, not-found, and uncertain. Implemented in PR #13; no live result is claimed before CI and the next quality run.
+
+- CI follow-up: PR #15 Actions run #1 completed successfully with 142/142 tests and data validation passed. This run exercised the new workflow on PR #15's base-main branch; it did not yet execute PR #13's newly added tests. PR #13 verification remains pending.
