@@ -94,3 +94,9 @@ Gemini does not have permission to alter these rules or the validators enforcing
 
 - Pull-request verification is read-only: it may run unit tests and validate committed archive data. It must not collect external feeds, mutate archive JSON, commit data, access Pages deployment permissions, or use secrets.
 - The proposed workflow grants only `contents: read`, disables persisted checkout credentials, and has no collection or deployment steps.
+
+
+
+### PR #30 CI evidence — 2026-11-25
+- The proposed read-only workflow was exercised by its own PR #30 event run #45570038033. Unit tests and archive-data validation passed.
+- Its permissions remain `contents: read`; it does not run collection, commit data, or deploy Pages. It is not active on main until approved and merged.
