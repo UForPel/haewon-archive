@@ -1500,12 +1500,12 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 ### PR #13 syntax defect
 - Inspected latest branch source and found a literal backslash-n embedded between JavaScript statements in `js/article-quality-review-ui.mjs`.
 - Corrected the sequence and committed `a2f15dbd7942727d55fa43b1110b79c6fd70dd2f`.
-- Read-only Actions run #45550626122 passed `npm test` and `npm run validate` on the code-fix-containing commit. Temporary workflow was deleted afterward. PR remains open.
+- Read-only Actions run #45550626122 passed **154/154 tests** and `npm run validate` on the code-fix-containing commit. Temporary workflow was deleted afterward. PR remains open.
 
 ### PR #20 date fallback defect
 - Reviewed `sortDiscoveryItems`: invalid non-empty `publishedAt` prevented fallback to valid `discoveredAt`.
 - Added `getDiscoveryTimestamp` to try both values independently and a regression test for invalid/valid/missing date combinations.
-- Read-only Actions run #45551065801 passed `npm test` and `npm run validate`; temporary workflow removed. PR remains open.
+- Read-only Actions run #45551065801 passed **146/146 tests** and `npm run validate`; temporary workflow removed. PR remains open.
 
 ### PR #24 Cloudflare/GitHub App dry-run
 - Added `cloudflare/dispatch-worker.mjs`, `cloudflare/wrangler.toml`, `.github/workflows/cloudflare-dispatch-dry-run.yml`, and `tests/cloudflare-dispatch-worker.test.mjs`.
@@ -1513,7 +1513,7 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 - App JWT uses WebCrypto RS256 and supports PKCS#8/PKCS#1 RSA PEM. Installation-token request explicitly restricts token to repository `haewon-archive` and permission `actions: write`.
 - Target workflow accepts only `dry-run`, validates timestamp/cron metadata, and reports no data writes, collection, or deployment.
 - Required Cloudflare secrets: `GITHUB_APP_ID`, `GITHUB_INSTALLATION_ID`, `GITHUB_APP_PRIVATE_KEY`. User must create/install the GitHub App only on this repository and grant Actions: write. No PAT, broad token, key, or secret was requested or configured.
-- Read-only Actions run #45550865613 passed `npm test` and `npm run validate` on commit `ee957ea156907821cd156b1c18f669675d482937`. Temporary workflows removed. No Cloudflare deployment or live GitHub App dispatch attempted.
+- Read-only Actions run #45550865613 passed **147/147 tests** and `npm run validate` on commit `ee957ea156907821cd156b1c18f669675d482937`. Temporary workflows removed. No Cloudflare deployment or live GitHub App dispatch attempted.
 
 ### Platform policy/limits recheck
 - Cloudflare Workers Free: 100,000 requests/day; 10 ms CPU per Cron invocation; 5 Cron triggers/account. The Worker uses one trigger twice daily. Network wait does not count toward CPU time, but deployed runtime crypto cost still needs a real Cloudflare test.
