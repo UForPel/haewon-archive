@@ -1143,3 +1143,9 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Fixed the Bing parser to apply the same predicate. The original `url`, Bing discovery URL, candidate source and host provenance remain available; only the publisher-article field is blank for social URLs.
 - Added an end-to-end regression test using the observed X status URL. It checks parsing, stale merge cleanup, and that thumbnail enrichment performs zero fetches and assigns no image.
 - No production data was changed and no legacy thumbnail assignment was deleted. PR branch test/validation and Actions confirmation are pending.
+ 
+### Verification and cleanup
+- Added a temporary branch-scoped, read-only Actions workflow to run `npm test` and `npm run validate` against the updated PR #27 branch. Run [#45616074455](https://github.com/UForPel/haewon-archive/actions/runs/45616074455) completed successfully: **148 tests, 148 passed, 0 failed**.
+- Validation confirmed 707 discovery candidates, 19 schema-valid video records, 0 photo records, 39 source summaries and 41 link checks.
+- The run event was `push`, not `pull_request`; it is a branch snapshot check and must not be represented as a PR event check. Removed the temporary workflow after the run. No temporary workflow remains in the final branch.
+- Final PR #27 head after cleanup: `5c061efacd37dccaa3f7b035847e84054ac9d83b`. No PR was merged and main data was not changed.

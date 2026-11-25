@@ -183,3 +183,8 @@ For each substantial update include: changed paths; planned vs implemented items
 - Verify that both Google RSS and Bing RSS ingestion use the same centralized publisher-article URL predicate. A Bing RSS item may explicitly disclose an X/Twitter status URL; explicit disclosure alone does not make it a publisher article.
 - Preserve social discovery records and source provenance, but keep `publisherArticleUrl` empty and do not fetch social pages for publisher article metadata thumbnails.
 - Treat the newly observed X status / `pbs.twimg.com` assignment as a confirmed regression in main until a corrected production collection proves otherwise. PR #27's fix is not active on main before approval and merge.
+ 
+### Bing RSS social URL regression verification — 2026-11-25
+- PR #27 now gates Bing RSS `publisherArticleUrl` assignment through the same shared predicate used by Google RSS. The exact observed X status URL is covered by an end-to-end test for candidate retention, stale merge cleanup and zero metadata fetches.
+- Branch snapshot Actions run #45616074455 passed 148/148 tests and `npm run validate`. It was a `push` event, not a `pull_request` check; the temporary workflow was removed afterward.
+- Do not claim main is fixed or its data metrics corrected until an approved merge and subsequent successful production collection.

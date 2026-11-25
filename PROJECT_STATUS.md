@@ -578,3 +578,8 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Root cause found in PR #27: Google RSS ingestion used the shared publisher-URL predicate, but `parseBingNewsRss()` assigned every explicitly disclosed Bing destination to `publisherArticleUrl` without applying that predicate.
 - Corrected Bing ingestion to preserve the original social candidate and provenance while leaving `publisherArticleUrl` empty for X/Twitter URLs. Added an end-to-end Bing RSS regression test covering merge cleanup and zero article-metadata fetches.
 - This is a PR-branch correction only until approved and merged. Fresh Actions verification is pending; main data has not been rewritten.
+ 
+### Bing RSS social URL fix — verification result
+- Temporary read-only push snapshot run [#45616074455](https://github.com/UForPel/haewon-archive/actions/runs/45616074455) completed successfully on branch SHA `aaeb63911a5f842c7c0331e7a7b141464355bf30`: **148/148 tests passed**, followed by successful archive validation (707 discovery candidates, 19 video records, 0 photo records; 39 source summaries and 41 link checks).
+- The run was a `push` snapshot, not a `pull_request` event. The temporary workflow was removed immediately after verification; final PR branch head is `5c061efacd37dccaa3f7b035847e84054ac9d83b`.
+- The corrected parser and regression test are present in PR #27. Main remains unchanged; a production collection after an approved merge is still required to verify persisted metric changes.

@@ -356,3 +356,10 @@
 - [x] Apply the shared publisher-article URL predicate to Bing RSS destinations while retaining discovery candidates and provenance.
 - [x] Add an end-to-end regression test for Bing parsing, stale-record cleanup and zero social metadata fetches.
 - [ ] Run branch tests and archive validation; verify the corrected counts on a subsequent production collection after approval.
+ 
+### Verification update — Bing RSS social URL regression (2026-11-25)
+- [x] Apply shared publisher URL validation to Bing RSS article destinations.
+- [x] Add regression coverage for the observed X status URL, merge cleanup and blocked metadata enrichment.
+- [x] Verify PR branch with a read-only Actions push snapshot: 148/148 tests and archive validation passed.
+- [x] Remove the temporary verification workflow after the run.
+- [ ] After user-approved merge, verify the next production collection excludes X/Twitter from publisher-article metrics and thumbnail enrichment.

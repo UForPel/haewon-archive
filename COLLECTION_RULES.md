@@ -98,3 +98,8 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - An explicit HTTPS destination in Bing RSS is not automatically a publisher article. Apply the shared `isExplicitPublisherArticleUrl` predicate before setting `publisherArticleUrl`, exactly as for Google RSS.
 - X/Twitter profile and status URLs remain discovery candidates with their original URLs and Bing provenance, but must not enter publisher-article metrics or publisher-page thumbnail enrichment.
 - Never infer that a social-hosted image is an article thumbnail. Keep social content separate from publisher-article image provenance.
+ 
+### Bing RSS social URL regression verification
+- The Bing parser now applies `isExplicitPublisherArticleUrl` before populating `publisherArticleUrl`. The observed X status URL remains a discovery candidate but cannot trigger article metadata enrichment.
+- The regression test and archive validator passed in read-only push snapshot run #45616074455 (148/148 tests). This is not a production collection or a PR-event check.
+- After an approved merge, verify this behavior with a new production collection before treating persisted quality metrics as corrected.

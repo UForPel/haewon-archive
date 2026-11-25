@@ -211,3 +211,7 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The current main dataset demonstrated that Bing RSS can explicitly disclose an X status URL which the parser was incorrectly treating as a publisher article. Its X-hosted `og:image` was then assigned as an article thumbnail.
 - PR #27 now applies the shared publisher-URL predicate to Bing ingestion as well as Google RSS, preserving the social candidate while preventing publisher metadata enrichment. A focused end-to-end regression test is being added.
 - This correction remains on the unmerged PR branch. Do not claim production data or Pages has changed; no PR merge is authorized.
+ 
+### Verification update — Bing RSS social URL regression
+- PR #27's Bing RSS fix passed a branch-scoped read-only snapshot [run #45616074455](https://github.com/UForPel/haewon-archive/actions/runs/45616074455): 148/148 tests and `npm run validate` succeeded.
+- This was a `push` event, not a PR check. The temporary workflow was removed after the run. The final branch head is `5c061efacd37dccaa3f7b035847e84054ac9d83b`; main is not changed and no PR was merged.
