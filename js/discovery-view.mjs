@@ -195,6 +195,7 @@ if(list&&count){
    card.append(details);list.append(card);
   });
   renderPagination(pageCount);
+  renderVideoDiscoveryCandidates();
   updateReviewSummary();
   if(!items.length){const empty=document.createElement('p');empty.className='empty';empty.textContent=allItems.length?'검색 결과가 없습니다. 다른 검색어를 입력해 보세요.':'자동 발견 후보가 아직 없습니다.';list.append(empty);}
  };
