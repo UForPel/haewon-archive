@@ -72,12 +72,13 @@ test('X profile URLs remain discovery candidates but are not verified publisher 
  assert.equal(hasExplicitPublisherArticleUrl(item),false);
 });
 
-test('explicit X status URLs remain eligible publisher article links',()=>{
+test('X status URLs remain candidates but are not verified publisher articles',()=>{
  const statusUrl='https://x.com/nmixxiee/status/2112842130163114298';
  const xml='<rss><channel><item><title>NMIXX Haewon public post</title><link>'+statusUrl+'</link><description>Public post</description></item></channel></rss>';
  const [item]=parseRss(xml,'Haewon');
- assert.equal(item.publisherArticleUrl,statusUrl);
- assert.equal(hasExplicitPublisherArticleUrl(item),true);
+ assert.equal(item.url,statusUrl);
+ assert.equal(item.publisherArticleUrl,'');
+ assert.equal(hasExplicitPublisherArticleUrl(item),false);
 });
 
 test('merging an existing X profile candidate clears its invalid publisher article URL',()=>{
@@ -88,6 +89,8 @@ test('merging an existing X profile candidate clears its invalid publisher artic
  );
  assert.equal(merged.url,profileUrl);
  assert.equal(merged.publisherArticleUrl,'');
+ const [existingOnly]=mergeCandidates([{id:'profile',title:'NMIXX HAEWON profile',url:profileUrl,publisherArticleUrl:profileUrl}],[]);
+ assert.equal(existingOnly.publisherArticleUrl,'');
 });
 
 test('thumbnail enrichment never fetches an X profile URL as an article',async()=>{
