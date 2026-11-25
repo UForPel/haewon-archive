@@ -80,3 +80,12 @@ test('date mode keeps the newest publication as the representative of a duplicat
  assert.equal(grouped[0].sourceName,'Newer source');
  assert.equal(grouped[0].publishedAt,'2026-11-24');
 });
+
+test('date sorting falls back to a valid discovery date when publishedAt is invalid',()=>{
+ const rows=[
+  {title:'older fallback',publishedAt:'not-a-date',discoveredAt:'2026-11-01T10:00:00Z'},
+  {title:'newer fallback',publishedAt:'invalid',discoveredAt:'2026-11-24T10:00:00Z'},
+  {title:'missing both',publishedAt:'invalid',discoveredAt:'also-invalid'}
+ ];
+ assert.deepEqual(sortDiscoveryItems(rows,'date').map(item=>item.title),['newer fallback','older fallback','missing both']);
+});
