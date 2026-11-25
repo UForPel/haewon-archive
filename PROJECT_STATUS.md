@@ -573,3 +573,11 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Added regression tests for the distinct error code, seven-day retry window, article retention and no HEAD/method fallback. PR CI has not yet run; tests and validation remain pending until the read-only PR workflow reports results.
 - Current quality limits remain: 321 thumbnail assignments include 273 unverified legacy uses of one shared URL; 49 distinct URLs across 707 candidates; 386 have no thumbnail. Human thumbnail labels remain zero, so visual relevance precision is unmeasured.
 - PRs #13/#14/#15/#16/#20/#22/#23/#24 remain open and unmerged; no merge was performed. Browser/mobile visual QA remains unverified.
+
+## PR #25 verification boundary — 2026-11-25
+- PR #25 is open and mergeable; it is not merged. Head: `294ce3f7ad0a47e7c30e1805eff82e2d01a6c7d4`.
+- `fetch_commit_workflow_runs` returned no PR-triggered runs and the commit combined-status list was empty. This is not a passing test result.
+- Root cause of the missing automatic check: main contains `.github/workflows/collect-and-deploy.yml` with `push`, `schedule`, and `workflow_dispatch`, but no `pull_request` trigger. `.github/workflows/pull-request-verification.yml` does not exist on main.
+- PR #15 proposes that exact read-only workflow (`contents: read`, unit tests and archive validation), but PR #15 is still open/unmerged. Do not merge it or PR #25 without user approval.
+- Main's production Actions #45556461352 did pass 142/142 tests and completed the Pages deployment; that validates the main snapshot, not PR #25's new code.
+- Direct live-page/browser/mobile rendering was not verified in this session. The deployment job and Pages artifact upload succeeded.
