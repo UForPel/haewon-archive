@@ -95,3 +95,12 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Do not decode Google News wrapper tokens or infer an article URL from a publisher homepage. Only accept a publisher article URL explicitly disclosed by a public feed field already supported by the collector.
 - Keep Google RSS and Bing RSS image-signal diagnostics separate so an absence of Google image tags does not hide image signals in another source.
 - Non-image enclosure media (audio/video) must never be selected as article thumbnails.
+
+## RSS source-specific diagnostics — observed feed limits
+- Google News RSS and Bing News RSS must be measured independently. Google RSS `source url` is source-site metadata and must not be promoted to an individual publisher article URL.
+- A live sample with 57 Google RSS items had 57 source URL values, 0 explicit publisher article URLs and 0 image signals. A live sample with 36 Bing RSS items had 36 explicit publisher article URLs but 0 image signals.
+- The RSS parser may only produce image candidates from explicit item metadata: Media RSS `media:thumbnail`; image MIME/medium `media:content`; image MIME `enclosure`; and image tags in public description/content:encoded fields.
+- Audio/video enclosures are not thumbnails. Raw enclosure counts and image enclosure counts are distinct metrics; audio-only entries must not inflate image-signal coverage.
+- Resolve relative image paths against the explicit HTTPS article URL. Do not resolve them against the Bing wrapper URL or a publisher homepage.
+- A zero-image-signal result is a feed limitation, not permission to crawl hidden endpoints, decode Google News wrapper tokens, infer image URLs, or bypass 403/405 responses.
+- Preserve article candidates and links when no image is available. Keep 273 shared legacy thumbnail assignments untouched.

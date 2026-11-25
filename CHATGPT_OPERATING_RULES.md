@@ -180,3 +180,12 @@ For each substantial update include: changed paths; planned vs implemented items
 - After PR #28, compare Google and Bing independently: item count, explicit article URL count, image-signal item count, candidate count, candidate source, assigned count and failure class. Do not aggregate the two feeds into a misleading single image rate.
 - Research source notes: RSS Advisory Board Media RSS 1.5.1 describes `media:thumbnail` as representative media imagery; RSS 2.0.11 defines `enclosure` with URL and MIME type. Both are stable format standards; they do not guarantee a feed includes images.
 - Main PR CI remains unavailable until PR #15 is approved and merged. Temporary branch snapshot runs are not equivalent to PR checks.
+
+## 2026-11-25 — Live RSS result and next engineering decision
+- PR #28 now parses Bing RSS image metadata and tracks Bing/Google signals separately. Snapshot run #45565548309 passed 145/145 tests, public collection, quality generation and validation.
+- Live sample: Google 57/57 source URLs, 0 article URLs, 0 image signals; Bing 36/36 explicit article URLs, 0 image signals. 93 fetched, 85 unique, 8 duplicates collapsed, 2 additions; total candidate count remained 707 after the temporary quality pass.
+- No RSS thumbnail candidates were found. No enrichment requests were made because all eligible article records were within retry backoff. This is not a failure and must not be worked around.
+- Next meaningful image work should prioritize source-level coverage and permitted article metadata only when the URL is already explicit in public feed metadata. Do not infer URLs from `source url` or decode opaque Google wrappers.
+- PR #25/#26/#27 snapshot verification runs passed (144/144, 142/142, 147/147 respectively); PR #28 passed 145/145. These are push-triggered snapshot runs, not PR-triggered checks. Main still lacks the PR workflow because PR #15 remains open and unmerged.
+- The first PR #28 test run failed one assertion on a root-relative image URL; the test fixture was corrected to use directory-relative URLs and rerun successfully. Preserve this failure/fix in the audit log.
+- No merge, main data commit, or new Pages deploy occurred in the PR #28 snapshot work. Latest main production run #587 remains the separate verified successful deployment. Mobile-browser rendering and human thumbnail relevance review remain unverified.

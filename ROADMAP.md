@@ -353,3 +353,15 @@
 - [ ] After approved merge, compare Bing RSS image signal/candidate/assignment counts against the current baseline (currently no Bing image diagnostics persisted).
 - [ ] After PR #27 merge and next data refresh, verify social URLs are excluded from publisher article metrics and no new X metadata thumbnails are assigned.
 - [ ] Continue mobile browser QA and human relevance review; current review coverage is 0.
+
+## 2026-11-25 — PR #28 verified against live RSS
+- [x] Add Bing RSS image candidate extraction using the existing HTTPS-only RSS image candidate normalizer.
+- [x] Keep image candidates and diagnostics source-specific for Bing and Google RSS.
+- [x] Exclude audio-only enclosures from image signal counts and candidate selection.
+- [x] Fix relative URL test fixture after the first Actions run correctly exposed URL resolution semantics.
+- [x] Pass 145/145 tests and archive validation on snapshot run #45565456260.
+- [x] Pass live RSS collection, quality generation and validation on snapshot run #45565548309.
+- [x] Confirm Google 57 items / 0 article URLs / 0 image signals; Bing 36 items / 36 article URLs / 0 image signals.
+- [ ] Wait for review and user approval; do not merge.
+- [ ] After a future source feed actually publishes image metadata, compare candidate and assignment counts before claiming image coverage improvement.
+- [ ] After PR #27 approval/merge and a new main data run, verify X/Twitter URLs are excluded from publisher metrics and metadata thumbnail fetches.

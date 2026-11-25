@@ -208,3 +208,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The 273 shared legacy thumbnail assignments remain preserved; image candidate discovery does not authorize deleting or relabeling legacy assignments.
 - Do not count branch-push snapshot verification as a PR-triggered check. The main pull_request workflow remains absent until PR #15 is approved and merged.
 - The required ChatGPT continuation control **🔄 연구 기반 재귀개선 계속하기** remains mandatory at the end of substantial responses.
+
+## 2026-11-25 — PR #28 live RSS verification boundary
+- PR #28 snapshot run #45565456260 passed 145/145 tests and validation. A first attempt failed one fixture assertion because a leading-slash URL is root-relative; the fixture was corrected and the rerun passed.
+- Live RSS snapshot run #45565548309 passed tests, collection, quality and validation. It did not commit data or deploy Pages.
+- Do not describe the current Bing feed as image-bearing: 36/36 items had explicit article URLs, but zero media:thumbnail, image media:content, image enclosure or description image signals were present.
+- The current Google RSS sample likewise had 57 items, 0 publisher article URLs and 0 image signals.
+- Keep the mandatory end-of-response conversation action **🔄 연구 기반 재귀개선 계속하기**.
