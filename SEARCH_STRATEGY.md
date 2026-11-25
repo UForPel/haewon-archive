@@ -162,3 +162,10 @@ Google News RSS wrapper links whose titles indicate YouTube/fancam are condition
 - Save channel ID and channel title from the API. Only the known official channel ID is automatically marked official; other results remain unverified pending human origin review.
 - This collector requires optional `YOUTUBE_API_KEY` and has not made a live API request. No secret means no change to the existing official Atom collector.
 - Keep editorial RSS and YouTube video search separate; keep photos as a distinct source-link/attribution pipeline.
+
+## 2026-11-25 query-rotation and quality measurement
+- PR #22 defines six editorial packs with six queries each (36 distinct phrases). One pack runs in each KST morning/evening slot, yielding 12 distinct query phrases/day and 24 bounded RSS requests/day (Google News + Bing per phrase).
+- This is a 50% request-budget increase from 16 to 24 requests/day, not a proven 50% increase in relevant coverage.
+- Measure unique article IDs and normalized titles/day, duplicate rate, direct Haewon relevance yield, publisher/source diversity, and median/p90 publication-age lag. Compare before/after over equivalent weekdays and query slots.
+- Keep video/fancam searches separate from editorial RSS. Google News wrapper URLs are unresolved candidates only; do not decode or promote them to verified videos.
+- PR #20 chronological mode defaults to valid publication date descending, then discoveredAt fallback; relevance sort remains an explicit alternative. Invalid publication dates now fall back to a valid discovery timestamp.
