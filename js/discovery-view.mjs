@@ -1,6 +1,17 @@
-import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText } from './discovery-kind.mjs';
+import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText, filterUnresolvedVideoCandidates } from './discovery-kind.mjs';
 import { createThumbnailReviewKey, summarizeThumbnailReviews, validateThumbnailReviewExport, mergeThumbnailReviewLabels, getThumbnailReviewCandidates, findNextUnreviewedThumbnail, groupRepeatedThumbnailAssignments, summarizeRepeatedThumbnailGroup, findNextUnreviewedInRepeatedGroup } from './thumbnail-review.mjs';
 
+export function sortDiscoveryItems(items=[],mode='date') {
+ return items.map((item,index)=>({item,index})).sort((a,b)=>{
+  const aDate=Date.parse(a.item.publishedAt||a.item.discoveredAt||''),bDate=Date.parse(b.item.publishedAt||b.item.discoveredAt||'');
+  const aValid=Number.isFinite(aDate),bValid=Number.isFinite(bDate);
+  if(mode==='relevance'){const score=Number(b.item.relevanceScore||0)-Number(a.item.relevanceScore||0);if(score)return score;}
+  if(aValid!==bValid)return aValid?-1:1;
+  if(aValid&&aDate!==bDate)return bDate-aDate;
+  if(mode!=='relevance'){const score=Number(b.item.relevanceScore||0)-Number(a.item.relevanceScore||0);if(score)return score;}
+  return a.index-b.index;
+ }).map(entry=>entry.item);
+}
 export function filterDiscoveryItems(items,query='') {
  const q=String(query||'').trim().toLowerCase();
  if(!q)return items;
@@ -109,7 +120,7 @@ if(list&&count){
  const categoryLabels={all:'전체 분류',news:'일반 뉴스',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
  const getVisibleItems=()=>{
   const q=search?.value||'';
-  return groupDiscoveryDuplicates(filterDiscoveryRelevance(filterDiscoveryItems(filterArticleCandidates(allItems),q),selectedRelevance)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
+  return sortDiscoveryItems(groupDiscoveryDuplicates(filterDiscoveryRelevance(filterDiscoveryItems(filterArticleCandidates(allItems),q),selectedRelevance)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)),selectedSort);
  };
  const renderCategories=()=>{
   if(!categoryBar)return;
@@ -130,6 +141,22 @@ if(list&&count){
    button.addEventListener('click',()=>{selectedRelevance=key;page=1;renderRelevanceFilters();render();});
    relevanceBar.append(button);
   });
+ };
+ const renderVideoDiscoveryCandidates=()=>{
+  if(!videoDiscoveryList)return;
+  const q=search?.value||'';
+  const candidates=sortDiscoveryItems(groupDiscoveryDuplicates(filterDiscoveryItems(filterUnresolvedVideoCandidates(allItems),q)),'date');
+  if(videoDiscoveryCount)videoDiscoveryCount.textContent=candidates.length+'개';
+  videoDiscoveryList.replaceChildren();
+  candidates.slice(0,12).forEach(item=>{
+   const row=document.createElement('article');row.className='video-discovery-candidate';
+   const title=document.createElement('a');title.href=item.url;title.target='_blank';title.rel='noopener noreferrer';title.textContent=cleanDiscoveryText(item.title)||'제목 미상';
+   const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):' · 날짜 미확인')+' · 원본 YouTube 주소 미확인';
+   const note=document.createElement('p');note.className='photo-description';note.textContent='발견 후보 링크만 확인된 상태입니다. 원본 영상 주소가 명시적으로 확인되기 전에는 영상 아카이브에 등록하지 않습니다.';
+   row.append(title,meta,note);videoDiscoveryList.append(row);
+  });
+  if(!candidates.length){const empty=document.createElement('p');empty.className='photo-meta';empty.textContent='별도 확인이 필요한 영상 후보가 없습니다.';videoDiscoveryList.append(empty);}
+  if(candidates.length>12){const more=document.createElement('p');more.className='photo-meta';more.textContent='최근 12개 표시 · 전체 '+candidates.length+'개 후보';videoDiscoveryList.append(more);}
  };
  const render=()=>{
   const items=getVisibleItems();
