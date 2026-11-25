@@ -95,3 +95,16 @@ test('quality report measures Haewon, NMIXX and video candidate separation indep
   defaultScope:'verified-haewon-title-match'
  });
 });
+
+
+test('social profile and post URLs are excluded from publisher article coverage and verified counts',()=>{
+ const report=summarizeCollection({discovery:[
+  {id:'profile',title:'Haewon profile',sourceName:'X',url:'https://x.com/NMlXX_Haewon',publisherArticleUrl:'https://x.com/NMlXX_Haewon',publisherHost:'x.com',thumbnailMetaFetch:{status:'failed',resolvedArticleHost:'x.com'}},
+  {id:'post',title:'Haewon public post',sourceName:'X',url:'https://x.com/nmixxiee/status/2112842130163114298',publisherArticleUrl:'https://x.com/nmixxiee/status/2112842130163114298',publisherHost:'x.com'}
+ ]});
+ assert.equal(report.articleUrlProvenance.itemsWithPublisherArticleUrl,0);
+ assert.equal(report.articleUrlProvenance.publisherHosts['x.com'],undefined);
+ assert.equal(report.sources.find(row=>row.source==='X').publisherArticleUrlCoverage,0);
+ assert.equal(report.discoveryRelevance.verifiedPublisherArticles,0);
+ assert.equal(report.discoveryRelevance.verifiedHaewonArticles,0);
+});
