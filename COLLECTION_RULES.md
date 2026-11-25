@@ -87,3 +87,9 @@ Before any automated write:
 10. If any gate fails, write no candidate records; emit a sanitized failure summary.
 
 Gemini does not have permission to alter these rules or the validators enforcing them.
+
+## HTTP method rejection handling — 2026-11-25
+- Persist HTTP 405 as `method-not-allowed`, not `network-error`.
+- Apply the existing seven-day backoff for this explicit non-transient response; do not retry daily as though it were a timeout.
+- Do not try HEAD, POST, alternate endpoints, proxy routes, browser impersonation, or any other method/path as a workaround. Respect the publisher's response and keep the candidate's original article URL and failure provenance.
+- A metadata-fetch failure never deletes the article candidate or its original HTTPS link. It only leaves the thumbnail unavailable and records the failure state.
