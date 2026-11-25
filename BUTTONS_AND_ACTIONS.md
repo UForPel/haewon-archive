@@ -212,3 +212,7 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 ### PR #30 verification status — 2026-11-25
 - PR #30's actual `pull_request` event run #45570038033 passed checkout, Node setup, unit tests and data validation.
 - The workflow remains a proposed change until user approval and merge; do not describe it as an active main-branch gate yet.
+
+
+
+- Final PR #30 head also passed its own `pull_request` run #45570147672 after the documentation updates. The proposal is still not active on main until approved and merged.
