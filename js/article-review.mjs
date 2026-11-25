@@ -5,7 +5,8 @@ export const ARTICLE_REVIEW_DIMENSIONS = {
   originalAccess: ['accessible', 'blocked', 'paywall', 'not-found', 'uncertain'],
   dateAccuracy: ['accurate', 'inaccurate', 'missing', 'uncertain'],
   sourceAccuracy: ['accurate', 'inaccurate', 'uncertain'],
-  categoryAccuracy: ['correct', 'incorrect', 'uncertain']
+  categoryAccuracy: ['correct', 'incorrect', 'uncertain'],
+  thumbnailAccuracy: ['suitable', 'unsuitable', 'not-present', 'uncertain']
 };
 const valid = (dimension, value) => ARTICLE_REVIEW_DIMENSIONS[dimension]?.includes(value);
 export function getVerifiedHaewonArticles(items = []) {
@@ -13,37 +14,6 @@ export function getVerifiedHaewonArticles(items = []) {
     hasExplicitPublisherArticleUrl(item) && classifyDiscoveryRelevance(item) === 'haewon'
   );
 }
-export async function auditVerifiedPublisherArticles(items = [], { fetchImpl = fetch, timeoutMs = 3500, concurrency = 3 } = {}) {
-  const articles = getVerifiedHaewonArticles(items);
-  const results = new Array(articles.length);
-  let cursor = 0;
-  async function worker() {
-    while (true) {
-      const index = cursor++;
-      if (index >= articles.length) return;
-      const item = articles[index];
-      const url = item.publisherArticleUrl;
-      try {
-        const response = await fetchImpl(url, { method: 'HEAD', redirect: 'follow', signal: AbortSignal.timeout(timeoutMs) });
-        let finalHost = '';
-        try { const finalUrl = new URL(response.url || url); if (finalUrl.protocol === 'https:') finalHost = finalUrl.hostname; } catch {}
-        const status = Number(response.status) || null;
-        const state = status >= 200 && status < 400 ? 'accessible'
-          : status === 402 || status === 451 ? 'paywall'
-          : status === 401 || status === 403 ? 'blocked'
-          : status === 404 || status === 410 ? 'not-found'
-          : 'uncertain';
-        results[index] = { articleId: String(item.id || ''), url, status, state, finalHost, method: 'HEAD' };
-      } catch (error) {
-        results[index] = { articleId: String(item.id || ''), url, status: null, state: 'uncertain', finalHost: '', method: 'HEAD', error: String(error?.name || 'network-error') };
-      }
-    }
-  }
-  await Promise.all(Array.from({ length: Math.min(concurrency, articles.length) }, worker));
-  const counts = Object.fromEntries(['accessible', 'blocked', 'paywall', 'not-found', 'uncertain'].map(state => [state, results.filter(row => row.state === state).length]));
-  return { scope: 'explicit-publisher-https-haewon-articles', method: 'HEAD', redirectPolicy: 'standard-http-follow-only', bypassAttempted: false, checked: results.length, total: articles.length, counts, results };
-}
-
 export async function auditVerifiedPublisherArticles(items = [], { fetchImpl = fetch, timeoutMs = 3500, concurrency = 3 } = {}) {
   const articles = getVerifiedHaewonArticles(items);
   const results = new Array(articles.length);
@@ -98,7 +68,7 @@ export function validateArticleReviewExport(payload, eligibleIds = null) {
 export function summarizeArticleReviews(items = [], labels = {}) {
   const eligible = getVerifiedHaewonArticles(items);
   const dimensions = {};
-  const positive = { relevance: 'relevant', originalAccess: 'accessible', dateAccuracy: 'accurate', sourceAccuracy: 'accurate', categoryAccuracy: 'correct' };
+  const positive = { relevance: 'relevant', originalAccess: 'accessible', dateAccuracy: 'accurate', sourceAccuracy: 'accurate', categoryAccuracy: 'correct', thumbnailAccuracy: 'suitable' };
   for (const [dimension, options] of Object.entries(ARTICLE_REVIEW_DIMENSIONS)) {
     const counts = Object.fromEntries(options.map(option => [option, 0]));
     for (const item of eligible) {
@@ -106,7 +76,9 @@ export function summarizeArticleReviews(items = [], labels = {}) {
       if (options.includes(value)) counts[value]++;
     }
     const reviewed = options.reduce((sum, option) => sum + counts[option], 0);
-    const decided = reviewed - (counts.uncertain || 0);
+    const decided = dimension === 'thumbnailAccuracy'
+      ? (counts.suitable || 0) + (counts.unsuitable || 0)
+      : reviewed - (counts.uncertain || 0);
     const correct = counts[positive[dimension]] || 0;
     dimensions[dimension] = {
       eligible: eligible.length, reviewed, pending: eligible.length - reviewed,
