@@ -45,3 +45,9 @@ For a broken link, incorrect attribution, or rights concern, update or remove th
 - X API reads are paid per returned post; do not use it as a required source under the free-first policy.
 - Meta Content Library is a research-oriented secure environment, not a general public consumer API; its current public-data geographic scope excludes South Korea.
 - Photo collection remains source-link/attribution only unless a provider explicitly permits preview/embedding or an authorized API is available. No rehosting, login-wall scraping or hidden endpoint use.
+
+## 2026-11-25 source and media constraints
+- Video search via PR #23 is optional YouTube Data API v3. The API key is user-managed in GitHub Actions Secrets; never request it in chat. Only the known official channel ID is labelled official; all other channels remain unverified until human review.
+- Article discovery remains RSS/public metadata first. Do not decode Google News wrappers, bypass 403s, scrape login-gated pages, infer publisher URLs, or probe hidden endpoints.
+- Photo archive remains original public post/page links with source name, attribution and date. No image binaries are rehosted. No general free public fan-photo API was identified; X API reads are pay-per-use and Meta Content Library is research-oriented with current public-data scope excluding South Korea.
+- Preserve the 273 repeated legacy image URL occurrences until record-level source evidence and human review justify a migration.
