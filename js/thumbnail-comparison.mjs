@@ -1,7 +1,7 @@
 export function compareThumbnailCandidates(items=[], enrichmentResults=[]) {
  const resultsById=new Map(enrichmentResults.map(row=>[String(row.id||''),row]));
  const sourceCounts={},hostCounts={},urlCounts={};
- let compared=0,rssOnly=0,metaOnly=0,both=0,matchedUrl=0,assigned=0,foundMeta=0;
+ let compared=0,rssOnly=0,metaOnly=0,both=0,matchedUrl=0,assigned=0,foundMeta=0,persistedMetaCandidateRecords=0,persistedThumbnailRecords=0,persistedThumbnailMatchesMetaCandidate=0,persistedThumbnailDoesNotMatchMetaCandidate=0;
  const rows=[];
  for(const item of items){
   const rss=(item.thumbnailCandidates||[]).filter(c=>/^rss|^media:|^enclosure|^rss-description/i.test(String(c.source||'')));
@@ -15,10 +15,17 @@ export function compareThumbnailCandidates(items=[], enrichmentResults=[]) {
   const rssUrls=new Set(r.map(c=>normalized(c.url))),metaUrls=new Set(m.map(c=>normalized(c.url)));
   const overlap=[...rssUrls].filter(u=>metaUrls.has(u)).length;if(overlap)matchedUrl++;
   for(const c of [...r,...m]){sourceCounts[c.source]=(sourceCounts[c.source]||0)+1;try{const host=new URL(c.url).hostname.toLowerCase();hostCounts[host]=(hostCounts[host]||0)+1;}catch{}}
-  rows.push({id:item.id,title:item.title||'',articleUrl:item.url||'',rssCandidates:r,metaCandidates:m,sharedUrls:[...rssUrls].filter(u=>metaUrls.has(u)),assigned:Boolean(metaResult?.assigned),metaStatus:metaResult?.status||'not-attempted'});
+  const persistedThumbnail=/^https:\/\//i.test(String(item.thumbnailUrl||''));
+  const persistedMatch=persistedThumbnail&&m.some(candidate=>normalized(candidate.url)===normalized(item.thumbnailUrl));
+  if(m.length)persistedMetaCandidateRecords++;
+  if(persistedThumbnail)persistedThumbnailRecords++;
+  if(persistedMatch)persistedThumbnailMatchesMetaCandidate++;
+  else if(persistedThumbnail&&m.length)persistedThumbnailDoesNotMatchMetaCandidate++;
+  rows.push({id:item.id,title:item.title||'',articleUrl:item.publisherArticleUrl||item.url||'',rssCandidates:r,metaCandidates:m,sharedUrls:[...rssUrls].filter(u=>metaUrls.has(u)),assigned:Boolean(metaResult?.assigned),metaStatus:metaResult?.status||'not-attempted',persistedThumbnailUrl:persistedThumbnail?item.thumbnailUrl:'',persistedThumbnailMatchesMetaCandidate:persistedMatch});
   if(metaResult?.found||m.length)foundMeta++;if(metaResult?.assigned)assigned++;
  }
- return {articlesCompared:compared,rssOnly,metaOnly,bothSources:both,articlesWithSharedUrl:matchedUrl,metaFound:foundMeta,metaAssigned:assigned,assignmentRate:foundMeta?Math.round(assigned/foundMeta*100):null,sourceCounts:sourceCounts,hostCounts:Object.entries(hostCounts).map(([host,count])=>({host,count})).sort((a,b)=>b.count-a.count),rows:rows.slice(0,100)};
+ const latestRunFound=enrichmentResults.filter(row=>row.found||row.status==='found'||row.status==='assigned'||row.status==='duplicate-rejected').length;
+ return {articlesCompared:compared,rssOnly,metaOnly,bothSources:both,articlesWithSharedUrl:matchedUrl,metaFound:foundMeta,metaAssigned:assigned,assignmentRate:latestRunFound?Math.round(assigned/latestRunFound*100):null,latestRunFound,latestRunAssigned:assigned,latestRunAssignmentRate:latestRunFound?Math.round(assigned/latestRunFound*100):null,persistedMetaCandidateRecords,persistedThumbnailRecords,persistedThumbnailMatchesMetaCandidate,persistedThumbnailDoesNotMatchMetaCandidate,sourceCounts:sourceCounts,hostCounts:Object.entries(hostCounts).map(([host,count])=>({host,count})).sort((a,b)=>b.count-a.count),rows:rows.slice(0,100)};
 }
 function normalized(value){try{const u=new URL(value);u.hash='';return u.href;}catch{return String(value||'');}}
 export function buildThumbnailReview(items=[],audit={}){
