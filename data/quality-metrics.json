@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T03:54:07.824Z",
+  "generatedAt": "2026-11-25T03:54:55.161Z",
   "discoveryRelevance": {
     "totalCandidates": 704,
     "articleCandidates": 518,
@@ -343,117 +343,28 @@
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 704,
-    "newsUniqueFetched": 77,
-    "newsAddedLastRun": 5,
+    "newsUniqueFetched": 65,
+    "newsAddedLastRun": 2,
     "duplicateBeforeMergeLastRun": 8,
     "duplicateGroupsCurrent": 704,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 85,
-      "after": 77,
+      "before": 73,
+      "after": 65,
       "collapsed": 8,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 3,
-      "found": 3,
-      "assigned": 3,
+      "attempted": 0,
+      "found": 0,
+      "assigned": 0,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
       "failed": 0,
-      "results": [
-        {
-          "id": "d9f9b241f275fda266c0",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.3c5c2d9217ad49b598cf5d2bb142858e_P1.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.3c5c2d9217ad49b598cf5d2bb142858e_P1.jpg",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.9cf4fda5cac14428a86b7bf8f52ce9a6_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/26/news-p.v1.20261026.6890818a83d04e8d904766f0e64c084e_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202610261936007/",
-          "resolvedArticleHost": "sports.khan.co.kr"
-        },
-        {
-          "id": "ea9921421f66eb71868d",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.31a8dcc1b53b4a56a3048eda8bb717ad_P1.jpeg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.31a8dcc1b53b4a56a3048eda8bb717ad_P1.jpeg",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.29768728f855489b98f20588c1de429c_P1.jpeg",
-              "source": "jsonld:image",
-              "priority": 5
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/10/22/news-p.v1.20261022.7c3c3bdc143a4c67a80730a0c93e50a3_P1.jpeg",
-              "source": "jsonld:image",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://sports.khan.co.kr/en/article/202610221724007/",
-          "resolvedArticleHost": "sports.khan.co.kr"
-        },
-        {
-          "id": "289fa93f30d1c9322619",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://cloudimages2.broadwayworld.com/columnpiccloud/Interview-NMIXX-1792599723.jpg?format=jpeg&quality=80&width=1200",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://cloudimages2.broadwayworld.com/columnpiccloud/Interview-NMIXX-1792599723.jpg?format=jpeg&quality=80&width=1200",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://cloudimages2.broadwayworld.com/heads/1793096532_IMG_7262.jpeg?format=auto&width=400",
-              "source": "jsonld:image",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.broadwayworld.com/bwwmusic/article/Interview-NMIXX-Talks-New-EP-Strange-Muse-First-Unit-Songs-and-Birthday-Wish-For-the-Future-20261021",
-          "resolvedArticleHost": "www.broadwayworld.com"
-        }
-      ]
+      "results": []
     }
   },
   "sources": [
@@ -1819,8 +1730,8 @@
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
     "metaFound": 47,
-    "metaAssigned": 3,
-    "assignmentRate": 6,
+    "metaAssigned": 0,
+    "assignmentRate": 0,
     "sourceCounts": {
       "og:image": 45,
       "jsonld:image": 64,
@@ -2961,8 +2872,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "d9f9b241f275fda266c0",
@@ -2987,8 +2898,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "ea9921421f66eb71868d",
@@ -3013,8 +2924,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned"
+        "assigned": false,
+        "metaStatus": "not-attempted"
       },
       {
         "id": "2f3bd3505026c6c9630e",
@@ -3111,7 +3022,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-25T03:54:07.835Z",
+    "generatedAt": "2026-11-25T03:54:55.175Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
