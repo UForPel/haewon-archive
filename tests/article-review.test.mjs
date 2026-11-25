@@ -8,10 +8,10 @@ test('review scope contains only explicit publisher HTTPS Haewon articles and ex
   assert.deepEqual(rows.map(row=>row.id), ['a']);
 });
 test('review summary separates per-dimension coverage and full completion', () => {
-  const labels = { a: {articleId:'a',relevance:'relevant',dateAccuracy:'accurate',sourceAccuracy:'accurate'} };
+  const labels = { a: {articleId:'a',relevance:'relevant',originalAccess:'accessible',dateAccuracy:'accurate',sourceAccuracy:'accurate'} };
   const report = summarizeArticleReviews([base], labels);
   assert.equal(report.eligible,1); assert.equal(report.reviewedArticles,1); assert.equal(report.fullyReviewed,0);
-  assert.equal(report.dimensions.relevance.coverage,100); assert.equal(report.dimensions.categoryAccuracy.coverage,0);
+  assert.equal(report.dimensions.relevance.coverage,100); assert.equal(report.dimensions.originalAccess.coverage,100); assert.equal(report.dimensions.categoryAccuracy.coverage,0);
 });
 test('review export accepts only known labels and optionally limits IDs', () => {
   const payload = {schemaVersion:1,labels:{a:{articleId:'a',relevance:'relevant',sourceAccuracy:'accurate'},b:{articleId:'b',relevance:'invalid'}}};
