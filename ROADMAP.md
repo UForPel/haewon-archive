@@ -341,3 +341,10 @@
 - [x] Confirm successful run recorded 15 YouTube items, 73 Google News RSS items and 32 Bing News RSS candidates.
 - [ ] Continue improving the actual content mix and source-verified article/image coverage.
 - [ ] Perform real browser/mobile visual QA and human review.
+
+## 2026-11-25 — Node 24-compatible production workflow
+- [x] Verify current first-party action versions, Node 24 runtime declarations and full immutable tag commit SHAs.
+- [x] Update checkout, setup-node, configure-pages, upload-pages-artifact and deploy-pages pins on a separate branch.
+- [x] Preserve Node 22 for project scripts and explicitly disable unnecessary package-manager caching.
+- [ ] Await PR review and read-only validation; no merge without user approval.
+- [ ] After approved merge, verify the complete production collection, validation, data commit, artifact upload and Pages deployment.
