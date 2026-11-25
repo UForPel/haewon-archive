@@ -229,3 +229,8 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The current main UI still defaults the news discovery page to `verified-haewon` and sorts by relevance score then published/discovered date. PR #27's shared predicate is required before X profiles/posts can be excluded from the verified publisher scope.
 - No UI controls were changed in this cycle. Human thumbnail labels remain browser-local until exported/imported; there are 0 persisted human review labels in current metrics.
 - The mandatory ChatGPT continuation action remains **🔄 연구 기반 재귀개선 계속하기** and must submit the full next-cycle prompt. It is a conversation action, not a website control. No claim of manual mobile/keyboard QA.
+
+## 2026-11-26 — PR #30 refreshed against latest main
+- After updating the PR #30 session log, genuine pull_request run #45704287050 checked merge commit `53b3d5b`, which merged PR head `fc619f0e623fdda9931f72e7f59da66c50c76b68` into current main `3c93903c6e37839fd69e0a1a74851a3dac3e6174`.
+- The read-only job succeeded: 142/142 tests, 0 failures, and `npm run validate` succeeded. No artifact upload or Pages deployment was attempted.
+- PR #30 is still open/unmerged. The shared PR CI workflow remains absent from main until user-approved merge.
