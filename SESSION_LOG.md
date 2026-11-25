@@ -1545,3 +1545,6 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 - GitHub docs confirm workflow_dispatch supports GitHub App installation tokens with repository Actions: write permission and a 200 response with run details for the 2026-03-10 API version. PR24 remains an inert dry-run design.
 - Gemini pricing still identifies free-tier content as used to improve Google products; no API integration or secret.
 - Meta Page Photos API requires Page token permissions or Page Public Content Access for third-party public Pages; no universal open fan-photo API. Keep photo archive link-and-attribution-first.
+
+### PR #22 test-fixture iteration detail
+- The per-query metric regression test initially failed in four temporary branch runs (#45552328941, #45552429371, #45552436960, #45552490034). The root cause was the test fixture: one duplicate title was not actually identical and its normalized length was below the repository's 32-character title-grouping threshold. The fixture was corrected to use identical normalized long titles; final run #45552560866 passed 144/144 tests and validation. All temporary workflow files were removed. No production code rollback or data change was needed.
