@@ -251,6 +251,67 @@ export function summarizeRssImageSignals(xml=''){
  }
  return {items:items.length,sourceUrlItems:items.filter(item=>/^https:\/\//i.test(attr(item.match(/<source\b[^>]*>/i)?.[0]||'','url'))).length,publisherArticleUrlItems:items.filter(item=>isPublisherArticleUrl(tag(item,'link'))||isPublisherArticleUrl(tag(item,'guid'))).length,mediaThumbnailTags:count(/<media:thumbnail\b/gi,xml),mediaContentTags:count(/<media:content\b/gi,xml),enclosureTags:count(/<enclosure\b/gi,xml),contentEncodedItems:count(/<content:encoded\b/gi,xml),descriptionImageTags,contentEncodedImageTags,itemsWithImageSignals};
 }
+
+function normalizeQueryMetricUrl(value=''){
+ try{
+  const url=new URL(String(value||''));
+  if(!['https:','http:'].includes(url.protocol)||url.username||url.password)return '';
+  url.hash='';
+  for(const key of [...url.searchParams.keys()])if(/^(utm_|fbclid|gclid|ref|source)/i.test(key))url.searchParams.delete(key);
+  url.searchParams.sort();
+  return url.href.replace(/\/$/,'');
+ }catch{return '';}
+}
+function normalizeQueryMetricTitle(value=''){
+ return String(value||'').replace(/<[^>]*>/g,' ').replace(/&amp;/gi,'&').normalize('NFKC').toLocaleLowerCase().replace(/\b(?:youtube|youtu\.be)\b/g,'').replace(/[\p{P}\p{S}\s]+/gu,'').trim();
+}
+function percentile(values,p){
+ if(!values.length)return null;
+ const sorted=[...values].sort((a,b)=>a-b);
+ return Math.round(sorted[Math.min(sorted.length-1,Math.ceil(sorted.length*p)-1)]*10)/10;
+}
+export function summarizeQueryPerformance(items=[],queries=[],now=new Date().toISOString()){
+ const rows=new Map(queries.map(query=>[query,{query,candidates:0,urls:new Set(),titles:new Map(),titleKeywordMatches:0,explicitPublisherUrls:0,publicationLagHours:[],unknownDates:0,futureDated:0}]));
+ const urlOwners=new Map();
+ for(const item of items){
+  const query=String(item.query||'');
+  if(!rows.has(query))rows.set(query,{query,candidates:0,urls:new Set(),titles:new Map(),titleKeywordMatches:0,explicitPublisherUrls:0,publicationLagHours:[],unknownDates:0,futureDated:0});
+  const row=rows.get(query);row.candidates++;
+  const url=normalizeQueryMetricUrl(item.url);
+  if(url){row.urls.add(url);if(!urlOwners.has(url))urlOwners.set(url,new Set());urlOwners.get(url).add(query);}
+  const title=normalizeQueryMetricTitle(item.title);
+  if(title.length>=32)row.titles.set(title,(row.titles.get(title)||0)+1);
+  if(/오해원|해원|haewon/i.test(String(item.title||'')))row.titleKeywordMatches++;
+  if(normalizeQueryMetricUrl(item.publisherArticleUrl))row.explicitPublisherUrls++;
+  const published=Date.parse(item.publishedAt||''),discovered=Date.parse(now);
+  if(!Number.isFinite(published)||!Number.isFinite(discovered))row.unknownDates++;
+  else if(published>discovered)row.futureDated++;
+  else row.publicationLagHours.push((discovered-published)/3600000);
+ }
+ return [...rows.values()].map(row=>{
+  const duplicateTitleGroups=[...row.titles.values()].filter(count=>count>1);
+  const duplicateTitleOccurrences=duplicateTitleGroups.reduce((sum,count)=>sum+count-1,0);
+  const crossQueryDuplicateUrls=[...row.urls].filter(url=>(urlOwners.get(url)?.size||0)>1).length;
+  return {
+   query:row.query,
+   candidates:row.candidates,
+   uniqueCandidates:row.urls.size,
+   duplicateUrlOccurrences:Math.max(0,row.candidates-row.urls.size),
+   duplicateTitleGroups:duplicateTitleGroups.length,
+   duplicateTitleOccurrences,
+   titleKeywordMatches:row.titleKeywordMatches,
+   titleKeywordMatchRate:row.candidates?Math.round(row.titleKeywordMatches/row.candidates*100):null,
+   explicitPublisherUrls:row.explicitPublisherUrls,
+   explicitPublisherUrlRate:row.candidates?Math.round(row.explicitPublisherUrls/row.candidates*100):null,
+   crossQueryDuplicateUrls,
+   datedCandidates:row.publicationLagHours.length,
+   unknownDates:row.unknownDates,
+   futureDated:row.futureDated,
+   medianPublicationLagHours:percentile(row.publicationLagHours,0.5),
+   p90PublicationLagHours:percentile(row.publicationLagHours,0.9)
+  };
+ });
+}
 export async function collectFeeds({queries=getDailySearches(),fetchImpl=fetch,now=new Date().toISOString()}={}){
  const incoming=[],failures=[],bingFailures=[];
  const rssImageSignals={items:0,sourceUrlItems:0,publisherArticleUrlItems:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
@@ -281,7 +342,7 @@ async function main(){
  const {incoming,failures,queries,successfulQueries,bingSuccessfulQueries,bingFailures,bingCandidates,rssImageSignals}=await collectFeeds({queries:queriesList,now});
 
  if(successfulQueries===0&&bingSuccessfulQueries===0){
-  await writeFile(resolve(ROOT,'data/news-collection-status.json'),JSON.stringify({schemaVersion:'1.0.0',collectedAt:now,searchPack:SEARCH_PACKS.findIndex(pack=>JSON.stringify(pack)===JSON.stringify(queriesList)),queries:queriesList.map(query=>({query,candidates:0,uniqueCandidates:0})),requestedQueries:queries,successfulQueries,bingSuccessfulQueries,bingCandidates,bingFailedQueries:bingFailures.map(x=>({query:x.query,error:x.error})),failedQueries:failures.map(x=>({query:x.query,error:x.error})),rssImageSignals,fetched:0,uniqueIncoming:0,added:0,totalCandidates:existing.length},null,2)+'\n');
+  await writeFile(resolve(ROOT,'data/news-collection-status.json'),JSON.stringify({schemaVersion:'1.0.0',collectedAt:now,searchPack:SEARCH_PACKS.findIndex(pack=>JSON.stringify(pack)===JSON.stringify(queriesList)),queries:summarizeQueryPerformance([],queriesList,now),requestedQueries:queries,successfulQueries,bingSuccessfulQueries,bingCandidates,bingFailedQueries:bingFailures.map(x=>({query:x.query,error:x.error})),failedQueries:failures.map(x=>({query:x.query,error:x.error})),rssImageSignals,fetched:0,uniqueIncoming:0,added:0,totalCandidates:existing.length},null,2)+'\n');
   console.warn(JSON.stringify({status:'skipped',reason:'all-news-feeds-unavailable',queries,successfulQueries,failedQueries:failures,existingCandidatesPreserved:existing.length}));
   return;
  }
@@ -291,7 +352,7 @@ async function main(){
  const existingUrls=new Set(existing.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const uniqueIncoming=new Set(incoming.map(item=>item?.url?.toLowerCase()).filter(Boolean));
  const added=[...uniqueIncoming].filter(url=>!existingUrls.has(url)).length;
- const perQuery=queriesList.map(query=>({query,candidates:incoming.filter(item=>item.query===query).length,uniqueCandidates:new Set(incoming.filter(item=>item.query===query).map(item=>item.url.toLowerCase())).size}));
+ const perQuery=summarizeQueryPerformance(incoming,queriesList,now);
  const rssImageCandidateRows=incoming.flatMap(item=>item.thumbnailCandidates||[]);
  const rssImageCandidateSources=Object.fromEntries(rssImageCandidateRows.reduce((map,candidate)=>map.set(candidate.source,(map.get(candidate.source)||0)+1),new Map()));
  const incomingMerged=mergeCandidates([],incoming);
