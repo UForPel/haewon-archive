@@ -23,5 +23,12 @@ jobs:
           package-manager-cache: false
       - name: Unit tests
         run: npm test
-      - name: Validate committed archive data
+      - name: Collect public Google and Bing RSS
+        run: npm run collect-news
+      - name: Generate quality metrics
+        run: npm run quality
+      - name: Validate collected archive data
         run: npm run validate
+      - name: Report source-specific RSS image signals
+        run: |
+          node --input-type=module -e "import fs from 'node:fs'; const s=JSON.parse(fs.readFileSync('data/news-collection-status.json','utf8')); console.log(JSON.stringify({collectedAt:s.collectedAt,requestedQueries:s.requestedQueries,successfulQueries:s.successfulQueries,bingSuccessfulQueries:s.bingSuccessfulQueries,bingCandidates:s.bingCandidates,googleRssImageSignals:s.rssImageSignals,bingRssImageSignals:s.bingRssImageSignals,rssImageCandidateArticles:s.rssImageCandidateArticles,rssImageCandidatesTotal:s.rssImageCandidatesTotal,thumbnailEnrichment:s.thumbnailEnrichment},null,2));"
