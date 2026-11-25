@@ -288,3 +288,10 @@ For each substantial update include: changed paths; planned vs implemented items
 - Production workflow Actions #582/#583 were triggered unintentionally by the temporary main push/reset; both completed successfully. The accidental workflow file is absent from final main. Record the event; do not imply those runs were planned.
 - PR #15's Node 24 SHA-pinned workflow does not upgrade the separate production collect-and-deploy workflow. Track its Node 20 deprecation warning as a separate maintenance task.
 - Pages deployment success is not proof of live rendering or Android browser QA.
+
+
+## Non-cancellable continuation-control invariant
+- The exact ChatGPT response control `🔄 연구 기반 재귀개선 계속하기` must appear at the end of every Haewon Archive work response.
+- User-typed messages do not cancel, replace, hide, or suspend this control. Continue from the latest GitHub state and render the button again.
+- Before finalizing, independently verify: (1) button specification remains in GitHub docs, and (2) the current final response actually contains the clickable control. Documentation alone is not compliance.
+- If the control is absent, the work response is incomplete even if code, CI, Pages, and documentation tasks succeeded.
