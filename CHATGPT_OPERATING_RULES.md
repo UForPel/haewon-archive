@@ -182,3 +182,12 @@ For each substantial update include: changed paths; planned vs implemented items
 - 버튼 실행 지시는 최신 main/PR/Actions/Pages 확인, 최신 연구 및 공식 근거 조사, 기준선 기반 병목 선정, 실제 구현·테스트, 코드/테스트/문서 PR 분리, 품질 전후 비교, 운영 로그와 네 문서 및 본 운영 규칙 갱신, 검증 한계 기록을 포함한다.
 - 사용자는 매번 '진행' 또는 상세 지시를 타이핑할 필요가 없어야 한다.
 - GitHub 문서 기록만으로는 충분하지 않다. **최종 응답에 실제 클릭 가능한 버튼이 렌더링되어야 한다.** 버튼 누락은 세션 완료로 간주하지 않는다.
+
+
+## 2026-11-25 — Current recursive cycle handoff
+
+- Latest main inspected: 32832e57e9e1023c62eefa4a1e8b4a76550e451b; latest observed production workflow: Actions #581 successful including Pages deployment.
+- PR #13 run #2 failed due duplicate auditVerifiedPublisherArticles export. Fix is committed on the PR branch; do not claim green CI until a new run confirms it.
+- Article review now includes thumbnail suitability as a sixth dimension. HTTP HEAD response is not equivalent to human article accessibility.
+- Do not retry a 403 response with GET. Keep Google News wrappers opaque; never bypass access controls.
+- Preserve the required ChatGPT follow-up button at the end of every final response. The actual control must submit the full next-cycle instruction; a Markdown link or documentation entry alone does not count.
