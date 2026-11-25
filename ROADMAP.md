@@ -341,3 +341,15 @@
 - [x] Confirm successful run recorded 15 YouTube items, 73 Google News RSS items and 32 Bing News RSS candidates.
 - [ ] Continue improving the actual content mix and source-verified article/image coverage.
 - [ ] Perform real browser/mobile visual QA and human review.
+
+## 2026-11-25 — Bing RSS image candidates and diagnostics
+- [x] Inspect current main's Google RSS and Bing RSS parsing paths separately.
+- [x] Identify that Bing parsing preserved explicit article URLs but discarded media:thumbnail, image media:content/enclosure and description HTML image candidates.
+- [x] Add shared-extractor image candidate parsing to Bing items; keep HTTPS-only URL policy and use explicit publisher article URL as relative-URL base.
+- [x] Exclude non-image enclosures by MIME type and add separate Bing image-signal metrics.
+- [x] Add regression tests for candidate priority, relative URLs, audio exclusion and signal counts.
+- [ ] Run PR #28 read-only Actions snapshot test and inspect its full logs.
+- [ ] Await review/approval; do not merge automatically.
+- [ ] After approved merge, compare Bing RSS image signal/candidate/assignment counts against the current baseline (currently no Bing image diagnostics persisted).
+- [ ] After PR #27 merge and next data refresh, verify social URLs are excluded from publisher article metrics and no new X metadata thumbnails are assigned.
+- [ ] Continue mobile browser QA and human relevance review; current review coverage is 0.

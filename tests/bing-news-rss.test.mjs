@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {bingNewsFeedUrl,extractBingNewsArticleUrl,parseBingNewsRss,mergeCandidates} from '../scripts/collect-news.mjs';
+import {bingNewsFeedUrl,extractBingNewsArticleUrl,parseBingNewsRss,mergeCandidates,summarizeBingRssImageSignals} from '../scripts/collect-news.mjs';
 const destination='https://publisher.example/news/haewon-story?utm_source=bing';
 const wrapper='https://www.bing.com/news/apiclick.aspx?ref=FexRss&url='+encodeURIComponent(destination)+'&c=123';
 test('Bing News RSS destination is accepted only from an explicit HTTPS url parameter',()=>{
@@ -20,4 +20,24 @@ test('Bing News candidate provenance survives title-based merge with a Google wr
  const google={id:'g1',title:'Haewon NMIXX story with a sufficiently long matching headline',url:'https://news.google.com/rss/articles/opaque',publisherArticleUrl:'',sourceUrl:'https://publisher.example/'};
  const bing={id:'b1',title:'Haewon NMIXX story with a sufficiently long matching headline',url:destination,publisherArticleUrl:destination,candidateSources:[{source:'bing-news-rss-explicit-url-param',articleUrl:destination}],publisherHost:'publisher.example'};
  const [merged]=mergeCandidates([google],[bing]);assert.equal(merged.publisherArticleUrl,destination);assert.equal(merged.candidateSources.length,1);assert.equal(merged.publisherHost,'publisher.example');
+});
+
+test('Bing News RSS extracts only explicitly declared image candidates and preserves provenance',()=>{
+ const xml='<rss><channel><item><title>Haewon NMIXX story</title><link>'+wrapper+'</link><description><![CDATA[<img src="/description.jpg"/>]]></description><content:encoded><![CDATA[<img src="/content.jpg"/>]]></content:encoded><media:thumbnail url="/thumb.jpg" type="image/jpeg"/><enclosure url="https://img.example/enclosure.png" type="image/png"/><enclosure url="https://audio.example/clip.mp3" type="audio/mpeg"/></item></channel></rss>';
+ const [item]=parseBingNewsRss(xml,'Haewon NMIXX','2026-11-24T04:01:00.000Z');
+ assert.equal(item.thumbnailUrl,'https://publisher.example/news/thumb.jpg');
+ assert.equal(item.thumbnailSource,'media:thumbnail');
+ assert.deepEqual(item.thumbnailCandidates.map(candidate=>candidate.source),['media:thumbnail','enclosure','rss-description-html']);
+ assert.equal(item.thumbnailCandidates[1].url,'https://img.example/enclosure.png');
+ assert.ok(item.thumbnailCandidates.every(candidate=>candidate.url.startsWith('https://')));
+});
+test('Bing RSS image diagnostics distinguish explicit article URLs from image-bearing items',()=>{
+ const xml='<rss><channel><item><title>Haewon one</title><link>'+wrapper+'</link><media:thumbnail url="https://img.example/one.jpg"/></item><item><title>Haewon two</title><link>'+wrapper+'</link><description><![CDATA[<img src="https://img.example/two.jpg"/>]]></description><enclosure url="https://audio.example/a.mp3" type="audio/mpeg"/></item></channel></rss>';
+ const result=summarizeBingRssImageSignals(xml);
+ assert.equal(result.items,2);
+ assert.equal(result.publisherArticleUrlItems,2);
+ assert.equal(result.mediaThumbnailTags,1);
+ assert.equal(result.enclosureTags,1);
+ assert.equal(result.descriptionImageTags,1);
+ assert.equal(result.itemsWithImageSignals,2);
 });

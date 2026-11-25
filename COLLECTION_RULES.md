@@ -87,3 +87,11 @@ Before any automated write:
 10. If any gate fails, write no candidate records; emit a sanitized failure summary.
 
 Gemini does not have permission to alter these rules or the validators enforcing them.
+
+## Bing RSS image metadata rules — 2026-11-25
+- Parse image candidates from public RSS item metadata only: Media RSS `media:thumbnail`; `media:content` only when its MIME/medium identifies an image; `enclosure` only when its MIME type begins with `image/`; and image tags exposed in item `description` or `content:encoded`.
+- Preserve each candidate's source element and resolve relative image URLs only against the item's explicitly disclosed HTTPS publisher article URL.
+- Never treat RSS `source url` as an article URL: it identifies the source feed/site, not necessarily the individual article.
+- Do not decode Google News wrapper tokens or infer an article URL from a publisher homepage. Only accept a publisher article URL explicitly disclosed by a public feed field already supported by the collector.
+- Keep Google RSS and Bing RSS image-signal diagnostics separate so an absence of Google image tags does not hide image signals in another source.
+- Non-image enclosure media (audio/video) must never be selected as article thumbnails.

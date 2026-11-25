@@ -173,3 +173,10 @@ For each substantial update include: changed paths; planned vs implemented items
 - Google News RSS 4/4, 260 items, 258 site-level URLs, 0 direct article URLs and 0 image signals; Bing 4/4, 41 candidates; combined 301 fetched, 275 unique, 6 additions.
 - Metadata enrichment attempted 0 URLs due retry backoff. Do not characterize this as failure.
 - Keep Google News wrappers opaque and only use explicit HTTPS article/video URLs from public metadata.
+
+## 2026-11-25 — Source-specific RSS image diagnostics
+- The latest Google RSS run had 41 items, 41 source URL values, 0 publisher article URLs and 0 image signals. This is a feed-output limitation, not proof that the publisher sites lack images.
+- Bing RSS had 36 candidates and explicit article URLs, but the parser did not retain RSS image candidates. PR #28 adds extraction for Media RSS thumbnail, image MIME enclosures and description/content:encoded image tags, plus separate Bing signal counters.
+- After PR #28, compare Google and Bing independently: item count, explicit article URL count, image-signal item count, candidate count, candidate source, assigned count and failure class. Do not aggregate the two feeds into a misleading single image rate.
+- Research source notes: RSS Advisory Board Media RSS 1.5.1 describes `media:thumbnail` as representative media imagery; RSS 2.0.11 defines `enclosure` with URL and MIME type. Both are stable format standards; they do not guarantee a feed includes images.
+- Main PR CI remains unavailable until PR #15 is approved and merged. Temporary branch snapshot runs are not equivalent to PR checks.
