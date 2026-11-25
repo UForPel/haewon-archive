@@ -1166,3 +1166,38 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Root cause: the button was described/documented but not actually rendered in the final response. The previous session report therefore failed its handoff requirement.
 - Updated BUTTONS_AND_ACTIONS.md and CHATGPT_OPERATING_RULES.md with the exact label, click action contract, full next-cycle directive, and explicit no-omission rule. This documentation change is on PR #14 branch.
 - Required final control: 🔄 연구 기반 재귀개선 계속하기. It must submit the next-cycle execution instruction; plain text or a link is not an acceptable substitute.
+
+
+## 2026-11-25 — CI failure diagnosis, thumbnail label addition, and conservative HTTP semantics
+
+### Fresh repository and workflow state
+- Main: 32832e57e9e1023c62eefa4a1e8b4a76550e451b.
+- Actions #581 / run 45508856109: success. Job steps confirmed tests, YouTube/RSS collection, recursive improvement, quality metrics, validation, operational log, Pages configured, artifact uploaded, and deployment all succeeded.
+- Latest Actions list also shows PR #13 run #2 / 45529878362 failed, PR #15 run #1 / 45529462914 succeeded. No run exists for the latest PR #13 head after the fixes below.
+- PR #13, #14, #15 remain open; none was merged.
+
+### PR #13 test failure and correction
+- Inspected PR #13 run #2 logs. js/article-review.mjs declared auditVerifiedPublisherArticles twice, causing a SyntaxError. Node reported 113/116 passing; the three failed test files could not import the module.
+- Removed the duplicate export. Added a distinct thumbnail suitability review dimension, because the original UI showed thumbnail images but did not actually collect a per-image suitability judgment.
+- Added test coverage for thumbnail accuracy and its denominator (missing and uncertain image cases do not inflate the suitability score).
+- Added a test ensuring a 403 response does not trigger a GET retry in the generic link audit.
+- Changed automated article HEAD status accessible to http-responded: RFC 9110 defines HEAD as GET without response content, so it cannot establish that a person can read the article. The five original human dimensions still include a separate manually assigned accessibility label.
+- Latest code branch commit 00578614125f2994ed0e65da33f5e4d6ae021323. These fixes are committed but unverified by a fresh CI run.
+
+### Quality baseline / content
+- Last metrics snapshot: 701 discovery records; 49 verified Haewon publisher articles; 39/49 provenance-backed thumbnails; 273 records share one legacy image assignment.
+- Legacy group remains preserved; no auto-delete or replacement. Previously established: all 273 originate from Google News RSS; 148 retain only publisher site-root hints; no article-specific URL or per-record image alternative.
+- Latest run log records YouTube 15, Google News RSS 74, Bing News RSS 33; overall success and validation passed.
+- No newer generated quality snapshot after the previous baseline; no claim of content increase.
+
+### Research / engineering decision
+- GitHub Actions docs recommend least-privilege permissions and read-only pull_request for untrusted PR code; PR #15 uses contents: read, no secrets, no collection/deploy. Source: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
+- Playwright documents device emulation of viewport, touch, and user-agent. This is a practical future CI route for responsive interaction checks, but an emulated viewport is not the same as a real physical-device test. Source: https://playwright.dev/docs/emulation
+- RFC 9110 §9.3.2 says HEAD returns no response content. HTTP 2xx is only an HTTP response signal, not proof of human-readable article content. Source: https://www.rfc-editor.org/rfc/rfc9110.html
+- Real mobile browser QA remains unverified; Pages deploy success is not visual QA.
+
+### Next
+1. Obtain a fresh CI run for PR #13 after PR #15 workflow is available on main.
+2. Review 49 article records manually, including actual original-page accessibility and metadata accuracy.
+3. Apply thumbnail suitability labels to 39 images individually; record the 10 no-image cases as not-present, not as successful thumbnail reviews.
+4. Generate a fresh quality snapshot and compare counts and quality to the baseline; preserve all 273 legacy records absent verified replacements.
