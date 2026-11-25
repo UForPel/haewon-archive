@@ -173,3 +173,8 @@ For each substantial update include: changed paths; planned vs implemented items
 - Google News RSS 4/4, 260 items, 258 site-level URLs, 0 direct article URLs and 0 image signals; Bing 4/4, 41 candidates; combined 301 fetched, 275 unique, 6 additions.
 - Metadata enrichment attempted 0 URLs due retry backoff. Do not characterize this as failure.
 - Keep Google News wrappers opaque and only use explicit HTTPS article/video URLs from public metadata.
+
+## HTTP 405 metadata fetch guardrail — 2026-11-25
+- An HTTP 405 response is `method-not-allowed`, not a generic network error. Keep its status code and final host, apply a seven-day retry window, and preserve the candidate article and URL.
+- Do not attempt HEAD or another method, alternate endpoint, wrapper resolution, or access-control workaround after a 405. Treat the response as an explicit method boundary.
+- Regression tests must verify classification, backoff timing, candidate retention and absence of a method fallback. CI/Pages verification must be reported separately from code changes.
