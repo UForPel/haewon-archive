@@ -37,7 +37,7 @@ if (host) {
   function render() {
     const report = summarizeArticleReviews(articles, labels);
     progress.textContent = '검수 진행 · 기사 '+report.reviewedArticles+'/'+report.eligible+' · 다섯 항목 완료 '+report.fullyReviewed+'/'+report.eligible+
-      ' · 접근성 '+report.dimensions.originalAccess.reviewed+'/'+report.eligible+' · 접근성 '+report.dimensions.originalAccess.reviewed+'/'+report.eligible+' · 관련성 '+report.dimensions.relevance.reviewed+'/'+report.eligible+
+      ' · 접근성 '+report.dimensions.originalAccess.reviewed+'/'+report.eligible+' · 관련성 '+report.dimensions.relevance.reviewed+'/'+report.eligible+
       ' · 날짜 '+report.dimensions.dateAccuracy.reviewed+'/'+report.eligible+
       ' · 출처 '+report.dimensions.sourceAccuracy.reviewed+'/'+report.eligible+
       ' · 분류 '+report.dimensions.categoryAccuracy.reviewed+'/'+report.eligible;
@@ -73,8 +73,8 @@ if (host) {
   }
   function updateProgress() {
     const report = summarizeArticleReviews(articles, labels);
-    progress.textContent = '검수 진행 · 기사 '+report.reviewedArticles+'/'+report.eligible+' · 네 항목 완료 '+report.fullyReviewed+'/'+report.eligible+
-      ' · 관련성 '+report.dimensions.relevance.reviewed+'/'+report.eligible+
+    progress.textContent = '검수 진행 · 기사 '+report.reviewedArticles+'/'+report.eligible+' · 다섯 항목 완료 '+report.fullyReviewed+'/'+report.eligible+
+      ' · 접근성 '+report.dimensions.originalAccess.reviewed+'/'+report.eligible+' · 관련성 '+report.dimensions.relevance.reviewed+'/'+report.eligible+
       ' · 날짜 '+report.dimensions.dateAccuracy.reviewed+'/'+report.eligible+
       ' · 출처 '+report.dimensions.sourceAccuracy.reviewed+'/'+report.eligible+
       ' · 분류 '+report.dimensions.categoryAccuracy.reviewed+'/'+report.eligible;
