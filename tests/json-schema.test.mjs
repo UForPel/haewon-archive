@@ -57,3 +57,8 @@ test('사진 링크의 잘못된 날짜와 HTTP URL을 거부한다', () => {
 test('video/photo 어느 쪽에도 맞지 않는 객체는 oneOf에서 거부한다', () => {
   assert.ok(validateAgainstSchema({ id: 'incomplete' }, schema).some(error => error.includes('exactly one schema variant')));
 });
+
+test('YouTube search records preserve channel identity and origin without breaking the video schema',()=>{
+ const searched={...video,channelId:'UCexample123',origin:'unverified',sourceId:'youtube-data-api-search'};
+ assert.deepEqual(validateAgainstSchema(searched,schema),[]);
+});
