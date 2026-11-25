@@ -1140,7 +1140,7 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Open PRs #13/#14/#15/#16/#20/#22/#23/#24 remain unmerged. Live browser/mobile rendering remains unverified.
 
 ## 2026-11-25 — PR #25 opened; PR CI blocker confirmed
-- Opened [PR #25](https://github.com/UForPel/haewon-archive/pull/25), branch `fix/metadata-method-not-allowed-backoff`, from latest main `37998b3`. It changes the collector, tests and six project/operations documents; 8 files changed, 73 additions and 3 deletions.
+- Opened [PR #25](https://github.com/UForPel/haewon-archive/pull/25), branch `fix/metadata-method-not-allowed-backoff`, from latest main `37998b3`. It changes the collector, tests and six project/operations documents; the live PR file summary currently reports 8 files changed, 117 additions and 3 deletions (the branch continued receiving documentation updates after opening).
 - PR #25 is open, unmerged and reported mergeable. No Actions run and no combined status check were returned for its head commit. This is a missing workflow, not a successful check.
 - Verified `.github/workflows/collect-and-deploy.yml` on main triggers only on `push` to main, schedule and manual dispatch. `.github/workflows/pull-request-verification.yml` is absent from main.
 - PR #15 adds a proposed read-only `pull_request` workflow with `contents: read`, `npm test`, and `npm run validate`, but PR #15 is itself still open and unmerged. No PR was merged and no workflow was enabled by this work.
