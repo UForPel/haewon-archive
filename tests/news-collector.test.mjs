@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {parseRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds} from '../scripts/collect-news.mjs';
+import {parseRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,getDailySearches,SEARCH_PACKS,SEARCHES} from '../scripts/collect-news.mjs';
 const fixture='<rss><channel><item><title>오해원 인터뷰</title><link>https://news.example/a</link><pubDate>Thu, 20 Nov 2026 02:00:00 GMT</pubDate><description>Haewon interview</description><source>News</source><media:thumbnail url="https://img.example/thumb.jpg" /></item></channel></rss>';
 test('RSS에서 제목, 링크, 날짜, 검색 출처 메타데이터를 추출한다',()=>{const [item]=parseRss(fixture,'오해원', '2026-11-20T00:00:00Z');assert.equal(item.title,'오해원 인터뷰');assert.equal(item.url,'https://news.example/a');assert.equal(item.sourceName,'News');assert.equal(item.status,'candidate');assert.equal(item.thumbnailUrl,'https://img.example/thumb.jpg');});
 test('중복 URL 후보는 하나로 합친다',()=>{const a=parseRss(fixture,'오해원')[0];assert.equal(mergeCandidates([a],[a]).length,1);});
@@ -59,4 +59,15 @@ test('RSS response diagnostics count image-bearing structures without storing ra
  const result=summarizeRssImageSignals(xml);
  assert.equal(result.items,2);assert.equal(result.mediaThumbnailTags,1);assert.equal(result.enclosureTags,1);
  assert.equal(result.descriptionImageTags,1);assert.equal(result.contentEncodedImageTags,1);assert.equal(result.itemsWithImageSignals,2);
+});
+
+test('news search packs rotate between twice-daily runs and expand topic coverage',()=>{
+ const morning=getDailySearches('2026-11-25',0),evening=getDailySearches('2026-11-25',1);
+ assert.notDeepEqual(morning,evening);
+ assert.equal(SEARCH_PACKS.length,6);
+ assert.ok(SEARCH_PACKS.every(pack=>pack.length===6));
+ assert.equal(SEARCHES.length,36);
+ assert.ok(SEARCHES.some(query=>/interview/i.test(query)));
+ assert.ok(SEARCHES.some(query=>/광고|brand|campaign/i.test(query)));
+ assert.ok(SEARCHES.some(query=>/방송|broadcast|radio/i.test(query)));
 });
