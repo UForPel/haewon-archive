@@ -191,3 +191,5 @@ For each substantial update include: changed paths; planned vs implemented items
 - Article review now includes thumbnail suitability as a sixth dimension. HTTP HEAD response is not equivalent to human article accessibility.
 - Do not retry a 403 response with GET. Keep Google News wrappers opaque; never bypass access controls.
 - Preserve the required ChatGPT follow-up button at the end of every final response. The actual control must submit the full next-cycle instruction; a Markdown link or documentation entry alone does not count.
+
+- Corrected PR #13 code was verified by temporary read-only Actions run #4: 150/150 tests and archive validation passed. The temporary workflow was removed to preserve PR separation; PR #15 remains the dedicated permanent CI workflow proposal.
