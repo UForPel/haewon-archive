@@ -1189,3 +1189,8 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 ## 2026-11-26 — Quality evidence precision
 - Latest `thumbnailResponseAudit`: 12 unique thumbnail URLs sampled, 12 checked, 1 broken (Sportalkorea image URL HTTP 404), 0 non-image, 0 unreachable and 0 rate-limited. Do not extrapolate this sample to all 57 unique URLs.
 - The latest host metrics still show Sportskeeda `errorCode:network-error`; the current summary view does not expose its stored `statusCode`. Earlier live HTTP observation was 405. The PR #25 compatibility test covers a persisted 405 status code when available, but whether the current persisted record contains it or needs migration is not yet confirmed.
+
+## 2026-11-26 — PR #30 refreshed against latest main
+- After updating the PR #30 session log, genuine pull_request run #45704287050 checked merge commit `53b3d5b`, which merged PR head `fc619f0e623fdda9931f72e7f59da66c50c76b68` into current main `3c93903c6e37839fd69e0a1a74851a3dac3e6174`.
+- The read-only job succeeded: 142/142 tests, 0 failures, and `npm run validate` succeeded. No artifact upload or Pages deployment was attempted.
+- PR #30 is still open/unmerged. The shared PR CI workflow remains absent from main until user-approved merge.
