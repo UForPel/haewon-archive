@@ -214,3 +214,18 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - No Haewon Archive website control or handler was added or changed in this audit.
 - The ChatGPT continuation action is conversation-level, not a website button. Keep the required label **🔄 연구 기반 재귀개선 계속하기** and make it a real action submitting the full prompt from CHATGPT_OPERATING_RULES.md; a text label alone is insufficient.
 - Main Pages deployment success does not establish manual browser testing of website controls. Mobile and keyboard QA remain pending.
+
+## 2026-11-26 — Latest main, production and PR re-audit
+- Current main: `3c93903c6e37839fd69e0a1a74851a3dac3e6174` (`data: refresh archive discovery and improvement cycle`). The data commit was produced by scheduled production run `45695468167`, whose workflow source SHA was `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- Production run #45695468167: 142/142 tests, 0 failures; YouTube 15 items, Google RSS 135, Bing RSS 34; 24 new news candidates; metadata enrichment attempted 12, assigned 8, failed 3, missing 1. Validation, data commit, Pages configuration, 446,580-byte artifact upload and deploy step all succeeded. Artifact SHA-256 `ea394ffa5add0d8ffc8bdfc88673b145cf64fc6d7ebbb9870badc5ffe8d50bcc`.
+- Main workflow still references checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4. The actual production job emitted a Node.js 20 deprecation warning: these actions target Node20 but are forced to run on Node24. The run still succeeded. GitHub announced Node20 removal on 2026-09-23; do not describe the existing deployment as Node24-native.
+- Latest production data: 729 candidates; 543 articles; 186 videos; 77 verified publisher articles; 67 verified Haewon articles; 55 publisher articles and 48 Haewon articles with provenance-backed thumbnails; 329 thumbnail assignments; 400 missing; 57 unique thumbnail URLs. Of the 329 assignments, 273 are the same unverified legacy URL. Human image labels remain 0; visual precision is unmeasured.
+- Latest Google RSS diagnostics: 101 items, 98 site-level source URLs, 0 explicit publisher article URLs, 0 image signals. Bing RSS produced 34 candidates; the prior PR #28 sample (36 items) also had 0 image signals. PR #28 parser fixture tests are not proof of live feed image availability.
+- All 14 currently open PRs remain unmerged. Current main comparison ahead/behind: #13 59/9, #14 134/9, #15 3/9, #16 13/9, #20 17/7, #22 13/7, #23 15/7, #24 9/7, #25 19/1, #26 8/1, #27 19/1, #28 4/1, #29 13/1, #30 19/1. PR #14 remains mergeable=false; do not merge its stale docs branch wholesale.
+- PR #30 genuine pull_request run #45570252997 passed 142/142 tests and archive validation. It ran on a merge commit based on the previous main SHA 37998b31, not latest 3c93903. Its read-only workflow is not yet on main; it is not yet a shared CI gate for other PRs.
+- No PR merged and no new source was added. Browser/mobile visual QA remains unverified.
+
+## 2026-11-26 — UI and continuation action verification
+- The current main UI still defaults the news discovery page to `verified-haewon` and sorts by relevance score then published/discovered date. PR #27's shared predicate is required before X profiles/posts can be excluded from the verified publisher scope.
+- No UI controls were changed in this cycle. Human thumbnail labels remain browser-local until exported/imported; there are 0 persisted human review labels in current metrics.
+- The mandatory ChatGPT continuation action remains **🔄 연구 기반 재귀개선 계속하기** and must submit the full next-cycle prompt. It is a conversation action, not a website control. No claim of manual mobile/keyboard QA.
