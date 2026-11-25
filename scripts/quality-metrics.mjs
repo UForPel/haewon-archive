@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { classifyDiscoveryCategories, groupDiscoveryDuplicates, filterArticleCandidates, filterDiscoveryRelevance, hasExplicitPublisherArticleUrl } from '../js/discovery-kind.mjs';
 import { compareThumbnailCandidates, buildThumbnailReview } from '../js/thumbnail-comparison.mjs';
 import { summarizeThumbnailReviews } from '../js/thumbnail-review.mjs';
-import { buildLegacyThumbnailAudit } from '../js/article-review.mjs';
+import { buildLegacyThumbnailAudit, getVerifiedHaewonArticles, auditVerifiedPublisherArticles } from '../js/article-review.mjs';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const readJson=async path=>JSON.parse(await readFile(resolve(ROOT,path),'utf8'));
 export function summarizeThumbnailUrls(items=[]){
@@ -136,7 +136,8 @@ async function main(){
  report.thumbnailCandidateComparison=compareThumbnailCandidates(discovery,newsStatus.thumbnailEnrichment?.results||[]);
  report.thumbnailReview=buildThumbnailReview(discovery,report.thumbnailAudit);
  report.linkAudit=await auditLinks(discovery);report.thumbnailResponseAudit=await auditThumbnailResponses(discovery);
+ report.articleAccessibilityAudit=await auditVerifiedPublisherArticles(getVerifiedHaewonArticles(discovery));
  await writeFile(resolve(ROOT,'data/quality-metrics.json'),JSON.stringify(report,null,2)+'\n');
- console.log(JSON.stringify({sourceCount:report.sources.length,items:report.collection.newsCandidatesTotal,linkAuditChecked:report.linkAudit.checked,brokenLinks:report.linkAudit.broken.length,classificationAccuracy:report.classification.accuracy,accuracySamples:report.classification.reviewedSamples}));
+ console.log(JSON.stringify({sourceCount:report.sources.length,items:report.collection.newsCandidatesTotal,linkAuditChecked:report.linkAudit.checked,articleAccessibilityChecked:report.articleAccessibilityAudit.checked,brokenLinks:report.linkAudit.broken.length,classificationAccuracy:report.classification.accuracy,accuracySamples:report.classification.reviewedSamples}));
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url))main().catch(error=>{console.error(error);process.exitCode=1});
