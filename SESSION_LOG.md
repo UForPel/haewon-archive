@@ -1155,3 +1155,5 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Additional legacy cause detail: all 273 are Google News RSS records. 148 have a publisher source-site root hint, but zero have an article-specific publisher URL, zero have an article-specific discovery URL, zero have candidate image arrays, and zero have metadata-fetch records. The common image is therefore an untraceable inherited assignment in current stored data; the 148 source-site roots are not sufficient to identify a specific article or image. No wrapper decoding was attempted.
 
 - Refinement: added a fifth independent review dimension for original publisher-page accessibility (accessible, blocked, paywall, not-found, uncertain), rather than assuming that a recorded HTTPS URL is accessible.
+
+- Added a direct accessibility audit for all verified Haewon publisher URLs: one HEAD request per explicit HTTPS publisherArticleUrl, ordinary redirects only, no retry or fallback request. Results distinguish accessible, blocked, paywall, not-found, and uncertain. Implemented in PR #13; no live result is claimed before CI and the next quality run.
