@@ -350,3 +350,10 @@
 - [ ] Await read-only PR Actions for the new tests and validator; no merge without user approval.
 - [ ] Continue the larger bottleneck: increase distinct, source-traceable article thumbnails and verified original URLs without increasing prohibited/blocked requests. Provenance is not human visual relevance.
 - [ ] Human image/relevance labels and real mobile-browser QA remain outstanding.
+
+## 2026-11-25 — PR verification dependency
+- [x] Confirm main collection workflow has no `pull_request` trigger.
+- [x] Confirm PR #15 contains a read-only verification workflow, but remains open and unmerged.
+- [x] Open PR #25 for HTTP 405 classification/backoff and regression tests; confirm it has no Actions run/status check yet.
+- [ ] After user-approved merge of the read-only PR verification workflow, rerun PR #25 checks before considering its code for merge.
+- [ ] Do not treat main's 142/142 passing production run as validation of PR #25.
