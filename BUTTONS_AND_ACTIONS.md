@@ -218,3 +218,13 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 > Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main, 미완료 PR, GitHub Actions와 Pages 상태부터 실제 확인한다. 프로젝트 목표·제약·아키텍처·품질 기준선을 검토하고, 이번 병목에 관한 최신 연구·공식 문서·검증된 엔지니어링 사례를 근거와 한계까지 조사한다. 실제 데이터와 모바일 브라우저(가능한 경우)를 기준으로 가장 효과가 큰 개선을 선택해 코드·테스트·문서를 작업 성격별 PR로 분리한다. 검증된 원문·정확한 날짜/출처/분류·기사별 적합 썸네일이 기준선보다 실제로 증가하는지 측정한다. 후보 수를 부풀리지 않고 Google News 래퍼 해독이나 접근 제한 우회를 하지 않는다. 레거시 데이터는 근거 없이 삭제하지 않는다. 매 사이클 PROJECT_STATUS.md, SESSION_LOG.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md, CHATGPT_OPERATING_RULES.md를 갱신하고 Actions/Pages 결과 및 미검증 항목을 명확히 보고한다. 마지막 답변에 이 클릭 버튼을 반드시 다시 표시한다.
 
 - **누락 방지 규칙:** 매 Haewon Archive 작업 응답의 마지막에 버튼이 실제 표시되었는지 확인한다. GitHub 문서에 버튼을 기록하는 것만으로는 완료가 아니다. 버튼을 답변에 렌더링하지 않으면 세션 종료 조건 미충족이다.
+
+
+## 2026-11-25 — Article review panel correction
+
+- The article review panel now has six independent labels: original-page human accessibility, relevance, date accuracy, source accuracy, category accuracy, and thumbnail suitability.
+- Thumbnail suitability options: article-matched, unrelated image, no image present, or uncertain. The image itself and its provenance hint are shown beside the article. Missing thumbnails must not be counted as suitable.
+- Automated publisher URL HEAD checks are labeled HTTP response, not accessible. A 2xx HEAD response does not prove article body readability.
+- The general link audit no longer retries a 403 with GET. A 403 remains an access-denied response; no retry or access workaround is attempted.
+- Current PR #13 CI run #2 failed on a duplicate export declaration (113/116 tests passed, three files could not import). The duplicate was removed and regression tests added, but latest code has no post-fix CI result yet.
+- Actual mobile browser inspection remains unverified. CI and Pages deployment are not substitutes for visual testing.
