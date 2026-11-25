@@ -29,3 +29,11 @@ The relevance flag is a simple text-keyword match, not human verification. Group
 ## Corrections and removal
 
 For a broken link, incorrect attribution, or rights concern, update or remove the affected JSON entry and record the reason in a commit message.
+
+## 2026-11-25 — Fan-video and photo discovery clarification
+
+- Official channel Atom feed is not a complete video archive and must not be treated as the only target source.
+- Fan/creator/broadcaster videos are in-scope discovery categories. Record creator/channel identity only when the source page/feed explicitly provides it; preserve the original public URL and publication date.
+- Google News wrapper-only video candidates may be shown as unresolved links, but they are not verified YouTube videos. Do not decode opaque wrapper tokens, infer IDs, follow redirects for access workarounds, or auto-promote them to `videos.json`.
+- A separate optional YouTube Data API collector may be evaluated for broad channel/video search. It must use documented API endpoints, explicit quota budgets, and a user-managed secret. API quota and rate limits must be measured; no API key is created or requested by the assistant.
+- Photo discovery means indexing public source posts and attribution, not copying or rehosting original photographs. Keep Instagram/X/TikTok/fansite content as links unless the platform explicitly provides permitted preview metadata or an authorized API. Public visibility alone is not blanket permission to scrape.
