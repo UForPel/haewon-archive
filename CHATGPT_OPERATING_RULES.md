@@ -214,3 +214,11 @@ For each substantial update include: changed paths; planned vs implemented items
 - PR #28 must not be merged separately from PR #27's social URL predicate.
 - New publisher RSS feeds require explicit source permission; public endpoint discovery is not a licence. No new feed added.
 - No PR merge or production code change without explicit user approval.
+
+## 2026-11-26 — Current official references
+- GitHub Node20 retirement: https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/ (runners now force Node24 for JavaScript actions; the temporary opt-out is removed).
+- GitHub JavaScript action runtime metadata: https://docs.github.com/en/actions/reference/workflows-and-actions/metadata-syntax
+- GitHub Pages publishing workflow: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+- SBS RSS terms: https://news.sbs.co.kr/news/rss.do
+- Yonhap content copyright terms: https://en.yna.co.kr/view/AEN20260905001800315
+- Korean Digital News Content Use Rules: https://www.newstore.or.kr/store/copyRight/useRule.do
