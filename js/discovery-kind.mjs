@@ -38,15 +38,24 @@ export function classifyDiscoveryRelevance(item = {}) {
   if (NMIXX_TITLE.test(title)) return 'nmixx';
   return 'other';
 }
-export function hasExplicitPublisherArticleUrl(item = {}) {
+export function isExplicitPublisherArticleUrl(value = '') {
   try {
-    const url = new URL(String(item.publisherArticleUrl || ''));
+    const url = new URL(String(value || ''));
     const host = url.hostname.toLowerCase();
-    return url.protocol === 'https:' && !url.username && !url.password && url.pathname !== '/' &&
-      host !== 'news.google.com' && !host.endsWith('.news.google.com') &&
-      host !== 'google.com' && !host.endsWith('.google.com') &&
-      !host.endsWith('.googleusercontent.com') && !host.endsWith('.gstatic.com');
+    if (url.protocol !== 'https:' || url.username || url.password || url.pathname === '/') return false;
+    if (host === 'news.google.com' || host.endsWith('.news.google.com') ||
+      host === 'google.com' || host.endsWith('.google.com') ||
+      host.endsWith('.googleusercontent.com') || host.endsWith('.gstatic.com')) return false;
+    // X profile pages are not articles. Accept only an explicit public post URL.
+    if (host === 'x.com' || host.endsWith('.x.com') || host === 'twitter.com' ||
+      host.endsWith('.twitter.com')) {
+      return /^\/(?:[^/]+\/status\/\d+|i\/web\/status\/\d+)\/?$/.test(url.pathname);
+    }
+    return true;
   } catch { return false; }
+}
+export function hasExplicitPublisherArticleUrl(item = {}) {
+  return isExplicitPublisherArticleUrl(item.publisherArticleUrl);
 }
 export function filterDiscoveryRelevance(items = [], scope = 'verified-haewon') {
   if (scope === 'all') return items;
