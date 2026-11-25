@@ -32,7 +32,7 @@ export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoS
   const row=sourceMap.get(source)||{source,items:0,withUrl:0,withPublisherArticleUrl:0,withThumbnail:0,withDate:0};
   row.items++;
   if(/^https?:\/\//i.test(item.url||''))row.withUrl++;
-  if(/^https:\/\//i.test(item.publisherArticleUrl||''))row.withPublisherArticleUrl++;
+  if(hasExplicitPublisherArticleUrl(item))row.withPublisherArticleUrl++;
   if(/^https?:\/\//i.test(item.thumbnailUrl||''))row.withThumbnail++;
   if(Number.isFinite(Date.parse(item.publishedAt||item.discoveredAt||'')))row.withDate++;
   sourceMap.set(source,row);
@@ -49,11 +49,11 @@ export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoS
  const candidateSources=discovery.flatMap(item=>{const rows=(item.candidateSources||[]).map(row=>row.source).filter(Boolean);return rows.length?rows:(item.candidateSource?[item.candidateSource]:[]);});
  const articleUrlProvenance={
   totalItems:discovery.length,
-  itemsWithPublisherArticleUrl:discovery.filter(item=>String(item.publisherArticleUrl||'').startsWith('https://')).length,
+  itemsWithPublisherArticleUrl:discovery.filter(hasExplicitPublisherArticleUrl).length,
   bingNewsItems:discovery.filter(item=>item.discoverySource==='bing-news-rss').length,
   candidateSourceCounts:countValues(candidateSources),
-  publisherHosts:countValues(discovery.map(item=>item.publisherHost||hostOf(item.publisherArticleUrl))),
-  finalHosts:countValues(discovery.filter(item=>String(item.publisherArticleUrl||'').startsWith('https://')).map(item=>item.thumbnailMetaFetch?.resolvedArticleHost||'')),
+  publisherHosts:countValues(discovery.filter(hasExplicitPublisherArticleUrl).map(item=>item.publisherHost||hostOf(item.publisherArticleUrl))),
+  finalHosts:countValues(discovery.filter(hasExplicitPublisherArticleUrl).map(item=>item.thumbnailMetaFetch?.resolvedArticleHost||'')),
   wrapperOnlyMetadataHosts:countValues(discovery.filter(item=>!String(item.publisherArticleUrl||'').startsWith('https://')).map(item=>item.thumbnailMetaFetch?.resolvedArticleHost||'')),
   sourceSiteHosts:countValues(discovery.map(item=>hostOf(item.sourceUrl))),
   discoveryWrapperHosts:countValues(discovery.map(item=>hostOf(item.discoveryUrl)))
