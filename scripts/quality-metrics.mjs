@@ -122,7 +122,7 @@ export async function auditLinks(items,{fetchImpl=fetch,limit=40,timeoutMs=3500,
    try{
     const response=await fetchImpl(target.url,{method:'HEAD',redirect:'follow',signal:AbortSignal.timeout(timeoutMs)});
     let status=response.status;
-    if(status===405||status===403){const fallback=await fetchImpl(target.url,{method:'GET',redirect:'follow',signal:AbortSignal.timeout(timeoutMs)});status=fallback.status;}
+    if(status===405){const fallback=await fetchImpl(target.url,{method:'GET',redirect:'follow',signal:AbortSignal.timeout(timeoutMs)});status=fallback.status;}
     results[index]={...target,status,ok:status>=200&&status<400};
    }catch(error){results[index]={...target,status:null,ok:false,error:String(error?.message||error)};}
   }
