@@ -575,7 +575,7 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - PRs #13/#14/#15/#16/#20/#22/#23/#24 remain open and unmerged; no merge was performed. Browser/mobile visual QA remains unverified.
 
 ## PR #25 verification boundary — 2026-11-25
-- PR #25 is open and mergeable; it is not merged. Head: `294ce3f7ad0a47e7c30e1805eff82e2d01a6c7d4`.
+- PR #25 is open and mergeable; it is not merged. Head SHA is checked from the live PR metadata; do not treat the earlier commit SHA as current.
 - `fetch_commit_workflow_runs` returned no PR-triggered runs and the commit combined-status list was empty. This is not a passing test result.
 - Root cause of the missing automatic check: main contains `.github/workflows/collect-and-deploy.yml` with `push`, `schedule`, and `workflow_dispatch`, but no `pull_request` trigger. `.github/workflows/pull-request-verification.yml` does not exist on main.
 - PR #15 proposes that exact read-only workflow (`contents: read`, unit tests and archive validation), but PR #15 is still open/unmerged. Do not merge it or PR #25 without user approval.
