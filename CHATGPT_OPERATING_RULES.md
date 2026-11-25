@@ -173,3 +173,16 @@ For each substantial update include: changed paths; planned vs implemented items
 - Google News RSS 4/4, 260 items, 258 site-level URLs, 0 direct article URLs and 0 image signals; Bing 4/4, 41 candidates; combined 301 fetched, 275 unique, 6 additions.
 - Metadata enrichment attempted 0 URLs due retry backoff. Do not characterize this as failure.
 - Keep Google News wrappers opaque and only use explicit HTTPS article/video URLs from public metadata.
+
+
+
+## 2026-11-25 — Fresh repository audit operating checkpoint
+
+- Always fetch live main, requested PR heads, compare counts, Actions runs/jobs, and Pages workflow steps before describing project state. Distinguish the workflow head SHA from later bot-generated data commits.
+- Do not describe a push-triggered temporary snapshot as a PR check. Check the run event and `pull_requests` array. Report tests, validation, collection, data commit, artifact upload, deploy step and independent browser/mobile QA as separate outcomes.
+- Main remains `37998b31b12b2eb9980cff6df616b2f677a10de6`; Actions #587's production steps all succeeded, including deploy-pages. Pages API read was unavailable through the connector; browser/mobile QA is still unverified.
+- Current production data still includes 3 X/social URLs in publisherArticleUrl values. PR #27 is unmerged; verify the next real collection after approval/merge rather than claiming its fix is already deployed.
+- PR #28's public Google/Bing RSS sample had zero image signals in both feeds. Do not invent image URLs or infer article URLs from site-level Google News source links.
+- Keep 273 shared legacy thumbnails intact. Human relevance and image suitability precision are unmeasured.
+- No PR may be merged without explicit user approval. Rebase or split stale documentation PRs rather than merging broad historical text.
+- Every substantial response ends with the real ChatGPT conversation action **🔄 연구 기반 재귀개선 계속하기**.
