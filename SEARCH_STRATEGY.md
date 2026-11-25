@@ -139,3 +139,11 @@ Google News RSS wrapper links whose titles indicate YouTube/fancam are condition
 - The cycle reports precision only from explicit review labels. It marks the sample exploratory until at least 20 reviewed records exist; this is a minimum reporting gate, not proof of statistical significance.
 - Automatic query promotion remains disabled. Query volume is not treated as relevance or precision.
 - The workflow resets to latest main and regenerates collected data before each push attempt rather than rebasing stale generated JSON snapshots.
+
+## 2026-11-25 — Video wrapper preservation and freshness baseline
+
+- Main discovery dataset measured 704 records; newest observed publication timestamp was `2026-11-19T09:21:00Z` on 2026-11-25. Report publication-age lag as a first-class freshness metric.
+- Heuristic audit identified 186 title/URL-hinted unresolved video candidates (185 Google News wrappers, 1 publisher result). This count is not a verified video count.
+- Wrapper-only fancam results must remain visible as unresolved discovery candidates. Only explicit HTTPS YouTube watch/shorts/embed or youtu.be video URLs may be converted to video records. Never decode opaque Google News tokens or infer IDs.
+- YouTube Data API `search.list` is a documented discovery option for fan channels, but current official quota documentation lists 100 calls/day by default and 1 unit/call. If implemented, rotate a small query pack, preserve channel ID/name and publishedAt, deduplicate by video ID, and make the API key optional/user-managed.
+- Keep Google/Bing RSS editorial search and YouTube video search as distinct collectors with distinct source provenance and quotas.
