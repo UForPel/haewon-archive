@@ -130,3 +130,18 @@ Status: DESIGN ONLY. No external scheduler, Gemini API integration, Worker or fi
 ### Status
 - No Worker, GitHub App, external scheduler, Gemini integration, API key, or five-minute trigger is deployed.
 - PR #23's YouTube collector is optional and skipped until the user adds its secret. No API key is requested in chat.
+
+## Cloudflare Cron + GitHub App dry-run proposal (PR #24, 2026-11-25)
+- A dedicated Cloudflare Worker runs only on Cron (UTC 11:17 and 23:17), creates a short-lived GitHub App JWT, exchanges it for an installation token scoped to repository haewon-archive and Actions: write, then dispatches .github/workflows/cloudflare-dispatch-dry-run.yml.
+- The target workflow accepts only mode=dry-run and checks timestamp/cron metadata. It performs no collection, data writes, source changes, or Pages deployment.
+- Worker has no HTTP handler and workers_dev=false. It is not deployed and cannot dispatch until the owner creates/installs the GitHub App and configures Worker secrets.
+- Required Cloudflare secrets: GITHUB_APP_ID, GITHUB_INSTALLATION_ID, GITHUB_APP_PRIVATE_KEY. GitHub App should be installed only on UForPel/haewon-archive and granted only Actions: write. The minted installation token is narrowed again to that repository and permission.
+- This avoids a broad PAT. It does not yet solve queue delays or guarantee collection completion; it only proves scheduled dispatch. Production collection should not be moved off GitHub Actions until dry-run and operational measurements support the change.
+- Cloudflare Workers Free official limits: 100,000 requests/day, 10 ms CPU per Cron invocation, five Cron triggers/account. One twice-daily trigger is comfortably within count limits; test WebCrypto signing under actual Cloudflare runtime before enabling.
+- Existing GitHub collector schedule remains unchanged. Do not deploy or enable the Worker without explicit user action.
+
+## Gemini API free-tier decision (2026-11-25)
+- Official pricing says limited access to certain models, free input/output tokens for eligible models, and free-tier content may be used to improve Google products.
+- Active limits vary by project and model (RPM, input TPM, RPD) and must be checked in Google AI Studio. RPD resets at midnight Pacific Time. Do not assume a universal static free quota.
+- Grounding availability differs by model/tier; some current Gemini 3 models do not include free-tier Google Search grounding. Treat grounding as unavailable unless the selected model's current table says otherwise.
+- Gemini stays optional and off by default. If used, send only public/sanitized metadata; never credentials, personal/private information, or human review labels tied to identifiable people. No Gemini key/integration is active.
