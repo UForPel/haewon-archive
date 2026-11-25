@@ -16,7 +16,7 @@ if (host) {
     contentType: { article: '기사', 'social-post': '소셜 게시물', profile: '프로필', other: '기타', uncertain: '판단 보류' }
   };
   const details = document.createElement('details'); details.className = 'article-quality-review';
-  const summary = document.createElement('summary'); summary.textContent = '검증 원문 URL 품질 검수 · 자료 유형 / 원문 접근성 / 관련성 / 날짜 / 출처 / 분류 / 썸네일 적합성';
+  const summary = document.createElement('summary'); summary.textContent = '검증 원문 URL 품질 검수 · 자료 유형 / 원문 접근성 / 직접·간접 관련성 / 날짜 / 출처 / 분류 / 썸네일 적합성';
   const body = document.createElement('div'); body.className = 'article-quality-review-body';
   const intro = document.createElement('p'); intro.textContent = '개별 HTTPS 원문 주소가 명시된 해원 관련 항목을 대상으로 합니다. 기사·소셜 게시물·프로필을 먼저 구분하고 여덟 항목을 따로 평가하세요. 썸네일은 기사 내용과 실제로 일치하는지 확인하고, 이미지가 없으면 이미지 없음으로 표시하세요. 라벨은 이 브라우저에 저장되며 JSON으로 내보내 다른 기기 또는 저장소 검수 자료에 옮길 수 있습니다.';
   const progress = document.createElement('p'); progress.className = 'photo-meta'; progress.setAttribute('role', 'status'); progress.setAttribute('aria-live', 'polite');
