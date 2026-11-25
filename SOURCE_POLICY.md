@@ -51,3 +51,9 @@ For a broken link, incorrect attribution, or rights concern, update or remove th
 - Article discovery remains RSS/public metadata first. Do not decode Google News wrappers, bypass 403s, scrape login-gated pages, infer publisher URLs, or probe hidden endpoints.
 - Photo archive remains original public post/page links with source name, attribution and date. No image binaries are rehosted. No general free public fan-photo API was identified; X API reads are pay-per-use and Meta Content Library is research-oriented with current public-data scope excluding South Korea.
 - Preserve the 273 repeated legacy image URL occurrences until record-level source evidence and human review justify a migration.
+
+## 2026-11-25 — photo-source feasibility
+- Facebook Graph API Page Photos can read photos from Pages, but third-party Page access may require Page Public Content Access; Page-owned content requires appropriate Page token permissions such as `pages_read_engagement` and `pages_show_list`. This is not a general anonymous photo-discovery feed.
+- Continue using public original-post/page URLs with creator/source attribution and dates. Do not rehost image binaries or bypass login, regional, age, or other access restrictions.
+- Photo count remains zero until an allowed public source link is manually submitted or a clearly authorized feed is available.
+- Preserve 273 legacy repeated thumbnail URL assignments pending record-level review.
