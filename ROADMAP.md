@@ -525,3 +525,12 @@
 - Search packs now propose 36 unique editorial query phrases across six topic families. The two scheduled Korea-time runs select different packs.
 - Expected RSS calls rise from 16 to 24/day (+50%). Measure actual per-query fetched/unique candidates, publication-date lag, source diversity and human-reviewed relevance before further increasing request volume.
 - Keep video/fancam searches in a separate API/feed collector; do not overload editorial news search.
+
+## 2026-11-25 — Fan video and photo discovery next steps
+
+1. **Review PR #20, #22, #23** after inspecting their diffs and test evidence. Do not merge without explicit user approval.
+2. If the user chooses to configure the optional `YOUTUBE_API_KEY` secret, run a bounded manual workflow and measure actual new IDs, channel diversity, official/unverified proportions and false positives before enabling scheduled collection.
+3. Keep non-official channel identity as `unverified` until a human verifies it is a fan/creator channel. Do not call every non-official uploader a fan.
+4. **Photo archive remains unimplemented.** X API read access is pay-per-use; Meta Content Library is research-oriented and its current public dataset excludes South Korea. Investigate public RSS/official page source links and manual public-link submission, but do not scrape Instagram/X/fansites or rehost images.
+5. Implement Gemini only as an optional public-metadata analyst after checking current model-specific free quotas and data-use terms. Do not use free-tier Gemini as an always-on search dependency.
+6. Evaluate Cloudflare Cron + a repository-scoped GitHub App as the combined scheduler/gateway. Start with dry-run at a conservative cadence; 5-minute triggers are technically supported but not proof of 5-minute completion.
