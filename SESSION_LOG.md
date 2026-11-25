@@ -1201,3 +1201,5 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 2. Review 49 article records manually, including actual original-page accessibility and metadata accuracy.
 3. Apply thumbnail suitability labels to 39 images individually; record the 10 no-image cases as not-present, not as successful thumbnail reviews.
 4. Generate a fresh quality snapshot and compare counts and quality to the baseline; preserve all 273 legacy records absent verified replacements.
+
+- Follow-up CI: temporary validation run #4 / 45531573683 completed successfully against the corrected PR #13 code: 150/150 tests passed and npm run validate passed (19 videos, 0 photos, 154 run logs). A temporary copy of the PR #15 workflow was used to trigger this run, then removed from PR #13 to preserve PR separation. Only the workflow file was removed after testing; code and test sources were unchanged. Latest PR #13 branch head after cleanup: 86c9e95b4b8f807bc2f5ec223443a354e0d97e2c.
