@@ -1128,3 +1128,13 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Added an explicit non-cancellation rule to `BUTTONS_AND_ACTIONS.md`: user-typed messages, corrections, and immediate task changes do not remove the required end-of-response action.
 - Required label remains **🔄 연구 기반 재귀개선 계속하기**; the action must submit the full research-informed recursive-improvement prompt in `CHATGPT_OPERATING_RULES.md`. If a real action cannot be rendered, provide the complete copyable prompt.
 - Documentation commit: `653405c1f422e53d67cf43ea13250d6abe7332d9`. CI/Pages status for this commit must be checked before calling the documentation change deployed.
+
+
+
+## 2026-11-25 — Rebase PR #15's read-only CI proposal onto current main
+
+- Inspected PR #15's workflow and verified run #10 (ID `45541326160`) was genuinely `pull_request` event for PR #15, with 142/142 tests and validation successful.
+- Rather than updating the stale PR #15 branch (8 commits behind), created `ci/read-only-pr-verification-main-20261125` directly from main SHA `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- Added only `.github/workflows/pull-request-verification.yml`: PRs targeting main, `contents: read`, pinned checkout v7.0.1 and setup-node v7.1.0, `persist-credentials: false`, `package-manager-cache: false`, Node 22, `npm test`, `npm run validate`, concurrency cancellation and 10-minute timeout.
+- No `package-lock.json` or npm-shrinkwrap exists in main; the repository has no dependency-install step in its existing workflows, so this minimal job does not invent an install step.
+- No code/data/deploy permissions were added. PR-event CI for this new branch is pending PR creation and must be reported separately from PR #15 run #10.
