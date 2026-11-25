@@ -564,3 +564,17 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Reaffirmed the mandatory bottom-of-response ChatGPT action label **🔄 연구 기반 재귀개선 계속하기**.
 - User-typed messages and corrections must not suppress the action. The action submits the full reusable recursive-improvement prompt from `CHATGPT_OPERATING_RULES.md`; a textual label alone is insufficient.
 - The requirement was already present in operating guidance; this update addresses the failure to render the action in the actual assistant response. Documentation commit: `653405c1f422e53d67cf43ea13250d6abe7332d9`; follow-up session-log commit is being recorded separately. Verify Actions/Pages for the resulting commits.
+
+
+
+## 2026-11-25 — Fresh audit: main, PR queue, Actions and Pages
+
+- Re-read GitHub state. Main remains `37998b31b12b2eb9980cff6df616b2f677a10de6`. No PR was merged or closed in this audit.
+- Production Actions run #587 (run ID `45556461352`) used workflow head `d85484c426ef0f67e3a3ddf16da76276315664e1`; all 19 substantive steps succeeded: tests, YouTube/RSS collection, discovery sync, improvement cycle, quality metrics, both validations, data commit, Pages configuration, artifact upload and Pages deploy. The run produced a 434,230-byte Pages artifact. Its successful deploy step is not independent browser/mobile QA.
+- Current production workflow still uses checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4. PR #26 proposes Node24-compatible pinned releases; production migration is not yet verified.
+- Latest main quality data: 707 candidates (521 articles, 186 videos), 61 publisherArticleUrl values, 321 assigned thumbnails, 273 shared legacy assignments retained, 386 missing thumbnails, 49 unique thumbnail URLs. Of the 61 publisher URLs, 3 are X/social URLs; PR #27 is still unmerged. The current run's metrics show 60 verified publisher articles and 51 verified Haewon articles, so social URL exclusion has not reached production.
+- The 273 repeated legacy assignments remain preserved and excluded from individual article preview; do not delete or bulk-replace them.
+- PR #25–#28 remain open, each 0 commits behind main. Their passing runs are temporary push-triggered read-only snapshot runs, not PR-event checks: #25 144/144, #26 142/142, #27 147/147, #28 145/145. PR #28 live public RSS sample: Google 57 items (57 source URLs, 0 publisher article URLs, 0 image signals); Bing 36 items (36 explicit article URLs, 0 image signals); 93 fetched, 85 unique, 8 duplicates, 2 additions. This demonstrates missing feed-provided image metadata, not a parser failure.
+- PRs #13–#16 are 8 commits behind main; #20/#22–#24 are 6 commits behind. PR #14 is mergeable=false and its 8-file diff is documentation-only. Main's 8 intervening commits changed BUTTONS_AND_ACTIONS.md, PROJECT_STATUS.md and SESSION_LOG.md, overlapping PR #14's edits to all three; do not merge the stale branch wholesale.
+- Pages API read was rejected by the GitHub connector, so Pages configuration is verified by the workflow step, not by an independent API read. Mobile browser, visual layout, keyboard and deployed content QA remain unverified.
+- Official GitHub notice: Node 20 was removed from Actions runners on 2026-09-23; JavaScript actions now run on Node 24. Keep PR #26 as a production compatibility gate. Source: https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/
