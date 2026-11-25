@@ -534,3 +534,14 @@
 4. **Photo archive remains unimplemented.** X API read access is pay-per-use; Meta Content Library is research-oriented and its current public dataset excludes South Korea. Investigate public RSS/official page source links and manual public-link submission, but do not scrape Instagram/X/fansites or rehost images.
 5. Implement Gemini only as an optional public-metadata analyst after checking current model-specific free quotas and data-use terms. Do not use free-tier Gemini as an always-on search dependency.
 6. Evaluate Cloudflare Cron + a repository-scoped GitHub App as the combined scheduler/gateway. Start with dry-run at a conservative cadence; 5-minute triggers are technically supported but not proof of 5-minute completion.
+
+## Updated priorities — 2026-11-25
+1. Review and merge PRs only with explicit owner approval. PR #13 syntax fix and PR #20 invalid-date fallback now have fresh branch CI evidence; #14 docs, #15 read-only CI, #16 metric split, #22 search rotation, #23 optional YouTube search, and #24 dispatch dry-run remain separate open PRs.
+2. Do not treat passing tests as visual QA. After the owner chooses merge order, open the live Pages app on an actual Android browser and check navigation, layout overflow, image rendering, date sorting, candidate panel, and article-review controls. Record screenshots/results separately from Actions.
+3. Add human review labels for the 49 verified-source records. Keep inferred categories as hints until labels exist. Keep thumbnail URL provenance separate from article-image suitability.
+4. Measure PR #22 using unique articles/day, exact-title duplicate rate, direct Haewon relevance yield, source distribution, and publication-age lag. Request volume is not success.
+5. If the owner wants broader video discovery, install/configure the optional GitHub secret YOUTUBE_API_KEY directly in repository Settings > Secrets and variables > Actions. Never paste it into chat. Keep all non-official channels unverified until human review.
+6. For Cloudflare dry-run PR #24, first create a GitHub App limited to this repository with Actions: write, then configure its three secrets in Cloudflare and deploy the Worker manually. Validate one dispatch and its no-write workflow output before considering any production trigger. Do not switch the existing GitHub collection schedule until dry-run evidence and explicit approval.
+7. Keep Gemini off by default. Only consider it for public/sanitized metadata after accepting the free-tier product-improvement data terms and verifying active project/model limits in AI Studio. Never make Gemini a core dependency.
+8. Keep photo archive manual-link-first: public, permitted original post/page URLs with source attribution and date. Do not use paid APIs, login-gated scraping, hidden endpoints, or image rehosting as core paths.
+9. Preserve all 273 legacy repeated image URL occurrences until an evidence-backed, reviewed per-record migration is available.
