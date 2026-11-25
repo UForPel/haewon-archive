@@ -147,3 +147,10 @@ Google News RSS wrapper links whose titles indicate YouTube/fancam are condition
 - Wrapper-only fancam results must remain visible as unresolved discovery candidates. Only explicit HTTPS YouTube watch/shorts/embed or youtu.be video URLs may be converted to video records. Never decode opaque Google News tokens or infer IDs.
 - YouTube Data API `search.list` is a documented discovery option for fan channels, but current official quota documentation lists 100 calls/day by default and 1 unit/call. If implemented, rotate a small query pack, preserve channel ID/name and publishedAt, deduplicate by video ID, and make the API key optional/user-managed.
 - Keep Google/Bing RSS editorial search and YouTube video search as distinct collectors with distinct source provenance and quotas.
+
+## 2026-11-25 — Twice-daily query rotation
+
+- Previous behavior: three packs of four queries, selected by date only; both scheduled runs on a given Korea date repeated the same pack.
+- PR #22: six packs of six phrases, selected by Korea date and a morning/evening run slot. This gives 36 unique editorial phrases and 12 distinct phrases per day.
+- Expected feed requests: 24/day (six queries × Google News and Bing × two runs), compared with 16/day previously. This is a +50% request budget; do not infer a +50% gain in unique coverage.
+- Evaluate per-query unique candidates, newest publication timestamp, age lag, duplicate collapse, publisher diversity and human-reviewed relevance after collection runs. Keep video/fancam query budget separate.
