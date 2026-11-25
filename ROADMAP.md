@@ -418,3 +418,5 @@
 - [x] Identify the Wikitree lookalike/cover article as indirect relevance; add a separate indirect label instead of forcing it into direct relevance.
 - [ ] Inspect the remaining 32 exact assigned thumbnail URLs and persist one of suitable / unsuitable / uncertain per article.
 - [ ] Complete human date/source/category/accessibility labels for all 49 source URLs.
+
+- [ ] Independently open the deployed Pages URL in a real browser and verify the current release; Actions deployment success alone is not visual confirmation.
