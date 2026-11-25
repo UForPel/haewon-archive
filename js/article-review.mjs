@@ -6,7 +6,8 @@ export const ARTICLE_REVIEW_DIMENSIONS = {
   dateAccuracy: ['accurate', 'inaccurate', 'missing', 'uncertain'],
   sourceAccuracy: ['accurate', 'inaccurate', 'uncertain'],
   categoryAccuracy: ['correct', 'incorrect', 'uncertain'],
-  thumbnailAccuracy: ['suitable', 'unsuitable', 'not-present', 'uncertain']
+  thumbnailAccuracy: ['suitable', 'unsuitable', 'not-present', 'uncertain'],
+  contentType: ['article', 'social-post', 'profile', 'other', 'uncertain']
 };
 const valid = (dimension, value) => ARTICLE_REVIEW_DIMENSIONS[dimension]?.includes(value);
 export function getVerifiedHaewonArticles(items = []) {
@@ -83,7 +84,7 @@ export function summarizeArticleReviews(items = [], labels = {}) {
     dimensions[dimension] = {
       eligible: eligible.length, reviewed, pending: eligible.length - reviewed,
       coverage: eligible.length ? Math.round(reviewed / eligible.length * 100) : 0,
-      counts, accuracy: decided ? Math.round(correct / decided * 100) : null
+      counts, accuracy: dimension === 'contentType' ? null : decided ? Math.round(correct / decided * 100) : null
     };
   }
   return {
