@@ -1128,3 +1128,30 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Added an explicit non-cancellation rule to `BUTTONS_AND_ACTIONS.md`: user-typed messages, corrections, and immediate task changes do not remove the required end-of-response action.
 - Required label remains **🔄 연구 기반 재귀개선 계속하기**; the action must submit the full research-informed recursive-improvement prompt in `CHATGPT_OPERATING_RULES.md`. If a real action cannot be rendered, provide the complete copyable prompt.
 - Documentation commit: `653405c1f422e53d67cf43ea13250d6abe7332d9`. CI/Pages status for this commit must be checked before calling the documentation change deployed.
+
+
+
+## 2026-11-25 — Recursive audit checkpoint (main 37998b31)
+
+### Repository and PR state
+- Verified main SHA: `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- PR #13–#16: 59/134/3/13 commits ahead respectively and 8 behind main. PR #20, #22, #23, #24: 17/13/15/9 ahead and 6 behind. PR #14 is `mergeable=false`; its diff is eight documentation files only. Main's eight intervening commits touched three of those same documents (BUTTONS_AND_ACTIONS.md, PROJECT_STATUS.md, SESSION_LOG.md), explaining the stale documentation conflict risk. No merge performed.
+- PR #25–#28 are each 0 behind main and remain open. Current heads: #25 `06e90e296783f93ec13b3900aceee79ef5835870`, #26 `803063642fda2dd73af4820c0149603a9f183247`, #27 `42270806c8d6535a7411a9250af5e060c523d5ce`, #28 `f194bce85d8359b47ee187a17c988b993b3a6403`.
+- Temporary push-triggered read-only snapshot runs: #25 run 45564923014 success (144 tests); #26 run 45564928105 success (142); #27 run 45564937006 success (147); #28 run 45565456260 success (145), then live RSS run 45565548309 success. These runs have empty pull_requests arrays and are not PR-event CI. #28's first fixture run 45565384301 failed due root-relative vs directory-relative image resolution; fixture corrected to root-relative semantics and rerun passed.
+- PR #15's workflow is not on main. Its proposed pull_request event cannot be treated as a production PR gate until a workflow exists on the base branch. GitHub documents that workflow_dispatch requires the workflow file to exist on the default branch; use branch snapshot runs for pre-merge verification and report the limitation rather than calling them PR checks.
+
+### Production workflow and data
+- Actions #587 / run ID 45556461352: all substantive steps succeeded, including tests, public collection, quality, validation, data commit, Pages configure, 434,230-byte artifact upload and deploy-pages. Workflow head was `d85484c426ef0f67e3a3ddf16da76276315664e1`; subsequent data refresh commit left current main at `37998b31...`.
+- Main's production workflow still uses checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4. PR #26 is not yet deployed. GitHub removed Node 20 on 2026-09-23 and JavaScript actions now use Node 24; source: https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/
+- Current quality metrics: 707 candidates (521 articles, 186 videos); 61 publisherArticleUrl values, 3 of which are X/social URLs; 321 thumbnails, 273 shared legacy assignments, 386 missing and 49 unique thumbnail URLs. Do not delete the 273 legacy assignments.
+- PR #27 is unmerged; current main therefore still counts social URLs in publisher article scope. Next post-merge production run must verify X profile/post exclusion and no new social metadata thumbnails.
+- PR #28 live public RSS sample: Google 57 items, 57 source URLs, 0 article URLs, 0 image signals; Bing 36 items, 36 explicit article URLs, 0 image signals; 93 fetched, 85 unique, 8 duplicates collapsed, 2 additions. RSS image candidate parser tests pass, but actual feed metadata does not provide images in this sample. Do not infer article URLs or bypass access restrictions.
+- Pages connector API read failed (endpoint not accepted); Actions configure/upload/deploy steps succeeded. This is not independent browser/mobile verification.
+
+### Next gates
+- Keep all PRs unmerged pending user approval.
+- Review #13/#15/#16 against latest main before any integration. #14 should be split/rebased or replaced rather than merged wholesale.
+- After approval and merge of #26, verify a real production Pages deployment with the pinned Node24-compatible actions.
+- After approval and merge of #27, inspect persisted data for X/social false positives and thumbnail reintroduction.
+- Keep #28's feed coverage limitation explicit; investigate only other public, explicitly disclosed publisher metadata paths.
+- Preserve 273 legacy thumbnail assignments. No human relevance or image-suitability precision is measured; browser/mobile QA remains outstanding.
