@@ -236,46 +236,45 @@ export function mergeCandidates(existing,incoming){
  return [...map.values()].sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
 }
 export function newsFeedUrl(query){return 'https://news.google.com/rss/search?q='+encodeURIComponent(query)+'&hl=ko&gl=KR&ceid=KR:ko';}
-export function summarizeRssImageSignals(xml=''){
- const items=[...String(xml).matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map(match=>match[1]);
- const count=(pattern,value)=>[...String(value).matchAll(pattern)].length;
- let descriptionImageTags=0,contentEncodedImageTags=0,itemsWithImageSignals=0;
+function summarizeRssImageSignalItems(items,articleUrlResolver){
+ const count=(pattern,value)=>[...String(value||'').matchAll(pattern)].length;
+ let sourceUrlItems=0,publisherArticleUrlItems=0,mediaThumbnailTags=0,mediaContentTags=0,enclosureTags=0;
+ let imageMediaContentTags=0,imageEnclosureTags=0,contentEncodedItems=0,descriptionImageTags=0,contentEncodedImageTags=0,itemsWithImageSignals=0;
  for(const item of items){
   const description=tag(item,'description'),encoded=tag(item,'content:encoded');
   const descriptionImages=count(/<(?:img|source)\b/gi,description);
   const encodedImages=count(/<(?:img|source)\b/gi,encoded);
-  descriptionImageTags+=descriptionImages;contentEncodedImageTags+=encodedImages;
-  if(/<(?:media:thumbnail|media:content|enclosure)\b/i.test(item)||descriptionImages||encodedImages)itemsWithImageSignals++;
+  const mediaTags=[...item.matchAll(/<(media:thumbnail|media:content|enclosure)\b[^>]*>/gi)].map(match=>({name:match[1].toLowerCase(),raw:match[0]}));
+  const imageMediaTags=mediaTags.filter(({name,raw})=>{
+   if(name==='media:thumbnail')return true;
+   return /^image\//i.test(attr(raw,'type'))||attr(raw,'medium').toLowerCase()==='image';
+  });
+  sourceUrlItems+=/^https:\/\//i.test(attr(item.match(/<source\b[^>]*>/i)?.[0]||'','url'))?1:0;
+  publisherArticleUrlItems+=articleUrlResolver(item)?1:0;
+  mediaThumbnailTags+=mediaTags.filter(row=>row.name==='media:thumbnail').length;
+  mediaContentTags+=mediaTags.filter(row=>row.name==='media:content').length;
+  enclosureTags+=mediaTags.filter(row=>row.name==='enclosure').length;
+  imageMediaContentTags+=imageMediaTags.filter(row=>row.name==='media:content').length;
+  imageEnclosureTags+=imageMediaTags.filter(row=>row.name==='enclosure').length;
+  contentEncodedItems+=/<content:encoded\b/i.test(item)?1:0;
+  descriptionImageTags+=descriptionImages;
+  contentEncodedImageTags+=encodedImages;
+  if(imageMediaTags.length||descriptionImages||encodedImages)itemsWithImageSignals++;
  }
- return {items:items.length,sourceUrlItems:items.filter(item=>/^https:\/\//i.test(attr(item.match(/<source\b[^>]*>/i)?.[0]||'','url'))).length,publisherArticleUrlItems:items.filter(item=>isPublisherArticleUrl(tag(item,'link'))||isPublisherArticleUrl(tag(item,'guid'))).length,mediaThumbnailTags:count(/<media:thumbnail\b/gi,xml),mediaContentTags:count(/<media:content\b/gi,xml),enclosureTags:count(/<enclosure\b/gi,xml),contentEncodedItems:count(/<content:encoded\b/gi,xml),descriptionImageTags,contentEncodedImageTags,itemsWithImageSignals};
+ return {items:items.length,sourceUrlItems,publisherArticleUrlItems,mediaThumbnailTags,mediaContentTags,enclosureTags,imageMediaContentTags,imageEnclosureTags,contentEncodedItems,descriptionImageTags,contentEncodedImageTags,itemsWithImageSignals};
+}
+export function summarizeRssImageSignals(xml=''){
+ const items=[...String(xml).matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map(([,item])=>item);
+ return summarizeRssImageSignalItems(items,item=>isPublisherArticleUrl(tag(item,'link'))||isPublisherArticleUrl(tag(item,'guid')));
 }
 export function summarizeBingRssImageSignals(xml=''){
- const items=[...String(xml).matchAll(/<item\\b[^>]*>([\\s\\S]*?)<\\/item>/gi)].map(([,item])=>item);
- const count=(pattern,value)=>[...String(value||'').matchAll(pattern)].length;
- let descriptionImageTags=0,contentEncodedImageTags=0,itemsWithImageSignals=0;
- for(const item of items){
-  const description=tag(item,'description'),encoded=tag(item,'content:encoded');
-  const descriptionImages=count(/<(?:img|source)\\b/gi,description);
-  const encodedImages=count(/<(?:img|source)\\b/gi,encoded);
-  descriptionImageTags+=descriptionImages;contentEncodedImageTags+=encodedImages;
-  if(/<(?:media:thumbnail|media:content|enclosure)\\b/i.test(item)||descriptionImages||encodedImages)itemsWithImageSignals++;
- }
- return {
-  items:items.length,
-  publisherArticleUrlItems:items.filter(item=>Boolean(extractBingNewsArticleUrl(tag(item,'link')))).length,
-  mediaThumbnailTags:count(/<media:thumbnail\\b/gi,xml),
-  mediaContentTags:count(/<media:content\\b/gi,xml),
-  enclosureTags:count(/<enclosure\\b/gi,xml),
-  contentEncodedItems:count(/<content:encoded\\b/gi,xml),
-  descriptionImageTags,
-  contentEncodedImageTags,
-  itemsWithImageSignals
- };
+ const items=[...String(xml).matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map(([,item])=>item);
+ return summarizeRssImageSignalItems(items,item=>Boolean(extractBingNewsArticleUrl(tag(item,'link'))));
 }
 export async function collectFeeds({queries=getDailySearches(),fetchImpl=fetch,now=new Date().toISOString()}={}){
  const incoming=[],failures=[],bingFailures=[];
- const rssImageSignals={items:0,sourceUrlItems:0,publisherArticleUrlItems:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
- const bingRssImageSignals={items:0,publisherArticleUrlItems:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
+ const rssImageSignals={items:0,sourceUrlItems:0,publisherArticleUrlItems:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,imageMediaContentTags:0,imageEnclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
+ const bingRssImageSignals={items:0,sourceUrlItems:0,publisherArticleUrlItems:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,imageMediaContentTags:0,imageEnclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
  for(const query of queries){
   try{
    const response=await fetchImpl(newsFeedUrl(query),{headers:{'user-agent':'HaewonArchiveBot/0.2 (public RSS index)'},signal:AbortSignal.timeout(20000)});

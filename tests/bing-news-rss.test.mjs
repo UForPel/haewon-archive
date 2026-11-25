@@ -27,8 +27,9 @@ test('Bing News RSS extracts only explicitly declared image candidates and prese
  const [item]=parseBingNewsRss(xml,'Haewon NMIXX','2026-11-24T04:01:00.000Z');
  assert.equal(item.thumbnailUrl,'https://publisher.example/news/thumb.jpg');
  assert.equal(item.thumbnailSource,'media:thumbnail');
- assert.deepEqual(item.thumbnailCandidates.map(candidate=>candidate.source),['media:thumbnail','enclosure','rss-description-html']);
+ assert.deepEqual(item.thumbnailCandidates.map(candidate=>candidate.source),['media:thumbnail','enclosure','rss-description-html','rss-description-html']);
  assert.equal(item.thumbnailCandidates[1].url,'https://img.example/enclosure.png');
+ assert.equal(item.thumbnailCandidates[3].url,'https://publisher.example/news/content.jpg');
  assert.ok(item.thumbnailCandidates.every(candidate=>candidate.url.startsWith('https://')));
 });
 test('Bing RSS image diagnostics distinguish explicit article URLs from image-bearing items',()=>{
@@ -38,6 +39,15 @@ test('Bing RSS image diagnostics distinguish explicit article URLs from image-be
  assert.equal(result.publisherArticleUrlItems,2);
  assert.equal(result.mediaThumbnailTags,1);
  assert.equal(result.enclosureTags,1);
+ assert.equal(result.imageEnclosureTags,0);
  assert.equal(result.descriptionImageTags,1);
  assert.equal(result.itemsWithImageSignals,2);
+});
+
+test('Bing RSS image diagnostics do not count audio-only enclosures as image signals',()=>{
+ const xml='<rss><channel><item><title>Haewon image</title><link>'+wrapper+'</link><enclosure url="https://img.example/a.jpg" type="image/jpeg"/></item><item><title>Audio only</title><link>'+wrapper+'</link><enclosure url="https://audio.example/a.mp3" type="audio/mpeg"/></item></channel></rss>';
+ const result=summarizeBingRssImageSignals(xml);
+ assert.equal(result.enclosureTags,2);
+ assert.equal(result.imageEnclosureTags,1);
+ assert.equal(result.itemsWithImageSignals,1);
 });
