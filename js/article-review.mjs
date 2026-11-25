@@ -13,6 +13,37 @@ export function getVerifiedHaewonArticles(items = []) {
     hasExplicitPublisherArticleUrl(item) && classifyDiscoveryRelevance(item) === 'haewon'
   );
 }
+export async function auditVerifiedPublisherArticles(items = [], { fetchImpl = fetch, timeoutMs = 3500, concurrency = 3 } = {}) {
+  const articles = getVerifiedHaewonArticles(items);
+  const results = new Array(articles.length);
+  let cursor = 0;
+  async function worker() {
+    while (true) {
+      const index = cursor++;
+      if (index >= articles.length) return;
+      const item = articles[index];
+      const url = item.publisherArticleUrl;
+      try {
+        const response = await fetchImpl(url, { method: 'HEAD', redirect: 'follow', signal: AbortSignal.timeout(timeoutMs) });
+        let finalHost = '';
+        try { const finalUrl = new URL(response.url || url); if (finalUrl.protocol === 'https:') finalHost = finalUrl.hostname; } catch {}
+        const status = Number(response.status) || null;
+        const state = status >= 200 && status < 400 ? 'accessible'
+          : status === 402 || status === 451 ? 'paywall'
+          : status === 401 || status === 403 ? 'blocked'
+          : status === 404 || status === 410 ? 'not-found'
+          : 'uncertain';
+        results[index] = { articleId: String(item.id || ''), url, status, state, finalHost, method: 'HEAD' };
+      } catch (error) {
+        results[index] = { articleId: String(item.id || ''), url, status: null, state: 'uncertain', finalHost: '', method: 'HEAD', error: String(error?.name || 'network-error') };
+      }
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(concurrency, articles.length) }, worker));
+  const counts = Object.fromEntries(['accessible', 'blocked', 'paywall', 'not-found', 'uncertain'].map(state => [state, results.filter(row => row.state === state).length]));
+  return { scope: 'explicit-publisher-https-haewon-articles', method: 'HEAD', redirectPolicy: 'standard-http-follow-only', bypassAttempted: false, checked: results.length, total: articles.length, counts, results };
+}
+
 export function validateArticleReviewExport(payload, eligibleIds = null) {
   const parsed = typeof payload === 'string' ? JSON.parse(payload) : payload;
   if (!parsed || parsed.schemaVersion !== 1 || !parsed.labels || typeof parsed.labels !== 'object' || Array.isArray(parsed.labels)) {
