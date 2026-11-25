@@ -106,3 +106,27 @@ Status: DESIGN ONLY. No external scheduler, Gemini API integration, Worker or fi
 - No Gemini API key configured in Actions Secrets.
 - No YouTube Data API key configured.
 - No dry-run workflow on main. PR #15's read-only CI is also still unmerged.
+
+## 2026-11-25 — Scheduler, Gemini and platform API constraints
+
+### Cloudflare candidate
+- Official Cron Triggers support minute-level cron expressions including `*/5 * * * *`; triggers run in UTC. Free-plan limits currently list 100,000 requests/day, 10 ms CPU per invocation, and 5 Cron Triggers/account.
+- A single Worker can combine the scheduled handler and narrow GitHub dispatch gateway. It should mint short-lived repository-scoped GitHub App installation tokens, use no broad PAT, and dispatch a dry-run workflow with overlap/idempotency/cooldown/pause controls.
+- 288 five-minute trigger invocations/day fit under the published request count, but do not imply 288 completed Actions runs; GitHub queueing, concurrency and runtime remain bottlenecks. Start at 30-minute dry-run and measure first.
+- Sources: https://developers.cloudflare.com/workers/configuration/cron-triggers/ ; https://developers.cloudflare.com/workers/platform/limits/
+
+### Gemini free-tier constraints
+- Gemini API free tier is limited to selected models and rate limits; free-tier content may be used to improve Google products.
+- Current pricing docs list Google Search grounding at 500 RPD shared across Gemini 2.5 Flash and Flash-Lite on the free tier, but not available for Gemini 3 and newer free tier. Search grounding is a separate tool with model-specific quotas; don't assume unlimited or universal free grounding.
+- Preferred role: optional classification/analysis of sanitized public metadata and bounded search-policy proposals. Keep source discovery independent and preserve human review; never send private data or let Gemini write code/workflows/security policies.
+- Source: https://ai.google.dev/gemini-api/docs/pricing
+
+### Video/photo API boundaries
+- YouTube Data API `search.list`: default 100 calls/day, 1 quota unit/call. PR #23 uses 8/day, requires optional user-managed `YOUTUBE_API_KEY`, and has not made a live call.
+- X API reads are pay-per-use; official pricing lists Posts: Read at $0.005 per returned post. It is not a free photo-search source.
+- Meta Content Library/API is research-oriented and requires its Secure Research Environment; current public-data scope excludes South Korea. Not a general free Instagram photo API.
+- Sources: https://developers.google.com/youtube/data/determine_quota_cost ; https://docs.x.com/x-api/getting-started/pricing ; https://developers.facebook.com/documentation/meta-content-library/
+
+### Status
+- No Worker, GitHub App, external scheduler, Gemini integration, API key, or five-minute trigger is deployed.
+- PR #23's YouTube collector is optional and skipped until the user adds its secret. No API key is requested in chat.
