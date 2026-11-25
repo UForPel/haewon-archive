@@ -208,3 +208,9 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - PR #25–#28 snapshot runs are push-triggered and read-only, not PR-event checks: 144/144, 142/142, 147/147 and 145/145 respectively. Their current PR heads are 0 behind main.
 - PR #13–#16 are 8 behind; #20/#22–#24 are 6 behind. PR #14 is documentation-only, mergeable=false and overlaps main's current edits to BUTTONS_AND_ACTIONS.md, PROJECT_STATUS.md and SESSION_LOG.md. Do not merge it wholesale.
 - The mandatory ChatGPT conversation control remains the final element of every substantial response: **🔄 연구 기반 재귀개선 계속하기**. It must be a real action, not plain text. The user typing another prompt does not cancel this requirement.
+
+
+## 2026-11-25 — Latest audit control inventory
+- No Haewon Archive website control or handler was added or changed in this audit.
+- The ChatGPT continuation action is conversation-level, not a website button. Keep the required label **🔄 연구 기반 재귀개선 계속하기** and make it a real action submitting the full prompt from CHATGPT_OPERATING_RULES.md; a text label alone is insufficient.
+- Main Pages deployment success does not establish manual browser testing of website controls. Mobile and keyboard QA remain pending.
