@@ -1159,3 +1159,10 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Added a direct accessibility audit for all verified Haewon publisher URLs: one HEAD request per explicit HTTPS publisherArticleUrl, ordinary redirects only, no retry or fallback request. Results distinguish accessible, blocked, paywall, not-found, and uncertain. Implemented in PR #13; no live result is claimed before CI and the next quality run.
 
 - CI follow-up: PR #15 Actions run #1 completed successfully with 142/142 tests and data validation passed. This run exercised the new workflow on PR #15's base-main branch; it did not yet execute PR #13's newly added tests. PR #13 verification remains pending.
+
+
+## 2026-11-25 — Session-end continuation button omission and correction
+- User correctly pointed out that the required ChatGPT conversation follow-up button was missing, despite a BUTTONS_AND_ACTIONS.md update.
+- Root cause: the button was described/documented but not actually rendered in the final response. The previous session report therefore failed its handoff requirement.
+- Updated BUTTONS_AND_ACTIONS.md and CHATGPT_OPERATING_RULES.md with the exact label, click action contract, full next-cycle directive, and explicit no-omission rule. This documentation change is on PR #14 branch.
+- Required final control: 🔄 연구 기반 재귀개선 계속하기. It must submit the next-cycle execution instruction; plain text or a link is not an acceptable substitute.
