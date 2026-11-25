@@ -303,3 +303,10 @@ For each substantial update include: changed paths; planned vs implemented items
 - Never decode Google News opaque tokens, guess YouTube IDs, follow wrappers to bypass restrictions, or represent an unresolved candidate as a verified video.
 - Distinguish candidate visibility from actual video collection. A separate candidate list does not mean fan videos have been fetched or added to `videos.json`.
 - PR checks are only evidence when a run is tied to the exact PR head SHA. If no PR workflow exists on main, report no check rather than inferring success from other PRs.
+
+## 2026-11-25 — Source identity and secret handling
+
+- Do not classify every non-official YouTube channel as a fan channel. Preserve channel ID/name and use `unverified` until a human confirms fan/creator identity.
+- The optional YouTube API collector must skip cleanly without a user-managed secret. Never request or expose API keys in chat, commit them, or include them in logs.
+- Do not claim fan-photo automation exists while `photos.json` is empty. Article thumbnails, photo source links and fan-taken photo archives are different data types.
+- If a platform's documented public API is paid or research-restricted, do not replace it with login-wall scraping, hidden endpoints or access-control workarounds.
