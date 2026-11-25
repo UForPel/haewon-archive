@@ -359,3 +359,19 @@
 - [ ] Keep investigating only publicly disclosed publisher article metadata; do not infer article URLs from Google News source URLs or decode wrappers.
 - [ ] Real mobile browser, visual layout, keyboard and interaction QA; not verified by Actions.
 - [ ] Human review of relevance, date, source, category and thumbnail suitability; precision remains unmeasured.
+
+
+## 2026-11-25 — Late-session audit gates
+- [x] Recheck main SHA, requested PR heads and ahead/behind counts (#13–#30).
+- [x] Verify Actions #587 / #45556461352, artifact size/digest and deploy step.
+- [x] Confirm PR #30 genuine pull_request run #45570252997 passed tests and archive validation.
+- [x] Re-open Sportskeeda article URL and observe HTTP 405; confirm PR #25 tests cover seven-day backoff and no method fallback.
+- [x] Review PR #27 shared predicate across Google/Bing ingestion, merge, enrichment, metrics and default display scope.
+- [x] Measure PR #28 current RSS image signals: zero in both sampled feeds.
+- [ ] Obtain user approval before any merge; none performed.
+- [ ] Validate PR #25 latest head through an accepted CI route; distinguish mocked 405 tests from production collector evidence.
+- [ ] After approved PR #26 merge, verify a complete production Node24 Pages deployment and artifact.
+- [ ] After approved PR #27 merge, verify X/Twitter exclusion in persisted metrics and thumbnails.
+- [ ] Review terms and source policy before adding any direct publisher RSS feed.
+- [ ] Preserve all 273 shared legacy thumbnails.
+- [ ] Perform real mobile/browser, keyboard and human image-relevance QA.
