@@ -23,7 +23,7 @@ test('Bing News candidate provenance survives title-based merge with a Google wr
 });
 
 test('Bing News RSS extracts only explicitly declared image candidates and preserves provenance',()=>{
- const xml='<rss><channel><item><title>Haewon NMIXX story</title><link>'+wrapper+'</link><description><![CDATA[<img src="/description.jpg"/>]]></description><content:encoded><![CDATA[<img src="/content.jpg"/>]]></content:encoded><media:thumbnail url="/thumb.jpg" type="image/jpeg"/><enclosure url="https://img.example/enclosure.png" type="image/png"/><enclosure url="https://audio.example/clip.mp3" type="audio/mpeg"/></item></channel></rss>';
+ const xml='<rss><channel><item><title>Haewon NMIXX story</title><link>'+wrapper+'</link><description><![CDATA[<img src="/description.jpg"/>]]></description><content:encoded><![CDATA[<img src="content.jpg"/>]]></content:encoded><media:thumbnail url="thumb.jpg" type="image/jpeg"/><enclosure url="https://img.example/enclosure.png" type="image/png"/><enclosure url="https://audio.example/clip.mp3" type="audio/mpeg"/></item></channel></rss>';
  const [item]=parseBingNewsRss(xml,'Haewon NMIXX','2026-11-24T04:01:00.000Z');
  assert.equal(item.thumbnailUrl,'https://publisher.example/news/thumb.jpg');
  assert.equal(item.thumbnailSource,'media:thumbnail');
