@@ -53,9 +53,9 @@ test('article discovery has explicit relevance scopes and a sanitized reading su
  assert.ok(discoveryView.includes('renderCategories();'),'category controls must be mounted');
 });
 
-test('video cards visibly distinguish official channels from unverified channels',()=>{
- const appSource=readFileSync(new URL('../js/app.js',import.meta.url),'utf8');
+test('video cards visibly distinguish official channels from unverified channels',async()=>{
+ const appSource=await readFile(new URL('../js/app.js',import.meta.url),'utf8');
  assert.ok(appSource.includes("video.origin === 'official'"),'explicit official channel status must be rendered');
- assert.ok(appSource.includes("video.origin === 'unverified'") || appSource.includes("officialChannel ? '공식 채널' : '채널 미검수'"),'non-official channels must be visibly marked unverified');
+ assert.ok(appSource.includes("officialChannel ? '공식 채널' : '채널 미검수'"),'non-official channels must be visibly marked unverified');
  assert.ok(appSource.includes("channelName = video.channelName"),'channel identity should be visible on the card');
 });
