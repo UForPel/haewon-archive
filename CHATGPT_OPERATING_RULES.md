@@ -320,3 +320,5 @@ For each substantial update include: changed paths; planned vs implemented items
 - Preserve the 273 legacy repeated image URL occurrences.
 - Gemini free-tier content may be used to improve Google products; do not submit private/personal/credential data and do not enable Gemini by default.
 - Always end Haewon Archive responses with the working next-conversation button labelled exactly “🔄 연구 기반 재귀개선 계속하기”.
+## Video provenance display rule
+- Do not only store unverified channel state in JSON; display it on the video card. Only the known official channel is marked official. All other channel records remain visibly unverified until human review. A successful test run does not establish mobile visual correctness.
