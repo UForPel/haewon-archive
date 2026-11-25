@@ -371,3 +371,18 @@
 - [x] Restore exact follow-up button contract in BUTTONS_AND_ACTIONS.md and CHATGPT_OPERATING_RULES.md.
 - [x] Record that documentation-only is insufficient; final response must render an actual clickable control.
 - [ ] Verify the button is present at the end of every future Haewon Archive session.
+
+
+## 2026-11-25 — PR review correction and image suitability
+
+- [x] Recheck main, PRs, Actions and Pages deployment job.
+- [x] Inspect PR #13 failure logs; identify duplicate exported function as the cause (113/116 tests passed; three test files failed to load).
+- [x] Remove duplicate export and add explicit per-article thumbnail suitability labels.
+- [x] Ensure HTTP HEAD success is recorded as http-responded, not a false claim of article readability.
+- [x] Stop GET retries after 403; retain only 405 method-not-allowed fallback.
+- [x] Add tests for thumbnail suitability scoring and forbidden-response non-retry.
+- [ ] Obtain a fresh CI run for the latest PR #13 head after PR #15 workflow is merged to main.
+- [ ] Manually verify original-page accessibility, date, source, category and relevance for all 49 records.
+- [ ] Label the 39 article thumbnails individually and distinguish the 10 missing-image cases.
+- [ ] Generate and compare fresh quality metrics; do not claim improvement until verified counts rise.
+- [ ] Perform actual mobile browser inspection; until then mark UI as unverified.
