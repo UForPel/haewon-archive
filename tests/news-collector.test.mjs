@@ -85,3 +85,12 @@ test('HTTP 405 metadata responses preserve the article and never trigger a metho
  assert.equal(result.items[0].thumbnailMetaFetch.errorCode,'method-not-allowed');
  assert.equal(shouldRetryThumbnailFetch(result.items[0].thumbnailMetaFetch,Date.parse('2026-11-26T00:00:00.000Z')),false);
 });
+
+
+test('legacy HTTP 405 records previously mislabeled network-error also receive seven-day backoff',()=>{
+ const fetchedAt='2026-11-25T00:00:00.000Z',day=86400000;
+ const legacyMeta={status:'failed',statusCode:405,errorCode:'network-error',fetchedAt};
+ assert.equal(shouldRetryThumbnailFetch(legacyMeta,Date.parse(fetchedAt)+day),false);
+ assert.equal(shouldRetryThumbnailFetch(legacyMeta,Date.parse(fetchedAt)+6*day),false);
+ assert.equal(shouldRetryThumbnailFetch(legacyMeta,Date.parse(fetchedAt)+7*day),true);
+});
