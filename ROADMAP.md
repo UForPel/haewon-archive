@@ -519,3 +519,9 @@
 6. **Automation dry-run:** evaluate Cloudflare Worker Cron + authenticated narrow GitHub App dispatch as a combined scheduler/gateway. Start at a conservative interval and measure queue delay/run time before considering a 5-minute target. Gemini API analysis remains optional and must respect current free-tier quotas/data terms.
 7. **CI:** PR #15 read-only CI workflow must be available on main before PR checks can run automatically. Do not merge without explicit user approval.
 8. Preserve the 273 repeated legacy image URL occurrences until per-record evidence and approval exist.
+
+## 2026-11-25 — News search expansion (PR #22, not merged)
+
+- Search packs now propose 36 unique editorial query phrases across six topic families. The two scheduled Korea-time runs select different packs.
+- Expected RSS calls rise from 16 to 24/day (+50%). Measure actual per-query fetched/unique candidates, publication-date lag, source diversity and human-reviewed relevance before further increasing request volume.
+- Keep video/fancam searches in a separate API/feed collector; do not overload editorial news search.
