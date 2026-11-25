@@ -1456,3 +1456,10 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 ### Follow-up verification note
 - Temporary PR #21 targeting `ci/pull-request-tests` was closed unmerged. The workflow's trigger explicitly filters pull requests to base branch `main`, so this temporary target did not trigger Actions. No CI result was produced for PR #20. Do not repeat this incorrect target assumption.
 - PR #20 remains open and mergeable, but has no check run. Full repository tests and live browser rendering remain pending.
+
+## 2026-11-25 — Expand news query rotation
+
+- Found that the previous 3 × 4 search packs selected only by Korea date, so both scheduled runs on the same date repeated the same four phrases.
+- PR #22 changes this to 6 packs × 6 phrases and rotates by Korea date plus run slot (morning/evening). Two daily runs now cover 12 distinct phrases and 24 RSS requests/day across Google News and Bing, a 50% increase from 16.
+- Tests added for six packs, six queries per pack, 36 total phrases, and different pack selection by run slot. Four focused Node assertions passed; full npm test and GitHub Actions are pending due missing PR CI workflow on main.
+- PR: https://github.com/UForPel/haewon-archive/pull/22. No data changed, no merge.
