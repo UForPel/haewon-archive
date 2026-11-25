@@ -205,3 +205,5 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Legacy cluster evidence: all 273 assignments came from Google News RSS; 148 have only a publisher source-site root hint, and none has an article-specific publisher URL or image candidate. These root hints are not treated as article links or image replacements.
 
 - Five review dimensions are available: original-page accessibility, relevance, publication-date accuracy, source accuracy, and category accuracy. A syntactically valid HTTPS URL is not itself an accessibility pass.
+
+- The quality metrics workflow also performs one direct HEAD request per verified publisher HTTPS article URL and records the response class. It does not retry blocked responses or attempt to bypass access restrictions. A network/unsupported-method result remains uncertain and can be checked manually.
