@@ -169,3 +169,10 @@ Google News RSS wrapper links whose titles indicate YouTube/fancam are condition
 - Measure unique article IDs and normalized titles/day, duplicate rate, direct Haewon relevance yield, publisher/source diversity, and median/p90 publication-age lag. Compare before/after over equivalent weekdays and query slots.
 - Keep video/fancam searches separate from editorial RSS. Google News wrapper URLs are unresolved candidates only; do not decode or promote them to verified videos.
 - PR #20 chronological mode defaults to valid publication date descending, then discoveredAt fallback; relevance sort remains an explicit alternative. Invalid publication dates now fall back to a valid discovery timestamp.
+
+## 2026-11-25 — search effectiveness baseline and per-query instrumentation
+- PR #22 retains six packs × six phrases = 36 editorial phrases; KST morning/evening runs rotate to distinct six-query packs. Planned daily volume: 12 phrases × Google News + Bing = 24 RSS requests/day, vs previous 16/day (+50%).
+- PR #22 now writes per-query performance into `news-collection-status.json`: candidate count, normalized unique URL count, duplicate URL occurrences, normalized long-title duplicate groups/occurrences, cross-query duplicate URL count, title-keyword match count/rate, explicit publisher URL count/rate, dated/unknown/future counts, median and p90 publication lag.
+- Current main baseline, before PR #22 live execution: 704 discovery records across 12 old phrases; 704 exact URLs unique; 0 normalized long-title duplicate occurrences; 550 title keyword matches (78.13%); 59 explicit publisher article URLs (8.38%). These are not human relevance labels.
+- Publication-to-discovery lag on current 704 records: median 10,314.4 hours (~430 days), p90 32,005.1 hours (~1,334 days). This indicates the current pool is heavily historical despite a newest publication date of 2026-11-19.
+- Human relevance labels: 0. Do not claim a direct relevance rate. After merge, compare new packs against this baseline over at least two complete daily cycles.
