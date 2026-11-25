@@ -193,3 +193,16 @@ For each substantial update include: changed paths; planned vs implemented items
 - Preserve the required ChatGPT follow-up button at the end of every final response. The actual control must submit the full next-cycle instruction; a Markdown link or documentation entry alone does not count.
 
 - Corrected PR #13 code was verified by temporary read-only Actions run #4: 150/150 tests and archive validation passed. The temporary workflow was removed to preserve PR separation; PR #15 remains the dedicated permanent CI workflow proposal.
+
+
+## 2026-11-25 — Second cycle handoff and verified limits
+
+- Latest main remains 32832e57e9e1023c62eefa4a1e8b4a76550e451b; Actions #581 and Pages deployment succeeded.
+- PR #13, #14, #15, #16 remain unmerged. Do not claim new review UI or metrics are live.
+- 49 explicit URLs are not 49 confirmed article pages: 47 article pages, one X profile, one X post.
+- All 49 have date/source fields, but no stored categories. Do not describe presence as accuracy.
+- 39/49 thumbnails have provenance and match metadata candidates, but none has been visually human-reviewed. 10 have no HTTPS thumbnail (4 forbidden responses, 6 missing).
+- 273 repeated legacy images remain untouched. 148 root-domain clues do not count as article-specific URLs; zero article-specific publisher URLs and zero candidate images.
+- PR #13 code passes 152/152 tests; PR #16 code passes 143/143 tests. Both used temporary read-only workflow copies, removed after verification. PR #15 remains the permanent CI proposal.
+- Mobile/browser QA remains unverified. Playwright emulation is not physical-device QA.
+- Final response must render the actual ChatGPT button with exact label **🔄 연구 기반 재귀개선 계속하기**, submitting the next-cycle instruction; a documentation entry or Markdown link is insufficient.
