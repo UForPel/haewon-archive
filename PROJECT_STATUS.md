@@ -760,3 +760,14 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Video/fancam discovery remains separate from editorial RSS. The new packs deliberately do not include fancam terms.
 - Branch: `feat/expand-news-search-packs`; PR https://github.com/UForPel/haewon-archive/pull/22. No data mutation or merge.
 - Four focused Node assertions for pack count, query count and distinct run-slot rotation passed. Full `npm test` and PR Actions checks remain pending because CI workflow is not present on main.
+
+## 2026-11-25 — Public fan-video search implementation and verification
+
+- PR #20 (news chronology + unresolved wrapper video list): **145/145 tests passed**, archive validation passed in temporary read-only run #45549871115. Temporary workflow removed. PR remains open/unmerged.
+- PR #22 (six 6-query editorial packs, KST twice-daily rotation): initial run caught a stale test expectation of three packs; corrected the test. Rerun #45549924691: **143/143 tests passed**, archive validation passed. Temporary workflow removed. PR remains open/unmerged.
+- PR #23 (optional YouTube Data API public search): **149/149 tests passed**, archive validation passed in run #45549801497. Temporary workflow removed. PR remains open/unmerged.
+- PR #23 searches four terms per scheduled run, eight calls/day across two runs, with a 12-query rotating vocabulary. The documented default YouTube `search.list` quota is 100 calls/day at 1 unit/call.
+- PR #23 requires optional user-managed Actions secret `YOUTUBE_API_KEY`. It skips safely when absent; no key was created, requested in chat, or used. Existing official Atom feed remains functional.
+- Search results store `channelId` and `origin`: known official channel is marked official; all other channels are marked unverified, not automatically fan. Actual fan identity requires review.
+- Photos remain 0 records. No automatic Instagram/X/fansite photo collector is implemented. Current official Meta Content Library API is a researcher-oriented secure research environment and its public-data geographic scope excludes South Korea; X API reads are pay-per-use. Neither is a viable general free photo-search API for this project.
+- Main remains `7dba74e89d9b5b8e727f0ac5ff94a554aad9e9d6`; PRs #13–#16, #20, #22 and #23 are all unmerged. No deployment of these PR changes yet.
