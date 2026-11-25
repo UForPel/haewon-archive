@@ -466,3 +466,16 @@
 - Fresh Actions #10 / run `45541326160` on exact head `d095da244c97fcbea4e38eca624fae6112088c56`: success; 142/142 tests passed, 0 failed; archive validation passed (19 videos, 701 discovery candidates, 154 run logs, 37 source summaries, 41 links checked). No Node 20 deprecation warning in this run's log.
 - This is PR #15 branch validation only; PR #15 is still not merged and does not yet provide main-wide automatic CI.
 - PR #13 latest code branch `b926e8fab1d9338bf08d7c2568f49b40f99a1767` still has no fresh Actions run after its URL-host-context helper/test addition. PR #16 latest branch `fbac15bcd4142ce943cc23df236176a4a1ba4725` retains prior Actions #6 (143/143) and has no newer run.
+
+
+## Article quality and thumbnail verification (2026-11-25)
+- [x] Separate publisher URL host, discovery URL host and recorded publisher host in PR #13; add OSEN/ChosunBiz and MSN/Sports Kyunghyang regression fixtures.
+- [x] Verify PR #13 HEAD through a temporary read-only CI harness (PR #17, Actions #11: 154/154 tests, validation passed); close temporary PR without merging.
+- [x] Recheck persisted thumbnail candidates separately from latest-run enrichment: 44/44 persisted URL matches; latest run 0/0/0 and rate null.
+- [x] Confirm OSEN 2025-06-10 source-page date versus stored 2025-06-09 KST date; leave source data unchanged pending human review.
+- [ ] Complete human review of 49 article/source/date/category/relevance records; do not infer accuracy from keyword rules.
+- [ ] Review article context for the 8 rendered thumbnails; retain 24 unavailable inspection outcomes as unknown, not unsuitable.
+- [ ] Resolve missing-image candidates only from explicit public metadata; no 403 retry, access-control bypass or automatic assignment.
+- [ ] Obtain fresh CI on PR #16 exact HEAD.
+- [ ] Confirm live Pages rendering and Android browser behavior independently of Actions deployment status.
+- [ ] Keep 273 legacy shared-thumbnail assignments unchanged until record-level evidence and human review support any migration.
