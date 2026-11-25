@@ -110,7 +110,11 @@ if(list&&count){
   const next=document.createElement('button');next.type='button';next.textContent='다음';next.disabled=page>=pageCount;next.addEventListener('click',()=>{page++;render();});
   pagination.append(prev,label,next);
  };
- const categoryBar=document.querySelector('#discovery-categories');
+ const videoDiscoveryList=document.querySelector('#video-discovery-list');
+  const videoDiscoveryCount=document.querySelector('#video-discovery-count');
+  const sortSelect=document.querySelector('#discovery-sort');
+  let selectedSort=sortSelect?.value||'date';
+  const categoryBar=document.querySelector('#discovery-categories');
  const relevanceBar=document.querySelector('#discovery-relevance');
  let selectedRelevance='verified-haewon';
  let unverifiedRepeatedThumbnailUrls=new Set();
@@ -209,6 +213,7 @@ if(list&&count){
  renderCategories();
  renderRelevanceFilters();
  if(search)search.addEventListener('input',()=>{page=1;render();});
+  if(sortSelect)sortSelect.addEventListener('change',()=>{selectedSort=sortSelect.value==='relevance'?'relevance':'date';page=1;render();});
  fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
   allItems=Array.isArray(items)?items:[];
   const imageGroups=new Map();
