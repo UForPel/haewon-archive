@@ -295,3 +295,11 @@ For each substantial update include: changed paths; planned vs implemented items
 - User-typed messages do not cancel, replace, hide, or suspend this control. Continue from the latest GitHub state and render the button again.
 - Before finalizing, independently verify: (1) button specification remains in GitHub docs, and (2) the current final response actually contains the clickable control. Documentation alone is not compliance.
 - If the control is absent, the work response is incomplete even if code, CI, Pages, and documentation tasks succeeded.
+
+## 2026-11-25 — News/video discovery regression prevention
+
+- News default sort is publication timestamp descending; missing/invalid dates sort after dated records. Relevance ranking must remain a separate user-selectable mode, never the implicit default.
+- A title/keyword hint such as fancam/직캠 is a discovery signal, not proof of a YouTube video. Preserve wrapper-only candidates in a separate unresolved-video list; only register a video when an explicit, valid HTTPS YouTube URL/video ID is present in public metadata.
+- Never decode Google News opaque tokens, guess YouTube IDs, follow wrappers to bypass restrictions, or represent an unresolved candidate as a verified video.
+- Distinguish candidate visibility from actual video collection. A separate candidate list does not mean fan videos have been fetched or added to `videos.json`.
+- PR checks are only evidence when a run is tied to the exact PR head SHA. If no PR workflow exists on main, report no check rather than inferring success from other PRs.
