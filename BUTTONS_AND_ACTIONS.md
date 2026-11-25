@@ -333,3 +333,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - `#discovery-sort`: native select; defaults to publication date descending; offers relevance order. Change resets news pagination to page 1 and rerenders.
 - `#video-discovery-list`: separate list for title/URL-hinted video candidates that lack an explicit HTTPS YouTube video URL in either `url` or `publisherArticleUrl`. Displays at most 12 newest unresolved candidates plus total count. Each row links to the preserved discovery URL and explicitly states that the original YouTube URL is unverified.
 - These controls exist only on PR #20 until merged and deployed. Do not claim they are live in the production Pages site.
+
+## 2026-11-25 — New optional collector configuration (PR #23, not merged)
+
+- No new visible app button is added.
+- The YouTube public-search collector is invoked by the scheduled workflow and skips without `YOUTUBE_API_KEY`.
+- If enabled later, the key must be added by the repository owner directly as a GitHub Actions Secret. The assistant must not request the raw key in chat, create a key, or log it.
+- PR #20's news sort and unresolved-video candidate list are code-branch controls only until merge/deploy; they are not currently live in main.
