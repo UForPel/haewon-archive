@@ -1364,3 +1364,10 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 - PR #16 still requires a fresh CI run on its exact current head; previous 143/143 result predates the latest PR #16 head.
 - Pages #581 deployment success is separate from live rendering. Actual Android browser QA, keyboard/focus checks and human article/thumbnail labels remain outstanding.
 - No PR was merged.
+
+
+## 2026-11-25 — PR #16 exact-head read-only CI verification
+- Created temporary branch `verify/pr16-readonly-ci-20261125` from exact PR #16 HEAD `fbac15bcd4142ce943cc23df236176a4a1ba4725`, adding the exact SHA-pinned read-only workflow from PR #15.
+- Temporary PR #18 Actions #12 / run `45542878538` completed successfully: 143/143 tests, 0 failures; archive validation passed (19 videos, 0 photos, 701 discovery candidates, 0 human relevance labels, 154 run logs, 37 source summaries and 41 checked links).
+- Closed PR #18 after recording the result; it was never merged. PR #16 remains open/unmerged. No production code or main branch changes were made by this verification harness.
+- PR #13 was separately verified in temporary PR #17 (Actions #11: 154/154); PR #17 is also closed/unmerged.
