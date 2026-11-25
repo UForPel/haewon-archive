@@ -243,3 +243,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The 10 missing thumbnails split into 4 HTTP 403 failures and 6 missing metadata outcomes; no retry after 403 and no bypass.
 - 273 repeated legacy image assignments remain untouched. 148 have root-domain source clues only; 125 have no sourceUrl; none has an article-specific publisher URL or image candidate.
 - PR #13 verification: 152/152 tests and archive validation. PR #16 verification: 143/143 tests and archive validation. Temporary verification workflows removed; permanent CI remains separate in PR #15.
+
+
+### Relevance and visual-review refinement
+- Relevance labels now distinguish direct relevance, indirect mention/other-person-centered story, unrelated and uncertain.
+- Wikitree record 66c296a7f618669fd99b is an indirect story about a lookalike/cover, not a direct Haewon article. Do not count it as direct coverage.
+- Seven exact assigned thumbnails have been opened and checked against page context; 32/39 remain unchecked. The seven spot checks are not yet persisted as formal review labels.
+- The review queue remains seven dimensions; the indirect option is a value within relevance, not an eighth dimension.
