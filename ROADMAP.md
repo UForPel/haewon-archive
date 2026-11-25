@@ -357,3 +357,5 @@
 - [ ] Verify actual mobile browser layout, keyboard navigation, and review controls; until then status remains unverified.
 
 - [x] Distinguish 148 legacy records with publisher source-site root hints from article-specific URLs (0); preserve these hints without treating them as replacements.
+
+- [x] Add an explicit original publisher-page accessibility label; URL presence is not treated as proof of access.
