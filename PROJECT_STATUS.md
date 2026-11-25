@@ -612,3 +612,8 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 ## 2026-11-26 — Additional quality-audit clarification
 - The latest quality report's host summary still classifies Sportskeeda as `network-error`. A previous live fetch of the exact URL returned HTTP 405. The current summary does not expose that record's stored `statusCode`, so do not claim the persisted row definitely contains 405. PR #25's new statusCode fallback protects the legacy row if that field is present; whether a one-time data migration is needed remains unverified.
 - The latest thumbnail response audit sampled 12 unique URLs: 11 returned image content and one Sportalkorea image URL returned HTTP 404. This is a small sample, not a global image-validity rate.
+
+## 2026-11-26 — PR #30 refreshed against latest main
+- After updating the PR #30 session log, genuine pull_request run #45704287050 checked merge commit `53b3d5b`, which merged PR head `fc619f0e623fdda9931f72e7f59da66c50c76b68` into current main `3c93903c6e37839fd69e0a1a74851a3dac3e6174`.
+- The read-only job succeeded: 142/142 tests, 0 failures, and `npm run validate` succeeded. No artifact upload or Pages deployment was attempted.
+- PR #30 is still open/unmerged. The shared PR CI workflow remains absent from main until user-approved merge.
