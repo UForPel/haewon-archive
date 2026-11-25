@@ -321,3 +321,9 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - PR #13 review UI exact head passed 154/154 tests in temporary PR #17; temporary PR closed without merge.
 - Both PRs remain unmerged. Their new UI is not on main and must not be represented as deployed or Android-tested.
 - Main Pages deployments #582/#583 succeeded, but this only verifies deployment status, not visual rendering or mobile interaction.
+
+
+## Mandatory persistence across typed chat messages
+- The ChatGPT continuation control is persistent across Haewon Archive turns. A user typing any new message, including “진행”, a correction, or a full work request, does **not** remove the obligation to render it again at the end of the response.
+- The control belongs to the ChatGPT assistant response, not the archive website and not a GitHub Pages UI element.
+- Every response must render the real clickable control. Merely retaining this documentation or mentioning the label in prose does not satisfy the requirement.
