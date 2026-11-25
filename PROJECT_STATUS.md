@@ -580,3 +580,9 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - The code PR now also adds a bounded, direct-URL accessibility audit for all 49 verified Haewon publisher articles. It sends one standard HEAD request per explicit HTTPS publisherArticleUrl, follows ordinary HTTP redirects, records status/final host, and performs no retry, wrapper decoding, or access-control workaround. This audit is implemented but awaits PR CI and the next successful data-generation run.
 
 - PR #15's own Actions run #1 succeeded (142/142 tests; archive-data validation passed). This validates the new workflow against the main-based PR #15 branch, not the unmerged PR #13 code; PR #13's newly added tests remain pending until the CI workflow is available on main and the PR is rerun.
+
+
+## 2026-11-25 — Required ChatGPT continuation button restored
+- Corrected a session-end omission: the prior response updated BUTTONS_AND_ACTIONS.md but failed to render the actual clickable ChatGPT follow-up button. Documentation alone did not satisfy the requirement.
+- Recorded the exact button label and full continuation directive in BUTTONS_AND_ACTIONS.md and CHATGPT_OPERATING_RULES.md on this documentation PR branch.
+- From this response onward, the final answer must render the button **🔄 연구 기반 재귀개선 계속하기** as an actual clickable control that submits the next-cycle instruction. Missing rendered control is a session-completion failure.
