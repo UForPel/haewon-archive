@@ -224,7 +224,7 @@ export function mergeCandidates(existing,incoming){
   const key=aliases.get(urlAlias)||aliases.get(titleAlias)||titleAlias||urlAlias;
   if(!item?.url||!key)continue;
   const prior=map.get(key);
-  if(!prior)map.set(key,item);
+  if(!prior)map.set(key,{...item,publisherArticleUrl:isPublisherArticleUrl(item.publisherArticleUrl)?item.publisherArticleUrl:''});
   else map.set(key,{...prior,thumbnailUrl:prior.thumbnailUrl||item.thumbnailUrl||'',publishedAt:prior.publishedAt||item.publishedAt||'',description:(prior.description||'').length>=(item.description||'').length?prior.description:item.description,sourceName:prior.sourceName||item.sourceName,sourceUrl:item.sourceUrl||prior.sourceUrl||'',publisherArticleUrl:isPublisherArticleUrl(item.publisherArticleUrl)?item.publisherArticleUrl:isPublisherArticleUrl(prior.publisherArticleUrl)?prior.publisherArticleUrl:'',thumbnailSource:prior.thumbnailSource||item.thumbnailSource||'',thumbnailCandidates:mergeImageCandidateLists(prior.thumbnailCandidates,item.thumbnailCandidates),thumbnailMetaCandidates:mergeImageCandidateLists(prior.thumbnailMetaCandidates,item.thumbnailMetaCandidates),thumbnailMetaFetch:item.thumbnailMetaFetch||prior.thumbnailMetaFetch||null,candidateSources:[...(prior.candidateSources||[]),...(item.candidateSources||[])].filter((row,index,array)=>array.findIndex(other=>other.source===row.source&&other.articleUrl===row.articleUrl)===index),publisherHost:prior.publisherHost||item.publisherHost||'',discoveryUrl:prior.discoveryUrl||item.discoveryUrl||'',candidateSource:prior.candidateSource||item.candidateSource||'',relevanceScore:Math.max(Number(prior.relevanceScore||0),Number(item.relevanceScore||0))});
   aliases.set(urlAlias,key);if(titleAlias)aliases.set(titleAlias,key);
  }
