@@ -503,3 +503,8 @@
 ## Conversation continuity safeguard
 - [ ] At the end of every Haewon Archive work response, render the actual clickable `🔄 연구 기반 재귀개선 계속하기` control; do not substitute plain text.
 - [ ] Preserve the control even when the user types a new instruction or correction. Typing does not cancel the continuation affordance.
+
+
+## Thumbnail follow-up
+- [x] Re-read all 10 missing-thumbnail records and their stored public metadata evidence; no new usable candidate found.
+- [ ] Keep these ten unresolved until explicit public metadata evidence is available; do not infer URLs or equate inaccessible with unsuitable.
