@@ -205,3 +205,8 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The assistant response must still end with the actual clickable ChatGPT conversation action **🔄 연구 기반 재귀개선 계속하기**. A user-typed task or correction does not cancel it.
 - The continuation action is separate from the deployed Haewon Archive UI. It must submit the complete reusable prompt in `CHATGPT_OPERATING_RULES.md`; never substitute a text label.
 - Current verification boundary: production Actions #45556461352 and Pages deploy are confirmed for the latest main snapshot; the new branch's read-only PR CI is pending. Do not imply that branch code is live until merged and deployed with user approval.
+
+## PR #25 verification note — 2026-11-25
+- PR #25 is open and unmerged. Its code has not been validated by Actions because main does not yet contain a `pull_request` workflow.
+- PR #15 contains a proposed read-only workflow but is also open/unmerged. Do not report PR #25 as green or live until an approved workflow merge and successful PR run.
+- The mandatory ChatGPT conversation action **🔄 연구 기반 재귀개선 계속하기** remains required at the end of this response; it is separate from website controls and does not depend on PR status.
