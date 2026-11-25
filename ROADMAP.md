@@ -398,3 +398,8 @@
 - [ ] Obtain user approval before PR #26 merge; verify complete production Pages deployment using Node24 pins.
 - [ ] Sequence PR #27 before PR #28 or port shared social predicate into #28 before any merge.
 - [ ] Preserve all 273 shared legacy thumbnails; human review and browser/mobile QA remain pending.
+
+## 2026-11-26 — PR #30 refreshed against latest main
+- After updating the PR #30 session log, genuine pull_request run #45704287050 checked merge commit `53b3d5b`, which merged PR head `fc619f0e623fdda9931f72e7f59da66c50c76b68` into current main `3c93903c6e37839fd69e0a1a74851a3dac3e6174`.
+- The read-only job succeeded: 142/142 tests, 0 failures, and `npm run validate` succeeded. No artifact upload or Pages deployment was attempted.
+- PR #30 is still open/unmerged. The shared PR CI workflow remains absent from main until user-approved merge.
