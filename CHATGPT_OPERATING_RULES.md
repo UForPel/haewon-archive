@@ -173,3 +173,8 @@ For each substantial update include: changed paths; planned vs implemented items
 - Google News RSS 4/4, 260 items, 258 site-level URLs, 0 direct article URLs and 0 image signals; Bing 4/4, 41 candidates; combined 301 fetched, 275 unique, 6 additions.
 - Metadata enrichment attempted 0 URLs due retry backoff. Do not characterize this as failure.
 - Keep Google News wrappers opaque and only use explicit HTTPS article/video URLs from public metadata.
+
+## Publisher article URL type validation — 2026-11-25
+- A non-root HTTPS URL is not sufficient proof that a candidate is a publisher article. Exclude X/Twitter profile and post URLs from `publisherArticleUrl` and the verified article scope.
+- Preserve social discovery candidates and original `url` fields; do not delete them. Do not run publisher article thumbnail metadata enrichment against social URLs under the article URL field.
+- Reuse the shared URL predicate across collector, merge, quality metrics and default verified scope. Add tests for candidate retention and stale-data cleanup.
