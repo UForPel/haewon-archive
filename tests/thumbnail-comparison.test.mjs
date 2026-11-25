@@ -45,3 +45,13 @@ test('latest enrichment attempts, discoveries and assignments are separate from 
  assert.equal(report.latestRunAssigned,0);
  assert.equal(report.latestRunAssignmentRate,null);
 });
+
+test('total persisted thumbnail count includes records with no candidate metadata',()=>{
+ const report=compareThumbnailCandidates([
+  {id:'with-candidate',thumbnailUrl:'https://img.test/a.jpg',thumbnailMetaCandidates:[{url:'https://img.test/a.jpg',source:'og:image'}]},
+  {id:'legacy-only',thumbnailUrl:'https://img.test/legacy.jpg',thumbnailMetaCandidates:[]}
+ ],[]);
+ assert.equal(report.articlesCompared,1);
+ assert.equal(report.persistedThumbnailRecords,1,'comparable persisted thumbnails remain scoped to candidate-bearing records');
+ assert.equal(report.persistedThumbnailRecordsTotal,2,'total persisted thumbnails must include records with no candidate metadata');
+});
