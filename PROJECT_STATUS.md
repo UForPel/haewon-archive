@@ -581,3 +581,8 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - PR #15 proposes that exact read-only workflow (`contents: read`, unit tests and archive validation), but PR #15 is still open/unmerged. Do not merge it or PR #25 without user approval.
 - Main's production Actions #45556461352 did pass 142/142 tests and completed the Pages deployment; that validates the main snapshot, not PR #25's new code.
 - Direct live-page/browser/mobile rendering was not verified in this session. The deployment job and Pages artifact upload succeeded.
+
+## GitHub Actions runtime maintenance risk — 2026-11-25
+- The latest production run log warns that `actions/checkout@v4`, `actions/setup-node@v4`, `actions/configure-pages@v5`, `actions/deploy-pages@v4`, and the upload-artifact dependency declare Node 20 and are being forced to Node 24.
+- GitHub's official changelog states Node 20 was removed from Actions runners on 2026-09-23 and advises workflow users to update to action versions supporting Node 24. The workflow currently succeeds, so this is a compatibility/maintenance warning, not a current deployment failure.
+- Follow-up: verify current supported major versions and immutable commit SHAs for all first-party actions, then update `.github/workflows/collect-and-deploy.yml` in a separate focused PR and verify a complete collection + Pages deployment. Keep least-privilege permissions and the existing non-cancelling collection concurrency group.
