@@ -410,3 +410,11 @@
 - [ ] Investigate the 10 missing image cases only through permitted public metadata; stop at 403.
 - [ ] Continue per-record legacy review only where a genuine direct publisher URL is available; preserve all opaque wrappers.
 - [ ] Perform Playwright responsive emulation and separate real Android browser visual QA; mark each distinctly.
+
+
+### Direct-page and thumbnail verification additions
+- [x] Attempt standard public-page opens for all 49 explicit source URLs; preserve failed/403/timeout outcomes as unverified rather than bypassing them.
+- [x] Visually spot-check 7 exact assigned thumbnail URLs against their article contexts.
+- [x] Identify the Wikitree lookalike/cover article as indirect relevance; add a separate indirect label instead of forcing it into direct relevance.
+- [ ] Inspect the remaining 32 exact assigned thumbnail URLs and persist one of suitable / unsuitable / uncertain per article.
+- [ ] Complete human date/source/category/accessibility labels for all 49 source URLs.
