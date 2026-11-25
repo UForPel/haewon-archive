@@ -708,3 +708,9 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - The 32-thumbnail audit trace remains: 8 image payloads rendered but article-context checks pending; 1 returned HTTP 403; 23 returned inspection-tool internal errors. Thus 24 were unavailable in this inspection. No visual suitability labels or assignments were added. The 10 missing-thumbnail cases remain 4 recorded 403 and 6 missing; no retries or access-control bypass. Two page-level image links are not confirmed OG/JSON-LD candidates.
 - The 273 repeated legacy assignments remain untouched. Existing evidence remains 270 unique titles, 148 sourceUrl clues and 125 without sourceUrl; no automatic deletion, replacement or Google News wrapper decoding.
 - Public Pages deployment succeeded on #581, but the exact public page was not independently confirmed in a live browser and Android browser QA remains unverified. PR #13/#16 UI and metric changes are not deployed on main.
+
+
+## PR #16 exact-head CI follow-up (2026-11-25)
+- PR #16 HEAD `fbac15bcd4142ce943cc23df236176a4a1ba4725` was verified through temporary PR #18, which added only the PR #15 read-only workflow on top of that exact code HEAD.
+- Actions #12 / run `45542878538` succeeded: 143/143 tests, 0 failures; data validation passed for 19 videos, 0 photos, 701 discovery candidates, 0 human relevance labels, 154 run logs, and quality metrics (37 source summaries, 41 links checked).
+- Temporary PR #18 was closed after verification and never merged. PR #16 remains open/unmerged; no PR merge was performed.
