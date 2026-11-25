@@ -327,3 +327,9 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The ChatGPT continuation control is persistent across Haewon Archive turns. A user typing any new message, including “진행”, a correction, or a full work request, does **not** remove the obligation to render it again at the end of the response.
 - The control belongs to the ChatGPT assistant response, not the archive website and not a GitHub Pages UI element.
 - Every response must render the real clickable control. Merely retaining this documentation or mentioning the label in prose does not satisfy the requirement.
+
+## 2026-11-25 — News and unresolved video discovery controls (PR #20, not merged)
+
+- `#discovery-sort`: native select; defaults to publication date descending; offers relevance order. Change resets news pagination to page 1 and rerenders.
+- `#video-discovery-list`: separate list for title/URL-hinted video candidates that lack an explicit HTTPS YouTube video URL in either `url` or `publisherArticleUrl`. Displays at most 12 newest unresolved candidates plus total count. Each row links to the preserved discovery URL and explicitly states that the original YouTube URL is unverified.
+- These controls exist only on PR #20 until merged and deployed. Do not claim they are live in the production Pages site.
