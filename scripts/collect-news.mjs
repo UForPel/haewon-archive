@@ -161,7 +161,7 @@ export function shouldRetryThumbnailFetch(meta,now=Date.now()){
  if(['assigned','found','duplicate-rejected','wrapper-only'].includes(meta.status))return age>=30*day;
  if(meta.status==='missing')return age>=7*day;
  if(meta.status==='failed'){
-  if(meta.errorCode==='not-found'||meta.errorCode==='forbidden'||meta.errorCode==='rate-limited')return age>=7*day;
+  if(['not-found','forbidden','rate-limited','method-not-allowed'].includes(meta.errorCode))return age>=7*day;
   return age>=day;
  }
  return true;
@@ -183,7 +183,7 @@ export async function enrichThumbnails(items,{fetchImpl=fetch,limit=12,timeoutMs
   results[index]={id:item.id,thumbnailUrl:candidate?.url||'',candidate,candidates,status:isGoogleWrapper&&extracted.length?'wrapper-only':candidate?'found':'missing',statusCode:response.status||200,errorCode:'',publisherArticleUrl:articleUrl,sourceUrl:item.sourceUrl||'',resolvedArticleUrl:finalUrl,resolvedArticleHost:parsedUrl.hostname,fetchedAt:now};
  }catch(error){
   const statusCode=Number(error?.statusCode||response?.status)||null;
-  const errorCode=error?.errorCode||(statusCode===429?'rate-limited':statusCode===403?'forbidden':statusCode===404||statusCode===410?'not-found':statusCode>=500?'server-error':/timeout|abort/i.test(String(error?.name||'')+' '+String(error?.message||''))?'timeout':'network-error');
+  const errorCode=error?.errorCode||(statusCode===405?'method-not-allowed':statusCode===429?'rate-limited':statusCode===403?'forbidden':statusCode===404||statusCode===410?'not-found':statusCode>=500?'server-error':/timeout|abort/i.test(String(error?.name||'')+' '+String(error?.message||''))?'timeout':'network-error');
   let resolvedArticleHost='';try{resolvedArticleHost=new URL(finalUrl).hostname;}catch{}
   results[index]={id:item.id,thumbnailUrl:'',status:'failed',statusCode,errorCode,publisherArticleUrl:articleUrl,sourceUrl:item.sourceUrl||'',resolvedArticleUrl:finalUrl,resolvedArticleHost,fetchedAt:now};
  }}
