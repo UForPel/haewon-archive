@@ -29,3 +29,19 @@ test('candidate comparison distinguishes persisted thumbnail matches from latest
  assert.equal(report.persistedThumbnailDoesNotMatchMetaCandidate,0);
  assert.equal(report.rows[0].persistedThumbnailMatchesMetaCandidate,true);
 });
+
+
+test('latest enrichment attempts, discoveries and assignments are separate from persisted matches',()=>{
+ const report=compareThumbnailCandidates([{
+  id:'persisted',title:'Persisted image',thumbnailUrl:'https://img.test/a.jpg',
+  thumbnailMetaCandidates:[{url:'https://img.test/a.jpg',source:'og:image'}]
+ }],[],{attempted:0,found:0,assigned:0});
+ assert.equal(report.persistedMetaCandidateRecords,1);
+ assert.equal(report.persistedThumbnailRecords,1);
+ assert.equal(report.persistedThumbnailMatchesMetaCandidate,1);
+ assert.equal(report.persistedThumbnailDoesNotMatchMetaCandidate,0);
+ assert.equal(report.latestRunAttempted,0);
+ assert.equal(report.latestRunFound,0);
+ assert.equal(report.latestRunAssigned,0);
+ assert.equal(report.latestRunAssignmentRate,null);
+});
