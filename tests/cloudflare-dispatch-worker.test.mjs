@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { webcrypto } from "node:crypto";
+import { webcrypto, generateKeyPairSync } from "node:crypto";
 import { createAppJwt, dispatchDryRun, pemToPkcs8Bytes } from "../cloudflare/dispatch-worker.mjs";
 
 async function makeKeys() {
@@ -34,13 +34,25 @@ test("PKCS#8 PEM is decoded and JWT signature verifies", async () => {
   assert.equal(await webcrypto.subtle.verify("RSASSA-PKCS1-v1_5", imported, signature, new TextEncoder().encode(headerPart + "." + payloadPart)), true);
 });
 
-test("PKCS#1 PEM is wrapped as PKCS#8 for WebCrypto", async () => {
-  const { pair } = await makeKeys();
-  const pkcs1 = new Uint8Array(await webcrypto.subtle.exportKey("pkcs8", pair.privateKey));
-  // A PKCS#8 PEM is accepted unchanged; the PKCS#1 conversion is exercised with a minimal DER payload.
-  const converted = pemToPkcs8Bytes("-----BEGIN RSA PRIVATE KEY-----\n" + Buffer.from(pkcs1).toString("base64") + "\n-----END RSA PRIVATE KEY-----");
-  assert.equal(converted[0], 0x30);
-  assert.ok(converted.length > pkcs1.length);
+test("PKCS#1 PEM is converted to a valid PKCS#8 key and signs a verifiable JWT", async () => {
+  const pair = generateKeyPairSync("rsa", {
+    modulusLength: 2048,
+    publicExponent: 0x10001,
+    publicKeyEncoding: { type: "spki", format: "pem" },
+    privateKeyEncoding: { type: "pkcs1", format: "pem" }
+  });
+  const jwt = await createAppJwt({
+    appId: "123456",
+    privateKeyPem: pair.privateKey,
+    nowMs: 1_800_000_000_000,
+    cryptoImpl: webcrypto
+  });
+  const [headerPart, payloadPart, signaturePart] = jwt.split(".");
+  const publicDer = Buffer.from(pair.publicKey.replace(/-----BEGIN PUBLIC KEY-----|-----END PUBLIC KEY-----|\s/g, ""), "base64");
+  const publicKey = await webcrypto.subtle.importKey("spki", publicDer, { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" }, false, ["verify"]);
+  const signature = Buffer.from(signaturePart.replace(/-/g, "+").replace(/_/g, "/"), "base64");
+  assert.equal(await webcrypto.subtle.verify("RSASSA-PKCS1-v1_5", publicKey, signature, new TextEncoder().encode(headerPart + "." + payloadPart)), true);
+  assert.ok(pemToPkcs8Bytes(pair.privateKey).length > 0);
 });
 
 test("dispatch scopes the installation token to this repository and Actions write only", async () => {
