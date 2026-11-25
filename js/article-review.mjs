@@ -94,6 +94,20 @@ export function summarizeArticleReviews(items = [], labels = {}) {
     dimensions
   };
 }
+
+export function formatArticleReviewProgress(report) {
+  const total = report.eligible;
+  const dims = report.dimensions;
+  return '검수 진행 · 원문 '+report.reviewedArticles+'/'+total+' · 일곱 항목 완료 '+report.fullyReviewed+'/'+total+
+    ' · 자료 유형 '+dims.contentType.reviewed+'/'+total+
+    ' · 원문 접근성 '+dims.originalAccess.reviewed+'/'+total+
+    ' · 관련성 '+dims.relevance.reviewed+'/'+total+
+    ' · 날짜 '+dims.dateAccuracy.reviewed+'/'+total+
+    ' · 출처 '+dims.sourceAccuracy.reviewed+'/'+total+
+    ' · 분류 '+dims.categoryAccuracy.reviewed+'/'+total+
+    ' · 썸네일 '+dims.thumbnailAccuracy.reviewed+'/'+total;
+}
+
 export function buildLegacyThumbnailAudit(items = [], legacyUrl = '') {
   const rows = items.filter(item => {
     try { const a = new URL(item.thumbnailUrl || ''), b = new URL(legacyUrl); a.hash = ''; b.hash = ''; return a.href === b.href; }
