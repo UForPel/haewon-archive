@@ -355,3 +355,5 @@
 - [ ] Review 39 provenance-backed thumbnail images visually, one article at a time; review the 10 missing-image articles separately.
 - [ ] Keep the 273 legacy assignments intact until each record has a verified alternative or a documented unresolved reason.
 - [ ] Verify actual mobile browser layout, keyboard navigation, and review controls; until then status remains unverified.
+
+- [x] Distinguish 148 legacy records with publisher source-site root hints from article-specific URLs (0); preserve these hints without treating them as replacements.
