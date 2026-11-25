@@ -126,8 +126,14 @@ function renderVideos() {
     title.textContent = video.title;
     const meta = document.createElement('div');
     meta.className = 'video-meta';
-    meta.textContent = (video.publishedAt ? new Date(video.publishedAt).toLocaleDateString('ko-KR') : '날짜 미상') + ' · ' + sourceName(video.sourceId);
+    const channelName = video.channelName ? ' · 채널 ' + video.channelName : '';
+    meta.textContent = (video.publishedAt ? new Date(video.publishedAt).toLocaleDateString('ko-KR') : '날짜 미상') + ' · ' + sourceName(video.sourceId) + channelName;
     info.append(title, meta);
+    const officialChannel = video.origin === 'official' || (!video.origin && video.sourceId === 'nmixx-youtube');
+    const originTag = document.createElement('span');
+    originTag.className = 'tag';
+    originTag.textContent = officialChannel ? '공식 채널' : '채널 미검수';
+    info.append(originTag);
     if (video.relevance) {
       const tag = document.createElement('span');
       tag.className = 'tag';
