@@ -313,3 +313,11 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - PR #13 review UI controls and PR #16 metric presentation are still not deployed on main.
 - Their exact code heads have both passed the read-only test/validation workflow via temporary verification PRs (#17 and #18). Those temporary PRs were closed without merging.
 - No actual Android browser interaction, visual layout or accessibility check is claimed. The review controls remain browser-local and require JSON export/import for transfer.
+
+
+## Final implementation verification (2026-11-25)
+- PR #16 now has distinct UI rows for persisted metadata candidates, persisted HTTPS thumbnails, candidate URL matches/mismatches, and latest-run attempts/found/assigned/rate.
+- Regression coverage includes zero latest-run denominator behavior and visible UI metric separation. Updated PR #16 exact head passed 145/145 tests in temporary PR #19; temporary PR closed without merge.
+- PR #13 review UI exact head passed 154/154 tests in temporary PR #17; temporary PR closed without merge.
+- Both PRs remain unmerged. Their new UI is not on main and must not be represented as deployed or Android-tested.
+- Main Pages deployments #582/#583 succeeded, but this only verifies deployment status, not visual rendering or mobile interaction.
