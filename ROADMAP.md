@@ -479,3 +479,9 @@
 - [ ] Obtain fresh CI on PR #16 exact HEAD.
 - [ ] Confirm live Pages rendering and Android browser behavior independently of Actions deployment status.
 - [ ] Keep 273 legacy shared-thumbnail assignments unchanged until record-level evidence and human review support any migration.
+
+
+## Verification follow-up
+- [x] Run read-only CI against PR #16 exact code HEAD through temporary PR #18: Actions #12, 143/143 tests, archive validation passed; close without merge.
+- [x] Run read-only CI against PR #13 exact code HEAD through temporary PR #17: Actions #11, 154/154 tests, archive validation passed; close without merge.
+- [ ] Merge PR #15 only after explicit user approval; until then, its read-only CI is not part of main.
