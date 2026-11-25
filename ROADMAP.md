@@ -508,3 +508,14 @@
 ## Thumbnail follow-up
 - [x] Re-read all 10 missing-thumbnail records and their stored public metadata evidence; no new usable candidate found.
 - [ ] Keep these ten unresolved until explicit public metadata evidence is available; do not infer URLs or equate inaccessible with unsuitable.
+
+## 2026-11-25 — Priority correction after coverage audit
+
+1. **News reading order (PR #20, implemented on branch):** publication date descending by default; missing dates last; relevance ordering remains selectable. Await test infrastructure and human mobile check.
+2. **Video candidate retention (PR #20, implemented on branch):** keep wrapper-only fancam/YouTube candidates visible in a separate unresolved list. This restores visibility but does not add verified fan videos to `videos.json`.
+3. **Real fan-video collection (not implemented):** investigate optional YouTube Data API `search.list` with explicit quota budgeting and user-managed secret, plus public channel Atom feeds where channel IDs are known. Do not use hidden endpoints, wrapper decoding, redirects, scraping bypasses, or inferred video IDs.
+4. **News coverage:** expand rotating query packs by type and language; track newest publication timestamp, age lag, unique article yield, source diversity and review precision separately. Avoid query-volume-only optimization.
+5. **Photo discovery:** build a separate source-link/attribution index for public fan/official/event photo posts. Do not mirror/rehost images or scrape login-only/blocked sources; preview URLs only when explicitly provided for embedding.
+6. **Automation dry-run:** evaluate Cloudflare Worker Cron + authenticated narrow GitHub App dispatch as a combined scheduler/gateway. Start at a conservative interval and measure queue delay/run time before considering a 5-minute target. Gemini API analysis remains optional and must respect current free-tier quotas/data terms.
+7. **CI:** PR #15 read-only CI workflow must be available on main before PR checks can run automatically. Do not merge without explicit user approval.
+8. Preserve the 273 repeated legacy image URL occurrences until per-record evidence and approval exist.
