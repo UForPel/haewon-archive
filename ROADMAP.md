@@ -389,3 +389,24 @@
 
 - [x] Validate corrected PR #13 code with a temporary read-only CI run: 150/150 tests and archive validation passed; remove temporary workflow from code PR afterward.
 - [ ] Investigate PR #13 mergeability state before merge; keep the CI workflow itself isolated in PR #15.
+
+
+## 2026-11-25 — Second cycle follow-up
+
+- [x] Recheck main, open PRs, latest production Actions and Pages deployment.
+- [x] Audit all 49 explicit Haewon HTTPS source URLs for field presence, URL type, thumbnail presence and stored metadata status.
+- [x] Separate 47 article pages from one X profile and one X post in the review taxonomy.
+- [x] Identify that all 39 existing article thumbnails match persisted metadata candidate URLs (provenance match, not visual suitability).
+- [x] Diagnose 10 missing thumbnails: 4 HTTP 403 failures and 6 missing outcomes; no alternative candidates stored.
+- [x] Audit 273 repeated legacy records: 148 root-domain clues, 125 without sourceUrl, zero article-specific publisher URLs, zero candidate images, zero metadata fetch results; preserve all records.
+- [x] Add seventh content-type review dimension, seven-field progress and corrected-category capture in PR #13.
+- [x] Correct persisted-thumbnail vs latest-run assignment metric semantics in PR #16.
+- [x] Verify PR #13: 152/152 tests + archive validation; remove temporary workflow afterward.
+- [x] Verify PR #16: 143/143 tests + archive validation; remove temporary workflow afterward.
+- [ ] Merge PR #15 read-only CI after review; then obtain native PR checks for code PRs.
+- [ ] Merge PR #13 and #16 only after final diff review; then deploy and verify Pages.
+- [ ] Manually review original-page accessibility, relevance, date, source, content type and category for all 49 URLs.
+- [ ] Manually inspect all 39 image previews; do not count provenance as visual suitability.
+- [ ] Investigate the 10 missing image cases only through permitted public metadata; stop at 403.
+- [ ] Continue per-record legacy review only where a genuine direct publisher URL is available; preserve all opaque wrappers.
+- [ ] Perform Playwright responsive emulation and separate real Android browser visual QA; mark each distinctly.
