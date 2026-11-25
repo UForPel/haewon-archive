@@ -1238,3 +1238,12 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Playwright documents mobile device emulation of viewport, screen size, user agent and touch. Use it for automated responsive checks, but do not claim physical-device validation: https://playwright.dev/docs/emulation
 - GitHub Actions documents workflow permissions and pull_request event controls: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 - This session did not visually inspect the 39 thumbnails or execute the review UI in a real browser. Mobile/browser QA remains unverified.
+
+
+### Direct publisher page and exact-thumbnail spot-check (2026-11-25)
+- Attempted standard opens of all 49 explicit publisher/source URLs. Several pages returned readable article text and date/byline context; others returned 403, timeout, disabled access, redirect-only or empty text. This is a limitation of the inspection fetch, not a definitive reader-accessibility verdict. No workaround was used.
+- Opened 7 exact assigned thumbnail URLs (not just arbitrary page images) and checked them against article context: Khan/Sports Kyunghyang 2026-10-24, Khan 2025-10-23 (two stories), Sportal Korea 2026-10-27, Khan 2026-09-20, KapanLagi 2025-11-05, and Xports 2026-11-18. The seven were context-consistent. Remaining exact thumbnails: 32/39 not yet visually checked.
+- Wikitree record 66c296a7f618669fd99b is not a direct story about Haewon; its article is about another person doing a cover as a Haewon lookalike. Record this as indirect relevance, not direct relevance. Do not automatically remove it; use the new indirect label.
+- A sourceName of MSN paired with a Sports Kyunghyang publisher URL is a source-attribution review candidate. Keep source publisher, syndication platform and URL host distinct; do not assume every host/name difference is an error.
+- The review UI still has zero saved human labels. Seven spot-checks do not establish a complete 39-image suitability score.
+- PR #13 relevance options now distinguish direct, indirect, unrelated and uncertain. Its final temporary read-only Actions run #8 passed 153/153 tests and archive validation; the temporary workflow was removed afterward. Latest branch head: 9cd73121750458d723b1e433ed0661f595560323.
