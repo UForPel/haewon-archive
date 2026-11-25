@@ -349,3 +349,10 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Actual Android browser QA is still outstanding; CI and Pages deployment success are not a substitute.
 ## Video provenance UI — 2026-11-25
 - PR #23 video cards now display channel name and `공식 채널` / `채널 미검수` status. Unknown/legacy non-official channel records default to unverified. Branch Actions #45551380432 passed 150/150 tests plus archive validation; mobile visual QA remains pending.
+
+## 2026-11-25 — new measurement and safety details
+- PR #16 adds a total persisted-thumbnail count separate from candidate-comparable thumbnail count. Current main: 320 total thumbnail assignments, 273 legacy repeated, 47 provenance-backed.
+- PR #22 query status now records per-query unique URL count, duplicate URL/title counts, cross-query overlap, title-keyword match proxy, explicit publisher URL coverage, median/p90 publication lag, missing and future dates. These fields will be populated by live PR #22 collection runs only after merge.
+- The title-keyword match is a heuristic and must not be displayed as human-confirmed direct relevance.
+- PR #24 is not deployed. Cloudflare Free Cron CPU use is not established by Node tests; inspect Cloudflare CPU telemetry after an owner-authorized deployment before relying on 10ms headroom.
+- Actions #45552095173 passed 146/146 (PR16); #45552560866 passed 144/144 (PR22) plus archive validation. Actual mobile visual QA remains outstanding.
