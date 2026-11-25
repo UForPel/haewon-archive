@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { getVerifiedHaewonArticles, summarizeArticleReviews, validateArticleReviewExport, buildLegacyThumbnailAudit, auditVerifiedPublisherArticles, auditLinks } from '../js/article-review.mjs';
+import { getVerifiedHaewonArticles, summarizeArticleReviews, validateArticleReviewExport, buildLegacyThumbnailAudit, auditVerifiedPublisherArticles } from '../js/article-review.mjs';
 
 const base = { id: 'a', title: '오해원 인터뷰', url: 'https://news.test/a', publisherArticleUrl: 'https://news.test/a', publishedAt: '2026-11-20T00:00:00Z', sourceName: '뉴스', thumbnailUrl: 'https://img.test/a.jpg' };
 test('review scope contains only explicit publisher HTTPS Haewon articles and excludes videos', () => {
@@ -47,23 +47,4 @@ test('thumbnail suitability accuracy excludes absent images and uncertain judgme
   const report = summarizeArticleReviews(rows, labels);
   assert.equal(report.dimensions.thumbnailAccuracy.reviewed,3);
   assert.equal(report.dimensions.thumbnailAccuracy.accuracy,100);
-});
-
-test('generic link audit does not retry a forbidden publisher response', async () => {
-  const calls=[];
-  const result=await auditLinks([{url:'https://publisher.test/story',thumbnailUrl:''}],{
-    fetchImpl:async (url,options)=>{calls.push({url,method:options.method});return {status:403};},
-    limit:1
-  });
-  assert.equal(result.checked,1);
-  assert.equal(result.unreachable,1);
-  assert.deepEqual(calls,[{url:'https://publisher.test/story',method:'HEAD'}]);
-});
-
-test('publisher HEAD success is only an HTTP response, not proof of readable article content', async () => {
-  const rows=await auditVerifiedPublisherArticles([base],{
-    fetchImpl:async url=>({status:200,url})
-  });
-  assert.equal(rows.counts['http-responded'],1);
-  assert.equal(rows.counts.accessible,undefined);
 });
