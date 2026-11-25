@@ -6518,7 +6518,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-25T05:26:37.550Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "204b9bb212cd4af83767",

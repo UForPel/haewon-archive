@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T05:26:38.894Z",
+  "generatedAt": "2026-11-25T05:51:40.632Z",
   "discoveryRelevance": {
     "totalCandidates": 705,
     "articleCandidates": 519,
@@ -339,21 +339,21 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 31,
+    "bingNewsCandidates": 32,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
     "newsCandidatesTotal": 705,
-    "newsUniqueFetched": 79,
-    "newsAddedLastRun": 3,
+    "newsUniqueFetched": 80,
+    "newsAddedLastRun": 2,
     "duplicateBeforeMergeLastRun": 8,
     "duplicateGroupsCurrent": 705,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 87,
-      "after": 79,
+      "before": 88,
+      "after": 80,
       "collapsed": 8,
       "method": "normalized exact headline first; canonical URL fallback"
     },
@@ -1472,7 +1472,7 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 2,
+    "rateLimited": 0,
     "unreachable": 1,
     "thumbnailMissing": 385,
     "results": [
@@ -1521,8 +1521,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9QV2NTb0dWN2NqNmtzQV9ZNFJkaV80QkVmZW91R1djcjNheGxwZUtPUWx4ZTcxTjRoZ2FMMUJnVkRhQmR2cWpaQW9KZDY1ZHJ5ZlRGYVhTeUNudDNV?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -1635,8 +1635,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yTlEyVnlhMXdvY3NkSDhGWUVQUnZETXpwelU5WHIzS2FZU3RGdUJYTU8ybGhaR1ZLeDI1UlVBT2pBOWRtYWhQQ0Mxd1o5STNEcnc4eEw3SVF4S2Et?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -3023,7 +3023,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-25T05:26:38.910Z",
+    "generatedAt": "2026-11-25T05:51:40.647Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
