@@ -118,7 +118,7 @@ export async function auditLinks(items,{fetchImpl=fetch,limit=40,timeoutMs=3500,
 async function main(){
  const [videos,discovery,newsStatus,videoStatus,reviews,thumbnailReviewData]=await Promise.all(['data/videos.json','data/discovery.json','data/news-collection-status.json','data/collection-status.json','data/category-reviews.json','data/thumbnail-reviews.json'].map(async path=>{try{return await readJson(path)}catch{return path.endsWith('category-reviews.json')?[]:{labels:{}}}}));
  const report=summarizeCollection({videos,discovery,newsStatus,videoStatus,reviews,thumbnailReviews:thumbnailReviewData.labels||{}});
- report.thumbnailCandidateComparison=compareThumbnailCandidates(discovery,newsStatus.thumbnailEnrichment?.results||[]);
+ report.thumbnailCandidateComparison=compareThumbnailCandidates(discovery,newsStatus.thumbnailEnrichment?.results||[],newsStatus.thumbnailEnrichment||{});
  report.thumbnailReview=buildThumbnailReview(discovery,report.thumbnailAudit);
  report.linkAudit=await auditLinks(discovery);report.thumbnailResponseAudit=await auditThumbnailResponses(discovery);
  await writeFile(resolve(ROOT,'data/quality-metrics.json'),JSON.stringify(report,null,2)+'\n');
