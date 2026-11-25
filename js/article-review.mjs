@@ -2,6 +2,7 @@ import { filterArticleCandidates, hasExplicitPublisherArticleUrl, classifyDiscov
 
 export const ARTICLE_REVIEW_DIMENSIONS = {
   relevance: ['relevant', 'unrelated', 'uncertain'],
+  originalAccess: ['accessible', 'blocked', 'paywall', 'not-found', 'uncertain'],
   dateAccuracy: ['accurate', 'inaccurate', 'missing', 'uncertain'],
   sourceAccuracy: ['accurate', 'inaccurate', 'uncertain'],
   categoryAccuracy: ['correct', 'incorrect', 'uncertain']
@@ -35,6 +36,7 @@ export function validateArticleReviewExport(payload, eligibleIds = null) {
 export function summarizeArticleReviews(items = [], labels = {}) {
   const eligible = getVerifiedHaewonArticles(items);
   const dimensions = {};
+  const positive = { relevance: 'relevant', originalAccess: 'accessible', dateAccuracy: 'accurate', sourceAccuracy: 'accurate', categoryAccuracy: 'correct' };
   for (const [dimension, options] of Object.entries(ARTICLE_REVIEW_DIMENSIONS)) {
     const counts = Object.fromEntries(options.map(option => [option, 0]));
     for (const item of eligible) {
@@ -43,7 +45,7 @@ export function summarizeArticleReviews(items = [], labels = {}) {
     }
     const reviewed = options.reduce((sum, option) => sum + counts[option], 0);
     const decided = reviewed - (counts.uncertain || 0);
-    const correct = counts.accurate || counts.correct || counts.relevant || 0;
+    const correct = counts[positive[dimension]] || 0;
     dimensions[dimension] = {
       eligible: eligible.length, reviewed, pending: eligible.length - reviewed,
       coverage: eligible.length ? Math.round(reviewed / eligible.length * 100) : 0,
@@ -52,7 +54,7 @@ export function summarizeArticleReviews(items = [], labels = {}) {
   }
   return {
     eligible: eligible.length,
-    reviewedArticles: eligible.filter(item => Object.values(ARTICLE_REVIEW_DIMENSIONS).some(options => options.includes(labels[String(item.id)]?.relevance) || options.includes(labels[String(item.id)]?.dateAccuracy) || options.includes(labels[String(item.id)]?.sourceAccuracy) || options.includes(labels[String(item.id)]?.categoryAccuracy))).length,
+    reviewedArticles: eligible.filter(item => Object.keys(ARTICLE_REVIEW_DIMENSIONS).some(dimension => valid(dimension, labels[String(item.id)]?.[dimension]))).length,
     fullyReviewed: eligible.filter(item => Object.keys(ARTICLE_REVIEW_DIMENSIONS).every(key => valid(key, labels[String(item.id)]?.[key]))).length,
     dimensions
   };
