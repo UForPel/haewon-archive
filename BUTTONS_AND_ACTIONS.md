@@ -307,3 +307,9 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Image preview: displays the assigned HTTPS thumbnail candidate only; rendering is not a suitability judgment. Reviewers must compare it with the article context.
 - Persistence: labels are browser-local; export is required to move them between devices. No shared server-side review database exists.
 - Verification: PR #13 UI is not deployed on main. Actions #11 tested the branch snapshot (154/154), but no real Android browser or live UI interaction test is claimed.
+
+
+## Verification update (2026-11-25)
+- PR #13 review UI controls and PR #16 metric presentation are still not deployed on main.
+- Their exact code heads have both passed the read-only test/validation workflow via temporary verification PRs (#17 and #18). Those temporary PRs were closed without merging.
+- No actual Android browser interaction, visual layout or accessibility check is claimed. The review controls remain browser-local and require JSON export/import for transfer.
