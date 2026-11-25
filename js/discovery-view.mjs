@@ -124,7 +124,7 @@ if(list&&count){
  const categoryLabels={all:'전체 분류',news:'일반 뉴스',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
  const getVisibleItems=()=>{
   const q=search?.value||'';
-  return sortDiscoveryItems(groupDiscoveryDuplicates(filterDiscoveryRelevance(filterDiscoveryItems(filterArticleCandidates(allItems),q),selectedRelevance)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)),selectedSort);
+  return sortDiscoveryItems(groupDiscoveryDuplicates(filterDiscoveryRelevance(filterDiscoveryItems(filterArticleCandidates(allItems),q),selectedRelevance),selectedSort).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)),selectedSort);
  };
  const renderCategories=()=>{
   if(!categoryBar)return;
@@ -149,7 +149,7 @@ if(list&&count){
  const renderVideoDiscoveryCandidates=()=>{
   if(!videoDiscoveryList)return;
   const q=search?.value||'';
-  const candidates=sortDiscoveryItems(groupDiscoveryDuplicates(filterDiscoveryItems(filterUnresolvedVideoCandidates(allItems),q)),'date');
+  const candidates=sortDiscoveryItems(groupDiscoveryDuplicates(filterDiscoveryItems(filterUnresolvedVideoCandidates(allItems),q),'date'),'date');
   if(videoDiscoveryCount)videoDiscoveryCount.textContent=candidates.length+'개';
   videoDiscoveryList.replaceChildren();
   candidates.slice(0,12).forEach(item=>{
