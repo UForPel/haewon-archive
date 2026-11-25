@@ -190,3 +190,12 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Verified run #580 recorded YouTube 15, Google News RSS 73, Bing News RSS 32; all succeeded.
 - Overall status is aggregated across sources; mixed success/failure is reported as **partial**.
 - Latest validation: 142/142 tests passed and Pages deployment succeeded.
+
+
+## 2026-11-25 — Conversation continuation control must survive user-typed messages
+- Required ChatGPT response control label: **🔄 연구 기반 재귀개선 계속하기**.
+- This is a ChatGPT conversation action, not a control in the deployed archive website.
+- Every substantial Haewon Archive response must end with a real clickable action that submits the complete reusable recursive-improvement prompt from `CHATGPT_OPERATING_RULES.md` via the conversation action. A heading, plain-text label, or documentation entry is not a substitute.
+- The user typing a new message, asking a question, correcting a mistake, or changing the immediate task does **not** cancel or replace this standing end-of-response requirement. Continue answering the immediate request and doing project work, then render the continuation action at the bottom.
+- If a rendered action cannot be supported by the client, include the exact full prompt as a copyable fallback. Never silently omit the action.
+- Regression cause: the requirement already existed in operating documentation, but the assistant omitted the actual conversation control. This is an execution/response-composition failure, not an absence of a documented requirement.
