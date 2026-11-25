@@ -341,3 +341,17 @@
 - [x] Confirm successful run recorded 15 YouTube items, 73 Google News RSS items and 32 Bing News RSS candidates.
 - [ ] Continue improving the actual content mix and source-verified article/image coverage.
 - [ ] Perform real browser/mobile visual QA and human review.
+
+
+## 2026-11-25 — Article-level review and legacy thumbnail evidence
+
+- [x] Recheck latest main and Actions #581; confirm Pages deployment stages completed.
+- [x] Verify the 701-record baseline: 49 explicit publisher HTTPS Haewon articles; 39 provenance-backed thumbnails.
+- [x] Audit 273 repeated legacy assignments without deleting or relabeling them; establish zero overlap with verified Haewon articles and zero per-record alternative candidates/publisher URLs in stored data.
+- [x] Add a dedicated four-dimension human review workflow (relevance, date, source, category) with browser persistence and JSON import/export (PR #13).
+- [x] Add regression tests and a non-destructive legacy replacement-evidence metric.
+- [ ] Run CI for PR #13; current workflow has no pull_request trigger and no local test run was possible.
+- [ ] Inspect the 49 publisher pages and record human-reviewed article/date/source/category labels.
+- [ ] Review 39 provenance-backed thumbnail images visually, one article at a time; review the 10 missing-image articles separately.
+- [ ] Keep the 273 legacy assignments intact until each record has a verified alternative or a documented unresolved reason.
+- [ ] Verify actual mobile browser layout, keyboard navigation, and review controls; until then status remains unverified.
