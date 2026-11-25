@@ -196,3 +196,21 @@ For each substantial update include: changed paths; planned vs implemented items
 - PR #26's Node24 action pins have not been used in a production Pages deployment. Do not call them deployed until an approved merge and successful main run.
 - PR #28's Google/Bing sample has zero image signals. Research feed metadata and source terms, but do not expand the automated source allowlist without explicit source-policy review.
 - No PR may be merged without explicit user approval. Preserve the 273 shared legacy thumbnail assignments.
+
+## 2026-11-26 — Latest main, production and PR re-audit
+- Current main: `3c93903c6e37839fd69e0a1a74851a3dac3e6174` (`data: refresh archive discovery and improvement cycle`). The data commit was produced by scheduled production run `45695468167`, whose workflow source SHA was `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- Production run #45695468167: 142/142 tests, 0 failures; YouTube 15 items, Google RSS 135, Bing RSS 34; 24 new news candidates; metadata enrichment attempted 12, assigned 8, failed 3, missing 1. Validation, data commit, Pages configuration, 446,580-byte artifact upload and deploy step all succeeded. Artifact SHA-256 `ea394ffa5add0d8ffc8bdfc88673b145cf64fc6d7ebbb9870badc5ffe8d50bcc`.
+- Main workflow still references checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4. The actual production job emitted a Node.js 20 deprecation warning: these actions target Node20 but are forced to run on Node24. The run still succeeded. GitHub announced Node20 removal on 2026-09-23; do not describe the existing deployment as Node24-native.
+- Latest production data: 729 candidates; 543 articles; 186 videos; 77 verified publisher articles; 67 verified Haewon articles; 55 publisher articles and 48 Haewon articles with provenance-backed thumbnails; 329 thumbnail assignments; 400 missing; 57 unique thumbnail URLs. Of the 329 assignments, 273 are the same unverified legacy URL. Human image labels remain 0; visual precision is unmeasured.
+- Latest Google RSS diagnostics: 101 items, 98 site-level source URLs, 0 explicit publisher article URLs, 0 image signals. Bing RSS produced 34 candidates; the prior PR #28 sample (36 items) also had 0 image signals. PR #28 parser fixture tests are not proof of live feed image availability.
+- All 14 currently open PRs remain unmerged. Current main comparison ahead/behind: #13 59/9, #14 134/9, #15 3/9, #16 13/9, #20 17/7, #22 13/7, #23 15/7, #24 9/7, #25 19/1, #26 8/1, #27 19/1, #28 4/1, #29 13/1, #30 19/1. PR #14 remains mergeable=false; do not merge its stale docs branch wholesale.
+- PR #30 genuine pull_request run #45570252997 passed 142/142 tests and archive validation. It ran on a merge commit based on the previous main SHA 37998b31, not latest 3c93903. Its read-only workflow is not yet on main; it is not yet a shared CI gate for other PRs.
+- No PR merged and no new source was added. Browser/mobile visual QA remains unverified.
+
+## 2026-11-26 — Execution truth and dependency order
+- Main production is healthy at run #45695468167, but its current Actions still emit a Node20 deprecation warning while being forced to Node24. PR #26 is not deployed.
+- PR #30's genuine PR run #45570252997 passed 142 tests and validation, but its merge commit was based on main 37998b31, one main data commit behind current main 3c93903. Re-run against current main before relying on it as a shared gate.
+- PR #25's legacy-405 fix is committed but not CI-verified. Do not report it as tested.
+- PR #28 must not be merged separately from PR #27's social URL predicate.
+- New publisher RSS feeds require explicit source permission; public endpoint discovery is not a licence. No new feed added.
+- No PR merge or production code change without explicit user approval.
