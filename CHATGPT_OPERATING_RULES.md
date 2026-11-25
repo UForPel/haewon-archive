@@ -206,3 +206,11 @@ For each substantial update include: changed paths; planned vs implemented items
 - PR #13 code passes 152/152 tests; PR #16 code passes 143/143 tests. Both used temporary read-only workflow copies, removed after verification. PR #15 remains the permanent CI proposal.
 - Mobile/browser QA remains unverified. Playwright emulation is not physical-device QA.
 - Final response must render the actual ChatGPT button with exact label **🔄 연구 기반 재귀개선 계속하기**, submitting the next-cycle instruction; a documentation entry or Markdown link is insufficient.
+
+
+### Direct-page review update
+- Keep the review UI at seven dimensions. Relevance values include direct, indirect, unrelated and uncertain.
+- The Wikitree lookalike/cover story is an indirect relevance example; do not describe it as direct Haewon coverage.
+- Seven exact assigned thumbnails were visually spot-checked; 32/39 remain unchecked. Do not claim the 39-image set is fully reviewed.
+- All 49 public source URLs were attempted, but some web fetches returned 403, timeout, disabled, redirect-only or empty output. Do not treat these as definitive reader-access results or bypass them.
+- PR #13 final validation run #8 passed 153/153 tests and archive validation. The temporary workflow was removed.
