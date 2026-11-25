@@ -1529,3 +1529,8 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 - GitHub App authentication: https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app
 - Gemini pricing/terms: https://ai.google.dev/gemini-api/docs/pricing
 - Gemini rate limits: https://ai.google.dev/gemini-api/docs/rate-limits
+## 2026-11-25 — PR #23 visible channel verification status
+- Reviewed the actual video card renderer and found that channelId/origin were stored by the optional YouTube collector but not shown to visitors.
+- Updated PR #23 video cards to show channel name and an explicit badge: `공식 채널` for the known official NMIXX Atom source/official channel ID, otherwise `채널 미검수`. Older records without an origin field are treated as unverified unless they come from the known official source ID.
+- Added a structural regression test. Actions #45551380432 passed **150/150 tests** and archive validation. Temporary workflow removed.
+- No YouTube API key was configured, no live API call was made, and no video data was changed. PR #23 remains open/unmerged; Android visual QA remains pending.
