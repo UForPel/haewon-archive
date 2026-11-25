@@ -734,3 +734,9 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Required exact label: `🔄 연구 기반 재귀개선 계속하기`.
 - It must be rendered as an actual clickable ChatGPT response control at the end of every Haewon Archive work response. Plain text, a GitHub note, or a website link is not a substitute.
 - A user typing a message such as “진행”, a correction, or a detailed instruction never cancels, replaces, or removes this requirement. Continue the project from current GitHub state and still render the button at the end.
+
+
+## Missing-thumbnail public-metadata recheck (2026-11-25)
+- Re-read all 10 missing-thumbnail records in the 49-record review scope from current main. Four have stored 403/forbidden outcomes (Famtimes, BNT News, X profile, Allkpop); six are recorded as missing metadata (MSN copies, TVDaily, OSEN).
+- All 10 currently have zero stored RSS thumbnail candidates and zero stored article metadata image candidates. A targeted public search for the six non-403 records produced no usable exact-article image metadata evidence.
+- No 403 retry, alternate-host probing, Google News wrapper decoding, inferred image URL, assignment, or legacy data change was performed. All ten remain unresolved/unknown rather than unsuitable.
