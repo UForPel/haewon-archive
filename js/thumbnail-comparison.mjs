@@ -1,9 +1,10 @@
 export function compareThumbnailCandidates(items=[], enrichmentResults=[], latestRunSummary={}) {
  const resultsById=new Map(enrichmentResults.map(row=>[String(row.id||''),row]));
  const sourceCounts={},hostCounts={},urlCounts={};
- let compared=0,rssOnly=0,metaOnly=0,both=0,matchedUrl=0,assigned=0,foundMeta=0,persistedMetaCandidateRecords=0,persistedThumbnailRecords=0,persistedThumbnailMatchesMetaCandidate=0,persistedThumbnailDoesNotMatchMetaCandidate=0;
+ let compared=0,rssOnly=0,metaOnly=0,both=0,matchedUrl=0,assigned=0,foundMeta=0,persistedMetaCandidateRecords=0,persistedThumbnailRecords=0,persistedThumbnailRecordsTotal=0,persistedThumbnailMatchesMetaCandidate=0,persistedThumbnailDoesNotMatchMetaCandidate=0;
  const rows=[];
  for(const item of items){
+  if(/^https:\/\//i.test(String(item.thumbnailUrl||'')))persistedThumbnailRecordsTotal++;
   const rss=(item.thumbnailCandidates||[]).filter(c=>/^rss|^media:|^enclosure|^rss-description/i.test(String(c.source||'')));
   const metaResult=resultsById.get(String(item.id||''));
   const persistedMeta=(item.thumbnailMetaCandidates||[]).filter(c=>/^(?:og:image|twitter:image|jsonld:|itemprop:image|link:image_src)/i.test(String(c.source||'')));
@@ -29,7 +30,7 @@ export function compareThumbnailCandidates(items=[], enrichmentResults=[], lates
  const latestRunFound=Number.isFinite(Number(latestRunSummary.found))?Number(latestRunSummary.found):derivedLatestRunFound;
  const latestRunAssigned=Number.isFinite(Number(latestRunSummary.assigned))?Number(latestRunSummary.assigned):assigned;
  const latestRunAssignmentRate=latestRunFound?Math.round(latestRunAssigned/latestRunFound*100):null;
- return {articlesCompared:compared,rssOnly,metaOnly,bothSources:both,articlesWithSharedUrl:matchedUrl,metaFound:foundMeta,metaAssigned:assigned,assignmentRate:latestRunAssignmentRate,latestRunAttempted,latestRunFound,latestRunAssigned,latestRunAssignmentRate,persistedMetaCandidateRecords,persistedThumbnailRecords,persistedThumbnailMatchesMetaCandidate,persistedThumbnailDoesNotMatchMetaCandidate,sourceCounts:sourceCounts,hostCounts:Object.entries(hostCounts).map(([host,count])=>({host,count})).sort((a,b)=>b.count-a.count),rows:rows.slice(0,100)};
+ return {articlesCompared:compared,rssOnly,metaOnly,bothSources:both,articlesWithSharedUrl:matchedUrl,metaFound:foundMeta,metaAssigned:assigned,assignmentRate:latestRunAssignmentRate,latestRunAttempted,latestRunFound,latestRunAssigned,latestRunAssignmentRate,persistedMetaCandidateRecords,persistedThumbnailRecords,persistedThumbnailRecordsTotal,persistedThumbnailMatchesMetaCandidate,persistedThumbnailDoesNotMatchMetaCandidate,sourceCounts:sourceCounts,hostCounts:Object.entries(hostCounts).map(([host,count])=>({host,count})).sort((a,b)=>b.count-a.count),rows:rows.slice(0,100)};
 }
 function normalized(value){try{const u=new URL(value);u.hash='';return u.href;}catch{return String(value||'');}}
 export function buildThumbnailReview(items=[],audit={}){
