@@ -727,3 +727,10 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Legacy shared image URL still occurs 273 times; no automatic deletion or replacement.
 - PR #15's Node 24 SHA-pinned read-only workflow passed Actions #10 (142/142), but production collect-and-deploy workflow still emits Node 20 deprecation warnings from its separate action versions. Updating production workflow actions is a separate follow-up.
 - Pages deployments #582 and #583 reported success. This does not establish public browser rendering; Android browser QA remains outstanding.
+
+
+## Required ChatGPT continuation button — incident correction (2026-11-25)
+- The continuation button was already documented in this PR, but the prior assistant final response omitted the actual interactive control. This is an assistant response-compliance failure, not a missing GitHub specification.
+- Required exact label: `🔄 연구 기반 재귀개선 계속하기`.
+- It must be rendered as an actual clickable ChatGPT response control at the end of every Haewon Archive work response. Plain text, a GitHub note, or a website link is not a substitute.
+- A user typing a message such as “진행”, a correction, or a detailed instruction never cancels, replaces, or removes this requirement. Continue the project from current GitHub state and still render the button at the end.
