@@ -310,3 +310,13 @@ For each substantial update include: changed paths; planned vs implemented items
 - The optional YouTube API collector must skip cleanly without a user-managed secret. Never request or expose API keys in chat, commit them, or include them in logs.
 - Do not claim fan-photo automation exists while `photos.json` is empty. Article thumbnails, photo source links and fan-taken photo archives are different data types.
 - If a platform's documented public API is paid or research-restricted, do not replace it with login-wall scraping, hidden endpoints or access-control workarounds.
+
+## 2026-11-25 additions
+- Recheck main, all active PRs, Actions, and Pages deployment status at the start of every work session. Record exact SHAs and distinguish branch tests, main workflow, Pages deployment, and live Android browser QA.
+- PR #13 and PR #20 received follow-up code corrections with fresh branch Actions evidence. PR #24 adds an inert Cloudflare/GitHub App dry-run design; do not create Apps, configure secrets, or deploy Cloudflare without the owner's explicit action.
+- Never request YOUTUBE_API_KEY, GEMINI_API_KEY, or GitHub App private keys in chat. The owner configures secrets directly in the relevant provider.
+- Do not merge PRs without explicit approval. Keep code/test and documentation PRs separated where practical.
+- Keep non-official video channels unverified until human review. Keep photo sources to public permitted URLs with attribution. Do not bypass access controls or rehost images.
+- Preserve the 273 legacy repeated image URL occurrences.
+- Gemini free-tier content may be used to improve Google products; do not submit private/personal/credential data and do not enable Gemini by default.
+- Always end Haewon Archive responses with the working next-conversation button labelled exactly “🔄 연구 기반 재귀개선 계속하기”.
