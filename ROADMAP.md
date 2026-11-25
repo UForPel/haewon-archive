@@ -547,3 +547,14 @@
 9. Preserve all 273 legacy repeated image URL occurrences until an evidence-backed, reviewed per-record migration is available.
 ## Video provenance UI follow-up
 - PR #23 now exposes channel identity and verification status directly on video cards. Keep all non-official channels visibly `채널 미검수` until a human review process supplies a verified label. Do not infer that a channel is a fan channel merely because it is not the official channel.
+
+## Updated next actions — 2026-11-25
+1. Do not merge PRs without owner approval. Current active PRs: #13/#14/#15/#16/#20/#22/#23/#24.
+2. After any approved merge, run at least two full daily collection cycles before judging PR #22. Compare query-level unique URLs, duplicate URLs/titles, cross-query overlap, title keyword proxy, explicit publisher URL rate, median/p90 publication lag. Human relevance remains a separate manual label.
+3. Keep PR #16's global thumbnail denominator separate from candidate-comparable counts. Track 320 total thumbnails, 273 legacy repeated URL assignments, 47 provenance-backed assignments, 47 metadata-candidate-bearing records, and 132 persisted candidate rows until new data changes these numbers.
+4. Add human review labels for the 49 verified-source records. Do not describe title-keyword matches as direct relevance accuracy.
+5. Do not deploy PR #24 until the owner has created a repository-only GitHub App and configured secrets directly. After deployment, inspect Cloudflare invocation CPU telemetry against the 10ms Free Cron limit and confirm one dry-run dispatch before changing any collection schedule.
+6. Keep Gemini disabled unless the owner accepts free-tier content-improvement terms and checks active model/project quotas.
+7. Keep photos public-link/manual attribution-first; no access-control bypass, scraping of gated content, or image rehosting.
+8. Preserve the 273 legacy repeated image URL occurrences. Do not delete or replace without record-level evidence and human review.
+9. Perform actual Android browser QA separately from Actions/Pages success: responsive layout, overflow, navigation, article review controls, channel badges, and chronological ordering.
