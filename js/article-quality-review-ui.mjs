@@ -8,6 +8,7 @@ if (host) {
   try { labels = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') || {}; } catch { labels = {}; }
   const names = {
     relevance: { relevant: '관련 있음', unrelated: '무관함', uncertain: '판단 보류' },
+    originalAccess: { accessible: '접근 가능', blocked: '접근 제한', paywall: '유료·회원 제한', 'not-found': '삭제·404', uncertain: '판단 보류' },
     dateAccuracy: { accurate: '정확', inaccurate: '잘못됨', missing: '누락', uncertain: '판단 보류' },
     sourceAccuracy: { accurate: '정확', inaccurate: '잘못됨', uncertain: '판단 보류' },
     categoryAccuracy: { correct: '정확', incorrect: '잘못됨', uncertain: '판단 보류' }
@@ -36,7 +37,7 @@ if (host) {
   function render() {
     const report = summarizeArticleReviews(articles, labels);
     progress.textContent = '검수 진행 · 기사 '+report.reviewedArticles+'/'+report.eligible+' · 네 항목 완료 '+report.fullyReviewed+'/'+report.eligible+
-      ' · 관련성 '+report.dimensions.relevance.reviewed+'/'+report.eligible+
+      ' · 접근성 '+report.dimensions.originalAccess.reviewed+'/'+report.eligible+' · 관련성 '+report.dimensions.relevance.reviewed+'/'+report.eligible+
       ' · 날짜 '+report.dimensions.dateAccuracy.reviewed+'/'+report.eligible+
       ' · 출처 '+report.dimensions.sourceAccuracy.reviewed+'/'+report.eligible+
       ' · 분류 '+report.dimensions.categoryAccuracy.reviewed+'/'+report.eligible;
@@ -52,7 +53,7 @@ if (host) {
       const fields = document.createElement('div'); fields.className = 'article-quality-review-fields';
       const current = labels[String(item.id)] || { articleId: String(item.id) };
       for (const [dimension, options] of Object.entries(ARTICLE_REVIEW_DIMENSIONS)) {
-        const label = document.createElement('label'); label.textContent = ({ relevance: '기사 관련성', dateAccuracy: '게시 날짜', sourceAccuracy: '출처', categoryAccuracy: '분류' })[dimension];
+        const label = document.createElement('label'); label.textContent = ({ relevance: '기사 관련성', originalAccess: '원문 접근성', dateAccuracy: '게시 날짜', sourceAccuracy: '출처', categoryAccuracy: '분류' })[dimension];
         const select = document.createElement('select'); select.setAttribute('aria-label', label.textContent);
         const blank = document.createElement('option'); blank.value = ''; blank.textContent = '미검수'; select.append(blank);
         for (const option of options) { const choice = document.createElement('option'); choice.value = option; choice.textContent = names[dimension][option]; select.append(choice); }
