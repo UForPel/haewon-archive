@@ -1121,3 +1121,10 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Latest main data commit: `92eb392cf8db69d0b6769528302df33dd2d30d65`.
 - Content baseline remains 701 candidates, 515 articles, 186 video candidates, 55 verified publisher articles, 49 verified Haewon articles, and 39 verified Haewon articles with provenance-backed thumbnails.
 - Remaining product work: improve the actual source/content mix, resolve the 273-record shared legacy thumbnail cluster through human review, and perform real mobile-browser visual QA. No such visual QA is claimed here.
+
+
+## 2026-11-25 — Restore mandatory one-tap continuation action
+- User reported that the required bottom-of-response ChatGPT continuation button was missing again, despite the requirement being documented in the operating contract. Confirmed this was an execution omission: the persistent button is a conversation control, not a website control.
+- Added an explicit non-cancellation rule to `BUTTONS_AND_ACTIONS.md`: user-typed messages, corrections, and immediate task changes do not remove the required end-of-response action.
+- Required label remains **🔄 연구 기반 재귀개선 계속하기**; the action must submit the full research-informed recursive-improvement prompt in `CHATGPT_OPERATING_RULES.md`. If a real action cannot be rendered, provide the complete copyable prompt.
+- Documentation commit: `653405c1f422e53d67cf43ea13250d6abe7332d9`. CI/Pages status for this commit must be checked before calling the documentation change deployed.
