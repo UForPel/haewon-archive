@@ -740,3 +740,15 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Re-read all 10 missing-thumbnail records in the 49-record review scope from current main. Four have stored 403/forbidden outcomes (Famtimes, BNT News, X profile, Allkpop); six are recorded as missing metadata (MSN copies, TVDaily, OSEN).
 - All 10 currently have zero stored RSS thumbnail candidates and zero stored article metadata image candidates. A targeted public search for the six non-403 records produced no usable exact-article image metadata evidence.
 - No 403 retry, alternate-host probing, Google News wrapper decoding, inferred image URL, assignment, or legacy data change was performed. All ten remain unresolved/unknown rather than unsuitable.
+
+## 2026-11-25 — News chronology and video-discovery gap audit
+
+- Verified main HEAD: `7dba74e89d9b5b8e727f0ac5ff94a554aad9e9d6`. PRs #13–#16 remain open/unmerged. New code PR #20 is open/unmerged.
+- Latest completed main workflow run #583 succeeded through unit tests, public YouTube feed, news RSS collection, video sync, bounded improvement, quality metrics, validation, data commit, and GitHub Pages deployment. This verifies deployment job success, not a human Android browser render.
+- Main discovery dataset: 704 records. The newest stored publication timestamp observed is 2026-11-19T09:21:00Z; the first-page date coverage therefore lags the current 2026-11-25 date by nearly six days.
+- A local data audit found 186 title/URL-hinted unresolved video candidates (185 Google News wrapper records, 1 publisher record). This is a discovery heuristic, not 186 verified videos. Their direct YouTube video IDs are not present in explicit public metadata, so they must not be promoted to the video archive.
+- Existing UI classified title-hinted fancams as videos, filtered them out of article cards, and only converted explicit YouTube URLs in `sync-discovery-videos.mjs`. Wrapper-only items consequently had no visible list. PR #20 adds a separate unresolved-candidate list and does not decode wrappers or follow redirects.
+- PR #20 also changes news default ordering to publication date descending, with missing dates last, and exposes relevance ordering as an explicit alternative.
+- PR #20 branch: `fix/news-chronology-video-candidates`; no data files changed. 273 repeated legacy thumbnail occurrences remain untouched.
+- Validation limitation: PR checks did not run because the read-only verification workflow is still confined to unmerged PR #15 and is absent from main. Five focused Node assertions for sort and explicit-URL classification passed; the complete repository `npm test` suite has not been run on PR #20. Android/browser rendering remains unverified.
+- GitHub Pages deploy job succeeded in run #583; live page fetch via the available web inspection path was unavailable. Do not claim visual verification.
