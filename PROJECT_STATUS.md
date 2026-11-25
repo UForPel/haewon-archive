@@ -570,3 +570,10 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Updated `.github/workflows/collect-and-deploy.yml` on `ci/upgrade-pages-actions-node24`, pinning all five actions to full immutable commit SHAs and release comments. Kept the project runtime at Node 22; this is separate from the JavaScript runtime used to execute Actions themselves.
 - Added `package-manager-cache: false` to setup-node because the workflow does not require dependency caching. Existing schedule, collection concurrency, write permissions, validation, data commit and Pages deploy gates are unchanged.
 - PR CI/production deployment has not run on this branch. No workflow change is live until approved merge and successful run.
+
+## 2026-11-25 — PR #25/#26 verification boundary refresh
+- PR #25 (`fix/metadata-method-not-allowed-backoff`) and PR #26 (`ci/upgrade-pages-actions-node24`) are both open, unmerged, mergeable and based directly on latest main `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- Both heads currently have empty combined-status lists and no PR-triggered workflow runs. Main still has no `pull_request` workflow; PR #15 is open and unmerged.
+- Production main run #45556461352 is independently confirmed successful: 142/142 tests, collection and validation steps successful, data commit completed, Pages artifact 434,230 bytes, deployment status reported success. This is main-only evidence, not validation of PR #25/#26.
+- The Pages deployment log reports `pages_build_version=d85484c426ef0f67e3a3ddf16da76276315664e1`, while the same run subsequently pushed data commits `33ff1b9` and `37998b3`. Do not conflate the workflow's source/deployment version with its post-run data commit.
+- Browser rendering of the live Pages URL could not be inspected through the available web viewer; mobile/browser visual QA remains unverified. A local clone/test attempt was blocked because this environment could not resolve github.com. No test pass is claimed for either PR.
