@@ -347,3 +347,5 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The target workflow only validates dispatch metadata and explicitly reports writes=false, collection=false, deployment=false.
 - PR #13 review UI has a branch-level syntax fix verified by Actions #45550626122. PR #20 invalid publication-date fallback verified by Actions #45551065801.
 - Actual Android browser QA is still outstanding; CI and Pages deployment success are not a substitute.
+## Video provenance UI — 2026-11-25
+- PR #23 video cards now display channel name and `공식 채널` / `채널 미검수` status. Unknown/legacy non-official channel records default to unverified. Branch Actions #45551380432 passed 150/150 tests plus archive validation; mobile visual QA remains pending.
