@@ -145,3 +145,10 @@ Status: DESIGN ONLY. No external scheduler, Gemini API integration, Worker or fi
 - Active limits vary by project and model (RPM, input TPM, RPD) and must be checked in Google AI Studio. RPD resets at midnight Pacific Time. Do not assume a universal static free quota.
 - Grounding availability differs by model/tier; some current Gemini 3 models do not include free-tier Google Search grounding. Treat grounding as unavailable unless the selected model's current table says otherwise.
 - Gemini stays optional and off by default. If used, send only public/sanitized metadata; never credentials, personal/private information, or human review labels tied to identifiable people. No Gemini key/integration is active.
+
+## 2026-11-25 — Cloudflare CPU validation gate
+- PR #24 uses one Cron expression `17 11,23 * * *` UTC and a GitHub App installation token restricted to repository `haewon-archive` and `actions: write`.
+- GitHub's 2026-03-10 REST docs specify the workflow-dispatch endpoint supports GitHub App installation access tokens and requires Actions: write; successful dispatch can return HTTP 200 with workflow run ID/URLs.
+- Cloudflare Workers Free permits 10ms CPU per Cron invocation; network wait is excluded, but PEM parsing, key import, RS256 signing and runtime overhead count toward CPU time. Node CI validates PKCS#8/PKCS#1 signature correctness but cannot establish Cloudflare CPU usage.
+- After user-authorized deployment, inspect Workers invocation logs/metrics CPU time. Do not change the production GitHub collection schedule until dry-run dispatch and CPU telemetry are verified.
+- No Worker deployment, GitHub App creation, or secret configuration has occurred.
