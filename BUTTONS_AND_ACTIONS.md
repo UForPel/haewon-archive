@@ -203,3 +203,5 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - PR #13: https://github.com/UForPel/haewon-archive/pull/13. CI and actual browser/mobile interaction checks are pending; no visual completion claim is made.
 
 - Legacy cluster evidence: all 273 assignments came from Google News RSS; 148 have only a publisher source-site root hint, and none has an article-specific publisher URL or image candidate. These root hints are not treated as article links or image replacements.
+
+- Five review dimensions are available: original-page accessibility, relevance, publication-date accuracy, source accuracy, and category accuracy. A syntactically valid HTTPS URL is not itself an accessibility pass.
