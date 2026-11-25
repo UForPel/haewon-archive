@@ -341,3 +341,21 @@
 - [x] Confirm successful run recorded 15 YouTube items, 73 Google News RSS items and 32 Bing News RSS candidates.
 - [ ] Continue improving the actual content mix and source-verified article/image coverage.
 - [ ] Perform real browser/mobile visual QA and human review.
+
+
+
+## 2026-11-25 — Fresh integration and deployment gates
+
+- [x] Reconfirm main SHA, all requested open PRs, current heads and behind counts.
+- [x] Separate PR snapshot push runs from actual PR-event checks.
+- [x] Verify production Actions #587 substantive steps, Pages artifact upload and deploy step.
+- [x] Measure PR #28 public Google/Bing RSS image signals; current sample has zero image metadata from both feeds.
+- [x] Preserve all 273 shared legacy thumbnail assignments.
+- [ ] Obtain explicit user approval before merging any PR.
+- [ ] Rebase/retest PRs #13–#16 and #20/#22–#24 against latest main; PR #14 needs a narrower replacement because its documentation-only branch conflicts with current documentation.
+- [ ] Establish the permanent read-only PR CI on main before treating pull_request checks as an enforced gate.
+- [ ] After PR #26 approval/merge, verify production Pages deploy using Node24-compatible action pins.
+- [ ] After PR #27 approval/merge, verify persisted X/social exclusion and no social thumbnail enrichment in the next production collection.
+- [ ] Keep investigating only publicly disclosed publisher article metadata; do not infer article URLs from Google News source URLs or decode wrappers.
+- [ ] Real mobile browser, visual layout, keyboard and interaction QA; not verified by Actions.
+- [ ] Human review of relevance, date, source, category and thumbnail suitability; precision remains unmeasured.
