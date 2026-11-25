@@ -572,3 +572,5 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Latest verified operational log data/run-logs/45508856109.json records all three sources: YouTube 15, Google News RSS 74, Bing News RSS 33; overall success and validation passed.
 
 - Follow-up CI proposal opened as separate PR #15: https://github.com/UForPel/haewon-archive/pull/15. It adds a read-only pull_request workflow running npm test and npm run validate; it does not collect, write data, or deploy Pages. This workflow must be merged before PR #13 can receive automatic PR checks.
+
+- Deeper legacy-cluster breakdown: all 273 records originate from Google News RSS; 148 retain a publisher source-site root URL, but none has an article-specific publisher URL, discovery URL, per-record image candidate, or metadata-fetch attempt. The source-site root is only a lead, not evidence of an article or image replacement. No Google News wrapper is decoded.
