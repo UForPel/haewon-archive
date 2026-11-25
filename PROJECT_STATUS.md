@@ -576,3 +576,5 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Deeper legacy-cluster breakdown: all 273 records originate from Google News RSS; 148 retain a publisher source-site root URL, but none has an article-specific publisher URL, discovery URL, per-record image candidate, or metadata-fetch attempt. The source-site root is only a lead, not evidence of an article or image replacement. No Google News wrapper is decoded.
 
 - The article review queue includes a fifth independent dimension for original-page accessibility (accessible / blocked / paywall / not-found / uncertain), in addition to relevance, date, source, and category accuracy.
+
+- The code PR now also adds a bounded, direct-URL accessibility audit for all 49 verified Haewon publisher articles. It sends one standard HEAD request per explicit HTTPS publisherArticleUrl, follows ordinary HTTP redirects, records status/final host, and performs no retry, wrapper decoding, or access-control workaround. This audit is implemented but awaits PR CI and the next successful data-generation run.
