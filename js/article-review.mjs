@@ -98,7 +98,7 @@ export function summarizeArticleReviews(items = [], labels = {}) {
 export function formatArticleReviewProgress(report) {
   const total = report.eligible;
   const dims = report.dimensions;
-  return '검수 진행 · 원문 '+report.reviewedArticles+'/'+total+' · 여덟 항목 완료 '+report.fullyReviewed+'/'+total+
+  return '검수 진행 · 원문 '+report.reviewedArticles+'/'+total+' · 일곱 항목 완료 '+report.fullyReviewed+'/'+total+
     ' · 자료 유형 '+dims.contentType.reviewed+'/'+total+
     ' · 원문 접근성 '+dims.originalAccess.reviewed+'/'+total+
     ' · 관련성 '+dims.relevance.reviewed+'/'+total+
