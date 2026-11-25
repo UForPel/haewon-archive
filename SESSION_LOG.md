@@ -1151,3 +1151,5 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Review the 49 records against their actual publisher pages; do not infer correctness from field presence.
 - Collect individual human thumbnail labels for the 39 source-traceable images and review missing-image cases for the remaining 10.
 - For the 273 legacy records, improve source data only when a direct publisher article URL or article-specific image candidate is explicitly present in permitted public RSS/meta fields. Otherwise preserve and mark unresolved.
+
+- Additional legacy cause detail: all 273 are Google News RSS records. 148 have a publisher source-site root hint, but zero have an article-specific publisher URL, zero have an article-specific discovery URL, zero have candidate image arrays, and zero have metadata-fetch records. The common image is therefore an untraceable inherited assignment in current stored data; the 148 source-site roots are not sufficient to identify a specific article or image. No wrapper decoding was attempted.
