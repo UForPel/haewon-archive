@@ -7,7 +7,7 @@ if (host) {
   let labels = {};
   try { labels = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') || {}; } catch { labels = {}; }
   const names = {
-    relevance: { relevant: '관련 있음', unrelated: '무관함', uncertain: '판단 보류' },
+    relevance: { relevant: '직접 관련', indirect: '간접 언급·타인 중심', unrelated: '무관함', uncertain: '판단 보류' },
     originalAccess: { accessible: '접근 가능', blocked: '접근 제한', paywall: '유료·회원 제한', 'not-found': '삭제·404', uncertain: '판단 보류' },
     dateAccuracy: { accurate: '정확', inaccurate: '잘못됨', missing: '누락', uncertain: '판단 보류' },
     sourceAccuracy: { accurate: '정확', inaccurate: '잘못됨', uncertain: '판단 보류' },
