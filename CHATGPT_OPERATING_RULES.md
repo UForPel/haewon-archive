@@ -278,3 +278,13 @@ For each substantial update include: changed paths; planned vs implemented items
 - PR #16 exact HEAD: temporary PR #18, Actions #12, 143/143 tests, archive validation passed; closed without merge.
 - The temporary PRs each added the exact SHA-pinned read-only workflow from PR #15 and no production code changes. They must never be merged.
 - PR #15 remains a separate CI PR and requires explicit user approval before merge. Keep all original PRs open/unmerged unless the user explicitly authorizes a merge.
+
+
+## Final verification controls (2026-11-25)
+- PR #16 persisted/latest metrics must be shown as separate rows. Include latest attempts, found, assigned and nullable rate; never merge persisted candidate counts into current-run activity.
+- Current main data comparison after latest collection: 47/47 persisted candidate URL matches; current run 0/0/0. Earlier 44/44 was a pre-collection snapshot.
+- Temporary CI harnesses for PR #13, #16 and the updated PR #16 UI were closed unmerged after passing Actions #11, #12 and #15 respectively.
+- If a GitHub write omits a branch argument, stop and inspect the default branch immediately. If main was changed unintentionally, restore the exact prior ref using an expected SHA, then monitor any already-triggered workflows and record all resulting data/deployment side effects.
+- Production workflow Actions #582/#583 were triggered unintentionally by the temporary main push/reset; both completed successfully. The accidental workflow file is absent from final main. Record the event; do not imply those runs were planned.
+- PR #15's Node 24 SHA-pinned workflow does not upgrade the separate production collect-and-deploy workflow. Track its Node 20 deprecation warning as a separate maintenance task.
+- Pages deployment success is not proof of live rendering or Android browser QA.
