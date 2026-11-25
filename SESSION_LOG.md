@@ -1182,7 +1182,7 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Added test coverage for thumbnail accuracy and its denominator (missing and uncertain image cases do not inflate the suitability score).
 - Added a test ensuring a 403 response does not trigger a GET retry in the generic link audit.
 - Changed automated article HEAD status accessible to http-responded: RFC 9110 defines HEAD as GET without response content, so it cannot establish that a person can read the article. The five original human dimensions still include a separate manually assigned accessibility label.
-- Latest code branch commit 00578614125f2994ed0e65da33f5e4d6ae021323. These fixes are committed but unverified by a fresh CI run.
+- Latest code branch commit bbe05328a450b3ad068a28f99ac88f6ac66fdb87 (UI scope count made data-driven). These fixes are committed but unverified by a fresh CI run.
 
 ### Quality baseline / content
 - Last metrics snapshot: 701 discovery records; 49 verified Haewon publisher articles; 39/49 provenance-backed thumbnails; 273 records share one legacy image assignment.
