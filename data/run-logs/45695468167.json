@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "runId": "45695468167",
+  "startedAt": "2026-11-25T20:29:40.000Z",
+  "finishedAt": "2026-11-25T20:30:09.401Z",
+  "trigger": "github_schedule",
+  "mode": "production",
+  "status": "success",
+  "sources": [
+    {
+      "sourceId": "nmixx-youtube",
+      "outcome": "success",
+      "itemsSeen": 15
+    },
+    {
+      "sourceId": "google-news-rss",
+      "outcome": "success",
+      "itemsSeen": 135
+    },
+    {
+      "sourceId": "bing-news-rss",
+      "outcome": "success",
+      "itemsSeen": 34
+    }
+  ],
+  "counts": {
+    "discovered": 15,
+    "accepted": 1,
+    "rejected": 0,
+    "duplicates": 14,
+    "uncertain": 0
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "changedPaths": [
+    "data/collection-status.json",
+    "data/discovery.json",
+    "data/improvement-cycle.json",
+    "data/news-collection-status.json",
+    "data/quality-metrics.json",
+    "data/videos.json",
+    "data/run-logs/45695468167.json",
+    "data/run-logs"
+  ],
+  "durationMs": 29401
+}
