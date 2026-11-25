@@ -1,36 +1,36 @@
 {
-  "generatedAt": "2026-11-25T05:51:40.632Z",
+  "generatedAt": "2026-11-25T05:52:25.992Z",
   "discoveryRelevance": {
-    "totalCandidates": 705,
-    "articleCandidates": 519,
+    "totalCandidates": 707,
+    "articleCandidates": 521,
     "videoCandidates": 186,
-    "verifiedPublisherArticles": 58,
-    "verifiedHaewonArticles": 49,
-    "verifiedPublisherArticlesWithProvenanceThumbnail": 46,
-    "verifiedHaewonWithProvenanceThumbnail": 39,
-    "haewonTitleMatches": 428,
-    "nmixxTitleMatches": 443,
+    "verifiedPublisherArticles": 60,
+    "verifiedHaewonArticles": 51,
+    "verifiedPublisherArticlesWithProvenanceThumbnail": 47,
+    "verifiedHaewonWithProvenanceThumbnail": 40,
+    "haewonTitleMatches": 430,
+    "nmixxTitleMatches": 445,
     "otherArticleCandidates": 29,
     "defaultScope": "verified-haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 705,
-    "itemsWithPublisherArticleUrl": 59,
-    "bingNewsItems": 59,
+    "totalItems": 707,
+    "itemsWithPublisherArticleUrl": 61,
+    "bingNewsItems": 61,
     "candidateSourceCounts": {
-      "bing-news-rss-explicit-url-param": 63
+      "bing-news-rss-explicit-url-param": 65
     },
     "publisherHosts": {
       "sports.khan.co.kr": 7,
       "biz.chosun.com": 5,
       "www.msn.com": 5,
       "www.mk.co.kr": 4,
+      "x.com": 3,
       "www.soompi.com": 3,
       "news.sbs.co.kr": 3,
       "mydaily.co.kr": 2,
       "www.sportsseoul.com": 2,
       "www.xportsnews.com": 2,
-      "x.com": 2,
       "en.sportalkorea.com": 2,
       "www.koreaboo.com": 2,
       "www.famtimes.co.kr": 1,
@@ -45,6 +45,7 @@
       "www.nme.com": 1,
       "www.allkpop.com": 1,
       "timesofindia.indiatimes.com": 1,
+      "www.sportskeeda.com": 1,
       "www.spotvnews.co.kr": 1,
       "www.tvdaily.co.kr": 1,
       "osen.co.kr": 1,
@@ -59,11 +60,11 @@
       "biz.chosun.com": 6,
       "www.msn.com": 5,
       "www.mk.co.kr": 4,
+      "x.com": 3,
       "www.soompi.com": 3,
       "www.mydaily.co.kr": 2,
       "www.sportsseoul.com": 2,
       "www.xportsnews.com": 2,
-      "x.com": 2,
       "en.sportalkorea.com": 2,
       "www.koreaboo.com": 2,
       "sbsstar.net": 2,
@@ -78,6 +79,7 @@
       "www.nme.com": 1,
       "www.allkpop.com": 1,
       "timesofindia.indiatimes.com": 1,
+      "www.sportskeeda.com": 1,
       "www.spotvnews.co.kr": 1,
       "www.tvdaily.co.kr": 1,
       "osen.co.kr": 1,
@@ -189,25 +191,25 @@
       "news.sbs.co.kr": 1
     },
     "discoveryWrapperHosts": {
-      "www.bing.com": 59
+      "www.bing.com": 61
     }
   },
   "thumbnailProvenance": {
-    "assignedTotal": 320,
+    "assignedTotal": 321,
     "assignedBySource": {
       "unverified-legacy": 273,
-      "og:image": 45,
+      "og:image": 46,
       "twitter:image": 2
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 385,
+    "missingThumbnailCount": 386,
     "sourceProvenanceCoverage": 15
   },
   "thumbnailAudit": {
-    "items": 705,
-    "withThumbnail": 320,
-    "missing": 385,
-    "uniqueThumbnailUrls": 48,
+    "items": 707,
+    "withThumbnail": 321,
+    "missing": 386,
+    "uniqueThumbnailUrls": 49,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 7,
@@ -269,6 +271,10 @@
         "count": 2
       },
       {
+        "host": "pbs.twimg.com",
+        "count": 2
+      },
+      {
         "host": "image.koreaboo.com",
         "count": 2
       },
@@ -294,10 +300,6 @@
       },
       {
         "host": "en.koreadaily.com",
-        "count": 1
-      },
-      {
-        "host": "pbs.twimg.com",
         "count": 1
       },
       {
@@ -339,33 +341,63 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 32,
+    "bingNewsCandidates": 36,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 19,
-    "newsCandidatesTotal": 705,
-    "newsUniqueFetched": 80,
-    "newsAddedLastRun": 2,
+    "newsCandidatesTotal": 707,
+    "newsUniqueFetched": 69,
+    "newsAddedLastRun": 4,
     "duplicateBeforeMergeLastRun": 8,
-    "duplicateGroupsCurrent": 705,
+    "duplicateGroupsCurrent": 707,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 88,
-      "after": 80,
+      "before": 77,
+      "after": 69,
       "collapsed": 8,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 0,
-      "found": 0,
-      "assigned": 0,
+      "attempted": 2,
+      "found": 1,
+      "assigned": 1,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
-      "failed": 0,
-      "results": []
+      "failed": 1,
+      "results": [
+        {
+          "id": "f977bb5482918d976246",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://pbs.twimg.com/amplify_video_thumb/2112840511815815168/img/isZkbwhULfaMAA3e?format=webp&name=large",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://pbs.twimg.com/amplify_video_thumb/2112840511815815168/img/isZkbwhULfaMAA3e?format=webp&name=large",
+              "source": "og:image",
+              "priority": 1
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
+          "resolvedArticleHost": "x.com"
+        },
+        {
+          "id": "baaea643c6e7d0c5b9b4",
+          "status": "failed",
+          "publisherArticleUrl": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+          "resolvedArticleHost": "www.sportskeeda.com"
+        }
+      ]
     }
   },
   "sources": [
@@ -403,6 +435,18 @@
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 100,
       "thumbnailCoverage": 100,
+      "dateCoverage": 100
+    },
+    {
+      "source": "x",
+      "items": 3,
+      "withUrl": 3,
+      "withPublisherArticleUrl": 3,
+      "withThumbnail": 2,
+      "withDate": 3,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 67,
       "dateCoverage": 100
     },
     {
@@ -499,18 +543,6 @@
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 100,
       "thumbnailCoverage": 100,
-      "dateCoverage": 100
-    },
-    {
-      "source": "x",
-      "items": 2,
-      "withUrl": 2,
-      "withPublisherArticleUrl": 2,
-      "withThumbnail": 1,
-      "withDate": 2,
-      "urlCoverage": 100,
-      "publisherArticleUrlCoverage": 100,
-      "thumbnailCoverage": 50,
       "dateCoverage": 100
     },
     {
@@ -682,6 +714,18 @@
       "dateCoverage": 100
     },
     {
+      "source": "Sportskeeda",
+      "items": 1,
+      "withUrl": 1,
+      "withPublisherArticleUrl": 1,
+      "withThumbnail": 0,
+      "withDate": 1,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 0,
+      "dateCoverage": 100
+    },
+    {
       "source": "뉴스1 on MSN",
       "items": 1,
       "withUrl": 1,
@@ -847,15 +891,15 @@
     }
   ],
   "classification": {
-    "items": 705,
+    "items": 707,
     "categoryCounts": {
       "video": 186,
       "interview": 45,
-      "news": 414,
+      "news": 415,
       "brand": 21,
       "event": 5,
       "performance": 29,
-      "official": 8
+      "official": 9
     },
     "reviewedSamples": 0,
     "accuracy": null,
@@ -864,14 +908,14 @@
     "accuracyLabel": "not measured (no category review labels)"
   },
   "thumbnailReviewMetrics": {
-    "eligible": 417,
+    "eligible": 418,
     "reviewed": 0,
     "reviewCoverage": 0,
     "relevant": 0,
     "unsuitable": 0,
     "excluded": 0,
     "precision": null,
-    "selectedEligible": 320,
+    "selectedEligible": 321,
     "selectedReviewed": 0,
     "selectedPrecision": null,
     "counts": {
@@ -1015,6 +1059,25 @@
       "assignmentRate": 100
     },
     {
+      "host": "x.com",
+      "attempted": 3,
+      "assigned": 2,
+      "found": 2,
+      "missing": 0,
+      "failed": 1,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {
+        "forbidden": 1
+      },
+      "finalHosts": {
+        "x.com": 3
+      },
+      "successRate": 67,
+      "candidateRate": 67,
+      "assignmentRate": 100
+    },
+    {
       "host": "en.sportalkorea.com",
       "attempted": 2,
       "assigned": 2,
@@ -1097,25 +1160,6 @@
       },
       "successRate": 100,
       "candidateRate": 100,
-      "assignmentRate": 100
-    },
-    {
-      "host": "x.com",
-      "attempted": 2,
-      "assigned": 1,
-      "found": 1,
-      "missing": 0,
-      "failed": 1,
-      "wrapperOnly": 0,
-      "duplicateRejected": 0,
-      "errorCodes": {
-        "forbidden": 1
-      },
-      "finalHosts": {
-        "x.com": 2
-      },
-      "successRate": 50,
-      "candidateRate": 50,
       "assignmentRate": 100
     },
     {
@@ -1399,6 +1443,25 @@
       "assignmentRate": 100
     },
     {
+      "host": "www.sportskeeda.com",
+      "attempted": 1,
+      "assigned": 0,
+      "found": 0,
+      "missing": 0,
+      "failed": 1,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {
+        "network-error": 1
+      },
+      "finalHosts": {
+        "www.sportskeeda.com": 1
+      },
+      "successRate": 0,
+      "candidateRate": 0,
+      "assignmentRate": null
+    },
+    {
       "host": "www.spotvnews.co.kr",
       "attempted": 1,
       "assigned": 1,
@@ -1474,7 +1537,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 385,
+    "thumbnailMissing": 386,
     "results": [
       {
         "kind": "article",
@@ -1725,16 +1788,16 @@
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 47,
+    "articlesCompared": 48,
     "rssOnly": 0,
-    "metaOnly": 47,
+    "metaOnly": 48,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 47,
-    "metaAssigned": 0,
-    "assignmentRate": 0,
+    "metaFound": 48,
+    "metaAssigned": 1,
+    "assignmentRate": 2,
     "sourceCounts": {
-      "og:image": 45,
+      "og:image": 46,
       "jsonld:image": 64,
       "twitter:image": 6,
       "jsonld:thumbnailUrl": 15,
@@ -1806,6 +1869,10 @@
         "count": 2
       },
       {
+        "host": "pbs.twimg.com",
+        "count": 2
+      },
+      {
         "host": "cdns.klimg.com",
         "count": 2
       },
@@ -1819,10 +1886,6 @@
       },
       {
         "host": "en.koreadaily.com",
-        "count": 1
-      },
-      {
-        "host": "pbs.twimg.com",
         "count": 1
       },
       {
@@ -2229,6 +2292,22 @@
         "sharedUrls": [],
         "assigned": false,
         "metaStatus": "not-attempted"
+      },
+      {
+        "id": "f977bb5482918d976246",
+        "title": "NMIXX Charts on X: \"NMIXX’s Lily and Haewon covering “Rolling in the Deep” by Adele with insane vocals.\"",
+        "articleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://pbs.twimg.com/amplify_video_thumb/2112840511815815168/img/isZkbwhULfaMAA3e?format=webp&name=large",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned"
       },
       {
         "id": "bfe53579db328d52b340",
@@ -3023,7 +3102,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-25T05:51:40.647Z",
+    "generatedAt": "2026-11-25T05:52:26.003Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

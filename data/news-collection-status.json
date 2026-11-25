@@ -1,22 +1,22 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-25T05:51:39.140Z",
+  "collectedAt": "2026-11-25T05:52:24.356Z",
   "searchPack": 1,
   "queries": [
     {
       "query": "Haewon NMIXX interview",
-      "candidates": 15,
-      "uniqueCandidates": 15
+      "candidates": 16,
+      "uniqueCandidates": 16
     },
     {
       "query": "오해원 인터뷰",
-      "candidates": 45,
-      "uniqueCandidates": 45
+      "candidates": 30,
+      "uniqueCandidates": 30
     },
     {
       "query": "NMIXX Haewon magazine",
-      "candidates": 13,
-      "uniqueCandidates": 13
+      "candidates": 16,
+      "uniqueCandidates": 16
     },
     {
       "query": "Haewon NMIXX brand",
@@ -27,15 +27,15 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
-  "bingCandidates": 32,
+  "bingCandidates": 36,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 88,
-  "uniqueIncoming": 80,
-  "added": 2,
+  "fetched": 77,
+  "uniqueIncoming": 69,
+  "added": 4,
   "rssImageSignals": {
-    "items": 56,
-    "sourceUrlItems": 56,
+    "items": 41,
+    "sourceUrlItems": 41,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -49,20 +49,50 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 0,
-    "found": 0,
-    "assigned": 0,
+    "attempted": 2,
+    "found": 1,
+    "assigned": 1,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
-    "failed": 0,
-    "results": []
+    "failed": 1,
+    "results": [
+      {
+        "id": "f977bb5482918d976246",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2112840511815815168/img/isZkbwhULfaMAA3e?format=webp&name=large",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://pbs.twimg.com/amplify_video_thumb/2112840511815815168/img/isZkbwhULfaMAA3e?format=webp&name=large",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
+        "resolvedArticleHost": "x.com"
+      },
+      {
+        "id": "baaea643c6e7d0c5b9b4",
+        "status": "failed",
+        "publisherArticleUrl": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+        "resolvedArticleHost": "www.sportskeeda.com"
+      }
+    ]
   },
   "deduplicationComparison": {
-    "before": 88,
-    "after": 80,
+    "before": 77,
+    "after": 69,
     "collapsed": 8,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 705
+  "totalCandidates": 707
 }

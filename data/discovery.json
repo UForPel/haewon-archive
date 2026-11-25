@@ -4581,6 +4581,59 @@
     "thumbnailMetaFetch": null
   },
   {
+    "id": "f977bb5482918d976246",
+    "title": "NMIXX Charts on X: \"NMIXX’s Lily and Haewon covering “Rolling in the Deep” by Adele with insane vocals.\"",
+    "url": "https://x.com/nmixxiee/status/2112842130163114298",
+    "publisherArticleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b067798e29d4bb399303c31f06bb920&url=https%3a%2f%2fx.com%2fnmixxiee%2fstatus%2f2112842130163114298&c=7093214953091930515&mkt=ko-kr",
+    "publisherHost": "x.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20magazine&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b067798e29d4bb399303c31f06bb920&url=https%3a%2f%2fx.com%2fnmixxiee%2fstatus%2f2112842130163114298&c=7093214953091930515&mkt=ko-kr",
+        "articleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
+        "host": "x.com"
+      }
+    ],
+    "publishedAt": "2026-10-21T02:43:00.000Z",
+    "description": "NMIXX’s Lily and Haewon covering “Rolling in the Deep” by Adele with insane vocals.",
+    "thumbnailUrl": "https://pbs.twimg.com/amplify_video_thumb/2112840511815815168/img/isZkbwhULfaMAA3e?format=webp&name=large",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "x",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon magazine",
+    "discoveredAt": "2026-11-25T05:52:24.356Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://pbs.twimg.com/amplify_video_thumb/2112840511815815168/img/isZkbwhULfaMAA3e?format=webp&name=large",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
+      "resolvedArticleHost": "x.com",
+      "fetchedAt": "2026-11-25T05:52:25.105Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://pbs.twimg.com/amplify_video_thumb/2112840511815815168/img/isZkbwhULfaMAA3e?format=webp&name=large",
+      "articleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
+      "observedAt": "2026-11-25T05:52:25.105Z"
+    }
+  },
+  {
     "id": "e560ecdeb55314f595dd",
     "title": "NMIXX(엔믹스) “너는 달 (Sing to the Moon) (LILY, HAEWON)” Fan-Made MV - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBYR1dwMVB5RUxHN2lkU3FCVmtEcHBOMG5fZ0RwMlBweDhvQ29tdGhJdVYtSm1kNV9CRjF4RTNZSFQtR0oxNURUMWVnbzMzTmtSNkNSREx3YWpVeWVu?oc=5",
@@ -6800,6 +6853,47 @@
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null
+  },
+  {
+    "id": "baaea643c6e7d0c5b9b4",
+    "title": "NMIXX's Haewon diagnosed with COVID-19",
+    "url": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+    "publisherArticleUrl": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b067798e29d4bb399303c31f06bb920&url=https%3a%2f%2fwww.sportskeeda.com%2fpop-culture%2fnmixx-s-haewon-diagnosed-covid-19&c=12587613739833116799&mkt=ko-kr",
+    "publisherHost": "www.sportskeeda.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20magazine&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b067798e29d4bb399303c31f06bb920&url=https%3a%2f%2fwww.sportskeeda.com%2fpop-culture%2fnmixx-s-haewon-diagnosed-covid-19&c=12587613739833116799&mkt=ko-kr",
+        "articleUrl": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+        "host": "www.sportskeeda.com"
+      }
+    ],
+    "publishedAt": "2022-04-08T01:09:00.000Z",
+    "description": "K-pop idol Haewon from rookie girl group NMIXX has tested positive for COVID-19. The idol’s agency, JYP Entertainment, released an official statement confirming Haewon’s health results. The agency ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Sportskeeda",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon magazine",
+    "discoveredAt": "2026-11-25T05:52:24.356Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "failed",
+      "publisherArticleUrl": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+      "resolvedArticleHost": "www.sportskeeda.com",
+      "fetchedAt": "2026-11-25T05:52:25.105Z",
+      "statusCode": 405,
+      "errorCode": "network-error"
+    }
   },
   {
     "id": "8bb372124be78864fa7d",
