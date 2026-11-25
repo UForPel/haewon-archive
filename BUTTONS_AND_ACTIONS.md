@@ -296,3 +296,14 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Fresh Actions #10 / run `45541326160` on exact head `d095da244c97fcbea4e38eca624fae6112088c56`: success; 142/142 tests passed, 0 failed; archive validation passed (19 videos, 701 discovery candidates, 154 run logs, 37 source summaries, 41 links checked). No Node 20 deprecation warning in this run's log.
 - This is PR #15 branch validation only; PR #15 is still not merged and does not yet provide main-wide automatic CI.
 - PR #13 latest code branch `b926e8fab1d9338bf08d7c2568f49b40f99a1767` still has no fresh Actions run after its URL-host-context helper/test addition. PR #16 latest branch `fbac15bcd4142ce943cc23df236176a4a1ba4725` retains prior Actions #6 (143/143) and has no newer run.
+
+
+## PR #13 article-quality review controls (not yet on main)
+- Article quality review disclosure: expands/collapses the 49-record verified publisher-URL review queue.
+- Seven per-record review selectors: content type, original-page accessibility, direct/indirect relevance, date accuracy, source accuracy, category accuracy and thumbnail suitability.
+- Corrected-category selector: records a proposed human correction without changing automatic classification rules.
+- Review JSON export: downloads browser-local labels with schema version and export timestamp.
+- Review JSON import: validates schema and eligible article IDs before merging labels into browser-local storage.
+- Image preview: displays the assigned HTTPS thumbnail candidate only; rendering is not a suitability judgment. Reviewers must compare it with the article context.
+- Persistence: labels are browser-local; export is required to move them between devices. No shared server-side review database exists.
+- Verification: PR #13 UI is not deployed on main. Actions #11 tested the branch snapshot (154/154), but no real Android browser or live UI interaction test is claimed.
