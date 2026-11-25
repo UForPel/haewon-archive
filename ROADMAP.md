@@ -341,3 +341,12 @@
 - [x] Confirm successful run recorded 15 YouTube items, 73 Google News RSS items and 32 Bing News RSS candidates.
 - [ ] Continue improving the actual content mix and source-verified article/image coverage.
 - [ ] Perform real browser/mobile visual QA and human review.
+
+## 2026-11-25 — Publisher URL type validation
+- [x] Audit all 61 explicit HTTPS publisherArticleUrl records against their actual URL type.
+- [x] Identify 3 X/Twitter social URLs incorrectly counted as publisher articles; one was an account profile URL.
+- [x] Centralize URL validation across RSS/Bing ingestion, candidate merge, thumbnail enrichment and quality metrics.
+- [x] Preserve social discovery candidates and original links while excluding social URLs from the verified publisher article scope.
+- [x] Add regression tests for X profile/post exclusion, merge cleanup, thumbnail fetch eligibility and metric counts.
+- [ ] Run PR tests and data validation in CI; main has no pull_request workflow and local GitHub clone is blocked by DNS in this environment.
+- [ ] Confirm regenerated quality metrics on the next production collection run; expected verified counts above are computed against current data but not yet persisted.
