@@ -357,3 +357,9 @@
 - [x] Open PR #25 for HTTP 405 classification/backoff and regression tests; confirm it has no Actions run/status check yet.
 - [ ] After user-approved merge of the read-only PR verification workflow, rerun PR #25 checks before considering its code for merge.
 - [ ] Do not treat main's 142/142 passing production run as validation of PR #25.
+
+## 2026-11-25 — GitHub Actions runtime maintenance
+- [x] Capture the live warning that main's JavaScript actions targeting Node 20 are forced to Node 24.
+- [ ] Verify current Node 24-compatible major versions and immutable SHAs for checkout, setup-node, configure-pages, deploy-pages and artifact upload.
+- [ ] Upgrade the production collection/deploy workflow in a separate focused PR; preserve permissions, schedule, concurrency and data-write gates.
+- [ ] Verify the next full Actions run, data commit, Pages artifact and deployment after the upgrade.
