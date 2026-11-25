@@ -574,3 +574,5 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Follow-up CI proposal opened as separate PR #15: https://github.com/UForPel/haewon-archive/pull/15. It adds a read-only pull_request workflow running npm test and npm run validate; it does not collect, write data, or deploy Pages. This workflow must be merged before PR #13 can receive automatic PR checks.
 
 - Deeper legacy-cluster breakdown: all 273 records originate from Google News RSS; 148 retain a publisher source-site root URL, but none has an article-specific publisher URL, discovery URL, per-record image candidate, or metadata-fetch attempt. The source-site root is only a lead, not evidence of an article or image replacement. No Google News wrapper is decoded.
+
+- The article review queue includes a fifth independent dimension for original-page accessibility (accessible / blocked / paywall / not-found / uncertain), in addition to relevance, date, source, and category accuracy.
