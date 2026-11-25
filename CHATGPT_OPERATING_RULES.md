@@ -173,3 +173,12 @@ For each substantial update include: changed paths; planned vs implemented items
 - Google News RSS 4/4, 260 items, 258 site-level URLs, 0 direct article URLs and 0 image signals; Bing 4/4, 41 candidates; combined 301 fetched, 275 unique, 6 additions.
 - Metadata enrichment attempted 0 URLs due retry backoff. Do not characterize this as failure.
 - Keep Google News wrappers opaque and only use explicit HTTPS article/video URLs from public metadata.
+
+
+## 필수 대화창 후속 버튼 — 매 세션 종료 조건
+
+- 모든 Haewon Archive 재귀개선 세션의 마지막 답변에는 ChatGPT 대화창에서 클릭할 수 있는 **🔄 연구 기반 재귀개선 계속하기** 버튼을 실제로 표시한다.
+- 이 버튼은 웹사이트 내부 기능이 아니다. 클릭 시 새 사용자 메시지로 다음 사이클 실행 지시를 전송하는 대화창 버튼이다.
+- 버튼 실행 지시는 최신 main/PR/Actions/Pages 확인, 최신 연구 및 공식 근거 조사, 기준선 기반 병목 선정, 실제 구현·테스트, 코드/테스트/문서 PR 분리, 품질 전후 비교, 운영 로그와 네 문서 및 본 운영 규칙 갱신, 검증 한계 기록을 포함한다.
+- 사용자는 매번 '진행' 또는 상세 지시를 타이핑할 필요가 없어야 한다.
+- GitHub 문서 기록만으로는 충분하지 않다. **최종 응답에 실제 클릭 가능한 버튼이 렌더링되어야 한다.** 버튼 누락은 세션 완료로 간주하지 않는다.
