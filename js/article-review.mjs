@@ -65,6 +65,8 @@ export function buildLegacyThumbnailAudit(items = [], legacyUrl = '') {
   const alternatives = rows.map(item => ({
     articleId: String(item.id || ''), title: String(item.title || ''),
     publisherArticleUrl: hasExplicitPublisherArticleUrl(item) ? item.publisherArticleUrl : '',
+    sourceSiteUrl: /^https:\/\//i.test(String(item.sourceUrl || '')) ? item.sourceUrl : '',
+    discoverySource: String(item.discoverySource || ''),
     candidateUrls: [...new Set([...(item.thumbnailCandidates || []), ...(item.thumbnailMetaCandidates || [])]
       .map(candidate => String(candidate?.url || '')).filter(url => /^https:\/\//i.test(url)))],
     metadataStatus: item.thumbnailMetaFetch?.status || 'not-attempted',
@@ -73,6 +75,8 @@ export function buildLegacyThumbnailAudit(items = [], legacyUrl = '') {
   return {
     url: legacyUrl, assignments: rows.length,
     recordsWithPublisherArticleUrl: alternatives.filter(row => row.publisherArticleUrl).length,
+    recordsWithSourceSiteUrl: alternatives.filter(row => row.sourceSiteUrl).length,
+    sourceSiteHosts: Object.fromEntries([...alternatives.reduce((map, row) => { if (row.sourceSiteUrl) { try { const host = new URL(row.sourceSiteUrl).hostname; map.set(host, (map.get(host) || 0) + 1); } catch {} } return map; }, new Map())]),
     recordsWithAlternativeCandidates: alternatives.filter(row => row.candidateUrls.length).length,
     distinctAlternativeUrls: new Set(alternatives.flatMap(row => row.candidateUrls)).size,
     metadataOutcomes: Object.fromEntries([...alternatives.reduce((map, row) => map.set(row.metadataStatus, (map.get(row.metadataStatus) || 0) + 1), new Map())]),
