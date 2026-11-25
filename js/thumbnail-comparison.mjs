@@ -1,4 +1,4 @@
-export function compareThumbnailCandidates(items=[], enrichmentResults=[]) {
+export function compareThumbnailCandidates(items=[], enrichmentResults=[], latestRunSummary={}) {
  const resultsById=new Map(enrichmentResults.map(row=>[String(row.id||''),row]));
  const sourceCounts={},hostCounts={},urlCounts={};
  let compared=0,rssOnly=0,metaOnly=0,both=0,matchedUrl=0,assigned=0,foundMeta=0,persistedMetaCandidateRecords=0,persistedThumbnailRecords=0,persistedThumbnailMatchesMetaCandidate=0,persistedThumbnailDoesNotMatchMetaCandidate=0;
@@ -24,8 +24,12 @@ export function compareThumbnailCandidates(items=[], enrichmentResults=[]) {
   rows.push({id:item.id,title:item.title||'',articleUrl:item.publisherArticleUrl||item.url||'',rssCandidates:r,metaCandidates:m,sharedUrls:[...rssUrls].filter(u=>metaUrls.has(u)),assigned:Boolean(metaResult?.assigned),metaStatus:metaResult?.status||'not-attempted',persistedThumbnailUrl:persistedThumbnail?item.thumbnailUrl:'',persistedThumbnailMatchesMetaCandidate:persistedMatch});
   if(metaResult?.found||m.length)foundMeta++;if(metaResult?.assigned)assigned++;
  }
- const latestRunFound=enrichmentResults.filter(row=>row.found||row.status==='found'||row.status==='assigned'||row.status==='duplicate-rejected').length;
- return {articlesCompared:compared,rssOnly,metaOnly,bothSources:both,articlesWithSharedUrl:matchedUrl,metaFound:foundMeta,metaAssigned:assigned,assignmentRate:latestRunFound?Math.round(assigned/latestRunFound*100):null,latestRunFound,latestRunAssigned:assigned,latestRunAssignmentRate:latestRunFound?Math.round(assigned/latestRunFound*100):null,persistedMetaCandidateRecords,persistedThumbnailRecords,persistedThumbnailMatchesMetaCandidate,persistedThumbnailDoesNotMatchMetaCandidate,sourceCounts:sourceCounts,hostCounts:Object.entries(hostCounts).map(([host,count])=>({host,count})).sort((a,b)=>b.count-a.count),rows:rows.slice(0,100)};
+ const derivedLatestRunFound=enrichmentResults.filter(row=>row.found||row.status==='found'||row.status==='assigned'||row.status==='duplicate-rejected').length;
+ const latestRunAttempted=Number.isFinite(Number(latestRunSummary.attempted))?Number(latestRunSummary.attempted):enrichmentResults.length;
+ const latestRunFound=Number.isFinite(Number(latestRunSummary.found))?Number(latestRunSummary.found):derivedLatestRunFound;
+ const latestRunAssigned=Number.isFinite(Number(latestRunSummary.assigned))?Number(latestRunSummary.assigned):assigned;
+ const latestRunAssignmentRate=latestRunFound?Math.round(latestRunAssigned/latestRunFound*100):null;
+ return {articlesCompared:compared,rssOnly,metaOnly,bothSources:both,articlesWithSharedUrl:matchedUrl,metaFound:foundMeta,metaAssigned:assigned,assignmentRate:latestRunAssignmentRate,latestRunAttempted,latestRunFound,latestRunAssigned,latestRunAssignmentRate,persistedMetaCandidateRecords,persistedThumbnailRecords,persistedThumbnailMatchesMetaCandidate,persistedThumbnailDoesNotMatchMetaCandidate,sourceCounts:sourceCounts,hostCounts:Object.entries(hostCounts).map(([host,count])=>({host,count})).sort((a,b)=>b.count-a.count),rows:rows.slice(0,100)};
 }
 function normalized(value){try{const u=new URL(value);u.hash='';return u.href;}catch{return String(value||'');}}
 export function buildThumbnailReview(items=[],audit={}){
