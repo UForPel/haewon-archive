@@ -1452,3 +1452,7 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 - Prior UI hid unresolved video candidates while the sync pipeline correctly refused to guess wrapper URLs. Fix is to retain the candidate in a separate, clearly unverified list; never fabricate or decode a video URL.
 - PR CI status must not be inferred from older successful runs. PR #20 has no checks until a PR workflow exists on main; record this explicitly.
 - Continuation button requirement remains mandatory: always render the actual one-tap ChatGPT control at the end of every substantial Haewon Archive work response, even when the user sends intermediate messages.
+
+### Follow-up verification note
+- Temporary PR #21 targeting `ci/pull-request-tests` was closed unmerged. The workflow's trigger explicitly filters pull requests to base branch `main`, so this temporary target did not trigger Actions. No CI result was produced for PR #20. Do not repeat this incorrect target assumption.
+- PR #20 remains open and mergeable, but has no check run. Full repository tests and live browser rendering remain pending.
