@@ -228,3 +228,5 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The general link audit no longer retries a 403 with GET. A 403 remains an access-denied response; no retry or access workaround is attempted.
 - Current PR #13 CI run #2 failed on a duplicate export declaration (113/116 tests passed, three files could not import). The duplicate was removed and regression tests added, but latest code has no post-fix CI result yet.
 - Actual mobile browser inspection remains unverified. CI and Pages deployment are not substitutes for visual testing.
+
+- Corrected PR #13 code now passed a temporary read-only Actions verification: 150/150 tests and archive-data validation. The temporary workflow was removed afterward; the permanent workflow proposal remains separately in PR #15.
