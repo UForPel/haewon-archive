@@ -4,14 +4,19 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export const SEARCH_PACKS = [
-  ['오해원 NMIXX','해원 엔믹스','NMIXX Haewon','Haewon NMIXX news'],
-  ['Haewon NMIXX interview','오해원 인터뷰','NMIXX Haewon magazine','Haewon NMIXX brand'],
-  ['오해원 방송','해원 엔믹스 기사','NMIXX Haewon appearance','Haewon NMIXX event']
+  ['오해원 NMIXX','해원 엔믹스','NMIXX Haewon news','Haewon NMIXX news','오해원 근황','Haewon latest news'],
+  ['Haewon NMIXX interview','오해원 인터뷰','NMIXX Haewon magazine','Haewon NMIXX editorial','해원 화보 인터뷰','Haewon profile interview'],
+  ['오해원 방송','해원 엔믹스 기사','NMIXX Haewon appearance','Haewon NMIXX event','오해원 예능 출연','Haewon broadcast appearance'],
+  ['오해원 광고','NMIXX Haewon brand','Haewon campaign','해원 브랜드 화보','NMIXX Haewon endorsement','Haewon magazine pictorial'],
+  ['오해원 팬미팅 기사','NMIXX Haewon festival','Haewon stage appearance news','해원 공연 행사','NMIXX Haewon showcase','Haewon public schedule'],
+  ['NMIXX Haewon Japan news','오해원 해외 활동','Haewon international interview','엔믹스 해원 활동 소식','Haewon radio appearance','NMIXX Haewon television']
 ];
 export const SEARCHES = SEARCH_PACKS.flat();
-export function getDailySearches(day = new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'})) {
+export function getDailySearches(day = new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'}), runSlot = Number(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul',hour:'2-digit',hourCycle:'h23'})) >= 12 ? 1 : 0) {
   const dayNumber = Math.floor(Date.parse(day+'T00:00:00Z') / 86400000);
-  return SEARCH_PACKS[((dayNumber % SEARCH_PACKS.length)+SEARCH_PACKS.length)%SEARCH_PACKS.length];
+  const slot = Number(runSlot) === 1 ? 1 : 0;
+  const index = ((dayNumber * 2 + slot) % SEARCH_PACKS.length + SEARCH_PACKS.length) % SEARCH_PACKS.length;
+  return SEARCH_PACKS[index];
 }
 function decode(value=''){
  return value.replace(/<!\[CDATA\[(.*?)\]\]>/gs,'$1').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").trim();
