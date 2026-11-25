@@ -1397,3 +1397,10 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 - 10 missing thumbnails in the 49-record scope: 4 recorded 403 and 6 missing. 32-image audit remains 8 rendered, 1 403 and 23 inspection-tool internal errors; 24 unavailable. No labels, bypass, automatic assignment, deletion or replacement.
 - PR #15 Actions #10 passed 142/142 with Node 24 SHA-pinned actions and read-only permissions. The separate production workflow still warns that some actions target Node 20.
 - Pages deployment success is confirmed for #582/#583; live browser rendering and Android QA remain unverified.
+
+
+## 2026-11-25 — Continuation button omission correction
+- User correctly pointed out that the prior response again omitted the clickable end-of-session continuation button.
+- The exact button and full execution prompt were already present in `BUTTONS_AND_ACTIONS.md` and `CHATGPT_OPERATING_RULES.md` on this documentation branch. The failure was that the assistant did not render the control in the final response.
+- Reaffirmed the hard invariant: every Haewon Archive response ends with a real ChatGPT clickable control labelled `🔄 연구 기반 재귀개선 계속하기`. A user message typed into chat does not remove or suspend it.
+- Do not close a work cycle until the actual control is present in the rendered final answer. Verify both the documentation and final response, independently.
