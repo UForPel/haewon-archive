@@ -29,7 +29,7 @@ export async function auditVerifiedPublisherArticles(items = [], { fetchImpl = f
         let finalHost = '';
         try { const finalUrl = new URL(response.url || url); if (finalUrl.protocol === 'https:') finalHost = finalUrl.hostname; } catch {}
         const status = Number(response.status) || null;
-        const state = status >= 200 && status < 400 ? 'accessible'
+        const state = status >= 200 && status < 400 ? 'http-responded'
           : status === 402 || status === 451 ? 'paywall'
           : status === 401 || status === 403 ? 'blocked'
           : status === 404 || status === 410 ? 'not-found'
@@ -41,7 +41,7 @@ export async function auditVerifiedPublisherArticles(items = [], { fetchImpl = f
     }
   }
   await Promise.all(Array.from({ length: Math.min(concurrency, articles.length) }, worker));
-  const counts = Object.fromEntries(['accessible', 'blocked', 'paywall', 'not-found', 'uncertain'].map(state => [state, results.filter(row => row.state === state).length]));
+  const counts = Object.fromEntries(['http-responded', 'blocked', 'paywall', 'not-found', 'uncertain'].map(state => [state, results.filter(row => row.state === state).length]));
   return { scope: 'explicit-publisher-https-haewon-articles', method: 'HEAD', redirectPolicy: 'standard-http-follow-only', bypassAttempted: false, checked: results.length, total: articles.length, counts, results };
 }
 
