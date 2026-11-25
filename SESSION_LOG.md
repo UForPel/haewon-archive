@@ -1463,3 +1463,29 @@ Result: 8 image payloads rendered, 1 returned 403, and 23 returned inspection-to
 - PR #22 changes this to 6 packs × 6 phrases and rotates by Korea date plus run slot (morning/evening). Two daily runs now cover 12 distinct phrases and 24 RSS requests/day across Google News and Bing, a 50% increase from 16.
 - Tests added for six packs, six queries per pack, 36 total phrases, and different pack selection by run slot. Four focused Node assertions passed; full npm test and GitHub Actions are pending due missing PR CI workflow on main.
 - PR: https://github.com/UForPel/haewon-archive/pull/22. No data changed, no merge.
+
+## 2026-11-25 — Search coverage, YouTube API collector and platform constraints
+
+### Code PRs and exact verification
+- PR #20: date-descending news sort, explicit relevance sort, newest duplicate representative in date mode, separate unresolved video-candidate list. Temporary read-only run #45549871115 passed **145/145 tests** and archive validation.
+- PR #22: six packs × six editorial queries, KST run-slot rotation, 12 unique editorial phrases/day, 24 RSS requests/day (+50% vs previous 16). Initial run #45549874901 failed because an existing recursive-improvement test still expected 3 packs; corrected it. Rerun #45549924691 passed **143/143 tests** and validation.
+- PR #23: optional YouTube Data API public search across channels, 4 calls per run / 8 per day, 12 rotating queries, channel ID and origin provenance. Run #45549801497 passed **149/149 tests** and validation.
+- Each temporary read-only push workflow was removed after its successful test. None was merged or added to main. These checks are branch evidence, not production deployment.
+- All PRs remain open/unmerged. No data changed. 273 repeated legacy image URLs untouched.
+
+### Fan-video collector design
+- Uses documented YouTube Data API `search.list`, not undocumented search endpoints or scraped pages.
+- Search results become canonical `www.youtube.com/watch?v=...` records only when API returns a valid 11-character video ID, title, channel identity and valid publication date.
+- Channel identity is preserved. The known official channel is marked `official`; other channels remain `unverified` until reviewed, not automatically labeled fan.
+- The collector skips if `YOUTUBE_API_KEY` is absent. No live API request was made and no key is configured. User may add this optional secret directly to Actions Secrets if they choose.
+- Default quota: 100 `search.list` calls/day, 1 unit/call. Our bounded schedule uses 8/day. Source: https://developers.google.com/youtube/data/determine_quota_cost
+
+### Photo-platform feasibility
+- X API official pricing is pay-per-usage, with Posts: Read listed at $0.005 per returned post. It does not meet the strict free-first constraint. Source: https://docs.x.com/x-api/getting-started/pricing
+- Meta Content Library/API is a research-oriented service using a Secure Research Environment; current documentation says its public-data geographic scope excludes South Korea. It is not a general free consumer API for this archive. Sources: https://developers.facebook.com/documentation/meta-content-library/ ; https://developers.facebook.com/documentation/meta-content-library/changelog
+- Therefore no automatic X/Instagram/fansite photo collector was added. Preserve public source links and attribution; do not scrape login-only content, copy/rehost images, or imply that article OG thumbnails constitute fan-photo collection.
+
+### Automation and Gemini feasibility
+- Cloudflare Cron supports minute-level schedules such as `*/5 * * * *`, uses UTC, and can act as both scheduler and narrow dispatch gateway. Free plan limits documented as 100,000 requests/day, 10 ms CPU per invocation and 5 Cron Triggers/account. Sources: https://developers.cloudflare.com/workers/configuration/cron-triggers/ ; https://developers.cloudflare.com/workers/platform/limits/
+- Gemini API free tier has limited model access and its free-tier content may be used to improve Google's products. Free Google Search grounding is available for selected Gemini 2.5 Flash/Flash-Lite models (shared 500 RPD), but is not available for Gemini 3 and newer free tier according to current pricing. Prefer Gemini as optional analysis of public/sanitized metadata, not as a required search engine or private-data processor. Source: https://ai.google.dev/gemini-api/docs/pricing
+- No Cloudflare Worker, GitHub App, Gemini integration, Gemini key, external scheduler or five-minute automation was deployed.
