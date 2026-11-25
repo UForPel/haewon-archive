@@ -95,3 +95,13 @@ test('quality report measures Haewon, NMIXX and video candidate separation indep
   defaultScope:'verified-haewon-title-match'
  });
 });
+
+import { buildLegacyThumbnailAudit } from '../js/article-review.mjs';
+test('legacy thumbnail audit reports per-record replacement evidence without deletion',()=>{
+ const url='https://img.test/shared.jpg';
+ const items=Array.from({length:3},(_,i)=>({id:String(i),title:'기사 '+i,thumbnailUrl:url,thumbnailCandidates:[],thumbnailMetaCandidates:[],thumbnailMetaFetch:{status:'failed',errorCode:'forbidden'}}));
+ const audit=buildLegacyThumbnailAudit(items,url);
+ assert.equal(audit.assignments,3);assert.equal(audit.recordsWithPublisherArticleUrl,0);
+ assert.equal(audit.recordsWithAlternativeCandidates,0);assert.equal(audit.distinctAlternativeUrls,0);
+ assert.deepEqual(audit.metadataOutcomes,{failed:3});assert.equal(audit.records.length,3);
+});
