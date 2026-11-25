@@ -558,3 +558,15 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Latest data commit: `92eb392cf8db69d0b6769528302df33dd2d30d65`.
 - Content baseline remains 701 candidates: 515 articles, 186 videos, 55 verified publisher articles, 49 verified Haewon articles, 39 verified Haewon articles with provenance-backed thumbnails. Thumbnail state: 317 assigned, 384 missing, 273 unverified shared legacy assignments retained but hidden from article previews.
 - Browser/mobile visual QA and human relevance/thumbnail labels remain unverified.
+
+
+## 2026-11-25 — Verified article and legacy thumbnail review system (PR #13 pending)
+
+- Rechecked main 32832e57e9e1023c62eefa4a1e8b4a76550e451b; latest Actions #581 succeeded. Its verify-collect-deploy job completed all stages, including Pages configuration, artifact upload and deployment. Latest observed data refresh commit: 32832e57.
+- Latest quality baseline remains 701 discovery candidates: 515 article candidates, 186 video candidates, 56 explicit publisher HTTPS URLs in all discovery records, 49 verified Haewon-title publisher articles, and 39 provenance-backed thumbnail assignments among those 49.
+- Dataset inspection found all 49 verified articles have publishedAt and sourceName fields, but none has an explicit stored category array. Date/source presence is not an accuracy check; category is currently inferred by title/description rules. Human correctness remains unmeasured.
+- The 273 repeated legacy image assignments have zero overlap with the 49 verified Haewon articles. All 273 currently lack publisherArticleUrl and per-record thumbnailCandidates/thumbnailMetaCandidates in stored data. No automatic deletion or replacement was performed.
+- PR #13 (review/verified-article-quality-audit) adds an article-by-article browser review queue with independent relevance/date/source/category labels, local persistence and JSON import/export, tests, and a non-destructive legacy replacement-evidence metric. PR URL: https://github.com/UForPel/haewon-archive/pull/13.
+- CI for PR #13 is pending because the current workflow runs only on pushes to main or manual/scheduled events, not pull_request. Local clone/test execution was unavailable in this environment. Do not report PR tests as passed until Actions actually runs them.
+- Browser/mobile visual QA is unverified. No browser session was available; CI/Pages deployment is not visual QA.
+- Latest verified operational log data/run-logs/45508856109.json records all three sources: YouTube 15, Google News RSS 74, Bing News RSS 33; overall success and validation passed.
