@@ -386,3 +386,6 @@
 - [ ] Label the 39 article thumbnails individually and distinguish the 10 missing-image cases.
 - [ ] Generate and compare fresh quality metrics; do not claim improvement until verified counts rise.
 - [ ] Perform actual mobile browser inspection; until then mark UI as unverified.
+
+- [x] Validate corrected PR #13 code with a temporary read-only CI run: 150/150 tests and archive validation passed; remove temporary workflow from code PR afterward.
+- [ ] Investigate PR #13 mergeability state before merge; keep the CI workflow itself isolated in PR #15.
