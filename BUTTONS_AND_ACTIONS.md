@@ -199,3 +199,12 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - The user typing a new message, asking a question, correcting a mistake, or changing the immediate task does **not** cancel or replace this standing end-of-response requirement. Continue answering the immediate request and doing project work, then render the continuation action at the bottom.
 - If a rendered action cannot be supported by the client, include the exact full prompt as a copyable fallback. Never silently omit the action.
 - Regression cause: the requirement already existed in operating documentation, but the assistant omitted the actual conversation control. This is an execution/response-composition failure, not an absence of a documented requirement.
+
+
+
+## 2026-11-25 — Latest recursive audit and response action
+
+- Current audited main: `37998b31b12b2eb9980cff6df616b2f677a10de6`; latest production Actions #587 completed all substantive collection, validation, data-commit and Pages deployment steps. Pages artifact: 434,230 bytes. Independent mobile/browser QA remains unverified.
+- PR #25–#28 snapshot runs are push-triggered and read-only, not PR-event checks: 144/144, 142/142, 147/147 and 145/145 respectively. Their current PR heads are 0 behind main.
+- PR #13–#16 are 8 behind; #20/#22–#24 are 6 behind. PR #14 is documentation-only, mergeable=false and overlaps main's current edits to BUTTONS_AND_ACTIONS.md, PROJECT_STATUS.md and SESSION_LOG.md. Do not merge it wholesale.
+- The mandatory ChatGPT conversation control remains the final element of every substantial response: **🔄 연구 기반 재귀개선 계속하기**. It must be a real action, not plain text. The user typing another prompt does not cancel this requirement.
