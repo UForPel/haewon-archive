@@ -73,6 +73,8 @@ export function summarizeCollection({videos=[],discovery=[],newsStatus={},videoS
  const legacyThumbnailAudit=legacyAudit?{
   assignments:legacyAudit.assignments,
   recordsWithPublisherArticleUrl:legacyAudit.recordsWithPublisherArticleUrl,
+  recordsWithSourceSiteUrl:legacyAudit.recordsWithSourceSiteUrl,
+  sourceSiteHosts:legacyAudit.sourceSiteHosts,
   recordsWithAlternativeCandidates:legacyAudit.recordsWithAlternativeCandidates,
   distinctAlternativeUrls:legacyAudit.distinctAlternativeUrls,
   metadataOutcomes:legacyAudit.metadataOutcomes,
