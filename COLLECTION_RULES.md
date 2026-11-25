@@ -87,3 +87,9 @@ Before any automated write:
 10. If any gate fails, write no candidate records; emit a sanitized failure summary.
 
 Gemini does not have permission to alter these rules or the validators enforcing them.
+
+## Social URL versus publisher article boundary — 2026-11-25
+- `publisherArticleUrl` must identify a publisher article page, not merely any non-root HTTPS URL.
+- X/Twitter profiles and posts are not publisher articles for the verified article view or article metadata-enrichment fetch. Keep the candidate's original `url`, title and source, but leave `publisherArticleUrl` empty.
+- Do not delete social-source candidates; they may remain visible in broader discovery scopes. A future dedicated social-post source type may be added separately if needed.
+- Use the shared `isExplicitPublisherArticleUrl` predicate in ingestion, merge, quality metrics and UI scope logic. Do not duplicate weaker URL checks.
