@@ -541,3 +541,10 @@ Keep the conversation continuation button as the final response element of every
 - All 273 legacy assignments remain unchanged; 0 have publisher article URLs, 0 have alternative thumbnail candidates, 199 have source-site URLs. 12 wrapper-only Google News metadata entries remain untouched.
 - Android Chrome QA remains UNVERIFIED pending actual user checklist results. No labels were generated/uploaded, no new RSS sources added, no wrapper decoding, no access bypass, no paid service or external data transmission.
 - Latest code/data main before this documentation-only finalization: 9b47fd4ab2a46163fff794b2dc4e70f892ab0c7f. Documentation-only PR will not trigger another Production run.
+
+ 
+## 2026-11-27 — Thumbnail missing-source dashboard diagnostics
+- Added a read-only diagnostic section to the existing “수집·품질 진단 보기” dashboard (feature branch; PR/CI pending).
+- It displays total missing vs total candidates, classified/unclassified counts, top source groups, missing count vs source total, missing records with explicit publisher article URLs, source-site URL-only counts, and evidence-backed reason counts.
+- This is not a new action button and performs no network request, write, retry, label creation, or upload. It only renders sanitized aggregate fields from `data/quality-metrics.json`.
+- Automated coverage checks that the dashboard consumes `thumbnailMissingDiagnostics` and displays publisher-article vs source-site URL counts. CI pending; mobile visual QA remains user-performed.
