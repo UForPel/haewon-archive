@@ -436,3 +436,11 @@ Keep the conversation continuation button as the final response element of every
 - Required user-performed Android Chrome checks: (1) narrow viewport and tap comfort, (2) expand/collapse, (3) complete seven selectors, (4) next-pending opens/focuses/scrolls, (5) refresh preserves local labels, (6) export and re-import JSON merges without erasing unrelated dimensions, (7) confirm no automatic upload.
 - Do not mark any item complete from Node tests, source inspection or Pages deployment. Only user-reported checklist results count as real-device QA.
 - Do not intentionally exhaust browser storage. QuotaExceededError recovery is covered by a simulated Node storage adapter, not a real-device quota test.
+
+
+## 2026-11-26 — Failed-edit rollback regression
+- Review selectors must revert to the latest successfully persisted value after any failed subsequent write, not a value captured when the row was first rendered.
+- This applies to all seven review dimensions and the optional expected-category correction field.
+- Regression scenario: initial value -> successful edit A -> failed edit B (QuotaExceededError) -> visible selection remains A and stored labels remain A.
+- Use `getArticleReviewValue(labels, articleId, field)` against the current committed in-memory labels after `persistLabels` returns failure.
+- Android Chrome checklist is still outstanding; only user-reported device observations count.
