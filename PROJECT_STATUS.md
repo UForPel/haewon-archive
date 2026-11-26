@@ -869,3 +869,14 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - This PR does not alter collection, discovery data, RSS sources, search pack, thumbnail assignments or the 273 legacy shared-image records. It does not add a backend or automatic upload; review labels remain localStorage-only with manual JSON transfer.
 - PR #50 has not yet been merged at this checkpoint. Production collection, generated-data commit and Pages deployment for this code change are therefore **PENDING** until merge and a separate Production run.
 - Android Chrome visual/touch/focus/refresh/download-import QA remains **UNVERIFIED**. Node storage-adapter tests and CI are not device QA.
+
+
+## 2026-11-26 — PR #50 and Production #608 final verification
+- PR #50 merged successfully as `f8d27ee656b20847e293c8cd422b9d9de59ec4a0`; final PR head `7e22a7fdc057b8993881ff202a60cc0493927ca4`.
+- Final PR CI #68 (`45794717623`) passed: 205 tests, 205 passed, 0 failed. Archive validation passed with 856 discovery candidates, 0 human article labels, 179 schema-valid run logs, 55 source summaries and 41 links checked.
+- Production #608 (`45794790709`) completed successfully on merge SHA. Test/collect/validate/data-commit, Pages artifact upload and Pages deployment steps all succeeded; deployment log explicitly reported `Reported success!`.
+- Generated data commit: `d3d44f6252c7cdc8b01266d4779a54d262a8c029`. Pages artifact `15104173207`, 602,298 bytes, SHA-256 `e441ecf28b60a6d85ae6a86649f4083d9140f042e2f85cbd6611142b713d6e05`.
+- Latest data metrics: 856 discovery candidates (669 articles / 187 videos), 99 verified publisher articles, 76 verified Haewon articles, 58 verified Haewon articles with provenance thumbnails. Thumbnail assignments 352 / missing 504; 80 unique URLs; 273 legacy shared-image assignments preserved; 79 provenance-backed assignments; 482 thumbnail-review eligible / 0 reviewed; article human review labels 0.
+- Production #608: 15 YouTube candidates, 0 accepted, 15 duplicates; Google RSS 71 and Bing RSS 40 items; all 6 queries succeeded for each provider; news fetched 71 / 64 unique incoming / 2 added. Thumbnail enrichment 0 attempted / 0 assigned. No collection coverage or thumbnail gain is claimed from this run.
+- The six required continuity documents were updated in PR #50 before merge. This follow-up entry records final Production outcome.
+- Android Chrome QA remains **UNVERIFIED**. CI and Pages deployment are not real-device testing.
