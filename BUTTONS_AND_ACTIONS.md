@@ -525,3 +525,8 @@ Keep the conversation continuation button as the final response element of every
 ## 2026-11-26 — Bing failure diagnostic fields
 - Bing RSS failures record query, error, HTTP status, Content-Type and response format classification (rss/atom/html/empty/unknown).
 - Never persist response bodies, credentials or private data. Do not blindly retry or treat HTML/Atom as RSS; no access-control bypass.
+
+
+## 2026-11-26 — Persisted RSS failure diagnostics
+- `news-collection-status.json` stores safe per-query failure metadata: query, error, HTTP status, Content-Type and coarse response format when available.
+- Response bodies are not stored. HTTP 429 responses are not retried by this change.

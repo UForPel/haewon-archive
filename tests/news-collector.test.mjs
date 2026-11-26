@@ -173,13 +173,13 @@ test('per-query publication freshness separates recent, stale, unknown and futur
  assert.equal(report.futureDated,1);
 });
 
-import { classifyBingFeedResponse } from '../scripts/collect-news.mjs';
+import { classifyNewsFeedResponse } from '../scripts/collect-news.mjs';
 test('Bing feed response diagnostics distinguish RSS, Atom, HTML and empty bodies without storing response content',()=>{
- assert.equal(classifyBingFeedResponse('<rss><channel/></rss>','application/rss+xml'),'rss');
- assert.equal(classifyBingFeedResponse('<feed xmlns="http://www.w3.org/2005/Atom"/>','application/atom+xml'),'atom');
- assert.equal(classifyBingFeedResponse('<!doctype html><html/>','text/html'),'html');
- assert.equal(classifyBingFeedResponse('',''),'empty');
- assert.equal(classifyBingFeedResponse('unexpected payload','application/octet-stream'),'unknown');
+ assert.equal(classifyNewsFeedResponse('<rss><channel/></rss>','application/rss+xml'),'rss');
+ assert.equal(classifyNewsFeedResponse('<feed xmlns="http://www.w3.org/2005/Atom"/>','application/atom+xml'),'atom');
+ assert.equal(classifyNewsFeedResponse('<!doctype html><html/>','text/html'),'html');
+ assert.equal(classifyNewsFeedResponse('',''),'empty');
+ assert.equal(classifyNewsFeedResponse('unexpected payload','application/octet-stream'),'unknown');
 });
 test('Bing non-RSS responses retain status and content type diagnostics without retaining body text',async()=>{
  const result=await collectFeeds({queries:['diagnostic query'],fetchImpl:async url=>{
@@ -189,4 +189,19 @@ test('Bing non-RSS responses retain status and content type diagnostics without 
  assert.equal(result.bingFailures.length,1);
  assert.deepEqual(result.bingFailures[0],{query:'diagnostic query',error:'Bing RSS 응답이 아닙니다',status:200,contentType:'text/html; charset=utf-8',responseFormat:'html'});
  assert.equal(JSON.stringify(result.bingFailures).includes('temporary response'),false);
+});
+
+import { serializeFeedFailure } from '../scripts/collect-news.mjs';
+test('feed failure serializer keeps only safe status metadata and excludes response bodies',()=>{
+ const row=serializeFeedFailure({query:'q',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:'html',body:'private response body'});
+ assert.deepEqual(row,{query:'q',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:'html'});
+ assert.equal(JSON.stringify(row).includes('private response body'),false);
+});
+test('Google and Bing partial failures preserve HTTP status and response format in collector output',async()=>{
+ const result=await collectFeeds({queries:['diagnostic query'],fetchImpl:async url=>{
+  if(String(url).includes('bing.com'))return new Response('<!doctype html><html><title>temporary response</title></html>',{status:200,headers:{'content-type':'text/html; charset=utf-8'}});
+  return new Response('rate limited',{status:429,headers:{'content-type':'text/html; charset=utf-8'}});
+ }});
+ assert.deepEqual(result.failures[0],{query:'diagnostic query',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:''});
+ assert.deepEqual(result.bingFailures[0],{query:'diagnostic query',error:'Bing RSS 응답이 아닙니다',status:200,contentType:'text/html; charset=utf-8',responseFormat:'html'});
 });

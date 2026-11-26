@@ -515,3 +515,8 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 ## 2026-11-26 — Diagnose partial Bing collection runs
 - For Bing non-RSS failures, preserve query + error + HTTP status + Content-Type + coarse response format; never save response bodies.
 - Do not claim the cause is fixed without a later successful run. Do not add speculative retries, parse HTML as RSS, or bypass access restrictions.
+
+
+## 2026-11-26 — Verify failure diagnostics through persisted data
+- Confirm feed failure metadata survives the complete path from fetch → collector result → `news-collection-status.json`; unit tests of the collector alone are insufficient.
+- Store only query, error, status, Content-Type and coarse response format. Never persist response bodies or add blind retries.

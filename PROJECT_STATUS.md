@@ -945,3 +945,9 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Production #611 completed workflow/deployment successfully but the collection log was partial: 5/6 Bing queries succeeded; “Haewon international interview” returned non-RSS content. The saved run data lacks HTTP status and Content-Type, so root cause remains unverified.
 - Branch fix/bing-rss-failure-diagnostics-20261126 adds RSS/Atom/HTML/empty/unknown classification and stores only response status, Content-Type and classification for Bing failures. No body, credentials, personal data, or extra retry is stored/sent.
 - This is observability, not a claim that the Bing failure itself is fixed. PR CI and a subsequent Production run are pending.
+
+
+## 2026-11-26 — Persist RSS failure diagnostics end-to-end (PR candidate)
+- Production #612 was partial: Google News 3/6 queries succeeded (three HTTP 429); Bing 5/6 succeeded (one non-RSS response); workflow validation and Pages deployment succeeded.
+- A follow-up code audit found the first diagnostic patch's metadata was stripped by `main()` when serializing failure arrays. This branch persists the allowlisted fields (query, error, HTTP status, Content-Type, response format) for both Google and Bing failures. Response bodies are never stored; no retries added.
+- Added tests for end-to-end collector failure metadata and serializer privacy. PR CI / next Production verification pending.
