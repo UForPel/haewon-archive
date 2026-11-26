@@ -176,17 +176,84 @@ For each substantial update include: changed paths; planned vs implemented items
 
 
 
-## 2026-11-25 — Read-only PR CI integration
+## 2026-11-25 — Fresh repository audit operating checkpoint
 
-- Prefer rebasing a narrow workflow proposal from current main over merging a stale branch with unrelated commit history.
-- The read-only PR workflow is not active on main until its PR is approved and merged. Validate the PR using its own `pull_request` event run; never substitute a push snapshot or another PR's run.
+- Always fetch live main, requested PR heads, compare counts, Actions runs/jobs, and Pages workflow steps before describing project state. Distinguish the workflow head SHA from later bot-generated data commits.
+- Do not describe a push-triggered temporary snapshot as a PR check. Check the run event and `pull_requests` array. Report tests, validation, collection, data commit, artifact upload, deploy step and independent browser/mobile QA as separate outcomes.
+- Main remains `37998b31b12b2eb9980cff6df616b2f677a10de6`; Actions #587's production steps all succeeded, including deploy-pages. Pages API read was unavailable through the connector; browser/mobile QA is still unverified.
+- Current production data still includes 3 X/social URLs in publisherArticleUrl values. PR #27 is unmerged; verify the next real collection after approval/merge rather than claiming its fix is already deployed.
+- PR #28's public Google/Bing RSS sample had zero image signals in both feeds. Do not invent image URLs or infer article URLs from site-level Google News source links.
+- Keep 273 shared legacy thumbnails intact. Human relevance and image suitability precision are unmeasured.
+- No PR may be merged without explicit user approval. Rebase or split stale documentation PRs rather than merging broad historical text.
+- Every substantial response ends with the real ChatGPT conversation action **🔄 연구 기반 재귀개선 계속하기**.
 
 
+## 2026-11-25 — Late-session audit operating rules
+- Reconfirm current main, PR heads, ahead/behind counts, workflow run event, jobs, artifacts and deployment steps before reporting state.
+- Distinguish genuine pull_request runs from push snapshots. PR #30 run #45570252997 is a genuine PR event; PR #27 run #45616074455 is a push snapshot.
+- Main production run #45556461352 succeeded with a 434,230-byte Pages artifact and deploy step, but the published UI has not received independent browser/mobile QA.
+- A fresh fetch of the Sportskeeda article URL returned HTTP 405. Respect the method boundary; no alternate method, endpoint or proxy. PR #25's mock-response test is separate evidence from the live endpoint observation.
+- PR #26's Node24 action pins have not been used in a production Pages deployment. Do not call them deployed until an approved merge and successful main run.
+- PR #28's Google/Bing sample has zero image signals. Research feed metadata and source terms, but do not expand the automated source allowlist without explicit source-policy review.
+- No PR may be merged without explicit user approval. Preserve the 273 shared legacy thumbnail assignments.
 
-### PR #30 CI result — 2026-11-25
-- The new current-main PR #30 received a genuine `pull_request` run #45570038033, and the job passed `npm test` and `npm run validate`.
-- Report this as a successful PR-specific acceptance run, not as a main-branch required check. It becomes an active repository gate only after explicit user approval and merge.
+## 2026-11-26 — Latest main, production and PR re-audit
+- Current main: `3c93903c6e37839fd69e0a1a74851a3dac3e6174` (`data: refresh archive discovery and improvement cycle`). The data commit was produced by scheduled production run `45695468167`, whose workflow source SHA was `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- Production run #45695468167: 142/142 tests, 0 failures; YouTube 15 items, Google RSS 135, Bing RSS 34; 24 new news candidates; metadata enrichment attempted 12, assigned 8, failed 3, missing 1. Validation, data commit, Pages configuration, 446,580-byte artifact upload and deploy step all succeeded. Artifact SHA-256 `ea394ffa5add0d8ffc8bdfc88673b145cf64fc6d7ebbb9870badc5ffe8d50bcc`.
+- Main workflow still references checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4. The actual production job emitted a Node.js 20 deprecation warning: these actions target Node20 but are forced to run on Node24. The run still succeeded. GitHub announced Node20 removal on 2026-09-23; do not describe the existing deployment as Node24-native.
+- Latest production data: 729 candidates; 543 articles; 186 videos; 77 verified publisher articles; 67 verified Haewon articles; 55 publisher articles and 48 Haewon articles with provenance-backed thumbnails; 329 thumbnail assignments; 400 missing; 57 unique thumbnail URLs. Of the 329 assignments, 273 are the same unverified legacy URL. Human image labels remain 0; visual precision is unmeasured.
+- Latest Google RSS diagnostics: 101 items, 98 site-level source URLs, 0 explicit publisher article URLs, 0 image signals. Bing RSS produced 34 candidates; the prior PR #28 sample (36 items) also had 0 image signals. PR #28 parser fixture tests are not proof of live feed image availability.
+- All 14 currently open PRs remain unmerged. Current main comparison ahead/behind: #13 59/9, #14 134/9, #15 3/9, #16 13/9, #20 17/7, #22 13/7, #23 15/7, #24 9/7, #25 19/1, #26 8/1, #27 19/1, #28 4/1, #29 13/1, #30 19/1. PR #14 remains mergeable=false; do not merge its stale docs branch wholesale.
+- PR #30 genuine pull_request run #45570252997 passed 142/142 tests and archive validation. It ran on a merge commit based on the previous main SHA 37998b31, not latest 3c93903. Its read-only workflow is not yet on main; it is not yet a shared CI gate for other PRs.
+- No PR merged and no new source was added. Browser/mobile visual QA remains unverified.
 
+## 2026-11-26 — Execution truth and dependency order
+- Main production is healthy at run #45695468167, but its current Actions still emit a Node20 deprecation warning while being forced to Node24. PR #26 is not deployed.
+- PR #30's genuine PR run #45570252997 passed 142 tests and validation, but its merge commit was based on main 37998b31, one main data commit behind current main 3c93903. Re-run against current main before relying on it as a shared gate.
+- PR #25's legacy-405 fix is committed but not CI-verified. Do not report it as tested.
+- PR #28 must not be merged separately from PR #27's social URL predicate.
+- New publisher RSS feeds require explicit source permission; public endpoint discovery is not a licence. No new feed added.
+- No PR merge or production code change without explicit user approval.
 
+## 2026-11-26 — Current official references
+- GitHub Node20 retirement: https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/ (runners now force Node24 for JavaScript actions; the temporary opt-out is removed).
+- GitHub JavaScript action runtime metadata: https://docs.github.com/en/actions/reference/workflows-and-actions/metadata-syntax
+- GitHub Pages publishing workflow: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+- SBS RSS terms: https://news.sbs.co.kr/news/rss.do
+- Yonhap content copyright terms: https://en.yna.co.kr/view/AEN20260905001800315
+- Korean Digital News Content Use Rules: https://www.newstore.or.kr/store/copyRight/useRule.do
 
-- Final PR #30 head `de53462e...` passed pull_request run #45570147672 after documentation synchronization. An intermediate cancelled run is superseded and must not be reported as the final result.
+## 2026-11-26 — PR #30 refreshed against latest main
+- After updating the PR #30 session log, genuine pull_request run #45704287050 checked merge commit `53b3d5b`, which merged PR head `fc619f0e623fdda9931f72e7f59da66c50c76b68` into current main `3c93903c6e37839fd69e0a1a74851a3dac3e6174`.
+- The read-only job succeeded: 142/142 tests, 0 failures, and `npm run validate` succeeded. No artifact upload or Pages deployment was attempted.
+- PR #30 is still open/unmerged. The shared PR CI workflow remains absent from main until user-approved merge.
+
+## 2026-11-26 — Remaining legacy PR review
+- PR #13's seven-dimension article review UI is still not in main. Current production review metrics remain 0 human labels; browser-local thumbnail review labels are not a substitute for article review. Branch is 9 commits behind main and needs a fresh merge-base review.
+- PR #16 addresses a real metric ambiguity: current main reports `metaFound:56` from persisted metadata candidates beside `metaAssigned:8` from the latest run, producing a potentially misleading 14% ratio. Its branch adds separate latest-run attempted/found/assigned fields and persisted-thumbnail matching counts. Current main still calls the old two-argument comparison function. Rebase/integrate this after reviewing PR #27's shared URL predicate.
+- PR #20 proposes date-first default sorting and explicit unresolved-video filtering. Current main still sorts news by relevance score first, then date; the requested date-first behavior is not deployed. PR #20 is 7 commits behind and should be refreshed before merge.
+- PR #22 expands the search vocabulary to 36 terms with four-query run rotation; current production still requests four news queries per run and records searchPack 2. PR #23 adds optional YouTube Data API discovery; it is not active in main and must remain optional, quota-bounded and nonessential to the free core.
+- PR #24 is a Cloudflare/GitHub App dispatch dry-run only. It does not implement the external scheduler or automated collection; no App, Worker or secret configuration is active.
+- PR #15 is an older read-only PR-CI proposal and is 9 commits behind; PR #30 is the newer tested version. Keep #15 unmerged rather than duplicating the CI gate.
+
+## 2026-11-26 — Evidence and CI execution safeguards
+- Recheck current main SHA and latest runs before reporting. A scheduled workflow may start from an older source SHA and advance main with a generated data commit; report both SHAs.
+- For repositories without package-lock.json, use `npm test` and `npm run validate`; do not use `npm ci`. Record the exact run and test count.
+- A branch-only verification workflow can test an isolated snapshot but does not establish a main CI gate. Do not imply PR #30 is active on main until approved and merged.
+- Keep PR #26 Node24 production-action migration separate from PR #30 read-only CI. Verify action pins and deployment outcomes independently.
+- Never merge without explicit user approval. Keep branch-only tests and audits read-only; distinguish code/test commits, collection/data commits, Pages deployment and browser/mobile QA.
+- For Bing RSS, apply the shared publisher URL predicate after extracting the explicit destination. X/Twitter post/profile candidates may remain in discovery but must not be counted or enriched as publisher articles.
+- Current audit sample is 12 HEAD-only requests: 1 HTTP 404, 11 image responses. Do not generalize this sample to all images.
+
+## 2026-11-26 — Current operating baseline
+- Always re-read current main, open PRs, workflow runs and the six project documents before a new work cycle. Distinguish main SHA, workflow source SHA, generated data commit SHA and Pages deployment result.
+- Repository-internal code, test, branch, PR and documentation operations are authorized by the user by default. External email/contact, disclosure or transmission of personal/secret information, and paid service activation require separate confirmation.
+- PR #30 read-only verification and PR #31 integrated discovery improvements are merged. PR #26 Node24 action migration is merged. Latest main is `1bfb09e4...`.
+- Latest Node24 Production run #45728961571 succeeded: 158/158 tests, collection, validation, data commit, Pages artifact and deploy. No Node20 deprecation warning.
+- Latest data: 736 candidates, 550 articles, 186 videos, 76 publisher article URLs, 65 verified Haewon candidates, 333 thumbnail assignments, 403 missing, 273 legacy shared-image assignments preserved.
+- Thumbnail response sample is 12 unique URLs: 11 image responses and one HTTP 404. This is a sample only.
+- Use shared `isExplicitPublisherArticleUrl` predicate for all Google/Bing discovery, merging, enrichment and publisher metrics. Social X/Twitter URLs must not be promoted to publisher articles.
+- Keep stored thumbnail candidates/assignments separate from latest-run attempted/found/assigned metrics. Do not infer current-run enrichment success from cumulative records.
+- Default news order is publication date descending; invalid publishedAt falls back to discoveredAt. Relevance sorting is an explicit alternate. Unresolved wrapper video candidates remain separate until an explicit YouTube URL is verified.
+- No new publisher RSS sources without explicit permission. Do not bulk-delete or replace the 273 legacy shared-thumbnail records.
+- No merge should be performed if current PR CI or data validation fails. Deployment success does not establish visual/mobile QA; report it separately.

@@ -90,17 +90,73 @@ Gemini does not have permission to alter these rules or the validators enforcing
 
 
 
-## 2026-11-25 — CI boundary
+## 9. RSS discovery and publisher URL boundary (2026-11-25 audit)
 
-- Pull-request verification is read-only: it may run unit tests and validate committed archive data. It must not collect external feeds, mutate archive JSON, commit data, access Pages deployment permissions, or use secrets.
-- The proposed workflow grants only `contents: read`, disables persisted checkout credentials, and has no collection or deployment steps.
-
-
-
-### PR #30 CI evidence — 2026-11-25
-- The proposed read-only workflow was exercised by its own PR #30 event run #45570038033. Unit tests and archive-data validation passed.
-- Its permissions remain `contents: read`; it does not run collection, commit data, or deploy Pages. It is not active on main until approved and merged.
-
+- Google News and Bing RSS may be used as public discovery feeds only within the configured collection workflow. Their item-level fields are evidence, not permission to crawl a publisher or bypass access controls.
+- A Google News item `source` / `sourceUrl` that identifies a publisher site is not an individual article URL. Never promote it to `publisherArticleUrl`, decode opaque wrapper tokens, or follow wrapper redirects to infer a destination.
+- A Bing RSS item may contribute an article URL only when its public item metadata explicitly discloses an HTTPS URL (for example, the documented URL query parameter). Preserve provenance and final host. Relative image URLs may be resolved only against that explicitly disclosed article URL.
+- Accept image candidates only from explicit item-level RSS media fields or public publisher-page metadata already allowed by the source policy. Audio/video enclosures are not thumbnails. A missing RSS image signal is a feed-coverage limitation, not permission to guess a CDN path or search for hidden endpoints.
+- X/Twitter profile and post URLs are social records, not publisher articles. Do not count them in verified publisher-article coverage or run publisher article thumbnail enrichment against them. Keep discovery context and public source links where appropriate.
+- HTTP 403, 405, authentication, CAPTCHA, anti-bot and explicit disallow responses are terminal for that attempt. Do not retry with another method, identity, proxy, user agent or alternate endpoint to bypass the response. Preserve the candidate and record a sanitized failure class.
+- Preserve all 273 shared legacy thumbnail assignments until each record has independent evidence and a reviewed migration plan. Do not bulk-delete, bulk-replace or propagate one image label across the group.
 
 
-- Final PR #30 head was revalidated by pull_request run #45570147672; tests and archive validation passed. No collection, data mutation, or Pages deployment is part of this CI.
+## 2026-11-25 — Fresh 405 evidence and feed-source boundary
+- The Sportskeeda article URL in the collection diagnostics was re-opened on 2026-11-25 and returned HTTP 405 Method Not Allowed. Treat this as terminal for that attempt; do not switch methods, use alternate endpoints, proxies or other bypasses.
+- Preserve the candidate, explicit article URL, response status, final host and sanitized failure class. Apply the seven-day retry interval proposed in PR #25 for method-not-allowed.
+- RSS image parser support does not authorize new feeds. Review each candidate publisher feed's terms, permitted use, direct article URL disclosure and image licensing before adding it to data/sources.json or automated collection.
+- The observed Google/Bing sample contained zero image signals. Do not infer hidden image URLs, decode opaque wrappers or treat site-level sourceUrl as an article URL.
+- Preserve all 273 shared legacy thumbnail assignments until each has independent evidence and an approved migration plan.
+
+## 2026-11-26 — Latest main, production and PR re-audit
+- Current main: `3c93903c6e37839fd69e0a1a74851a3dac3e6174` (`data: refresh archive discovery and improvement cycle`). The data commit was produced by scheduled production run `45695468167`, whose workflow source SHA was `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- Production run #45695468167: 142/142 tests, 0 failures; YouTube 15 items, Google RSS 135, Bing RSS 34; 24 new news candidates; metadata enrichment attempted 12, assigned 8, failed 3, missing 1. Validation, data commit, Pages configuration, 446,580-byte artifact upload and deploy step all succeeded. Artifact SHA-256 `ea394ffa5add0d8ffc8bdfc88673b145cf64fc6d7ebbb9870badc5ffe8d50bcc`.
+- Main workflow still references checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4. The actual production job emitted a Node.js 20 deprecation warning: these actions target Node20 but are forced to run on Node24. The run still succeeded. GitHub announced Node20 removal on 2026-09-23; do not describe the existing deployment as Node24-native.
+- Latest production data: 729 candidates; 543 articles; 186 videos; 77 verified publisher articles; 67 verified Haewon articles; 55 publisher articles and 48 Haewon articles with provenance-backed thumbnails; 329 thumbnail assignments; 400 missing; 57 unique thumbnail URLs. Of the 329 assignments, 273 are the same unverified legacy URL. Human image labels remain 0; visual precision is unmeasured.
+- Latest Google RSS diagnostics: 101 items, 98 site-level source URLs, 0 explicit publisher article URLs, 0 image signals. Bing RSS produced 34 candidates; the prior PR #28 sample (36 items) also had 0 image signals. PR #28 parser fixture tests are not proof of live feed image availability.
+- All 14 currently open PRs remain unmerged. Current main comparison ahead/behind: #13 59/9, #14 134/9, #15 3/9, #16 13/9, #20 17/7, #22 13/7, #23 15/7, #24 9/7, #25 19/1, #26 8/1, #27 19/1, #28 4/1, #29 13/1, #30 19/1. PR #14 remains mergeable=false; do not merge its stale docs branch wholesale.
+- PR #30 genuine pull_request run #45570252997 passed 142/142 tests and archive validation. It ran on a merge commit based on the previous main SHA 37998b31, not latest 3c93903. Its read-only workflow is not yet on main; it is not yet a shared CI gate for other PRs.
+- No PR merged and no new source was added. Browser/mobile visual QA remains unverified.
+
+## 2026-11-26 — Source and retry boundaries
+- Preserve the existing 273 repeated legacy thumbnail assignments. Do not bulk delete, relabel or replace them.
+- A persisted HTTP 405 may appear as `statusCode:405,errorCode:network-error` from earlier runs. PR #25 now proposes a seven-day retry gate based on statusCode as well as errorCode; until merged, production main still uses the old one-day classification.
+- Google RSS current sample contains site-level `sourceUrl` values but no direct article URLs or image signals. Do not treat `sourceUrl` as article URL or infer hidden image URLs.
+- Do not add SBS or Yonhap RSS to the public automated allowlist based only on endpoint availability. SBS terms specify personal noncommercial use; Yonhap terms restrict content to personal/noncommercial use; the Korean Digital News Content Use Rules restrict RSS to personal PC use and prohibit redistribution/re-RSS without permission. Obtain explicit written permission for public-site collection/use before any addition.
+- PR #28's Media RSS parser must use the PR #27 shared publisher URL predicate. Do not merge the parser patch independently while it can classify X posts as publisher articles.
+
+## 2026-11-26 — Source-rights evidence links
+- SBS official RSS index and terms: https://news.sbs.co.kr/news/rss.do (personal, noncommercial use only; commercial use requires prior contact).
+- Yonhap copyright terms: https://en.yna.co.kr/view/AEN20260905001800315 (content is owned by Yonhap; other use beyond personal/noncommercial requires written consent).
+- Korean Digital News Content Use Rules: https://www.newstore.or.kr/store/copyRight/useRule.do (RSS is for personal subscription on a personal PC; redistribution and re-RSS without permission are prohibited).
+- These sources establish that an RSS endpoint being public does not authorize redistribution through this public Pages archive. Written permission or a clear applicable license is required before adding a publisher feed.
+
+## 2026-11-26 — PR #30 refreshed against latest main
+- After updating the PR #30 session log, genuine pull_request run #45704287050 checked merge commit `53b3d5b`, which merged PR head `fc619f0e623fdda9931f72e7f59da66c50c76b68` into current main `3c93903c6e37839fd69e0a1a74851a3dac3e6174`.
+- The read-only job succeeded: 142/142 tests, 0 failures, and `npm run validate` succeeded. No artifact upload or Pages deployment was attempted.
+- PR #30 is still open/unmerged. The shared PR CI workflow remains absent from main until user-approved merge.
+
+## 2026-11-26 — Remaining legacy PR review
+- PR #13's seven-dimension article review UI is still not in main. Current production review metrics remain 0 human labels; browser-local thumbnail review labels are not a substitute for article review. Branch is 9 commits behind main and needs a fresh merge-base review.
+- PR #16 addresses a real metric ambiguity: current main reports `metaFound:56` from persisted metadata candidates beside `metaAssigned:8` from the latest run, producing a potentially misleading 14% ratio. Its branch adds separate latest-run attempted/found/assigned fields and persisted-thumbnail matching counts. Current main still calls the old two-argument comparison function. Rebase/integrate this after reviewing PR #27's shared URL predicate.
+- PR #20 proposes date-first default sorting and explicit unresolved-video filtering. Current main still sorts news by relevance score first, then date; the requested date-first behavior is not deployed. PR #20 is 7 commits behind and should be refreshed before merge.
+- PR #22 expands the search vocabulary to 36 terms with four-query run rotation; current production still requests four news queries per run and records searchPack 2. PR #23 adds optional YouTube Data API discovery; it is not active in main and must remain optional, quota-bounded and nonessential to the free core.
+- PR #24 is a Cloudflare/GitHub App dispatch dry-run only. It does not implement the external scheduler or automated collection; no App, Worker or secret configuration is active.
+- PR #15 is an older read-only PR-CI proposal and is 9 commits behind; PR #30 is the newer tested version. Keep #15 unmerged rather than duplicating the CI gate.
+
+## 2026-11-26 — Audit and source-boundary checkpoint
+- The current 12-URL thumbnail audit is HEAD-only and read-only. It must not switch methods after a 403/405, follow hidden wrappers, or write audit outcomes into archive data unless a separate reviewed data migration is approved.
+- Latest measured sample: 12 unique URLs checked; one HTTP 404 from a Sportalkorea CDN image URL; 11 returned image content; no unreachable or rate-limited responses. A 12-URL sample is diagnostic only, not a global availability estimate.
+- Preserve all 273 legacy shared-thumbnail records; do not bulk delete, replace or auto-label them.
+- Bing RSS image candidates may be parsed from explicit public item metadata, but an explicit Bing destination hosted on X/Twitter is still a social post, not a publisher article. Apply the shared social-host predicate before setting publisherArticleUrl or including it in publisher metrics. Preserve original candidate URL and provenance.
+- No SBS or Yonhap RSS source is approved for collection. Do not add any new publisher feed until explicit applicable usage permission is documented.
+
+## 2026-11-26 — Current collection and source policy
+- Production remains free and static-first. Main's latest verified run #45728961571 used the Node24-pinned GitHub Actions workflow and succeeded through Pages deployment.
+- Search currently uses one of three four-query packs per run. PR #22's six packs × six queries and twice-daily slot rotation are not yet on main; evaluate/port separately and measure before claiming improvement.
+- Bing RSS may contribute explicit public image metadata (Media RSS, image enclosure, description and content:encoded). A Bing URL resolving to X/Twitter remains a social candidate, not a publisher article. Shared predicate must be applied before publisherArticleUrl, publisher metrics or metadata enrichment.
+- Google News wrapper-only metadata is not a publisher article URL. Preserve candidate URL and provenance; do not decode wrappers or bypass access restrictions.
+- Latest stored data: 736 candidates, 550 articles, 186 videos, 76 publisher URLs, 333 thumbnail assignments, 403 missing. The 273 legacy shared-image assignments remain preserved.
+- Latest thumbnail audit sample: 12 unique URLs, 11 image responses, 1 HTTP 404 (Sportalkorea CDN), 0 unreachable, 0 rate-limited, 0 non-image successful responses. Do not extrapolate this sample to all thumbnails.
+- Do not add SBS, Yonhap or other publisher RSS feeds until explicit applicable usage permission is documented. Do not redistribute article text or images outside allowed public metadata/link and attribution rules.
+- No automated deletion, replacement or human-label assignment for the 273 legacy group.
