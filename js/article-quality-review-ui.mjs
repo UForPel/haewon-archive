@@ -5,7 +5,7 @@ const host = document.querySelector('#article-quality-review');
 if (host) {
   const STORAGE_KEY = 'haewon-article-quality-reviews-v1';
   let labels = {};
-  try { labels = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') || {}; } catch { labels = {}; }
+  try { const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); labels = stored && typeof stored === 'object' && !Array.isArray(stored) ? stored : {}; } catch { labels = {}; }
   const names = {
     relevance: { relevant: '직접 관련', indirect: '간접 언급·타인 중심', unrelated: '무관함', uncertain: '판단 보류' },
     originalAccess: { accessible: '접근 가능', blocked: '접근 제한', paywall: '유료·회원 제한', 'not-found': '삭제·404', uncertain: '판단 보류' },
@@ -31,19 +31,45 @@ if (host) {
   });
   const exportButton = document.createElement('button'); exportButton.type = 'button'; exportButton.textContent = '기사 검수 JSON 내보내기';
   exportButton.addEventListener('click', () => {
-    const blob = new Blob([JSON.stringify({ schemaVersion: 1, exportedAt: new Date().toISOString(), labels }, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'haewon-article-quality-reviews.json'; a.click(); URL.revokeObjectURL(url);
+    try {
+      const blob = new Blob([JSON.stringify({ schemaVersion: 1, exportedAt: new Date().toISOString(), labels }, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'haewon-article-quality-reviews.json'; a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      progress.textContent = '검수 기록 JSON 내보내기를 시작했습니다. 다운로드 파일을 안전한 곳에 보관하세요.';
+    } catch {
+      progress.textContent = 'JSON 파일을 만들지 못했습니다. 브라우저 다운로드 설정을 확인해 주세요.';
+    }
   });
   const importInput = document.createElement('input'); importInput.type = 'file'; importInput.accept = 'application/json,.json'; importInput.hidden = true;
   const importButton = document.createElement('button'); importButton.type = 'button'; importButton.textContent = '기사 검수 JSON 가져오기'; importButton.addEventListener('click', () => importInput.click());
   importInput.addEventListener('change', async () => {
-    try { const file = importInput.files?.[0]; if (!file) return; const parsed = validateArticleReviewExport(await file.text(), articles.map(item => item.id)); labels = { ...labels, ...parsed.labels }; localStorage.setItem(STORAGE_KEY, JSON.stringify(labels)); render(); }
-    catch { alert('검수 JSON 파일을 읽지 못했습니다.'); } finally { importInput.value = ''; }
+    try {
+      const file = importInput.files?.[0]; if (!file) return;
+      const parsed = validateArticleReviewExport(await file.text(), articles.map(item => item.id));
+      const importedCount = Object.keys(parsed.labels).length;
+      const nextLabels = { ...labels, ...parsed.labels };
+      if (persistLabels(nextLabels, '')) {
+        render();
+        progress.textContent = importedCount+'개 기사의 검수 기록을 가져왔습니다. 기존 기록과 병합했으며 서버로 전송하지 않았습니다.';
+      }
+    } catch { progress.textContent = '검수 JSON을 가져오지 못했습니다. 파일 형식과 버전, 기사 ID를 확인해 주세요. 기존 기록은 유지됩니다.'; }
+    finally { importInput.value = ''; }
   });
   actions.append(nextButton, filterButton, exportButton, importButton, importInput);
   const list = document.createElement('div'); list.className = 'article-quality-review-list';
   body.append(intro, progress, actions, list); details.append(summary, body); host.append(details);
   let articles = [];
+  function persistLabels(nextLabels, successMessage) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(nextLabels));
+      labels = nextLabels;
+      progress.textContent = successMessage;
+      return true;
+    } catch {
+      progress.textContent = '브라우저 저장 공간에 기록하지 못했습니다. 기존 검수 기록은 유지됩니다. JSON 내보내기로 백업한 뒤 다시 시도해 주세요.';
+      return false;
+    }
+  }
   function focusNextPendingArticle(afterArticleId = null) {
     const next = getNextPendingArticle(articles, labels, afterArticleId);
     if (!next) { progress.textContent = '모든 검수 대상의 일곱 항목이 완료되었습니다.'; return; }
@@ -82,8 +108,8 @@ if (host) {
         select.addEventListener('change', () => {
           const next = { ...(labels[String(item.id)] || { articleId: String(item.id) }), [dimension]: select.value, reviewedAt: new Date().toISOString() };
           if (!select.value) delete next[dimension];
-          labels[String(item.id)] = next;
-          try { localStorage.setItem(STORAGE_KEY, JSON.stringify(labels)); progress.textContent = '저장됨 · '+item.title; } catch { progress.textContent = '브라우저 저장 공간에 기록하지 못했습니다.'; }
+          const nextLabels = { ...labels, [String(item.id)]: next };
+          if (!persistLabels(nextLabels, '저장됨 · '+item.title)) { select.value = current[dimension] || ''; return; }
           if (showPendingOnly && isArticleReviewComplete(item, labels)) { render(); focusNextPendingArticle(item.id); } else updateProgress();
         });
         label.append(select); fields.append(label);
@@ -96,8 +122,8 @@ if (host) {
       correctionSelect.addEventListener('change', () => {
         const next = { ...(labels[String(item.id)] || { articleId: String(item.id) }), reviewedAt: new Date().toISOString() };
         if (correctionSelect.value) next.expectedCategory = correctionSelect.value; else delete next.expectedCategory;
-        labels[String(item.id)] = next;
-        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(labels)); progress.textContent = '저장됨 · 정정 분류 · '+item.title; } catch { progress.textContent = '브라우저 저장 공간에 기록하지 못했습니다.'; }
+        const nextLabels = { ...labels, [String(item.id)]: next };
+        if (!persistLabels(nextLabels, '저장됨 · 정정 분류 · '+item.title)) correctionSelect.value = current.expectedCategory || '';
       });
       correction.append(correctionSelect);
       row.append(title, meta, image, fields, correction); list.append(row);
