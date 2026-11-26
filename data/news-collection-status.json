@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T00:26:23.955Z",
+  "collectedAt": "2026-11-26T00:28:44.224Z",
   "searchPack": 2,
   "queries": [
     {
       "query": "오해원 방송",
-      "candidates": 71,
-      "uniqueCandidates": 71
+      "candidates": 36,
+      "uniqueCandidates": 36
     },
     {
       "query": "해원 엔믹스 기사",
@@ -15,8 +15,8 @@
     },
     {
       "query": "NMIXX Haewon appearance",
-      "candidates": 12,
-      "uniqueCandidates": 12
+      "candidates": 11,
+      "uniqueCandidates": 11
     },
     {
       "query": "Haewon NMIXX event",
@@ -27,15 +27,15 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
-  "bingCandidates": 35,
+  "bingCandidates": 34,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 212,
-  "uniqueIncoming": 209,
-  "added": 2,
+  "fetched": 176,
+  "uniqueIncoming": 176,
+  "added": 3,
   "rssImageSignals": {
-    "items": 177,
-    "sourceUrlItems": 173,
+    "items": 142,
+    "sourceUrlItems": 139,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -48,9 +48,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 35,
+    "items": 34,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 35,
+    "publisherArticleUrlItems": 34,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -75,10 +75,10 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 212,
-    "after": 209,
-    "collapsed": 3,
+    "before": 176,
+    "after": 176,
+    "collapsed": 0,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 735
+  "totalCandidates": 736
 }

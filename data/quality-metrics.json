@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-11-26T00:26:25.794Z",
+  "generatedAt": "2026-11-26T00:28:45.485Z",
   "discoveryRelevance": {
-    "totalCandidates": 735,
-    "articleCandidates": 549,
+    "totalCandidates": 736,
+    "articleCandidates": 550,
     "videoCandidates": 186,
     "verifiedPublisherArticles": 75,
     "verifiedHaewonArticles": 65,
     "verifiedPublisherArticlesWithProvenanceThumbnail": 57,
     "verifiedHaewonWithProvenanceThumbnail": 49,
-    "haewonTitleMatches": 455,
-    "nmixxTitleMatches": 468,
+    "haewonTitleMatches": 456,
+    "nmixxTitleMatches": 469,
     "otherArticleCandidates": 31,
     "defaultScope": "verified-haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 735,
+    "totalItems": 736,
     "itemsWithPublisherArticleUrl": 76,
     "bingNewsItems": 79,
     "candidateSourceCounts": {
@@ -128,9 +128,9 @@
       "isplus.com": 6,
       "www.rnx.kr": 6,
       "www.sportsseoul.com": 5,
+      "www.bntnews.co.kr": 5,
       "sports.donga.com": 5,
       "www.munhwa.com": 5,
-      "www.bntnews.co.kr": 4,
       "www.news1.kr": 4,
       "www.fnnews.com": 4,
       "www.newsis.com": 4,
@@ -154,11 +154,13 @@
       "www.starnewskorea.com": 2,
       "www.mksports.co.kr": 2,
       "pann.nate.com": 2,
+      "www.nocutnews.co.kr": 2,
       "m.ekn.kr": 2,
       "www.mydaily.co.kr": 2,
       "newsen.com": 2,
       "news.jtbc.co.kr": 2,
       "www.psnews.co.kr": 2,
+      "m.imbc.com": 2,
       "www.ilyosisa.co.kr": 2,
       "www.blogchart.co.kr": 1,
       "www.tenasia.co.kr": 1,
@@ -175,7 +177,6 @@
       "www.newswire.co.kr": 1,
       "www.careet.net": 1,
       "www.asiaartistawards.com": 1,
-      "www.nocutnews.co.kr": 1,
       "www.frame-less.co.kr": 1,
       "www.spotvnews.co.kr": 1,
       "www.etoday.co.kr": 1,
@@ -202,7 +203,6 @@
       "www.cosmopolitan.co.kr": 1,
       "m.sedaily.com": 1,
       "sports.hankooki.com": 1,
-      "m.imbc.com": 1,
       "www.entermedia.co.kr": 1,
       "www.yna.co.kr": 1,
       "www.beyondpost.co.kr": 1,
@@ -231,13 +231,13 @@
       "twitter:image:src": 1
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 402,
+    "missingThumbnailCount": 403,
     "sourceProvenanceCoverage": 18
   },
   "thumbnailAudit": {
-    "items": 735,
+    "items": 736,
     "withThumbnail": 333,
-    "missing": 402,
+    "missing": 403,
     "uniqueThumbnailUrls": 61,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
@@ -390,22 +390,22 @@
     "newsQueriesSuccessful": 4,
     "bingNewsQueriesRequested": 4,
     "bingNewsQueriesSuccessful": 4,
-    "bingNewsCandidates": 35,
+    "bingNewsCandidates": 34,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
-    "newsCandidatesTotal": 735,
-    "newsUniqueFetched": 209,
-    "newsAddedLastRun": 2,
-    "duplicateBeforeMergeLastRun": 3,
-    "duplicateGroupsCurrent": 735,
+    "newsCandidatesTotal": 736,
+    "newsUniqueFetched": 176,
+    "newsAddedLastRun": 3,
+    "duplicateBeforeMergeLastRun": 0,
+    "duplicateGroupsCurrent": 736,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 212,
-      "after": 209,
-      "collapsed": 3,
+      "before": 176,
+      "after": 176,
+      "collapsed": 0,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -422,11 +422,11 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 656,
-      "withUrl": 656,
+      "items": 657,
+      "withUrl": 657,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 656,
+      "withDate": 657,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
       "thumbnailCoverage": 42,
@@ -982,11 +982,11 @@
     }
   ],
   "classification": {
-    "items": 735,
+    "items": 736,
     "categoryCounts": {
       "video": 186,
       "interview": 51,
-      "news": 435,
+      "news": 436,
       "brand": 21,
       "event": 6,
       "performance": 31,
@@ -1732,7 +1732,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 402,
+    "thumbnailMissing": 403,
     "results": [
       {
         "kind": "article",
@@ -3691,7 +3691,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T00:26:25.816Z",
+    "generatedAt": "2026-11-26T00:28:45.501Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

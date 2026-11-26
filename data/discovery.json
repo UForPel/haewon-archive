@@ -2433,6 +2433,24 @@
     "candidateSource": ""
   },
   {
+    "id": "b103e8f21910f4e7df9f",
+    "title": "엔믹스 오해원 '오늘은 냉미녀' [포토] - www.bntnews.co.kr",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9XTlhPTHRrSkRhU3VodW1UTjNwOHFBU0U4c2kta3JtMEdqYUhGbUFCc3JYODR0SHBhRWdndk0zaUZFSWl4VlljTDlLbWUzSGctREIwUURiMlRYMmJIWWpjVU5SSEI?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.bntnews.co.kr",
+    "publishedAt": "2025-10-15T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE9XTlhPTHRrSkRhU3VodW1UTjNwOHFBU0U4c2kta3JtMEdqYUhGbUFCc3JYODR0SHBhRWdndk0zaUZFSWl4VlljTDlLbWUzSGctREIwUURiMlRYMmJIWWpjVU5SSEI?oc=5\" target=\"_blank\">엔믹스 오해원 '오늘은 냉미녀' [포토]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">www.bntnews.co.kr</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 방송",
+    "discoveredAt": "2026-11-26T00:28:44.224Z",
+    "status": "candidate",
+    "relevanceScore": 8
+  },
+  {
     "id": "c660795aa31c9937452f",
     "title": "250820 엔믹스 해원 인스타 라이브 NMIXX Haewon Instagram LIVE | 헐 처음이야 처음처음 - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1vLXdIRUNHWUdZOFJ2elVGWUVBeEdvMjV3V1dmRUZhMzJfWkFhbEdWdi1MNC1iQnhvZ3NFQ0twYWpNYnN1bnBuQktKV0xDUE84Qld5VWVwMmNtN1hw?oc=5",
@@ -7518,7 +7536,14 @@
     "relevanceScore": 6,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.nocutnews.co.kr",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "722f8d148b8ca865e191",
@@ -19178,7 +19203,14 @@
     "relevanceScore": 0,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.imbc.com",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8aeeea5a94861f5653ca",
