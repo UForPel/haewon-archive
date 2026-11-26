@@ -279,7 +279,7 @@ function normalizeQueryMetricUrl(value=''){
   const url=new URL(String(value||''));
   if(!['https:','http:'].includes(url.protocol)||url.username||url.password)return '';
   url.hash='';
-  for(const key of [...url.searchParams.keys()])if(/^(utm_|fbclid|gclid|ref|source)/i.test(key))url.searchParams.delete(key);
+  for(const key of [...url.searchParams.keys()])if(/^utm_/i.test(key)||/^(?:fbclid|gclid|mc_cid|mc_eid|_ga|igshid)$/i.test(key))url.searchParams.delete(key);
   url.searchParams.sort();
   return url.href.replace(/\/$/,'');
  }catch{return '';}
