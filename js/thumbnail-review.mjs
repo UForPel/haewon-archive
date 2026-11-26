@@ -69,3 +69,11 @@ export function persistThumbnailReviewLabels(storage, storageKey, currentLabels,
   return { saved: false, labels: currentLabels, error: String(error?.name || 'storage-error') };
  }
 }
+
+export function revealThumbnailReviewRow(row) {
+ if (!row || typeof row.closest !== 'function') return false;
+ const disclosure = row.closest('details.thumbnail-review-disclosure');
+ if (!disclosure) return false;
+ disclosure.open = true;
+ return true;
+}
