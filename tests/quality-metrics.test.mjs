@@ -120,7 +120,7 @@ test('missing thumbnail reasons use only explicit article, image and fetch metad
 test('missing thumbnail diagnostics separate source-site links from publisher article URLs',()=>{
  const report=summarizeMissingThumbnailDiagnostics([
   {sourceName:'Google News',url:'https://news.google.com/rss/articles/opaque',sourceUrl:'https://publisher.example/'},
-  {sourceName:'Publisher',url:'https://publisher.example/story',publisherArticleUrl:'https://publisher.example/story',thumbnailMetaFetch:{status:'failed',errorCode:'forbidden'}},
+  {sourceName:'Publisher',url:'https://publisher.example/story',publisherArticleUrl:'https://publisher.example/story',sourceUrl:'https://publisher.example/',thumbnailMetaFetch:{status:'failed',errorCode:'forbidden'}},
   {sourceName:'Publisher',url:'https://publisher.example/other',publisherArticleUrl:'https://publisher.example/other',thumbnailMetaFetch:{status:'missing'}},
   {sourceName:'Publisher',url:'https://publisher.example/has-image',publisherArticleUrl:'https://publisher.example/has-image',thumbnailUrl:'https://img.publisher.example/a.jpg'}
  ]);
@@ -131,5 +131,5 @@ test('missing thumbnail diagnostics separate source-site links from publisher ar
  const google=report.bySource.find(row=>row.source==='Google News');
  assert.equal(google.missingWithPublisherArticleUrl,0);assert.equal(google.missingWithSourceSiteUrl,1);
  const publisher=report.bySource.find(row=>row.source==='Publisher');
- assert.equal(publisher.missing,2);assert.equal(publisher.missingWithPublisherArticleUrl,2);
+ assert.equal(publisher.missing,2);assert.equal(publisher.missingWithPublisherArticleUrl,2);assert.equal(publisher.missingWithSourceSiteUrl,0,'source-site URL must not be counted as source-only when a publisher article URL is explicit');
 });
