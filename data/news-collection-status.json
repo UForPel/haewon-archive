@@ -1,43 +1,43 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T00:45:17.104Z",
+  "collectedAt": "2026-11-26T00:53:04.846Z",
   "searchPack": 4,
   "queries": [
     {
       "query": "오해원 팬미팅 기사",
-      "candidates": 10,
-      "uniqueCandidates": 10,
+      "candidates": 5,
+      "uniqueCandidates": 5,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 4,
-      "titleKeywordMatchRate": 40,
+      "titleKeywordMatches": 1,
+      "titleKeywordMatchRate": 20,
       "explicitPublisherUrls": 0,
       "explicitPublisherUrlRate": 0,
       "crossQueryDuplicateUrls": 0,
-      "datedCandidates": 10,
+      "datedCandidates": 5,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 12521.8,
-      "p90PublicationLagHours": 37850.4
+      "medianPublicationLagHours": 16912.9,
+      "p90PublicationLagHours": 28495.7
     },
     {
       "query": "NMIXX Haewon festival",
-      "candidates": 15,
-      "uniqueCandidates": 15,
+      "candidates": 16,
+      "uniqueCandidates": 16,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
       "titleKeywordMatches": 6,
-      "titleKeywordMatchRate": 40,
+      "titleKeywordMatchRate": 38,
       "explicitPublisherUrls": 8,
-      "explicitPublisherUrlRate": 53,
+      "explicitPublisherUrlRate": 50,
       "crossQueryDuplicateUrls": 2,
-      "datedCandidates": 15,
+      "datedCandidates": 16,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 6621.8,
-      "p90PublicationLagHours": 22347.2
+      "medianPublicationLagHours": 6593.9,
+      "p90PublicationLagHours": 22253.5
     },
     {
       "query": "Haewon stage appearance news",
@@ -54,8 +54,8 @@
       "datedCandidates": 1,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 808.3,
-      "p90PublicationLagHours": 808.3
+      "medianPublicationLagHours": 808.4,
+      "p90PublicationLagHours": 808.4
     },
     {
       "query": "해원 공연 행사",
@@ -72,26 +72,26 @@
       "datedCandidates": 11,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 9304.8,
-      "p90PublicationLagHours": 96952.8
+      "medianPublicationLagHours": 9304.9,
+      "p90PublicationLagHours": 96952.9
     },
     {
       "query": "NMIXX Haewon showcase",
-      "candidates": 14,
-      "uniqueCandidates": 14,
+      "candidates": 13,
+      "uniqueCandidates": 13,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
       "titleKeywordMatches": 8,
-      "titleKeywordMatchRate": 57,
-      "explicitPublisherUrls": 11,
-      "explicitPublisherUrlRate": 79,
+      "titleKeywordMatchRate": 62,
+      "explicitPublisherUrls": 10,
+      "explicitPublisherUrlRate": 77,
       "crossQueryDuplicateUrls": 2,
-      "datedCandidates": 14,
+      "datedCandidates": 13,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 9039.8,
-      "p90PublicationLagHours": 31493.6
+      "medianPublicationLagHours": 9710.9,
+      "p90PublicationLagHours": 31763
     },
     {
       "query": "Haewon public schedule",
@@ -108,22 +108,22 @@
       "datedCandidates": 2,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 38497.9,
-      "p90PublicationLagHours": 68667.7
+      "medianPublicationLagHours": 38498.1,
+      "p90PublicationLagHours": 68667.8
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
   "bingSuccessfulQueries": 6,
-  "bingCandidates": 21,
+  "bingCandidates": 20,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 53,
-  "uniqueIncoming": 51,
-  "added": 3,
+  "fetched": 48,
+  "uniqueIncoming": 46,
+  "added": 6,
   "rssImageSignals": {
-    "items": 32,
-    "sourceUrlItems": 29,
+    "items": 28,
+    "sourceUrlItems": 26,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -136,9 +136,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 21,
+    "items": 20,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 21,
+    "publisherArticleUrlItems": 20,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -163,10 +163,10 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 53,
-    "after": 50,
+    "before": 48,
+    "after": 45,
     "collapsed": 3,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 795
+  "totalCandidates": 797
 }

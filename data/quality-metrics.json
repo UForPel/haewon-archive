@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-26T00:45:18.913Z",
+  "generatedAt": "2026-11-26T00:53:06.417Z",
   "discoveryRelevance": {
-    "totalCandidates": 795,
-    "articleCandidates": 608,
+    "totalCandidates": 797,
+    "articleCandidates": 610,
     "videoCandidates": 187,
     "verifiedPublisherArticles": 87,
     "verifiedHaewonArticles": 71,
@@ -10,11 +10,11 @@
     "verifiedHaewonWithProvenanceThumbnail": 54,
     "haewonTitleMatches": 480,
     "nmixxTitleMatches": 483,
-    "otherArticleCandidates": 57,
+    "otherArticleCandidates": 59,
     "defaultScope": "verified-haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 795,
+    "totalItems": 797,
     "itemsWithPublisherArticleUrl": 88,
     "bingNewsItems": 91,
     "candidateSourceCounts": {
@@ -140,6 +140,7 @@
       "sports.donga.com": 5,
       "www.news1.kr": 4,
       "www.fnnews.com": 4,
+      "pann.nate.com": 4,
       "www.newsen.com": 4,
       "www.yna.co.kr": 4,
       "www.famtimes.co.kr": 3,
@@ -161,7 +162,6 @@
       "mhnse.com": 2,
       "www.starnewskorea.com": 2,
       "www.mksports.co.kr": 2,
-      "pann.nate.com": 2,
       "www.nocutnews.co.kr": 2,
       "m.ekn.kr": 2,
       "www.mydaily.co.kr": 2,
@@ -260,13 +260,13 @@
       "twitter:image:src": 1
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 453,
+    "missingThumbnailCount": 455,
     "sourceProvenanceCoverage": 20
   },
   "thumbnailAudit": {
-    "items": 795,
+    "items": 797,
     "withThumbnail": 342,
-    "missing": 453,
+    "missing": 455,
     "uniqueThumbnailUrls": 70,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
@@ -497,21 +497,21 @@
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 21,
+    "bingNewsCandidates": 20,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
-    "newsCandidatesTotal": 795,
-    "newsUniqueFetched": 51,
-    "newsAddedLastRun": 3,
+    "newsCandidatesTotal": 797,
+    "newsUniqueFetched": 46,
+    "newsAddedLastRun": 6,
     "duplicateBeforeMergeLastRun": 2,
-    "duplicateGroupsCurrent": 795,
+    "duplicateGroupsCurrent": 797,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 53,
-      "after": 50,
+      "before": 48,
+      "after": 45,
       "collapsed": 3,
       "method": "normalized exact headline first; canonical URL fallback"
     },
@@ -529,11 +529,11 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 704,
-      "withUrl": 704,
+      "items": 706,
+      "withUrl": 706,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 704,
+      "withDate": 706,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
       "thumbnailCoverage": 39,
@@ -1149,11 +1149,11 @@
     }
   ],
   "classification": {
-    "items": 795,
+    "items": 797,
     "categoryCounts": {
       "video": 187,
       "interview": 52,
-      "news": 474,
+      "news": 476,
       "brand": 21,
       "event": 16,
       "performance": 39,
@@ -1953,7 +1953,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 453,
+    "thumbnailMissing": 455,
     "results": [
       {
         "kind": "article",
@@ -4136,7 +4136,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T00:45:18.935Z",
+    "generatedAt": "2026-11-26T00:53:06.447Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

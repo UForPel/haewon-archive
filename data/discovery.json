@@ -20708,6 +20708,24 @@
     "candidateSource": ""
   },
   {
+    "id": "285232607ccce02fc53a",
+    "title": "뭔가 뉴진스 아일릿 보면 맘이 안좋네 - 네이트 판",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9ma2dDRS1udHo1UXNaakQ1NnJYNVR6VGVWZklrZGltUDZQY25HTDdlSWxkNHJkQnBwVkJrdGZTbUdmVnR6NlFxZ1hLNE8?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://pann.nate.com",
+    "publishedAt": "2024-12-21T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE9ma2dDRS1udHo1UXNaakQ1NnJYNVR6VGVWZklrZGltUDZQY25HTDdlSWxkNHJkQnBwVkJrdGZTbUdmVnR6NlFxZ1hLNE8?oc=5\" target=\"_blank\">뭔가 뉴진스 아일릿 보면 맘이 안좋네</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트 판</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 팬미팅 기사",
+    "discoveredAt": "2026-11-26T00:53:04.846Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
     "id": "68f47b2711f05f76e88d",
     "title": "해남군, 15일 전통놀이 한마당 행사 개최 - 퍼블릭뉴스",
     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAwREdzU0JfLXBJNE0wdExKVlZid2RLYXNaR19LUkZhYkphRW5WQTNKYkJhLUVhVm5lbk9UVkYzcWVSODJEZmo3bGR5M1RJSzRuSmVjZi1yYXVkLVlub1hCb2gtVkRTSnRsdzNWQQ?oc=5",
@@ -20946,6 +20964,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "9851b37f15c1149852a2",
+    "title": "시원하게 숏컷 자르고플때 꼭 보는 여자 연예인 - 네이트 판",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBaT0lsV0FuSFB1Z3dJUUExLTZOSjY2TlNlN2cyZ0w4UVgwU3E3M1ZPZFowZV9McklrcVlFOXhHTV9VZno1dzVfU1VJWjc?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://pann.nate.com",
+    "publishedAt": "2022-12-23T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTFBaT0lsV0FuSFB1Z3dJUUExLTZOSjY2TlNlN2cyZ0w4UVgwU3E3M1ZPZFowZV9McklrcVlFOXhHTV9VZno1dzVfU1VJWjc?oc=5\" target=\"_blank\">시원하게 숏컷 자르고플때 꼭 보는 여자 연예인</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트 판</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 팬미팅 기사",
+    "discoveredAt": "2026-11-26T00:53:04.846Z",
+    "status": "candidate",
+    "relevanceScore": 0
   },
   {
     "id": "514969bad5ae57b45d1d",
