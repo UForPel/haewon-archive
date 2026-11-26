@@ -322,3 +322,11 @@ The assistant MUST render a real clickable button at the very bottom of every co
 - PR #42 merged as `753b4323c4712c7a5580d336b30240894cca73c0`; genuine PR CI #43 passed 192/192 tests and archive validation.
 - Production #601 is in progress; do not claim the new controls are live until Pages deployment succeeds.
 - Mobile visual QA remains unverified. The ChatGPT continuation button is still mandatory at the bottom of the assistant's completed work-cycle response.
+
+
+## 2026-11-26 — Review queue controls deployed
+- PR #42 merged as `753b4323c4712c7a5580d336b30240894cca73c0`; PR CI #43 passed 192/192 tests and validation.
+- Production #601 (`45751857291`) succeeded through data commit and Pages deployment; data commit `45af9e62b6b06da3abf99399897c5c6f0b186475`.
+- The article review panel now includes **다음 미검수 기사** and **미검수만 보기 / 전체 기사 보기**. Completion requires all seven dimensions; uncertain is a completed non-positive judgment.
+- Labels remain browser-local and manual JSON export/import only. Committed labels are still zero. Mobile visual QA remains outstanding.
+- Mandatory ChatGPT follow-up control remains the final response element: **🔄 재귀개선 계속하기**.
