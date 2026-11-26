@@ -158,3 +158,14 @@ main,section,.section-heading,.controls,.date-controls,.photo-card,.video-card,.
 .article-quality-review-fields label{display:grid;gap:4px;font-size:12px;color:var(--muted)}
 .article-quality-review-fields select{width:100%;min-height:38px;border:1px solid var(--line);border-radius:8px;padding:6px;background:#fff;color:var(--ink);font:inherit;font-size:12px}
 @media(max-width:480px){.article-quality-review-row{grid-template-columns:80px minmax(0,1fr)}.article-quality-review-image{width:80px;height:64px}.article-quality-review-fields{grid-column:1/-1}}
+
+
+/* Human article-review controls: mobile-first touch and visible keyboard focus. */
+.article-quality-review{scroll-margin-top:16px}
+.article-quality-review button,.article-quality-review select,.article-quality-review input{min-height:44px}
+.article-quality-review button{padding:10px 12px;white-space:normal;line-height:1.35}
+.article-quality-review button:focus-visible,.article-quality-review select:focus-visible,.article-quality-review a:focus-visible,.article-quality-review summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.article-quality-review .photo-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.article-quality-review .photo-actions button{width:100%;min-width:0}
+.article-quality-review .article-quality-review-fields select{min-height:44px}
+@media(max-width:360px){.article-quality-review .photo-actions{grid-template-columns:1fr}.article-quality-review-body{min-width:0}.article-quality-review-row{min-width:0}}
