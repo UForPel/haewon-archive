@@ -1393,3 +1393,13 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - PR #43 merged as main SHA `c77d605cde6eac9476f7d187f77ac6c9c646adee`; open PR count is 0.
 - Production run #602 (`45752794835`) was observed in progress on the merged SHA. Do not claim collection, generated data commit or Pages deployment until its completion is independently verified.
 - Real-device mobile QA remains outstanding.
+
+
+## 2026-11-26 — Production #602 and Pages deployment verified
+- PR #43 merged as `c77d605cde6eac9476f7d187f77ac6c9c646adee`. PR CI #47 (`45752743361`) passed 193/193 tests and archive validation.
+- Production #602 (`45752794835`) completed successfully on the merge SHA. Job steps verified: tests/collection/validation, data commit, Pages configuration, artifact upload and deployment. Tests: 193 passed, 0 failed.
+- Generated data commit `96a79935d85f23b17887b3ab20b95b780f1ab234`; Pages artifact `15086646238` (563,048 bytes; SHA-256 `f300b9b7537d901a53d56374aac7a8d0eeaf4d7987047be01c6f615f17b6538b`); deployment created for merge SHA `c77d605cde6eac9476f7d187f77ac6c9c646adee`.
+- Production archive: 856 discovery candidates (669 articles / 187 videos), 99 verified publisher articles, 76 verified Haewon articles, 352 assigned thumbnails, 504 missing and 80 unique thumbnail URLs. The 273 shared legacy assignments remain intact.
+- News pass: 99 fetched / 92 unique / 3 added; Google and Bing each completed 6/6 queries. Google 56 RSS items / 0 explicit publisher article URLs / 0 image signals; Bing 43 RSS items / 43 explicit publisher article URLs / 0 image signals. Thumbnail enrichment 1 attempted / 1 assigned.
+- Latest main after the six documentation updates: `dd06a9638e8bf4e7365e1b66e21f4dedd08ed6f5`; open PRs: 0. Mobile visual/device QA remains unverified; successful Pages deployment is not visual QA.
+- No new publisher RSS sources, no automatic review-label upload, no paid services, no external contacts or secrets transfer. All 273 legacy thumbnail assignments were preserved.
