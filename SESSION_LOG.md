@@ -1430,3 +1430,14 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 2. Verify post-merge Production collection, data commit and Pages deployment separately.
 3. Complete real Android/mobile checks for narrow viewport, scrolling/focus, 44px controls, JSON import/export and storage quota/error handling.
 4. Obtain voluntary human-reviewed labels; do not tune search packs using automated proxies alone.
+
+
+## 2026-11-26 — PR #44 and Production #603 completed
+- PR #44 merged as `a81bbdbded2841aa9c45beaa74c5c98b22ae7891`. Final PR CI #51 (`45753687344`) passed 195/195 tests and archive validation; no failures.
+- Production #603 (`45753737275`) succeeded end-to-end: 195 tests, collection, validation, generated data commit, Pages artifact upload and deployment.
+- Data commit `7753a02be1ad512a44348b67e483ee75038c6b7a`; Pages artifact `15086806938` (568,237 bytes, SHA-256 `4c8191bd6feb35c6b183cec17297922e265f9b3b0e9e166373031a2b0591571b`); deployment created for merge SHA `a81bbdbded2841aa9c45beaa74c5c98b22ae7891`.
+- Data snapshot: 856 candidates (669 articles / 187 videos), 76 verified Haewon articles, 352 thumbnails assigned, 504 missing, 80 unique URLs; 273 legacy shared-image assignments preserved.
+- News: 74 fetched / 67 unique / 2 added; Google and Bing 6/6. Google RSS 32 items / no explicit publisher URLs or image signals; Bing RSS 42 items / 42 explicit publisher URLs / no image signals. Thumbnail enrichment 0 attempted / 0 assigned.
+- No human-reviewed labels committed (0). No Playwright/Puppeteer/browser dependency exists; no actual phone/browser visual QA was performed. CSS/UI contract tests do not equal device QA.
+- Final main at data checkpoint: `7753a02be1ad512a44348b67e483ee75038c6b7a`; open PRs: 0.
+- No new RSS feeds, no automatic review-label upload, no paid services or external contacts. All 273 legacy shared-thumbnail assignments remain intact.
