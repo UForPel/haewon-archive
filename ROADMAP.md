@@ -747,3 +747,13 @@
 - [ ] Pass final-head PR CI and archive validation.
 - [ ] Merge only after successful CI.
 - [ ] Verify the next Production run's Bing query status and Pages deployment independently.
+
+
+## 2026-11-26 — Persist feed diagnostics end-to-end (PR candidate)
+- [x] Trace Production #612's Google HTTP 429 and Bing non-RSS failures.
+- [x] Find and fix serializer dropping HTTP status, Content-Type and response format.
+- [x] Capture safe diagnostic metadata for both RSS providers.
+- [x] Add tests covering HTTP 429 and HTML response classification and body non-retention.
+- [ ] Pass final-head PR CI and archive validation.
+- [ ] Merge only after successful CI.
+- [ ] Verify Production #613 data JSON actually contains diagnostic fields and assess feed outcomes.
