@@ -5,42 +5,52 @@
   "day": "2026-11-26",
   "timeZone": "Asia/Seoul",
   "cycle": {
-    "packIndex": 2,
-    "packCount": 3,
+    "packIndex": 5,
+    "packCount": 6,
     "activeQueries": [
-      "오해원 방송",
-      "해원 엔믹스 기사",
-      "NMIXX Haewon appearance",
-      "Haewon NMIXX event"
+      "오해원 팬미팅 기사",
+      "NMIXX Haewon festival",
+      "Haewon stage appearance news",
+      "해원 공연 행사",
+      "NMIXX Haewon showcase",
+      "Haewon public schedule"
     ],
     "nextDayPackIndex": 0
   },
   "evidence": {
-    "cumulativeDiscoveryCandidates": 736,
-    "currentRunCandidates": 139,
+    "cumulativeDiscoveryCandidates": 767,
+    "currentRunCandidates": 54,
     "uniqueVideoRecords": 20,
     "queryYield": [
       {
-        "query": "오해원 방송",
-        "candidates": 71
+        "query": "오해원 팬미팅 기사",
+        "candidates": 11
       },
       {
-        "query": "해원 엔믹스 기사",
-        "candidates": 37
+        "query": "NMIXX Haewon festival",
+        "candidates": 16
       },
       {
-        "query": "NMIXX Haewon appearance",
-        "candidates": 12
+        "query": "Haewon stage appearance news",
+        "candidates": 1
       },
       {
-        "query": "Haewon NMIXX event",
-        "candidates": 19
+        "query": "해원 공연 행사",
+        "candidates": 11
+      },
+      {
+        "query": "NMIXX Haewon showcase",
+        "candidates": 13
+      },
+      {
+        "query": "Haewon public schedule",
+        "candidates": 2
       }
     ],
     "highestYieldQueries": [
-      "오해원 방송",
-      "해원 엔믹스 기사",
-      "Haewon NMIXX event"
+      "NMIXX Haewon festival",
+      "NMIXX Haewon showcase",
+      "오해원 팬미팅 기사"
     ]
   },
   "evaluation": {

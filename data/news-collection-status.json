@@ -1,41 +1,129 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T00:31:54.329Z",
-  "searchPack": 2,
+  "collectedAt": "2026-11-26T00:36:04.149Z",
+  "searchPack": 4,
   "queries": [
     {
-      "query": "오해원 방송",
-      "candidates": 71,
-      "uniqueCandidates": 71
+      "query": "오해원 팬미팅 기사",
+      "candidates": 11,
+      "uniqueCandidates": 11,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 4,
+      "titleKeywordMatchRate": 36,
+      "explicitPublisherUrls": 0,
+      "explicitPublisherUrlRate": 0,
+      "crossQueryDuplicateUrls": 0,
+      "datedCandidates": 11,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 13481.6,
+      "p90PublicationLagHours": 77680.6
     },
     {
-      "query": "해원 엔믹스 기사",
-      "candidates": 37,
-      "uniqueCandidates": 37
+      "query": "NMIXX Haewon festival",
+      "candidates": 16,
+      "uniqueCandidates": 16,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 6,
+      "titleKeywordMatchRate": 38,
+      "explicitPublisherUrls": 8,
+      "explicitPublisherUrlRate": 50,
+      "crossQueryDuplicateUrls": 2,
+      "datedCandidates": 16,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 6593.6,
+      "p90PublicationLagHours": 22253.3
     },
     {
-      "query": "NMIXX Haewon appearance",
-      "candidates": 12,
-      "uniqueCandidates": 12
+      "query": "Haewon stage appearance news",
+      "candidates": 1,
+      "uniqueCandidates": 1,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 1,
+      "titleKeywordMatchRate": 100,
+      "explicitPublisherUrls": 1,
+      "explicitPublisherUrlRate": 100,
+      "crossQueryDuplicateUrls": 0,
+      "datedCandidates": 1,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 808.1,
+      "p90PublicationLagHours": 808.1
     },
     {
-      "query": "Haewon NMIXX event",
-      "candidates": 19,
-      "uniqueCandidates": 19
+      "query": "해원 공연 행사",
+      "candidates": 11,
+      "uniqueCandidates": 11,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 7,
+      "titleKeywordMatchRate": 64,
+      "explicitPublisherUrls": 1,
+      "explicitPublisherUrlRate": 9,
+      "crossQueryDuplicateUrls": 0,
+      "datedCandidates": 11,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 9304.6,
+      "p90PublicationLagHours": 96952.6
+    },
+    {
+      "query": "NMIXX Haewon showcase",
+      "candidates": 13,
+      "uniqueCandidates": 13,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 8,
+      "titleKeywordMatchRate": 62,
+      "explicitPublisherUrls": 10,
+      "explicitPublisherUrlRate": 77,
+      "crossQueryDuplicateUrls": 2,
+      "datedCandidates": 13,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 9710.6,
+      "p90PublicationLagHours": 31762.7
+    },
+    {
+      "query": "Haewon public schedule",
+      "candidates": 2,
+      "uniqueCandidates": 2,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 2,
+      "titleKeywordMatchRate": 100,
+      "explicitPublisherUrls": 0,
+      "explicitPublisherUrlRate": 0,
+      "crossQueryDuplicateUrls": 0,
+      "datedCandidates": 2,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 38497.8,
+      "p90PublicationLagHours": 68667.5
     }
   ],
-  "requestedQueries": 4,
-  "successfulQueries": 4,
-  "bingSuccessfulQueries": 4,
-  "bingCandidates": 35,
+  "requestedQueries": 6,
+  "successfulQueries": 6,
+  "bingSuccessfulQueries": 6,
+  "bingCandidates": 20,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 139,
-  "uniqueIncoming": 138,
-  "added": 2,
+  "fetched": 54,
+  "uniqueIncoming": 52,
+  "added": 35,
   "rssImageSignals": {
-    "items": 104,
-    "sourceUrlItems": 101,
+    "items": 34,
+    "sourceUrlItems": 31,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -48,9 +136,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 35,
+    "items": 20,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 35,
+    "publisherArticleUrlItems": 20,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -65,20 +153,244 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 0,
-    "found": 0,
-    "assigned": 0,
+    "attempted": 10,
+    "found": 7,
+    "assigned": 7,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
-    "missing": 0,
-    "failed": 0,
-    "results": []
+    "missing": 1,
+    "failed": 2,
+    "results": [
+      {
+        "id": "e74f0cd5f348cd454df9",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://pimg.mk.co.kr/news/cms/202401/15/news-p.v1.20240115.941e7549364d42349fb1d09bd24c2153.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://pimg.mk.co.kr/news/cms/202401/15/news-p.v1.20240115.941e7549364d42349fb1d09bd24c2153.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://static.mk.co.kr/facebook_mknews.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.mk.co.kr/en/musics/10921328",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.mk.co.kr/en/musics/10921328",
+        "resolvedArticleHost": "www.mk.co.kr"
+      },
+      {
+        "id": "36a929afc0296128434a",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://img1.yna.co.kr/photo/yna/YH/2023/03/20/PYH2023032104820034400_P4.jpg",
+          "source": "twitter:image",
+          "priority": 2
+        },
+        "candidates": [
+          {
+            "url": "https://img1.yna.co.kr/photo/yna/YH/2023/03/20/PYH2023032104820034400_P4.jpg",
+            "source": "twitter:image",
+            "priority": 2
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20230321048200344",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://en.yna.co.kr/view/PYH20230321048200344",
+        "resolvedArticleHost": "en.yna.co.kr"
+      },
+      {
+        "id": "410181bd7a26e470fb01",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_16v9.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_16v9.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_1280.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_700.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_500.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791015_700.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_95.jpg",
+            "source": "jsonld:thumbnailUrl",
+            "priority": 5
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_141.jpg",
+            "source": "jsonld:thumbnailUrl",
+            "priority": 5
+          },
+          {
+            "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_300.jpg",
+            "source": "jsonld:thumbnailUrl",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008342842",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://sbsstar.net/article/N1008342842/throwback-nmixxs-haewon-brings-major-charm-at-entwurf-media-showcase",
+        "resolvedArticleHost": "sbsstar.net"
+      },
+      {
+        "id": "8cf536bcc4266cf77971",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://cdn.kyongbuk.co.kr/news/photo/202611/4091494_831281_0747.png",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://cdn.kyongbuk.co.kr/news/photo/202611/4091494_831281_0747.png",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091494",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091494",
+        "resolvedArticleHost": "www.kyongbuk.co.kr"
+      },
+      {
+        "id": "2fa8bcbc809524850c64",
+        "status": "missing",
+        "candidate": null,
+        "candidates": [],
+        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-12%EC%9B%94-9%EC%9D%BC-%E6%97%A5-%EC%A0%95%EC%8B%9D-%EB%8D%B0%EB%B7%94-%EC%95%9E%EC%84%9C-%ED%98%84%EC%A7%80-%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4-%EA%B0%9C%EC%B5%9C/ar-AA2hgjqO",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-12%EC%9B%94-9%EC%9D%BC-%E6%97%A5-%EC%A0%95%EC%8B%9D-%EB%8D%B0%EB%B7%94-%EC%95%9E%EC%84%9C-%ED%98%84%EC%A7%80-%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4-%EA%B0%9C%EC%B5%9C/ar-AA2hgjqO",
+        "resolvedArticleHost": "www.msn.com"
+      },
+      {
+        "id": "34ef060e01bed962bdc8",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://biz.chosun.com/resizer/v2/HE4GEZJZGNRTIMJRMQYWIYTDMM.jpg?auth=74c5efeabc1c134ea89f7ebb2eb4113094dd626c2f968d8980fbbf7ae87b9f5a&width=572&height=300&smart=true",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://biz.chosun.com/resizer/v2/HE4GEZJZGNRTIMJRMQYWIYTDMM.jpg?auth=74c5efeabc1c134ea89f7ebb2eb4113094dd626c2f968d8980fbbf7ae87b9f5a&width=572&height=300&smart=true",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/23/5LOKD7FZXJAVBPF7TKTRXHMQGY/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/23/5LOKD7FZXJAVBPF7TKTRXHMQGY/",
+        "resolvedArticleHost": "biz.chosun.com"
+      },
+      {
+        "id": "534a2af22c937e2c8b8a",
+        "status": "failed",
+        "publisherArticleUrl": "https://www.news18.com/movies/k-pop-group-nmixx-reacts-to-popular-indian-tracks-hints-at-dream-collab-with-jonita-gandhi-aa-9210925.html",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.news18.com/movies/k-pop-group-nmixx-reacts-to-popular-indian-tracks-hints-at-dream-collab-with-jonita-gandhi-aa-9210925.html",
+        "resolvedArticleHost": "www.news18.com"
+      },
+      {
+        "id": "4467d005514dbc21f8c5",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://image.koreaboo.com/2024/06/170-2024-06-02T002923.979.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795716000&KeyName=kb&Signature=8ds1ywYaVJsDB8ptpwwqMyJuiP4=",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://image.koreaboo.com/2024/06/170-2024-06-02T002923.979.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795716000&KeyName=kb&Signature=8ds1ywYaVJsDB8ptpwwqMyJuiP4=",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://image.koreaboo.com/2024/06/170-2024-06-02T002923.979.jpg?imop=Convert%2Cformat%3Djpeg%3BCompress%2Cstrength%3Dmedium&",
+            "source": "og:image:secure_url",
+            "priority": 1
+          },
+          {
+            "url": "https://image.koreaboo.com/2024/06/170-2024-06-02T002923.979.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&",
+            "source": "twitter:image",
+            "priority": 2
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.koreaboo.com/news/nmixx-goes-viral-another-university-festival-reactions-vastly-different/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.koreaboo.com/news/nmixx-goes-viral-another-university-festival-reactions-vastly-different/",
+        "resolvedArticleHost": "www.koreaboo.com"
+      },
+      {
+        "id": "a093a5e94886fe4c0b7c",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://biz.chosun.com/resizer/v2/GYYDGOBQMRSTMMDFMZRWINDFG4.jpg?auth=cf84fdaaa0066c04b6c25bc72f3ec9d7834823c3e99edc28f223edaed0c73e97&width=572&height=300&smart=true",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://biz.chosun.com/resizer/v2/GYYDGOBQMRSTMMDFMZRWINDFG4.jpg?auth=cf84fdaaa0066c04b6c25bc72f3ec9d7834823c3e99edc28f223edaed0c73e97&width=572&height=300&smart=true",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/26/QWMLGGJWL5AS7LWUX5WDBNXYTI/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/26/QWMLGGJWL5AS7LWUX5WDBNXYTI/",
+        "resolvedArticleHost": "biz.chosun.com"
+      },
+      {
+        "id": "509f9dc90f187035f117",
+        "status": "failed",
+        "publisherArticleUrl": "https://www.sportskeeda.com/us/k-pop/news-this-scary-fans-outraged-nmixx-s-haewon-allegedly-targeted-laser-pointer-birthday-live",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.sportskeeda.com/us/k-pop/news-this-scary-fans-outraged-nmixx-s-haewon-allegedly-targeted-laser-pointer-birthday-live",
+        "resolvedArticleHost": "www.sportskeeda.com"
+      }
+    ]
   },
   "deduplicationComparison": {
-    "before": 139,
-    "after": 138,
-    "collapsed": 1,
+    "before": 54,
+    "after": 51,
+    "collapsed": 3,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 736
+  "totalCandidates": 767
 }

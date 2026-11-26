@@ -4905,7 +4905,7 @@
     "id": "937b773eb419381da3d0",
     "title": "Haewon of NMIXX, from ‘skin-and-bones’ to eye hollows… Regarding the changed appearance, “Take care of your health”",
     "url": "https://sports.khan.co.kr/en/article/202610231530007",
-    "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/news/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+    "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9D%BC%EB%B0%98/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
     "sourceUrl": "",
     "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0521ab154742799db1c22930968c71&url=https%3a%2f%2fsports.khan.co.kr%2fen%2farticle%2f202610231530007&c=1238094118948107116&mkt=ko-kr",
     "publisherHost": "sports.khan.co.kr",
@@ -5680,6 +5680,100 @@
       "url": "https://0.soompi.io/wp-content/uploads/2026/05/09204057/Haewon-Bae-Chaewon-Kazuha.jpg",
       "articleUrl": "https://www.soompi.com/article/1839633wpp/watch-nmixxs-haewon-and-bae-le-sserafims-chaewon-and-kazuha-come-together-in-amazing-saturday-preview",
       "observedAt": "2026-11-24T05:36:19.113Z"
+    }
+  },
+  {
+    "id": "a093a5e94886fe4c0b7c",
+    "title": "NMIXX Haewon targeted by laser during Chile birthday livestream",
+    "url": "https://biz.chosun.com/en/en-entertainment/2026/02/26/QWMLGGJWL5AS7LWUX5WDBNXYTI/",
+    "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/26/QWMLGGJWL5AS7LWUX5WDBNXYTI/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef402cb4fa98c30f599d7ba463e&url=https%3a%2f%2fbiz.chosun.com%2fen%2fen-entertainment%2f2026%2f02%2f26%2fQWMLGGJWL5AS7LWUX5WDBNXYTI%2f&c=8113943390428286467&mkt=ko-kr",
+    "publisherHost": "biz.chosun.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20festival&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef402cb4fa98c30f599d7ba463e&url=https%3a%2f%2fbiz.chosun.com%2fen%2fen-entertainment%2f2026%2f02%2f26%2fQWMLGGJWL5AS7LWUX5WDBNXYTI%2f&c=8113943390428286467&mkt=ko-kr",
+        "articleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/26/QWMLGGJWL5AS7LWUX5WDBNXYTI/",
+        "host": "biz.chosun.com"
+      }
+    ],
+    "publishedAt": "2026-02-26T06:14:00.000Z",
+    "description": "Group NMIXX member Haewon was reported to have been targeted by laser harassment during a live broadcast she held to celebrate her birthday. On the 24th, Haewon, who was fulfilling a schedule in Chile ...",
+    "thumbnailUrl": "https://biz.chosun.com/resizer/v2/GYYDGOBQMRSTMMDFMZRWINDFG4.jpg?auth=cf84fdaaa0066c04b6c25bc72f3ec9d7834823c3e99edc28f223edaed0c73e97&width=572&height=300&smart=true",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "조선일보",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon festival",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://biz.chosun.com/resizer/v2/GYYDGOBQMRSTMMDFMZRWINDFG4.jpg?auth=cf84fdaaa0066c04b6c25bc72f3ec9d7834823c3e99edc28f223edaed0c73e97&width=572&height=300&smart=true",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/26/QWMLGGJWL5AS7LWUX5WDBNXYTI/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/26/QWMLGGJWL5AS7LWUX5WDBNXYTI/",
+      "resolvedArticleHost": "biz.chosun.com",
+      "fetchedAt": "2026-11-26T00:36:05.540Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://biz.chosun.com/resizer/v2/GYYDGOBQMRSTMMDFMZRWINDFG4.jpg?auth=cf84fdaaa0066c04b6c25bc72f3ec9d7834823c3e99edc28f223edaed0c73e97&width=572&height=300&smart=true",
+      "articleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/26/QWMLGGJWL5AS7LWUX5WDBNXYTI/",
+      "observedAt": "2026-11-26T00:36:05.540Z"
+    }
+  },
+  {
+    "id": "509f9dc90f187035f117",
+    "title": "“This is so scary” - Fans outraged after NMIXX’s Haewon allegedly targeted with laser pointer during birthday live",
+    "url": "https://www.sportskeeda.com/us/k-pop/news-this-scary-fans-outraged-nmixx-s-haewon-allegedly-targeted-laser-pointer-birthday-live",
+    "publisherArticleUrl": "https://www.sportskeeda.com/us/k-pop/news-this-scary-fans-outraged-nmixx-s-haewon-allegedly-targeted-laser-pointer-birthday-live",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef402cb4fa98c30f599d7ba463e&url=https%3a%2f%2fwww.sportskeeda.com%2fus%2fk-pop%2fnews-this-scary-fans-outraged-nmixx-s-haewon-allegedly-targeted-laser-pointer-birthday-live&c=18364276928080710620&mkt=ko-kr",
+    "publisherHost": "www.sportskeeda.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20festival&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef402cb4fa98c30f599d7ba463e&url=https%3a%2f%2fwww.sportskeeda.com%2fus%2fk-pop%2fnews-this-scary-fans-outraged-nmixx-s-haewon-allegedly-targeted-laser-pointer-birthday-live&c=18364276928080710620&mkt=ko-kr",
+        "articleUrl": "https://www.sportskeeda.com/us/k-pop/news-this-scary-fans-outraged-nmixx-s-haewon-allegedly-targeted-laser-pointer-birthday-live",
+        "host": "www.sportskeeda.com"
+      }
+    ],
+    "publishedAt": "2026-02-24T06:04:00.000Z",
+    "description": "On February 24, NMIXX's Haewon hosted a birthday livestream on YouTube from the Sheraton Hotel in Chile. During the broadcast, a laser beam briefly appeared directed toward her room window, prompting ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Sportskeeda",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon festival",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "failed",
+      "publisherArticleUrl": "https://www.sportskeeda.com/us/k-pop/news-this-scary-fans-outraged-nmixx-s-haewon-allegedly-targeted-laser-pointer-birthday-live",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.sportskeeda.com/us/k-pop/news-this-scary-fans-outraged-nmixx-s-haewon-allegedly-targeted-laser-pointer-birthday-live",
+      "resolvedArticleHost": "www.sportskeeda.com",
+      "fetchedAt": "2026-11-26T00:36:05.540Z",
+      "statusCode": 405,
+      "errorCode": "method-not-allowed"
     }
   },
   {
@@ -6507,6 +6601,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "8e080d3ce8b6b45f223f",
+    "title": "[단독] 빌리 츠키, 오해원 이어 '워크돌' 시즌4 MC 발탁 - 티브이데일리",
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9PY0hmNGkzd1ZSdjg0S2ZGcHd2VjVBT0lGMWt1ZFR3Vl9CUGFVRlB3bkJEYTFPWEdKYVBqZmxubDJ2bXRTWDJaWl9HbHdfcXR4cVhLNmctQ3pfQ0FFZjBqRnFTQXYtVDhaWWl1VmdmSE1aMFRN?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "",
+    "publishedAt": "2025-05-13T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE9PY0hmNGkzd1ZSdjg0S2ZGcHd2VjVBT0lGMWt1ZFR3Vl9CUGFVRlB3bkJEYTFPWEdKYVBqZmxubDJ2bXRTWDJaWl9HbHdfcXR4cVhLNmctQ3pfQ0FFZjBqRnFTQXYtVDhaWWl1VmdmSE1aMFRN?oc=5\" target=\"_blank\">[단독] 빌리 츠키, 오해원 이어 '워크돌' 시즌4 MC 발탁</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">티브이데일리</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 팬미팅 기사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 6
   },
   {
     "id": "ce4468d1f0e09b93135d",
@@ -7450,6 +7562,64 @@
     "candidateSource": ""
   },
   {
+    "id": "e74f0cd5f348cd454df9",
+    "title": "The group NMIXX will open the third series of World View through God. Enmix (Baei, Kyujin, Haewon..",
+    "url": "https://www.mk.co.kr/en/musics/10921328",
+    "publisherArticleUrl": "https://www.mk.co.kr/en/musics/10921328",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef5f4de4ffcb204118cf8f47e4a&url=https%3a%2f%2fwww.mk.co.kr%2fen%2fmusics%2f10921328&c=8755177919744060830&mkt=ko-kr",
+    "publisherHost": "www.mk.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20showcase&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef5f4de4ffcb204118cf8f47e4a&url=https%3a%2f%2fwww.mk.co.kr%2fen%2fmusics%2f10921328&c=8755177919744060830&mkt=ko-kr",
+        "articleUrl": "https://www.mk.co.kr/en/musics/10921328",
+        "host": "www.mk.co.kr"
+      }
+    ],
+    "publishedAt": "2024-01-15T07:21:00.000Z",
+    "description": "The group NMIXX will open the third series of World View through God. Enmix (Baei, Kyujin, Haewon, Jiwoo Lily, Seolyoon) held a showcase to commemorate the release of its second mini album \"F3O4: ...",
+    "thumbnailUrl": "https://pimg.mk.co.kr/news/cms/202401/15/news-p.v1.20240115.941e7549364d42349fb1d09bd24c2153.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "매일경제",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon showcase",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://pimg.mk.co.kr/news/cms/202401/15/news-p.v1.20240115.941e7549364d42349fb1d09bd24c2153.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://static.mk.co.kr/facebook_mknews.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.mk.co.kr/en/musics/10921328",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.mk.co.kr/en/musics/10921328",
+      "resolvedArticleHost": "www.mk.co.kr",
+      "fetchedAt": "2026-11-26T00:36:05.540Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://pimg.mk.co.kr/news/cms/202401/15/news-p.v1.20240115.941e7549364d42349fb1d09bd24c2153.jpg",
+      "articleUrl": "https://www.mk.co.kr/en/musics/10921328",
+      "observedAt": "2026-11-26T00:36:05.540Z"
+    }
+  },
+  {
     "id": "9d5a138361e7e3e27ed7",
     "title": "오해원, 상큼한 볼하트 (과몰입 인생사)[DA포토] - 스포츠동아",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9rcmpILWd4dlpSVlNtSnpFQm8xam9mN2tORUZCaGlGSzZkSldPWlNTejRUOFhMZkkycmZWUENZS1lCZ2xnZl9obldyRlRkSlk5M19MVERKRkJaSlhZdXczd0NBeWUxY0cwZ2ZjWnFB?oc=5",
@@ -7709,6 +7879,59 @@
     "candidateSource": ""
   },
   {
+    "id": "36a929afc0296128434a",
+    "title": "S. Korean girl group NMIXX",
+    "url": "https://en.yna.co.kr/view/PYH20230321048200344",
+    "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20230321048200344",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef5f4de4ffcb204118cf8f47e4a&url=https%3a%2f%2fen.yna.co.kr%2fview%2fPYH20230321048200344&c=13366690471948546645&mkt=ko-kr",
+    "publisherHost": "en.yna.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20showcase&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef5f4de4ffcb204118cf8f47e4a&url=https%3a%2f%2fen.yna.co.kr%2fview%2fPYH20230321048200344&c=13366690471948546645&mkt=ko-kr",
+        "articleUrl": "https://en.yna.co.kr/view/PYH20230321048200344",
+        "host": "en.yna.co.kr"
+      }
+    ],
+    "publishedAt": "2023-03-21T03:12:00.000Z",
+    "description": "Haewon, a member of South Korean girl group NMIXX, poses for a photo during a showcase for the group's first mini album \"Expergo\" in Seoul on March 20, 2023. (Yonhap) (END) ...",
+    "thumbnailUrl": "https://img1.yna.co.kr/photo/yna/YH/2023/03/20/PYH2023032104820034400_P4.jpg",
+    "thumbnailSource": "twitter:image",
+    "thumbnailCandidates": [],
+    "sourceName": "Yonhap News Agency",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon showcase",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://img1.yna.co.kr/photo/yna/YH/2023/03/20/PYH2023032104820034400_P4.jpg",
+        "source": "twitter:image",
+        "priority": 2
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20230321048200344",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://en.yna.co.kr/view/PYH20230321048200344",
+      "resolvedArticleHost": "en.yna.co.kr",
+      "fetchedAt": "2026-11-26T00:36:05.540Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "twitter:image",
+      "url": "https://img1.yna.co.kr/photo/yna/YH/2023/03/20/PYH2023032104820034400_P4.jpg",
+      "articleUrl": "https://en.yna.co.kr/view/PYH20230321048200344",
+      "observedAt": "2026-11-26T00:36:05.540Z"
+    }
+  },
+  {
     "id": "a37e26c7cfff0e81cf80",
     "title": "NMIXX's Haewon praised for her hosting skills after she appears as a special MC on KBS2's 'Music Bank'",
     "url": "https://www.allkpop.com/article/2023/01/nmixxs-haewon-praised-for-her-hosting-skills-after-she-appears-as-a-special-mc-on-kbs2s-music-bank",
@@ -7765,6 +7988,94 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "publisherArticleUrl": ""
+  },
+  {
+    "id": "410181bd7a26e470fb01",
+    "title": "[Throwback] NMIXX's HAEWON Brings Major Charm at \"Entwurf\" Media Showcase",
+    "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008342842",
+    "publisherArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008342842",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef5f4de4ffcb204118cf8f47e4a&url=https%3a%2f%2fnews.sbs.co.kr%2fnews%2fendPage.do%3fnews_id%3dN1008342842&c=2961844798891478097&mkt=ko-kr",
+    "publisherHost": "news.sbs.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20showcase&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef5f4de4ffcb204118cf8f47e4a&url=https%3a%2f%2fnews.sbs.co.kr%2fnews%2fendPage.do%3fnews_id%3dN1008342842&c=2961844798891478097&mkt=ko-kr",
+        "articleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008342842",
+        "host": "news.sbs.co.kr"
+      }
+    ],
+    "publishedAt": "2022-09-19T09:30:00.000Z",
+    "description": "On Sept. 19, 2022, NMIXX's HAEWON turned on the charm at a media showcase celebrating the release of the group's second single album, \"Entwurf,\" striking playful poses during photo time at Yes24 Live ...",
+    "thumbnailUrl": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_16v9.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "SBS",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon showcase",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_16v9.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_1280.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_700.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_500.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791015_700.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_95.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_141.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      },
+      {
+        "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_300.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008342842",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://sbsstar.net/article/N1008342842/throwback-nmixxs-haewon-brings-major-charm-at-entwurf-media-showcase",
+      "resolvedArticleHost": "sbsstar.net",
+      "fetchedAt": "2026-11-26T00:36:05.540Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://img.sbs.co.kr/newsnet/etv/upload/2022/09/19/30000791016_16v9.jpg",
+      "articleUrl": "https://sbsstar.net/article/N1008342842/throwback-nmixxs-haewon-brings-major-charm-at-entwurf-media-showcase",
+      "observedAt": "2026-11-26T00:36:05.540Z"
+    }
   },
   {
     "id": "baaea643c6e7d0c5b9b4",
@@ -14253,6 +14564,24 @@
     "candidateSource": ""
   },
   {
+    "id": "70f9682414875d6b82f8",
+    "title": "[IS포토] 엔믹스 해원, 오늘부터 '파티 어클락' - 일요서울i",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1qdG5IRThjZEF4UHF3VEpoMVhfUkYxcGpNVkZVUVBfbUlEVWluSWI2SHhIU0ltMHBpelJuSHZCY2JVcjZ3cjg3dzVUSWt3NHoxM0RSMGpkU1BodkVQU0RmT3RHQ3JfWEI4SUVvZHBaRQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.ilyoseoul.co.kr",
+    "publishedAt": "2023-07-13T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE1qdG5IRThjZEF4UHF3VEpoMVhfUkYxcGpNVkZVUVBfbUlEVWluSWI2SHhIU0ltMHBpelJuSHZCY2JVcjZ3cjg3dzVUSWt3NHoxM0RSMGpkU1BodkVQU0RmT3RHQ3JfWEI4SUVvZHBaRQ?oc=5\" target=\"_blank\">[IS포토] 엔믹스 해원, 오늘부터 '파티 어클락'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">일요서울i</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "NMIXX Haewon showcase",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "22299f44ceea0b05d93e",
     "title": "엔믹스 해원 \"T 성향…연습생 시절 우는 설윤에게 한마디\" (정희)[종합] - xportsnews.com",
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBqM0FnenRwcWh3RmFQOFNGVDZST2RnUGkwSXpDOU4zOWxGMW9scWhVOEJDMS1EdVkxaVJQWmdZQTFRQ2d6YTZCbXVoU0pzX3NEOU1SNg?oc=5",
@@ -15352,6 +15681,24 @@
     "publisherArticleUrl": ""
   },
   {
+    "id": "0a2aa3b558ec8d19bb0a",
+    "title": "APAP ANYANG PAVILION; ALVARO SIZA HALL/ HAEWON SHIN – 마실와이드 - 마실와이드_MasilWIDE",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0yZVZqcDFhUV9zMUpzTy1kdWQ0TG9VV0pYY25UdXF4TFVOLUdsZ242eDhBWl9BYmVzS3Bid0xDNURud0QtbWsxVS1haU5FTGJnNC1DTFc0TmVxYzRmMEEwYkRiR3BWRzdXdjBUWQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://masilwide.com",
+    "publishedAt": "2018-03-17T14:37:07.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTE0yZVZqcDFhUV9zMUpzTy1kdWQ0TG9VV0pYY25UdXF4TFVOLUdsZ242eDhBWl9BYmVzS3Bid0xDNURud0QtbWsxVS1haU5FTGJnNC1DTFc0TmVxYzRmMEEwYkRiR3BWRzdXdjBUWQ?oc=5\" target=\"_blank\">APAP ANYANG PAVILION; ALVARO SIZA HALL/ HAEWON SHIN – 마실와이드</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">마실와이드_MasilWIDE</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "Haewon public schedule",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "81e91b99951b92a7d30b",
     "title": "엔믹스, ‘대중문화예술상’ 문체부 장관 표창..“좋은 음악·무대로 보답” - 브레이크뉴스",
     "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBCSXdoTTJQcXdQN0d4eWRDb0dTUy13dVhBRExNSTk0Tk41RlFjcWRKOVdKYXA3dE5xc3hVZ0ZvSmxCdkJnZG1lRA?oc=5",
@@ -15475,6 +15822,24 @@
     "candidateSource": ""
   },
   {
+    "id": "60ece07a441852adfad6",
+    "title": "261018 NMIXX 설윤 'Blue Valentine' 직캠 SULLYOON FANCAM [4K] NOL Festival #kpop #nmixx - YouTube",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFAyMndWRG1QbnVKSUhaZDhvMDJYTTVsSlFLRjNmSk1PMGt6VnBqQXBQeWplUFp5Tmh0Z1JZZEVlRkRscTFhd2FSQ1Y1WDFQNnlFcEozeVZOQjdFSWNH?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://youtu.be",
+    "publishedAt": "2026-10-20T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFAyMndWRG1QbnVKSUhaZDhvMDJYTTVsSlFLRjNmSk1PMGt6VnBqQXBQeWplUFp5Tmh0Z1JZZEVlRkRscTFhd2FSQ1Y1WDFQNnlFcEozeVZOQjdFSWNH?oc=5\" target=\"_blank\">261018 NMIXX 설윤 'Blue Valentine' 직캠 SULLYOON FANCAM [4K] NOL Festival #kpop #nmixx</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">YouTube</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "NMIXX Haewon festival",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 3
+  },
+  {
     "id": "49569c71c1d5417a8012",
     "title": "261018 놀페스티벌 고양 엔믹스 직캠 풀버전 NMIXX FULL FANCAM l NOL FESTIVAL - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBrWEtWLVJlU1YzRkd2YmVpYVdmUjlGclBVTWlvTFYxLXM3cFlWb0RUM1A0RHBEMjJtNjFaZUtpMVRkWXlianZUcmNRZ29kMHZ0TDlFa3JHZVN3ZFJP?oc=5",
@@ -15491,7 +15856,12 @@
     "thumbnailCandidates": [],
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://youtu.be",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "611095f69a8e22f826ec",
@@ -15831,6 +16201,100 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "8cf536bcc4266cf77971",
+    "title": "동해안별신굿에 전자음악&#183;미디어아트 더한 ‘해원’, 포항서 공연",
+    "url": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091494",
+    "publisherArticleUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091494",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef436044fc2ba613bbdfbad9f5e&url=https%3a%2f%2fwww.kyongbuk.co.kr%2fnews%2farticleView.html%3fidxno%3d4091494&c=15402092219575387162&mkt=ko-kr",
+    "publisherHost": "www.kyongbuk.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%ED%95%B4%EC%9B%90%20%EA%B3%B5%EC%97%B0%20%ED%96%89%EC%82%AC&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef436044fc2ba613bbdfbad9f5e&url=https%3a%2f%2fwww.kyongbuk.co.kr%2fnews%2farticleView.html%3fidxno%3d4091494&c=15402092219575387162&mkt=ko-kr",
+        "articleUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091494",
+        "host": "www.kyongbuk.co.kr"
+      }
+    ],
+    "publishedAt": "2026-11-19T11:08:00.000Z",
+    "description": "동해안 어촌마을에서 풍어와 안녕을 기원하던 전통 별신굿이 현대적 음악과 미디어아트를 결합한 새로운 공연예술로 다시 태어난다.포항문화재단은 오는 22일 포항시 북구 동빈문화창고1969에서 해양 콘텐츠 퍼포먼스 ‘해원(海願): 바다와 기억, 목소리로 엮는 동시대의 의례’를 선보인다.이번 ...",
+    "thumbnailUrl": "https://cdn.kyongbuk.co.kr/news/photo/202611/4091494_831281_0747.png",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "경북일보",
+    "discoverySource": "bing-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://cdn.kyongbuk.co.kr/news/photo/202611/4091494_831281_0747.png",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091494",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091494",
+      "resolvedArticleHost": "www.kyongbuk.co.kr",
+      "fetchedAt": "2026-11-26T00:36:05.540Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://cdn.kyongbuk.co.kr/news/photo/202611/4091494_831281_0747.png",
+      "articleUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091494",
+      "observedAt": "2026-11-26T00:36:05.540Z"
+    }
+  },
+  {
+    "id": "2fa8bcbc809524850c64",
+    "title": "엔믹스, 12월 9일 日 정식 데뷔 앞서 현지 쇼케이스 개최",
+    "url": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-12%EC%9B%94-9%EC%9D%BC-%E6%97%A5-%EC%A0%95%EC%8B%9D-%EB%8D%B0%EB%B7%94-%EC%95%9E%EC%84%9C-%ED%98%84%EC%A7%80-%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4-%EA%B0%9C%EC%B5%9C/ar-AA2hgjqO",
+    "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-12%EC%9B%94-9%EC%9D%BC-%E6%97%A5-%EC%A0%95%EC%8B%9D-%EB%8D%B0%EB%B7%94-%EC%95%9E%EC%84%9C-%ED%98%84%EC%A7%80-%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4-%EA%B0%9C%EC%B5%9C/ar-AA2hgjqO",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef5f4de4ffcb204118cf8f47e4a&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fentertainment%2fmusic%2f%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-12%25EC%259B%2594-9%25EC%259D%25BC-%25E6%2597%25A5-%25EC%25A0%2595%25EC%258B%259D-%25EB%258D%25B0%25EB%25B7%2594-%25EC%2595%259E%25EC%2584%259C-%25ED%2598%2584%25EC%25A7%2580-%25EC%2587%25BC%25EC%25BC%2580%25EC%259D%25B4%25EC%258A%25A4-%25EA%25B0%259C%25EC%25B5%259C%2far-AA2hgjqO&c=3294098727112600758&mkt=ko-kr",
+    "publisherHost": "www.msn.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20showcase&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef5f4de4ffcb204118cf8f47e4a&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fentertainment%2fmusic%2f%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-12%25EC%259B%2594-9%25EC%259D%25BC-%25E6%2597%25A5-%25EC%25A0%2595%25EC%258B%259D-%25EB%258D%25B0%25EB%25B7%2594-%25EC%2595%259E%25EC%2584%259C-%25ED%2598%2584%25EC%25A7%2580-%25EC%2587%25BC%25EC%25BC%2580%25EC%259D%25B4%25EC%258A%25A4-%25EA%25B0%259C%25EC%25B5%259C%2far-AA2hgjqO&c=3294098727112600758&mkt=ko-kr",
+        "articleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-12%EC%9B%94-9%EC%9D%BC-%E6%97%A5-%EC%A0%95%EC%8B%9D-%EB%8D%B0%EB%B7%94-%EC%95%9E%EC%84%9C-%ED%98%84%EC%A7%80-%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4-%EA%B0%9C%EC%B5%9C/ar-AA2hgjqO",
+        "host": "www.msn.com"
+      }
+    ],
+    "publishedAt": "2026-11-12T21:50:00.000Z",
+    "description": "그룹 NMIXX(엔믹스)가 일본 정식 데뷔에 앞서 현지 쇼케이스를 개최하고 미래를 향한 기대를 심었다.NMIXX는 12월 9일 일본 데뷔 베스트 앨범 'N=MIXX'(엔이퀄믹스)를 발매하고 현지 정식 데뷔한다. 이를 앞두고 11월 7일과 8일 양일간 도쿄 국립 요요기 경기장 제1체육관에서 데뷔 쇼케이스 'NMIXX JAPAN DEBUT SHOWCASE \"N ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "NewsEn on MSN",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon showcase",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "missing",
+      "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-12%EC%9B%94-9%EC%9D%BC-%E6%97%A5-%EC%A0%95%EC%8B%9D-%EB%8D%B0%EB%B7%94-%EC%95%9E%EC%84%9C-%ED%98%84%EC%A7%80-%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4-%EA%B0%9C%EC%B5%9C/ar-AA2hgjqO",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-12%EC%9B%94-9%EC%9D%BC-%E6%97%A5-%EC%A0%95%EC%8B%9D-%EB%8D%B0%EB%B7%94-%EC%95%9E%EC%84%9C-%ED%98%84%EC%A7%80-%EC%87%BC%EC%BC%80%EC%9D%B4%EC%8A%A4-%EA%B0%9C%EC%B5%9C/ar-AA2hgjqO",
+      "resolvedArticleHost": "www.msn.com",
+      "fetchedAt": "2026-11-26T00:36:05.540Z",
+      "statusCode": 200,
+      "errorCode": ""
+    }
   },
   {
     "id": "f796533a0bd763dc729f",
@@ -16667,6 +17131,24 @@
     "candidateSource": ""
   },
   {
+    "id": "138c20e687f0cfbf9537",
+    "title": "양산 해원사, 다문화가족과 ‘중추절 달빛축제’ - 현대불교",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFB4VzROV1VPTW41NWtJWTdHSXJIM29TbDhnTVVjRnlydVZ4Mkl2dFFNYS1zdFlRbFptSTI3clBJeFhnX1I5UWhkRmRtQi1KZ0h2RG1GampYRWFCUV9RZXRwRnNTQ2FJRkxWYzFjM1BuTQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.hyunbulnews.com",
+    "publishedAt": "2026-09-26T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTFB4VzROV1VPTW41NWtJWTdHSXJIM29TbDhnTVVjRnlydVZ4Mkl2dFFNYS1zdFlRbFptSTI3clBJeFhnX1I5UWhkRmRtQi1KZ0h2RG1GampYRWFCUV9RZXRwRnNTQ2FJRkxWYzFjM1BuTQ?oc=5\" target=\"_blank\">양산 해원사, 다문화가족과 ‘중추절 달빛축제’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">현대불교</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
     "id": "3c42deb4bbd97ca86088",
     "title": "엔믹스, 마침내 '디스토피아' 도착…'긴 소원'에 담긴 새 이야기 - 조선일보",
     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPUzFnTnY0OFM0dWEtNzhoMWRuUy1uLWZmcDlMSkZNQnhoaTdtaUdMYWtXSVE3N0JpYUhNaGdlR3R4c2xBeWZ0YlNseGkzcTJnVnVkZHRWTmxhR043N0pBaGtTZm9FMUF3OFhLSjlKOElxMkd3ay1qZXFVSWNaZTI2amNtXzdXd21HTUE?oc=5",
@@ -16919,6 +17401,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "075ff9f5d440e9b210c4",
+    "title": "화성오산교육지원청, 해원학교 ‘신난타’팀 공연 통한 장애 이해와 포용문화 확산 - 화성저널",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tLXZ1c0x3cm5HTGViLUpIU3V3VndxWFhxeGRZekxfZllXS2VxRk5YYWF1c3Z4S2lCYUhXT1NZMXN0V3pyMEY5TURuNDE4VGNKcTJsV2d1RzFLLVo5YjZKNE9JQlNaZw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.hsj.co.kr",
+    "publishedAt": "2026-06-16T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tLXZ1c0x3cm5HTGViLUpIU3V3VndxWFhxeGRZekxfZllXS2VxRk5YYWF1c3Z4S2lCYUhXT1NZMXN0V3pyMEY5TURuNDE4VGNKcTJsV2d1RzFLLVo5YjZKNE9JQlNaZw?oc=5\" target=\"_blank\">화성오산교육지원청, 해원학교 ‘신난타’팀 공연 통한 장애 이해와 포용문화 확산</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">화성저널</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2
   },
   {
     "id": "d3039bb5fa1f3767f517",
@@ -17271,6 +17771,77 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "b2a730320bb1ed210f8e",
+    "title": "‘4th Debut Anniversary’ NMIXX, unveils special content! Building on global momentum, confirmed to appear at ‘2026 Vina del Mar Festival’ - 스포츠경향",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1Ia0dRMzY4dFlpcDh5T0EzU3RWNFJQWTlEQ0d6bTNQa2dveUJFWWFQekE4bXBKaEZDbzVPUkV5OWJ6ekdKbXNuRmhPWjB3Wkh2UFVLdXlnZFZXU0lleDE0bGxn?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://sports.khan.co.kr",
+    "publishedAt": "2026-02-24T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1Ia0dRMzY4dFlpcDh5T0EzU3RWNFJQWTlEQ0d6bTNQa2dveUJFWWFQekE4bXBKaEZDbzVPUkV5OWJ6ekdKbXNuRmhPWjB3Wkh2UFVLdXlnZFZXU0lleDE0bGxn?oc=5\" target=\"_blank\">‘4th Debut Anniversary’ NMIXX, unveils special content! Building on global momentum, confirmed to appear at ‘2026 Vina del Mar Festival’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">스포츠경향</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "NMIXX Haewon festival",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
+    "id": "34ef060e01bed962bdc8",
+    "title": "NMIXX celebrates 4th anniversary and headlines Vi&#241;a del Mar Festival",
+    "url": "https://biz.chosun.com/en/en-entertainment/2026/02/23/5LOKD7FZXJAVBPF7TKTRXHMQGY/",
+    "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/23/5LOKD7FZXJAVBPF7TKTRXHMQGY/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef402cb4fa98c30f599d7ba463e&url=https%3a%2f%2fbiz.chosun.com%2fen%2fen-entertainment%2f2026%2f02%2f23%2f5LOKD7FZXJAVBPF7TKTRXHMQGY%2f&c=13986083894347641436&mkt=ko-kr",
+    "publisherHost": "biz.chosun.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20festival&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef402cb4fa98c30f599d7ba463e&url=https%3a%2f%2fbiz.chosun.com%2fen%2fen-entertainment%2f2026%2f02%2f23%2f5LOKD7FZXJAVBPF7TKTRXHMQGY%2f&c=13986083894347641436&mkt=ko-kr",
+        "articleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/23/5LOKD7FZXJAVBPF7TKTRXHMQGY/",
+        "host": "biz.chosun.com"
+      }
+    ],
+    "publishedAt": "2026-02-23T02:56:00.000Z",
+    "description": "NMIXX celebrated their 4th anniversary by unveiling special content and heating up fans' passion. NMIXX, who debuted in the music scene on Feb. 22, 2022, with the single album 'AD MARE' and the title ...",
+    "thumbnailUrl": "https://biz.chosun.com/resizer/v2/HE4GEZJZGNRTIMJRMQYWIYTDMM.jpg?auth=74c5efeabc1c134ea89f7ebb2eb4113094dd626c2f968d8980fbbf7ae87b9f5a&width=572&height=300&smart=true",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "조선일보",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon festival",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://biz.chosun.com/resizer/v2/HE4GEZJZGNRTIMJRMQYWIYTDMM.jpg?auth=74c5efeabc1c134ea89f7ebb2eb4113094dd626c2f968d8980fbbf7ae87b9f5a&width=572&height=300&smart=true",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/23/5LOKD7FZXJAVBPF7TKTRXHMQGY/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/23/5LOKD7FZXJAVBPF7TKTRXHMQGY/",
+      "resolvedArticleHost": "biz.chosun.com",
+      "fetchedAt": "2026-11-26T00:36:05.540Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://biz.chosun.com/resizer/v2/HE4GEZJZGNRTIMJRMQYWIYTDMM.jpg?auth=74c5efeabc1c134ea89f7ebb2eb4113094dd626c2f968d8980fbbf7ae87b9f5a&width=572&height=300&smart=true",
+      "articleUrl": "https://biz.chosun.com/en/en-entertainment/2026/02/23/5LOKD7FZXJAVBPF7TKTRXHMQGY/",
+      "observedAt": "2026-11-26T00:36:05.540Z"
+    }
   },
   {
     "id": "3b944e1f855a23acfb70",
@@ -18042,6 +18613,47 @@
     "publisherArticleUrl": ""
   },
   {
+    "id": "534a2af22c937e2c8b8a",
+    "title": "K-Pop Group NMIXX Grooves To Popular Indian Tracks, Hints At Dream Collab With Jonita Gandhi",
+    "url": "https://www.news18.com/movies/k-pop-group-nmixx-reacts-to-popular-indian-tracks-hints-at-dream-collab-with-jonita-gandhi-aa-9210925.html",
+    "publisherArticleUrl": "https://www.news18.com/movies/k-pop-group-nmixx-reacts-to-popular-indian-tracks-hints-at-dream-collab-with-jonita-gandhi-aa-9210925.html",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef402cb4fa98c30f599d7ba463e&url=https%3a%2f%2fwww.news18.com%2fmovies%2fk-pop-group-nmixx-reacts-to-popular-indian-tracks-hints-at-dream-collab-with-jonita-gandhi-aa-9210925.html&c=16896608575317582143&mkt=ko-kr",
+    "publisherHost": "www.news18.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20festival&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef402cb4fa98c30f599d7ba463e&url=https%3a%2f%2fwww.news18.com%2fmovies%2fk-pop-group-nmixx-reacts-to-popular-indian-tracks-hints-at-dream-collab-with-jonita-gandhi-aa-9210925.html&c=16896608575317582143&mkt=ko-kr",
+        "articleUrl": "https://www.news18.com/movies/k-pop-group-nmixx-reacts-to-popular-indian-tracks-hints-at-dream-collab-with-jonita-gandhi-aa-9210925.html",
+        "host": "www.news18.com"
+      }
+    ],
+    "publishedAt": "2025-02-01T02:46:00.000Z",
+    "description": "The 6-membered girl group were highly impressed by Hrithik Roshan’s smooth dance moves, and they even compared him to Michael Jackson.",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "News18",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon festival",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "failed",
+      "publisherArticleUrl": "https://www.news18.com/movies/k-pop-group-nmixx-reacts-to-popular-indian-tracks-hints-at-dream-collab-with-jonita-gandhi-aa-9210925.html",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.news18.com/movies/k-pop-group-nmixx-reacts-to-popular-indian-tracks-hints-at-dream-collab-with-jonita-gandhi-aa-9210925.html",
+      "resolvedArticleHost": "www.news18.com",
+      "fetchedAt": "2026-11-26T00:36:05.540Z",
+      "statusCode": 403,
+      "errorCode": "forbidden"
+    }
+  },
+  {
     "id": "a711e45950c0bee68a84",
     "title": "[영상] 엔믹스, 끝없는 상큼함으로! - rnx.kr",
     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBSTWtxdnI0ZXgyYmFDZWVwRVptdGk4dEozVHd2UGNZOVlROC04Z1Rzc1A4T3AzMFJUQTRzV1JWdXFlQkx5dU9mM21JTFdTblZLOHc1RTE2UlByWGNEb001eXMxMA?oc=5",
@@ -18273,6 +18885,69 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "publisherArticleUrl": ""
+  },
+  {
+    "id": "4467d005514dbc21f8c5",
+    "title": "NMIXX Goes Viral Again At Another University Festival But Reactions Are Vastly Different",
+    "url": "https://www.koreaboo.com/news/nmixx-goes-viral-another-university-festival-reactions-vastly-different/",
+    "publisherArticleUrl": "https://www.koreaboo.com/news/nmixx-goes-viral-another-university-festival-reactions-vastly-different/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef402cb4fa98c30f599d7ba463e&url=https%3a%2f%2fwww.koreaboo.com%2fnews%2fnmixx-goes-viral-another-university-festival-reactions-vastly-different%2f&c=13024588398494750950&mkt=ko-kr",
+    "publisherHost": "www.koreaboo.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20festival&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b077ef402cb4fa98c30f599d7ba463e&url=https%3a%2f%2fwww.koreaboo.com%2fnews%2fnmixx-goes-viral-another-university-festival-reactions-vastly-different%2f&c=13024588398494750950&mkt=ko-kr",
+        "articleUrl": "https://www.koreaboo.com/news/nmixx-goes-viral-another-university-festival-reactions-vastly-different/",
+        "host": "www.koreaboo.com"
+      }
+    ],
+    "publishedAt": "2024-06-01T08:29:00.000Z",
+    "description": "They received high praise for their vocal skills, especially amidst criticism against idols for being unable to perform live. While reaction then was absolutely positive, their group’s latest viral ...",
+    "thumbnailUrl": "https://image.koreaboo.com/2024/06/170-2024-06-02T002923.979.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795716000&KeyName=kb&Signature=8ds1ywYaVJsDB8ptpwwqMyJuiP4=",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "koreaboo",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon festival",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://image.koreaboo.com/2024/06/170-2024-06-02T002923.979.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795716000&KeyName=kb&Signature=8ds1ywYaVJsDB8ptpwwqMyJuiP4=",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://image.koreaboo.com/2024/06/170-2024-06-02T002923.979.jpg?imop=Convert%2Cformat%3Djpeg%3BCompress%2Cstrength%3Dmedium&",
+        "source": "og:image:secure_url",
+        "priority": 1
+      },
+      {
+        "url": "https://image.koreaboo.com/2024/06/170-2024-06-02T002923.979.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&",
+        "source": "twitter:image",
+        "priority": 2
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.koreaboo.com/news/nmixx-goes-viral-another-university-festival-reactions-vastly-different/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.koreaboo.com/news/nmixx-goes-viral-another-university-festival-reactions-vastly-different/",
+      "resolvedArticleHost": "www.koreaboo.com",
+      "fetchedAt": "2026-11-26T00:36:05.540Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://image.koreaboo.com/2024/06/170-2024-06-02T002923.979.jpg?imop=Resize%2Cwidth%3D1230%3BConvert%2Cformat%3Djpeg&Expires=1795716000&KeyName=kb&Signature=8ds1ywYaVJsDB8ptpwwqMyJuiP4=",
+      "articleUrl": "https://www.koreaboo.com/news/nmixx-goes-viral-another-university-festival-reactions-vastly-different/",
+      "observedAt": "2026-11-26T00:36:05.540Z"
+    }
   },
   {
     "id": "2713b2f9c153b0c39d06",
@@ -18603,6 +19278,96 @@
     "candidateSource": ""
   },
   {
+    "id": "a73cad50b3459a7bad02",
+    "title": "인천해원중 '제9회 랜선 해원제' 개최 - 교육연합신문",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9FMF9TbVlYaEp5TG9Xd01JdkZxMlF2RnJVbWRIUXZOTFNQREI1Q2p2U3RPT1MtQktJb3E0SXBCX3p3elBfRlZnOVZyRmFmUXQxb2dIaTFrXzFkcGM?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "",
+    "publishedAt": "2020-12-07T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE9FMF9TbVlYaEp5TG9Xd01JdkZxMlF2RnJVbWRIUXZOTFNQREI1Q2p2U3RPT1MtQktJb3E0SXBCX3p3elBfRlZnOVZyRmFmUXQxb2dIaTFrXzFkcGM?oc=5\" target=\"_blank\">인천해원중 '제9회 랜선 해원제' 개최</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">교육연합신문</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
+    "id": "1b4bb76f76001a951946",
+    "title": "영도다리서 위안부 해원상생굿 - 한겨레",
+    "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9OQks4aG51bE1IUHZTTDFsSUgwUFo2TTc2RllYMTRLZWZPd1hBMl85MTNyUFpJYnFMYldXdVNvYloyWXVEYnUyUU16SXJFOTZVN2VCR1hLT0ZqMzdPLVdkdnRVTQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.hani.co.kr",
+    "publishedAt": "2019-10-19T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE9OQks4aG51bE1IUHZTTDFsSUgwUFo2TTc2RllYMTRLZWZPd1hBMl85MTNyUFpJYnFMYldXdVNvYloyWXVEYnUyUU16SXJFOTZVN2VCR1hLT0ZqMzdPLVdkdnRVTQ?oc=5\" target=\"_blank\">영도다리서 위안부 해원상생굿</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">한겨레</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
+    "id": "271322760954a1f18aba",
+    "title": "화성시 ‘해원학교’ 8회 어르신‘효’ 잔치 - 화성인터넷신문",
+    "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTFAtRFc3Nm5jNEM5dk5RYmdWVEwxN21VMXVIcE9CNWlIbFdUd1MxTEhPZjc4a3VseXRfeVF2Z2p1N2k?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "",
+    "publishedAt": "2015-11-04T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiQEFVX3lxTFAtRFc3Nm5jNEM5dk5RYmdWVEwxN21VMXVIcE9CNWlIbFdUd1MxTEhPZjc4a3VseXRfeVF2Z2p1N2k?oc=5\" target=\"_blank\">화성시 ‘해원학교’ 8회 어르신‘효’ 잔치</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">화성인터넷신문</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
+    "id": "27881b99117868f49949",
+    "title": "인천 해원초서 오페라 '춘희' 성황리에 공연 - 연합뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sVzlXbWxkTUg5LU5idUpadnZtalhWZ3hPSUtWX0V3NzVoYU5CNDl3aEp1NVVPT1JxdnlfTFhwZ3pkVExCZUZJemJTODdhd190Vjg4R1RzODZOUGvSAWBBVV95cUxPTmhlNnhXYU91dTVHMnF3V0tEU3QxMUJTTnhRa0JzS2gtc2cxWUFieGVIQUxRTFVONFNIUnBvRS01b2EwOTFQSFNCUTV3akprNXQwblpOcGJfelVlZ1RiR3k?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.yna.co.kr",
+    "publishedAt": "2014-09-26T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sVzlXbWxkTUg5LU5idUpadnZtalhWZ3hPSUtWX0V3NzVoYU5CNDl3aEp1NVVPT1JxdnlfTFhwZ3pkVExCZUZJemJTODdhd190Vjg4R1RzODZOUGvSAWBBVV95cUxPTmhlNnhXYU91dTVHMnF3V0tEU3QxMUJTTnhRa0JzS2gtc2cxWUFieGVIQUxRTFVONFNIUnBvRS01b2EwOTFQSFNCUTV3akprNXQwblpOcGJfelVlZ1RiR3k?oc=5\" target=\"_blank\">인천 해원초서 오페라 '춘희' 성황리에 공연</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">연합뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
+    "id": "6b5357bbcf07dd29ddda",
+    "title": "타악에서 무용, 비디오아트까지… 세 시즌에 걸친 예술적 실험을 하나의 무대로 - 아트인사이트",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9ubzhTVFFjU01GSUlZLVhmaEhsMlFRQzFILWRnblplNEZCMF9LWGhaU1o4aXlPQ25OWEQxZjNucEFoTldrT1Z2SEpNQy1UTFpxQTM2OVMzWUlxSE9Jdnl0ZUpn?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.artinsight.co.kr",
+    "publishedAt": "2026-10-29T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE9ubzhTVFFjU01GSUlZLVhmaEhsMlFRQzFILWRnblplNEZCMF9LWGhaU1o4aXlPQ25OWEQxZjNucEFoTldrT1Z2SEpNQy1UTFpxQTM2OVMzWUlxSE9Jdnl0ZUpn?oc=5\" target=\"_blank\">타악에서 무용, 비디오아트까지… 세 시즌에 걸친 예술적 실험을 하나의 무대로</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">아트인사이트</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 1
+  },
+  {
     "id": "dcd51a052ff0c411f6a3",
     "title": "‘개그콘서트’ 관객이 ‘뽀큐’ 새 막내 됐다…성대모사·랜덤댄스까지 무대 장악 - 위키트리",
     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBpV2JuTU8zTEY2TDJBVWk0SFdFWUFvd2paWFZEekNWMzhTd2xQSngwbVBsajB5c29KTjNzdTBHSm1kN2ZyeHhqTXQ3bi1QSDh3TDFIQ0VB?oc=5",
@@ -18625,6 +19390,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "7f26ef9c5dc9bd417229",
+    "title": "해남의 5월은 무대가 된다…광장엔 음악, 유적지엔 달빛 - 지이코노미",
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE52dEpfSU9ybVVCRDRBNkJiclRyR0t3MDVieUl1M21uWHJrZ3hHSVBEdjFpZUd4VlgyQlFxUm9KTFM1U09VUlc0dVJ1aUU1SEgwM2M0WGo4UElwcGl2ZjZ3a2lONl90M3c?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.geconomy.co.kr",
+    "publishedAt": "2026-05-09T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE52dEpfSU9ybVVCRDRBNkJiclRyR0t3MDVieUl1M21uWHJrZ3hHSVBEdjFpZUd4VlgyQlFxUm9KTFM1U09VUlc0dVJ1aUU1SEgwM2M0WGo4UElwcGl2ZjZ3a2lONl90M3c?oc=5\" target=\"_blank\">해남의 5월은 무대가 된다…광장엔 음악, 유적지엔 달빛</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">지이코노미</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 1
   },
   {
     "id": "8c6004031f1c99ed935b",
@@ -18793,6 +19576,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "ae716ccb4a4065a52f20",
+    "title": "김지원, \"행복한 시간\"...2년 만의 팬미팅 성료 - 아이즈(ize)",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8weFNocEh2REx5LTBBS2JKdVdxNEVlUUd4WFQyU25IR2pwYkdyX2VKa2tGcE10cmhuLUtXVkxpUDRUQ0hQTUFyMWNsRS1Yd2lIbmRRejk4c3VGV2wwb3NvNDd2OTA3UQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.ize.co.kr",
+    "publishedAt": "2026-10-27T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE8weFNocEh2REx5LTBBS2JKdVdxNEVlUUd4WFQyU25IR2pwYkdyX2VKa2tGcE10cmhuLUtXVkxpUDRUQ0hQTUFyMWNsRS1Yd2lIbmRRejk4c3VGV2wwb3NvNDd2OTA3UQ?oc=5\" target=\"_blank\">김지원, \"행복한 시간\"...2년 만의 팬미팅 성료</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">아이즈(ize)</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 팬미팅 기사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 0
   },
   {
     "id": "16d724a7443c61d1eeec",
@@ -19052,6 +19853,24 @@
     "candidateSource": ""
   },
   {
+    "id": "0c016e6fcbeb720e7eb5",
+    "title": "‘부산에서 인기폭발’ OK저축은행, 시즌 종료 팬미팅 - 문화일보",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBSN1JQQktGWVhPU0xLVGhsVm1kVERKSkdtT1VCZjNsNkhvbTY1OElzTy1peWhxY2RvM0FnRllLM0xJS29WSFVhUVNnZGdWcXdK?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.munhwa.com",
+    "publishedAt": "2026-03-31T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFBSN1JQQktGWVhPU0xLVGhsVm1kVERKSkdtT1VCZjNsNkhvbTY1OElzTy1peWhxY2RvM0FnRllLM0xJS29WSFVhUVNnZGdWcXdK?oc=5\" target=\"_blank\">‘부산에서 인기폭발’ OK저축은행, 시즌 종료 팬미팅</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">문화일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 팬미팅 기사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
     "id": "32eccb56c88abf6fde89",
     "title": "라바리니 감독 “한국 女배구 언제나 응원할 것” - 문화일보",
     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBJSEpIakFjSl9aWHhBRkVhbjUzem0wbWlnRHdOczlpeDBibkx6ZkJsLVhWV2N4OVE2MDdCTjRnakhwLWx5dWQ3Rk9KNHFEa0Qw?oc=5",
@@ -19091,6 +19910,60 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "publisherArticleUrl": ""
+  },
+  {
+    "id": "ce8fa6e130b84cb53349",
+    "title": "38년간 2249승… ‘말’ 동무 박태종 고별전 - 문화일보",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE13c19RZ2tieWUxNUticU16VkxVN1VDcUVFWlFVeDJ3SDlrQTU2N1NpV1pHc0RTay1sSXhzcFl3MldGQXZYU0hpWnFSeGduenRi?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.munhwa.com",
+    "publishedAt": "2025-12-19T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTE13c19RZ2tieWUxNUticU16VkxVN1VDcUVFWlFVeDJ3SDlrQTU2N1NpV1pHc0RTay1sSXhzcFl3MldGQXZYU0hpWnFSeGduenRi?oc=5\" target=\"_blank\">38년간 2249승… ‘말’ 동무 박태종 고별전</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">문화일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 팬미팅 기사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
+    "id": "fcd7ee2ce8eaf24a76e1",
+    "title": "제주도, '세계 평화의 섬 지정 20주년 기념 행사' 개최 - 뉴시스",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE93YmJka1ZER08xZkV1SENVVF9EejNpX09zUk1CUWY3czZoLUd2NkNjakd2ajRLNDJyZEhLYWtBMEZXYzkyMW5FY1h5WDJ2WjFjLXhMd1AzVl9CY3VQZXd3NNIBeEFVX3lxTFA0cWxrUDMydE5hMy1CVFlyTTEtZkZxVG82V3ZRVHVTQzlKZDlvSWdwOXZFa0tKTFd4SW11TWZ2VzNqSHdjOS1vcTVFbEZ3bnl1d05ObEFta2JUV0g3d0hsTnA4ZW45WUF6cmt3T0tLQm1nT292emFfUA?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.newsis.com",
+    "publishedAt": "2025-11-03T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE93YmJka1ZER08xZkV1SENVVF9EejNpX09zUk1CUWY3czZoLUd2NkNjakd2ajRLNDJyZEhLYWtBMEZXYzkyMW5FY1h5WDJ2WjFjLXhMd1AzVl9CY3VQZXd3NNIBeEFVX3lxTFA0cWxrUDMydE5hMy1CVFlyTTEtZkZxVG82V3ZRVHVTQzlKZDlvSWdwOXZFa0tKTFd4SW11TWZ2VzNqSHdjOS1vcTVFbEZ3bnl1d05ObEFta2JUV0g3d0hsTnA4ZW45WUF6cmt3T0tLQm1nT292emFfUA?oc=5\" target=\"_blank\">제주도, '세계 평화의 섬 지정 20주년 기념 행사' 개최</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴시스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
+    "id": "ab466b6417b230957ed9",
+    "title": "‘김연경도 온다’ 흥국생명, 2일 광화문서 팬미팅 - 문화일보",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5fVlBqZ1lYdFhrYkhSamh4amc3c0wzZlp4dnZyYjM3cnUwYno4TUt6ZXdYWGZ1VXNPRndUNVdQdFBnQ2ttVTlvQ1pyQzZjMy1i?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.munhwa.com",
+    "publishedAt": "2025-08-01T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTE5fVlBqZ1lYdFhrYkhSamh4amc3c0wzZlp4dnZyYjM3cnUwYno4TUt6ZXdYWGZ1VXNPRndUNVdQdFBnQ2ttVTlvQ1pyQzZjMy1i?oc=5\" target=\"_blank\">‘김연경도 온다’ 흥국생명, 2일 광화문서 팬미팅</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">문화일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 팬미팅 기사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 0
   },
   {
     "id": "1e1dee41fda134c35038",
@@ -19213,6 +20086,24 @@
     "candidateSource": ""
   },
   {
+    "id": "15fdda4412d3d4289cf4",
+    "title": "예술공장 두레, 위안부 기림의 날 '소녀, 살아지다' 공연 - 충북일보",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1NWEJGMGxDenByN1RuNF9NMGNKVk5pWDZRbDY1VWlLZ0wtVUktSFpoU0RNSThKeW9keDhoelNBLTVfMGkzSGcyMDUxMDNSSEFjQVQzZ043d2lUY0t2dzA0dXl3?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.inews365.com",
+    "publishedAt": "2024-08-12T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1NWEJGMGxDenByN1RuNF9NMGNKVk5pWDZRbDY1VWlLZ0wtVUktSFpoU0RNSThKeW9keDhoelNBLTVfMGkzSGcyMDUxMDNSSEFjQVQzZ043d2lUY0t2dzA0dXl3?oc=5\" target=\"_blank\">예술공장 두레, 위안부 기림의 날 '소녀, 살아지다' 공연</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">충북일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 공연 행사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
     "id": "8aeeea5a94861f5653ca",
     "title": "이용진 \"'과몰입 인생사', 호기심 있게 임할 수 있는 프로‥영광\" - iMBC 연예",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5kc0JpU042cjE4NWYybW5abEJFRF8xU3F5bDZjc1JKblJSelRTSnhpc1VGdzF3c1I0anhxS2s3bWFEYkpkU1hxdFhEc29qU1l5cVlnWW94VGlMd1gzNzRfNA?oc=5",
@@ -19283,6 +20174,42 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "422ba851bfb8edabbd54",
+    "title": "\"장난일 뿐\"…워너원 박지훈·박우진, 기내서 찍힌 영상 오해 산 사연 - www.xportsnews.com",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9QaDVleUdRVkRKWHBWNkNRTDAxUXpqM04tSk42cDFld2FyMl9vemc5UHJKZzMtLW9OSXFUczhGRG5fMGsyQTVuQThJMFlwM2paLVZr?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.xportsnews.com",
+    "publishedAt": "2018-01-15T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE9QaDVleUdRVkRKWHBWNkNRTDAxUXpqM04tSk42cDFld2FyMl9vemc5UHJKZzMtLW9OSXFUczhGRG5fMGsyQTVuQThJMFlwM2paLVZr?oc=5\" target=\"_blank\">\"장난일 뿐\"…워너원 박지훈·박우진, 기내서 찍힌 영상 오해 산 사연</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">www.xportsnews.com</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 팬미팅 기사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
+    "id": "444a6c90ab2f901be790",
+    "title": "[엑's 이슈] 워너원 박지훈·박우진, 괜히 오해받은 우정…문제는 '사생' - www.xportsnews.com",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE8tZW4yczRWSHJJUzBfNFhvZlhaaV93Tm10VkU1SlV4emNmNzBfODZmbEhTc05yTjFnaHNibWhXT3pIdElNRHpMamZvUWdWLUJKR1FV?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.xportsnews.com",
+    "publishedAt": "2018-01-15T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE8tZW4yczRWSHJJUzBfNFhvZlhaaV93Tm10VkU1SlV4emNmNzBfODZmbEhTc05yTjFnaHNibWhXT3pIdElNRHpMamZvUWdWLUJKR1FV?oc=5\" target=\"_blank\">[엑's 이슈] 워너원 박지훈·박우진, 괜히 오해받은 우정…문제는 '사생'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">www.xportsnews.com</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 팬미팅 기사",
+    "discoveredAt": "2026-11-26T00:36:04.149Z",
+    "status": "candidate",
+    "relevanceScore": 0
   },
   {
     "id": "ec8625ba974a9f794f0c",
