@@ -325,3 +325,11 @@ For each substantial update include: changed paths; planned vs implemented items
 - Current review state: 76 verified Haewon article candidates, zero committed human labels. The queue controls improve review navigation but do not themselves create review evidence.
 - Require actual browser/device QA before claiming mobile usability. Distinguish deployment success from visual, keyboard and tap-target verification.
 - Pack 5 freshness remains exploratory; no query promotion or pruning until repeated packs and human-reviewed relevance evidence exist.
+
+
+## 2026-11-26 — Continuous review navigation acceptance criteria
+- When the user completes the seventh review dimension in pending-only mode, the completed row is removed and focus/scroll advances to the next pending article.
+- Navigation follows archive order and wraps to the first remaining pending article; an empty queue announces completion.
+- The explicit **다음 미검수 기사** control uses the same focus helper.
+- Add regression tests for ordering/wraparound/no-pending state. Do not claim real mobile QA from source inspection or CI.
+- Keep labels localStorage-only and manual JSON import/export. No automatic transfer or backend.
