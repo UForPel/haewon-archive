@@ -766,3 +766,13 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - PR #44 adds 44px minimum review control targets, narrow-screen layout, visible keyboard focus, transactional localStorage writes, and clearer JSON import/export success/failure messages. Imports remain schema-validated and browser-local; no automatic upload.
 - PR CI #48 passed 195/195 tests, zero failures, and archive validation (856 candidates, 20 videos, six query metrics, zero human labels, 174 schema-valid run logs). PR #44 merge and subsequent Production/Pages verification pending at this checkpoint.
 - Real Android/mobile visual and touch QA remains unverified.
+
+
+## 2026-11-26 — PR #44 and Production #603 verified
+- PR #44 merged as `a81bbdbded2841aa9c45beaa74c5c98b22ae7891`; PR CI #51 (`45753687344`) passed 195/195 tests, 0 failures, and archive validation.
+- Production #603 (`45753737275`) completed successfully on merge SHA `a81bbdbded2841aa9c45beaa74c5c98b22ae7891`: tests, collection, validation, data commit, Pages artifact upload and Pages deployment all succeeded.
+- Generated data commit `7753a02be1ad512a44348b67e483ee75038c6b7a`. Pages artifact `15086806938`, 568,237 bytes, SHA-256 `4c8191bd6feb35c6b183cec17297922e265f9b3b0e9e166373031a2b0591571b`; deployment created for merge SHA.
+- Production data: 856 candidates (669 articles / 187 videos), 76 verified Haewon articles; 352 assigned thumbnails, 504 missing, 80 unique thumbnail URLs. The 273 legacy shared-image assignments remain unchanged.
+- News run: 74 fetched / 67 unique / 2 added; Google and Bing 6/6 queries each. Google RSS 32 items / 0 explicit publisher article URLs / 0 image signals; Bing 42 items / 42 explicit publisher URLs / 0 image signals. Thumbnail enrichment attempted 0 and assigned 0.
+- Review labels remain 0; real Android/mobile viewport, touch and visual QA remains outstanding. No browser automation dependency was added.
+- Latest main after data commit: `7753a02be1ad512a44348b67e483ee75038c6b7a`; no open PRs.
