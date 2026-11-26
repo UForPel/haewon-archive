@@ -362,3 +362,9 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Thumbnail review queue visibility change does not alter sources, RSS permissions, collection schedule, query pack, metadata fetch, retries or URL provenance.
 - Production #608 baseline: Google RSS 71, Bing RSS 40; 2 news additions; no thumbnail enrichment attempt.
 - Preserve all 273 legacy shared-image assignments. No new RSS (including SBS/Yonhap), wrapper decoding, access bypass, auto-labeling or automatic review upload.
+
+
+## 2026-11-26 — Production #609 collection outcome
+- Production #609 completed successfully; 15 YouTube candidates were duplicates (0 accepted); Google News RSS returned 71 items and Bing News RSS 43; archive validation passed.
+- PR #52 is UI-only and does not change collection sources, RSS permissions, query pack, schedule, metadata policy, retries or URL provenance.
+- Preserve all 273 legacy shared-image assignments. Do not add SBS/Yonhap or other new RSS sources without explicit permission. No wrapper decoding, access bypass, auto-labeling or automatic review upload.
