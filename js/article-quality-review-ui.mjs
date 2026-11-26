@@ -1,5 +1,5 @@
 import { classifyDiscoveryCategories } from './discovery-kind.mjs';
-import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, createArticleReviewExport, mergeArticleReviewLabels, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete, getNextPendingArticle } from './article-review.mjs';
+import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, createArticleReviewExport, mergeArticleReviewLabels, persistArticleReviewLabels, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete, getNextPendingArticle } from './article-review.mjs';
 
 const host = document.querySelector('#article-quality-review');
 if (host) {
@@ -60,15 +60,14 @@ if (host) {
   body.append(intro, progress, actions, list); details.append(summary, body); host.append(details);
   let articles = [];
   function persistLabels(nextLabels, successMessage) {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(nextLabels));
-      labels = nextLabels;
-      progress.textContent = successMessage;
-      return true;
-    } catch {
+    const result = persistArticleReviewLabels(localStorage, STORAGE_KEY, labels, nextLabels);
+    if (!result.saved) {
       progress.textContent = '브라우저 저장 공간에 기록하지 못했습니다. 기존 검수 기록은 유지됩니다. JSON 내보내기로 백업한 뒤 다시 시도해 주세요.';
       return false;
     }
+    labels = result.labels;
+    progress.textContent = successMessage;
+    return true;
   }
   function focusNextPendingArticle(afterArticleId = null) {
     const next = getNextPendingArticle(articles, labels, afterArticleId);
