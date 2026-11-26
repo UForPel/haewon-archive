@@ -19,7 +19,7 @@
   },
   "evidence": {
     "cumulativeDiscoveryCandidates": 856,
-    "currentRunCandidates": 67,
+    "currentRunCandidates": 94,
     "uniqueVideoRecords": 20,
     "queryYield": [
       {
@@ -36,7 +36,7 @@
       },
       {
         "query": "엔믹스 해원 활동 소식",
-        "candidates": 21
+        "candidates": 48
       },
       {
         "query": "Haewon radio appearance",

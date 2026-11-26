@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T05:05:34.052Z",
+  "collectedAt": "2026-11-26T05:28:43.601Z",
   "searchPack": 5,
   "queries": [
     {
@@ -28,8 +28,8 @@
       "datedCandidates": 13,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1606.1,
-      "p90PublicationLagHours": 25115.7
+      "medianPublicationLagHours": 1606.5,
+      "p90PublicationLagHours": 25116.1
     },
     {
       "query": "오해원 해외 활동",
@@ -56,8 +56,8 @@
       "datedCandidates": 16,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 7420.7,
-      "p90PublicationLagHours": 26649.6
+      "medianPublicationLagHours": 7421,
+      "p90PublicationLagHours": 26650
     },
     {
       "query": "Haewon international interview",
@@ -84,36 +84,36 @@
       "datedCandidates": 1,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 15354.7,
-      "p90PublicationLagHours": 15354.7
+      "medianPublicationLagHours": 15355,
+      "p90PublicationLagHours": 15355
     },
     {
       "query": "엔믹스 해원 활동 소식",
-      "candidates": 21,
+      "candidates": 48,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 5,
+        "within30Days": 8,
         "within90Days": 1,
-        "olderThan90Days": 15,
+        "olderThan90Days": 39,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 24
+        "within30DaysRate": 17
       },
-      "uniqueCandidates": 21,
+      "uniqueCandidates": 48,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 15,
-      "titleKeywordMatchRate": 71,
-      "explicitPublisherUrls": 12,
-      "explicitPublisherUrlRate": 57,
+      "titleKeywordMatches": 28,
+      "titleKeywordMatchRate": 58,
+      "explicitPublisherUrls": 9,
+      "explicitPublisherUrlRate": 19,
       "crossQueryDuplicateUrls": 3,
-      "datedCandidates": 21,
+      "datedCandidates": 48,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 9433.9,
-      "p90PublicationLagHours": 18118.1
+      "medianPublicationLagHours": 17541.5,
+      "p90PublicationLagHours": 34749.5
     },
     {
       "query": "Haewon radio appearance",
@@ -140,8 +140,8 @@
       "datedCandidates": 2,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1209.4,
-      "p90PublicationLagHours": 1526.8
+      "medianPublicationLagHours": 1209.8,
+      "p90PublicationLagHours": 1527.2
     },
     {
       "query": "NMIXX Haewon television",
@@ -168,22 +168,22 @@
       "datedCandidates": 14,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 12261,
-      "p90PublicationLagHours": 21144.6
+      "medianPublicationLagHours": 12261.4,
+      "p90PublicationLagHours": 21145
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
   "bingSuccessfulQueries": 6,
-  "bingCandidates": 41,
+  "bingCandidates": 38,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 67,
-  "uniqueIncoming": 60,
+  "fetched": 94,
+  "uniqueIncoming": 87,
   "added": 2,
   "rssImageSignals": {
-    "items": 26,
-    "sourceUrlItems": 26,
+    "items": 56,
+    "sourceUrlItems": 54,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -196,9 +196,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 41,
+    "items": 38,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 41,
+    "publisherArticleUrlItems": 38,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -223,8 +223,8 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 67,
-    "after": 59,
+    "before": 94,
+    "after": 86,
     "collapsed": 8,
     "method": "normalized exact headline first; canonical URL fallback"
   },
