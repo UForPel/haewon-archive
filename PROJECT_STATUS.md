@@ -716,3 +716,10 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Implemented on branch `feat/review-queue-mobile-20261126`: pure queue helpers, pending-only filter, next-pending navigation, and automatic removal from the pending view when all seven dimensions are complete. Uncertain is a valid explicit judgment and counts as reviewed, not as positive relevance.
 - PR CI, archive validation, merge and post-merge Production/Pages verification pending. Mobile visual/tap-target QA remains unverified until a real browser check.
 - No candidate deletion, RSS expansion, external contact, paid dependency, secret transfer or change to the 273 legacy thumbnail group.
+
+
+## 2026-11-26 — Review queue PR merged; Production verification running
+- PR #42 merged successfully as `753b4323c4712c7a5580d336b30240894cca73c0`.
+- Genuine PR CI #43 (`45751819231`) passed 192/192 tests, zero failures; archive validation passed with 818 discovery candidates, 20 official video records, 6 query metrics, 0 relevance-review labels and 172 schema-valid run logs.
+- Production run #601 (`45751857291`) was triggered by the code merge and is currently in progress. Collection/data commit/Pages deployment are not yet confirmed.
+- Mobile real-device QA remains unverified.
