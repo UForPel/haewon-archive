@@ -1,6 +1,25 @@
-import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText } from './discovery-kind.mjs';
+import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText, filterUnresolvedVideoCandidates } from './discovery-kind.mjs';
 import { createThumbnailReviewKey, summarizeThumbnailReviews, validateThumbnailReviewExport, mergeThumbnailReviewLabels, getThumbnailReviewCandidates, findNextUnreviewedThumbnail, groupRepeatedThumbnailAssignments, summarizeRepeatedThumbnailGroup, findNextUnreviewedInRepeatedGroup } from './thumbnail-review.mjs';
 
+function getDiscoveryTimestamp(item) {
+ for (const value of [item?.publishedAt, item?.discoveredAt]) {
+  const timestamp = Date.parse(value || '');
+  if (Number.isFinite(timestamp)) return timestamp;
+ }
+ return Number.NaN;
+}
+
+export function sortDiscoveryItems(items=[],mode='date') {
+ return items.map((item,index)=>({item,index})).sort((a,b)=>{
+  const aDate=getDiscoveryTimestamp(a.item),bDate=getDiscoveryTimestamp(b.item);
+  const aValid=Number.isFinite(aDate),bValid=Number.isFinite(bDate);
+  if(mode==='relevance'){const score=Number(b.item.relevanceScore||0)-Number(a.item.relevanceScore||0);if(score)return score;}
+  if(aValid!==bValid)return aValid?-1:1;
+  if(aValid&&aDate!==bDate)return bDate-aDate;
+  if(mode!=='relevance'){const score=Number(b.item.relevanceScore||0)-Number(a.item.relevanceScore||0);if(score)return score;}
+  return a.index-b.index;
+ }).map(entry=>entry.item);
+}
 export function filterDiscoveryItems(items,query='') {
  const q=String(query||'').trim().toLowerCase();
  if(!q)return items;
@@ -99,7 +118,11 @@ if(list&&count){
   const next=document.createElement('button');next.type='button';next.textContent='다음';next.disabled=page>=pageCount;next.addEventListener('click',()=>{page++;render();});
   pagination.append(prev,label,next);
  };
- const categoryBar=document.querySelector('#discovery-categories');
+ const videoDiscoveryList=document.querySelector('#video-discovery-list');
+  const videoDiscoveryCount=document.querySelector('#video-discovery-count');
+  const sortSelect=document.querySelector('#discovery-sort');
+  let selectedSort=sortSelect?.value||'date';
+  const categoryBar=document.querySelector('#discovery-categories');
  const relevanceBar=document.querySelector('#discovery-relevance');
  let selectedRelevance='verified-haewon';
  let unverifiedRepeatedThumbnailUrls=new Set();
@@ -109,7 +132,7 @@ if(list&&count){
  const categoryLabels={all:'전체 분류',news:'일반 뉴스',official:'공식',interview:'인터뷰·방송',performance:'무대·공연',event:'행사·활동',brand:'광고·화보'};
  const getVisibleItems=()=>{
   const q=search?.value||'';
-  return groupDiscoveryDuplicates(filterDiscoveryRelevance(filterDiscoveryItems(filterArticleCandidates(allItems),q),selectedRelevance)).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)).slice().sort((a,b)=>(Number(b.relevanceScore||0)-Number(a.relevanceScore||0))||(b.publishedAt||b.discoveredAt||'').localeCompare(a.publishedAt||a.discoveredAt||''));
+  return sortDiscoveryItems(groupDiscoveryDuplicates(filterDiscoveryRelevance(filterDiscoveryItems(filterArticleCandidates(allItems),q),selectedRelevance),selectedSort).filter(item=>selectedCategory==='all'||categoryOf(item).includes(selectedCategory)),selectedSort);
  };
  const renderCategories=()=>{
   if(!categoryBar)return;
@@ -130,6 +153,22 @@ if(list&&count){
    button.addEventListener('click',()=>{selectedRelevance=key;page=1;renderRelevanceFilters();render();});
    relevanceBar.append(button);
   });
+ };
+ const renderVideoDiscoveryCandidates=()=>{
+  if(!videoDiscoveryList)return;
+  const q=search?.value||'';
+  const candidates=sortDiscoveryItems(groupDiscoveryDuplicates(filterDiscoveryItems(filterUnresolvedVideoCandidates(allItems),q),'date'),'date');
+  if(videoDiscoveryCount)videoDiscoveryCount.textContent=candidates.length+'개';
+  videoDiscoveryList.replaceChildren();
+  candidates.slice(0,12).forEach(item=>{
+   const row=document.createElement('article');row.className='video-discovery-candidate';
+   const title=document.createElement('a');title.href=item.url;title.target='_blank';title.rel='noopener noreferrer';title.textContent=cleanDiscoveryText(item.title)||'제목 미상';
+   const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):' · 날짜 미확인')+' · 원본 YouTube 주소 미확인';
+   const note=document.createElement('p');note.className='photo-description';note.textContent='발견 후보 링크만 확인된 상태입니다. 원본 영상 주소가 명시적으로 확인되기 전에는 영상 아카이브에 등록하지 않습니다.';
+   row.append(title,meta,note);videoDiscoveryList.append(row);
+  });
+  if(!candidates.length){const empty=document.createElement('p');empty.className='photo-meta';empty.textContent='별도 확인이 필요한 영상 후보가 없습니다.';videoDiscoveryList.append(empty);}
+  if(candidates.length>12){const more=document.createElement('p');more.className='photo-meta';more.textContent='최근 12개 표시 · 전체 '+candidates.length+'개 후보';videoDiscoveryList.append(more);}
  };
  const render=()=>{
   const items=getVisibleItems();
@@ -164,6 +203,7 @@ if(list&&count){
    card.append(details);list.append(card);
   });
   renderPagination(pageCount);
+  renderVideoDiscoveryCandidates();
   updateReviewSummary();
   if(!items.length){const empty=document.createElement('p');empty.className='empty';empty.textContent=allItems.length?'검색 결과가 없습니다. 다른 검색어를 입력해 보세요.':'자동 발견 후보가 아직 없습니다.';list.append(empty);}
  };
@@ -182,6 +222,7 @@ if(list&&count){
  renderCategories();
  renderRelevanceFilters();
  if(search)search.addEventListener('input',()=>{page=1;render();});
+  if(sortSelect)sortSelect.addEventListener('change',()=>{selectedSort=sortSelect.value==='relevance'?'relevance':'date';page=1;render();});
  fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
   allItems=Array.isArray(items)?items:[];
   const imageGroups=new Map();
@@ -205,7 +246,7 @@ async function renderQualitySummary(){
  const row=document.createElement('p');row.textContent='썸네일 보완 · 후보 '+thumb.attempted+'건 · 이미지 URL 발견 '+thumb.found+'건 · 실제 신규 배정 '+thumb.assigned+'건 · 중복 거부 '+thumb.duplicateRejected+'건 · Google News 래퍼 메타 '+(thumb.wrapperOnly||0)+'건 · 이미지 없음 '+thumb.missing+'건 · 오류 '+thumb.failed+'건';panelBody.append(row);
  const provenanceMetrics=metrics.thumbnailProvenance||{};const provenance=provenanceMetrics.assignedBySource||{};const provenanceRow=document.createElement('p');provenanceRow.className='photo-meta';provenanceRow.textContent='썸네일 출처 검증: 배정 '+(provenanceMetrics.assignedTotal||0)+'건 · 출처 미확인 레거시 '+(provenanceMetrics.unverifiedLegacyAssignments||0)+'건 · 썸네일 없음 '+(provenanceMetrics.missingThumbnailCount||0)+'건 · 출처 확인률 '+(provenanceMetrics.sourceProvenanceCoverage===null||provenanceMetrics.sourceProvenanceCoverage===undefined?'미측정':provenanceMetrics.sourceProvenanceCoverage+'%')+' · 출처별 '+Object.entries(provenance).map(([source,n])=>source+' '+n+'건').join(' · ');panelBody.append(provenanceRow);
  const attempts=thumb.results||[];if(attempts.length){const detail=document.createElement('p');detail.className='photo-meta';detail.textContent='최근 보강 출처 결과: '+attempts.map(result=>{const candidate=result.candidate||result.candidates?.[0];let hostName='';try{hostName=candidate?.url?new URL(candidate.url).hostname:'';}catch{}return (result.status||'unknown')+(candidate?' · '+candidate.source+' ('+hostName+')':'');}).join(' / ');panelBody.append(detail);}
-} const candidateCompare=metrics.thumbnailCandidateComparison;if(candidateCompare){const panel=document.createElement('section');panel.className='photo-policy';panel.setAttribute('aria-label','기사별 이미지 후보 비교');const title=document.createElement('strong');title.textContent='기사 단위 RSS / OG·Twitter 이미지 후보 비교';panel.append(title);const summary=document.createElement('p');summary.textContent='비교 기사 '+candidateCompare.articlesCompared+' · RSS만 '+candidateCompare.rssOnly+' · 메타만 '+candidateCompare.metaOnly+' · 양쪽 '+candidateCompare.bothSources+' · 동일 URL '+candidateCompare.articlesWithSharedUrl+' · 메타 발견 '+candidateCompare.metaFound+' · 신규 배정 '+candidateCompare.metaAssigned+' · 발견 대비 배정 '+(candidateCompare.assignmentRate===null?'미측정':candidateCompare.assignmentRate+'%');panel.append(summary);for(const [source,n] of Object.entries(candidateCompare.sourceCounts||{})){const row=document.createElement('p');row.className='photo-meta';row.textContent='후보 출처 '+source+' · '+n+'건';panel.append(row);}for(const hostRow of (candidateCompare.hostCounts||[]).slice(0,5)){const row=document.createElement('p');row.className='photo-meta';row.textContent='후보 호스트 '+hostRow.host+' · '+hostRow.count+'건';panel.append(row);}panelBody.append(panel);}const review=metrics.thumbnailReview;if(review){const reviewRow=document.createElement('p');reviewRow.className='photo-meta';reviewRow.textContent='반복 썸네일 재검토 목록 '+review.groups.length+'개 그룹 · 자동 삭제/교체 없음';panelBody.append(reviewRow);for(const group of review.groups.slice(0,3)){const details=document.createElement('details');details.className='photo-policy';const summary=document.createElement('summary');summary.textContent='검토 필요 · '+group.count+'건 반복 URL · 기사 근거 '+group.records.length+'개';details.append(summary);const imageLink=document.createElement('a');imageLink.href=group.url;imageLink.target='_blank';imageLink.rel='noopener noreferrer';imageLink.textContent='현재 썸네일 URL 열기';details.append(imageLink);const list=document.createElement('ul');for(const record of group.records.slice(0,30)){const li=document.createElement('li');const link=document.createElement('a');link.href=record.articleUrl;link.target='_blank';link.rel='noopener noreferrer';link.textContent=record.title||record.id;li.append(link);const source=document.createElement('span');source.className='photo-meta';source.textContent=' · 썸네일 출처 '+(record.thumbnailSource||'unknown');li.append(source);list.append(li);}details.append(list);panelBody.append(details);}}
+} const candidateCompare=metrics.thumbnailCandidateComparison;if(candidateCompare){const panel=document.createElement('section');panel.className='photo-policy';panel.setAttribute('aria-label','기사별 이미지 후보 비교');const title=document.createElement('strong');title.textContent='기사 단위 RSS / OG·Twitter 이미지 후보 비교';panel.append(title);const summary=document.createElement('p');summary.textContent='비교 기사 '+candidateCompare.articlesCompared+' · RSS만 '+candidateCompare.rssOnly+' · 메타만 '+candidateCompare.metaOnly+' · 양쪽 '+candidateCompare.bothSources+' · RSS/메타 동일 URL '+candidateCompare.articlesWithSharedUrl;panel.append(summary);const persisted=document.createElement('p');persisted.textContent='저장된 메타 후보 '+candidateCompare.persistedMetaCandidateRecords+'건 · 저장된 HTTPS 썸네일 '+candidateCompare.persistedThumbnailRecords+'건 · 메타 후보 URL 일치 '+candidateCompare.persistedThumbnailMatchesMetaCandidate+'건 · 불일치 '+candidateCompare.persistedThumbnailDoesNotMatchMetaCandidate+'건';panel.append(persisted);const latest=document.createElement('p');latest.textContent='최신 실행 메타 보강 · 시도 '+candidateCompare.latestRunAttempted+'건 · 후보 발견 '+candidateCompare.latestRunFound+'건 · 신규 배정 '+candidateCompare.latestRunAssigned+'건 · 발견 후 배정률 '+(candidateCompare.latestRunAssignmentRate===null?'미측정':candidateCompare.latestRunAssignmentRate+'%');panel.append(latest);for(const [source,n] of Object.entries(candidateCompare.sourceCounts||{})){const row=document.createElement('p');row.className='photo-meta';row.textContent='후보 출처 '+source+' · '+n+'건';panel.append(row);}for(const hostRow of (candidateCompare.hostCounts||[]).slice(0,5)){const row=document.createElement('p');row.className='photo-meta';row.textContent='후보 호스트 '+hostRow.host+' · '+hostRow.count+'건';panel.append(row);}panelBody.append(panel);}const review=metrics.thumbnailReview;if(review){const reviewRow=document.createElement('p');reviewRow.className='photo-meta';reviewRow.textContent='반복 썸네일 재검토 목록 '+review.groups.length+'개 그룹 · 자동 삭제/교체 없음';panelBody.append(reviewRow);for(const group of review.groups.slice(0,3)){const details=document.createElement('details');details.className='photo-policy';const summary=document.createElement('summary');summary.textContent='검토 필요 · '+group.count+'건 반복 URL · 기사 근거 '+group.records.length+'개';details.append(summary);const imageLink=document.createElement('a');imageLink.href=group.url;imageLink.target='_blank';imageLink.rel='noopener noreferrer';imageLink.textContent='현재 썸네일 URL 열기';details.append(imageLink);const list=document.createElement('ul');for(const record of group.records.slice(0,30)){const li=document.createElement('li');const link=document.createElement('a');link.href=record.articleUrl;link.target='_blank';link.rel='noopener noreferrer';link.textContent=record.title||record.id;li.append(link);const source=document.createElement('span');source.className='photo-meta';source.textContent=' · 썸네일 출처 '+(record.thumbnailSource||'unknown');li.append(source);list.append(li);}details.append(list);panelBody.append(details);}}
  const comparison=metrics.collection.deduplicationComparison; if(comparison){const row=document.createElement('p');row.textContent='중복 병합 전후: '+comparison.before+'개 → '+comparison.after+'개 · '+comparison.collapsed+'개 축약 (제목 정규화 우선)';panelBody.append(row);}
  const articleUrlMetrics=metrics.articleUrlProvenance;if(articleUrlMetrics){const direct=Number(articleUrlMetrics.itemsWithPublisherArticleUrl||0),total=Number(articleUrlMetrics.totalItems||0),row=document.createElement('p');row.className='photo-meta';row.textContent='원문 URL 검증: 공개 메타데이터에 명시된 HTTPS 기사 URL '+direct+'/'+total+'건 ('+(total?Math.round(direct/total*100):0)+'%) · 미확보 '+Math.max(0,total-direct)+'건 · 후보 출처 '+Object.entries(articleUrlMetrics.candidateSourceCounts||{}).map(([source,n])=>source+' '+n+'건').join(' · ')+' · 래퍼 전용 메타데이터 호스트 '+Object.entries(articleUrlMetrics.wrapperOnlyMetadataHosts||{}).map(([host,n])=>host+' '+n+'건').join(', ');panelBody.append(row);}
  for(const source of metrics.sources||[]){const row=document.createElement('p');row.className='photo-meta';row.textContent=source.source+' · '+source.items+'건 · 발견 링크 '+source.urlCoverage+'% · 원문 기사 URL '+(source.publisherArticleUrlCoverage??0)+'% · 썸네일 '+source.thumbnailCoverage+'% · 날짜 '+source.dateCoverage+'%';panelBody.append(row);}

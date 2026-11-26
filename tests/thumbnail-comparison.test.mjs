@@ -13,3 +13,45 @@ test('review list is non-destructive and keeps source/article evidence',()=>{
 test('ignores non-HTTPS and malformed candidates',()=>{
  const report=compareThumbnailCandidates([{id:'x',thumbnailCandidates:[{url:'http://bad.test/a',source:'media:thumbnail'}]}],[{id:'x',candidates:[{url:'bad',source:'og:image'}]}]);assert.equal(report.articlesCompared,0);
 });
+
+test('candidate comparison distinguishes persisted thumbnail matches from latest-run assignments',()=>{
+ const report=compareThumbnailCandidates([{
+  id:'persisted',title:'Persisted image',thumbnailUrl:'https://img.test/a.jpg',
+  thumbnailMetaCandidates:[{url:'https://img.test/a.jpg',source:'og:image'}]
+ }],[]);
+ assert.equal(report.metaFound,1);
+ assert.equal(report.metaAssigned,0);
+ assert.equal(report.latestRunFound,0);
+ assert.equal(report.latestRunAssignmentRate,null);
+ assert.equal(report.persistedMetaCandidateRecords,1);
+ assert.equal(report.persistedThumbnailRecords,1);
+ assert.equal(report.persistedThumbnailMatchesMetaCandidate,1);
+ assert.equal(report.persistedThumbnailDoesNotMatchMetaCandidate,0);
+ assert.equal(report.rows[0].persistedThumbnailMatchesMetaCandidate,true);
+});
+
+
+test('latest enrichment attempts, discoveries and assignments are separate from persisted matches',()=>{
+ const report=compareThumbnailCandidates([{
+  id:'persisted',title:'Persisted image',thumbnailUrl:'https://img.test/a.jpg',
+  thumbnailMetaCandidates:[{url:'https://img.test/a.jpg',source:'og:image'}]
+ }],[],{attempted:0,found:0,assigned:0});
+ assert.equal(report.persistedMetaCandidateRecords,1);
+ assert.equal(report.persistedThumbnailRecords,1);
+ assert.equal(report.persistedThumbnailMatchesMetaCandidate,1);
+ assert.equal(report.persistedThumbnailDoesNotMatchMetaCandidate,0);
+ assert.equal(report.latestRunAttempted,0);
+ assert.equal(report.latestRunFound,0);
+ assert.equal(report.latestRunAssigned,0);
+ assert.equal(report.latestRunAssignmentRate,null);
+});
+
+test('total persisted thumbnail count includes records with no candidate metadata',()=>{
+ const report=compareThumbnailCandidates([
+  {id:'with-candidate',thumbnailUrl:'https://img.test/a.jpg',thumbnailMetaCandidates:[{url:'https://img.test/a.jpg',source:'og:image'}]},
+  {id:'legacy-only',thumbnailUrl:'https://img.test/legacy.jpg',thumbnailMetaCandidates:[]}
+ ],[]);
+ assert.equal(report.articlesCompared,1);
+ assert.equal(report.persistedThumbnailRecords,1,'comparable persisted thumbnails remain scoped to candidate-bearing records');
+ assert.equal(report.persistedThumbnailRecordsTotal,2,'total persisted thumbnails must include records with no candidate metadata');
+});
