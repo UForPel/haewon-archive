@@ -9,6 +9,9 @@ test('production collection is not triggered by documentation-only pushes', asyn
   assert.match(workflow, /- '\*\.md'/);
   assert.match(workflow, /schedule:/);
   assert.match(workflow, /workflow_dispatch:/);
+  assert.ok(workflow.includes("'tests/**'"));
+  assert.ok(workflow.includes("'cloudflare/**'"));
+  assert.ok(workflow.includes("'.github/workflows/cloudflare-dispatch-dry-run.yml'"));
 });
 
 test('production performs one normal collection pass and retries only on a main push race', async () => {
