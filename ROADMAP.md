@@ -539,3 +539,16 @@
 - [ ] Complete real mobile browser/device QA for automatic focus, scroll, tap targets and import/export.
 - [ ] Collect actual human review labels; committed relevance review set remains empty.
 - [ ] Compare repeated query packs using human-reviewed relevance labels before changing query selection.
+
+
+## Mobile review accessibility and local backup — 2026-11-26
+- [x] Inspect existing browser test stack; repository uses Node built-in test runner and has no Playwright/Puppeteer setup or dependency.
+- [x] Add 44px minimum touch targets, visible focus outlines and narrow-screen action layout for the article-review panel.
+- [x] Make localStorage writes transactional and preserve old records on storage/import failure.
+- [x] Improve manual JSON import/export feedback and merge only validated, currently eligible article IDs.
+- [x] Add Node tests for mobile CSS/accessibility contracts and persistence/import/export error handling.
+- [x] PR CI #48 passed 195/195 tests and archive validation.
+- [ ] Merge PR #44 after final head/check confirmation.
+- [ ] Verify post-merge Production/data commit/Pages deployment.
+- [ ] Perform actual Android/mobile browser QA; automated source/CSS checks do not establish device behavior.
+- [ ] Collect human-reviewed article labels; repository review set remains empty.
