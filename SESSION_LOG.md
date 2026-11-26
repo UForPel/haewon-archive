@@ -1342,3 +1342,17 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Test log: 192 tests, 192 passed, 0 failed (751 ms). Archive validation passed: 20 video entries, 818 discovery candidates, six per-query metrics, zero human-review labels, 172 schema-valid run logs and quality metrics validation.
 - Production run #601 (`45751857291`) was triggered on merge and was still running at this checkpoint. Do not report its data commit or Pages deployment as complete until independently verified.
 - UI remains browser-local only; mobile visual/tap-target QA still requires a real device/browser.
+
+
+## 2026-11-26 — Human-review queue: PR, Production and data verification
+
+- PR #42 merged successfully: `753b4323c4712c7a5580d336b30240894cca73c0`. Genuine PR CI #43 (`45751819231`) passed 192/192 tests (0 failures, 751 ms) and archive validation.
+- Production run #601 (`45751857291`) completed with success. Steps verified: test and collect, archive validation, data commit, Pages artifact upload and Pages deployment. Generated data commit `45af9e62b6b06da3abf99399897c5c6f0b186475`, parent PR merge SHA `753b4323c4712c7a5580d336b30240894cca73c0`.
+- Current main at final audit: `50786b74664a7cf680f008ac6b905cd3904823f7`; later documentation commits include the Production checkpoint. Open PR count: 0.
+- Production collection: 94 incoming candidates, 88 unique, 39 added; Google RSS 63 items and Bing RSS 31 items; all six queries succeeded on each provider. Total archive 855 discovery candidates (668 articles, 187 videos).
+- Pack 5 freshness: zero within 7 days; 7 candidates in 8–30 days; 70 older than 90 days (per-query candidate sum 94). This remains an exploratory search-quality signal, not human-reviewed precision.
+- Current quality: 76 verified Haewon article candidates, 98 verified publisher articles, 351 thumbnail assignments, 504 missing, 79 unique thumbnail URLs. The 273 legacy shared-image assignments are unchanged.
+- Metadata enrichment attempted 2, assigned 2, missing 0, failed 0. 12-URL thumbnail response audit: 11 image responses, one HTTP 404; small sample only.
+- Article review labels remain zero in the committed data. PR #42 adds a pending-only queue and next-pending navigation, still localStorage-only with manual JSON export/import. No automatic upload or secret was added.
+- Pages deployment succeeded in Actions #601. Research browser could not fetch the public Pages URL; no visual/mobile QA is claimed. Manual device QA remains outstanding.
+- No new RSS sources, no changes to 273 legacy records, no paid services, external contacts, credentials or personal-data transfer.
