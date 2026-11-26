@@ -1571,3 +1571,15 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 2. Merge PR #50 only if the latest head CI and archive validation pass.
 3. Verify the merge, Production collection, generated data commit and Pages deployment independently.
 4. Keep Android Chrome QA, article review labels (0) and thumbnail review (482 eligible / 0 reviewed) explicitly open.
+
+
+## 2026-11-26 — PR #50 and Production #608 final outcome
+
+- PR #50 merged as `f8d27ee656b20847e293c8cd422b9d9de59ec4a0`; final PR head `7e22a7fdc057b8993881ff202a60cc0493927ca4`.
+- PR CI #68 (`45794717623`) completed successfully: 205/205 tests, 0 failures. Archive validation: 856 discovery candidates, 0 human article labels, 179 schema-valid run logs, 55 source summaries and 41 links checked.
+- Production #608 (`45794790709`) completed successfully. All steps passed: test/collection/validation/data commit, Pages artifact upload and Pages deployment. Deployment log explicitly says `Reported success!`.
+- Production generated data commit `d3d44f6252c7cdc8b01266d4779a54d262a8c029`; Pages artifact `15104173207`, 602,298 bytes, SHA-256 `e441ecf28b60a6d85ae6a86649f4083d9140f042e2f85cbd6611142b713d6e05`.
+- Run log `data/run-logs/45794790709.json`: 15 YouTube candidates discovered, 0 accepted, 15 duplicates; Google News RSS 71 and Bing News RSS 40; news fetched 71, unique incoming 64, added 2, duplicates 7. Six Google and six Bing queries succeeded. Thumbnail enrichment attempted 0, found 0, assigned 0.
+- Latest quality metrics: 856 candidates (669 article / 187 video), 99 verified publisher articles, 76 verified Haewon articles, 58 verified Haewon articles with provenance thumbnails; 352 assigned / 504 missing; 80 unique thumbnail URLs; 273 legacy shared-image assignments preserved; 482 eligible / 0 reviewed; article human labels 0.
+- PR #50 only changed review persistence code/tests/docs. No collection source, RSS, search pack, thumbnail assignments, review labels, wrapper handling or storage destination changed.
+- No real Android Chrome QA was performed. User-reported checklist remains the only accepted device QA evidence.
