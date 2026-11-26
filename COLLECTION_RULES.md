@@ -260,3 +260,18 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Thumbnail enrichment attempted 0 and assigned 0. Total current thumbnail state: 352 assigned, 504 missing, 80 unique URLs; 273 legacy shared-image assignments remain untouched.
 - No new RSS source was added; SBS/Yonhap feed addition still requires explicit applicable permission.
 - PR #44 changed only local review UI/CSS; labels remain browser-local and manually exportable/importable. Production #603 deployment succeeded; real mobile QA is still outstanding.
+
+
+## 2026-11-26 — Production #604 image-signal diagnosis
+
+Google RSS: 26 items, 26 site-level source URLs, 0 explicit publisher article URLs, 0 media thumbnail/content/enclosure/description image signals. Bing RSS: 41 items, 41 explicit publisher article URLs, 0 image signals.
+
+Both providers completed 6/6 requested queries. 67 incoming records, 60 unique, 2 new records. Thumbnail enrichment attempted 0 / found 0 / assigned 0.
+
+This sample indicates the RSS metadata contains no image fields for collected items; do not fabricate image URLs from source-site URLs, wrappers, titles or guessed page paths.
+
+Google News wrapper decoding remains disallowed. Bing explicit publisher URLs may be retained under the existing predicate, but their presence is not image metadata.
+
+No new RSS source is approved by this diagnostic. SBS/Yonhap remain excluded absent explicit applicable permission.
+
+Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total remains 352 assigned / 504 missing. Review UI changes do not affect collection or source eligibility.
