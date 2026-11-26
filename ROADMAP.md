@@ -672,3 +672,13 @@
 - [ ] Obtain user-reported Android Chrome QA for review UI, persistence and manual JSON import/export.
 - [ ] Begin human review of thumbnail candidates (482 eligible / 0 reviewed) when user chooses; do not auto-label.
 - [ ] Improve actual thumbnail coverage only through permitted explicit public metadata and source evidence; no new RSS or wrapper decoding without approval.
+
+
+## 2026-11-26 — Thumbnail review queue visibility
+- [x] Recheck the next-unreviewed candidate path against the actual collapsed card DOM.
+- [x] Open the candidate's `details.thumbnail-review-disclosure` before scrolling/focusing its select.
+- [x] Add helper unit tests and UI integration order assertion.
+- [ ] Pass latest PR CI and archive validation; merge only after successful final-head CI.
+- [ ] Verify Production collection, generated data commit and Pages deployment after merge.
+- [ ] Obtain user-reported Android Chrome QA; automated CI is not device QA.
+- [ ] Continue preserving the 273 legacy shared-image assignments; do not auto-label the 482 pending thumbnail candidates or 76 verified Haewon articles.
