@@ -1703,3 +1703,10 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - PR #56 adds success-only auto-advance to the repeated-image review panel, reusing the current filtered next-pending article action. Labels remain per article, local-only; failed writes restore the saved value and do not advance.
 - No new RSS/source, no Google News wrapper decoding, no access bypass, no automatic review labels/upload, no paid dependency, no external transmission. Android Chrome QA remains UNVERIFIED; it requires user-reported device results.
 - Latest main after data commit: b3091b027e3ea73211b6766c09833ac98916a790. Documentation-only finalization PR follows; it does not trigger another Production collection.
+
+
+## 2026-11-26 — Bing RSS non-RSS failure diagnostics (PR candidate)
+- Production #611's workflow and Pages deployment succeeded, but its run log was partial: one Bing query (Haewon international interview) returned the parser error “Bing RSS 응답이 아닙니다”; five of six Bing queries succeeded. The saved status had no HTTP status or Content-Type, so the exact cause cannot be proven from that run.
+- Do not assume this was transient, a block, or a valid Atom feed. Do not retry blindly, decode wrappers, change query parameters to evade controls, or store response bodies. MDN documents that HTTP Content-Type identifies the media type returned in the response: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Type
+- PR candidate adds a small diagnostic classifier (rss/atom/html/empty/unknown) and records only HTTP status, Content-Type and format classification in each Bing failure entry. The response body is never persisted. This makes the next occurrence diagnosable without access-control bypass or extra requests.
+- Added tests for all response classes and for retaining metadata without response body text. PR CI and next Production run pending.
