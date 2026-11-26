@@ -939,3 +939,9 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - PR #56 adds success-only auto-advance to the repeated-image review panel, reusing the current filtered next-pending article action. Labels remain per article, local-only; failed writes restore the saved value and do not advance.
 - No new RSS/source, no Google News wrapper decoding, no access bypass, no automatic review labels/upload, no paid dependency, no external transmission. Android Chrome QA remains UNVERIFIED; it requires user-reported device results.
 - Latest main after data commit: b3091b027e3ea73211b6766c09833ac98916a790. Documentation-only finalization PR follows; it does not trigger another Production collection.
+
+
+## 2026-11-26 — Bing RSS failure diagnostics (PR candidate)
+- Production #611 completed workflow/deployment successfully but the collection log was partial: 5/6 Bing queries succeeded; “Haewon international interview” returned non-RSS content. The saved run data lacks HTTP status and Content-Type, so root cause remains unverified.
+- Branch fix/bing-rss-failure-diagnostics-20261126 adds RSS/Atom/HTML/empty/unknown classification and stores only response status, Content-Type and classification for Bing failures. No body, credentials, personal data, or extra retry is stored/sent.
+- This is observability, not a claim that the Bing failure itself is fixed. PR CI and a subsequent Production run are pending.
