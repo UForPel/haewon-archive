@@ -435,3 +435,5 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Review UI correctness must be checked across sequences, not only a single failed write: successful edit A followed by failed edit B must preserve A in both storage and visible controls.
 - Test normal review dimensions and correction-category values. The in-memory labels object is updated only after storage accepts the complete write; failure fallback must read from that latest committed object.
 - Keep Node/CI evidence separate from Android Chrome QA. No user-reported device checklist means device QA remains UNVERIFIED.
+
+- Validation correction: initial PR CI run `45792852673` executed 202 tests but failed one new source-contract assertion because the test regex was over-escaped; application code and the sequence test logic were not the reported failure. The assertion escaping was corrected in commit `eaf649630c18b8607f4723ea0a2d91995fa698cd`. Re-run CI before merge; do not treat the first run as passed.
