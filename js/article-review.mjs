@@ -188,3 +188,12 @@ export function mergeArticleReviewLabels(currentLabels = {}, importedPayload, el
   }
   return merged;
 }
+
+export function persistArticleReviewLabels(storage, storageKey, currentLabels, nextLabels) {
+  try {
+    storage.setItem(storageKey, JSON.stringify(nextLabels));
+    return { saved: true, labels: nextLabels };
+  } catch (error) {
+    return { saved: false, labels: currentLabels, error: String(error?.name || 'storage-error') };
+  }
+}
