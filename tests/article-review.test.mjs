@@ -253,8 +253,8 @@ test('review UI rolls failed edits back to the latest persisted label, not the i
   const rejected = persistArticleReviewLabels({ setItem() { const error = new Error('quota'); error.name = 'QuotaExceededError'; throw error; } }, 'reviews', accepted.labels, secondEdit);
   assert.equal(rejected.saved, false);
   assert.equal(getArticleReviewValue(rejected.labels, 'a', 'relevance'), 'indirect');
-  assert.match(ui, /select\\.value = getArticleReviewValue\\(labels, item\\.id, dimension\\)/);
-  assert.match(ui, /correctionSelect\\.value = getArticleReviewValue\\(labels, item\\.id, 'expectedCategory'\\)/);
+  assert.match(ui, /select\.value = getArticleReviewValue\(labels, item\.id, dimension\)/);
+  assert.match(ui, /correctionSelect\.value = getArticleReviewValue\(labels, item\.id, 'expectedCategory'\)/);
 });
 
 test('review label persistence keeps the prior state when browser storage throws', async () => {
