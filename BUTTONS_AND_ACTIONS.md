@@ -429,3 +429,10 @@ Keep the conversation continuation button as the final response element of every
 - Latest data still contains 856 candidates, 352 assigned thumbnails / 504 missing, 273 unverified legacy shared assignments retained, and 79 provenance-backed assignments. Thumbnail review: 482 eligible, 0 reviewed; article human review labels remain 0. No search-pack or thumbnail reassignment change was made.
 - PR #46 was merged as `8edb0e1...`; PR CI #55 passed 201/201 tests and validation. The earlier PR CI #54 failure was an outdated source-contract assertion; the assertion was updated and the rerun passed.
 - Real Android Chrome visual/touch/focus/refresh/download-import QA remains outstanding. Do not claim it from CI or deployment. Labels remain localStorage-only and manual JSON transfer only; no backend or automatic upload. No Playwright/Puppeteer dependency was added.
+
+
+## 2026-11-26 — Android Chrome acceptance checklist remains open
+- Current main implementation was rechecked: collapsed per-article disclosure, next-pending opens the row then scrolls and focuses the first select, manual JSON export/import, schema/eligible-ID validation, per-dimension merge, and storage-failure recovery.
+- Required user-performed Android Chrome checks: (1) narrow viewport and tap comfort, (2) expand/collapse, (3) complete seven selectors, (4) next-pending opens/focuses/scrolls, (5) refresh preserves local labels, (6) export and re-import JSON merges without erasing unrelated dimensions, (7) confirm no automatic upload.
+- Do not mark any item complete from Node tests, source inspection or Pages deployment. Only user-reported checklist results count as real-device QA.
+- Do not intentionally exhaust browser storage. QuotaExceededError recovery is covered by a simulated Node storage adapter, not a real-device quota test.
