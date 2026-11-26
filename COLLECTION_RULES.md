@@ -408,3 +408,8 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - When Bing returns a non-RSS response, record only status, Content-Type and a coarse response format classification. Do not persist the response body.
 - Do not infer that non-RSS means a transient failure or permission to retry/bypass. Keep the query failure visible and preserve successful query results.
 - No new sources, query packs, redirects, wrapper decoding or access-control bypass are introduced.
+
+
+## 2026-11-26 — Persist RSS failure diagnostics
+- Google and Bing query failures record status and Content-Type; if a successful HTTP response body was read, record only a coarse format classification (rss/atom/html/empty/unknown).
+- Persist only allowlisted diagnostic fields; never save response bodies. Do not retry HTTP 429 or non-RSS responses, decode wrappers, or bypass access restrictions.
