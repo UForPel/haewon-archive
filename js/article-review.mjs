@@ -182,5 +182,9 @@ export function createArticleReviewExport(labels = {}, exportedAt = new Date().t
 export function mergeArticleReviewLabels(currentLabels = {}, importedPayload, eligibleIds = null) {
   const current = validateArticleReviewExport({ schemaVersion: 1, labels: currentLabels }, eligibleIds).labels;
   const imported = validateArticleReviewExport(importedPayload, eligibleIds).labels;
-  return { ...current, ...imported };
+  const merged = { ...current };
+  for (const [id, incomingRow] of Object.entries(imported)) {
+    merged[id] = { ...(current[id] || {}), ...incomingRow };
+  }
+  return merged;
 }
