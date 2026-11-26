@@ -617,3 +617,14 @@
 - Latest data still contains 856 candidates, 352 assigned thumbnails / 504 missing, 273 unverified legacy shared assignments retained, and 79 provenance-backed assignments. Thumbnail review: 482 eligible, 0 reviewed; article human review labels remain 0. No search-pack or thumbnail reassignment change was made.
 - PR #46 was merged as `8edb0e1...`; PR CI #55 passed 201/201 tests and validation. The earlier PR CI #54 failure was an outdated source-contract assertion; the assertion was updated and the rerun passed.
 - Real Android Chrome visual/touch/focus/refresh/download-import QA remains outstanding. Do not claim it from CI or deployment. Labels remain localStorage-only and manual JSON transfer only; no backend or automatic upload. No Playwright/Puppeteer dependency was added.
+
+
+## 2026-11-26 — Post-PR #46 follow-up
+- [x] Independently verify PR CI #55: 201/201 tests and archive validation for 856 candidates.
+- [x] Independently verify Production #606 job, generated data commit, Pages artifact metadata and successful deployment.
+- [x] Reinspect collapsed review disclosures, seven dimensions, next-pending open/focus/scroll, JSON import/export, per-dimension merge and transactional storage helper on main.
+- [ ] Obtain user-reported Android Chrome QA for narrow viewport, expand/collapse, seven selects, next-pending focus/scroll, refresh persistence, JSON export/import round-trip and no automatic network transfer.
+- [ ] Collect actual human article-review labels; current count 0.
+- [ ] Review thumbnail candidates; current eligible 482 / reviewed 0.
+- [ ] Preserve 273 legacy shared-image assignments; no deletion or bulk replacement.
+- [ ] Keep search pack 5 unchanged until repeated observations and human relevance labels justify a change.

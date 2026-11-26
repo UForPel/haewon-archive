@@ -421,3 +421,11 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Latest data still contains 856 candidates, 352 assigned thumbnails / 504 missing, 273 unverified legacy shared assignments retained, and 79 provenance-backed assignments. Thumbnail review: 482 eligible, 0 reviewed; article human review labels remain 0. No search-pack or thumbnail reassignment change was made.
 - PR #46 was merged as `8edb0e1...`; PR CI #55 passed 201/201 tests and validation. The earlier PR CI #54 failure was an outdated source-contract assertion; the assertion was updated and the rerun passed.
 - Real Android Chrome visual/touch/focus/refresh/download-import QA remains outstanding. Do not claim it from CI or deployment. Labels remain localStorage-only and manual JSON transfer only; no backend or automatic upload. No Playwright/Puppeteer dependency was added.
+
+
+## 2026-11-26 — Evidence threshold for real-device QA
+- For Haewon Archive, distinguish source inspection, pure Node tests, CI, Production collection, data commit, Pages deployment and real Android Chrome QA as separate evidence classes.
+- Never label mobile QA complete unless the user reports the relevant checklist outcomes from their actual Android Chrome session. Absence of a report means UNVERIFIED, not pass or fail.
+- If a storage adapter throws, report the tested contract accurately: prior labels remain unchanged. Do not imply this reproduces a real browser quota condition.
+- Continue using the repository's existing Node test stack; do not add Playwright/Puppeteer merely to create a misleading substitute for the user's actual device test.
+- Review-label data stays in localStorage and manual user-controlled JSON transfers only. Do not introduce automatic upload.
