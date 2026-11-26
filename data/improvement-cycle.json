@@ -19,7 +19,7 @@
   },
   "evidence": {
     "cumulativeDiscoveryCandidates": 795,
-    "currentRunCandidates": 69,
+    "currentRunCandidates": 53,
     "uniqueVideoRecords": 20,
     "queryYield": [
       {
@@ -28,19 +28,19 @@
       },
       {
         "query": "NMIXX Haewon festival",
-        "candidates": 8
+        "candidates": 15
       },
       {
         "query": "Haewon stage appearance news",
-        "candidates": 0
+        "candidates": 1
       },
       {
         "query": "해원 공연 행사",
-        "candidates": 36
+        "candidates": 11
       },
       {
         "query": "NMIXX Haewon showcase",
-        "candidates": 13
+        "candidates": 14
       },
       {
         "query": "Haewon public schedule",
@@ -48,9 +48,9 @@
       }
     ],
     "highestYieldQueries": [
-      "해원 공연 행사",
+      "NMIXX Haewon festival",
       "NMIXX Haewon showcase",
-      "오해원 팬미팅 기사"
+      "해원 공연 행사"
     ]
   },
   "evaluation": {

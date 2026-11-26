@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T00:41:48.060Z",
+  "collectedAt": "2026-11-26T00:45:17.104Z",
   "searchPack": 4,
   "queries": [
     {
@@ -18,80 +18,80 @@
       "datedCandidates": 10,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 12521.7,
-      "p90PublicationLagHours": 37850.3
+      "medianPublicationLagHours": 12521.8,
+      "p90PublicationLagHours": 37850.4
     },
     {
       "query": "NMIXX Haewon festival",
-      "candidates": 8,
-      "uniqueCandidates": 8,
+      "candidates": 15,
+      "uniqueCandidates": 15,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 3,
-      "titleKeywordMatchRate": 38,
-      "explicitPublisherUrls": 0,
-      "explicitPublisherUrlRate": 0,
-      "crossQueryDuplicateUrls": 0,
-      "datedCandidates": 8,
+      "titleKeywordMatches": 6,
+      "titleKeywordMatchRate": 40,
+      "explicitPublisherUrls": 8,
+      "explicitPublisherUrlRate": 53,
+      "crossQueryDuplicateUrls": 2,
+      "datedCandidates": 15,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 5441.2,
-      "p90PublicationLagHours": 19675.1
+      "medianPublicationLagHours": 6621.8,
+      "p90PublicationLagHours": 22347.2
     },
     {
       "query": "Haewon stage appearance news",
-      "candidates": 0,
-      "uniqueCandidates": 0,
+      "candidates": 1,
+      "uniqueCandidates": 1,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 0,
-      "titleKeywordMatchRate": null,
-      "explicitPublisherUrls": 0,
-      "explicitPublisherUrlRate": null,
+      "titleKeywordMatches": 1,
+      "titleKeywordMatchRate": 100,
+      "explicitPublisherUrls": 1,
+      "explicitPublisherUrlRate": 100,
       "crossQueryDuplicateUrls": 0,
-      "datedCandidates": 0,
+      "datedCandidates": 1,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": null,
-      "p90PublicationLagHours": null
+      "medianPublicationLagHours": 808.3,
+      "p90PublicationLagHours": 808.3
     },
     {
       "query": "해원 공연 행사",
-      "candidates": 36,
-      "uniqueCandidates": 36,
+      "candidates": 11,
+      "uniqueCandidates": 11,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 15,
-      "titleKeywordMatchRate": 42,
-      "explicitPublisherUrls": 0,
-      "explicitPublisherUrlRate": 0,
+      "titleKeywordMatches": 7,
+      "titleKeywordMatchRate": 64,
+      "explicitPublisherUrls": 1,
+      "explicitPublisherUrlRate": 9,
       "crossQueryDuplicateUrls": 0,
-      "datedCandidates": 36,
+      "datedCandidates": 11,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 10829.7,
-      "p90PublicationLagHours": 80177.7
+      "medianPublicationLagHours": 9304.8,
+      "p90PublicationLagHours": 96952.8
     },
     {
       "query": "NMIXX Haewon showcase",
-      "candidates": 13,
-      "uniqueCandidates": 13,
+      "candidates": 14,
+      "uniqueCandidates": 14,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
       "titleKeywordMatches": 8,
-      "titleKeywordMatchRate": 62,
-      "explicitPublisherUrls": 10,
-      "explicitPublisherUrlRate": 77,
-      "crossQueryDuplicateUrls": 0,
-      "datedCandidates": 13,
+      "titleKeywordMatchRate": 57,
+      "explicitPublisherUrls": 11,
+      "explicitPublisherUrlRate": 79,
+      "crossQueryDuplicateUrls": 2,
+      "datedCandidates": 14,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 9710.7,
-      "p90PublicationLagHours": 31762.8
+      "medianPublicationLagHours": 9039.8,
+      "p90PublicationLagHours": 31493.6
     },
     {
       "query": "Haewon public schedule",
@@ -109,38 +109,21 @@
       "unknownDates": 0,
       "futureDated": 0,
       "medianPublicationLagHours": 38497.9,
-      "p90PublicationLagHours": 68667.6
+      "p90PublicationLagHours": 68667.7
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
-  "bingSuccessfulQueries": 2,
-  "bingCandidates": 10,
-  "bingFailedQueries": [
-    {
-      "query": "오해원 팬미팅 기사",
-      "error": "Bing RSS 응답이 아닙니다"
-    },
-    {
-      "query": "NMIXX Haewon festival",
-      "error": "Bing RSS 응답이 아닙니다"
-    },
-    {
-      "query": "Haewon stage appearance news",
-      "error": "Bing RSS 응답이 아닙니다"
-    },
-    {
-      "query": "해원 공연 행사",
-      "error": "Bing RSS 응답이 아닙니다"
-    }
-  ],
+  "bingSuccessfulQueries": 6,
+  "bingCandidates": 21,
+  "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 69,
-  "uniqueIncoming": 69,
+  "fetched": 53,
+  "uniqueIncoming": 51,
   "added": 3,
   "rssImageSignals": {
-    "items": 59,
-    "sourceUrlItems": 53,
+    "items": 32,
+    "sourceUrlItems": 29,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -153,9 +136,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 10,
+    "items": 21,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 10,
+    "publisherArticleUrlItems": 21,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -180,9 +163,9 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 69,
-    "after": 69,
-    "collapsed": 0,
+    "before": 53,
+    "after": 50,
+    "collapsed": 3,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 795
