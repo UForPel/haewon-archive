@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T00:39:06.367Z",
+  "generatedAt": "2026-11-26T00:41:50.056Z",
   "discoveryRelevance": {
     "totalCandidates": 795,
     "articleCandidates": 608,
@@ -426,77 +426,34 @@
     "newsQueriesRequested": 6,
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
-    "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 21,
+    "bingNewsQueriesSuccessful": 2,
+    "bingNewsCandidates": 10,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
     "newsCandidatesTotal": 795,
-    "newsUniqueFetched": 78,
-    "newsAddedLastRun": 32,
-    "duplicateBeforeMergeLastRun": 2,
+    "newsUniqueFetched": 69,
+    "newsAddedLastRun": 3,
+    "duplicateBeforeMergeLastRun": 0,
     "duplicateGroupsCurrent": 795,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 80,
-      "after": 77,
-      "collapsed": 3,
+      "before": 69,
+      "after": 69,
+      "collapsed": 0,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 2,
-      "found": 2,
-      "assigned": 2,
+      "attempted": 0,
+      "found": 0,
+      "assigned": 0,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
       "failed": 0,
-      "results": [
-        {
-          "id": "32964a7facfebdec9f38",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://pimg.mk.co.kr/news/cms/202407/18/news-p.v1.20240718.f2e527a0c40e4a49915afbafe4b66709_R.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://pimg.mk.co.kr/news/cms/202407/18/news-p.v1.20240718.f2e527a0c40e4a49915afbafe4b66709_R.jpg",
-              "source": "og:image",
-              "priority": 1
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.mk.co.kr/en/hot-issues/11070438",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.mk.co.kr/en/hot-issues/11070438",
-          "resolvedArticleHost": "www.mk.co.kr"
-        },
-        {
-          "id": "4a28e1fa4fa22a6b1e49",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://biz.chosun.com/resizer/v2/G4ZTQNZYMNSTEZRRME3TKMBUMU.jpg?auth=5f3595062a3858286ecdd037b869f90610fc749457caeb3dc3df8a2412d65bf2&width=650&height=341&smart=true",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://biz.chosun.com/resizer/v2/G4ZTQNZYMNSTEZRRME3TKMBUMU.jpg?auth=5f3595062a3858286ecdd037b869f90610fc749457caeb3dc3df8a2412d65bf2&width=650&height=341&smart=true",
-              "source": "og:image",
-              "priority": 1
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2026/11/12/MFRGGZRSHAZTKN3CGIYTMNZSME/",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2026/11/12/MFRGGZRSHAZTKN3CGIYTMNZSME/",
-          "resolvedArticleHost": "biz.chosun.com"
-        }
-      ]
+      "results": []
     }
   },
   "sources": [
@@ -1117,8 +1074,8 @@
     {
       "source": "Bing News RSS",
       "requested": 6,
-      "successful": 6,
-      "successRate": 100
+      "successful": 2,
+      "successRate": 33
     }
   ],
   "classification": {
@@ -2183,12 +2140,12 @@
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
     "metaFound": 69,
-    "metaAssigned": 2,
-    "assignmentRate": 100,
-    "latestRunAttempted": 2,
-    "latestRunFound": 2,
-    "latestRunAssigned": 2,
-    "latestRunAssignmentRate": 100,
+    "metaAssigned": 0,
+    "assignmentRate": null,
+    "latestRunAttempted": 0,
+    "latestRunFound": 0,
+    "latestRunAssigned": 0,
+    "latestRunAssignmentRate": null,
     "persistedMetaCandidateRecords": 69,
     "persistedThumbnailRecords": 69,
     "persistedThumbnailRecordsTotal": 342,
@@ -3358,8 +3315,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://pimg.mk.co.kr/news/cms/202407/18/news-p.v1.20240718.f2e527a0c40e4a49915afbafe4b66709_R.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -3865,8 +3822,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://biz.chosun.com/resizer/v2/G4ZTQNZYMNSTEZRRME3TKMBUMU.jpg?auth=5f3595062a3858286ecdd037b869f90610fc749457caeb3dc3df8a2412d65bf2&width=650&height=341&smart=true",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -4109,7 +4066,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T00:39:06.386Z",
+    "generatedAt": "2026-11-26T00:41:50.081Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

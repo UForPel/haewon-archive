@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T00:39:04.550Z",
+  "collectedAt": "2026-11-26T00:41:48.060Z",
   "searchPack": 4,
   "queries": [
     {
@@ -23,75 +23,75 @@
     },
     {
       "query": "NMIXX Haewon festival",
-      "candidates": 16,
-      "uniqueCandidates": 16,
+      "candidates": 8,
+      "uniqueCandidates": 8,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 6,
+      "titleKeywordMatches": 3,
       "titleKeywordMatchRate": 38,
-      "explicitPublisherUrls": 8,
-      "explicitPublisherUrlRate": 50,
-      "crossQueryDuplicateUrls": 2,
-      "datedCandidates": 16,
+      "explicitPublisherUrls": 0,
+      "explicitPublisherUrlRate": 0,
+      "crossQueryDuplicateUrls": 0,
+      "datedCandidates": 8,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 6607.2,
-      "p90PublicationLagHours": 22253.3
+      "medianPublicationLagHours": 5441.2,
+      "p90PublicationLagHours": 19675.1
     },
     {
       "query": "Haewon stage appearance news",
-      "candidates": 1,
-      "uniqueCandidates": 1,
+      "candidates": 0,
+      "uniqueCandidates": 0,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 1,
-      "titleKeywordMatchRate": 100,
-      "explicitPublisherUrls": 1,
-      "explicitPublisherUrlRate": 100,
+      "titleKeywordMatches": 0,
+      "titleKeywordMatchRate": null,
+      "explicitPublisherUrls": 0,
+      "explicitPublisherUrlRate": null,
       "crossQueryDuplicateUrls": 0,
-      "datedCandidates": 1,
+      "datedCandidates": 0,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 808.2,
-      "p90PublicationLagHours": 808.2
+      "medianPublicationLagHours": null,
+      "p90PublicationLagHours": null
     },
     {
       "query": "해원 공연 행사",
-      "candidates": 37,
-      "uniqueCandidates": 37,
+      "candidates": 36,
+      "uniqueCandidates": 36,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 16,
-      "titleKeywordMatchRate": 43,
-      "explicitPublisherUrls": 1,
-      "explicitPublisherUrlRate": 3,
+      "titleKeywordMatches": 15,
+      "titleKeywordMatchRate": 42,
+      "explicitPublisherUrls": 0,
+      "explicitPublisherUrlRate": 0,
       "crossQueryDuplicateUrls": 0,
-      "datedCandidates": 37,
+      "datedCandidates": 36,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 10817.7,
-      "p90PublicationLagHours": 79289.7
+      "medianPublicationLagHours": 10829.7,
+      "p90PublicationLagHours": 80177.7
     },
     {
       "query": "NMIXX Haewon showcase",
-      "candidates": 14,
-      "uniqueCandidates": 14,
+      "candidates": 13,
+      "uniqueCandidates": 13,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
       "titleKeywordMatches": 8,
-      "titleKeywordMatchRate": 57,
-      "explicitPublisherUrls": 11,
-      "explicitPublisherUrlRate": 79,
-      "crossQueryDuplicateUrls": 2,
-      "datedCandidates": 14,
+      "titleKeywordMatchRate": 62,
+      "explicitPublisherUrls": 10,
+      "explicitPublisherUrlRate": 77,
+      "crossQueryDuplicateUrls": 0,
+      "datedCandidates": 13,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 9039.7,
-      "p90PublicationLagHours": 31493.5
+      "medianPublicationLagHours": 9710.7,
+      "p90PublicationLagHours": 31762.8
     },
     {
       "query": "Haewon public schedule",
@@ -108,19 +108,36 @@
       "datedCandidates": 2,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 38497.8,
+      "medianPublicationLagHours": 38497.9,
       "p90PublicationLagHours": 68667.6
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
-  "bingSuccessfulQueries": 6,
-  "bingCandidates": 21,
-  "bingFailedQueries": [],
+  "bingSuccessfulQueries": 2,
+  "bingCandidates": 10,
+  "bingFailedQueries": [
+    {
+      "query": "오해원 팬미팅 기사",
+      "error": "Bing RSS 응답이 아닙니다"
+    },
+    {
+      "query": "NMIXX Haewon festival",
+      "error": "Bing RSS 응답이 아닙니다"
+    },
+    {
+      "query": "Haewon stage appearance news",
+      "error": "Bing RSS 응답이 아닙니다"
+    },
+    {
+      "query": "해원 공연 행사",
+      "error": "Bing RSS 응답이 아닙니다"
+    }
+  ],
   "failedQueries": [],
-  "fetched": 80,
-  "uniqueIncoming": 78,
-  "added": 32,
+  "fetched": 69,
+  "uniqueIncoming": 69,
+  "added": 3,
   "rssImageSignals": {
     "items": 59,
     "sourceUrlItems": 53,
@@ -136,9 +153,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 21,
+    "items": 10,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 21,
+    "publisherArticleUrlItems": 10,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -153,62 +170,19 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 2,
-    "found": 2,
-    "assigned": 2,
+    "attempted": 0,
+    "found": 0,
+    "assigned": 0,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
     "failed": 0,
-    "results": [
-      {
-        "id": "32964a7facfebdec9f38",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://pimg.mk.co.kr/news/cms/202407/18/news-p.v1.20240718.f2e527a0c40e4a49915afbafe4b66709_R.jpg",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://pimg.mk.co.kr/news/cms/202407/18/news-p.v1.20240718.f2e527a0c40e4a49915afbafe4b66709_R.jpg",
-            "source": "og:image",
-            "priority": 1
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://www.mk.co.kr/en/hot-issues/11070438",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.mk.co.kr/en/hot-issues/11070438",
-        "resolvedArticleHost": "www.mk.co.kr"
-      },
-      {
-        "id": "4a28e1fa4fa22a6b1e49",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://biz.chosun.com/resizer/v2/G4ZTQNZYMNSTEZRRME3TKMBUMU.jpg?auth=5f3595062a3858286ecdd037b869f90610fc749457caeb3dc3df8a2412d65bf2&width=650&height=341&smart=true",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://biz.chosun.com/resizer/v2/G4ZTQNZYMNSTEZRRME3TKMBUMU.jpg?auth=5f3595062a3858286ecdd037b869f90610fc749457caeb3dc3df8a2412d65bf2&width=650&height=341&smart=true",
-            "source": "og:image",
-            "priority": 1
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2026/11/12/MFRGGZRSHAZTKN3CGIYTMNZSME/",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2026/11/12/MFRGGZRSHAZTKN3CGIYTMNZSME/",
-        "resolvedArticleHost": "biz.chosun.com"
-      }
-    ]
+    "results": []
   },
   "deduplicationComparison": {
-    "before": 80,
-    "after": 77,
-    "collapsed": 3,
+    "before": 69,
+    "after": 69,
+    "collapsed": 0,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 795
