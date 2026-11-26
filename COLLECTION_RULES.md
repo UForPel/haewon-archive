@@ -368,3 +368,10 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Production #609 completed successfully; 15 YouTube candidates were duplicates (0 accepted); Google News RSS returned 71 items and Bing News RSS 43; archive validation passed.
 - PR #52 is UI-only and does not change collection sources, RSS permissions, query pack, schedule, metadata policy, retries or URL provenance.
 - Preserve all 273 legacy shared-image assignments. Do not add SBS/Yonhap or other new RSS sources without explicit permission. No wrapper decoding, access bypass, auto-labeling or automatic review upload.
+
+
+## 2026-11-26 — Thumbnail review auto-advance does not change collection policy
+- The review queue now schedules the next candidate only after a successful user-initiated localStorage save; it does not create labels or alter candidate data.
+- No collection sources, RSS feeds, query packs, schedule, metadata fetch, URL provenance, retries or thumbnail assignment rules changed.
+- Preserve all 273 legacy same-image assignments. Do not add SBS/Yonhap or other new RSS sources without explicit permission.
+- No Google News wrapper decoding, access-control bypass, automatic review upload, paid service or external data transmission.

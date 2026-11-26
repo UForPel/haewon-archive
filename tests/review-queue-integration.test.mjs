@@ -60,3 +60,14 @@ test('next-thumbnail queue reveals the collapsed candidate details before scroll
  const focus=view.indexOf("row.querySelector('select')?.focus({preventScroll:true})",scroll);
  assert.ok(reveal>=0&&scroll>reveal&&focus>scroll,'open details before scroll and focus');
 });
+
+test('successful manual thumbnail review save advances to the next pending candidate only after persistence',()=>{
+ const start=view.indexOf("candidateList.forEach(candidate=>");
+ const end=view.indexOf("reviewDisclosure.append(reviewSection)",start);
+ const candidateRenderer=view.slice(start,end);
+ const saved=candidateRenderer.indexOf("if(persistReviewLabels(nextLabels))");
+ const advance=candidateRenderer.indexOf("requestAnimationFrame(()=>reviewQueueButton.click())",saved);
+ const failure=candidateRenderer.indexOf("else{select.value=reviewLabels[key]?.label||''",saved);
+ assert.ok(saved>=0&&advance>saved&&failure>advance,'auto-advance is scheduled only inside the successful persistence branch');
+ assert.match(candidateRenderer,/검수 저장 완료\. 다음 미검수 후보로 이동합니다\./);
+});

@@ -900,3 +900,13 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Production #609 run log: 15 YouTube candidates, 0 accepted, 15 duplicates; Google News RSS 71, Bing News RSS 43; run validation passed. Final archive: 857 candidates (670 articles / 187 videos), 352 assigned / 505 missing thumbnails, 80 unique thumbnail URLs; 273 legacy shared-image assignments preserved; 482 thumbnail review candidates / 0 reviewed; article human review labels 0.
 - PR #52 is a UI visibility/focus fix only. No sources, RSS, thumbnail assignments, human review labels, or storage destinations changed. No collection improvement or thumbnail gain is claimed.
 - Android Chrome QA remains **UNVERIFIED**; Node tests and Pages deployment are not device QA.
+
+
+## 2026-11-26 — Thumbnail review auto-advance (PR candidate)
+- Fresh baseline main: ed6f42d0f44be385b2b8c01b1201b803c93bb5e7; open PRs 0. Latest PR CI #75 succeeded; Production #609 succeeded, generated data commit 5351bc276aa5b1dd5c9286caf9a6156f273318e9, Pages artifact 15105556263.
+- Latest production metrics: 857 discovery candidates; 352 thumbnail assignments / 505 missing; 80 unique URLs; 273 legacy shared-image assignments retained; 482 thumbnail review candidates / 0 reviewed; 0 human article relevance labels.
+- Bottleneck: the thumbnail queue requires an additional “next pending” button click after every successful manual label save, despite the article review queue already supporting auto-advance.
+- Branch feat/thumbnail-review-auto-advance-20261126 updates the existing queue after successful localStorage persistence only. It reuses the existing find-next, open-disclosure, scroll and focus behavior. Failed storage writes do not advance and preserve the prior label.
+- Added an integration test that checks advancement is scheduled only after the successful persistence branch. PR CI and archive validation are pending.
+- No labels were generated, uploaded or committed; no source/collection/thumbnail data changed. Preserve 273 legacy assignments; no new RSS, wrapper decoding, access bypass or paid dependency.
+- Android Chrome QA remains UNVERIFIED until the user reports actual device results.

@@ -483,3 +483,13 @@ Keep the conversation continuation button as the final response element of every
 - Production #609 succeeded; generated data commit `5351bc276aa5b1dd5c9286caf9a6156f273318e9`; Pages artifact `15105556263` (606,867 bytes; SHA-256 `a90856560a15baff8d7c49f51ff75b4e6a1d884a7df195f64276d96b1af3f751`); deployment log reported success.
 - “다음 미검수 후보” now opens the collapsed image-candidate details before scrolling and focusing the target select.
 - Keep the required final control label **🔄 연구 기반 재귀개선 계속하기** with the full continuation prompt. Android Chrome QA remains unverified.
+
+
+## 2026-11-26 — Thumbnail review auto-advance (PR candidate)
+- After a user manually selects a thumbnail label, the UI advances to the next unreviewed candidate only if localStorage persistence succeeds.
+- Auto-advance reuses the existing next-candidate path (open disclosure → scroll → focus); the manual “다음 미검수 후보” button remains available.
+- Failed storage writes must restore the latest saved label and must not advance.
+- The status region remains advisory; focus moves to the next actionable select rather than the status text.
+- Labels remain browser-local with manual JSON export/import only. No automatic upload or server sync.
+- PR CI/merge/Production/Pages verification pending; Android Chrome QA remains user-performed and unverified.
+- Keep the ChatGPT continuation action 🔄 연구 기반 재귀개선 계속하기 as the final response element with the full prompt.

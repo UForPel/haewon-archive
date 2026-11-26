@@ -476,3 +476,11 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - PR #52 implements the invariant: before focusing a thumbnail review control, open its collapsed `details.thumbnail-review-disclosure`, then defer scroll/focus until visible.
 - Final-head PR CI #74 passed 207/207 tests; Production #609 and Pages deployment succeeded. Generated data commit `5351bc276aa5b1dd5c9286caf9a6156f273318e9`.
 - Current archive: 857 candidates; 482 thumbnail review candidates / 0 reviewed; 273 legacy shared-image assignments preserved. Android Chrome QA remains unverified until user-reported checklist results.
+
+
+## 2026-11-26 — Thumbnail review auto-advance rule
+- Advance the thumbnail queue only after a user manually selects a label and the transactional localStorage write succeeds.
+- On write failure, preserve the latest committed labels, restore the select and do not advance.
+- Reuse the existing next-candidate logic to open collapsed details before scrolling/focusing. Keep status messages advisory and do not focus the status region.
+- This is code/test evidence only. Do not claim Android Chrome QA without user-reported real-device checklist results.
+- Never auto-label, auto-upload or commit user review labels. Preserve 273 legacy same-image assignments and all source-policy restrictions.
