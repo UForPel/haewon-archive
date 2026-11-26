@@ -169,3 +169,14 @@ main,section,.section-heading,.controls,.date-controls,.photo-card,.video-card,.
 .article-quality-review .photo-actions button{width:100%;min-width:0}
 .article-quality-review .article-quality-review-fields select{min-height:44px}
 @media(max-width:360px){.article-quality-review .photo-actions{grid-template-columns:1fr}.article-quality-review-body{min-width:0}.article-quality-review-row{min-width:0}}
+
+
+/* Keep the 76-item review queue compact on mobile; open only the active article. */
+.article-quality-review-row{display:block;border-top:1px solid var(--line);padding:8px 0}
+.article-quality-review-row-summary{display:grid;gap:5px;align-content:start;min-height:56px;padding:8px 4px;cursor:pointer}
+.article-quality-review-row-summary .article-quality-review-title{display:block;line-height:1.4}
+.article-quality-review-row-summary .photo-meta{display:block;font-size:12px;line-height:1.35}
+.article-quality-review-row-content{display:grid;grid-template-columns:104px minmax(0,1fr);gap:8px;padding:8px 4px}
+.article-quality-review-row-content .article-quality-review-fields{grid-column:1/-1}
+.article-quality-review-row-content>label{grid-column:1/-1}
+@media(max-width:480px){.article-quality-review-row-content{grid-template-columns:80px minmax(0,1fr)}}
