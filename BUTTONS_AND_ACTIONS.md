@@ -444,3 +444,5 @@ Keep the conversation continuation button as the final response element of every
 - Regression scenario: initial value -> successful edit A -> failed edit B (QuotaExceededError) -> visible selection remains A and stored labels remain A.
 - Use `getArticleReviewValue(labels, articleId, field)` against the current committed in-memory labels after `persistLabels` returns failure.
 - Android Chrome checklist is still outstanding; only user-reported device observations count.
+
+- Validation correction: initial PR CI run `45792852673` executed 202 tests but failed one new source-contract assertion because the test regex was over-escaped; application code and the sequence test logic were not the reported failure. The assertion escaping was corrected in commit `eaf649630c18b8607f4723ea0a2d91995fa698cd`. Re-run CI before merge; do not treat the first run as passed.
