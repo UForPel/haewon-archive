@@ -1227,3 +1227,22 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Latest 12-URL thumbnail response sample: 11 image responses, one HTTP 404 at the Sportalkorea CDN URL, no unreachable, 429 or non-image successful responses.
 - Latest run's metadata enrichment had 0 attempted / 0 found / 0 assigned. Persisted metadata candidates and latest-run attempts are now distinct in quality output.
 - No new RSS source, no external contact, no paid API, no personal data or secret handling. No mobile visual QA claim.
+
+## 2026-11-26 — Six-pack query rotation and first production sample
+- Main before this cycle: `dde9b465...`. PR #32 branch `feature/news-query-rotation-20261126` ported PR #22 onto current main while preserving PR #31's shared social URL predicate and Bing RSS parser.
+- Expanded `SEARCH_PACKS` from 3×4 to 6×6 (36 unique phrases). Two scheduled runs per KST day select different packs using day number ×2 plus KST morning/evening slot. 12 queries/day, Google + Bing RSS = 24 feed requests/day; this is a bounded 50% request increase versus 8 queries/day / 16 feeds previously.
+- Added `summarizeQueryPerformance`: per-query candidate and normalized unique URL counts, duplicate URL/title occurrences, cross-query overlap, title keyword-match proxy, explicit publisher URL rate, unknown/future dates, median and p90 publication lag.
+- URL normalization removes known tracking parameters only; it preserves `source` and `ref` parameters that may be content-bearing. Test initially failed because broad filter removed `source`; narrowed filter and added regression coverage.
+- Genuine PR CI #45729777536 passed 160/160 tests, 0 failures, `npm run validate` passed. PR #32 merged as `1f7fc3fb...`; PR #22 closed as superseded.
+- Production push run #45729843156 succeeded: 160/160 tests, YouTube collection, Google/Bing RSS collection, improvement cycle, quality metrics, validation, data commit, Pages artifact and deployment. No Node20 deprecation warning. Generated data commit `891b2d74...`.
+- First live pack sample index 4: Google 54 candidates, Bing 20; 54 per-query records across six queries (per-query candidate sums). Total archive 767 records: 580 articles, 187 videos, 85 verified publisher articles, 70 verified Haewon candidates.
+- Query metrics sample:
+  - 오해원 팬미팅 기사: 11 candidates; 0 explicit publisher URLs; title proxy 36%; median lag 13,481.6h; p90 77,680.6h.
+  - NMIXX Haewon festival: 16; 8 publisher URLs; title proxy 38%; median lag 6,593.6h; p90 22,253.3h.
+  - Haewon stage appearance news: 1; 1 publisher URL; title proxy 100%; median lag 808.1h; p90 808.1h.
+  - 해원 공연 행사: 11; 1 publisher URL; title proxy 64%; median lag 9,304.6h; p90 96,952.6h.
+  - NMIXX Haewon showcase: 13; 10 publisher URLs; title proxy 62%; median lag 9,710.6h; p90 31,762.7h.
+  - Haewon public schedule: 2; 0 publisher URLs; title proxy 100%; median lag 38,497.8h; p90 68,667.5h.
+- This is one pack only; no precision claim or automatic query removal. Need at least two additional pack runs and compare identical metrics. The title proxy is not human-labeled relevance.
+- Latest thumbnail state: 340 assigned, 427 missing, 68 unique URLs, 273 legacy shared-image records preserved. 12 URL response audit: 11 image responses, one HTTP 404, no unreachable/429/non-image success. Latest metadata enrichment: attempted 10, found 7, assigned 7, missing 1, failed 2.
+- No new RSS feeds, no external contact, no paid APIs, no secrets or personal data. Mobile QA unverified.

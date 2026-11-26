@@ -649,3 +649,17 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - No new RSS feeds were added. SBS/Yonhap and other publisher feeds remain excluded pending explicit applicable permission. No archive data was bulk-deleted or rewritten to remove the 273 legacy group.
 - PRs #15, #16, #20, #25, #27, #28 were closed as superseded by merged PR #30/#31. PR #26 and #31 are merged. PR #29 is the documentation update PR. PR #13, #22, #23 and #24 remain separate future work.
 - Browser/mobile visual QA is still not independently verified.
+
+## 2026-11-26 — Query rotation merged and first live measurement
+- Current main: `891b2d74c2b30341613e0b49f163e14f0e2b95df`.
+- PR #32 merged at `1f7fc3fb624b827e91b2a797d7f4b7f63d2f8b79`: 36 editorial queries across six packs of six, deterministic KST morning/evening rotation, separate video/fancam discovery, and per-query yield/freshness diagnostics. PR #22 is closed as superseded.
+- PR #32 genuine PR CI #45729777536 passed 160/160 tests and validation. An intermediate run #45729619855 failed because query URL normalization stripped the potentially meaningful `source` parameter; the filter was narrowed to known tracking parameters and regression tests now preserve content-bearing `source`/ `ref` parameters.
+- First Production run using the six-pack query rotation: #45729843156 succeeded with 160/160 tests, collection, validation, data commit and Pages deployment. Node20 deprecation warning absent. Data commit: `891b2d74...`.
+- Run used pack index 4 (sixth? zero-based pack 4 = fifth pack) in the KST morning slot. Google RSS returned 54 candidates, Bing RSS 20; 767 total candidates (580 articles / 187 videos), 85 verified publisher articles and 70 verified Haewon article candidates.
+- Per-query sample: 오해원 팬미팅 기사 11 candidates / 0 explicit publisher URLs / 36% title-keyword proxy / median lag 13,481.6h; NMIXX Haewon festival 16 / 8 / 38% / 6,593.6h; Haewon stage appearance news 1 / 1 / 100% / 808.1h; 해원 공연 행사 11 / 1 / 64% / 9,304.6h; NMIXX Haewon showcase 13 / 10 / 62% / 9,710.6h; Haewon public schedule 2 / 0 / 100% / 38,497.8h. Title-keyword match is only a relevance proxy, not human-confirmed precision.
+- One pack is only an initial sample. Do not prune or promote query packs based on this single run. Compare at least two more distinct packs and multiple cycles for unique yield, overlap, explicit publisher URL rate and publication lag.
+- Thumbnail assignments 340, missing 427, unique URLs 68; 273 legacy shared-image assignments remain unchanged. Latest 12-URL response sample still has 11 image responses and one Sportalkorea HTTP 404; no unreachable, rate-limited or non-image successful responses.
+- This run's metadata enrichment attempted 10, found 7, assigned 7, missing 1, failed 2.
+- No new RSS feed source was added. SBS/Yonhap are still only discovery candidates via existing search providers; no publisher RSS feed allowlist expansion.
+- PR #14 closed as superseded by docs PR #29; PR #22 closed as superseded by PR #32. PR #13, #23 and #24 remain separate.
+- Mobile/browser visual QA remains unverified.
