@@ -1583,3 +1583,35 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - Latest quality metrics: 856 candidates (669 article / 187 video), 99 verified publisher articles, 76 verified Haewon articles, 58 verified Haewon articles with provenance thumbnails; 352 assigned / 504 missing; 80 unique thumbnail URLs; 273 legacy shared-image assignments preserved; 482 eligible / 0 reviewed; article human labels 0.
 - PR #50 only changed review persistence code/tests/docs. No collection source, RSS, search pack, thumbnail assignments, review labels, wrapper handling or storage destination changed.
 - No real Android Chrome QA was performed. User-reported checklist remains the only accepted device QA evidence.
+
+
+## 2026-11-26 — Thumbnail review queue hidden-disclosure fix (PR #52)
+
+### Fresh audit
+- Main `50644f26ee629c240d9e41c1fd119f7df4788c81`; open PRs 0 before work.
+- Latest PR CI #69 (`45795150292`) success; Production #608 (`45794790709`) success. Production generated data commit `d3d44f6252c7cdc8b01266d4779a54d262a8c029`; Pages artifact `15104173207` (602,298 bytes; SHA-256 `e441ecf28b60a6d85ae6a86649f4083d9140f042e2f85cbd6611142b713d6e05`).
+- Re-read latest SESSION_LOG, PROJECT_STATUS and all six continuity documents before coding.
+
+### Current data bottleneck
+- Quality metrics: 856 candidates (669 articles / 187 videos); 76 verified Haewon articles; 352 thumbnail assignments / 504 missing; 80 unique thumbnail URLs; 273 unverified legacy assignments; 482 thumbnail review candidates / 0 reviewed; article human review labels 0.
+- Production #608: 15 YouTube candidates (0 accepted, 15 duplicates); Google RSS 71, Bing RSS 40; 71 fetched / 64 unique incoming / 2 added; thumbnail enrichment 0 attempted / 0 assigned.
+- Human review progress is still zero; the queue usability path is therefore a key blocker worth checking before requesting more manual work.
+
+### Defect and evidence
+- The queue used `findNextUnreviewedThumbnail`, paginated to the candidate, then queried the row and called `scrollIntoView` and `select.focus`.
+- Each row is nested inside a collapsed `<details class="thumbnail-review-disclosure">`; the queue never opened this disclosure before trying to focus the hidden select.
+- MDN's `<details>` documentation states that its contents are hidden when closed and can be revealed by setting the `open` attribute; `HTMLDetailsElement.open` is the boolean reflecting this state.
+  - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
+  - https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement/open
+
+### Implemented on PR #52
+- Added `revealThumbnailReviewRow(row)` to open the containing disclosure and return whether the row was revealable.
+- Queue now opens the disclosure first and defers scrolling/focusing to the next animation frame.
+- Added unit tests for successful reveal and absent/invalid row, plus an integration contract asserting open → scroll → focus ordering.
+- PR: https://github.com/UForPel/haewon-archive/pull/52
+- Branch: `fix/open-thumbnail-review-details-before-focus-20261126`; first CI head `fcf66932cda87565a4f21fe40b238e7e7f298ca1`.
+
+### Scope
+- No collection/source/search-pack, data, thumbnail assignments, review labels, storage or backend changes.
+- Preserve all 273 legacy shared-image assignments. No new RSS, wrapper decoding, access bypass or automatic label upload.
+- PR CI/merge and Production/Pages verification are pending. Android Chrome QA remains unverified until user reports the checklist.
