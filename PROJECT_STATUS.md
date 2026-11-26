@@ -741,3 +741,10 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - PR #43 adds deterministic next-pending selection, advances after completion, wraps to the first remaining pending article, and announces the all-complete state. Labels remain localStorage-only with manual JSON import/export.
 - Added regression tests for forward progression, wraparound and empty queue. PR CI/archive validation and merge remain pending at this checkpoint; real mobile/device QA remains unverified.
 - No data files, sources, secrets, legacy thumbnails or collection behavior changed. No paid service, automatic upload or new RSS source was added.
+
+
+## 2026-11-26 — PR #43 merged; Production #602 running
+- PR #43 merged successfully as `c77d605cde6eac9476f7d187f77ac6c9c646adee`.
+- PR CI #47 (`45752743361`) passed on the final PR head `4a2e4557d6081ec17dc9453833a9b9263a55185c`: 193/193 tests and archive validation passed.
+- Production run #602 (`45752794835`) is running on main SHA `c77d605cde6eac9476f7d187f77ac6c9c646adee`. Collection/data commit/Pages deployment are not yet verified at this checkpoint.
+- Open PRs: 0. Real mobile visual/device QA remains unverified.
