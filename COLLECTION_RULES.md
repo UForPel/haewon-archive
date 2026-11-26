@@ -183,3 +183,9 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Query pack index 4 has now been observed twice in the same KST slot; use the next distinct pack for comparison. Title keyword match remains a proxy, not human relevance.
 - Production push ignores Markdown-only commits. Twice-daily schedule and manual dispatch remain active.
 - No new publisher RSS feeds are approved. SBS and Yonhap remain excluded as direct feed sources pending explicit applicable permission.
+
+## 2026-11-26 — Current query rotation checkpoint
+- Six editorial query packs × six unique phrases; deterministic KST morning/evening rotation. Two distinct packs are selected daily.
+- First production sample pack index 4: 54 Google and 20 Bing candidates. Query metrics are provisional and require additional pack samples.
+- Latest thumbnail audit: 12 URLs; 11 image responses and one HTTP 404. Preserve all 273 legacy shared-image assignments.
+- No new publisher RSS source without explicit applicable permission.

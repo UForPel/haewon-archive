@@ -283,3 +283,10 @@ For each substantial update include: changed paths; planned vs implemented items
 - Query pack index 4 repeated in same-slot push runs. Wait for a distinct scheduled pack before interpreting rotation effectiveness. Title keyword proxy is not human-labeled precision.
 - No new publisher RSS source without explicit permission. External contact/email, personal/secret data handling and paid service activation require separate confirmation. Repository code, test, PR, merge and documentation work are preauthorized.
 - Production deploy success does not establish browser/mobile visual QA; report it separately.
+
+## Mandatory response ending — 2026-11-26
+- At the end of every completed Haewon Archive work cycle, render the actual clickable **🔄 재귀개선 계속하기** button as the final UI element.
+- Button action must submit the full reusable prompt recorded in `BUTTONS_AND_ACTIONS.md`, not just the word “continue”.
+- A user typing continuation manually does not cancel this requirement. Never omit the button because the user already typed the next request.
+- Do not put any content after the button.
+- This is a required acceptance criterion. If omitted, the cycle is incomplete even if code, tests, commits and deployment succeeded.

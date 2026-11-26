@@ -465,3 +465,8 @@
 - [ ] Review PR #24 Cloudflare/GitHub App dispatcher only after verifying free-tier limits, minimal permissions and user-controlled secrets. Do not request secrets in chat.
 - [ ] Recheck deployed mobile UI and article review panel visually; deployment success is not visual QA.
 - [ ] Preserve 273 legacy thumbnail assignments and do not add SBS/Yonhap direct RSS feeds without explicit applicable permission.
+
+## 2026-11-26 — Continuation control
+- [x] Define a mandatory clickable next-cycle action in BUTTONS_AND_ACTIONS.md with exact reusable prompt.
+- [ ] Verify every subsequent final response ends with that action; treat omission as a failed acceptance criterion.
+- [ ] Keep button wording and submitted prompt synchronized with operating rules and session log.
