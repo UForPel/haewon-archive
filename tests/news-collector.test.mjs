@@ -175,11 +175,11 @@ test('per-query publication freshness separates recent, stale, unknown and futur
 
 import { classifyNewsFeedResponse } from '../scripts/collect-news.mjs';
 test('Bing feed response diagnostics distinguish RSS, Atom, HTML and empty bodies without storing response content',()=>{
- assert.equal(classifyBingFeedResponse('<rss><channel/></rss>','application/rss+xml'),'rss');
- assert.equal(classifyBingFeedResponse('<feed xmlns="http://www.w3.org/2005/Atom"/>','application/atom+xml'),'atom');
- assert.equal(classifyBingFeedResponse('<!doctype html><html/>','text/html'),'html');
- assert.equal(classifyBingFeedResponse('',''),'empty');
- assert.equal(classifyBingFeedResponse('unexpected payload','application/octet-stream'),'unknown');
+ assert.equal(classifyNewsFeedResponse('<rss><channel/></rss>','application/rss+xml'),'rss');
+ assert.equal(classifyNewsFeedResponse('<feed xmlns="http://www.w3.org/2005/Atom"/>','application/atom+xml'),'atom');
+ assert.equal(classifyNewsFeedResponse('<!doctype html><html/>','text/html'),'html');
+ assert.equal(classifyNewsFeedResponse('',''),'empty');
+ assert.equal(classifyNewsFeedResponse('unexpected payload','application/octet-stream'),'unknown');
 });
 test('Bing non-RSS responses retain status and content type diagnostics without retaining body text',async()=>{
  const result=await collectFeeds({queries:['diagnostic query'],fetchImpl:async url=>{
