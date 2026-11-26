@@ -478,3 +478,12 @@
 - [ ] Verify PR CI and current-main merge.
 - [ ] Compare at least three distinct query packs before changing search strategy; combine freshness with explicit publisher URL rate, unique yield and human-reviewed relevance labels.
 - [ ] Keep stale/unknown candidates visible as historical candidates unless a separate, reviewed display policy is approved.
+
+
+## Publication freshness measurement — verified 2026-11-26
+- [x] Merge per-query 7-/30-day freshness rates and 7/30/90-day age buckets with unknown/future categories (PR #41).
+- [x] Verify genuine PR CI #42: 190/190 tests and archive validation passed.
+- [x] Verify Production #600: tests, collection, validation, data commit and Pages deployment succeeded.
+- [x] Persist first live pack-5 freshness sample: 0/69 within 7 days; 8/69 within 30 days; 46/69 older than 90 days.
+- [ ] Compare at least three distinct query packs before changing search strategy; combine freshness with unique yield, explicit publisher URL rate and human-reviewed relevance labels.
+- [ ] Manually inspect mobile layout, tap targets, focus and review controls on the deployed Pages site.
