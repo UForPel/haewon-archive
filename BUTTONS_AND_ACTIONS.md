@@ -308,3 +308,11 @@ The assistant MUST render a real clickable button at the very bottom of every co
 - Thumbnail enrichment: 9 attempted, 7 assigned, 2 missing. The 273 legacy group is unchanged.
 - Latest Pages deployment succeeded. Mobile visual QA remains unverified.
 - Always finish the assistant response with the full-prompt **🔄 재귀개선 계속하기** conversation button.
+
+
+## 2026-11-26 — Human-review queue controls (PR pending)
+- Article review panel now has planned/implemented-on-branch controls: **다음 미검수 기사** and **미검수만 보기 / 전체 기사 보기**. These act on the existing browser-local seven-dimension review labels.
+- Completing all seven dimensions removes that record from pending-only view. Explicit uncertain is considered reviewed but does not count as positive relevance.
+- Labels remain in localStorage; JSON export/import is manual. No server or GitHub upload was added.
+- PR CI and deployment pending; mobile real-device QA remains unverified.
+- Mandatory ChatGPT continuation control remains the final element in every completed response: **🔄 재귀개선 계속하기**.
