@@ -101,8 +101,16 @@ export function extractBingNewsArticleUrl(value=''){
   return article.href;
  }catch{return '';}
 }
+export function classifyBingFeedResponse(body='',contentType=''){
+ const text=String(body||'').trimStart(),type=String(contentType||'').toLowerCase();
+ if(/<rss\b/i.test(text))return 'rss';
+ if(/<feed\b/i.test(text)||/application\/(?:atom|atom\+xml)/i.test(type))return 'atom';
+ if(/<!doctype\s+html|<html\b/i.test(text)||type.includes('text/html'))return 'html';
+ if(!text)return 'empty';
+ return 'unknown';
+}
 export function parseBingNewsRss(xml,query,now=new Date().toISOString()){
- if(typeof xml!=='string'||!/<rss\b/i.test(xml))throw new Error('Bing RSS 응답이 아닙니다');
+ if(typeof xml!=='string'||classifyBingFeedResponse(xml)!=='rss')throw new Error('Bing RSS 응답이 아닙니다');
  return [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map(([,raw])=>{
   const title=tag(raw,'title'),discoveryUrl=tag(raw,'link'),articleUrl=extractBingNewsArticleUrl(discoveryUrl);
   if(!title||!articleUrl)return null;
@@ -360,15 +368,20 @@ export async function collectFeeds({queries=getDailySearches(),fetchImpl=fetch,n
  }
  let bingSuccessfulQueries=0;
  for(const query of queries){
+  let responseStatus=null,contentType='',responseFormat='';
   try{
    const response=await fetchImpl(bingNewsFeedUrl(query),{headers:{'user-agent':'HaewonArchiveBot/0.2 (public Bing News RSS)'},signal:AbortSignal.timeout(20000)});
+   responseStatus=Number.isFinite(Number(response.status))?Number(response.status):null;
+   contentType=String(response.headers?.get?.('content-type')||'');
    if(!response.ok)throw new Error('HTTP '+response.status);
-   const xml=await response.text(),signals=summarizeBingRssImageSignals(xml);
+   const xml=await response.text();
+   responseFormat=classifyBingFeedResponse(xml,contentType);
+   const signals=summarizeBingRssImageSignals(xml);
    for(const [key,value] of Object.entries(signals))bingRssImageSignals[key]=(bingRssImageSignals[key]||0)+value;
    const rows=parseBingNewsRss(xml,query,now);
    incoming.push(...rows);
    bingSuccessfulQueries++;
-  }catch(error){bingFailures.push({query,error:String(error?.message||error)});}
+  }catch(error){bingFailures.push({query,error:String(error?.message||error),status:responseStatus,contentType,responseFormat});}
  }
  return {incoming,failures,queries:queries.length,successfulQueries:queries.length-failures.length,bingSuccessfulQueries,bingFailures,bingCandidates:incoming.filter(item=>item.discoverySource==='bing-news-rss').length,rssImageSignals,bingRssImageSignals};
 }
