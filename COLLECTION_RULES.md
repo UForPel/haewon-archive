@@ -384,3 +384,10 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Production #610 run log: 15 YouTube candidates, 0 accepted, 15 duplicates; Google News RSS 94 items; Bing News RSS 39 items; archive validation passed. Current archive: 857 candidates (670 articles / 187 videos), 352 thumbnails assigned / 505 missing, 80 unique URLs; 273 legacy shared-image assignments retained; 482 thumbnail-review eligible / 0 reviewed; article human relevance labels 0.
 - PR #54 changes only browser-local review interaction: after a manually selected label is successfully saved, the next pending candidate is opened, scrolled into view and focused. Failed storage writes preserve the previous label and do not advance. No review labels were created or uploaded.
 - No collection sources, RSS, query pack, thumbnail assignments, labels, storage destination or backend changed. No new RSS, wrapper decoding, access bypass, paid service or external transmission. Android Chrome QA remains UNVERIFIED.
+
+
+## 2026-11-26 — Repeated-image review UI only
+- Repeated-image auto-advance is a browser-local review interaction and does not alter collection, RSS, URL provenance, thumbnail assignment, or retry policies.
+- Preserve all 273 legacy shared-image assignments; never bulk-copy a label across records or auto-delete/replace the shared URL.
+- 199 of the 273 records have source-site URLs but 0 have explicit publisher article URLs; source-site metadata is not an article URL. Do not infer a publisher URL or decode Google News wrappers.
+- Keep the 12 wrapper-only metadata entries untouched. Do not add SBS/Yonhap or other RSS sources without explicit permission.

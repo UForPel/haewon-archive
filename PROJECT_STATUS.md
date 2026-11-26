@@ -919,3 +919,12 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Production #610 run log: 15 YouTube candidates, 0 accepted, 15 duplicates; Google News RSS 94 items; Bing News RSS 39 items; archive validation passed. Current archive: 857 candidates (670 articles / 187 videos), 352 thumbnails assigned / 505 missing, 80 unique URLs; 273 legacy shared-image assignments retained; 482 thumbnail-review eligible / 0 reviewed; article human relevance labels 0.
 - PR #54 changes only browser-local review interaction: after a manually selected label is successfully saved, the next pending candidate is opened, scrolled into view and focused. Failed storage writes preserve the previous label and do not advance. No review labels were created or uploaded.
 - No collection sources, RSS, query pack, thumbnail assignments, labels, storage destination or backend changed. No new RSS, wrapper decoding, access bypass, paid service or external transmission. Android Chrome QA remains UNVERIFIED.
+
+
+## 2026-11-26 — Repeated-image review auto-advance (PR candidate)
+- Fresh baseline main 78f0d3854e1338c5a5c94705dc2fc54fbcaf4734; open PRs 0; PR CI #77 and Production #610 succeeded; data commit 46572b91bc23d3b74f91ae9954332858980346cd; Pages artifact 15114537998.
+- Latest production: 857 candidates (670 articles / 187 videos), 100 explicit publisher article URLs, 76 verified Haewon articles, 352 thumbnails assigned / 505 missing, 80 unique URLs, 273 legacy shared-image assignments, 482 thumbnail-review eligible / 0 reviewed, 0 article human review labels.
+- 273 legacy records have no publisher article URL and no alternative image candidate URLs; 199 do have source-site URLs, which are not substituted for explicit article URLs. Preserve all 273 assignments. 12 Google News wrapper-only metadata entries remain untouched.
+- New bottleneck: repeated-image group review did not auto-advance after successful per-article label saves, unlike the single-candidate review queue. PR candidate reuses the existing filtered next-pending action after a successful localStorage write only. Failed writes do not advance.
+- Added integration contract. CI/merge/Production/Pages pending. No labels generated/uploaded, no source changes, and no automated image replacement.
+- Android Chrome QA remains UNVERIFIED pending user-reported device checklist.

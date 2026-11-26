@@ -1663,3 +1663,32 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - Production #610 run log: 15 YouTube candidates, 0 accepted, 15 duplicates; Google News RSS 94 items; Bing News RSS 39 items; archive validation passed. Current archive: 857 candidates (670 articles / 187 videos), 352 thumbnails assigned / 505 missing, 80 unique URLs; 273 legacy shared-image assignments retained; 482 thumbnail-review eligible / 0 reviewed; article human relevance labels 0.
 - PR #54 changes only browser-local review interaction: after a manually selected label is successfully saved, the next pending candidate is opened, scrolled into view and focused. Failed storage writes preserve the previous label and do not advance. No review labels were created or uploaded.
 - No collection sources, RSS, query pack, thumbnail assignments, labels, storage destination or backend changed. No new RSS, wrapper decoding, access bypass, paid service or external transmission. Android Chrome QA remains UNVERIFIED.
+
+
+## 2026-11-26 — Repeated-image review auto-advance (PR candidate)
+
+### Fresh baseline and data findings
+- Rechecked latest main SHA 78f0d3854e1338c5a5c94705dc2fc54fbcaf4734; open PRs 0. Latest PR CI #77 (45813947674) and Production #610 (45813683219) succeeded. Production generated data commit 46572b91bc23d3b74f91ae9954332858980346cd and Pages artifact 15114537998 (613,063 bytes); deployment job succeeded.
+- Re-read SESSION_LOG, PROJECT_STATUS, ROADMAP, BUTTONS_AND_ACTIONS, COLLECTION_RULES and CHATGPT_OPERATING_RULES on main.
+- Production metrics generated 2026-11-26T11:47:26Z: 857 candidates (670 articles / 187 videos); 100 explicit publisher article URLs; 76 verified Haewon articles; 352 thumbnails assigned / 505 missing; 80 unique thumbnail URLs; 273 legacy shared-image assignments; 482 thumbnail review candidates / 0 reviewed; article relevance labels 0.
+- 273 legacy shared-image assignments have zero explicit publisher article URLs and zero alternative candidate URLs; 199 have source-site URLs, but source-site URLs are not treated as article URLs. Metadata outcome remains not-attempted. Keep all assignments unchanged.
+- 12 wrapper-only Google News metadata entries remain unprocessed; 505 missing thumbnails are a mixture of records without an eligible per-record image URL and source-level access/metadata failures. Current sample audit checks only 12 unique image URLs and cannot establish all 505 as broken.
+- Production #610 had thumbnail enrichment attempted/found/assigned all 0 because the latest collection did not produce new enrichment attempts; do not confuse that run-local zero with historical persisted thumbnail coverage. The comparison metric separately reports persisted meta candidates and latest-run attempts.
+
+### Selected bottleneck
+- The single-candidate thumbnail review flow now auto-advances after a successful local save (PR #54), but the separate repeated-image group review panel still required a manual click on “다음 미검수 기사” after each per-article label.
+- This matters for the 273-record legacy repeated-image group. Its labels must remain per-article; no bulk/shared label is appropriate. The repeated-group queue already filters by search and exposes a next-pending action, so reusing it avoids duplicating selection/focus logic.
+
+### Research and trade-offs
+- MDN requestAnimationFrame documents a one-shot callback before the next repaint: https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame
+- MDN HTMLElement.focus documents focus transfer and preventScroll: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus
+- MDN ARIA live regions explains polite announcements for dynamic updates without moving focus: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions
+- Chosen approach: only after the transactional localStorage write succeeds, update progress and schedule the existing repeatedReviewNext action on the next animation frame. The existing action respects the current search filter, finds the next unreviewed article, scrolls and focuses its select. Failed writes restore the previous value and do not advance.
+- Alternatives: require another click (safe but repetitive); bulk-label all 273 rows (rejected because image relevance and rights are article-specific); add server-side sync (rejected for privacy and free-only constraints). Risk of unexpected focus movement is bounded to explicit user-selected labels after successful local save. Live status remains polite and focus goes to the next actionable select.
+
+### Implementation on branch
+- Branch feat/repeated-thumbnail-review-auto-advance-20261126.
+- Updated js/discovery-view.mjs repeated-group row save handler to schedule repeatedReviewNext.click() after successful persistence only; added clear progress status. Failure path unchanged.
+- Added integration contract in tests/review-queue-integration.test.mjs verifying auto-advance is after successful persistence and before the failure branch.
+- No labels, article records, thumbnail URLs, sources, RSS feeds, or collection policies changed. No auto-label, upload, wrapper decoding, access bypass, paid service or external transmission. Preserve 273 legacy assignments.
+- PR CI, merge, Production and Pages verification pending. Android Chrome QA remains UNVERIFIED.
