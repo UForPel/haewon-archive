@@ -333,3 +333,9 @@ For each substantial update include: changed paths; planned vs implemented items
 - The explicit **다음 미검수 기사** control uses the same focus helper.
 - Add regression tests for ordering/wraparound/no-pending state. Do not claim real mobile QA from source inspection or CI.
 - Keep labels localStorage-only and manual JSON import/export. No automatic transfer or backend.
+
+
+## 2026-11-26 — Review queue auto-advance merged
+- PR #43 merged after CI #47 passed 193/193 tests and archive validation.
+- Production #602 must be independently checked for collection/data commit/Pages deployment; no success is inferred from merge or PR CI.
+- Real mobile visual, focus, tap-target and import/export QA remains separate and outstanding.
