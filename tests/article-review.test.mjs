@@ -1,7 +1,7 @@
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import assert from 'node:assert/strict';
-import { getVerifiedHaewonArticles, summarizeArticleReviews, validateArticleReviewExport, buildLegacyThumbnailAudit, auditVerifiedPublisherArticles, formatArticleReviewProgress } from '../js/article-review.mjs';
+import { getVerifiedHaewonArticles, summarizeArticleReviews, validateArticleReviewExport, filterArticleReviews, isArticleReviewComplete, buildLegacyThumbnailAudit, auditVerifiedPublisherArticles, formatArticleReviewProgress } from '../js/article-review.mjs';
 
 const base = { id: 'a', title: '오해원 인터뷰', url: 'https://news.test/a', publisherArticleUrl: 'https://news.test/a', publishedAt: '2026-11-20T00:00:00Z', sourceName: '뉴스', thumbnailUrl: 'https://img.test/a.jpg' };
 test('review scope contains only explicit publisher HTTPS Haewon articles and excludes videos', () => {
@@ -125,4 +125,26 @@ test('article review UI is local-only, import/export enabled and mounted in the 
  assert.match(ui,/JSON 내보내기/);
  assert.match(ui,/JSON 가져오기/);
  assert.match(ui,/서버나 저장소로 자동 전송되지 않습니다/);
+});
+
+
+test('pending review queue keeps partial and uncertain reviews until all seven dimensions are labeled',()=>{
+ const complete={articleId:'a',relevance:'uncertain',originalAccess:'accessible',dateAccuracy:'accurate',sourceAccuracy:'accurate',categoryAccuracy:'correct',thumbnailAccuracy:'not-present',contentType:'article'};
+ const partial={articleId:'b',relevance:'indirect'};
+ const items=[{...base,id:'a'},{...base,id:'b'},{...base,id:'c'}];
+ const labels={a:complete,b:partial};
+ assert.equal(isArticleReviewComplete(items[0],labels),true);
+ assert.equal(isArticleReviewComplete(items[1],labels),false);
+ assert.deepEqual(filterArticleReviews(items,labels,'pending').map(item=>item.id),['b','c']);
+ assert.deepEqual(filterArticleReviews(items,labels,'all').map(item=>item.id),['a','b','c']);
+ const report=summarizeArticleReviews(items,labels);
+ assert.equal(report.fullyReviewed,1); assert.equal(report.pendingArticles,2);
+});
+
+test('article review UI exposes pending-only and next-pending controls without server upload',async()=>{
+ const ui=await readFile(new URL('../js/article-quality-review-ui.mjs',import.meta.url),'utf8');
+ assert.match(ui,/미검수만 보기/); assert.match(ui,/다음 미검수 기사/);
+ assert.match(ui,/filterArticleReviews/); assert.match(ui,/isArticleReviewComplete/);
+ assert.match(ui,/scrollIntoView/); assert.match(ui,/localStorage/);
+ assert.doesNotMatch(ui,/fetch\(['\"]https?:/);
 });

@@ -707,3 +707,12 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Google RSS: 27 items, 0 explicit publisher article URLs, 0 image signals. Bing RSS: 42 items, all 42 with explicit publisher URLs, 0 RSS image signals. No new publisher feed was added.
 - Thumbnail enrichment: 9 attempts, 7 found and assigned, 2 missing, 0 failed. Archive thumbnail state: 349 assigned, 469 missing, 77 unique URLs; all 273 unverified legacy shared-image assignments remain preserved.
 - Mobile browser/tap-target/visual QA remains unverified. Deployment success is not a substitute for that review.
+
+
+## 2026-11-26 — Mobile-friendly human-review queue improvement (PR pending)
+- Current main at cycle start: `a3e0bfd6c316ca5f789fa0af75fa7cee071d1167`; open PRs: 0. Latest Actions: PR CI #42 and Production #600 succeeded, but both predate the current docs-only main commits; Production data commit remains `4643892a7d1a293adaafe8d7c926011b0027fd5e`.
+- Current review baseline: 75 eligible verified-Haewon article candidates; `data/relevance-reviews.json` is empty (`[]`); human-reviewed relevance precision remains unavailable. Review labels stay browser-local and require manual JSON export/import.
+- Chosen bottleneck: make the existing seven-dimension human review queue practical on a phone by filtering incomplete records and jumping to the next incomplete article. No automatic upload or public-label publication is introduced.
+- Implemented on branch `feat/review-queue-mobile-20261126`: pure queue helpers, pending-only filter, next-pending navigation, and automatic removal from the pending view when all seven dimensions are complete. Uncertain is a valid explicit judgment and counts as reviewed, not as positive relevance.
+- PR CI, archive validation, merge and post-merge Production/Pages verification pending. Mobile visual/tap-target QA remains unverified until a real browser check.
+- No candidate deletion, RSS expansion, external contact, paid dependency, secret transfer or change to the 273 legacy thumbnail group.

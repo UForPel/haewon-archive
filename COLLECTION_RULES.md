@@ -204,3 +204,10 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - This sample is too small and represents only one query pack. Do not automatically remove or promote query terms based on it.
 - Google RSS sample: 27 items, no explicit publisher article URLs or image signals. Bing RSS sample: 42 items, 42 explicit article URLs, no RSS image signals.
 - Preserve historical candidates and the 273 legacy thumbnail group. No SBS/Yonhap feed addition without explicit applicable permission.
+
+
+## 2026-11-26 — Human review evidence boundary
+- Automated title matches, publication freshness, publisher URL provenance and thumbnail metadata are diagnostic proxies; do not label them human-confirmed relevance.
+- Article review requires seven independent dimensions. Explicit uncertain labels count as reviewed for workflow progress but must not be counted as positive relevance/accuracy.
+- Human labels remain localStorage-only until the user manually exports/imports JSON. Do not upload browser labels automatically or collect personal notes.
+- Do not change query-pack selection from proxy scores alone; require a meaningful human-reviewed sample and repeated pack observations.

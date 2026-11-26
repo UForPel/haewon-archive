@@ -1,5 +1,5 @@
 import { classifyDiscoveryCategories } from './discovery-kind.mjs';
-import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, getArticleUrlContext } from './article-review.mjs';
+import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete } from './article-review.mjs';
 
 const host = document.querySelector('#article-quality-review');
 if (host) {
@@ -21,6 +21,18 @@ if (host) {
   const intro = document.createElement('p'); intro.textContent = '개별 HTTPS 원문 주소가 명시된 해원 관련 항목을 대상으로 합니다. 기사·소셜 게시물·프로필을 먼저 구분하고 일곱 항목을 따로 평가하세요. 썸네일은 기사 내용과 실제로 일치하는지 확인하고, 이미지가 없으면 이미지 없음으로 표시하세요. 검수 라벨은 이 브라우저에만 저장되며 서버나 저장소로 자동 전송되지 않습니다. 개인정보는 메모에 입력하지 마세요. JSON 내보내기/가져오기로 수동 이동할 수 있습니다.';
   const progress = document.createElement('p'); progress.className = 'photo-meta'; progress.setAttribute('role', 'status'); progress.setAttribute('aria-live', 'polite');
   const actions = document.createElement('div'); actions.className = 'photo-actions';
+  let showPendingOnly = false;
+  const filterButton = document.createElement('button'); filterButton.type = 'button'; filterButton.textContent = '미검수만 보기';
+  filterButton.addEventListener('click', () => { showPendingOnly = !showPendingOnly; filterButton.textContent = showPendingOnly ? '전체 기사 보기' : '미검수만 보기'; render(); });
+  const nextButton = document.createElement('button'); nextButton.type = 'button'; nextButton.textContent = '다음 미검수 기사';
+  nextButton.addEventListener('click', () => {
+    showPendingOnly = true; filterButton.textContent = '전체 기사 보기'; render();
+    const first = list.querySelector('.article-quality-review-row');
+    if (!first) { progress.textContent = '모든 검수 대상의 일곱 항목이 완료되었습니다.'; return; }
+    first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    first.querySelector('select')?.focus({ preventScroll: true });
+    progress.textContent = '다음 미검수 기사로 이동했습니다. 일곱 항목을 확인해 주세요.';
+  });
   const exportButton = document.createElement('button'); exportButton.type = 'button'; exportButton.textContent = '기사 검수 JSON 내보내기';
   exportButton.addEventListener('click', () => {
     const blob = new Blob([JSON.stringify({ schemaVersion: 1, exportedAt: new Date().toISOString(), labels }, null, 2)], { type: 'application/json' });
@@ -32,7 +44,7 @@ if (host) {
     try { const file = importInput.files?.[0]; if (!file) return; const parsed = validateArticleReviewExport(await file.text(), articles.map(item => item.id)); labels = { ...labels, ...parsed.labels }; localStorage.setItem(STORAGE_KEY, JSON.stringify(labels)); render(); }
     catch { alert('검수 JSON 파일을 읽지 못했습니다.'); } finally { importInput.value = ''; }
   });
-  actions.append(exportButton, importButton, importInput);
+  actions.append(nextButton, filterButton, exportButton, importButton, importInput);
   const list = document.createElement('div'); list.className = 'article-quality-review-list';
   body.append(intro, progress, actions, list); details.append(summary, body); host.append(details);
   let articles = [];
@@ -45,8 +57,8 @@ if (host) {
       ' · 출처 '+report.dimensions.sourceAccuracy.reviewed+'/'+report.eligible+
       ' · 분류 '+report.dimensions.categoryAccuracy.reviewed+'/'+report.eligible;
     list.replaceChildren();
-    for (const item of articles) {
-      const row = document.createElement('article'); row.className = 'article-quality-review-row';
+    for (const item of filterArticleReviews(articles, labels, showPendingOnly ? 'pending' : 'all')) {
+      const row = document.createElement('article'); row.className = 'article-quality-review-row'; row.dataset.articleId = String(item.id);
       const title = document.createElement('a'); title.href = item.publisherArticleUrl; title.target = '_blank'; title.rel = 'noopener noreferrer'; title.textContent = item.title; title.className = 'article-quality-review-title';
       const meta = document.createElement('p'); meta.className = 'photo-meta';
       const date = item.publishedAt ? new Date(item.publishedAt).toLocaleDateString('ko-KR') : '날짜 없음';
@@ -67,7 +79,7 @@ if (host) {
           if (!select.value) delete next[dimension];
           labels[String(item.id)] = next;
           try { localStorage.setItem(STORAGE_KEY, JSON.stringify(labels)); progress.textContent = '저장됨 · '+item.title; } catch { progress.textContent = '브라우저 저장 공간에 기록하지 못했습니다.'; }
-          updateProgress();
+          if (showPendingOnly && isArticleReviewComplete(item, labels)) render(); else updateProgress();
         });
         label.append(select); fields.append(label);
       }
