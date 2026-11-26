@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { summarizeCollection, auditLinks, summarizeThumbnailUrls, auditThumbnailResponses, summarizeThumbnailEnrichmentByHost } from '../scripts/quality-metrics.mjs';
+import { summarizeCollection, auditLinks, summarizeThumbnailUrls, auditThumbnailResponses, summarizeThumbnailEnrichmentByHost, classifyMissingThumbnailReason, summarizeMissingThumbnailDiagnostics } from '../scripts/quality-metrics.mjs';
 test('source coverage and classification metrics are based on candidate data',()=>{
  const report=summarizeCollection({videos:[{id:'v1'}],discovery:[{title:'Haewon official interview',sourceName:'A',url:'https://example.com/a',thumbnailUrl:'https://example.com/t',publishedAt:'2026-11-23'},{title:'Haewon event',sourceName:'A',url:'https://example.com/b'}],newsStatus:{requestedQueries:4,successfulQueries:3,fetched:5,uniqueIncoming:4,added:2,totalCandidates:10},videoStatus:{status:'success'},reviews:[]});
  assert.equal(report.sources[0].source,'A');assert.equal(report.sources[0].items,2);assert.equal(report.sources[0].thumbnailCoverage,50);assert.equal(report.collection.newsQuerySuccessRate,75);assert.equal(report.sourceCollectionStatus[0].successRate,75);assert.equal(report.sourceCollectionStatus[1].successRate,100);assert.equal(report.collection.videosTotal,1);assert.equal(report.collection.duplicateGroupsCurrent,2);assert.equal(report.collection.duplicateItemsCollapsedCurrent,0);assert.equal(report.classification.reviewedSamples,0);assert.equal(report.classification.accuracy,null);assert.equal(report.classification.accuracyLabel,'not measured (no category review labels)');
@@ -107,4 +107,29 @@ test('social profile and post URLs are excluded from publisher article coverage 
  assert.equal(report.sources.find(row=>row.source==='X').publisherArticleUrlCoverage,0);
  assert.equal(report.discoveryRelevance.verifiedPublisherArticles,0);
  assert.equal(report.discoveryRelevance.verifiedHaewonArticles,0);
+});
+
+test('missing thumbnail reasons use only explicit article, image and fetch metadata',()=>{
+ assert.equal(classifyMissingThumbnailReason({url:'https://news.google.com/rss/articles/opaque',sourceUrl:'https://publisher.example/'}),'google-news-wrapper-without-publisher-article-url');
+ assert.equal(classifyMissingThumbnailReason({url:'https://publisher.example/story',publisherArticleUrl:'https://publisher.example/story',thumbnailMetaFetch:{status:'failed',errorCode:'forbidden'}}),'publisher-fetch-failed:forbidden');
+ assert.equal(classifyMissingThumbnailReason({url:'https://publisher.example/story',publisherArticleUrl:'https://publisher.example/story',thumbnailMetaFetch:{status:'missing'}}),'publisher-page-no-image-candidate');
+ assert.equal(classifyMissingThumbnailReason({url:'https://publisher.example/story',publisherArticleUrl:'https://publisher.example/story',thumbnailCandidates:[{url:'https://img.publisher.example/a.jpg'}]}),'explicit-image-candidate-not-assigned');
+ assert.equal(classifyMissingThumbnailReason({url:'https://publisher.example/story',publisherArticleUrl:'https://publisher.example/story'}),'publisher-metadata-not-attempted-or-not-recorded');
+ assert.equal(classifyMissingThumbnailReason({url:'https://publisher.example/story',thumbnailUrl:'https://img.publisher.example/a.jpg'}),null);
+});
+test('missing thumbnail diagnostics separate source-site links from publisher article URLs',()=>{
+ const report=summarizeMissingThumbnailDiagnostics([
+  {sourceName:'Google News',url:'https://news.google.com/rss/articles/opaque',sourceUrl:'https://publisher.example/'},
+  {sourceName:'Publisher',url:'https://publisher.example/story',publisherArticleUrl:'https://publisher.example/story',thumbnailMetaFetch:{status:'failed',errorCode:'forbidden'}},
+  {sourceName:'Publisher',url:'https://publisher.example/other',publisherArticleUrl:'https://publisher.example/other',thumbnailMetaFetch:{status:'missing'}},
+  {sourceName:'Publisher',url:'https://publisher.example/has-image',publisherArticleUrl:'https://publisher.example/has-image',thumbnailUrl:'https://img.publisher.example/a.jpg'}
+ ]);
+ assert.equal(report.items,4);assert.equal(report.missing,3);assert.equal(report.classified,3);assert.equal(report.unclassified,0);
+ assert.equal(report.byReason['google-news-wrapper-without-publisher-article-url'],1);
+ assert.equal(report.byReason['publisher-fetch-failed:forbidden'],1);
+ assert.equal(report.byReason['publisher-page-no-image-candidate'],1);
+ const google=report.bySource.find(row=>row.source==='Google News');
+ assert.equal(google.missingWithPublisherArticleUrl,0);assert.equal(google.missingWithSourceSiteUrl,1);
+ const publisher=report.bySource.find(row=>row.source==='Publisher');
+ assert.equal(publisher.missing,2);assert.equal(publisher.missingWithPublisherArticleUrl,2);
 });
