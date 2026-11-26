@@ -330,3 +330,10 @@ The assistant MUST render a real clickable button at the very bottom of every co
 - The article review panel now includes **다음 미검수 기사** and **미검수만 보기 / 전체 기사 보기**. Completion requires all seven dimensions; uncertain is a completed non-positive judgment.
 - Labels remain browser-local and manual JSON export/import only. Committed labels are still zero. Mobile visual QA remains outstanding.
 - Mandatory ChatGPT follow-up control remains the final response element: **🔄 재귀개선 계속하기**.
+
+
+## 2026-11-26 — Review queue auto-advance control update
+- The existing **다음 미검수 기사** button now shares the same scroll/focus helper used by automatic advancement.
+- Completing all seven dimensions while **미검수만 보기** is active removes the completed row and moves focus to the next pending article; navigation wraps to the first remaining pending item.
+- When no pending item remains, the status announces completion. Labels remain localStorage-only; import/export remains manual.
+- PR #43 is pending CI/merge at this checkpoint. Keep the ChatGPT **🔄 재귀개선 계속하기** conversation button as the final element of every completed cycle.
