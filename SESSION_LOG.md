@@ -1441,3 +1441,18 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - No human-reviewed labels committed (0). No Playwright/Puppeteer/browser dependency exists; no actual phone/browser visual QA was performed. CSS/UI contract tests do not equal device QA.
 - Final main at data checkpoint: `7753a02be1ad512a44348b67e483ee75038c6b7a`; open PRs: 0.
 - No new RSS feeds, no automatic review-label upload, no paid services or external contacts. All 273 legacy shared-thumbnail assignments remain intact.
+
+
+## 2026-11-26 — Review JSON round-trip and compact queue (PR candidate)
+
+Baseline main 8eca12b0f2ca032b58135d206a1141dbaa49c8a4; open PRs 0. Production #604 (45759271205) passed 195 tests, collection and validation. Generated data commit fbfaa5512ebff0c93db70ff11d7ee9bb4ad01b54. Pages artifact 15088809574, 571098 bytes, SHA-256 a4b872c7a4b335b6d6dc8344f1e408a72bb03babc77d164988e6e2162857df8d; Pages deployment reported success for 8eca12b0f2ca032b58135d206a1141dbaa49c8a4. Data: 856 candidates, 76 verified Haewon articles, 0 human labels, 352 thumbnails assigned / 504 missing; 273 legacy shared-image assignments retained. Production #604 news: 67 fetched / 60 unique / 2 added; Google and Bing each 6/6 queries. Google RSS 26 items, 0 explicit publisher URLs, 0 image signals. Bing RSS 41 items, 41 explicit publisher URLs, 0 image signals. Thumbnail enrichment 0 attempted / 0 assigned.
+
+Added pure Node helpers for schema-clean JSON export and safe import merge with eligible-ID filtering. UI uses the helpers; invalid imports do not mutate current labels.
+
+Review rows are collapsed individually by default; next-pending opens the selected row before scrolling and focusing its first select. Added tests for round-trip, unknown-field stripping, allow-list, merge preservation, invalid-import immutability and collapsed-row focus behavior.
+
+No browser automation dependency, backend, automatic upload, collection change, query-pack change or thumbnail rewrite was added.
+
+Actual Android QA has not been performed. Manual checklist: open Pages in Android Chrome; inspect narrow screen; expand/collapse a row; use all seven selects; verify next-pending opens and focuses the next row; refresh and confirm persistence; export JSON and import it; verify merge and no server transfer. Do not clear site storage to simulate quota errors.
+
+Next: pass PR CI and archive validation; then merge. User-performed Android QA remains a separate outstanding item. Preserve 273 legacy thumbnail assignments and source permissions.
