@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T11:47:26.544Z",
+  "generatedAt": "2026-11-26T11:57:06.286Z",
   "discoveryRelevance": {
     "totalCandidates": 857,
     "articleCandidates": 670,
@@ -535,13 +535,13 @@
     "newsQueriesRequested": 6,
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
-    "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 39,
+    "bingNewsQueriesSuccessful": 5,
+    "bingNewsCandidates": 37,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
     "newsCandidatesTotal": 857,
-    "newsUniqueFetched": 87,
+    "newsUniqueFetched": 61,
     "newsAddedLastRun": 2,
     "duplicateBeforeMergeLastRun": 7,
     "duplicateGroupsCurrent": 857,
@@ -549,8 +549,8 @@
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 94,
-      "after": 86,
+      "before": 68,
+      "after": 60,
       "collapsed": 8,
       "method": "normalized exact headline first; canonical URL fallback"
     },
@@ -1243,8 +1243,8 @@
     {
       "source": "Bing News RSS",
       "requested": 6,
-      "successful": 6,
-      "successRate": 100
+      "successful": 5,
+      "successRate": 83
     }
   ],
   "classification": {
@@ -2135,7 +2135,7 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 2,
+    "rateLimited": 0,
     "unreachable": 1,
     "thumbnailMissing": 505,
     "results": [
@@ -2280,8 +2280,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE05RDlFY3JYUEtwc1hLaXNLbEE5RVhYMzFUM2tWZ0NUb1ZpRngweTRwcTFYNFBWaWxyX1V2QXJtYi11TkNsMGQ4ZUZScFhwUDc4Y2xFSjJyTlZxRUY5?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2376,8 +2376,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0zWFh5VWo5TTMyMmJ6NFZobmNKbHZJa0dYMDdGOU5qeFNZT3lZbmdBLVVRMWxjY21SMktiM185WHJVY2tFV09lUEw4RlZaaXpnZ1plandLXzFJREpu?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -4581,7 +4581,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T11:47:26.560Z",
+    "generatedAt": "2026-11-26T11:57:06.301Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

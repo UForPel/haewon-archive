@@ -19,24 +19,24 @@
   },
   "evidence": {
     "cumulativeDiscoveryCandidates": 857,
-    "currentRunCandidates": 94,
+    "currentRunCandidates": 68,
     "uniqueVideoRecords": 20,
     "queryYield": [
       {
         "query": "NMIXX Haewon Japan news",
-        "candidates": 14
+        "candidates": 13
       },
       {
         "query": "오해원 해외 활동",
-        "candidates": 15
+        "candidates": 21
       },
       {
         "query": "Haewon international interview",
-        "candidates": 1
+        "candidates": 0
       },
       {
         "query": "엔믹스 해원 활동 소식",
-        "candidates": 48
+        "candidates": 18
       },
       {
         "query": "Haewon radio appearance",
@@ -48,9 +48,9 @@
       }
     ],
     "highestYieldQueries": [
-      "엔믹스 해원 활동 소식",
       "오해원 해외 활동",
-      "NMIXX Haewon Japan news"
+      "엔믹스 해원 활동 소식",
+      "NMIXX Haewon television"
     ]
   },
   "evaluation": {
