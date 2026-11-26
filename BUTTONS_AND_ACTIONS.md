@@ -266,3 +266,14 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Current archive: 767 candidates; 580 articles; 187 videos; 340 thumbnail assignments; 427 missing; 273 legacy shared-image assignments preserved.
 - Latest 12-URL thumbnail sample: 11 image responses, one HTTP 404.
 - Continue the ChatGPT follow-up action **🔄 연구 기반 재귀개선 계속하기** after each cycle. It is a conversation control, not a deployed archive button.
+
+## 2026-11-26 — Current controls
+- Production workflow ignores Markdown-only pushes after PR #34; scheduled and manual runs remain active. Documentation PRs still receive read-only CI.
+- Node24 immutable GitHub Actions pins remain active. Latest Production #45730919483 passed 173/173 tests and deployed Pages.
+- Article review panel from PR #35 is mounted in the discovery page. It reviews seven dimensions for explicit HTTPS verified Haewon articles.
+- Review labels are saved only in this browser's localStorage. Use JSON export/import for manual transfer; there is no automatic server/GitHub upload. Do not enter personal information in notes.
+- Publisher accessibility audit: at most 12 rotating HEAD-only requests per Production run; current sample 10 responded and 2 blocked (403).
+- Legacy group: 273 records; 0 publisher article URLs; 199 sourceSiteUrl records; 0 alternative thumbnail candidates. No auto-delete or replacement.
+- Latest archive: 795 candidates; 608 articles; 187 videos; 342 thumbnails assigned; 453 missing; 273 legacy assignments preserved.
+- Latest thumbnail response sample: 12 checked; 11 images, 1 HTTP 404.
+- Continue the ChatGPT action **🔄 연구 기반 재귀개선 계속하기** after each cycle. It is a conversation control, not an archive website button.

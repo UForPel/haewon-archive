@@ -171,3 +171,15 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Latest stored data: 767 candidates, 580 articles, 187 videos, 85 verified publisher articles, 70 verified Haewon candidates; 340 thumbnails, 427 missing. Preserve 273 legacy shared-image records.
 - Latest thumbnail response sample: 12 URLs, 11 image responses, one HTTP 404 (Sportalkorea CDN), 0 unreachable, 0 rate-limited, 0 non-image successful responses.
 - No new RSS sources are approved. SBS, Yonhap and other publishers remain excluded as direct feeds pending explicit applicable permission.
+
+## 2026-11-26 — Article review and publisher access sampling
+- PR #35 adds a browser-local review tool for explicit HTTPS verified Haewon publisher article candidates only. Dimensions: content type, direct/indirect relevance, original access, date accuracy, source accuracy, category accuracy and thumbnail suitability.
+- Labels remain in localStorage; manual JSON export/import only. No automatic server upload. Review notes must not contain personal information.
+- Production quality metrics perform at most 12 rotating HEAD-only checks per run against direct verified publisher URLs, concurrency 3 and timeout 3.5s. Follow ordinary redirects only. HTTP 405 is uncertain; never retry with GET.
+- Latest sample: 12/71 checked, 10 HTTP responses and 2 blocked (403); 0 paywall, 0 404, 0 uncertain.
+- Legacy thumbnail audit: 273 repeated assignments, 0 explicit publisher article URLs, 199 sourceSiteUrl records, 0 alternative thumbnail candidates, 273 not-attempted metadata states. Preserve all records; do not auto-delete or replace.
+- Current data: 795 candidates, 608 articles, 187 videos, 87 publisher article URLs, 71 verified Haewon articles, 342 thumbnail assignments, 453 missing, 70 unique thumbnail URLs.
+- Thumbnail response sample: 12 unique URLs, 11 image responses, one HTTP 404 (Sportalkorea CDN), 0 unreachable, 0 rate-limited, 0 non-image successful responses.
+- Query pack index 4 has now been observed twice in the same KST slot; use the next distinct pack for comparison. Title keyword match remains a proxy, not human relevance.
+- Production push ignores Markdown-only commits. Twice-daily schedule and manual dispatch remain active.
+- No new publisher RSS feeds are approved. SBS and Yonhap remain excluded as direct feed sources pending explicit applicable permission.
