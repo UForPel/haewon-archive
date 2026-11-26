@@ -318,3 +318,10 @@ For each substantial update include: changed paths; planned vs implemented items
 ## 2026-11-26 — Review queue merge checkpoint
 - PR #42 merged after genuine CI passed 192/192 tests and archive validation.
 - Verify Production collection/data commit/Pages deployment independently before claiming the UI update is live; mobile visual QA remains a separate manual check.
+
+
+## 2026-11-26 — Review queue deployment verified
+- PR #42 passed genuine CI (192/192 tests plus archive validation), merged, and Production #601 successfully collected, committed data and deployed Pages.
+- Current review state: 76 verified Haewon article candidates, zero committed human labels. The queue controls improve review navigation but do not themselves create review evidence.
+- Require actual browser/device QA before claiming mobile usability. Distinguish deployment success from visual, keyboard and tap-target verification.
+- Pack 5 freshness remains exploratory; no query promotion or pruning until repeated packs and human-reviewed relevance evidence exist.
