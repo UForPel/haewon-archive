@@ -748,3 +748,12 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - PR CI #47 (`45752743361`) passed on the final PR head `4a2e4557d6081ec17dc9453833a9b9263a55185c`: 193/193 tests and archive validation passed.
 - Production run #602 (`45752794835`) is running on main SHA `c77d605cde6eac9476f7d187f77ac6c9c646adee`. Collection/data commit/Pages deployment are not yet verified at this checkpoint.
 - Open PRs: 0. Real mobile visual/device QA remains unverified.
+
+
+## 2026-11-26 — PR #43 and Production #602 fully verified
+- PR #43 merged as `c77d605cde6eac9476f7d187f77ac6c9c646adee`; PR CI #47 passed 193/193 tests and archive validation.
+- Production #602 (`45752794835`) completed successfully on the merge SHA: 193/193 tests, collection, validation, generated data commit, Pages artifact upload and Pages deployment.
+- Generated data commit: `96a79935d85f23b17887b3ab20b95b780f1ab234`. Pages artifact ID `15086646238`, size 563,048 bytes, SHA-256 `f300b9b7537d901a53d56374aac7a8d0eeaf4d7987047be01c6f615f17b6538b`; deployment created for `c77d605cde6eac9476f7d187f77ac6c9c646adee`.
+- Production dataset: 856 candidates (669 articles / 187 videos), 99 verified publisher articles, 76 verified Haewon articles; 352 thumbnail assignments, 504 missing, 80 unique URLs. All 273 legacy shared-image assignments remain unchanged.
+- News collection: 99 fetched / 92 unique / 3 added; six of six queries succeeded on Google and Bing. Google RSS had 56 items but zero explicit publisher article URLs and zero image signals; Bing RSS had 43 explicit publisher URLs but zero image signals. Thumbnail enrichment attempted 1 and assigned 1.
+- Final main after documentation checkpoints: `dd06a9638e8bf4e7365e1b66e21f4dedd08ed6f5`; open PRs: 0. Real mobile visual/device QA remains unverified.
