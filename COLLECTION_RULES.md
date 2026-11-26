@@ -236,3 +236,11 @@ Gemini does not have permission to alter these rules or the validators enforcing
 ## 2026-11-26 — Review queue auto-advance merged
 - PR #43's navigation change is merged. CI passed 193/193 tests and archive validation.
 - Production #602 is in progress; collection and Pages deployment are not yet verified. The change does not alter publisher source eligibility, collection policy or the 273 legacy thumbnail group.
+
+
+## 2026-11-26 — Production #602 collection and deployment outcome
+- Production #602 succeeded; the cycle added 3 unique records (99 fetched, 92 unique incoming, 7 duplicates). Google and Bing each completed all 6 queries.
+- Google RSS provided 56 items but zero explicit publisher article URLs and zero image signals. Bing provided 43 explicit publisher URLs but zero image signals. Do not infer article image URLs from wrapper or site-level metadata.
+- One thumbnail enrichment attempt succeeded and assigned one provenance-backed image. Total thumbnail state: 352 assigned, 504 missing, 80 unique URLs; the 273 legacy shared-image assignments remain untouched.
+- No new RSS source was added. SBS and Yonhap remain excluded pending explicit applicable permission.
+- Production #602 Pages deployment succeeded. This does not establish real mobile visual/tap-target QA.
