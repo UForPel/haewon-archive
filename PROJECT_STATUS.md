@@ -1,6 +1,6 @@
 # Project status
 
-Last updated: 2026-11-24
+Last updated: 2026-11-26
 
 ## Governance documentation update (2026-11-19)
 - Added protected `SECURITY_POLICY.md` and `COLLECTION_RULES.md`.
@@ -694,5 +694,16 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Current production data at collection time: 797 discovery candidates; latest news pass fetched 76 candidates and added 4. Google RSS: 55 items, 0 explicit publisher article URLs and 0 image signals. Bing RSS: 21 items, 21 explicit publisher URLs and 0 image signals. Existing 273-record shared-thumbnail group remains preserved.
 - Per-query publication-lag medians ranged from 808.5 to 38,498.2 hours in the current sample. This demonstrates a material freshness-measurement gap; title keyword match is only a proxy and must not be described as relevance precision.
 - Implemented on a review branch: mutually exclusive publication-age buckets (within 7 days, 8–30 days, 31–90 days, over 90 days, unknown, future) and 7-/30-day candidate rates per query. This is diagnostic only: it does not delete or filter historical candidates.
-- Code/test verification and merge/deployment remain pending until PR CI and data validation finish. Mobile visual QA remains separate and unverified.
+- Verified: PR #41 merged; PR CI #42 passed 190/190 tests and archive validation. Production #600 passed collection, data validation/commit, Pages artifact upload and deployment. Mobile visual QA remains separate and unverified.
 - Automation remains GitHub Actions twice daily. Cloudflare dispatch is dry-run-only; no external scheduler is active. No paid service, new publisher RSS source, external contact or secret transfer was used.
+
+
+## 2026-11-26 — Publication freshness diagnostics verified in Production
+- PR #41 merged successfully as `fa4c91474e6edee71c8b3416e569bf5b3cef98a4`; latest main data commit is `4643892a7d1a293adaafe8d7c926011b0027fd5e`.
+- Genuine PR run #42 (`45748429788`) passed 190/190 tests, 0 failures, and `npm run validate` confirmed the current archive. PR #41 was mergeable and merged after CI success.
+- Production run #600 (`45748513047`) succeeded end-to-end: tests, one collection pass, validation, data commit, Pages artifact upload and Pages deployment. Run log is schema-valid and records 23.7 seconds duration.
+- Production sample pack 5: 69 incoming candidates, 62 unique URLs, 23 newly added; 6/6 Google and 6/6 Bing queries succeeded. Current archive: 818 discovery candidates, 187 discovery-video candidates and 20 official-feed video records.
+- Freshness results: 0/69 within 7 days; 8/69 (11.6%) within 30 days; 15/69 in days 31–90; 46/69 older than 90 days; 0 unknown and 0 future dates. This confirms that search-result freshness is a real limitation; it does not establish low relevance or justify destructive filtering.
+- Google RSS: 27 items, 0 explicit publisher article URLs, 0 image signals. Bing RSS: 42 items, all 42 with explicit publisher URLs, 0 RSS image signals. No new publisher feed was added.
+- Thumbnail enrichment: 9 attempts, 7 found and assigned, 2 missing, 0 failed. Archive thumbnail state: 349 assigned, 469 missing, 77 unique URLs; all 273 unverified legacy shared-image assignments remain preserved.
+- Mobile browser/tap-target/visual QA remains unverified. Deployment success is not a substitute for that review.
