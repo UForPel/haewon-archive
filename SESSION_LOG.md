@@ -1296,3 +1296,16 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - PR CI and full test suite must run against current main before merge. Production collection and Pages deployment will be verified separately after merge.
 - Next cycle should compare at least three distinct query packs using freshness buckets, explicit publisher URL rate, unique yield and human review labels where available. Do not auto-remove queries from a single sample.
 - Mobile browser QA remains unverified.
+
+
+## 2026-11-26 — Publication freshness diagnostics: final verification
+
+- PR #41 merged as `fa4c91474e6edee71c8b3416e569bf5b3cef98a4`; latest Production-generated data commit: `4643892a7d1a293adaafe8d7c926011b0027fd5e`.
+- Genuine PR CI run #42 (`45748429788`) passed 190/190 tests with zero failures; `npm run validate` passed against 818 discovery candidates, 20 video records, six query metrics and 171 run-log records on the PR merge base.
+- Production run #600 (`45748513047`) passed all steps, including 190/190 tests, collection, validation, data commit, Pages artifact upload and deployment. Production run log records 23,732 ms and 172 schema-valid run logs after completion.
+- Data commit `4643892a7d1a293adaafe8d7c926011b0027fd5e`: 818 candidates, 69 incoming, 62 unique, 23 added. All 6 Google and 6 Bing queries succeeded.
+- Pack 5 freshness: 0/69 within 7 days, 8/69 (11.6%) within 30 days, 15/69 from 31–90 days, 46/69 older than 90 days, no unknown/future dates. Keep all candidates; use this as a diagnostic for future multi-pack comparison, not as an automatic exclusion rule.
+- Google RSS produced 27 items with no explicit publisher article URL or image signals. Bing RSS produced 42 explicit publisher URLs and no RSS image signals. No new RSS source was enabled.
+- Thumbnail enrichment attempted 9, assigned 7, missing 2, failed 0. Total 349 thumbnails / 469 missing / 77 unique URLs. The 273 legacy shared-image assignments remain intact.
+- Production run #600 completed Pages deployment successfully. Browser/mobile visual QA is still unverified and must not be inferred from deployment.
+- No paid service, external contact, new source permission, or secret/personal-data transfer was used. Cloudflare dispatcher remains dry-run-only.
