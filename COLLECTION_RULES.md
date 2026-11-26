@@ -224,3 +224,10 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Pack 5: 94 fetched / 88 unique / 39 added; 0 within 7 days, 7 in days 8–30, 70 older than 90 days. This is one sample only; do not auto-filter or change search strategy based on it.
 - Metadata enrichment attempted 2 and assigned 2; 273 legacy shared-image assignments remain untouched.
 - Manual review labels remain local-only unless the user explicitly exports/imports them. No automatic transfer.
+
+
+## 2026-11-26 — Review queue auto-advance boundary
+- The new behavior changes only browser-local review navigation. It does not alter collection, source eligibility, article records, labels uploaded to the repository, or thumbnail assignments.
+- A review row leaves the pending-only list only after all seven independent dimensions have explicit valid values. `uncertain` remains a completed judgment, not a positive relevance result.
+- PR #43 CI and deployment must be verified independently. No change to publisher-source permissions; SBS and Yonhap remain excluded absent explicit applicable permission.
+- Preserve the 273 legacy shared-thumbnail assignments unchanged.
