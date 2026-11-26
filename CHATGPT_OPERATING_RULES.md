@@ -461,3 +461,10 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - PR CI #68 passed 205/205 tests; Production #608 and Pages deployment succeeded. This is not proof of Android Chrome behavior.
 - Maintain the localStorage transaction invariant for every browser review path. Device QA remains unverified until user reports the checklist.
 - Latest main data commit after Production #608: `d3d44f6252c7cdc8b01266d4779a54d262a8c029`; 856 discovery candidates, 482 eligible thumbnail reviews / 0 reviewed, 273 legacy shared-image assignments preserved.
+
+
+## 2026-11-26 — Human review queue visibility invariant
+- A “next unreviewed” action must reveal any collapsed ancestor disclosure before scrolling to or focusing the target control. For `<details>`, set its `open` property first, then defer scroll/focus until the visible content is rendered.
+- Test the helper and assert the UI order open → scroll → focus.
+- PR #52 implements this invariant; PR CI and merge are pending at this checkpoint. Do not claim Android Chrome behavior from Node tests.
+- Keep human review data localStorage-only with manual JSON transfer. Preserve 273 legacy shared-image assignments and do not auto-label candidates.
