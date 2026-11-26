@@ -424,3 +424,12 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - All 273 legacy assignments remain unchanged; 0 have publisher article URLs, 0 have alternative thumbnail candidates, 199 have source-site URLs. 12 wrapper-only Google News metadata entries remain untouched.
 - Android Chrome QA remains UNVERIFIED pending actual user checklist results. No labels were generated/uploaded, no new RSS sources added, no wrapper decoding, no access bypass, no paid service or external data transmission.
 - Latest code/data main before this documentation-only finalization: 9b47fd4ab2a46163fff794b2dc4e70f892ab0c7f. Documentation-only PR will not trigger another Production run.
+
+ 
+## 2026-11-27 — Missing-thumbnail diagnosis boundaries
+- Keep discovery URL, explicit publisher article URL, source-site URL, final response host and image URL as distinct evidence. A source-site URL must never be substituted for a publisher article URL.
+- Missing-thumbnail diagnostics may classify only explicit persisted evidence: Google News wrapper host with no verified publisher URL; absent publisher article URL; stored metadata status/error code; explicit image candidate; or metadata not attempted/unrecorded. Unknown cases remain unclassified.
+- Summaries must not decode wrappers, fetch new URLs, retry failures, store response bodies, or infer that an absent metadata field proves a publisher has no image.
+- HTTP 403 means the server refused the request; do not repeat an unchanged request. HTTP 429 indicates rate limiting; do not blindly retry. Respect server policy and any explicit Retry-After rather than bypassing it. References: MDN 403 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/403 and MDN 429 https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/429.
+- Open Graph `og:image` and Schema.org `thumbnailUrl` are optional publisher-supplied metadata signals, not guarantees that every page provides a usable image: https://ogp.me/ and https://schema.org/thumbnailUrl.
+- Preserve all 273 legacy shared-image assignments. Never auto-label, bulk-copy review decisions, or delete/replace legacy assignments.
