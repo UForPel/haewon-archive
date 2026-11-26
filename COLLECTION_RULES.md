@@ -318,3 +318,10 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Latest data still contains 856 candidates, 352 assigned thumbnails / 504 missing, 273 unverified legacy shared assignments retained, and 79 provenance-backed assignments. Thumbnail review: 482 eligible, 0 reviewed; article human review labels remain 0. No search-pack or thumbnail reassignment change was made.
 - PR #46 was merged as `8edb0e1...`; PR CI #55 passed 201/201 tests and validation. The earlier PR CI #54 failure was an outdated source-contract assertion; the assertion was updated and the rerun passed.
 - Real Android Chrome visual/touch/focus/refresh/download-import QA remains outstanding. Do not claim it from CI or deployment. Labels remain localStorage-only and manual JSON transfer only; no backend or automatic upload. No Playwright/Puppeteer dependency was added.
+
+
+## 2026-11-26 — Review-label storage boundary reaffirmed
+- Article and thumbnail review labels are browser-local (localStorage) only. Transfer is user-initiated JSON export/import; never add automatic upload or remote synchronization without a separately approved policy change.
+- Import must validate schema and eligible IDs, merge per dimension, and preserve unrelated existing labels. A failed localStorage write must retain the prior in-memory and persisted labels.
+- Never infer human review labels from tests, automated relevance classification, or device-independent checks. Real Android Chrome QA requires user-reported observations.
+- Keep source/rights restrictions unchanged: no new RSS source without explicit permission; use only explicitly supplied public HTTPS article/image metadata; do not decode Google News wrappers or bypass access controls. Preserve the 273 legacy shared-image assignments.
