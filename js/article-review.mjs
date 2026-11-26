@@ -71,6 +71,15 @@ export function validateArticleReviewExport(payload, eligibleIds = null) {
   }
   return { schemaVersion: 1, labels };
 }
+export function isArticleReviewComplete(item = {}, labels = {}) {
+  const row = labels[String(item.id || '')] || {};
+  return Object.entries(ARTICLE_REVIEW_DIMENSIONS).every(([dimension, options]) => options.includes(row[dimension]));
+}
+
+export function filterArticleReviews(items = [], labels = {}, scope = 'all') {
+  return scope === 'pending' ? items.filter(item => !isArticleReviewComplete(item, labels)) : items;
+}
+
 export function summarizeArticleReviews(items = [], labels = {}) {
   const eligible = getVerifiedHaewonArticles(items);
   const dimensions = {};
@@ -95,7 +104,8 @@ export function summarizeArticleReviews(items = [], labels = {}) {
   return {
     eligible: eligible.length,
     reviewedArticles: eligible.filter(item => Object.keys(ARTICLE_REVIEW_DIMENSIONS).some(dimension => valid(dimension, labels[String(item.id)]?.[dimension]))).length,
-    fullyReviewed: eligible.filter(item => Object.keys(ARTICLE_REVIEW_DIMENSIONS).every(key => valid(key, labels[String(item.id)]?.[key]))).length,
+    fullyReviewed: eligible.filter(item => isArticleReviewComplete(item, labels)).length,
+    pendingArticles: eligible.filter(item => !isArticleReviewComplete(item, labels)).length,
     dimensions
   };
 }
