@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T12:02:04.595Z",
+  "generatedAt": "2026-11-26T12:05:53.586Z",
   "discoveryRelevance": {
     "totalCandidates": 857,
     "articleCandidates": 670,
@@ -533,25 +533,25 @@
   },
   "collection": {
     "newsQueriesRequested": 6,
-    "newsQueriesSuccessful": 3,
+    "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
-    "bingNewsQueriesSuccessful": 5,
-    "bingNewsCandidates": 31,
-    "newsQuerySuccessRate": 50,
+    "bingNewsQueriesSuccessful": 6,
+    "bingNewsCandidates": 43,
+    "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
     "newsCandidatesTotal": 857,
-    "newsUniqueFetched": 65,
+    "newsUniqueFetched": 90,
     "newsAddedLastRun": 2,
-    "duplicateBeforeMergeLastRun": 3,
+    "duplicateBeforeMergeLastRun": 8,
     "duplicateGroupsCurrent": 857,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 68,
-      "after": 64,
-      "collapsed": 4,
+      "before": 98,
+      "after": 89,
+      "collapsed": 9,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -1231,8 +1231,8 @@
     {
       "source": "Google News RSS",
       "requested": 6,
-      "successful": 3,
-      "successRate": 50
+      "successful": 6,
+      "successRate": 100
     },
     {
       "source": "NMIXX YouTube Atom",
@@ -1243,8 +1243,8 @@
     {
       "source": "Bing News RSS",
       "requested": 6,
-      "successful": 5,
-      "successRate": 83
+      "successful": 6,
+      "successRate": 100
     }
   ],
   "classification": {
@@ -2135,7 +2135,7 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 10,
+    "rateLimited": 0,
     "unreachable": 1,
     "thumbnailMissing": 505,
     "results": [
@@ -2172,8 +2172,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE15RHFobzdEazU1bUpUbXRFUjFDU3VZNk9NVFhKNXl4QjlDNzlrRkFscDJZYXNfTDJLYXJPcVlLQ0pXVmRBSm1qTlZxYjRmTzlESFNNYWIxdVYxQ0JmVk8wZUVTZE1INW5yVC1mT2xuU3dDdw?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2214,8 +2214,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBUWHV3TFl4Q1paWTF4YnpPMlNnLTFobTJOTFhCTjNyRUFnWk5mNk93N1pEUTFCUlI2WncxY0pTVGFtQzFQNVJHSWFZOUdISEEyOEVOTWRnREQzN21D?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2238,8 +2238,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBLTnIwX2RZRkdDZzRSSmhjRHZaUC1ab2NVcFNhSmhvYlhoRmxJX0tJNEFIdmRfV2NCZjlqcFBHSE9UWDgyZHhFdkhid0thaGFGTXJsVU1TYnY1OHZR?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2250,8 +2250,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE15TXNVN1Y5N1g5Yi1HLVZmV0FZc2JwYmhkbFNpYlpuWk9SMWJkTGVQa0hCbUlTdUJEOGdoSHJ4WGdESUgxcTNQNnBkM005NHU0cTB0MFQ4OEhrN1I0?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2280,8 +2280,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE05RDlFY3JYUEtwc1hLaXNLbEE5RVhYMzFUM2tWZ0NUb1ZpRngweTRwcTFYNFBWaWxyX1V2QXJtYi11TkNsMGQ4ZUZScFhwUDc4Y2xFSjJyTlZxRUY5?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2304,8 +2304,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBFMDFtT1Q5ZHZETDN3ZUJCQWFkSGVXZWp1NEtzOE0xbXFjb0R4eXBMRjM5Ulk3NTNyQ28xenBpeEsyT2NwMzE4OHUwRzJacHlyZHFZMTBwd18wZTFO?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2334,8 +2334,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9NLUswaEdhRU1HYWNWUnpqbnpWdHhXTGtyTTdmWFhTckxNSG03el9UMzVIZEpLSk0xcTk5bkEwMzJ6MjEyLWdYSg?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2346,8 +2346,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9SSVBickxWbFFCWjcwOTJoVkxwd2R0Y1R3dUsyNC1uMzN5LW5odTh2eXJmcXpOc3RNR3BrQ295TkViSnlrZkJUcVRnbmI1MXlhdXdtUUtGb2RRQnRs?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2370,8 +2370,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9HUzdsUDVkbnpwUVhUa0ZfbThaNFNtRmZLS2tsLWktTlAtajFTeWRGb0dUVUJKQWJ2TE9HQUsxYTdQTEhmTEFUZDhDb1RrR1U1Y2N2WGZBOUlvWlpM?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2382,8 +2382,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB6QlB2OUFQYjk5cm1wY253WnlZbjZodVZoaElqZk9IamZiNUw1TmM2QU9pM1lJekxZT3Mzamw2ZzA3OTlRV2Q4UFY3Z3ZkcUNvbndCYm0wMkdQSkFY?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       }
     ]
   },
@@ -4581,7 +4581,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T12:02:04.613Z",
+    "generatedAt": "2026-11-26T12:05:53.609Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -6510,16 +6510,17 @@
     "sampledUniqueUrls": 12,
     "checked": 12,
     "nonImage": [],
-    "broken": [
+    "broken": [],
+    "unreachable": [
       {
         "url": "https://cdn.sportalkorea.com/news/photo/202610/2025052909553648816_2725470_1793077511.jpg",
-        "status": 404,
-        "contentType": "text/html; charset=utf-8",
+        "status": null,
+        "contentType": "",
         "ok": false,
-        "isImage": false
+        "isImage": false,
+        "error": "The operation was aborted due to timeout"
       }
     ],
-    "unreachable": [],
     "rateLimited": [],
     "results": [
       {
@@ -6531,10 +6532,11 @@
       },
       {
         "url": "https://cdn.sportalkorea.com/news/photo/202610/2025052909553648816_2725470_1793077511.jpg",
-        "status": 404,
-        "contentType": "text/html; charset=utf-8",
+        "status": null,
+        "contentType": "",
         "ok": false,
-        "isImage": false
+        "isImage": false,
+        "error": "The operation was aborted due to timeout"
       },
       {
         "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
