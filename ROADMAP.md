@@ -682,3 +682,12 @@
 - [ ] Verify Production collection, generated data commit and Pages deployment after merge.
 - [ ] Obtain user-reported Android Chrome QA; automated CI is not device QA.
 - [ ] Continue preserving the 273 legacy shared-image assignments; do not auto-label the 482 pending thumbnail candidates or 76 verified Haewon articles.
+
+
+## 2026-11-26 — PR #52 completed
+- [x] Fix next-thumbnail queue to open the collapsed candidate details before scrolling/focusing.
+- [x] Pass final-head PR CI #74: 207/207 tests; archive validation passed.
+- [x] Merge PR #52 and verify Production #609 plus generated data commit and Pages deployment.
+- [ ] Obtain user-reported Android Chrome QA for queue visibility, focus, touch, and localStorage/JSON behavior.
+- [ ] Start human thumbnail/article review only when user elects to do so; current counts remain 482 thumbnail candidates / 0 reviewed and 76 verified Haewon articles / 0 human review labels.
+- [ ] Continue permitted thumbnail evidence investigation; preserve 273 legacy shared-image assignments and do not add unapproved RSS sources.

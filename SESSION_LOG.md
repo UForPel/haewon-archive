@@ -1615,3 +1615,13 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - No collection/source/search-pack, data, thumbnail assignments, review labels, storage or backend changes.
 - Preserve all 273 legacy shared-image assignments. No new RSS, wrapper decoding, access bypass or automatic label upload.
 - PR CI/merge and Production/Pages verification are pending. Android Chrome QA remains unverified until user reports the checklist.
+
+
+## 2026-11-26 — PR #52 and Production #609 final outcome
+- PR #52 merged as `f9eb50cb35d51427facdbd199f7ac1cdff26a720`; final PR head `736833dfa01e162acec28e6fa0a0b5d7afc6b2ae`.
+- PR CI #74 (`45796812639`) passed on the final PR head: 207/207 tests, 0 failures. Archive validation passed with 856 candidates, 180 schema-valid run logs, 55 source summaries and 41 links checked.
+- Production #609 (`45796902589`) completed successfully: all test/collect/validate/data-commit, Pages artifact and deployment steps passed. Deployment log: `Reported success!`.
+- Generated data commit `5351bc276aa5b1dd5c9286caf9a6156f273318e9`; Pages artifact `15105556263`, 606,867 bytes, SHA-256 `a90856560a15baff8d7c49f51ff75b4e6a1d884a7df195f64276d96b1af3f751`.
+- Production #609 run log: 15 YouTube candidates, 0 accepted, 15 duplicates; Google RSS 71, Bing RSS 43; archive validation passed. Current metrics: 857 candidates (670 article / 187 video), 352 thumbnails assigned / 505 missing, 80 unique URLs, 273 legacy shared-image assignments retained, 482 thumbnail-review eligible / 0 reviewed, article human review labels 0.
+- The queue fix opens the hidden per-article `details` disclosure before scroll/focus. No collection sources, RSS, data labels, thumbnail assignments or storage paths changed.
+- Android Chrome QA remains unverified. Do not infer mobile UX from CI or deployment.
