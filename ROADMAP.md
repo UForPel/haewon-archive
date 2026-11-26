@@ -470,3 +470,11 @@
 - [x] Define a mandatory clickable next-cycle action in BUTTONS_AND_ACTIONS.md with exact reusable prompt.
 - [ ] Verify every subsequent final response ends with that action; treat omission as a failed acceptance criterion.
 - [ ] Keep button wording and submitted prompt synchronized with operating rules and session log.
+
+
+## Publication freshness measurement — 2026-11-26
+- [x] Add per-query publication-age buckets: 7 days, 8–30 days, 31–90 days, over 90 days, unknown and future.
+- [x] Add 7-day and 30-day freshness rates without filtering or deleting historical candidates.
+- [ ] Verify PR CI and current-main merge.
+- [ ] Compare at least three distinct query packs before changing search strategy; combine freshness with explicit publisher URL rate, unique yield and human-reviewed relevance labels.
+- [ ] Keep stale/unknown candidates visible as historical candidates unless a separate, reviewed display policy is approved.
