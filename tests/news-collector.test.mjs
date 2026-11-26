@@ -172,3 +172,21 @@ test('per-query publication freshness separates recent, stale, unknown and futur
  assert.equal(report.unknownDates,1);
  assert.equal(report.futureDated,1);
 });
+
+import { classifyBingFeedResponse } from '../scripts/collect-news.mjs';
+test('Bing feed response diagnostics distinguish RSS, Atom, HTML and empty bodies without storing response content',()=>{
+ assert.equal(classifyBingFeedResponse('<rss><channel/></rss>','application/rss+xml'),'rss');
+ assert.equal(classifyBingFeedResponse('<feed xmlns="http://www.w3.org/2005/Atom"/>','application/atom+xml'),'atom');
+ assert.equal(classifyBingFeedResponse('<!doctype html><html/>','text/html'),'html');
+ assert.equal(classifyBingFeedResponse('',''),'empty');
+ assert.equal(classifyBingFeedResponse('unexpected payload','application/octet-stream'),'unknown');
+});
+test('Bing non-RSS responses retain status and content type diagnostics without retaining body text',async()=>{
+ const result=await collectFeeds({queries:['diagnostic query'],fetchImpl:async url=>{
+  if(String(url).includes('bing.com'))return new Response('<!doctype html><html><title>temporary response</title></html>',{status:200,headers:{'content-type':'text/html; charset=utf-8'}});
+  return new Response(fixture,{status:200,headers:{'content-type':'application/rss+xml'}});
+ }});
+ assert.equal(result.bingFailures.length,1);
+ assert.deepEqual(result.bingFailures[0],{query:'diagnostic query',error:'Bing RSS 응답이 아닙니다',status:200,contentType:'text/html; charset=utf-8',responseFormat:'html'});
+ assert.equal(JSON.stringify(result.bingFailures).includes('temporary response'),false);
+});
