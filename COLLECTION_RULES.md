@@ -211,3 +211,8 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Article review requires seven independent dimensions. Explicit uncertain labels count as reviewed for workflow progress but must not be counted as positive relevance/accuracy.
 - Human labels remain localStorage-only until the user manually exports/imports JSON. Do not upload browser labels automatically or collect personal notes.
 - Do not change query-pack selection from proxy scores alone; require a meaningful human-reviewed sample and repeated pack observations.
+
+
+## 2026-11-26 — Review queue merge checkpoint
+- The pending-only and next-pending controls are merged, but deployment must be verified before treating them as production-visible.
+- No automatic review-label upload was introduced. Existing localStorage/manual JSON transfer boundary remains unchanged.
