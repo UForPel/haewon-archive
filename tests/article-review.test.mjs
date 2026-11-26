@@ -161,3 +161,22 @@ test('pending review queue advances to the next incomplete article and wraps wit
  assert.equal(getNextPendingArticle(items,labels,'d').id,'b');
  assert.equal(getNextPendingArticle(items,{a:complete,b:complete,c:complete,d:complete}),null);
 });
+
+
+test('review UI saves transactionally and reports import/export failures without replacing prior labels',async()=>{
+ const ui=await readFile(new URL('../js/article-quality-review-ui.mjs',import.meta.url),'utf8');
+ assert.match(ui,/function persistLabels\(nextLabels, successMessage\)/);
+ assert.match(ui,/existing review records are maintained|기존 검수 기록은 유지됩니다/);
+ assert.match(ui,/기존 기록과 병합/);
+ assert.match(ui,/JSON 파일을 만들지 못했습니다/);
+ assert.match(ui,/검수 JSON을 가져오지 못했습니다/);
+ assert.match(ui,/labels = nextLabels/);
+});
+
+test('article review controls declare mobile touch targets and visible keyboard focus',async()=>{
+ const css=await readFile(new URL('../assets/style.css',import.meta.url),'utf8');
+ assert.match(css,/\.article-quality-review button,\.article-quality-review select,\.article-quality-review input\{min-height:44px\}/);
+ assert.match(css,/\.article-quality-review button:focus-visible/);
+ assert.match(css,/@media\(max-width:360px\)/);
+ assert.match(css,/grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+});
