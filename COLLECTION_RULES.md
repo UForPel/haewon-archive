@@ -252,3 +252,11 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Storage failures preserve the previous in-memory labels and surface a recovery message. Users should export a manual JSON backup before clearing browser data or changing devices.
 - PR #44 automated CI passed 195 tests and archive validation. Actual Android/mobile QA is still outstanding.
 - Preserve the 273 legacy shared-thumbnail assignments. Do not add SBS/Yonhap RSS without explicit applicable permission.
+
+
+## 2026-11-26 — Production #603 data and source boundary
+- Production #603 collected 74 incoming candidates, 67 unique and 2 added. Google and Bing each completed 6/6 queries.
+- Google RSS supplied 32 items but zero explicit publisher article URLs and zero image signals. Bing supplied 42 explicit publisher article URLs but zero image signals. No wrapper decoding or inferred image extraction was used.
+- Thumbnail enrichment attempted 0 and assigned 0. Total current thumbnail state: 352 assigned, 504 missing, 80 unique URLs; 273 legacy shared-image assignments remain untouched.
+- No new RSS source was added; SBS/Yonhap feed addition still requires explicit applicable permission.
+- PR #44 changed only local review UI/CSS; labels remain browser-local and manually exportable/importable. Production #603 deployment succeeded; real mobile QA is still outstanding.
