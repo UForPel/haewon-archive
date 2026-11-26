@@ -225,3 +225,14 @@ test('invalid imported JSON cannot mutate current review labels', async () => {
   assert.throws(() => mergeArticleReviewLabels(current, { schemaVersion: 2, labels: {} }, ['a']));
   assert.deepEqual(current, { a: { articleId: 'a', relevance: 'relevant' } });
 });
+
+test('review queue uses collapsed per-article disclosures and opens the active row before focusing', async () => {
+ const ui = await readFile(new URL('../js/article-quality-review-ui.mjs', import.meta.url), 'utf8');
+ const css = await readFile(new URL('../assets/style.css', import.meta.url), 'utf8');
+ assert.match(ui, /document\.createElement\('details'\); row\.className = 'article-quality-review-row'/);
+ assert.match(ui, /row\.open = true/);
+ assert.match(ui, /article-quality-review-row-summary/);
+ assert.match(ui, /article-quality-review-row-content/);
+ assert.match(css, /Keep the 76-item review queue compact on mobile/);
+ assert.match(css, /\.article-quality-review-row-summary\{display:grid/);
+});
