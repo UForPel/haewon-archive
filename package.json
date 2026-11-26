@@ -11,7 +11,8 @@
     "improve": "node scripts/recursive-improvement.mjs",
     "validate": "node scripts/validate-data.mjs",
     "log": "node scripts/run-log.mjs",
-    "quality": "node scripts/quality-metrics.mjs"
+    "quality": "node scripts/quality-metrics.mjs",
+    "collect-youtube-search": "node scripts/collect-youtube-search.mjs"
   },
   "engines": {
     "node": ">=20"
