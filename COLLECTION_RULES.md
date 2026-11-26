@@ -160,3 +160,32 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Latest thumbnail audit sample: 12 unique URLs, 11 image responses, 1 HTTP 404 (Sportalkorea CDN), 0 unreachable, 0 rate-limited, 0 non-image successful responses. Do not extrapolate this sample to all thumbnails.
 - Do not add SBS, Yonhap or other publisher RSS feeds until explicit applicable usage permission is documented. Do not redistribute article text or images outside allowed public metadata/link and attribution rules.
 - No automated deletion, replacement or human-label assignment for the 273 legacy group.
+
+## 2026-11-26 — Query rotation and source boundaries
+- Editorial search uses 36 unique query phrases in six packs of six. Each KST day has a morning and evening slot, selecting two different packs. Current expected volume is 12 queries/day × Google and Bing RSS = 24 feed requests/day.
+- Keep video/fancam terms out of editorial RSS query packs. Unresolved wrapper video candidates remain separate until a direct YouTube URL is verified.
+- Query diagnostics record normalized unique URL yield, duplicate URL/title counts, cross-query overlap, title keyword proxy, explicit publisher URL rate and publication lag. Title proxy is not human-reviewed precision. Require multiple pack samples before adapting the query vocabulary.
+- Query URL normalization strips only known tracking parameters; do not strip content-bearing `source` or `ref` parameters.
+- Apply shared publisher URL predicate before publisherArticleUrl, publisher metrics or metadata enrichment. X/Twitter destinations remain discovery candidates but are never publisher articles.
+- Latest first-pack sample index 4: six queries, 54 Google candidates, 20 Bing candidates; median publication lag varies widely and some queries are stale. Compare more packs before conclusions.
+- Latest stored data: 767 candidates, 580 articles, 187 videos, 85 verified publisher articles, 70 verified Haewon candidates; 340 thumbnails, 427 missing. Preserve 273 legacy shared-image records.
+- Latest thumbnail response sample: 12 URLs, 11 image responses, one HTTP 404 (Sportalkorea CDN), 0 unreachable, 0 rate-limited, 0 non-image successful responses.
+- No new RSS sources are approved. SBS, Yonhap and other publishers remain excluded as direct feeds pending explicit applicable permission.
+
+## 2026-11-26 — Article review and publisher access sampling
+- PR #35 adds a browser-local review tool for explicit HTTPS verified Haewon publisher article candidates only. Dimensions: content type, direct/indirect relevance, original access, date accuracy, source accuracy, category accuracy and thumbnail suitability.
+- Labels remain in localStorage; manual JSON export/import only. No automatic server upload. Review notes must not contain personal information.
+- Production quality metrics perform at most 12 rotating HEAD-only checks per run against direct verified publisher URLs, concurrency 3 and timeout 3.5s. Follow ordinary redirects only. HTTP 405 is uncertain; never retry with GET.
+- Latest sample: 12/71 checked, 10 HTTP responses and 2 blocked (403); 0 paywall, 0 404, 0 uncertain.
+- Legacy thumbnail audit: 273 repeated assignments, 0 explicit publisher article URLs, 199 sourceSiteUrl records, 0 alternative thumbnail candidates, 273 not-attempted metadata states. Preserve all records; do not auto-delete or replace.
+- Current data: 795 candidates, 608 articles, 187 videos, 87 publisher article URLs, 71 verified Haewon articles, 342 thumbnail assignments, 453 missing, 70 unique thumbnail URLs.
+- Thumbnail response sample: 12 unique URLs, 11 image responses, one HTTP 404 (Sportalkorea CDN), 0 unreachable, 0 rate-limited, 0 non-image successful responses.
+- Query pack index 4 has now been observed twice in the same KST slot; use the next distinct pack for comparison. Title keyword match remains a proxy, not human relevance.
+- Production push ignores Markdown-only commits. Twice-daily schedule and manual dispatch remain active.
+- No new publisher RSS feeds are approved. SBS and Yonhap remain excluded as direct feed sources pending explicit applicable permission.
+
+## 2026-11-26 — Current query rotation checkpoint
+- Six editorial query packs × six unique phrases; deterministic KST morning/evening rotation. Two distinct packs are selected daily.
+- First production sample pack index 4: 54 Google and 20 Bing candidates. Query metrics are provisional and require additional pack samples.
+- Latest thumbnail audit: 12 URLs; 11 image responses and one HTTP 404. Preserve all 273 legacy shared-image assignments.
+- No new publisher RSS source without explicit applicable permission.

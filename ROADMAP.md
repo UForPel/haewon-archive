@@ -437,3 +437,36 @@
 - [ ] Improve article-specific thumbnail coverage through public metadata only; never bulk replace the 273 legacy shared-image assignments.
 - [ ] Recheck current live site and mobile layout after a verified deployment; deployment success alone is not visual QA.
 - [ ] No new publisher RSS source until explicit applicable permission is documented.
+
+## 2026-11-26 — Next research cycle after query rotation
+- [x] Merge PR #32 six-pack / 36-query editorial search rotation and per-query diagnostics.
+- [x] Verify genuine PR CI #45729777536: 160/160 tests and validation.
+- [x] Verify first live run #45729843156: 160/160 tests, collection, validation, data commit and Node24 Pages deployment successful.
+- [x] Preserve the shared social URL predicate and Bing image parsing while porting query rotation.
+- [ ] Run at least two more distinct query packs, then compare per-query unique yield, cross-query overlap, explicit publisher URL rate, title relevance proxy and publication lag.
+- [ ] Only after repeated evidence, consider replacing low-yield terms such as public schedule / fanmeeting searches. Do not infer direct relevance from title keyword proxy alone.
+- [ ] Add human review labels through PR #13's review workflow, then evaluate query precision against human-reviewed examples.
+- [ ] Continue to keep video/fancam discovery separate from editorial RSS.
+- [ ] Keep PR #23 YouTube Data API optional and nonessential; keep PR #24 external dispatcher dry-run until permissions and free-tier limits are reviewed.
+- [ ] Improve provenance-backed article thumbnails; 340 assigned, 427 missing, 273 legacy shared-image assignments preserved.
+- [ ] Recheck live Pages mobile UI after a separate visual QA; deploy success is not visual QA.
+- [ ] Do not add new publisher RSS feeds without explicit applicable permission.
+
+## 2026-11-26 — Next steps after human review rollout
+- [x] Merge PR #34 to skip Production on Markdown-only pushes while preserving schedule, manual dispatch and PR CI.
+- [x] Merge PR #35 seven-dimension human article review UI and privacy-conscious localStorage export/import.
+- [x] Add per-dimension review metrics and a bounded rotating 12-URL HEAD-only accessibility audit.
+- [x] Verify Production run #45730919483: 173/173 tests, validation, data commit, Node24 Pages artifact and deployment successful.
+- [x] Measure legacy group without mutation: 273 assignments, 0 publisher article URLs, 199 sourceSiteUrl records, 0 alternative thumbnail candidates.
+- [ ] Complete manual article review on the deployed page; export JSON from the browser and decide whether to store a sanitized, non-personal review artifact in the repository.
+- [ ] Wait for the next KST evening pack 5 run, then compare with pack 4 using per-query unique yield, publisher URL rate, title proxy and publication lag.
+- [ ] Continue gathering distinct pack samples; do not prune queries based on repeated same-slot runs or title keyword proxy alone.
+- [ ] Review PR #23 optional YouTube API discovery; keep quota-bounded and optional, with no paid/core dependency.
+- [ ] Review PR #24 Cloudflare/GitHub App dispatcher only after verifying free-tier limits, minimal permissions and user-controlled secrets. Do not request secrets in chat.
+- [ ] Recheck deployed mobile UI and article review panel visually; deployment success is not visual QA.
+- [ ] Preserve 273 legacy thumbnail assignments and do not add SBS/Yonhap direct RSS feeds without explicit applicable permission.
+
+## 2026-11-26 — Continuation control
+- [x] Define a mandatory clickable next-cycle action in BUTTONS_AND_ACTIONS.md with exact reusable prompt.
+- [ ] Verify every subsequent final response ends with that action; treat omission as a failed acceptance criterion.
+- [ ] Keep button wording and submitted prompt synchronized with operating rules and session log.

@@ -257,3 +257,36 @@ For each substantial update include: changed paths; planned vs implemented items
 - Default news order is publication date descending; invalid publishedAt falls back to discoveredAt. Relevance sorting is an explicit alternate. Unresolved wrapper video candidates remain separate until an explicit YouTube URL is verified.
 - No new publisher RSS sources without explicit permission. Do not bulk-delete or replace the 273 legacy shared-thumbnail records.
 - No merge should be performed if current PR CI or data validation fails. Deployment success does not establish visual/mobile QA; report it separately.
+
+## 2026-11-26 — Query rotation operating rules
+- Read current main, PRs, Actions, data and all six documents before each cycle. Distinguish code commits, test runs, collection, generated data commits, Pages deployment and mobile QA.
+- PR #32 is merged. Six packs × six unique editorial phrases rotate across KST morning/evening slots; two runs/day use different packs. Query volume is 24 RSS requests/day, a 50% bounded increase from the previous 16/day.
+- Do not claim better coverage or precision from pack count alone. Compare at least three distinct pack samples using unique URL yield, cross-query overlap, explicit publisher URL rate, title keyword proxy and publication lag. Title keyword proxy is not human-reviewed precision.
+- Preserve meaningful URL query parameters such as `source` and `ref`; strip only known tracking parameters in metric normalization.
+- Keep video/fancam candidates out of editorial RSS packs and in a separate unresolved-video section until explicit YouTube URLs are verified.
+- Latest Production run #45729843156 succeeded: 160/160 tests, validation, data commit and Pages deploy; no Node20 deprecation warning. Main data SHA `891b2d74...`.
+- Current data: 767 candidates, 580 articles, 187 videos, 85 verified publisher articles, 70 verified Haewon candidates, 340 thumbnails, 427 missing, 273 legacy shared-image assignments preserved.
+- No new publisher RSS feed without explicit permission. Do not delete/replace the 273 legacy image group.
+- External contact/email, personal/secret data handling and paid service activation require separate confirmation; repository-internal development and normal CI/merge operations are preauthorized.
+- Deployment success does not establish visual/mobile QA; report it separately.
+
+## 2026-11-26 — Current operating rules after article review rollout
+- Read main, open PRs, Actions, production data and all six documents before each cycle. Distinguish code/test, collection, data commit, Pages deployment and visual QA.
+- PR #34 is merged: Markdown-only pushes do not launch Production. Scheduled and manual runs remain active; PR read-only CI still verifies docs PRs.
+- PR #35 is merged: local seven-dimension review for explicit verified Haewon publisher articles, per-dimension metrics, legacy group audit and a bounded 12-URL HEAD-only accessibility sample.
+- Review labels are browser localStorage only. No automatic upload. Manual JSON export/import; avoid personal information in notes.
+- HEAD audit uses direct HTTPS publisher URLs only, standard redirects, concurrency 3, 3.5s timeout and max 12 requests/run. No GET fallback on 405 and no access-control bypass.
+- Latest Production run #45730919483 passed 173/173 tests, collection, validation, data commit and Node24 Pages deploy. No Node20 warning. Main data SHA `48c0963...`.
+- Current data: 795 candidates, 608 articles, 187 videos, 87 publisher URLs, 71 verified Haewon articles, 342 thumbnails assigned, 453 missing, 70 unique URLs. Preserve 273 legacy assignments.
+- Legacy group audit found 0 publisherArticleUrl values, 199 sourceSiteUrl values and 0 alternative thumbnail candidates across 273 records. Do not bulk delete or replace.
+- Accessibility sample: 12/71 checked; 10 responded, 2 blocked (403). Thumbnail sample: 12 checked, 11 image responses, 1 HTTP 404.
+- Query pack index 4 repeated in same-slot push runs. Wait for a distinct scheduled pack before interpreting rotation effectiveness. Title keyword proxy is not human-labeled precision.
+- No new publisher RSS source without explicit permission. External contact/email, personal/secret data handling and paid service activation require separate confirmation. Repository code, test, PR, merge and documentation work are preauthorized.
+- Production deploy success does not establish browser/mobile visual QA; report it separately.
+
+## Mandatory response ending — 2026-11-26
+- At the end of every completed Haewon Archive work cycle, render the actual clickable **🔄 재귀개선 계속하기** button as the final UI element.
+- Button action must submit the full reusable prompt recorded in `BUTTONS_AND_ACTIONS.md`, not just the word “continue”.
+- A user typing continuation manually does not cancel this requirement. Never omit the button because the user already typed the next request.
+- Do not put any content after the button.
+- This is a required acceptance criterion. If omitted, the cycle is incomplete even if code, tests, commits and deployment succeeded.
