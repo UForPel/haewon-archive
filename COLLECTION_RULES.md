@@ -197,3 +197,10 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Freshness is a search-quality diagnostic, not a factual-reliability or Haewon-relevance score. Title keyword matches remain proxies until human review.
 - Do not delete, reject or hide historical candidates solely because they are older than 90 days. Any display filtering must remain separate from collection and preserve records.
 - Do not expand publisher RSS sources without explicit applicable permission; SBS and Yonhap remain excluded.
+
+
+## 2026-11-26 — Live freshness measurement outcome
+- First post-implementation pack 5 sample: 69 candidates; 0 within 7 days; 8 within 30 days; 15 in days 31–90; 46 older than 90 days; 0 unknown/future.
+- This sample is too small and represents only one query pack. Do not automatically remove or promote query terms based on it.
+- Google RSS sample: 27 items, no explicit publisher article URLs or image signals. Bing RSS sample: 42 items, 42 explicit article URLs, no RSS image signals.
+- Preserve historical candidates and the 273 legacy thumbnail group. No SBS/Yonhap feed addition without explicit applicable permission.
