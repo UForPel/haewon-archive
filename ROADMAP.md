@@ -497,3 +497,9 @@
 - [ ] Pass PR CI and archive validation; merge only after genuine success.
 - [ ] Verify Production deployment and manually inspect mobile layout, focus and scrolling.
 - [ ] Collect a human-reviewed sample before using query proxies to promote/demote search packs.
+
+
+## Human-review workflow usability — verification checkpoint
+- [x] PR #42 merged after 192/192 tests and archive validation passed.
+- [ ] Production #601 collection, data commit and Pages deployment verification still running.
+- [ ] Manual mobile browser QA still outstanding.
