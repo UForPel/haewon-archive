@@ -1,5 +1,5 @@
 import { classifyDiscoveryCategories } from './discovery-kind.mjs';
-import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete, getNextPendingArticle } from './article-review.mjs';
+import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, createArticleReviewExport, mergeArticleReviewLabels, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete, getNextPendingArticle } from './article-review.mjs';
 
 const host = document.querySelector('#article-quality-review');
 if (host) {
@@ -32,7 +32,7 @@ if (host) {
   const exportButton = document.createElement('button'); exportButton.type = 'button'; exportButton.textContent = '기사 검수 JSON 내보내기';
   exportButton.addEventListener('click', () => {
     try {
-      const blob = new Blob([JSON.stringify({ schemaVersion: 1, exportedAt: new Date().toISOString(), labels }, null, 2)], { type: 'application/json' });
+      const blob = new Blob([JSON.stringify(createArticleReviewExport(labels), null, 2)], { type: 'application/json' });
       const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'haewon-article-quality-reviews.json'; a.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
       progress.textContent = '검수 기록 JSON 내보내기를 시작했습니다. 다운로드 파일을 안전한 곳에 보관하세요.';
@@ -47,7 +47,7 @@ if (host) {
       const file = importInput.files?.[0]; if (!file) return;
       const parsed = validateArticleReviewExport(await file.text(), articles.map(item => item.id));
       const importedCount = Object.keys(parsed.labels).length;
-      const nextLabels = { ...labels, ...parsed.labels };
+      const nextLabels = mergeArticleReviewLabels(labels, parsed, articles.map(item => item.id));
       if (persistLabels(nextLabels, '')) {
         render();
         progress.textContent = importedCount+'개 기사의 검수 기록을 가져왔습니다. 기존 기록과 병합했으며 서버로 전송하지 않았습니다.';
@@ -75,6 +75,7 @@ if (host) {
     if (!next) { progress.textContent = '모든 검수 대상의 일곱 항목이 완료되었습니다.'; return; }
     const row = Array.from(list.children).find(element => element.dataset.articleId === String(next.id));
     if (!row) { progress.textContent = '다음 미검수 기사를 찾지 못했습니다. 목록을 다시 확인해 주세요.'; return; }
+    row.open = true;
     row.scrollIntoView({ behavior: 'smooth', block: 'center' });
     row.querySelector('select')?.focus({ preventScroll: true });
     progress.textContent = '다음 미검수 기사로 이동했습니다. 일곱 항목을 확인해 주세요.';
@@ -89,9 +90,9 @@ if (host) {
       ' · 분류 '+report.dimensions.categoryAccuracy.reviewed+'/'+report.eligible;
     list.replaceChildren();
     for (const item of filterArticleReviews(articles, labels, showPendingOnly ? 'pending' : 'all')) {
-      const row = document.createElement('article'); row.className = 'article-quality-review-row'; row.dataset.articleId = String(item.id);
+      const row = document.createElement('details'); row.className = 'article-quality-review-row'; row.dataset.articleId = String(item.id);
       const title = document.createElement('a'); title.href = item.publisherArticleUrl; title.target = '_blank'; title.rel = 'noopener noreferrer'; title.textContent = item.title; title.className = 'article-quality-review-title';
-      const meta = document.createElement('p'); meta.className = 'photo-meta';
+      const meta = document.createElement('span'); meta.className = 'photo-meta';
       const date = item.publishedAt ? new Date(item.publishedAt).toLocaleDateString('ko-KR') : '날짜 없음';
       const urlContext = getArticleUrlContext(item);
       meta.textContent = (item.sourceName || '출처 미상')+' · '+date+' · 원문 URL '+(urlContext.publisherArticleHost || '확인 불가')+' · 검색 URL '+(urlContext.discoveryUrlHost || '확인 불가')+' · 등록 출처 호스트 '+(urlContext.recordedPublisherHost || '미기록')+' · 자동 분류 '+classifyDiscoveryCategories(item).join(', ')+' · 이미지 출처 '+(item.thumbnailSource || item.thumbnailProvenance?.source || '미확인');
@@ -126,7 +127,9 @@ if (host) {
         if (!persistLabels(nextLabels, '저장됨 · 정정 분류 · '+item.title)) correctionSelect.value = current.expectedCategory || '';
       });
       correction.append(correctionSelect);
-      row.append(title, meta, image, fields, correction); list.append(row);
+      const rowSummary = document.createElement('summary'); rowSummary.className = 'article-quality-review-row-summary'; rowSummary.append(title, meta);
+      const rowContent = document.createElement('div'); rowContent.className = 'article-quality-review-row-content'; rowContent.append(image, fields, correction);
+      row.append(rowSummary, rowContent); list.append(row);
     }
     updateProgress();
   }

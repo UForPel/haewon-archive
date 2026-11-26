@@ -363,3 +363,18 @@ For each substantial update include: changed paths; planned vs implemented items
 - UI source and CSS contracts are automated-tested, but no live Android/mobile visual, tap, keyboard, scroll or import/export test was performed. Report this as outstanding.
 - Review labels remain localStorage-only/manual JSON import-export; no automatic transfer. Committed human relevance labels remain 0.
 - Preserve 273 legacy shared-thumbnail assignments and current publisher source permission boundaries.
+
+
+## 2026-11-26 — Human review workflow and mobile QA truth
+
+Current baseline: Baseline main 8eca12b0f2ca032b58135d206a1141dbaa49c8a4; open PRs 0. Production #604 (45759271205) passed 195 tests, collection and validation. Generated data commit fbfaa5512ebff0c93db70ff11d7ee9bb4ad01b54. Pages artifact 15088809574, 571098 bytes, SHA-256 a4b872c7a4b335b6d6dc8344f1e408a72bb03babc77d164988e6e2162857df8d; Pages deployment reported success for 8eca12b0f2ca032b58135d206a1141dbaa49c8a4. Data: 856 candidates, 76 verified Haewon articles, 0 human labels, 352 thumbnails assigned / 504 missing; 273 legacy shared-image assignments retained. Production #604 news: 67 fetched / 60 unique / 2 added; Google and Bing each 6/6 queries. Google RSS 26 items, 0 explicit publisher URLs, 0 image signals. Bing RSS 41 items, 41 explicit publisher URLs, 0 image signals. Thumbnail enrichment 0 attempted / 0 assigned.
+
+Human review labels are 0; never manufacture or infer them. They require explicit user selections in the browser.
+
+Review JSON export/import must stay local/manual. Validate schema and eligible IDs, merge with existing labels, and preserve prior labels on invalid import or storage failure.
+
+Compact disclosure rows and next-pending focus are code improvements only. Node tests do not establish Android viewport, tap target, keyboard, scrolling or download/import behavior.
+
+No Playwright/Puppeteer dependency was added. Perform and report real Android QA separately.
+
+Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignments; do not bulk delete/replace. No new publisher feed without explicit applicable permission. Do not change search packs without repeated observations and human labels.

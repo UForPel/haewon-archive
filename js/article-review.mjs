@@ -172,3 +172,19 @@ export function getArticleUrlContext(item = {}) {
     recordedPublisherHost: String(item.publisherHost || '')
   };
 }
+
+
+export function createArticleReviewExport(labels = {}, exportedAt = new Date().toISOString()) {
+  const clean = validateArticleReviewExport({ schemaVersion: 1, labels });
+  return { schemaVersion: 1, exportedAt: String(exportedAt), labels: clean.labels };
+}
+
+export function mergeArticleReviewLabels(currentLabels = {}, importedPayload, eligibleIds = null) {
+  const current = validateArticleReviewExport({ schemaVersion: 1, labels: currentLabels }, eligibleIds).labels;
+  const imported = validateArticleReviewExport(importedPayload, eligibleIds).labels;
+  const merged = { ...current };
+  for (const [id, incomingRow] of Object.entries(imported)) {
+    merged[id] = { ...(current[id] || {}), ...incomingRow };
+  }
+  return merged;
+}

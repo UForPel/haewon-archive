@@ -562,3 +562,15 @@
 - [ ] Collect voluntary human-review labels; repository label set remains empty.
 - [ ] Compare repeated query packs using actual human-reviewed relevance, not only freshness/title proxies.
 - [ ] Continue thumbnail-source investigation; latest enrichment attempted 0, 504 missing remain, preserve 273 legacy assignments.
+
+
+## Review JSON and compact mobile queue — 2026-11-26
+- [x] Add pure Node helper to create a schema-clean review JSON export.
+- [x] Add safe merge helper validating imported schema and eligible article IDs while preserving unrelated existing labels.
+- [x] Add round-trip, unknown-field stripping, allow-list, merge-preservation and invalid-import immutability tests.
+- [x] Collapse individual article rows by default; next-pending opens the target before focus/scroll.
+- [ ] PR CI and archive validation must pass before merge.
+- [ ] Perform actual Android Chrome QA for narrow layout, disclosure, seven controls, next-item focus/scroll, refresh persistence and JSON download/import.
+- [ ] Collect voluntary human review labels; committed label set remains 0.
+- [ ] Do not change search packs without repeated samples and human relevance labels.
+- [ ] Continue thumbnail investigation; 504 missing remain and 273 legacy assignments must not be deleted or replaced.
