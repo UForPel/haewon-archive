@@ -487,3 +487,13 @@
 - [x] Persist first live pack-5 freshness sample: 0/69 within 7 days; 8/69 within 30 days; 46/69 older than 90 days.
 - [ ] Compare at least three distinct query packs before changing search strategy; combine freshness with unique yield, explicit publisher URL rate and human-reviewed relevance labels.
 - [ ] Manually inspect mobile layout, tap targets, focus and review controls on the deployed Pages site.
+
+
+## Human-review workflow usability — 2026-11-26
+- [x] Add pure seven-dimension review-completion and pending-filter helpers.
+- [x] Add pending-only view and next-unreviewed navigation to the article review panel.
+- [x] Count explicit uncertain labels as reviewed without treating them as positive relevance.
+- [x] Add regression tests for pending queue behavior and UI control wiring.
+- [ ] Pass PR CI and archive validation; merge only after genuine success.
+- [ ] Verify Production deployment and manually inspect mobile layout, focus and scrolling.
+- [ ] Collect a human-reviewed sample before using query proxies to promote/demote search packs.
