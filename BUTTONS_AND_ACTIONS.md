@@ -343,3 +343,11 @@ The assistant MUST render a real clickable button at the very bottom of every co
 - PR #43 merged as `c77d605cde6eac9476f7d187f77ac6c9c646adee`; PR CI #47 (`45752743361`) passed 193/193 tests and archive validation.
 - Production #602 (`45752794835`) is in progress; do not claim live deployment until its Pages step succeeds.
 - Keep the conversation continuation button as the final response element for every completed cycle.
+
+
+## 2026-11-26 — Review queue auto-advance deployed
+- PR #43 merged as `c77d605cde6eac9476f7d187f77ac6c9c646adee`; PR CI #47 passed 193/193 tests and archive validation.
+- Production #602 (`45752794835`) succeeded through collection, generated data commit `96a79935d85f23b17887b3ab20b95b780f1ab234`, Pages artifact upload and deployment.
+- The review queue now advances focus/scroll to the next incomplete article after all seven dimensions are completed in pending-only mode. Labels remain browser-local with manual JSON import/export.
+- Current final main at audit: `dd06a9638e8bf4e7365e1b66e21f4dedd08ed6f5`; no open PRs. Real mobile visual QA remains unverified.
+- Always finish a completed cycle with the full-prompt **🔄 재귀개선 계속하기** conversation button.
