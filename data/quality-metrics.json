@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-26T09:44:46.740Z",
+  "generatedAt": "2026-11-26T09:58:30.994Z",
   "discoveryRelevance": {
-    "totalCandidates": 856,
-    "articleCandidates": 669,
+    "totalCandidates": 857,
+    "articleCandidates": 670,
     "videoCandidates": 187,
     "verifiedPublisherArticles": 99,
     "verifiedHaewonArticles": 76,
@@ -10,11 +10,11 @@
     "verifiedHaewonWithProvenanceThumbnail": 58,
     "haewonTitleMatches": 504,
     "nmixxTitleMatches": 532,
-    "otherArticleCandidates": 69,
+    "otherArticleCandidates": 70,
     "defaultScope": "verified-haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 856,
+    "totalItems": 857,
     "itemsWithPublisherArticleUrl": 100,
     "bingNewsItems": 103,
     "candidateSourceCounts": {
@@ -129,8 +129,8 @@
       "www.chosun.com": 15,
       "www.slist.kr": 15,
       "www.topstarnews.net": 12,
+      "www.newsis.com": 12,
       "www.tvj.co.kr": 12,
-      "www.newsis.com": 11,
       "www.sedaily.com": 10,
       "mydaily.co.kr": 10,
       "www.munhwa.com": 10,
@@ -283,13 +283,13 @@
       "twitter:image:src": 1
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 504,
+    "missingThumbnailCount": 505,
     "sourceProvenanceCoverage": 22
   },
   "thumbnailAudit": {
-    "items": 856,
+    "items": 857,
     "withThumbnail": 352,
-    "missing": 504,
+    "missing": 505,
     "uniqueThumbnailUrls": 80,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
@@ -536,22 +536,22 @@
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 40,
+    "bingNewsCandidates": 43,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
-    "newsCandidatesTotal": 856,
-    "newsUniqueFetched": 64,
-    "newsAddedLastRun": 2,
-    "duplicateBeforeMergeLastRun": 7,
-    "duplicateGroupsCurrent": 856,
+    "newsCandidatesTotal": 857,
+    "newsUniqueFetched": 63,
+    "newsAddedLastRun": 3,
+    "duplicateBeforeMergeLastRun": 8,
+    "duplicateGroupsCurrent": 857,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
       "before": 71,
-      "after": 63,
-      "collapsed": 8,
+      "after": 62,
+      "collapsed": 9,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -568,11 +568,11 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 753,
-      "withUrl": 753,
+      "items": 754,
+      "withUrl": 754,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 753,
+      "withDate": 754,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
       "thumbnailCoverage": 36,
@@ -1248,11 +1248,11 @@
     }
   ],
   "classification": {
-    "items": 856,
+    "items": 857,
     "categoryCounts": {
       "video": 187,
       "interview": 56,
-      "news": 514,
+      "news": 515,
       "brand": 28,
       "event": 18,
       "performance": 44,
@@ -2137,7 +2137,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 504,
+    "thumbnailMissing": 505,
     "results": [
       {
         "kind": "article",
@@ -4581,7 +4581,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T09:44:46.753Z",
+    "generatedAt": "2026-11-26T09:58:31.019Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

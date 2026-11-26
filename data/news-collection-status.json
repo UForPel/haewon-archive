@@ -1,63 +1,63 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T09:44:43.850Z",
+  "collectedAt": "2026-11-26T09:58:28.029Z",
   "searchPack": 5,
   "queries": [
     {
       "query": "NMIXX Haewon Japan news",
-      "candidates": 14,
+      "candidates": 15,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 2,
-        "within90Days": 6,
-        "olderThan90Days": 6,
+        "within30Days": 1,
+        "within90Days": 7,
+        "olderThan90Days": 7,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 14
+        "within30DaysRate": 7
       },
-      "uniqueCandidates": 14,
+      "uniqueCandidates": 15,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 6,
-      "titleKeywordMatchRate": 43,
-      "explicitPublisherUrls": 10,
-      "explicitPublisherUrlRate": 71,
-      "crossQueryDuplicateUrls": 3,
-      "datedCandidates": 14,
+      "titleKeywordMatches": 7,
+      "titleKeywordMatchRate": 47,
+      "explicitPublisherUrls": 11,
+      "explicitPublisherUrlRate": 73,
+      "crossQueryDuplicateUrls": 4,
+      "datedCandidates": 15,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1600.4,
-      "p90PublicationLagHours": 24671.6
+      "medianPublicationLagHours": 1611,
+      "p90PublicationLagHours": 24223.2
     },
     {
       "query": "오해원 해외 활동",
-      "candidates": 21,
+      "candidates": 18,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 3,
+        "within30Days": 1,
         "within90Days": 4,
-        "olderThan90Days": 14,
+        "olderThan90Days": 13,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 14
+        "within30DaysRate": 6
       },
-      "uniqueCandidates": 21,
+      "uniqueCandidates": 18,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 16,
-      "titleKeywordMatchRate": 76,
+      "titleKeywordMatches": 13,
+      "titleKeywordMatchRate": 72,
       "explicitPublisherUrls": 5,
-      "explicitPublisherUrlRate": 24,
+      "explicitPublisherUrlRate": 28,
       "crossQueryDuplicateUrls": 3,
-      "datedCandidates": 21,
+      "datedCandidates": 18,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 6568.9,
-      "p90PublicationLagHours": 18001.7
+      "medianPublicationLagHours": 7425.5,
+      "p90PublicationLagHours": 53947.1
     },
     {
       "query": "Haewon international interview",
@@ -84,36 +84,36 @@
       "datedCandidates": 1,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 15359.3,
-      "p90PublicationLagHours": 15359.3
+      "medianPublicationLagHours": 15359.5,
+      "p90PublicationLagHours": 15359.5
     },
     {
       "query": "엔믹스 해원 활동 소식",
-      "candidates": 19,
+      "candidates": 21,
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 5,
-        "within90Days": 0,
-        "olderThan90Days": 14,
+        "within90Days": 1,
+        "olderThan90Days": 15,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 26
+        "within30DaysRate": 24
       },
-      "uniqueCandidates": 19,
+      "uniqueCandidates": 21,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 14,
-      "titleKeywordMatchRate": 74,
-      "explicitPublisherUrls": 10,
-      "explicitPublisherUrlRate": 53,
+      "titleKeywordMatches": 15,
+      "titleKeywordMatchRate": 71,
+      "explicitPublisherUrls": 12,
+      "explicitPublisherUrlRate": 57,
       "crossQueryDuplicateUrls": 3,
-      "datedCandidates": 19,
+      "datedCandidates": 21,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 9581.3,
-      "p90PublicationLagHours": 21448.9
+      "medianPublicationLagHours": 9438.8,
+      "p90PublicationLagHours": 18123
     },
     {
       "query": "Haewon radio appearance",
@@ -140,8 +140,8 @@
       "datedCandidates": 2,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1214,
-      "p90PublicationLagHours": 1531.4
+      "medianPublicationLagHours": 1214.2,
+      "p90PublicationLagHours": 1531.7
     },
     {
       "query": "NMIXX Haewon television",
@@ -164,26 +164,26 @@
       "titleKeywordMatchRate": 93,
       "explicitPublisherUrls": 12,
       "explicitPublisherUrlRate": 86,
-      "crossQueryDuplicateUrls": 3,
+      "crossQueryDuplicateUrls": 4,
       "datedCandidates": 14,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 12265.6,
-      "p90PublicationLagHours": 21149.2
+      "medianPublicationLagHours": 12265.9,
+      "p90PublicationLagHours": 21149.5
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
   "bingSuccessfulQueries": 6,
-  "bingCandidates": 40,
+  "bingCandidates": 43,
   "bingFailedQueries": [],
   "failedQueries": [],
   "fetched": 71,
-  "uniqueIncoming": 64,
-  "added": 2,
+  "uniqueIncoming": 63,
+  "added": 3,
   "rssImageSignals": {
-    "items": 31,
-    "sourceUrlItems": 31,
+    "items": 28,
+    "sourceUrlItems": 28,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -196,9 +196,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 40,
+    "items": 43,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 40,
+    "publisherArticleUrlItems": 43,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -224,9 +224,9 @@
   },
   "deduplicationComparison": {
     "before": 71,
-    "after": 63,
-    "collapsed": 8,
+    "after": 62,
+    "collapsed": 9,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 856
+  "totalCandidates": 857
 }
