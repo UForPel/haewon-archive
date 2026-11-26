@@ -1,63 +1,63 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T04:12:42.657Z",
+  "collectedAt": "2026-11-26T05:05:34.052Z",
   "searchPack": 5,
   "queries": [
     {
       "query": "NMIXX Haewon Japan news",
-      "candidates": 15,
+      "candidates": 13,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 2,
+        "within30Days": 1,
         "within90Days": 6,
-        "olderThan90Days": 7,
+        "olderThan90Days": 6,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 13
+        "within30DaysRate": 8
       },
-      "uniqueCandidates": 15,
+      "uniqueCandidates": 13,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 7,
-      "titleKeywordMatchRate": 47,
-      "explicitPublisherUrls": 11,
-      "explicitPublisherUrlRate": 73,
+      "titleKeywordMatches": 6,
+      "titleKeywordMatchRate": 46,
+      "explicitPublisherUrls": 9,
+      "explicitPublisherUrlRate": 69,
       "crossQueryDuplicateUrls": 3,
-      "datedCandidates": 15,
+      "datedCandidates": 13,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1605.3,
-      "p90PublicationLagHours": 24217.4
+      "medianPublicationLagHours": 1606.1,
+      "p90PublicationLagHours": 25115.7
     },
     {
       "query": "오해원 해외 활동",
-      "candidates": 21,
+      "candidates": 16,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 3,
-        "within90Days": 4,
-        "olderThan90Days": 14,
+        "within30Days": 1,
+        "within90Days": 3,
+        "olderThan90Days": 12,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 14
+        "within30DaysRate": 6
       },
-      "uniqueCandidates": 21,
+      "uniqueCandidates": 16,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 16,
-      "titleKeywordMatchRate": 76,
+      "titleKeywordMatches": 12,
+      "titleKeywordMatchRate": 75,
       "explicitPublisherUrls": 5,
-      "explicitPublisherUrlRate": 24,
+      "explicitPublisherUrlRate": 31,
       "crossQueryDuplicateUrls": 3,
-      "datedCandidates": 21,
+      "datedCandidates": 16,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 6563.3,
-      "p90PublicationLagHours": 17996.2
+      "medianPublicationLagHours": 7420.7,
+      "p90PublicationLagHours": 26649.6
     },
     {
       "query": "Haewon international interview",
@@ -84,8 +84,8 @@
       "datedCandidates": 1,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 15353.8,
-      "p90PublicationLagHours": 15353.8
+      "medianPublicationLagHours": 15354.7,
+      "p90PublicationLagHours": 15354.7
     },
     {
       "query": "엔믹스 해원 활동 소식",
@@ -112,8 +112,8 @@
       "datedCandidates": 21,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 9433,
-      "p90PublicationLagHours": 18117.2
+      "medianPublicationLagHours": 9433.9,
+      "p90PublicationLagHours": 18118.1
     },
     {
       "query": "Haewon radio appearance",
@@ -140,8 +140,8 @@
       "datedCandidates": 2,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1208.5,
-      "p90PublicationLagHours": 1525.9
+      "medianPublicationLagHours": 1209.4,
+      "p90PublicationLagHours": 1526.8
     },
     {
       "query": "NMIXX Haewon television",
@@ -162,28 +162,28 @@
       "duplicateTitleOccurrences": 0,
       "titleKeywordMatches": 13,
       "titleKeywordMatchRate": 93,
-      "explicitPublisherUrls": 11,
-      "explicitPublisherUrlRate": 79,
+      "explicitPublisherUrls": 12,
+      "explicitPublisherUrlRate": 86,
       "crossQueryDuplicateUrls": 3,
       "datedCandidates": 14,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 12260.1,
-      "p90PublicationLagHours": 21143.7
+      "medianPublicationLagHours": 12261,
+      "p90PublicationLagHours": 21144.6
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
   "bingSuccessfulQueries": 6,
-  "bingCandidates": 42,
+  "bingCandidates": 41,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 74,
-  "uniqueIncoming": 67,
+  "fetched": 67,
+  "uniqueIncoming": 60,
   "added": 2,
   "rssImageSignals": {
-    "items": 32,
-    "sourceUrlItems": 32,
+    "items": 26,
+    "sourceUrlItems": 26,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -196,9 +196,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 42,
+    "items": 41,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 42,
+    "publisherArticleUrlItems": 41,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -223,8 +223,8 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 74,
-    "after": 66,
+    "before": 67,
+    "after": 59,
     "collapsed": 8,
     "method": "normalized exact headline first; canonical URL fallback"
   },
