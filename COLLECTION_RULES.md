@@ -325,3 +325,9 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Import must validate schema and eligible IDs, merge per dimension, and preserve unrelated existing labels. A failed localStorage write must retain the prior in-memory and persisted labels.
 - Never infer human review labels from tests, automated relevance classification, or device-independent checks. Real Android Chrome QA requires user-reported observations.
 - Keep source/rights restrictions unchanged: no new RSS source without explicit permission; use only explicitly supplied public HTTPS article/image metadata; do not decode Google News wrappers or bypass access controls. Preserve the 273 legacy shared-image assignments.
+
+
+## 2026-11-26 — Local review rollback consistency
+- A successful localStorage write is the commit point for review labels. On a later failed write, both persisted data and UI controls must remain at the latest committed value, including after multiple edits in the same rendered row.
+- Never roll a control back to a stale value captured at initial render. Resolve fallback values from the current committed labels object.
+- This change does not alter the local-only storage boundary or JSON manual transfer behavior.
