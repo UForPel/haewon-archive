@@ -776,3 +776,14 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - News run: 74 fetched / 67 unique / 2 added; Google and Bing 6/6 queries each. Google RSS 32 items / 0 explicit publisher article URLs / 0 image signals; Bing 42 items / 42 explicit publisher URLs / 0 image signals. Thumbnail enrichment attempted 0 and assigned 0.
 - Review labels remain 0; real Android/mobile viewport, touch and visual QA remains outstanding. No browser automation dependency was added.
 - Latest main after data commit: `7753a02be1ad512a44348b67e483ee75038c6b7a`; no open PRs.
+
+
+## 2026-11-26 — Review JSON safeguards and compact queue (PR candidate)
+
+Baseline main 8eca12b0f2ca032b58135d206a1141dbaa49c8a4; open PRs 0. Production #604 (45759271205) passed 195 tests, collection and validation. Generated data commit fbfaa5512ebff0c93db70ff11d7ee9bb4ad01b54. Pages artifact 15088809574, 571098 bytes, SHA-256 a4b872c7a4b335b6d6dc8344f1e408a72bb03babc77d164988e6e2162857df8d; Pages deployment reported success for 8eca12b0f2ca032b58135d206a1141dbaa49c8a4. Data: 856 candidates, 76 verified Haewon articles, 0 human labels, 352 thumbnails assigned / 504 missing; 273 legacy shared-image assignments retained. Production #604 news: 67 fetched / 60 unique / 2 added; Google and Bing each 6/6 queries. Google RSS 26 items, 0 explicit publisher URLs, 0 image signals. Bing RSS 41 items, 41 explicit publisher URLs, 0 image signals. Thumbnail enrichment 0 attempted / 0 assigned.
+
+PR candidate adds pure Node JSON export/merge helpers, round-trip and invalid-import tests, and collapsed per-article review disclosures. Next-pending opens the selected disclosure before focus/scroll.
+
+No Playwright/Puppeteer dependency, backend, automatic review-label upload, new RSS source, query-pack edit or bulk thumbnail operation.
+
+Real Android/mobile visual, touch, focus and download/import QA remains unperformed and must not be inferred from CI.
