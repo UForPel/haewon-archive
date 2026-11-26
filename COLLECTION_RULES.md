@@ -231,3 +231,8 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - A review row leaves the pending-only list only after all seven independent dimensions have explicit valid values. `uncertain` remains a completed judgment, not a positive relevance result.
 - PR #43 CI and deployment must be verified independently. No change to publisher-source permissions; SBS and Yonhap remain excluded absent explicit applicable permission.
 - Preserve the 273 legacy shared-thumbnail assignments unchanged.
+
+
+## 2026-11-26 — Review queue auto-advance merged
+- PR #43's navigation change is merged. CI passed 193/193 tests and archive validation.
+- Production #602 is in progress; collection and Pages deployment are not yet verified. The change does not alter publisher source eligibility, collection policy or the 273 legacy thumbnail group.
