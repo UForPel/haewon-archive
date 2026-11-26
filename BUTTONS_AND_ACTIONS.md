@@ -476,3 +476,10 @@ Keep the conversation continuation button as the final response element of every
 - Added helper and regression/integration tests. Official basis: MDN details/open property references are recorded in SESSION_LOG.
 - PR CI, merge, Production and Pages outcome pending; Android Chrome QA remains unverified.
 - Keep the required final control label **🔄 연구 기반 재귀개선 계속하기** and its complete continuation prompt. Never substitute a short prompt or omit the clickable action.
+
+
+## 2026-11-26 — PR #52 final verification
+- PR #52 merged as `f9eb50cb35d51427facdbd199f7ac1cdff26a720`; final-head PR CI #74 passed 207/207 tests and archive validation.
+- Production #609 succeeded; generated data commit `5351bc276aa5b1dd5c9286caf9a6156f273318e9`; Pages artifact `15105556263` (606,867 bytes; SHA-256 `a90856560a15baff8d7c49f51ff75b4e6a1d884a7df195f64276d96b1af3f751`); deployment log reported success.
+- “다음 미검수 후보” now opens the collapsed image-candidate details before scrolling and focusing the target select.
+- Keep the required final control label **🔄 연구 기반 재귀개선 계속하기** with the full continuation prompt. Android Chrome QA remains unverified.
