@@ -890,3 +890,13 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Official basis: MDN documents that closed `details` content is hidden and setting `HTMLDetailsElement.open=true` reveals it: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details and https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement/open
 - PR #52 CI and merge are pending at this checkpoint. No Production collection, data commit or Pages deployment has run for this change.
 - No collection sources, RSS, review labels, thumbnails, legacy assignments, or storage paths changed. Android Chrome QA remains UNVERIFIED.
+
+
+## 2026-11-26 — PR #52 and Production #609 final verification
+- PR #52 merged as `f9eb50cb35d51427facdbd199f7ac1cdff26a720`; final PR head `736833dfa01e162acec28e6fa0a0b5d7afc6b2ae`.
+- Final-head PR CI #74 (`45796812639`) passed: 207 tests, 207 passed, 0 failed. Archive validation passed: 856 candidates at PR CI time, 180 schema-valid run logs, 55 source summaries and 41 links checked.
+- Production #609 (`45796902589`) completed successfully on merge SHA; tests/collection/validation/data commit and Pages deployment all passed. Deployment log explicitly reports `Reported success!`.
+- Production generated data commit: `5351bc276aa5b1dd5c9286caf9a6156f273318e9`. Pages artifact `15105556263`, 606,867 bytes, SHA-256 `a90856560a15baff8d7c49f51ff75b4e6a1d884a7df195f64276d96b1af3f751`.
+- Production #609 run log: 15 YouTube candidates, 0 accepted, 15 duplicates; Google News RSS 71, Bing News RSS 43; run validation passed. Final archive: 857 candidates (670 articles / 187 videos), 352 assigned / 505 missing thumbnails, 80 unique thumbnail URLs; 273 legacy shared-image assignments preserved; 482 thumbnail review candidates / 0 reviewed; article human review labels 0.
+- PR #52 is a UI visibility/focus fix only. No sources, RSS, thumbnail assignments, human review labels, or storage destinations changed. No collection improvement or thumbnail gain is claimed.
+- Android Chrome QA remains **UNVERIFIED**; Node tests and Pages deployment are not device QA.
