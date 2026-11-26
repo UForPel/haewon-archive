@@ -257,3 +257,12 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Current latest run: 736 candidates; 550 articles; 186 videos; 333 thumbnail assignments; 403 missing. 273 legacy repeated-image records preserved.
 - Latest thumbnail response sample: 12 checked; 11 image responses; 1 HTTP 404.
 - The required ChatGPT follow-up action is **🔄 연구 기반 재귀개선 계속하기**. It is a conversation action, not an archive website control.
+
+## 2026-11-26 — Current query and production workflows
+- Read-only PR gate remains active on main after PR #30.
+- Production workflow uses Node24-pinned immutable action SHAs after PR #26. Latest run #45729843156 passed all stages and deployed Pages.
+- PR #32 merged the six-pack editorial query rotation: 36 unique phrases, six queries per run, two different KST time slots daily. Latest run used pack index 4.
+- Query diagnostics now persist per-query unique candidates, overlap, title-keyword proxy, explicit publisher URL rate and freshness. One run is an initial sample, not enough to rank all packs.
+- Current archive: 767 candidates; 580 articles; 187 videos; 340 thumbnail assignments; 427 missing; 273 legacy shared-image assignments preserved.
+- Latest 12-URL thumbnail sample: 11 image responses, one HTTP 404.
+- Continue the ChatGPT follow-up action **🔄 연구 기반 재귀개선 계속하기** after each cycle. It is a conversation control, not a deployed archive button.

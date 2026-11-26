@@ -437,3 +437,17 @@
 - [ ] Improve article-specific thumbnail coverage through public metadata only; never bulk replace the 273 legacy shared-image assignments.
 - [ ] Recheck current live site and mobile layout after a verified deployment; deployment success alone is not visual QA.
 - [ ] No new publisher RSS source until explicit applicable permission is documented.
+
+## 2026-11-26 — Next research cycle after query rotation
+- [x] Merge PR #32 six-pack / 36-query editorial search rotation and per-query diagnostics.
+- [x] Verify genuine PR CI #45729777536: 160/160 tests and validation.
+- [x] Verify first live run #45729843156: 160/160 tests, collection, validation, data commit and Node24 Pages deployment successful.
+- [x] Preserve the shared social URL predicate and Bing image parsing while porting query rotation.
+- [ ] Run at least two more distinct query packs, then compare per-query unique yield, cross-query overlap, explicit publisher URL rate, title relevance proxy and publication lag.
+- [ ] Only after repeated evidence, consider replacing low-yield terms such as public schedule / fanmeeting searches. Do not infer direct relevance from title keyword proxy alone.
+- [ ] Add human review labels through PR #13's review workflow, then evaluate query precision against human-reviewed examples.
+- [ ] Continue to keep video/fancam discovery separate from editorial RSS.
+- [ ] Keep PR #23 YouTube Data API optional and nonessential; keep PR #24 external dispatcher dry-run until permissions and free-tier limits are reviewed.
+- [ ] Improve provenance-backed article thumbnails; 340 assigned, 427 missing, 273 legacy shared-image assignments preserved.
+- [ ] Recheck live Pages mobile UI after a separate visual QA; deploy success is not visual QA.
+- [ ] Do not add new publisher RSS feeds without explicit applicable permission.

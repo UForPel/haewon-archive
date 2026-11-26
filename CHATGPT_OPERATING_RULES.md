@@ -257,3 +257,15 @@ For each substantial update include: changed paths; planned vs implemented items
 - Default news order is publication date descending; invalid publishedAt falls back to discoveredAt. Relevance sorting is an explicit alternate. Unresolved wrapper video candidates remain separate until an explicit YouTube URL is verified.
 - No new publisher RSS sources without explicit permission. Do not bulk-delete or replace the 273 legacy shared-thumbnail records.
 - No merge should be performed if current PR CI or data validation fails. Deployment success does not establish visual/mobile QA; report it separately.
+
+## 2026-11-26 — Query rotation operating rules
+- Read current main, PRs, Actions, data and all six documents before each cycle. Distinguish code commits, test runs, collection, generated data commits, Pages deployment and mobile QA.
+- PR #32 is merged. Six packs × six unique editorial phrases rotate across KST morning/evening slots; two runs/day use different packs. Query volume is 24 RSS requests/day, a 50% bounded increase from the previous 16/day.
+- Do not claim better coverage or precision from pack count alone. Compare at least three distinct pack samples using unique URL yield, cross-query overlap, explicit publisher URL rate, title keyword proxy and publication lag. Title keyword proxy is not human-reviewed precision.
+- Preserve meaningful URL query parameters such as `source` and `ref`; strip only known tracking parameters in metric normalization.
+- Keep video/fancam candidates out of editorial RSS packs and in a separate unresolved-video section until explicit YouTube URLs are verified.
+- Latest Production run #45729843156 succeeded: 160/160 tests, validation, data commit and Pages deploy; no Node20 deprecation warning. Main data SHA `891b2d74...`.
+- Current data: 767 candidates, 580 articles, 187 videos, 85 verified publisher articles, 70 verified Haewon candidates, 340 thumbnails, 427 missing, 273 legacy shared-image assignments preserved.
+- No new publisher RSS feed without explicit permission. Do not delete/replace the 273 legacy image group.
+- External contact/email, personal/secret data handling and paid service activation require separate confirmation; repository-internal development and normal CI/merge operations are preauthorized.
+- Deployment success does not establish visual/mobile QA; report it separately.

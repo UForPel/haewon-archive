@@ -160,3 +160,14 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - Latest thumbnail audit sample: 12 unique URLs, 11 image responses, 1 HTTP 404 (Sportalkorea CDN), 0 unreachable, 0 rate-limited, 0 non-image successful responses. Do not extrapolate this sample to all thumbnails.
 - Do not add SBS, Yonhap or other publisher RSS feeds until explicit applicable usage permission is documented. Do not redistribute article text or images outside allowed public metadata/link and attribution rules.
 - No automated deletion, replacement or human-label assignment for the 273 legacy group.
+
+## 2026-11-26 — Query rotation and source boundaries
+- Editorial search uses 36 unique query phrases in six packs of six. Each KST day has a morning and evening slot, selecting two different packs. Current expected volume is 12 queries/day × Google and Bing RSS = 24 feed requests/day.
+- Keep video/fancam terms out of editorial RSS query packs. Unresolved wrapper video candidates remain separate until a direct YouTube URL is verified.
+- Query diagnostics record normalized unique URL yield, duplicate URL/title counts, cross-query overlap, title keyword proxy, explicit publisher URL rate and publication lag. Title proxy is not human-reviewed precision. Require multiple pack samples before adapting the query vocabulary.
+- Query URL normalization strips only known tracking parameters; do not strip content-bearing `source` or `ref` parameters.
+- Apply shared publisher URL predicate before publisherArticleUrl, publisher metrics or metadata enrichment. X/Twitter destinations remain discovery candidates but are never publisher articles.
+- Latest first-pack sample index 4: six queries, 54 Google candidates, 20 Bing candidates; median publication lag varies widely and some queries are stale. Compare more packs before conclusions.
+- Latest stored data: 767 candidates, 580 articles, 187 videos, 85 verified publisher articles, 70 verified Haewon candidates; 340 thumbnails, 427 missing. Preserve 273 legacy shared-image records.
+- Latest thumbnail response sample: 12 URLs, 11 image responses, one HTTP 404 (Sportalkorea CDN), 0 unreachable, 0 rate-limited, 0 non-image successful responses.
+- No new RSS sources are approved. SBS, Yonhap and other publishers remain excluded as direct feeds pending explicit applicable permission.
