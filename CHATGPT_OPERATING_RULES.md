@@ -531,3 +531,12 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - All 273 legacy assignments remain unchanged; 0 have publisher article URLs, 0 have alternative thumbnail candidates, 199 have source-site URLs. 12 wrapper-only Google News metadata entries remain untouched.
 - Android Chrome QA remains UNVERIFIED pending actual user checklist results. No labels were generated/uploaded, no new RSS sources added, no wrapper decoding, no access bypass, no paid service or external data transmission.
 - Latest code/data main before this documentation-only finalization: 9b47fd4ab2a46163fff794b2dc4e70f892ab0c7f. Documentation-only PR will not trigger another Production run.
+
+ 
+## 2026-11-27 — Source-diagnosis and continuity requirements
+- On each cycle, read latest main SHA, open PRs, Actions, Production, data commit, Pages artifact/deployment, then read the six continuity/operating documents before editing.
+- Recompute metrics from current generated data; never reuse yesterday's missing/assigned counts as constants.
+- For thumbnail gaps, separate per-source totals, explicit publisher article URL coverage, source-site URLs, image candidates, metadata outcomes and legacy assignments. Label evidence-based classifications; retain unknown/unattempted states instead of guessing.
+- Verify both general and repeated-image review flows: only advance after successful local persistence; on failure restore the prior label and do not advance. Android Chrome QA is unverified until the user supplies actual device results.
+- Do not add sources, retry 403/429 or non-RSS responses blindly, decode Google News wrappers, bypass access restrictions, generate/upload labels, or mutate the 273 legacy assignments.
+- A code branch/PR is not merged or Production-verified until final-head CI and full data validation pass; after merge, verify Production collection, generated data commit, Pages artifact and deployment as separate outcomes.
