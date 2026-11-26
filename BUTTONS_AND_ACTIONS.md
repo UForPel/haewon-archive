@@ -200,19 +200,8 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - If a rendered action cannot be supported by the client, include the exact full prompt as a copyable fallback. Never silently omit the action.
 - Regression cause: the requirement already existed in operating documentation, but the assistant omitted the actual conversation control. This is an execution/response-composition failure, not an absence of a documented requirement.
 
-
-
-## 2026-11-25 — PR CI proposal
-
-- A new current-main branch adds the focused read-only pull-request verification workflow. It has no write permissions or deploy actions.
-- Do not represent the new workflow as active on main until the PR is approved and merged. The PR's own event run is the acceptance check.
-
-
-
-### PR #30 verification status — 2026-11-25
-- PR #30's actual `pull_request` event run #45570038033 passed checkout, Node setup, unit tests and data validation.
-- The workflow remains a proposed change until user approval and merge; do not describe it as an active main-branch gate yet.
-
-
-
-- Final PR #30 head also passed its own `pull_request` run #45570147672 after the documentation updates. The proposal is still not active on main until approved and merged.
+## 2026-11-25 — Node 24 production workflow proposal
+- Branch `ci/upgrade-pages-actions-node24` upgrades five first-party actions to verified full immutable SHAs whose action metadata declares Node 24.
+- The application/runtime Node version remains 22. This change only upgrades the runtime used internally by JavaScript GitHub Actions.
+- Do not claim the change is deployed or verified until PR CI and an approved main production deployment succeed. No PR merge is authorized by this work.
+- The mandatory bottom-of-response conversation action **🔄 연구 기반 재귀개선 계속하기** remains required regardless of user-typed follow-up messages.

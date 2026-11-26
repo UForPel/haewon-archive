@@ -565,22 +565,15 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - User-typed messages and corrections must not suppress the action. The action submits the full reusable recursive-improvement prompt from `CHATGPT_OPERATING_RULES.md`; a textual label alone is insufficient.
 - The requirement was already present in operating guidance; this update addresses the failure to render the action in the actual assistant response. Documentation commit: `653405c1f422e53d67cf43ea13250d6abe7332d9`; follow-up session-log commit is being recorded separately. Verify Actions/Pages for the resulting commits.
 
+## 2026-11-25 — Node 24-compatible production workflow proposal (PR validation pending)
+- Verified official action metadata and immutable tag commit SHAs for checkout v7.0.1 (`3d3c42e5...`), setup-node v7.1.0 (`949feb24...`), configure-pages v6.0.0 (`45bfe019...`), upload-pages-artifact v5.0.0 (`fc324d35...`) and deploy-pages v5.0.1 (`368f8252...`). Each JavaScript action declares Node 24; the Pages upload composite uses upload-artifact v7.0.0 internally.
+- Updated `.github/workflows/collect-and-deploy.yml` on `ci/upgrade-pages-actions-node24`, pinning all five actions to full immutable commit SHAs and release comments. Kept the project runtime at Node 22; this is separate from the JavaScript runtime used to execute Actions themselves.
+- Added `package-manager-cache: false` to setup-node because the workflow does not require dependency caching. Existing schedule, collection concurrency, write permissions, validation, data commit and Pages deploy gates are unchanged.
+- PR CI/production deployment has not run on this branch. No workflow change is live until approved merge and successful run.
 
-
-## 2026-11-25 — Read-only pull request CI on current main
-
-- Created a separate branch from current main `37998b31b12b2eb9980cff6df616b2f677a10de6` and added `.github/workflows/pull-request-verification.yml`.
-- The workflow runs only on `pull_request` targeting main, grants `contents: read`, uses pinned checkout v7.0.1 and setup-node v7.1.0 (Node 24 action runtimes), disables checkout credential persistence and package-manager cache, and runs `npm test` plus `npm run validate` on Node 22.
-- This branch is a focused replacement for stale PR #15; it contains no application code, archive data, secrets, deployment permissions, or Pages deployment steps.
-- A PR-event run is pending after opening the PR. Do not claim CI passed until that event is observed.
-
-
-
-### PR #30 acceptance result — 2026-11-25
-- Opened PR #30 from the current-main branch. Its actual GitHub Actions run `45570038033` is confirmed as event `pull_request`, associated with PR #30, and completed successfully.
-- Job `test-and-validate`: checkout, Node setup, `npm test`, and `npm run validate` all succeeded. This is a real PR-event pass for #30, not a push snapshot.
-- The workflow remains only proposed on the PR branch; it is not active on main until the user approves and merges it.
-
-
-
-- Final PR #30 head `de53462e6fc814213bce325de1cb00150e1683fa` was rechecked after the documentation-only follow-up commits. The latest run `45570147672` is a genuine `pull_request` event for PR #30 and passed the full job, including `npm test` and `npm run validate`. Earlier synchronize runs include a cancelled superseded run; the latest head run is successful.
+## 2026-11-25 — PR #25/#26 verification boundary refresh
+- PR #25 (`fix/metadata-method-not-allowed-backoff`) and PR #26 (`ci/upgrade-pages-actions-node24`) are both open, unmerged, mergeable and based directly on latest main `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- Both heads currently have empty combined-status lists and no PR-triggered workflow runs. Main still has no `pull_request` workflow; PR #15 is open and unmerged.
+- Production main run #45556461352 is independently confirmed successful: 142/142 tests, collection and validation steps successful, data commit completed, Pages artifact 434,230 bytes, deployment status reported success. This is main-only evidence, not validation of PR #25/#26.
+- The Pages deployment log reports `pages_build_version=d85484c426ef0f67e3a3ddf16da76276315664e1`, while the same run subsequently pushed data commits `33ff1b9` and `37998b3`. Do not conflate the workflow's source/deployment version with its post-run data commit.
+- Browser rendering of the live Pages URL could not be inspected through the available web viewer; mobile/browser visual QA remains unverified. A local clone/test attempt was blocked because this environment could not resolve github.com. No test pass is claimed for either PR.

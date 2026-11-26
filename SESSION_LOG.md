@@ -1129,31 +1129,18 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Required label remains **🔄 연구 기반 재귀개선 계속하기**; the action must submit the full research-informed recursive-improvement prompt in `CHATGPT_OPERATING_RULES.md`. If a real action cannot be rendered, provide the complete copyable prompt.
 - Documentation commit: `653405c1f422e53d67cf43ea13250d6abe7332d9`. CI/Pages status for this commit must be checked before calling the documentation change deployed.
 
+## 2026-11-25 — Node 24 Actions runtime maintenance implementation
+- Latest main remains `37998b31b12b2eb9980cff6df616b2f677a10de6`. Production run #45556461352 was inspected step-by-step: all 19 workflow stages completed successfully, 142/142 tests passed, and Pages artifact `github-pages` (434,230 bytes, SHA-256 `8ffb3b7cbb28e53622ee348bddc50a8264a8cc5f270d81feb1a93bc0742bb6df`) deployed successfully. The deployment payload's pages_build_version was `d85484c426ef0f67e3a3ddf16da76276315664e1` (the doc commit), so the later data commit `37998b3` is not necessarily the deployed build SHA; distinguish workflow head/deployment version from the post-run data commit.
+- The run's `sources` log reports NMIXX YouTube 15, Google News RSS 77, Bing RSS 36; all success. Data metrics report 707 candidates (521 articles, 186 videos), 61 explicit publisher URLs, 60 verified publisher articles, 51 verified Haewon articles, 40 verified Haewon articles with provenance thumbnails; 321 assigned thumbnails include 273 unverified legacy entries, 49 unique URLs, and 386 missing. RSS image diagnostics: 41 items inspected, 0 image signals; the enrichment attempted 2, assigned 1 (public X `og:image`), failed 1 (Sportskeeda). Human image-relevance labels remain 0.
+- The Actions job log explicitly warned that several first-party actions declared Node 20 while runners force Node 24. Official action metadata and full immutable release SHAs were checked directly: checkout v7.0.1 `3d3c42e5aac5ba805825da76410c181273ba90b1`; setup-node v7.1.0 `949feb2413d6458794dcd2491c4babbbce0c15c1`; configure-pages v6.0.0 `45bfe0192ca1faeb007ade9deae92b16b8254a0d`; upload-pages-artifact v5.0.0 `fc324d3547104276b827a68afc52ff2a11cc49c9`; deploy-pages v5.0.1 `368f82528645a54fb793d4d04e342629a3f51346`. All JavaScript actions declare Node 24; the upload Pages composite uses upload-artifact v7.0.0 internally.
+- Created `ci/upgrade-pages-actions-node24` from latest main and updated only the production workflow action pins. Node 22 remains the project script runtime; package-manager caching is explicitly disabled. Schedule, concurrency, permissions, collection/data write gates and Pages deployment steps are unchanged.
+- Local `git clone`/npm test could not run because this execution environment cannot resolve github.com; PR CI and deployed production verification remain pending. No PR was merged.
 
-
-## 2026-11-25 — Rebase PR #15's read-only CI proposal onto current main
-
-- Inspected PR #15's workflow and verified run #10 (ID `45541326160`) was genuinely `pull_request` event for PR #15, with 142/142 tests and validation successful.
-- Rather than updating the stale PR #15 branch (8 commits behind), created `ci/read-only-pr-verification-main-20261125` directly from main SHA `37998b31b12b2eb9980cff6df616b2f677a10de6`.
-- Added only `.github/workflows/pull-request-verification.yml`: PRs targeting main, `contents: read`, pinned checkout v7.0.1 and setup-node v7.1.0, `persist-credentials: false`, `package-manager-cache: false`, Node 22, `npm test`, `npm run validate`, concurrency cancellation and 10-minute timeout.
-- No `package-lock.json` or npm-shrinkwrap exists in main; the repository has no dependency-install step in its existing workflows, so this minimal job does not invent an install step.
-- No code/data/deploy permissions were added. PR-event CI for this new branch is pending PR creation and must be reported separately from PR #15 run #10.
-
-
-
-### PR #30 actual PR-event validation — 2026-11-25
-- PR #30: `https://github.com/UForPel/haewon-archive/pull/30`; base SHA `37998b31...`; head SHA `e07785e56679b58a826d7b872b9f977f16b76d57`.
-- GitHub run `45570038033` was inspected through the Actions API: `event=pull_request`, PR association `[30]`, conclusion `success`.
-- Job `test-and-validate` succeeded. Checkout, Node setup, `npm test`, and `npm run validate` each completed successfully.
-- This validates the workflow as proposed in PR #30. It does not make the workflow active on main, and does not replace independent approval/merge. No PR was merged.
-
-
-
-- After the six documentation status updates, GitHub emitted synchronize runs for PR #30. Superseded run `45570112539` was cancelled as expected by concurrency; run `45570124386` passed an intermediate docs head; final head `de53462e6fc814213bce325de1cb00150e1683fa` was tested by run `45570147672`, event `pull_request`, associated with PR #30, conclusion `success`. Its sole job passed checkout, Node setup, unit tests and archive validation. This is the final-head acceptance result.
-
-
-## 2026-11-26 — Refresh PR verification against current main
-- Current main is `3c93903c6e37839fd69e0a1a74851a3dac3e6174`; scheduled production run #45695468167 completed 142/142 tests, all collection/validation/data-commit steps, and Pages deploy. Artifact: 446,580 bytes, SHA-256 `ea394ffa5add0d8ffc8bdfc88673b145cf64fc6d7ebbb9870badc5ffe8d50bcc`.
-- Main still emits the GitHub Node20 deprecation warning for checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4; the runner forces them to Node24. PR #26 proposes immutable Node24 action pins.
-- Previous PR #30 run #45570252997 passed 142 tests and validation but its merge commit was based on main `37998b31`, one data commit behind current main. This commit refreshes the PR head so the read-only workflow can be re-evaluated against current main.
-- This workflow must remain read-only (`contents: read`), with no secrets, data writes, artifact upload or deployment. A successful PR run is not a production deployment.
+## 2026-11-25 — PR #25/#26 recheck and verification boundary
+- Rechecked main, open PRs, both PR heads, compare-to-main results, combined statuses and production workflow logs. Latest main remains `37998b31b12b2eb9980cff6df616b2f677a10de6`; PR #25 head `26ee3989d15b334a343ef196225866d2766156a0`; PR #26 head `3208945725d1244b71f12315bcf45d956591bf09` at the time of inspection. Both are 0 commits behind main, open, unmerged and mergeable.
+- PR #25 has 15 commits and changes 8 files; PR #26 has 5 commits and changes 5 files. Neither head has a combined status check or a pull_request workflow run. Main still lacks `.github/workflows/pull-request-verification.yml`; PR #15's proposal remains open.
+- Re-read production job #139009782229 logs: `npm test` reported 142 tests, 142 passed, 0 failed; all collection, quality, validation, operational-log, data commit, Pages configure, artifact upload and deploy steps succeeded. The artifact is 434,230 bytes and SHA-256 `8ffb3b7cbb28e53622ee348bddc50a8264a8cc5f270d81feb1a93bc0742bb6df`.
+- Pages deployment reported success for build version `d85484c426ef0f67e3a3ddf16da76276315664e1`; later in the same run, generated data commits `33ff1b9` and `37998b3` were pushed. Keep the deployed workflow source/version separate from the post-run data commit in status reports.
+- Latest quality counters: 707 candidates (521 articles, 186 videos); 61 explicit publisher article URL records; 60 verified publisher articles; 51 verified Haewon articles; 40 verified Haewon articles with provenance-backed thumbnails. 321 thumbnail assignments include 273 unverified shared legacy assignments; 49 unique image URLs; 386 missing. RSS inspected 41 items and found zero image signals; metadata enrichment attempted 2, assigned 1 (public X `og:image`), failed 1 (Sportskeeda). No human image-relevance labels exist.
+- Attempted to inspect the live Pages URL via the available web viewer; it returned an internal access error. This does not establish the site is down; real browser/mobile rendering remains unverified. Attempted local `git clone` to run tests, but the execution environment could not resolve github.com. Therefore no local PR tests are claimed.
+- No PR was merged.

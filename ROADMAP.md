@@ -342,24 +342,16 @@
 - [ ] Continue improving the actual content mix and source-verified article/image coverage.
 - [ ] Perform real browser/mobile visual QA and human review.
 
+## 2026-11-25 — Node 24-compatible production workflow
+- [x] Verify current first-party action versions, Node 24 runtime declarations and full immutable tag commit SHAs.
+- [x] Update checkout, setup-node, configure-pages, upload-pages-artifact and deploy-pages pins on a separate branch.
+- [x] Preserve Node 22 for project scripts and explicitly disable unnecessary package-manager caching.
+- [ ] Await PR review and read-only validation; no merge without user approval.
+- [ ] After approved merge, verify the complete production collection, validation, data commit, artifact upload and Pages deployment.
 
-
-## 2026-11-25 — Current-main PR verification gate
-
-- [x] Re-inspect PR #15's genuine pull_request run #10 and workflow.
-- [x] Create a fresh current-main branch with read-only PR CI instead of carrying the stale 8-commits-behind PR #15 branch.
-- [ ] Open focused PR and confirm its own pull_request run passes 100% of tests and data validation.
-- [ ] After approval and merge, verify a subsequent unrelated PR receives the workflow check.
-
-
-
-### 2026-11-25 — PR #30 gate acceptance
-- [x] Open focused current-main PR #30 for read-only PR CI.
-- [x] Confirm its own actual `pull_request` Actions run #45570038033 completed successfully.
-- [x] Confirm unit tests and archive-data validation both succeeded.
-- [ ] User approval and merge before treating the workflow as active on main.
-- [ ] Confirm an unrelated future PR receives this check after merge.
-
-
-
-- [x] Re-run PR #30 validation after documentation synchronization; final head run #45570147672 passed.
+## 2026-11-25 — Verification boundaries after PR #25/#26
+- [x] Recheck PR #25 and PR #26 against latest main; both are open, unmerged, and have no status checks.
+- [x] Reconfirm production Actions #45556461352: 142/142 tests, full collection/validation/data commit/Pages deployment successful.
+- [x] Confirm the live workflow's Pages deployment source SHA differs from the post-run data commit; keep the identifiers distinct in reporting.
+- [ ] Run `npm test` and `npm run validate` on PR #25 and PR #26 through a working PR CI or local checkout. Current environment DNS prevents Git clone, and main has no pull_request workflow.
+- [ ] Inspect the published Pages site in a real browser/mobile viewport; web viewer access failed, so visual QA is still open.
