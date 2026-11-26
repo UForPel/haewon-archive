@@ -82,3 +82,11 @@ test('successful repeated-image article review save advances only after local pe
  assert.ok(saved>=0&&advance>saved&&failure>advance,'repeated-group auto-advance is scheduled only after successful persistence');
  assert.match(repeatedRenderer,/기사별 검수 저장 완료\. 다음 미검수 기사로 이동합니다\./);
 });
+
+test('quality dashboard displays evidence-based missing-thumbnail diagnostics by source',async()=>{
+ const source=await readFile(new URL('js/discovery-view.mjs',root),'utf8');
+ assert.match(source,/metrics\.thumbnailMissingDiagnostics/);
+ assert.match(source,/썸네일 누락 원인 · 근거 기반 분류/);
+ assert.match(source,/missingWithPublisherArticleUrl/);
+ assert.match(source,/missingWithSourceSiteUrl/);
+});

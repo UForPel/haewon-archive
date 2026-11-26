@@ -768,3 +768,14 @@
 - All 273 legacy assignments remain unchanged; 0 have publisher article URLs, 0 have alternative thumbnail candidates, 199 have source-site URLs. 12 wrapper-only Google News metadata entries remain untouched.
 - Android Chrome QA remains UNVERIFIED pending actual user checklist results. No labels were generated/uploaded, no new RSS sources added, no wrapper decoding, no access bypass, no paid service or external data transmission.
 - Latest code/data main before this documentation-only finalization: 9b47fd4ab2a46163fff794b2dc4e70f892ab0c7f. Documentation-only PR will not trigger another Production run.
+
+ 
+## 2026-11-27 — Thumbnail missing-source diagnosis
+- [x] Re-read latest main, operational docs, Production #614, current metrics and current source/metadata diagnostics.
+- [x] Quantify source coverage separately from explicit publisher article URL coverage; preserve source-site URLs as a distinct field.
+- [x] Implement evidence-based missing-thumbnail reason summaries and expose them in the read-only quality dashboard on a feature branch.
+- [ ] Pass final-head PR CI and archive validation.
+- [ ] Review the resulting diagnostic breakdown on the next generated quality report.
+- [ ] Merge only after CI and full data validation pass.
+- [ ] Verify the next Production data commit and Pages artifact/deployment separately.
+- [ ] Keep Android Chrome QA pending user-provided real-device results.

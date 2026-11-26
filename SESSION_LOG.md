@@ -1727,3 +1727,46 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - All 273 legacy assignments remain unchanged; 0 have publisher article URLs, 0 have alternative thumbnail candidates, 199 have source-site URLs. 12 wrapper-only Google News metadata entries remain untouched.
 - Android Chrome QA remains UNVERIFIED pending actual user checklist results. No labels were generated/uploaded, no new RSS sources added, no wrapper decoding, no access bypass, no paid service or external data transmission.
 - Latest code/data main before this documentation-only finalization: 9b47fd4ab2a46163fff794b2dc4e70f892ab0c7f. Documentation-only PR will not trigger another Production run.
+
+ 
+## 2026-11-27 — Source-level thumbnail gap diagnosis and implementation (PR pending)
+
+### Fresh state verification
+- User-provided prior main: `190e106ff83ebd26f61fa09f3e51fe0d79128cde`.
+- Re-read the six required documents from that main before substantive changes.
+- Actual main then advanced through Production #614 data commit to `f2d63d5f6bf9dd4c19c3082f4b83effc3427d8a0`; open PR count 0 at the fresh check.
+- Production #614 run 45889430699: all ten job steps completed successfully. Data commit `f2d63d5f6bf9dd4c19c3082f4b83effc3427d8a0`. Pages artifact 15149979794, 635,720 bytes, SHA-256 `a50dfe36a62cfa85f4b644a20f15ce1b65e535bf4dac56dbd53eb13205f52080`; upload and deployment steps succeeded.
+- PR CI #83 (run 45816770907) completed successfully. Previous Production #613 is historical, not the latest data snapshot.
+
+### Current Production #614 evidence
+- Metrics timestamp: 2026-11-26T20:13:34.144Z.
+- 883 candidates (696 articles / 187 videos); 106 explicit publisher article URLs; 83 verified Haewon articles; 355 thumbnails assigned / 528 missing; 83 unique image URLs; dominant URL 273 assignments / 31% of all candidates; 488 thumbnail review candidates / 0 reviewed; article relevance labels 0.
+- Source breakdown: Google News 773 records, 273 with existing thumbnail and 500 missing; explicit publisher article URLs 0. Other source rows total 110 records, 82 assigned and 28 missing. This is a sourceName-level aggregate, not a per-record verification of every external publisher.
+- The 273 legacy assignments have 0 explicit publisher article URLs, 0 alternative candidate URLs, 202 source-site URLs and metadata outcome not-attempted for all 273. Preserve every assignment.
+- Google News RSS image signals: 179 RSS items, 178 sourceUrl values, 0 publisherArticleUrl values and 0 explicit image tags/signals. Bing RSS: 51 items and 51 explicit publisherArticleUrl values, but 0 image metadata signals in the RSS fields. This shows RSS metadata itself is not yielding images; page metadata is a separate stage.
+- Metadata host diagnostics include 12 wrapper-only Google News records; MSN 14 attempts (13 missing, 1 assigned); several explicit publisher hosts return stored forbidden/network/method errors. These attempted subsets do not explain all 528 missing records. The 528 total is a mix of no verified article URL, no metadata/candidate evidence, and some publisher metadata fetch outcomes; do not over-attribute the whole gap to access blocks.
+
+### Root-cause analysis and selected improvement
+- Main concentration is not a single broken image host: 773 records are grouped under Google News; only 273 retain the legacy shared image, leaving 500 without a thumbnail and without an explicit publisher article URL. Those cannot be safely enriched under current rules.
+- Among other source groups, 28 of 110 are missing thumbnails. Existing metadata host diagnostics show a mix of no-image metadata and explicit failures (e.g. forbidden/network/method errors); source-level aggregate counts remain separate from per-attempt errors.
+- Open Graph defines `og:image` as a publisher-declared image property (https://ogp.me/); Schema.org `thumbnailUrl` is a URL property for a relevant thumbnail (https://schema.org/thumbnailUrl). Neither guarantees every publisher page exposes a usable image.
+- MDN describes 403 as refusal and 429 as rate limiting; unchanged 403 requests should not be repeated and 429 should not trigger blind retries: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/403 and https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/429.
+- Alternatives rejected: decode Google News wrappers (prohibited); substitute sourceUrl for article URL (incorrect provenance); add SBS/Yonhap or other RSS without permission; retry 403/429/non-RSS responses; upload automatic labels; mutate 273 legacy assignments.
+- Chosen small, free, local observability improvement: add an evidence-based reason classifier and per-source missing counts to quality metrics, and render them in the existing read-only quality dashboard. It records aggregate reasons only; no raw URLs or response bodies.
+
+### Code and tests implemented on feature branch
+- Branch: `feat/thumbnail-missing-source-diagnostics-20261127`.
+- `scripts/quality-metrics.mjs`: exported `classifyMissingThumbnailReason` and `summarizeMissingThumbnailDiagnostics`; aggregate per-source denominators use all records (not only missing records), and separately count missing items with explicit publisher article URLs vs source-site URLs.
+- `js/discovery-view.mjs`: render missing/total, classified/unclassified, top source groups and reason counts in the existing dashboard.
+- `tests/quality-metrics.test.mjs`: cover wrapper/source-site distinction, explicit publisher fetch failure, no image candidate, candidate not assigned, unattempted metadata and already-assigned thumbnail exclusion.
+- `tests/review-queue-integration.test.mjs`: assert the dashboard displays source-level diagnostic fields.
+- CI has not yet run for this PR. Do not call this tested/merged/Production-verified until the final-head CI result and data validation are available.
+
+### Review UX verification
+- Re-read `js/discovery-view.mjs`, `js/thumbnail-review.mjs` and the integration tests. Both PR #54 general thumbnail and PR #56 repeated-image flows call the shared persistence gate; auto-advance is inside the successful save branch. On failure the select is restored from the saved label and no advance is scheduled.
+- Labels remain local-only and article-specific. No review label was created or uploaded.
+- Android Chrome QA remains UNVERIFIED pending the user's real-device checklist.
+
+### Safety and unresolved items
+- No new RSS/source, no wrapper decoding, no access bypass, no blind retry, no paid service, no external contact/data transmission, no automatic labels, and no modification to the 273 legacy assignments.
+- Next: open PR from the feature branch, wait for final-head PR CI, inspect test/validation results, and merge only after success. After merge separately verify Production, data commit, Pages artifact and deployment. If CI fails, fix the concrete regression and rerun.
