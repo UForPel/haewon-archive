@@ -3,6 +3,9 @@ name: Collect and deploy archive
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - '**/*.md'
+      - '*.md'
   schedule:
     - cron: "17 23 * * *"
     - cron: "17 11 * * *"
