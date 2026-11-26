@@ -2010,6 +2010,59 @@
     "publisherArticleUrl": ""
   },
   {
+    "id": "246381b2a4841d0662f4",
+    "title": "엔믹스 해원, 칠레에서 생일 ‘라방’ 중 레이저 테러 당했다! 표정까지 굳어져...",
+    "url": "https://www.sportsseoul.com/news/read/1588725",
+    "publisherArticleUrl": "https://www.sportsseoul.com/news/read/1588725",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60965ea467a835ddada9c2f219d&url=https%3a%2f%2fwww.sportsseoul.com%2fnews%2fread%2f1588725&c=11809588199427512424&mkt=ko-kr",
+    "publisherHost": "www.sportsseoul.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%98%A4%ED%95%B4%EC%9B%90%20%ED%95%B4%EC%99%B8%20%ED%99%9C%EB%8F%99&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60965ea467a835ddada9c2f219d&url=https%3a%2f%2fwww.sportsseoul.com%2fnews%2fread%2f1588725&c=11809588199427512424&mkt=ko-kr",
+        "articleUrl": "https://www.sportsseoul.com/news/read/1588725",
+        "host": "www.sportsseoul.com"
+      }
+    ],
+    "publishedAt": "2026-02-25T16:53:00.000Z",
+    "description": "[스포츠서울 | 박진업 기자]엔믹스(NMIXX) 멤버 오해원이 해외 일정 중 진행한 생일 기넘 라이브 방송 도중 칠레의 극성 팬들로부터 레이저 광선 테러를 당했다. 오해원은 24일 엔믹스 멤버들과 ...",
+    "thumbnailUrl": "https://file.sportsseoul.com/news/cms/2026/02/26/news-p.v1.20260226.08d5f54665544988b2c5c2b03ff52782_T1.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "스포츠서울",
+    "discoverySource": "bing-news-rss",
+    "query": "오해원 해외 활동",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://file.sportsseoul.com/news/cms/2026/02/26/news-p.v1.20260226.08d5f54665544988b2c5c2b03ff52782_T1.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.sportsseoul.com/news/read/1588725",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.sportsseoul.com/news/read/1588725",
+      "resolvedArticleHost": "www.sportsseoul.com",
+      "fetchedAt": "2026-11-26T03:22:50.494Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://file.sportsseoul.com/news/cms/2026/02/26/news-p.v1.20260226.08d5f54665544988b2c5c2b03ff52782_T1.jpg",
+      "articleUrl": "https://www.sportsseoul.com/news/read/1588725",
+      "observedAt": "2026-11-26T03:22:50.494Z"
+    }
+  },
+  {
     "id": "5102f3c56ed160dd4e27",
     "title": "[엔믹스] 24살을 부정하는 오해원 - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1xckM3cjJpanRCeXZ0RjctMmJQdHBlR3o1TUVwU09YT2dBVnVmdFJpdkw3Y0NhWVNBcVphT3VINnlwdUNad1Jvemh4TGNRSjRFalpTbEpRX2hUYjZ5?oc=5",
@@ -6872,6 +6925,59 @@
     "candidateSource": ""
   },
   {
+    "id": "b73b0b6718cd750a66a5",
+    "title": "Nmixx's Haewon and Gyujin unveil teaser for fourth mini album 'Fe3O4: FORWARD'",
+    "url": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
+    "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a609f40f4a6684de17af23a2fa7b&url=https%3a%2f%2fbiz.chosun.com%2fen%2fen-entertainment%2f2025%2f02%2f24%2fIROSHWQZQRHFXL6BLQT753LDA4%2f&c=11384463595784658356&mkt=ko-kr",
+    "publisherHost": "biz.chosun.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20international%20interview&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a609f40f4a6684de17af23a2fa7b&url=https%3a%2f%2fbiz.chosun.com%2fen%2fen-entertainment%2f2025%2f02%2f24%2fIROSHWQZQRHFXL6BLQT753LDA4%2f&c=11384463595784658356&mkt=ko-kr",
+        "articleUrl": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
+        "host": "biz.chosun.com"
+      }
+    ],
+    "publishedAt": "2025-02-24T10:26:00.000Z",
+    "description": "Members Haewon and Gyujin of the group NMIXX have revealed a personal teaser for their new mini album, showcasing their mysterious charisma. NMIXX will release their fourth mini album 'Fe3O4: FORWARD' ...",
+    "thumbnailUrl": "https://biz.chosun.com/resizer/v2/QUWTLC3JYT4TJTOQW26XVKRL3Y.jpg?auth=ed2c8ef16347269f9acbbafda699b977f0b3035808b9af389d4e91deba2656ce&width=572&height=300&smart=true",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "조선일보",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon international interview",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://biz.chosun.com/resizer/v2/QUWTLC3JYT4TJTOQW26XVKRL3Y.jpg?auth=ed2c8ef16347269f9acbbafda699b977f0b3035808b9af389d4e91deba2656ce&width=572&height=300&smart=true",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
+      "resolvedArticleHost": "biz.chosun.com",
+      "fetchedAt": "2026-11-26T03:22:50.494Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://biz.chosun.com/resizer/v2/QUWTLC3JYT4TJTOQW26XVKRL3Y.jpg?auth=ed2c8ef16347269f9acbbafda699b977f0b3035808b9af389d4e91deba2656ce&width=572&height=300&smart=true",
+      "articleUrl": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
+      "observedAt": "2026-11-26T03:22:50.494Z"
+    }
+  },
+  {
     "id": "e4442b63bd18ad9c94d4",
     "title": "‘음율 - 피차일반 (彼此一般)’ Covered by NMIXX HAEWON - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBISjcxczd3cFVqZ2trX29VR0g1ZzVTMTFDSy1Gb3l0QWNUeE52U3A4SDdwalIxNnhjeDhsT1hFdDZZci11TWRzcVM5YWU?oc=5",
@@ -8308,6 +8414,24 @@
     "candidateSource": ""
   },
   {
+    "id": "1c71ec3484f0e612ab25",
+    "title": "엔믹스 해원, 쇼트커트 변신 논란 \"무대 활동은 기존 스타일 유지\" - 미디어파인",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5KSWNrV2tiV1dfSVhWYXN3dG5IY2VkcVlVS3lYNFN6TUtLRjBmMmg4X2lBc2xmbXk4UldCclpTN2hQeDFkQjdYYnI4enVaSGs2alIzbVlhV1JrTS1Xd2tvaW15UDYxLVBRZ2d6OGtn?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.mediafine.co.kr",
+    "publishedAt": "2026-07-11T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE5KSWNrV2tiV1dfSVhWYXN3dG5IY2VkcVlVS3lYNFN6TUtLRjBmMmg4X2lBc2xmbXk4UldCclpTN2hQeDFkQjdYYnI4enVaSGs2alIzbVlhV1JrTS1Xd2tvaW15UDYxLVBRZ2d6OGtn?oc=5\" target=\"_blank\">엔믹스 해원, 쇼트커트 변신 논란 \"무대 활동은 기존 스타일 유지\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">미디어파인</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 5
+  },
+  {
     "id": "b400b99db49c62f2a418",
     "title": "엔믹스 해원, '파격 숏컷' 변신 호불호 반응에 \"이 머리로 무대 안 설 것\" 심경 - 네이트",
     "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE90Mkpua0Q0T1hXdVNDZ2Z6RlFwLVJsclRWVzNUT3BHeE1aVE5CeVNnbWJoUTBraWJza21KT1ZoZU5SWS1XMWsxbzVOY1pfS0w4eDVuWEE5ekdwUG55X01Jd0d3eEVJV2d0cmNUVA?oc=5",
@@ -8923,6 +9047,47 @@
       "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
       "resolvedArticleHost": "www.tvdaily.co.kr",
       "fetchedAt": "2026-11-24T06:57:57.129Z"
+    }
+  },
+  {
+    "id": "8a8f08aee0d72b0bc7b3",
+    "title": "'뼈말라' 된 엔믹스 해원 \"얼굴 왜 나노 단위로 봐\"…과거 소신 발언 재조명",
+    "url": "https://www.msn.com/ko-kr/news/other/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+    "publisherArticleUrl": "https://www.msn.com/ko-kr/news/other/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60947274e1fa35ac6802adfd304&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fnews%2fother%2f%25EB%25BC%2588%25EB%25A7%2590%25EB%259D%25BC-%25EB%2590%259C-%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-%25ED%2595%25B4%25EC%259B%2590-%25EC%2596%25BC%25EA%25B5%25B4-%25EC%2599%259C-%25EB%2582%2598%25EB%2585%25B8-%25EB%258B%25A8%25EC%259C%2584%25EB%25A1%259C-%25EB%25B4%2590-%25EA%25B3%25BC%25EA%25B1%25B0-%25EC%2586%258C%25EC%258B%25A0-%25EB%25B0%259C%25EC%2596%25B8-%25EC%259E%25AC%25EC%25A1%25B0%25EB%25AA%2585%2far-AA2hF5jF&c=12432832295784077127&mkt=ko-kr",
+    "publisherHost": "www.msn.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%97%94%EB%AF%B9%EC%8A%A4%20%ED%95%B4%EC%9B%90%20%ED%99%9C%EB%8F%99%20%EC%86%8C%EC%8B%9D&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60947274e1fa35ac6802adfd304&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fnews%2fother%2f%25EB%25BC%2588%25EB%25A7%2590%25EB%259D%25BC-%25EB%2590%259C-%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-%25ED%2595%25B4%25EC%259B%2590-%25EC%2596%25BC%25EA%25B5%25B4-%25EC%2599%259C-%25EB%2582%2598%25EB%2585%25B8-%25EB%258B%25A8%25EC%259C%2584%25EB%25A1%259C-%25EB%25B4%2590-%25EA%25B3%25BC%25EA%25B1%25B0-%25EC%2586%258C%25EC%258B%25A0-%25EB%25B0%259C%25EC%2596%25B8-%25EC%259E%25AC%25EC%25A1%25B0%25EB%25AA%2585%2far-AA2hF5jF&c=12432832295784077127&mkt=ko-kr",
+        "articleUrl": "https://www.msn.com/ko-kr/news/other/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+        "host": "www.msn.com"
+      }
+    ],
+    "publishedAt": "2026-11-18T03:30:00.000Z",
+    "description": "그룹 엔믹스(NMIXX) 해원이 부쩍 마른 모습으로 화제가 된 가운데, 외모에 관한 그의 과거 발언이 재조명되고 있다.최근 온라인에서는 과거 해원이 얼굴 비율과 체형에 관한 자신의 생각을 밝힌 발언이 다시 주목받고 있다.해원은 \"요즘 사람들이 중안부에 대해 관심이 많다. 어쩌다가 이렇게 나노 단위로 사람의 얼굴을 보게 된 건지 모르겠다. 나도 가장 민감한 ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "텐아시아 on MSN",
+    "discoverySource": "bing-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "missing",
+      "publisherArticleUrl": "https://www.msn.com/ko-kr/news/other/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.msn.com/ko-kr/news/other/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+      "resolvedArticleHost": "www.msn.com",
+      "fetchedAt": "2026-11-26T03:22:50.494Z",
+      "statusCode": 200,
+      "errorCode": ""
     }
   },
   {
@@ -11231,6 +11396,64 @@
     "candidateSource": ""
   },
   {
+    "id": "9fd39402b9d1eb79f581",
+    "title": "엔믹스 해원, 숏컷 변신 후 해명 해프닝…‘도움’과 ‘참견’ 사이",
+    "url": "https://sports.donga.com/ent/article/all/20260712/134281960/1",
+    "publisherArticleUrl": "https://sports.donga.com/ent/article/all/20260712/134281960/1",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60947274e1fa35ac6802adfd304&url=https%3a%2f%2fsports.donga.com%2fent%2farticle%2fall%2f20260712%2f134281960%2f1&c=13745503990721746906&mkt=ko-kr",
+    "publisherHost": "sports.donga.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%97%94%EB%AF%B9%EC%8A%A4%20%ED%95%B4%EC%9B%90%20%ED%99%9C%EB%8F%99%20%EC%86%8C%EC%8B%9D&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60947274e1fa35ac6802adfd304&url=https%3a%2f%2fsports.donga.com%2fent%2farticle%2fall%2f20260712%2f134281960%2f1&c=13745503990721746906&mkt=ko-kr",
+        "articleUrl": "https://sports.donga.com/ent/article/all/20260712/134281960/1",
+        "host": "sports.donga.com"
+      }
+    ],
+    "publishedAt": "2026-07-12T08:47:00.000Z",
+    "description": "[스포츠동아 곽현수 기자] 그룹 엔믹스(NMIXX) 해원이 데뷔 후 처음으로 숏컷 스타일을 선보였다가 화제의 중심에 섰다. 해원은 지난 9일 첫 월드투어 대만 가오슝 공연을 위해 출국하는 과정에서 ...",
+    "thumbnailUrl": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/07/12/134282000.1.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "동아일보",
+    "discoverySource": "bing-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/07/12/134282000.1.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/07/12/134282008.1.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://sports.donga.com/ent/article/all/20260712/134281960/1",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://sports.donga.com/ent/article/all/20260712/134281960/1",
+      "resolvedArticleHost": "sports.donga.com",
+      "fetchedAt": "2026-11-26T03:22:50.494Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/07/12/134282000.1.jpg",
+      "articleUrl": "https://sports.donga.com/ent/article/all/20260712/134281960/1",
+      "observedAt": "2026-11-26T03:22:50.494Z"
+    }
+  },
+  {
     "id": "2934c01e3757461b53fc",
     "title": "엔믹스 해원, 숏컷 변신 후 해명 해프닝…‘도움’과 ‘참견’ 사이 - 스포츠동아",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBGTW04eHpKVG91Y2tFaWNzUHdKdkd3a2thSHZRelJjU2RBUWtqU1RMZGdLeUxnZ1lWbWVYblBUb1hrbUZWS1ZmR2FHNTdRdFJNZlZQZndXSVdyaUZESnBMSHpNVU5jUVA2SFB0ZTln?oc=5",
@@ -13448,6 +13671,24 @@
     "publisherArticleUrl": ""
   },
   {
+    "id": "cb39bfaf4a191a067940",
+    "title": "HK이노엔, ‘컨디션’ 앰버서더로 엔믹스 ‘해원’ 발탁 - 팜이데일리",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBNaWhOeXprTWw1UF92Tlo2LTlibS12ZXUzRUtNc3F3ZWVzMnFQaHNFY29SalZ6WFRHTVlrcDg1a09CUkl6THdUNzZObThQalI2R2VxU1J2UlkwWDk3SUJCQ3MteU1EZDZpZFJ2VGJR?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://pharm.edaily.co.kr",
+    "publishedAt": "2024-11-29T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTFBNaWhOeXprTWw1UF92Tlo2LTlibS12ZXUzRUtNc3F3ZWVzMnFQaHNFY29SalZ6WFRHTVlrcDg1a09CUkl6THdUNzZObThQalI2R2VxU1J2UlkwWDk3SUJCQ3MteU1EZDZpZFJ2VGJR?oc=5\" target=\"_blank\">HK이노엔, ‘컨디션’ 앰버서더로 엔믹스 ‘해원’ 발탁</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">팜이데일리</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "bc717bb845ce520a7f25",
     "title": "엔믹스 해원이 찜했다...르꼬끄 스포르티브, '구스 롱다운' 선봬 - 파이낸셜뉴스",
     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBOQzByWGc0cXRsS3hSdENmbzFXcEFhb2llQkxZUEtJMVdWS0FLN09vY3ZLWGhkY3dWWml1c19XOEdkcHY1ZDFGVFFkQ1ZvQkk3LXA5MG1BbFEtUQ?oc=5",
@@ -13466,6 +13707,30 @@
     "thumbnailMetaFetch": null,
     "sourceUrl": "https://www.fnnews.com",
     "publisherArticleUrl": "",
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
+  },
+  {
+    "id": "67566c2ca360fdc40dc3",
+    "title": "엔믹스 해원, '워크돌' 시즌3도 출석 췤…그룹 활동도 날아오를까 [엑's 초점] - 엑스포츠뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE45VnY4T3hMcVFDa2czemVHSU1QUlZZeFktRVl3ZTlkeDJyQkZ2LWNGcUV6TDNnbGx4V1JjcFJhck1hYjMzMVVtU2JKQ2pfX2thWU5JcQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.xportsnews.com",
+    "publishedAt": "2024-11-22T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE45VnY4T3hMcVFDa2czemVHSU1QUlZZeFktRVl3ZTlkeDJyQkZ2LWNGcUV6TDNnbGx4V1JjcFJhck1hYjMzMVVtU2JKQ2pfX2thWU5JcQ?oc=5\" target=\"_blank\">엔믹스 해원, '워크돌' 시즌3도 출석 췤…그룹 활동도 날아오를까 [엑's 초점]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">엑스포츠뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 해외 활동",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
     "candidateSources": [],
     "publisherHost": "",
     "discoveryUrl": "",
@@ -13494,6 +13759,42 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "205dd916041cfc20669f",
+    "title": "비비랩, 콜라겐 캠페인 모델로 엔믹스(NMIXX) ‘해원’ 발탁 - 팜뉴스",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE95YTBaYlItOTNYenZsZVQtb1NnaHVZclRadXFvdmozWVNOMFc3VmhGN3IyTC1YTHdwc1lnTXozd05mYjFPOHoyM2h2Q1drQng3bzNfZnhfZlVHVFVZMXdhZ1JhcG1ZcUJvQjYzVw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.pharmnews.com",
+    "publishedAt": "2024-11-01T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTE95YTBaYlItOTNYenZsZVQtb1NnaHVZclRadXFvdmozWVNOMFc3VmhGN3IyTC1YTHdwc1lnTXozd05mYjFPOHoyM2h2Q1drQng3bzNfZnhfZlVHVFVZMXdhZ1JhcG1ZcUJvQjYzVw?oc=5\" target=\"_blank\">비비랩, 콜라겐 캠페인 모델로 엔믹스(NMIXX) ‘해원’ 발탁</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">팜뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
+    "id": "8e7f29e4ab43fa8ee6d3",
+    "title": "\"콜라겐캠페인 딱 좋아\"…뉴트리원, 엔믹스 해원 발탁 - 뉴시스",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE00NDhFdFZhNnBzcGRVTEl4QzlfRThLMTRfbmctcTFRb3ZrazJlVDlDS0hHMVdOemhmQmdtM2V6LVlGeWdCVGZ6dVFIQ0NyN3gtS3l2UTkwdjI4WC1mT3NRUdIBeEFVX3lxTE5Ob2F3U3JfMnFBRGQzeENxT25vQzR5anlxZzNJczVJdzBTMTJqQzhGbU9JNnVyRXYzR2d4Nzl6cVNYWFJJbVRmSzF2dDA0Z05EX09GU0pqZExtajFGXzE5MWtwUWJuWGNVOVRIR2J3d1c5aGlQWDNVQg?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.newsis.com",
+    "publishedAt": "2024-11-01T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE00NDhFdFZhNnBzcGRVTEl4QzlfRThLMTRfbmctcTFRb3ZrazJlVDlDS0hHMVdOemhmQmdtM2V6LVlGeWdCVGZ6dVFIQ0NyN3gtS3l2UTkwdjI4WC1mT3NRUdIBeEFVX3lxTE5Ob2F3U3JfMnFBRGQzeENxT25vQzR5anlxZzNJczVJdzBTMTJqQzhGbU9JNnVyRXYzR2d4Nzl6cVNYWFJJbVRmSzF2dDA0Z05EX09GU0pqZExtajFGXzE5MWtwUWJuWGNVOVRIR2J3d1c5aGlQWDNVQg?oc=5\" target=\"_blank\">\"콜라겐캠페인 딱 좋아\"…뉴트리원, 엔믹스 해원 발탁</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴시스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 4
   },
   {
     "id": "5654c50ab24f85195e42",
@@ -15544,6 +15845,24 @@
     "candidateSource": ""
   },
   {
+    "id": "d66a68dce78db32420d3",
+    "title": "엔믹스(NMIXX) 해원, 코로나19 격리해제…\"오늘부터 일상활동 가능\" - 톱스타뉴스",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1IeDNkak81RktSSTVxOVA2WWl1UWNjZ0RiV2JfMmdiVzRWQ1NRdTBLeXRhUGFHc3ZsNThZV3hLQjZPZi1KTTFRajFIUHNySkdhSDZZd3J5SDZXTThaMTJucmk5RFdma3pSeWFVM0hENFdOdw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.topstarnews.net",
+    "publishedAt": "2022-04-15T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE1IeDNkak81RktSSTVxOVA2WWl1UWNjZ0RiV2JfMmdiVzRWQ1NRdTBLeXRhUGFHc3ZsNThZV3hLQjZPZi1KTTFRajFIUHNySkdhSDZZd3J5SDZXTThaMTJucmk5RFdma3pSeWFVM0hENFdOdw?oc=5\" target=\"_blank\">엔믹스(NMIXX) 해원, 코로나19 격리해제…\"오늘부터 일상활동 가능\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">톱스타뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "b04ced3277c9b865a12a",
     "title": "JYP 신인 걸그룹 '엔믹스' 해원 - 연합뉴스",
     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4wUXNXaE1raEdDaDdhc3A0NVBHdGdUZTltdk5iR0J4cGh5UjBTeUs2VGdPTnViQWE5T24wekJrODhVWVZseEt0TldPS1ZfcDdQNjFsclZfb0xab1XSAWBBVV95cUxOVzNsX0ZJeF9FakFXcjRhc01zMTJNM3ZQNktwc1BxUkJkUG1Od0dUYnRhZFQ5VEwxV1BvV1lzQXhJNGR6ZjhKY3R1RU1kU3RxVmRHb3NYdk83Ul9jMnJVSXM?oc=5",
@@ -16572,6 +16891,47 @@
     }
   },
   {
+    "id": "fec8acc79cc39c865131",
+    "title": "CJ 4DPLEX BRINGS NMIXX WORLD TOUR TO CINEMAS WORLDWIDE IN FIRST-EVER SCREENX LIVE K-POP CONCERT EVENT",
+    "url": "https://www.prnewswire.com/news-releases/cj-4dplex-brings-nmixx-world-tour-to-cinemas-worldwide-in-first-ever-screenx-live-k-pop-concert-event-302935712.html",
+    "publisherArticleUrl": "https://www.prnewswire.com/news-releases/cj-4dplex-brings-nmixx-world-tour-to-cinemas-worldwide-in-first-ever-screenx-live-k-pop-concert-event-302935712.html",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a6090a024c0299c781ca73d70c21&url=https%3a%2f%2fwww.prnewswire.com%2fnews-releases%2fcj-4dplex-brings-nmixx-world-tour-to-cinemas-worldwide-in-first-ever-screenx-live-k-pop-concert-event-302935712.html&c=8642840678579289444&mkt=ko-kr",
+    "publisherHost": "www.prnewswire.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20Japan%20news&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a6090a024c0299c781ca73d70c21&url=https%3a%2f%2fwww.prnewswire.com%2fnews-releases%2fcj-4dplex-brings-nmixx-world-tour-to-cinemas-worldwide-in-first-ever-screenx-live-k-pop-concert-event-302935712.html&c=8642840678579289444&mkt=ko-kr",
+        "articleUrl": "https://www.prnewswire.com/news-releases/cj-4dplex-brings-nmixx-world-tour-to-cinemas-worldwide-in-first-ever-screenx-live-k-pop-concert-event-302935712.html",
+        "host": "www.prnewswire.com"
+      }
+    ],
+    "publishedAt": "2026-11-10T17:01:00.000Z",
+    "description": "NMIXX 1ST WORLD TOUR〈EPISODE 1: ZERO FRONTIER〉Finale Will Be Broadcast from INSPIRE Arena on November 29 to SCREENX and 2D Cinemas Across 22 Countries Landmark NMIXX Concert Kicks Off SCREENX LIVE, a ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "irblog.prnewswire.com",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon Japan news",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "missing",
+      "publisherArticleUrl": "https://www.prnewswire.com/news-releases/cj-4dplex-brings-nmixx-world-tour-to-cinemas-worldwide-in-first-ever-screenx-live-k-pop-concert-event-302935712.html",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.prnewswire.com/news-releases/cj-4dplex-brings-nmixx-world-tour-to-cinemas-worldwide-in-first-ever-screenx-live-k-pop-concert-event-302935712.html",
+      "resolvedArticleHost": "www.prnewswire.com",
+      "fetchedAt": "2026-11-26T03:22:50.494Z",
+      "statusCode": 200,
+      "errorCode": ""
+    }
+  },
+  {
     "id": "f1b2da13f6773fc61551",
     "title": "\"1위 소원 정말 이루어졌다\"…엔믹스, '긴 소원'으로 '뮤직뱅크' 1위 - 톱스타뉴스",
     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1KUi1lZlFsZlY1TVJ2eXpxdDNQWXpnV1NPTHp1ZGJ6SWZXeHpYWlFkRVJKQWFqeEN5NTZBTDVwT0dzNElKTml5aGVEeEJ4LVM3MlBldUtKUFNMNS1lRUt1eThGNGhhWHo3c2RfdXlBQVlpdw?oc=5",
@@ -17405,6 +17765,59 @@
     "candidateSource": ""
   },
   {
+    "id": "d47157b41432a8e52fb9",
+    "title": "NMIXX rides grand prize triumph into dynamic new era with 'Strange Muse'",
+    "url": "https://www.koreatimes.co.kr/entertainment/k-pop/20260921/nmixx-rides-grand-prize-triumph-into-dynamic-new-era-with-strange-muse",
+    "publisherArticleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20260921/nmixx-rides-grand-prize-triumph-into-dynamic-new-era-with-strange-muse",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a6090a024c0299c781ca73d70c21&url=https%3a%2f%2fwww.koreatimes.co.kr%2fentertainment%2fk-pop%2f20260921%2fnmixx-rides-grand-prize-triumph-into-dynamic-new-era-with-strange-muse&c=12376752998865064272&mkt=ko-kr",
+    "publisherHost": "www.koreatimes.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=NMIXX%20Haewon%20Japan%20news&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a6090a024c0299c781ca73d70c21&url=https%3a%2f%2fwww.koreatimes.co.kr%2fentertainment%2fk-pop%2f20260921%2fnmixx-rides-grand-prize-triumph-into-dynamic-new-era-with-strange-muse&c=12376752998865064272&mkt=ko-kr",
+        "articleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20260921/nmixx-rides-grand-prize-triumph-into-dynamic-new-era-with-strange-muse",
+        "host": "www.koreatimes.co.kr"
+      }
+    ],
+    "publishedAt": "2026-09-21T03:44:00.000Z",
+    "description": "NMIXX is set to release its sixth EP, Strange Muse, on Oct. 19 at 6 p.m., following its first-ever grand prize at a major music awards ceremony. JYP Entertainment said the six-track album marks an ...",
+    "thumbnailUrl": "https://newsimg.koreatimes.co.kr/2026/09/21/5e49d3e4-3087-4829-b938-c676ffbeac1e.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "The Korea Times",
+    "discoverySource": "bing-news-rss",
+    "query": "NMIXX Haewon Japan news",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://newsimg.koreatimes.co.kr/2026/09/21/5e49d3e4-3087-4829-b938-c676ffbeac1e.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20260921/nmixx-rides-grand-prize-triumph-into-dynamic-new-era-with-strange-muse",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20260921/nmixx-rides-grand-prize-triumph-into-dynamic-new-era-with-strange-muse",
+      "resolvedArticleHost": "www.koreatimes.co.kr",
+      "fetchedAt": "2026-11-26T03:22:50.494Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://newsimg.koreatimes.co.kr/2026/09/21/5e49d3e4-3087-4829-b938-c676ffbeac1e.jpg",
+      "articleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20260921/nmixx-rides-grand-prize-triumph-into-dynamic-new-era-with-strange-muse",
+      "observedAt": "2026-11-26T03:22:50.494Z"
+    }
+  },
+  {
     "id": "b7828365b712c66fbe01",
     "title": "메이크업 포에버, K-팝 그룹 엔믹스와 협업 - Hypebae",
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQb2JIbHFJRmVQUXJUR2dLa0xlVS15QTJ3aEFGUGZaOWZEaW1HUzl6QkgyQlRHTE02TjlucHl6SUtqREJMNUd4UDIxN1QzNTBRWE95OEFyX1NhM1NPMGhvT2thVEZ0MlNzSFdkMXhTUXU3aWk2U3F5eDc5bUhCQmp0SEZMOWVTYVlqN2hqMmVfMHpZMEJ0MHJFU3BFZ2FvU251ZWc?oc=5",
@@ -17833,6 +18246,87 @@
     "candidateSource": ""
   },
   {
+    "id": "1ec4e7c1eb9d88e9aafc",
+    "title": "엔믹스, ‘헤비 세레나데’ 본격 활동…재킷 비하인드 컷 공개",
+    "url": "https://sports.donga.com/ent/article/all/20260514/133927636/1",
+    "publisherArticleUrl": "https://sports.donga.com/ent/article/all/20260514/133927636/1",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60947274e1fa35ac6802adfd304&url=https%3a%2f%2fsports.donga.com%2fent%2farticle%2fall%2f20260514%2f133927636%2f1&c=15393504580866140990&mkt=ko-kr",
+    "publisherHost": "sports.donga.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%97%94%EB%AF%B9%EC%8A%A4%20%ED%95%B4%EC%9B%90%20%ED%99%9C%EB%8F%99%20%EC%86%8C%EC%8B%9D&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60947274e1fa35ac6802adfd304&url=https%3a%2f%2fsports.donga.com%2fent%2farticle%2fall%2f20260514%2f133927636%2f1&c=15393504580866140990&mkt=ko-kr",
+        "articleUrl": "https://sports.donga.com/ent/article/all/20260514/133927636/1",
+        "host": "sports.donga.com"
+      }
+    ],
+    "publishedAt": "2026-05-14T14:31:00.000Z",
+    "description": "[동아닷컴 김승현 기자] NMIXX(엔믹스)가 신곡 음악방송 활동에 돌입하며 본격적인 컴백 열기를 끌어올린다. 엔믹스는 지난 11일 미니 5집 ‘Heavy Serenade’와 동명 타이틀곡을 발매했다. 이들은 14일 ...",
+    "thumbnailUrl": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/05/14/133927634.1.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "동아일보",
+    "discoverySource": "bing-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/05/14/133927634.1.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/05/14/133927633.1.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/05/14/133927635.1.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://sports.donga.com/ent/article/all/20260514/133927636/1",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://sports.donga.com/ent/article/all/20260514/133927636/1",
+      "resolvedArticleHost": "sports.donga.com",
+      "fetchedAt": "2026-11-26T03:22:50.494Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/05/14/133927634.1.jpg",
+      "articleUrl": "https://sports.donga.com/ent/article/all/20260514/133927636/1",
+      "observedAt": "2026-11-26T03:22:50.494Z"
+    }
+  },
+  {
+    "id": "37a91bda2175baabbb3c",
+    "title": "엔믹스, ‘헤비 세레나데’ 본격 활동…재킷 비하인드 컷 공개 - 스포츠동아",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9UN2FZbHA1NmdFUWxlRjQxeE5pMnlkcVZwSWFEaHBrRDV6VFVITnA2YmF0Q1FpMzdqRjc3UWZ0a2ZQWWlnVkFwbUlKcnJSb0taeFFZb3ZhSEo1VG1MU3gxckJOOVFmOVBIUDVNWVdR?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://sports.donga.com",
+    "publishedAt": "2026-05-14T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE9UN2FZbHA1NmdFUWxlRjQxeE5pMnlkcVZwSWFEaHBrRDV6VFVITnA2YmF0Q1FpMzdqRjc3UWZ0a2ZQWWlnVkFwbUlKcnJSb0taeFFZb3ZhSEo1VG1MU3gxckJOOVFmOVBIUDVNWVdR?oc=5\" target=\"_blank\">엔믹스, ‘헤비 세레나데’ 본격 활동…재킷 비하인드 컷 공개</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">스포츠동아</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
     "id": "6d3a8addce668117f64a",
     "title": "원하는 걸 쫒아, 난 욕심쟁이거든🔥: NMIXX - IDESERVEIT [가사/해석/ENG/lyrics] - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5rT3pTWXpJUkV4VGFxejhZLVdpWmExWFJEb1BRNS1nV0RncVFLYm5iVUlSRENZd2g4M2xoVk5LVlowSFA0eUgtZnEtdkhrM1RzaHJnaWphMkpRUGc0?oc=5",
@@ -18208,6 +18702,64 @@
     "candidateSource": ""
   },
   {
+    "id": "9fce03a150a58620282e",
+    "title": "엔믹스, 음원&#183;음반&#183;빌보드 퍼펙트 스윕…'JYP 걸그룹 명가' 부활 알렸다 [스한:초점]",
+    "url": "https://sports.hankooki.com/news/articleView.html?idxno=6914270",
+    "publisherArticleUrl": "https://sports.hankooki.com/news/articleView.html?idxno=6914270",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60947274e1fa35ac6802adfd304&url=https%3a%2f%2fsports.hankooki.com%2fnews%2farticleView.html%3fidxno%3d6914270&c=15797192766905303806&mkt=ko-kr",
+    "publisherHost": "sports.hankooki.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%97%94%EB%AF%B9%EC%8A%A4%20%ED%95%B4%EC%9B%90%20%ED%99%9C%EB%8F%99%20%EC%86%8C%EC%8B%9D&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60947274e1fa35ac6802adfd304&url=https%3a%2f%2fsports.hankooki.com%2fnews%2farticleView.html%3fidxno%3d6914270&c=15797192766905303806&mkt=ko-kr",
+        "articleUrl": "https://sports.hankooki.com/news/articleView.html?idxno=6914270",
+        "host": "sports.hankooki.com"
+      }
+    ],
+    "publishedAt": "2025-10-29T03:12:00.000Z",
+    "description": "그룹 NMIXX(엔믹스)가 정규 1집 'Blue Valentine'(블루 밸런타인)으로 음원&#183;음반&#183;방송 1위를 석권하며 커리어 하이를 달성했다. 엔믹스 정규 1집 수록곡 'ADORE U' 트랙 비디오 섬네일 ⓒJYP엔터테인먼트 ...",
+    "thumbnailUrl": "https://cdn.sports.hankooki.com/news/thumbnail/202510/6914270_1171378_357_v150.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "스포츠한국",
+    "discoverySource": "bing-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://cdn.sports.hankooki.com/news/thumbnail/202510/6914270_1171378_357_v150.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://cdn.sports.hankooki.com/news/photo/202510/6914270_1171378_357.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://sports.hankooki.com/news/articleView.html?idxno=6914270",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://sports.hankooki.com/news/articleView.html?idxno=6914270",
+      "resolvedArticleHost": "sports.hankooki.com",
+      "fetchedAt": "2026-11-26T03:22:50.494Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://cdn.sports.hankooki.com/news/thumbnail/202510/6914270_1171378_357_v150.jpg",
+      "articleUrl": "https://sports.hankooki.com/news/articleView.html?idxno=6914270",
+      "observedAt": "2026-11-26T03:22:50.494Z"
+    }
+  },
+  {
     "id": "734fb67e4b8a31f5e210",
     "title": "Blue Valentine - NMIXX | SBS 251019 방송 - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE91TDZEOTRQREs1ZndSVHJpQWZKTmNlZmxGQW9kODNOaU5EWnczaHptcmRKdjRlblR2N0FzS19ZQmZrUVR6LXh3VlR1N3g1eXRLNm9ET284Y2ZxaTZI?oc=5",
@@ -18295,6 +18847,99 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "publisherArticleUrl": ""
+  },
+  {
+    "id": "6ecd24907ef8653cef12",
+    "title": "‘첫 정규 D-1’ 엔믹스, ‘육각형 걸그룹’ 뛰어넘는다…“한층 더 성장” [일문일답]",
+    "url": "https://www.xportsnews.com/article/2063743",
+    "publisherArticleUrl": "https://www.xportsnews.com/article/2063743",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60947274e1fa35ac6802adfd304&url=https%3a%2f%2fwww.xportsnews.com%2farticle%2f2063743&c=5593485748290486930&mkt=ko-kr",
+    "publisherHost": "www.xportsnews.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%97%94%EB%AF%B9%EC%8A%A4%20%ED%95%B4%EC%9B%90%20%ED%99%9C%EB%8F%99%20%EC%86%8C%EC%8B%9D&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b07a60947274e1fa35ac6802adfd304&url=https%3a%2f%2fwww.xportsnews.com%2farticle%2f2063743&c=5593485748290486930&mkt=ko-kr",
+        "articleUrl": "https://www.xportsnews.com/article/2063743",
+        "host": "www.xportsnews.com"
+      }
+    ],
+    "publishedAt": "2025-10-12T03:25:00.000Z",
+    "description": "(엑스포츠뉴스 김예나 기자) 그룹 NMIXX(엔믹스)가 탄탄한 실력과 다채로운 매력으로 ‘육각형 걸그룹’ 자리매김, 첫 정규 앨범을 통해 확실하게 입지를 굳힌다. 엔믹스가 13일 첫 정규 앨범 'Blue ...",
+    "thumbnailUrl": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760231635205922.jpg",
+    "thumbnailSource": "twitter:image",
+    "thumbnailCandidates": [],
+    "sourceName": "엑스포츠뉴스",
+    "discoverySource": "bing-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760231635205922.jpg",
+        "source": "twitter:image",
+        "priority": 2
+      },
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232002834526.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232011545405.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232050667018.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232081580154.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232101989130.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232128862909.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232158508894.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      },
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232179650851.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.xportsnews.com/article/2063743",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.xportsnews.com/article/2063743",
+      "resolvedArticleHost": "www.xportsnews.com",
+      "fetchedAt": "2026-11-26T03:22:50.494Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "twitter:image",
+      "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760231635205922.jpg",
+      "articleUrl": "https://www.xportsnews.com/article/2063743",
+      "observedAt": "2026-11-26T03:22:50.494Z"
+    }
   },
   {
     "id": "fec617977efc9d5c00a8",
@@ -19498,6 +20143,24 @@
     "candidateSource": ""
   },
   {
+    "id": "bfdb98a9eb7408289f43",
+    "title": "엔믹스 지니, 활동 중 이례적 탈퇴…데뷔 10개월 만에 6인조 축소 - 뉴스엔",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1zd3YxY0hCX2RySW43RHZVMjRVbzk2alo5VnVWQlBlUm1jMkRXbjU3N1Y1TVY4RE5ZSWcxNGVZc3J6bFdxeUNTU3JLb0lobnBsM2ZDcjNndng2WkdtU3QtOGJ3TjN5RU5n?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.newsen.com",
+    "publishedAt": "2022-12-09T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE1zd3YxY0hCX2RySW43RHZVMjRVbzk2alo5VnVWQlBlUm1jMkRXbjU3N1Y1TVY4RE5ZSWcxNGVZc3J6bFdxeUNTU3JLb0lobnBsM2ZDcjNndng2WkdtU3QtOGJ3TjN5RU5n?oc=5\" target=\"_blank\">엔믹스 지니, 활동 중 이례적 탈퇴…데뷔 10개월 만에 6인조 축소</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스엔</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
     "id": "36a5129f799356892c18",
     "title": "[글로벌 차트 포럼] Y2K가 대세💿 CD 플레이어로 급격히 멀어지는 재재&해원 l @JTBC K-909 220924 방송 - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1jVkpsYWh4LV9PRmNvbzNHbGtIcTZMTjFxNGhQSzR3MzIwM1VoQm9wbnBCb2VDTzFWbHp2WmdmYUJXX2tEMTgxcnd3?oc=5",
@@ -20564,6 +21227,24 @@
     "candidateSource": ""
   },
   {
+    "id": "12386dc72b54c5c35cf4",
+    "title": "임희정·박현경, 2026 KLPGA 홍보모델 팬투표서 나란히 1, 2위 - 문화일보",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA2SVU2aV9PbllMNVU1RzQtMXprTWVmV2t1cVc5czdkWWFSVDA5N3k0akhURmMzNGw1eXF6XzJDWXVEclMyYl84NjlkamtfS0N5?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.munhwa.com",
+    "publishedAt": "2025-12-16T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFA2SVU2aV9PbllMNVU1RzQtMXprTWVmV2t1cVc5czdkWWFSVDA5N3k0akhURmMzNGw1eXF6XzJDWXVEclMyYl84NjlkamtfS0N5?oc=5\" target=\"_blank\">임희정·박현경, 2026 KLPGA 홍보모델 팬투표서 나란히 1, 2위</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">문화일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 해외 활동",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
     "id": "fcd7ee2ce8eaf24a76e1",
     "title": "제주도, '세계 평화의 섬 지정 20주년 기념 행사' 개최 - 뉴시스",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE93YmJka1ZER08xZkV1SENVVF9EejNpX09zUk1CUWY3czZoLUd2NkNjakd2ajRLNDJyZEhLYWtBMEZXYzkyMW5FY1h5WDJ2WjFjLXhMd1AzVl9CY3VQZXd3NNIBeEFVX3lxTFA0cWxrUDMydE5hMy1CVFlyTTEtZkZxVG82V3ZRVHVTQzlKZDlvSWdwOXZFa0tKTFd4SW11TWZ2VzNqSHdjOS1vcTVFbEZ3bnl1d05ObEFta2JUV0g3d0hsTnA4ZW45WUF6cmt3T0tLQm1nT292emFfUA?oc=5",
@@ -20658,6 +21339,42 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "0f3c618f2ce3280c57a2",
+    "title": "[제약소식] 신신제약, 국내 유일 산제형 멀미약 '스토멀산' 출시 등 - 매경헬스",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hU0htakQ4THZ1ejBjZDlWeldPYUZIQTJUY3RmLVNCM2E2RVNud3pQanJhU3MyaFBUaWE5MHAtSmRoZHZ5Q0Y3THo1eWg1R3JjZzV2dEpQZ0dtUG9oWVNkY0lueFdMVV9FX3BWWQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.mkhealth.co.kr",
+    "publishedAt": "2025-07-03T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTE1hU0htakQ4THZ1ejBjZDlWeldPYUZIQTJUY3RmLVNCM2E2RVNud3pQanJhU3MyaFBUaWE5MHAtSmRoZHZ5Q0Y3THo1eWg1R3JjZzV2dEpQZ0dtUG9oWVNkY0lueFdMVV9FX3BWWQ?oc=5\" target=\"_blank\">[제약소식] 신신제약, 국내 유일 산제형 멀미약 '스토멀산' 출시 등</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">매경헬스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "엔믹스 해원 활동 소식",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
+    "id": "617823ca2da41ed09178",
+    "title": "\"자만 심했다\" \"대체 불가 아냐\"…'활동 중단' 뉴진스, 여론 보니 - 네이트",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xQndlQkV1T3RxcXVQbDEwS0pZd3RqQUJIWUNldVcxMHpjVDhHZk01ZmRwNUpleU1IOVpnOXNaY1N6LU1VODhsZWNveGUyd1BidUhJ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://news.nate.com",
+    "publishedAt": "2025-06-24T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xQndlQkV1T3RxcXVQbDEwS0pZd3RqQUJIWUNldVcxMHpjVDhHZk01ZmRwNUpleU1IOVpnOXNaY1N6LU1VODhsZWNveGUyd1BidUhJ?oc=5\" target=\"_blank\">\"자만 심했다\" \"대체 불가 아냐\"…'활동 중단' 뉴진스, 여론 보니</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 해외 활동",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 0
   },
   {
     "id": "0787bae56898f4d95568",
@@ -20970,6 +21687,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "2321758cf34126fe27ff",
+    "title": "“내 이름 ‘금강’ 처럼 단단… 랭킹 1위가 목표? 내 골프의 한계는 없다”[K골프의 재도약, 그 주인공을 만나다] - 문화일보",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFAwaTBXUjJVcGRrNmxzWWFyUm52NVVDTUp2ZUx0NHFRYjZraXF5WGRFMGpjNVBLUTRiUWtwTy1DRVhwWnJORlozemdCZjBRdTlJ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.munhwa.com",
+    "publishedAt": "2023-01-18T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFAwaTBXUjJVcGRrNmxzWWFyUm52NVVDTUp2ZUx0NHFRYjZraXF5WGRFMGpjNVBLUTRiUWtwTy1DRVhwWnJORlozemdCZjBRdTlJ?oc=5\" target=\"_blank\">“내 이름 ‘금강’ 처럼 단단… 랭킹 1위가 목표? 내 골프의 한계는 없다”[K골프의 재도약, 그 주인공을 만나다]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">문화일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 해외 활동",
+    "discoveredAt": "2026-11-26T03:22:47.569Z",
+    "status": "candidate",
+    "relevanceScore": 0
   },
   {
     "id": "9851b37f15c1149852a2",

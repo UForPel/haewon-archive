@@ -1,47 +1,77 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T00:59:33.951Z",
-  "searchPack": 4,
+  "collectedAt": "2026-11-26T03:22:47.569Z",
+  "searchPack": 5,
   "queries": [
     {
-      "query": "오해원 팬미팅 기사",
-      "candidates": 6,
-      "uniqueCandidates": 6,
+      "query": "NMIXX Haewon Japan news",
+      "candidates": 15,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 2,
+        "within90Days": 6,
+        "olderThan90Days": 7,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 13
+      },
+      "uniqueCandidates": 15,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 2,
-      "titleKeywordMatchRate": 33,
-      "explicitPublisherUrls": 0,
-      "explicitPublisherUrlRate": 0,
-      "crossQueryDuplicateUrls": 0,
-      "datedCandidates": 6,
+      "titleKeywordMatches": 7,
+      "titleKeywordMatchRate": 47,
+      "explicitPublisherUrls": 11,
+      "explicitPublisherUrlRate": 73,
+      "crossQueryDuplicateUrls": 3,
+      "datedCandidates": 15,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 18269.5,
-      "p90PublicationLagHours": 33917
+      "medianPublicationLagHours": 1604.4,
+      "p90PublicationLagHours": 24216.6
     },
     {
-      "query": "NMIXX Haewon festival",
+      "query": "오해원 해외 활동",
       "candidates": 16,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 1,
+        "within90Days": 3,
+        "olderThan90Days": 12,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 6
+      },
       "uniqueCandidates": 16,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 6,
-      "titleKeywordMatchRate": 38,
-      "explicitPublisherUrls": 8,
-      "explicitPublisherUrlRate": 50,
-      "crossQueryDuplicateUrls": 2,
+      "titleKeywordMatches": 12,
+      "titleKeywordMatchRate": 75,
+      "explicitPublisherUrls": 5,
+      "explicitPublisherUrlRate": 31,
+      "crossQueryDuplicateUrls": 3,
       "datedCandidates": 16,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 6607.5,
-      "p90PublicationLagHours": 22253.7
+      "medianPublicationLagHours": 7418.9,
+      "p90PublicationLagHours": 26647.9
     },
     {
-      "query": "Haewon stage appearance news",
+      "query": "Haewon international interview",
       "candidates": 1,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 0,
+        "within90Days": 0,
+        "olderThan90Days": 1,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 0
+      },
       "uniqueCandidates": 1,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
@@ -54,76 +84,106 @@
       "datedCandidates": 1,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 808.5,
-      "p90PublicationLagHours": 808.5
+      "medianPublicationLagHours": 15352.9,
+      "p90PublicationLagHours": 15352.9
     },
     {
-      "query": "해원 공연 행사",
-      "candidates": 37,
-      "uniqueCandidates": 37,
+      "query": "엔믹스 해원 활동 소식",
+      "candidates": 21,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 5,
+        "within90Days": 1,
+        "olderThan90Days": 15,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 24
+      },
+      "uniqueCandidates": 21,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 16,
-      "titleKeywordMatchRate": 43,
-      "explicitPublisherUrls": 1,
-      "explicitPublisherUrlRate": 3,
-      "crossQueryDuplicateUrls": 0,
-      "datedCandidates": 37,
+      "titleKeywordMatches": 15,
+      "titleKeywordMatchRate": 71,
+      "explicitPublisherUrls": 12,
+      "explicitPublisherUrlRate": 57,
+      "crossQueryDuplicateUrls": 3,
+      "datedCandidates": 21,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 10818,
-      "p90PublicationLagHours": 79290
+      "medianPublicationLagHours": 9432.2,
+      "p90PublicationLagHours": 18116.4
     },
     {
-      "query": "NMIXX Haewon showcase",
-      "candidates": 14,
-      "uniqueCandidates": 14,
-      "duplicateUrlOccurrences": 0,
-      "duplicateTitleGroups": 0,
-      "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 8,
-      "titleKeywordMatchRate": 57,
-      "explicitPublisherUrls": 11,
-      "explicitPublisherUrlRate": 79,
-      "crossQueryDuplicateUrls": 2,
-      "datedCandidates": 14,
-      "unknownDates": 0,
-      "futureDated": 0,
-      "medianPublicationLagHours": 9040,
-      "p90PublicationLagHours": 31493.8
-    },
-    {
-      "query": "Haewon public schedule",
+      "query": "Haewon radio appearance",
       "candidates": 2,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 0,
+        "within90Days": 2,
+        "olderThan90Days": 0,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 0
+      },
       "uniqueCandidates": 2,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
       "titleKeywordMatches": 2,
       "titleKeywordMatchRate": 100,
-      "explicitPublisherUrls": 0,
-      "explicitPublisherUrlRate": 0,
-      "crossQueryDuplicateUrls": 0,
+      "explicitPublisherUrls": 2,
+      "explicitPublisherUrlRate": 100,
+      "crossQueryDuplicateUrls": 1,
       "datedCandidates": 2,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 38498.2,
-      "p90PublicationLagHours": 68667.9
+      "medianPublicationLagHours": 1207.7,
+      "p90PublicationLagHours": 1525.1
+    },
+    {
+      "query": "NMIXX Haewon television",
+      "candidates": 14,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 0,
+        "within90Days": 3,
+        "olderThan90Days": 11,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 0
+      },
+      "uniqueCandidates": 14,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 13,
+      "titleKeywordMatchRate": 93,
+      "explicitPublisherUrls": 11,
+      "explicitPublisherUrlRate": 79,
+      "crossQueryDuplicateUrls": 3,
+      "datedCandidates": 14,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 12259.3,
+      "p90PublicationLagHours": 21142.9
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
   "bingSuccessfulQueries": 6,
-  "bingCandidates": 21,
+  "bingCandidates": 42,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 76,
-  "uniqueIncoming": 74,
-  "added": 4,
+  "fetched": 69,
+  "uniqueIncoming": 62,
+  "added": 23,
   "rssImageSignals": {
-    "items": 55,
-    "sourceUrlItems": 50,
+    "items": 27,
+    "sourceUrlItems": 27,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -136,9 +196,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 21,
+    "items": 42,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 21,
+    "publisherArticleUrlItems": 42,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -153,20 +213,248 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 0,
-    "found": 0,
-    "assigned": 0,
+    "attempted": 9,
+    "found": 7,
+    "assigned": 7,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
-    "missing": 0,
+    "missing": 2,
     "failed": 0,
-    "results": []
+    "results": [
+      {
+        "id": "6ecd24907ef8653cef12",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760231635205922.jpg",
+          "source": "twitter:image",
+          "priority": 2
+        },
+        "candidates": [
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760231635205922.jpg",
+            "source": "twitter:image",
+            "priority": 2
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232002834526.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232011545405.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232050667018.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232081580154.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232101989130.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232128862909.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232158508894.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/1012/1760232179650851.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.xportsnews.com/article/2063743",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.xportsnews.com/article/2063743",
+        "resolvedArticleHost": "www.xportsnews.com"
+      },
+      {
+        "id": "246381b2a4841d0662f4",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://file.sportsseoul.com/news/cms/2026/02/26/news-p.v1.20260226.08d5f54665544988b2c5c2b03ff52782_T1.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://file.sportsseoul.com/news/cms/2026/02/26/news-p.v1.20260226.08d5f54665544988b2c5c2b03ff52782_T1.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.sportsseoul.com/news/read/1588725",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.sportsseoul.com/news/read/1588725",
+        "resolvedArticleHost": "www.sportsseoul.com"
+      },
+      {
+        "id": "b73b0b6718cd750a66a5",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://biz.chosun.com/resizer/v2/QUWTLC3JYT4TJTOQW26XVKRL3Y.jpg?auth=ed2c8ef16347269f9acbbafda699b977f0b3035808b9af389d4e91deba2656ce&width=572&height=300&smart=true",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://biz.chosun.com/resizer/v2/QUWTLC3JYT4TJTOQW26XVKRL3Y.jpg?auth=ed2c8ef16347269f9acbbafda699b977f0b3035808b9af389d4e91deba2656ce&width=572&height=300&smart=true",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
+        "resolvedArticleHost": "biz.chosun.com"
+      },
+      {
+        "id": "8a8f08aee0d72b0bc7b3",
+        "status": "missing",
+        "candidate": null,
+        "candidates": [],
+        "publisherArticleUrl": "https://www.msn.com/ko-kr/news/other/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.msn.com/ko-kr/news/other/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+        "resolvedArticleHost": "www.msn.com"
+      },
+      {
+        "id": "9fd39402b9d1eb79f581",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/07/12/134282000.1.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/07/12/134282000.1.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/07/12/134282008.1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://sports.donga.com/ent/article/all/20260712/134281960/1",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://sports.donga.com/ent/article/all/20260712/134281960/1",
+        "resolvedArticleHost": "sports.donga.com"
+      },
+      {
+        "id": "fec8acc79cc39c865131",
+        "status": "missing",
+        "candidate": null,
+        "candidates": [],
+        "publisherArticleUrl": "https://www.prnewswire.com/news-releases/cj-4dplex-brings-nmixx-world-tour-to-cinemas-worldwide-in-first-ever-screenx-live-k-pop-concert-event-302935712.html",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.prnewswire.com/news-releases/cj-4dplex-brings-nmixx-world-tour-to-cinemas-worldwide-in-first-ever-screenx-live-k-pop-concert-event-302935712.html",
+        "resolvedArticleHost": "www.prnewswire.com"
+      },
+      {
+        "id": "d47157b41432a8e52fb9",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://newsimg.koreatimes.co.kr/2026/09/21/5e49d3e4-3087-4829-b938-c676ffbeac1e.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://newsimg.koreatimes.co.kr/2026/09/21/5e49d3e4-3087-4829-b938-c676ffbeac1e.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20260921/nmixx-rides-grand-prize-triumph-into-dynamic-new-era-with-strange-muse",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20260921/nmixx-rides-grand-prize-triumph-into-dynamic-new-era-with-strange-muse",
+        "resolvedArticleHost": "www.koreatimes.co.kr"
+      },
+      {
+        "id": "1ec4e7c1eb9d88e9aafc",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/05/14/133927634.1.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/05/14/133927634.1.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/05/14/133927633.1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/05/14/133927635.1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://sports.donga.com/ent/article/all/20260514/133927636/1",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://sports.donga.com/ent/article/all/20260514/133927636/1",
+        "resolvedArticleHost": "sports.donga.com"
+      },
+      {
+        "id": "9fce03a150a58620282e",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://cdn.sports.hankooki.com/news/thumbnail/202510/6914270_1171378_357_v150.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://cdn.sports.hankooki.com/news/thumbnail/202510/6914270_1171378_357_v150.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://cdn.sports.hankooki.com/news/photo/202510/6914270_1171378_357.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://sports.hankooki.com/news/articleView.html?idxno=6914270",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://sports.hankooki.com/news/articleView.html?idxno=6914270",
+        "resolvedArticleHost": "sports.hankooki.com"
+      }
+    ]
   },
   "deduplicationComparison": {
-    "before": 76,
-    "after": 73,
-    "collapsed": 3,
+    "before": 69,
+    "after": 61,
+    "collapsed": 8,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 797
+  "totalCandidates": 818
 }
