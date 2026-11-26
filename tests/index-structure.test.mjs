@@ -52,3 +52,11 @@ test('article discovery has explicit relevance scopes and a sanitized reading su
  assert.ok(discoveryView.includes('unverifiedRepeatedThumbnailUrls.has(item.thumbnailUrl)'),'unverified shared legacy thumbnails must not be shown as article-specific images');
  assert.ok(discoveryView.includes('renderCategories();'),'category controls must be mounted');
 });
+
+
+test('video cards visibly distinguish official channels from unverified channels',async()=>{
+ const appSource=await readFile(new URL('../js/app.js',import.meta.url),'utf8');
+ assert.ok(appSource.includes("video.origin === 'official'"));
+ assert.ok(appSource.includes("officialChannel ? '공식 채널' : '채널 미검수'"));
+ assert.ok(appSource.includes("channelName = video.channelName"));
+});
