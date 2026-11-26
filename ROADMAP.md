@@ -512,3 +512,15 @@
 - [ ] Complete real mobile/browser QA for scrolling, focus, tap targets and import/export.
 - [ ] Collect human-reviewed labels; current committed relevance review set remains empty.
 - [ ] Compare repeated query-pack samples with human relevance labels before promoting/demoting queries.
+
+
+## Review queue continuous navigation — 2026-11-26
+- [x] Inspect the pending-only queue's completion transition.
+- [x] Add deterministic next-pending selection after the completed article.
+- [x] Wrap to the first remaining pending item when the completed item was last in order.
+- [x] Announce when all seven-dimension reviews are complete.
+- [x] Add unit tests for forward progression, wraparound and no-pending state.
+- [ ] Verify PR #43 CI and archive validation.
+- [ ] Merge only after genuine CI success.
+- [ ] Verify Production collection/data commit/Pages deployment separately.
+- [ ] Complete real mobile browser/device QA; deployment and unit tests are not substitutes.
