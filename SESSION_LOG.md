@@ -1625,3 +1625,32 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - Production #609 run log: 15 YouTube candidates, 0 accepted, 15 duplicates; Google RSS 71, Bing RSS 43; archive validation passed. Current metrics: 857 candidates (670 article / 187 video), 352 thumbnails assigned / 505 missing, 80 unique URLs, 273 legacy shared-image assignments retained, 482 thumbnail-review eligible / 0 reviewed, article human review labels 0.
 - The queue fix opens the hidden per-article `details` disclosure before scroll/focus. No collection sources, RSS, data labels, thumbnail assignments or storage paths changed.
 - Android Chrome QA remains unverified. Do not infer mobile UX from CI or deployment.
+
+
+## 2026-11-26 — Thumbnail review auto-advance after successful save (PR candidate)
+
+### Fresh audit and evidence
+- Rechecked main: ed6f42d0f44be385b2b8c01b1201b803c93bb5e7; open PRs 0; latest PR CI #75 (45797165297) success; latest Production #609 (45796902589) success on merge SHA f9eb50cb35d51427facdbd199f7ac1cdff26a720; generated data commit 5351bc276aa5b1dd5c9286caf9a6156f273318e9; Pages artifact 15105556263 uploaded (606,867 bytes). Production job steps through deployment all report success.
+- Re-read SESSION_LOG, PROJECT_STATUS and all six continuity documents before selecting the next task.
+- Current production metrics: 857 candidates (670 articles / 187 videos); 352 assigned / 505 missing thumbnails; 80 unique image URLs; 273 legacy same-image assignments preserved; 482 thumbnail-review eligible / 0 reviewed; 0 human article relevance labels. data/thumbnail-reviews.json contains an empty labels object; data/relevance-reviews.json is empty.
+- Source diagnosis remains constrained: only 100 records have explicit publisher article URLs; 12 Google News wrapper-only metadata entries remain untouched. The 273 legacy assignments have no per-record publisher article URL and no explicit alternative image candidates. Do not infer or decode missing links.
+
+### Selected bottleneck
+- The primary thumbnail review queue already opens a collapsed candidate disclosure and focuses the selected control after the user presses “다음 미검수 후보”.
+- However, after a user manually chooses a label and storage succeeds, the candidate save handler updates counts but does not move to the next pending item. The article review flow already has next-pending/auto-advance behavior; the thumbnail flow requires an extra button press after every label.
+- Chosen improvement: after a successful localStorage persistence only, schedule the existing queue button on the next animation frame. The queue recomputes pending candidates from the committed label map, opens the next candidate disclosure, scrolls and focuses it. Failed storage writes keep the previous labels and do not advance. The user still supplies every label manually.
+
+### Research and trade-offs
+- MDN HTMLElement.focus(): https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus
+- MDN requestAnimationFrame(): https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame
+- WAI-ARIA status role guidance: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role
+- Alternatives: leave the extra click (lowest code risk but repeated friction); bulk-label shared image groups (rejected because article-specific relevance must remain separate); introduce backend/remote review sync (rejected due privacy and no-auto-upload constraints). Auto-advance after a confirmed local save is small, free, local-only, and reuses the existing tested queue path.
+- Risk: unexpected focus movement could be surprising; mitigated by advancing only after an explicit manual label change and successful storage, with the existing manual queue button still available. Real Android Chrome interaction remains user-QA only.
+
+### Implementation on branch
+- Branch: feat/thumbnail-review-auto-advance-20261126
+- Updated the per-candidate save path in js/discovery-view.mjs: after persistReviewLabels(nextLabels) succeeds, update the summary and schedule reviewQueueButton.click() with requestAnimationFrame. The failure branch restores the last saved value and never advances.
+- Added an integration contract in tests/review-queue-integration.test.mjs verifying advancement is ordered inside the successful persistence branch and after the save decision.
+- No review labels, source records, thumbnail URLs, collection policy, RSS permissions or storage destination changed. No labels are auto-generated or uploaded.
+- Preserve all 273 legacy shared-image assignments. No new RSS, wrapper decoding, access bypass, paid service or external transmission.
+- PR CI, merge, Production and Pages outcomes are pending. Android Chrome QA remains UNVERIFIED.
