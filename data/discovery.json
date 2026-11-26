@@ -20723,7 +20723,13 @@
     "query": "오해원 팬미팅 기사",
     "discoveredAt": "2026-11-26T00:53:04.846Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "68f47b2711f05f76e88d",
@@ -20981,7 +20987,13 @@
     "query": "오해원 팬미팅 기사",
     "discoveredAt": "2026-11-26T00:53:04.846Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "514969bad5ae57b45d1d",
