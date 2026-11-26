@@ -677,3 +677,12 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Human review UI stores labels in browser localStorage only. JSON export/import is manual; labels are not automatically uploaded or committed. Actual mobile visual QA is still unverified.
 - No new RSS feed sources were added. SBS/Yonhap remain excluded as direct feeds pending explicit applicable permission.
 - Only PRs #23 (optional YouTube API search) and #24 (Cloudflare/GitHub App dry-run) remain open. No API key, external app secret or paid service was configured.
+
+## 2026-11-26 — Latest cycle record
+- Main at start of cycle: `dde9b465...`; latest main after merges and production data commit: `891b2d74c2b30341613e0b49f163e14f0e2b95df`.
+- PR #32 merged: 36 unique editorial search phrases across six packs, twice-daily KST rotation, query-level diagnostics. PR CI #45729777536 passed 160/160; Production #45729843156 passed 160/160, collection, validation, data commit and Pages deployment.
+- First sample pack index 4: 54 Google RSS and 20 Bing RSS candidates; archive 767 candidates (580 articles, 187 videos), 85 verified publisher articles and 70 verified Haewon candidates. Query-level quality indicators are provisional; title-keyword match is not human-reviewed precision.
+- Thumbnail state: 340 assigned, 427 missing, 68 unique URLs; 273 legacy shared-image assignments preserved. Latest 12-URL response sample: 11 image responses and one Sportalkorea HTTP 404.
+- No new publisher RSS source. SBS/Yonhap direct feeds remain excluded pending explicit applicable permission.
+- Mobile/browser visual QA remains unverified.
+- **Required response invariant:** every completed cycle must end with the clickable “🔄 재귀개선 계속하기” action defined in BUTTONS_AND_ACTIONS.md. A manually typed user continuation does not waive this requirement.

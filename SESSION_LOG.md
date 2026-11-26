@@ -1261,3 +1261,11 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Query pack index 4 ran again because PR pushes occurred in the same KST morning slot. Six query rows total 54 candidates. The next scheduled evening slot should select pack index 5; do not treat the repeated pack as an independent coverage test.
 - Browser review labels are localStorage-only and are not visible to the collector until manually exported/imported. Mobile visual QA remains unverified.
 - No new RSS sources, no external contact, no paid APIs, no personal data/secret sharing. PR #23 and #24 remain open for separate review.
+
+## 2026-11-26 — Query rotation and continuation-control correction
+- PR #32 merged as `1f7fc3fb624b827e91b2a797d7f4b7f63d2f8b79`. Genuine PR CI #45729777536 passed 160/160 tests and validation. First live Production run #45729843156 passed 160/160 tests, collection, validation, data commit and Pages deployment.
+- Query rotation: six packs × six unique phrases, two different packs across KST morning/evening; 24 Google/Bing RSS feed requests/day, up from 16. Initial pack index 4 sample: Google 54, Bing 20; 767 total archive records.
+- Query diagnostics added for unique yield, overlap, title keyword proxy, explicit publisher URL rate and publication lag. One pack sample is insufficient to optimize terms.
+- Thumbnail response sample: 12 URLs; 11 image responses, one HTTP 404. 273 legacy shared-image assignments unchanged.
+- User reported the required next-cycle button was repeatedly missing. This is an operating failure, not a user-side issue. BUTTONS_AND_ACTIONS.md now defines a mandatory clickable action and exact prompt. The assistant must include it at the bottom of every completed work-cycle response, even if the user has manually typed “continue” in the meantime.
+- Mobile QA unverified; no new RSS sources added.

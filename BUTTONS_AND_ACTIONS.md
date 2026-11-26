@@ -277,3 +277,19 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - Latest archive: 795 candidates; 608 articles; 187 videos; 342 thumbnails assigned; 453 missing; 273 legacy assignments preserved.
 - Latest thumbnail response sample: 12 checked; 11 images, 1 HTTP 404.
 - Continue the ChatGPT action **🔄 연구 기반 재귀개선 계속하기** after each cycle. It is a conversation control, not an archive website button.
+
+## Mandatory ChatGPT next-cycle action — 2026-11-26
+The assistant MUST render a real clickable button at the very bottom of every completed Haewon Archive work-cycle response. This is a required delivery artifact, not optional decoration and not replaced by a plain-text suggestion or a request for the user to type “continue”.
+
+**Fixed button label:** 🔄 재귀개선 계속하기
+
+**Button action:** submit the following complete prompt as the next user turn (not merely a short “continue”):
+
+> Haewon Archive 연구 기반 재귀개선을 계속한다. 먼저 최신 GitHub main SHA, 열린 PR, 최근 Actions, Production 수집·데이터 커밋·Pages 배포 상태를 실제 조회하고 직전 SESSION_LOG와 PROJECT_STATUS를 읽는다. 지난 사이클의 미완료 항목부터 이어서 처리한다. 현재 main과 비교해 가장 가치가 높은 다음 병목 하나를 선택하고, 근거·대안·비용·위험을 검토한 뒤 저장소에서 실제 코드/테스트/문서 개선을 진행한다. PR CI와 테스트·데이터 검증을 실행하고 성공하면 통상적인 저장소 내부 변경은 사용자에게 매번 별도 승인을 묻지 않고 병합한다. 실패하면 실패 원인을 수정하고 재검증하며, 근거 없이 성공을 주장하지 않는다. 매 사이클 PROJECT_STATUS.md, SESSION_LOG.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md, COLLECTION_RULES.md, CHATGPT_OPERATING_RULES.md를 갱신한다. 코드 변경, 테스트, 수집, 생성 데이터 커밋, Pages 배포, 모바일 QA를 구분해 보고한다. 273개 레거시 동일 썸네일 그룹은 보존하고, SBS·연합뉴스 등 새 RSS는 명시적 이용허락 전까지 추가하지 않는다. 유료 서비스, 외부 연락/메일, 개인정보·비밀정보 전송이나 노출은 별도 승인 없이는 하지 않는다. 응답 맨 아래에 이 재귀개선 계속하기 버튼을 반드시 다시 표시한다.
+
+**Non-negotiable rules**
+- Show this action at the end of every completed cycle, including cycles where the user typed a continuation manually.
+- The button must call the conversation action with the full prompt above. A decorative or inert button is not acceptable.
+- Do not place explanatory text, links or another control after the button.
+- If work is interrupted before a full cycle completes, still preserve the next-step prompt in the response when useful; when the cycle is complete, the button is mandatory.
+- Keep this file updated whenever the prompt changes, and synchronize CHATGPT_OPERATING_RULES.md.
