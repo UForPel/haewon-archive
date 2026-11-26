@@ -170,7 +170,8 @@ test('review UI saves transactionally and reports import/export failures without
  assert.match(ui,/기존 기록과 병합/);
  assert.match(ui,/JSON 파일을 만들지 못했습니다/);
  assert.match(ui,/검수 JSON을 가져오지 못했습니다/);
- assert.match(ui,/labels = nextLabels/);
+ assert.match(ui,/labels = result\.labels/);
+ assert.match(ui,/persistArticleReviewLabels\(localStorage, STORAGE_KEY, labels, nextLabels\)/);
 });
 
 test('article review controls declare mobile touch targets and visible keyboard focus',async()=>{
