@@ -1,5 +1,5 @@
 import { classifyDiscoveryCategories } from './discovery-kind.mjs';
-import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete, getNextPendingArticle } from './article-review.mjs';
+import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, createArticleReviewExport, mergeArticleReviewLabels, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete, getNextPendingArticle } from './article-review.mjs';
 
 const host = document.querySelector('#article-quality-review');
 if (host) {
@@ -32,7 +32,7 @@ if (host) {
   const exportButton = document.createElement('button'); exportButton.type = 'button'; exportButton.textContent = '기사 검수 JSON 내보내기';
   exportButton.addEventListener('click', () => {
     try {
-      const blob = new Blob([JSON.stringify({ schemaVersion: 1, exportedAt: new Date().toISOString(), labels }, null, 2)], { type: 'application/json' });
+      const blob = new Blob([JSON.stringify(createArticleReviewExport(labels), null, 2)], { type: 'application/json' });
       const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'haewon-article-quality-reviews.json'; a.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
       progress.textContent = '검수 기록 JSON 내보내기를 시작했습니다. 다운로드 파일을 안전한 곳에 보관하세요.';
@@ -47,7 +47,7 @@ if (host) {
       const file = importInput.files?.[0]; if (!file) return;
       const parsed = validateArticleReviewExport(await file.text(), articles.map(item => item.id));
       const importedCount = Object.keys(parsed.labels).length;
-      const nextLabels = { ...labels, ...parsed.labels };
+      const nextLabels = mergeArticleReviewLabels(labels, parsed, articles.map(item => item.id));
       if (persistLabels(nextLabels, '')) {
         render();
         progress.textContent = importedCount+'개 기사의 검수 기록을 가져왔습니다. 기존 기록과 병합했으며 서버로 전송하지 않았습니다.';
