@@ -691,3 +691,16 @@
 - [ ] Obtain user-reported Android Chrome QA for queue visibility, focus, touch, and localStorage/JSON behavior.
 - [ ] Start human thumbnail/article review only when user elects to do so; current counts remain 482 thumbnail candidates / 0 reviewed and 76 verified Haewon articles / 0 human review labels.
 - [ ] Continue permitted thumbnail evidence investigation; preserve 273 legacy shared-image assignments and do not add unapproved RSS sources.
+
+
+## 2026-11-26 — Thumbnail review auto-advance (PR candidate)
+- [x] Re-audit main, open PRs, recent Actions, Production run, generated data commit and Pages artifact.
+- [x] Read SESSION_LOG, PROJECT_STATUS and all six continuity documents.
+- [x] Identify repeated extra-click friction in thumbnail review after successful manual saves.
+- [x] Implement local-only auto-advance after confirmed storage success; preserve manual label choice and failure rollback.
+- [x] Add an integration contract for success-only advancement.
+- [ ] Pass final-head PR CI and full archive validation.
+- [ ] Merge only after successful final-head verification.
+- [ ] Verify Production collection, generated data commit and Pages deployment independently.
+- [ ] Obtain user-reported Android Chrome QA; automated tests are not device QA.
+- [ ] Begin actual manual review only when the user chooses; do not auto-label 482 thumbnail candidates or article records.
