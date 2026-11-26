@@ -313,3 +313,8 @@ For each substantial update include: changed paths; planned vs implemented items
 - Treat all seven review dimensions independently. An explicit uncertain judgment is completed for workflow coverage but is never a positive relevance label.
 - Preserve local-only storage and manual JSON export/import; do not add a server, secret, automatic upload or personal-data transfer without separate approval.
 - Report review controls as deployed only after Production deployment; report mobile QA separately from CI and Pages deployment.
+
+
+## 2026-11-26 — Review queue merge checkpoint
+- PR #42 merged after genuine CI passed 192/192 tests and archive validation.
+- Verify Production collection/data commit/Pages deployment independently before claiming the UI update is live; mobile visual QA remains a separate manual check.
