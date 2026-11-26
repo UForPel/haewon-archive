@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { filterDiscoveryItems } from '../js/discovery-view.mjs';
-import { classifyDiscoveryItem, classifyDiscoveryCategory, classifyDiscoveryCategories, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText, classifyDiscoveryRelevance, hasExplicitPublisherArticleUrl, groupDiscoveryDuplicates, assessDiscoveryQuality } from '../js/discovery-kind.mjs';
+import { filterDiscoveryItems, sortDiscoveryItems } from '../js/discovery-view.mjs';
+import { filterUnresolvedVideoCandidates, isExplicitYoutubeVideoUrl, classifyDiscoveryItem, classifyDiscoveryCategory, classifyDiscoveryCategories, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText, classifyDiscoveryRelevance, hasExplicitPublisherArticleUrl, groupDiscoveryDuplicates, assessDiscoveryQuality } from '../js/discovery-kind.mjs';
 const items=[{title:'Haewon interview',sourceName:'News A',description:'NMIXX interview'},{title:'Stage clip',sourceName:'News B',description:'NMIXX stage'}];
 test('query filters title, source and description case-insensitively',()=>{assert.equal(filterDiscoveryItems(items,'haewon').length,1);assert.equal(filterDiscoveryItems(items,'news b')[0].title,'Stage clip');assert.equal(filterDiscoveryItems(items,'stage').length,1);});
 test('empty and unmatched queries',()=>{assert.equal(filterDiscoveryItems(items,'').length,2);assert.deepEqual(filterDiscoveryItems(items,'missing'),[]);});
@@ -56,4 +56,36 @@ test('verified publisher URL scope rejects HTTP, wrapper, root-only and credenti
  for(const publisherArticleUrl of ['http://publisher.test/story','https://news.google.com/rss/articles/opaque','https://publisher.test/','https://user:pass@publisher.test/story']){
   assert.equal(hasExplicitPublisherArticleUrl({publisherArticleUrl}),false);
  }
+});
+
+test('news default sort is chronological with missing dates last and relevance as opt-in',()=>{
+ const rows=[{title:'high relevance old',publishedAt:'2026-11-01',relevanceScore:9},{title:'new low relevance',publishedAt:'2026-11-24',relevanceScore:1},{title:'unknown date',relevanceScore:99}];
+ assert.deepEqual(sortDiscoveryItems(rows,'date').map(x=>x.title),['new low relevance','high relevance old','unknown date']);
+ assert.deepEqual(sortDiscoveryItems(rows,'relevance').map(x=>x.title),['unknown date','high relevance old','new low relevance']);
+});
+test('unresolved wrapper fancam candidates remain visible separately without being promoted to verified videos',()=>{
+ const rows=[{title:'Haewon fancam 4K',url:'https://news.google.com/rss/articles/wrapper-token',publishedAt:'2026-11-24'},{title:'Haewon interview',url:'https://publisher.example/news'},{title:'Haewon direct fancam',url:'https://www.youtube.com/watch?v=abcdefghijk'}];
+ assert.equal(filterUnresolvedVideoCandidates(rows).length,1);
+ assert.equal(filterUnresolvedVideoCandidates(rows)[0].url,rows[0].url);
+ assert.equal(isExplicitYoutubeVideoUrl(rows[2].url),true);
+ assert.equal(isExplicitYoutubeVideoUrl(rows[0].url),false);
+});
+
+test('date mode keeps the newest publication as the representative of a duplicate group',()=>{
+ const grouped=groupDiscoveryDuplicates([
+  {title:'Haewon news headline with enough normalized characters to group',sourceName:'Older source',publishedAt:'2026-11-01',relevanceScore:10},
+  {title:'Haewon news headline with enough normalized characters to group',sourceName:'Newer source',publishedAt:'2026-11-24',relevanceScore:1}
+ ],'date');
+ assert.equal(grouped.length,1);
+ assert.equal(grouped[0].sourceName,'Newer source');
+ assert.equal(grouped[0].publishedAt,'2026-11-24');
+});
+
+test('date sorting falls back to a valid discovery date when publishedAt is invalid',()=>{
+ const rows=[
+  {title:'older fallback',publishedAt:'not-a-date',discoveredAt:'2026-11-01T10:00:00Z'},
+  {title:'newer fallback',publishedAt:'invalid',discoveredAt:'2026-11-24T10:00:00Z'},
+  {title:'missing both',publishedAt:'invalid',discoveredAt:'also-invalid'}
+ ];
+ assert.deepEqual(sortDiscoveryItems(rows,'date').map(item=>item.title),['newer fallback','older fallback','missing both']);
 });
