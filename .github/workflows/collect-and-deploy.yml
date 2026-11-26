@@ -36,39 +36,20 @@ jobs:
         with:
           node-version: 22
           package-manager-cache: false
-      - name: Unit tests
-        run: npm test
-      - name: Collect public YouTube feed
-        run: npm run collect
-      - name: Discover public news RSS candidates
-        run: npm run collect-news
-      - name: Merge YouTube links discovered from news
-        run: npm run sync-discovery-videos
-      - name: Run bounded daily improvement cycle
-        run: npm run improve
-      - name: Generate collection quality metrics and bounded link audit
-        run: npm run quality
-      - name: Validate archive data
-        run: npm run validate
-      - name: Generate operational run log
-        env:
-          GITHUB_RUN_ID: ${{ github.run_id }}
-          GITHUB_EVENT_NAME: ${{ github.event_name }}
-          RUN_STARTED_AT: ${{ env.RUN_STARTED_AT }}
-        run: npm run log
-      - name: Validate archive and run logs
-        run: npm run validate
-      - name: Commit collected data
+      - name: Test, collect once, validate and commit refreshed data
         env:
           GITHUB_RUN_ID: ${{ github.run_id }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           RUN_STARTED_AT: ${{ env.RUN_STARTED_AT }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
-          # Always regenerate against the latest main to avoid stale JSON rebase conflicts.
+          set -euo pipefail
+          # Normally one pass. Re-run only if main advances while this job is pushing.
           for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
+            echo "Production cycle attempt $attempt"
+            npm test
             npm run collect
             npm run collect-youtube-search
             npm run collect-news
@@ -77,6 +58,7 @@ jobs:
             npm run quality
             npm run validate
             npm run log
+            npm run validate
             if [[ -z "$(git status --porcelain data/)" ]]; then
               echo "No data changes to commit."
               exit 0
@@ -88,10 +70,10 @@ jobs:
             if git push origin HEAD:main; then
               exit 0
             fi
-            echo "Push race on attempt $attempt; refreshing source data from latest main."
+            echo "Push race on attempt $attempt; refreshing from latest main and repeating the cycle."
             sleep 2
           done
-          echo "::error::Push failed after 3 regenerate-and-push attempts."
+          echo "::error::Push failed after 3 complete test-and-collection attempts."
           exit 1
       - name: Check whether GitHub Pages is configured
         id: pages
