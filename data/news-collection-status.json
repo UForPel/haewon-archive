@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T00:23:26.344Z",
+  "collectedAt": "2026-11-26T00:26:23.955Z",
   "searchPack": 2,
   "queries": [
     {
@@ -15,8 +15,8 @@
     },
     {
       "query": "NMIXX Haewon appearance",
-      "candidates": 11,
-      "uniqueCandidates": 11
+      "candidates": 12,
+      "uniqueCandidates": 12
     },
     {
       "query": "Haewon NMIXX event",
@@ -27,12 +27,12 @@
   "requestedQueries": 4,
   "successfulQueries": 4,
   "bingSuccessfulQueries": 4,
-  "bingCandidates": 34,
+  "bingCandidates": 35,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 211,
+  "fetched": 212,
   "uniqueIncoming": 209,
-  "added": 8,
+  "added": 2,
   "rssImageSignals": {
     "items": 177,
     "sourceUrlItems": 173,
@@ -40,6 +40,22 @@
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
+    "imageMediaContentTags": 0,
+    "imageEnclosureTags": 0,
+    "contentEncodedItems": 0,
+    "descriptionImageTags": 0,
+    "contentEncodedImageTags": 0,
+    "itemsWithImageSignals": 0
+  },
+  "bingRssImageSignals": {
+    "items": 35,
+    "sourceUrlItems": 0,
+    "publisherArticleUrlItems": 35,
+    "mediaThumbnailTags": 0,
+    "mediaContentTags": 0,
+    "enclosureTags": 0,
+    "imageMediaContentTags": 0,
+    "imageEnclosureTags": 0,
     "contentEncodedItems": 0,
     "descriptionImageTags": 0,
     "contentEncodedImageTags": 0,
@@ -49,159 +65,19 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 6,
-    "found": 4,
-    "assigned": 4,
+    "attempted": 0,
+    "found": 0,
+    "assigned": 0,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
-    "missing": 2,
+    "missing": 0,
     "failed": 0,
-    "results": [
-      {
-        "id": "07c7a38c0ae00230cee9",
-        "status": "missing",
-        "candidate": null,
-        "candidates": [],
-        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9D%BC%EB%B0%98/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9D%BC%EB%B0%98/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
-        "resolvedArticleHost": "www.msn.com"
-      },
-      {
-        "id": "2692af3452a13302f087",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://images.khan.co.kr/article/2026/02/26/news-p.v1.20260226.7c1c39b0dc224b21b321f515c9d72aec_P1.png",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://images.khan.co.kr/article/2026/02/26/news-p.v1.20260226.7c1c39b0dc224b21b321f515c9d72aec_P1.png",
-            "source": "og:image",
-            "priority": 1
-          },
-          {
-            "url": "https://images.khan.co.kr/article/2026/02/26/news-p.v1.20260226.de40475fdbbb44e9a7778f18f36ec012_P1.png",
-            "source": "jsonld:image",
-            "priority": 5
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://sports.khan.co.kr/article/202602261116003",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://sports.khan.co.kr/article/202602261116003",
-        "resolvedArticleHost": "sports.khan.co.kr"
-      },
-      {
-        "id": "6333a8f62a4244e7a02a",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://image.xportsnews.com/contents/images/upload/article/2026/0120/1768867610104946.jpg",
-          "source": "twitter:image",
-          "priority": 2
-        },
-        "candidates": [
-          {
-            "url": "https://image.xportsnews.com/contents/images/upload/article/2026/0120/1768867610104946.jpg",
-            "source": "twitter:image",
-            "priority": 2
-          },
-          {
-            "url": "https://image.xportsnews.com/contents/images/upload/article/2026/0120/1768867644485147.jpg",
-            "source": "jsonld:image",
-            "priority": 5
-          },
-          {
-            "url": "https://image.xportsnews.com/contents/images/upload/article/2026/0120/1768867690522717.jpg",
-            "source": "jsonld:image",
-            "priority": 5
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://www.xportsnews.com/article/2102484",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.xportsnews.com/article/2102484",
-        "resolvedArticleHost": "www.xportsnews.com"
-      },
-      {
-        "id": "e49a24d89b9def4aa91f",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://themusicuniverse.com/wp-content/uploads/2026/11/nmixxscreenx.jpg",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://themusicuniverse.com/wp-content/uploads/2026/11/nmixxscreenx.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          {
-            "url": "https://themusicuniverse.com/wp-content/uploads/2026/11/andytaylorrip-768x461.jpg",
-            "source": "itemprop:image",
-            "priority": 4
-          },
-          {
-            "url": "https://themusicuniverse.com/wp-content/uploads/2026/11/jamiemillereltonjohn-768x416.jpg",
-            "source": "itemprop:image",
-            "priority": 4
-          },
-          {
-            "url": "https://themusicuniverse.com/wp-content/uploads/2026/11/justintimberlakejimmyfallon-768x416.jpg",
-            "source": "itemprop:image",
-            "priority": 4
-          },
-          {
-            "url": "https://themusicuniverse.com/wp-content/uploads/2026/02/buddy26-96x96.jpg",
-            "source": "jsonld:image",
-            "priority": 5
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://themusicuniverse.com/nmixx-announces-global-cinema-live-concert-event/",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://themusicuniverse.com/nmixx-announces-global-cinema-live-concert-event/",
-        "resolvedArticleHost": "themusicuniverse.com"
-      },
-      {
-        "id": "866fedfe173358009f8c",
-        "status": "missing",
-        "candidate": null,
-        "candidates": [],
-        "publisherArticleUrl": "https://www.msn.com/ko-kr/news/other/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.msn.com/ko-kr/news/other/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
-        "resolvedArticleHost": "www.msn.com"
-      },
-      {
-        "id": "9ad6c5ab4ec97b9ab9e2",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://pimg.mk.co.kr/news/cms/202510/10/news-p.v1.20251010.1f1185e64fe243e4940c34054bba02df_R.png",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://pimg.mk.co.kr/news/cms/202510/10/news-p.v1.20251010.1f1185e64fe243e4940c34054bba02df_R.png",
-            "source": "og:image",
-            "priority": 1
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://www.mk.co.kr/en/entertain/11438157",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.mk.co.kr/en/entertain/11438157",
-        "resolvedArticleHost": "www.mk.co.kr"
-      }
-    ]
+    "results": []
   },
   "deduplicationComparison": {
-    "before": 211,
+    "before": 212,
     "after": 209,
-    "collapsed": 2,
+    "collapsed": 3,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 735
