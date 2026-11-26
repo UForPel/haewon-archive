@@ -82,7 +82,7 @@ if(list&&count){
    reviewLabelsAllowed.forEach(label=>{const option=document.createElement('option');option.value=label;option.textContent=reviewLabelNames[label];select.append(option);});
    select.value=reviewLabels[key]?.label||'';
    const save=document.createElement('button');save.type='button';save.textContent='저장';
-   save.addEventListener('click',()=>{if(!select.value)return;const nextLabels={...reviewLabels,[key]:{articleId:item.id,imageUrl:group.url,source:item.thumbnailSource||'unknown',label:select.value,reviewedAt:new Date().toISOString()}};if(persistReviewLabels(nextLabels)){updateReviewSummary();updateRepeatedReviewSummary();save.textContent='저장됨';}else{select.value=reviewLabels[key]?.label||'';save.textContent='저장 실패';repeatedReviewProgress.textContent='저장 공간 오류로 검수 기록을 저장하지 못했습니다. 기존 라벨은 유지됩니다.';}});
+   save.addEventListener('click',()=>{if(!select.value)return;const nextLabels={...reviewLabels,[key]:{articleId:item.id,imageUrl:group.url,source:item.thumbnailSource||'unknown',label:select.value,reviewedAt:new Date().toISOString()}};if(persistReviewLabels(nextLabels)){updateReviewSummary();updateRepeatedReviewSummary();save.textContent='저장됨';repeatedReviewProgress.textContent='기사별 검수 저장 완료. 다음 미검수 기사로 이동합니다.';requestAnimationFrame(()=>repeatedReviewNext.click());}else{select.value=reviewLabels[key]?.label||'';save.textContent='저장 실패';repeatedReviewProgress.textContent='저장 공간 오류로 검수 기록을 저장하지 못했습니다. 기존 라벨은 유지됩니다.';}});
    select.addEventListener('change',()=>{if(select.value)save.click();});
    info.append(title,meta,select,save);row.append(info);repeatedReviewList.append(row);
   });
