@@ -860,3 +860,12 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Latest generated metrics: 856 candidates (669 articles / 187 videos), 99 verified publisher articles, 76 verified Haewon articles, 58 verified Haewon articles with provenance thumbnails. Thumbnail audit: 352 assigned / 504 missing; 80 unique URLs; 273 legacy shared-image assignments preserved; 482 thumbnail-review eligible / 0 reviewed. Article human review labels remain 0. Google News wrapper-only metadata: 12 candidates, left untouched. No new RSS, no wrapper decoding, no access bypass, no search-pack change, no auto upload, no Playwright/Puppeteer.
 - Latest main at this checkpoint is the generated data commit `99f86221057a07ca827f538f5dc73143f82809bb`; open PR search returned 0 after #48 merge. This documentation follow-up is a Markdown-only PR and does not trigger another Production run.
 - Android Chrome QA remains **UNVERIFIED** because no user-reported device checklist was received. Pure Node tests, PR CI and Pages deployment do not constitute real-device QA.
+
+
+## 2026-11-26 — Thumbnail review storage rollback fix (PR #50)
+- Fresh baseline main: `88c61699108ec3854c35d23813a4fd4558e73730`; open PRs: 0 before this change. Latest prior PR CI #63 and Production #607 were successful.
+- Code change on `fix/thumbnail-review-storage-rollback-20261126`: added `persistThumbnailReviewLabels` and routed individual candidate labels, repeated-image labels and JSON import through a transactional save gate. In-memory labels are replaced only after `localStorage.setItem` succeeds; failed writes retain the prior labels and restore the visible select to its last saved value.
+- PR #50 CI #64 (`45794572903`) passed: 205 tests, 205 passed, 0 failed. Archive validation passed: 856 discovery candidates, 0 human article labels, 179 schema-valid run logs, 55 source summaries and 41 links checked.
+- This PR does not alter collection, discovery data, RSS sources, search pack, thumbnail assignments or the 273 legacy shared-image records. It does not add a backend or automatic upload; review labels remain localStorage-only with manual JSON transfer.
+- PR #50 has not yet been merged at this checkpoint. Production collection, generated-data commit and Pages deployment for this code change are therefore **PENDING** until merge and a separate Production run.
+- Android Chrome visual/touch/focus/refresh/download-import QA remains **UNVERIFIED**. Node storage-adapter tests and CI are not device QA.
