@@ -180,3 +180,48 @@ test('article review controls declare mobile touch targets and visible keyboard 
  assert.match(css,/@media\(max-width:360px\)/);
  assert.match(css,/grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
 });
+
+test('article review JSON export-import round trip preserves valid labels and drops unknown fields', async () => {
+  const { createArticleReviewExport, validateArticleReviewExport } = await import('../js/article-review.mjs');
+  const original = {
+    a: { articleId: 'a', relevance: 'indirect', contentType: 'article', note: 'manual check', ignored: 'drop-me' },
+    invalid: { articleId: 'invalid', relevance: 'not-a-label' }
+  };
+  const exported = createArticleReviewExport(original, '2026-11-26T00:00:00.000Z');
+  assert.equal(exported.schemaVersion, 1);
+  assert.equal(exported.exportedAt, '2026-11-26T00:00:00.000Z');
+  const imported = validateArticleReviewExport(JSON.stringify(exported), ['a']);
+  assert.deepEqual(imported.labels, {
+    a: { articleId: 'a', reviewedAt: '', relevance: 'indirect', contentType: 'article', note: 'manual check' }
+  });
+  assert.equal(imported.labels.a.ignored, undefined);
+});
+
+test('manual JSON import merges eligible records and preserves unrelated existing labels', async () => {
+  const { mergeArticleReviewLabels } = await import('../js/article-review.mjs');
+  const current = {
+    a: { articleId: 'a', relevance: 'relevant', originalAccess: 'accessible' },
+    b: { articleId: 'b', relevance: 'indirect' }
+  };
+  const incoming = {
+    schemaVersion: 1,
+    labels: {
+      a: { articleId: 'a', relevance: 'unrelated' },
+      c: { articleId: 'c', relevance: 'relevant' },
+      rogue: { articleId: 'rogue', relevance: 'relevant' }
+    }
+  };
+  const merged = mergeArticleReviewLabels(current, incoming, ['a', 'b', 'c']);
+  assert.equal(merged.a.relevance, 'unrelated');
+  assert.equal(merged.a.originalAccess, 'accessible');
+  assert.equal(merged.b.relevance, 'indirect');
+  assert.equal(merged.c.relevance, 'relevant');
+  assert.equal(merged.rogue, undefined);
+});
+
+test('invalid imported JSON cannot mutate current review labels', async () => {
+  const { mergeArticleReviewLabels } = await import('../js/article-review.mjs');
+  const current = { a: { articleId: 'a', relevance: 'relevant' } };
+  assert.throws(() => mergeArticleReviewLabels(current, { schemaVersion: 2, labels: {} }, ['a']));
+  assert.deepEqual(current, { a: { articleId: 'a', relevance: 'relevant' } });
+});
