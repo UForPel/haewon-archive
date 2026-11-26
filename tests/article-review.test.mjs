@@ -239,6 +239,24 @@ test('review queue uses collapsed per-article disclosures and opens the active r
 });
 
 
+
+test('review UI rolls failed edits back to the latest persisted label, not the initial render value', async () => {
+  const { getArticleReviewValue, persistArticleReviewLabels } = await import('../js/article-review.mjs');
+  const ui = await readFile(new URL('../js/article-quality-review-ui.mjs', import.meta.url), 'utf8');
+  const initial = { a: { articleId: 'a', relevance: 'relevant', expectedCategory: 'news' } };
+  const firstEdit = { ...initial, a: { ...initial.a, relevance: 'indirect' } };
+  const accepted = persistArticleReviewLabels({ setItem() {} }, 'reviews', initial, firstEdit);
+  assert.equal(accepted.saved, true);
+  assert.equal(getArticleReviewValue(accepted.labels, 'a', 'relevance'), 'indirect');
+  assert.equal(getArticleReviewValue(accepted.labels, 'a', 'expectedCategory'), 'news');
+  const secondEdit = { ...accepted.labels, a: { ...accepted.labels.a, relevance: 'unrelated' } };
+  const rejected = persistArticleReviewLabels({ setItem() { const error = new Error('quota'); error.name = 'QuotaExceededError'; throw error; } }, 'reviews', accepted.labels, secondEdit);
+  assert.equal(rejected.saved, false);
+  assert.equal(getArticleReviewValue(rejected.labels, 'a', 'relevance'), 'indirect');
+  assert.match(ui, /select\\.value = getArticleReviewValue\\(labels, item\\.id, dimension\\)/);
+  assert.match(ui, /correctionSelect\\.value = getArticleReviewValue\\(labels, item\\.id, 'expectedCategory'\\)/);
+});
+
 test('review label persistence keeps the prior state when browser storage throws', async () => {
   const { persistArticleReviewLabels } = await import('../js/article-review.mjs');
   const current = { a: { articleId: 'a', relevance: 'relevant' } };
