@@ -1335,3 +1335,10 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 ### Verification still pending
 - Run genuine PR CI and archive validation. If successful, merge and verify Production Actions / data commit / Pages deployment independently.
 - Ask for real mobile visual QA only after deployed UI; no claim of mobile QA from unit tests.
+
+
+## 2026-11-26 — Review queue PR #42 CI and merge checkpoint
+- PR #42 merged as `753b4323c4712c7a5580d336b30240894cca73c0` after PR CI #43 (`45751819231`) completed successfully.
+- Test log: 192 tests, 192 passed, 0 failed (751 ms). Archive validation passed: 20 video entries, 818 discovery candidates, six per-query metrics, zero human-review labels, 172 schema-valid run logs and quality metrics validation.
+- Production run #601 (`45751857291`) was triggered on merge and was still running at this checkpoint. Do not report its data commit or Pages deployment as complete until independently verified.
+- UI remains browser-local only; mobile visual/tap-target QA still requires a real device/browser.
