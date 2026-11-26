@@ -1403,3 +1403,30 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - News pass: 99 fetched / 92 unique / 3 added; Google and Bing each completed 6/6 queries. Google 56 RSS items / 0 explicit publisher article URLs / 0 image signals; Bing 43 RSS items / 43 explicit publisher article URLs / 0 image signals. Thumbnail enrichment 1 attempted / 1 assigned.
 - Latest main after the six documentation updates: `dd06a9638e8bf4e7365e1b66e21f4dedd08ed6f5`; open PRs: 0. Mobile visual/device QA remains unverified; successful Pages deployment is not visual QA.
 - No new publisher RSS sources, no automatic review-label upload, no paid services, no external contacts or secrets transfer. All 273 legacy thumbnail assignments were preserved.
+
+
+## 2026-11-26 — Mobile review accessibility and backup safeguards (PR #44)
+
+### Baseline verification
+- Main at cycle start: `3d35001afe150e352769e95b269ff3195cdb7a57`; open PRs 0.
+- Re-read current PROJECT_STATUS and this session log. Latest Production #602 succeeded; data commit `96a79935d85f23b17887b3ab20b95b780f1ab234`; Pages artifact `15086646238` uploaded and deployment created for merge SHA `c77d605cde6eac9476f7d187f77ac6c9c646adee`.
+- Main data snapshot: 856 candidates; 76 verified Haewon article candidates; zero committed human review labels; 352 thumbnails assigned, 504 missing; 273 legacy shared-thumbnail assignments retained.
+- package.json has no browser automation dependency; no Playwright/Puppeteer config exists. Tests run via Node built-in `node --test`.
+
+### Changes on `fix/review-mobile-accessibility-20261126`
+- Added 44px minimum target heights for review buttons/selects/inputs, mobile action grid and <=360px single-column fallback, focus-visible outlines and scroll margin.
+- Added transactional localStorage persistence: the in-memory label set is replaced only after `setItem` succeeds. On failure, keep prior labels and restore the control value.
+- Improved JSON export/import status and errors; import validates schema and eligible IDs, merges with existing local labels and reports imported count. No server or automatic upload.
+- Added regression checks for persistence/error handling and CSS mobile/accessibility contracts.
+- PR #44: https://github.com/UForPel/haewon-archive/pull/44
+
+### Verification
+- PR CI #48 (`45753560612`) passed 195/195 tests, 0 failures; archive validation passed for 856 discovery candidates, 20 video entries, 6 query metrics, 0 human-reviewed labels, 174 schema-valid run logs and 55 source summaries / 41 checked links.
+- PR #44 merge and post-merge Production/Pages run are pending at this checkpoint.
+- No actual browser viewport simulation, Android device interaction or visual QA was performed. CSS contract tests are not device QA.
+
+### Next
+1. Merge only after current PR head and CI success are confirmed.
+2. Verify post-merge Production collection, data commit and Pages deployment separately.
+3. Complete real Android/mobile checks for narrow viewport, scrolling/focus, 44px controls, JSON import/export and storage quota/error handling.
+4. Obtain voluntary human-reviewed labels; do not tune search packs using automated proxies alone.
