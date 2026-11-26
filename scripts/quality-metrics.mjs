@@ -47,12 +47,13 @@ export function classifyMissingThumbnailReason(item={}) {
 export function summarizeMissingThumbnailDiagnostics(items=[]) {
  const bySource=new Map(),byReason={};let missing=0,unclassified=0;
  for(const item of items){
-  const reason=classifyMissingThumbnailReason(item);if(!reason)continue;
-  missing++;byReason[reason]=(byReason[reason]||0)+1;
-  if(reason==='unclassified-missing-thumbnail')unclassified++;
   const source=String(item.sourceName||item.discoverySource||'출처 미상');
   const row=bySource.get(source)||{source,items:0,missing:0,missingWithPublisherArticleUrl:0,missingWithSourceSiteUrl:0,reasons:{}};
-  row.items++;row.missing++;if(hasExplicitPublisherArticleUrl(item))row.missingWithPublisherArticleUrl++;
+  row.items++;
+  const reason=classifyMissingThumbnailReason(item);if(!reason){bySource.set(source,row);continue;}
+  missing++;row.missing++;byReason[reason]=(byReason[reason]||0)+1;
+  if(reason==='unclassified-missing-thumbnail')unclassified++;
+  if(hasExplicitPublisherArticleUrl(item))row.missingWithPublisherArticleUrl++;
   if(/^https:\/\//i.test(String(item.sourceUrl||'')))row.missingWithSourceSiteUrl++;
   row.reasons[reason]=(row.reasons[reason]||0)+1;bySource.set(source,row);
  }
