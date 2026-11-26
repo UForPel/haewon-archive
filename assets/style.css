@@ -144,3 +144,17 @@ main,section,.section-heading,.controls,.date-controls,.photo-card,.video-card,.
 .discovery-relevance button.active{background:var(--ink);border-color:var(--ink);color:#fff}
 .discovery-relevance button:focus-visible,.discovery-categories button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.discovery-categories button{min-height:38px}
 @media(max-width:600px){.discovery-relevance{display:grid;grid-template-columns:1fr 1fr}.discovery-relevance button{width:100%;padding:10px 8px}.discovery-relevance button:last-child{grid-column:1/-1}}
+
+/* Human quality review for verified publisher articles. */
+.article-quality-review{margin:12px 0;border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--surface,#fff)}
+.article-quality-review>summary{font-weight:700;cursor:pointer;min-height:38px;display:flex;align-items:center}
+.article-quality-review-body{display:grid;gap:10px;padding-top:10px}
+.article-quality-review-list{display:grid;gap:10px}
+.article-quality-review-row{display:grid;grid-template-columns:104px minmax(0,1fr);gap:8px;border-top:1px solid var(--line);padding:12px 0}
+.article-quality-review-title{grid-column:1/-1;font-weight:650;line-height:1.45}
+.article-quality-review-row .photo-meta{grid-column:1/-1;margin:0}
+.article-quality-review-image{width:104px;height:76px;object-fit:cover;border-radius:8px;background:var(--line)}
+.article-quality-review-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start}
+.article-quality-review-fields label{display:grid;gap:4px;font-size:12px;color:var(--muted)}
+.article-quality-review-fields select{width:100%;min-height:38px;border:1px solid var(--line);border-radius:8px;padding:6px;background:#fff;color:var(--ink);font:inherit;font-size:12px}
+@media(max-width:480px){.article-quality-review-row{grid-template-columns:80px minmax(0,1fr)}.article-quality-review-image{width:80px;height:64px}.article-quality-review-fields{grid-column:1/-1}}
