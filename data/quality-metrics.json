@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-11-26T03:54:49.321Z",
+  "generatedAt": "2026-11-26T04:04:00.475Z",
   "discoveryRelevance": {
-    "totalCandidates": 855,
-    "articleCandidates": 668,
+    "totalCandidates": 856,
+    "articleCandidates": 669,
     "videoCandidates": 187,
-    "verifiedPublisherArticles": 98,
+    "verifiedPublisherArticles": 99,
     "verifiedHaewonArticles": 76,
-    "verifiedPublisherArticlesWithProvenanceThumbnail": 75,
+    "verifiedPublisherArticlesWithProvenanceThumbnail": 76,
     "verifiedHaewonWithProvenanceThumbnail": 58,
     "haewonTitleMatches": 504,
-    "nmixxTitleMatches": 531,
+    "nmixxTitleMatches": 532,
     "otherArticleCandidates": 69,
     "defaultScope": "verified-haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 855,
-    "itemsWithPublisherArticleUrl": 99,
-    "bingNewsItems": 102,
+    "totalItems": 856,
+    "itemsWithPublisherArticleUrl": 100,
+    "bingNewsItems": 103,
     "candidateSourceCounts": {
-      "bing-news-rss-explicit-url-param": 107
+      "bing-news-rss-explicit-url-param": 108
     },
     "publisherHosts": {
       "www.msn.com": 10,
+      "sports.khan.co.kr": 9,
       "biz.chosun.com": 9,
-      "sports.khan.co.kr": 8,
       "www.mk.co.kr": 7,
       "www.xportsnews.com": 4,
       "www.soompi.com": 4,
@@ -71,7 +71,7 @@
     "finalHosts": {
       "www.msn.com": 10,
       "biz.chosun.com": 10,
-      "sports.khan.co.kr": 8,
+      "sports.khan.co.kr": 9,
       "www.mk.co.kr": 7,
       "www.xportsnews.com": 4,
       "www.soompi.com": 4,
@@ -270,14 +270,14 @@
       "www.obsnews.co.kr": 1
     },
     "discoveryWrapperHosts": {
-      "www.bing.com": 102
+      "www.bing.com": 103
     }
   },
   "thumbnailProvenance": {
-    "assignedTotal": 351,
+    "assignedTotal": 352,
     "assignedBySource": {
       "unverified-legacy": 273,
-      "og:image": 71,
+      "og:image": 72,
       "twitter:image": 5,
       "link:image_src": 1,
       "twitter:image:src": 1
@@ -287,10 +287,10 @@
     "sourceProvenanceCoverage": 22
   },
   "thumbnailAudit": {
-    "items": 855,
-    "withThumbnail": 351,
+    "items": 856,
+    "withThumbnail": 352,
     "missing": 504,
-    "uniqueThumbnailUrls": 79,
+    "uniqueThumbnailUrls": 80,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 9,
@@ -325,7 +325,7 @@
       },
       {
         "host": "images.khan.co.kr",
-        "count": 8
+        "count": 9
       },
       {
         "host": "pimg.mk.co.kr",
@@ -536,74 +536,58 @@
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 31,
+    "bingNewsCandidates": 43,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
-    "newsCandidatesTotal": 855,
-    "newsUniqueFetched": 88,
-    "newsAddedLastRun": 39,
-    "duplicateBeforeMergeLastRun": 6,
-    "duplicateGroupsCurrent": 855,
+    "newsCandidatesTotal": 856,
+    "newsUniqueFetched": 92,
+    "newsAddedLastRun": 3,
+    "duplicateBeforeMergeLastRun": 7,
+    "duplicateGroupsCurrent": 856,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 94,
-      "after": 87,
-      "collapsed": 7,
+      "before": 99,
+      "after": 91,
+      "collapsed": 8,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 2,
-      "found": 2,
-      "assigned": 2,
+      "attempted": 1,
+      "found": 1,
+      "assigned": 1,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
       "failed": 0,
       "results": [
         {
-          "id": "b163034ca145278d9390",
+          "id": "9ac91aa826b4fbed0763",
           "status": "assigned",
           "candidate": {
-            "url": "https://www.geo.tv/assets/uploads/updates/2023-03-20/477529_112029_updates.jpg",
+            "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
             "source": "og:image",
             "priority": 1
           },
           "candidates": [
             {
-              "url": "https://www.geo.tv/assets/uploads/updates/2023-03-20/477529_112029_updates.jpg",
+              "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
               "source": "og:image",
               "priority": 1
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.geo.tv/latest/477529-k-pop-group-nmixxs-haewon-discusses-former-member-for-the-first-time",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.geo.tv/latest/477529-k-pop-group-nmixxs-haewon-discusses-former-member-for-the-first-time",
-          "resolvedArticleHost": "www.geo.tv"
-        },
-        {
-          "id": "37430db34d600391f666",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://newsimg.koreatimes.co.kr/2026/10/19/d68d544f-6f9a-4d86-b23d-39b75dd674b2.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
+            },
             {
-              "url": "https://newsimg.koreatimes.co.kr/2026/10/19/d68d544f-6f9a-4d86-b23d-39b75dd674b2.jpg",
-              "source": "og:image",
-              "priority": 1
+              "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.8c4accbba768481e9da42739f10a8066_P1.jpg",
+              "source": "jsonld:image",
+              "priority": 5
             }
           ],
           "assigned": true,
-          "publisherArticleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20261019/nmixx-explores-unusual-muses-makes-wishes-with-strange-muse",
+          "publisherArticleUrl": "https://sports.khan.co.kr/article/202603051914007/",
           "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20261019/nmixx-explores-unusual-muses-makes-wishes-with-strange-muse",
-          "resolvedArticleHost": "www.koreatimes.co.kr"
+          "resolvedArticleUrl": "https://sports.khan.co.kr/article/202603051914007/",
+          "resolvedArticleHost": "sports.khan.co.kr"
         }
       ]
     }
@@ -658,6 +642,18 @@
       "dateCoverage": 100
     },
     {
+      "source": "SportsKyunghyang",
+      "items": 4,
+      "withUrl": 4,
+      "withPublisherArticleUrl": 4,
+      "withThumbnail": 4,
+      "withDate": 4,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 100,
+      "dateCoverage": 100
+    },
+    {
       "source": "엑스포츠뉴스",
       "items": 4,
       "withUrl": 4,
@@ -707,18 +703,6 @@
     },
     {
       "source": "스포츠서울",
-      "items": 3,
-      "withUrl": 3,
-      "withPublisherArticleUrl": 3,
-      "withThumbnail": 3,
-      "withDate": 3,
-      "urlCoverage": 100,
-      "publisherArticleUrlCoverage": 100,
-      "thumbnailCoverage": 100,
-      "dateCoverage": 100
-    },
-    {
-      "source": "SportsKyunghyang",
       "items": 3,
       "withUrl": 3,
       "withPublisherArticleUrl": 3,
@@ -1291,14 +1275,14 @@
     }
   ],
   "classification": {
-    "items": 855,
+    "items": 856,
     "categoryCounts": {
       "video": 187,
       "interview": 56,
       "news": 514,
       "brand": 28,
       "event": 18,
-      "performance": 43,
+      "performance": 44,
       "official": 14
     },
     "reviewedSamples": 0,
@@ -1308,14 +1292,14 @@
     "accuracyLabel": "not measured (no category review labels)"
   },
   "thumbnailReviewMetrics": {
-    "eligible": 480,
+    "eligible": 482,
     "reviewed": 0,
     "reviewCoverage": 0,
     "relevant": 0,
     "unsuitable": 0,
     "excluded": 0,
     "precision": null,
-    "selectedEligible": 351,
+    "selectedEligible": 352,
     "selectedReviewed": 0,
     "selectedPrecision": null,
     "counts": {
@@ -1390,20 +1374,20 @@
     },
     {
       "host": "sports.khan.co.kr",
-      "attempted": 8,
-      "assigned": 7,
-      "found": 7,
+      "attempted": 9,
+      "assigned": 8,
+      "found": 8,
       "missing": 1,
       "failed": 0,
       "wrapperOnly": 0,
       "duplicateRejected": 0,
       "errorCodes": {},
       "finalHosts": {
-        "sports.khan.co.kr": 7,
+        "sports.khan.co.kr": 8,
         "www.msn.com": 1
       },
-      "successRate": 88,
-      "candidateRate": 88,
+      "successRate": 89,
+      "candidateRate": 89,
       "assignmentRate": 100
     },
     {
@@ -2431,26 +2415,26 @@
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 78,
+    "articlesCompared": 79,
     "rssOnly": 0,
-    "metaOnly": 78,
+    "metaOnly": 79,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 78,
-    "metaAssigned": 2,
+    "metaFound": 79,
+    "metaAssigned": 1,
     "assignmentRate": 100,
-    "latestRunAttempted": 2,
-    "latestRunFound": 2,
-    "latestRunAssigned": 2,
+    "latestRunAttempted": 1,
+    "latestRunFound": 1,
+    "latestRunAssigned": 1,
     "latestRunAssignmentRate": 100,
-    "persistedMetaCandidateRecords": 78,
-    "persistedThumbnailRecords": 78,
-    "persistedThumbnailRecordsTotal": 351,
-    "persistedThumbnailMatchesMetaCandidate": 78,
+    "persistedMetaCandidateRecords": 79,
+    "persistedThumbnailRecords": 79,
+    "persistedThumbnailRecordsTotal": 352,
+    "persistedThumbnailMatchesMetaCandidate": 79,
     "persistedThumbnailDoesNotMatchMetaCandidate": 0,
     "sourceCounts": {
-      "og:image": 71,
-      "jsonld:image": 85,
+      "og:image": 72,
+      "jsonld:image": 86,
       "twitter:image": 11,
       "link:image_src": 1,
       "jsonld:thumbnailUrl": 19,
@@ -2460,12 +2444,12 @@
     },
     "hostCounts": [
       {
-        "host": "img.sbs.co.kr",
+        "host": "images.khan.co.kr",
         "count": 33
       },
       {
-        "host": "images.khan.co.kr",
-        "count": 31
+        "host": "img.sbs.co.kr",
+        "count": 33
       },
       {
         "host": "image.xportsnews.com",
@@ -3827,8 +3811,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://www.geo.tv/assets/uploads/updates/2023-03-20/477529_112029_updates.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -4324,8 +4308,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://newsimg.koreatimes.co.kr/2026/10/19/d68d544f-6f9a-4d86-b23d-39b75dd674b2.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -4436,6 +4420,29 @@
         "assigned": false,
         "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/05/14/133927634.1.jpg",
+        "persistedThumbnailMatchesMetaCandidate": true
+      },
+      {
+        "id": "9ac91aa826b4fbed0763",
+        "title": "NMIXX to hold a solo concert in Tokyo, Japan this August as part of its first world tour",
+        "articleUrl": "https://sports.khan.co.kr/article/202603051914007/",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.8c4accbba768481e9da42739f10a8066_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned",
+        "persistedThumbnailUrl": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
       {
@@ -4601,7 +4608,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T03:54:49.343Z",
+    "generatedAt": "2026-11-26T04:04:00.500Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

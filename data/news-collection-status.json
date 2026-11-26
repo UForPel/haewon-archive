@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T03:54:44.780Z",
+  "collectedAt": "2026-11-26T04:03:56.167Z",
   "searchPack": 5,
   "queries": [
     {
@@ -8,13 +8,13 @@
       "candidates": 15,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 1,
-        "within90Days": 7,
-        "olderThan90Days": 7,
+        "within30Days": 2,
+        "within90Days": 5,
+        "olderThan90Days": 8,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 7
+        "within30DaysRate": 13
       },
       "uniqueCandidates": 15,
       "duplicateUrlOccurrences": 0,
@@ -24,40 +24,40 @@
       "titleKeywordMatchRate": 47,
       "explicitPublisherUrls": 11,
       "explicitPublisherUrlRate": 73,
-      "crossQueryDuplicateUrls": 4,
+      "crossQueryDuplicateUrls": 3,
       "datedCandidates": 15,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1605,
-      "p90PublicationLagHours": 24217.1
+      "medianPublicationLagHours": 6385.8,
+      "p90PublicationLagHours": 24217.3
     },
     {
       "query": "오해원 해외 활동",
-      "candidates": 21,
+      "candidates": 16,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 3,
-        "within90Days": 4,
-        "olderThan90Days": 14,
+        "within30Days": 1,
+        "within90Days": 3,
+        "olderThan90Days": 12,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 14
+        "within30DaysRate": 6
       },
-      "uniqueCandidates": 21,
+      "uniqueCandidates": 16,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 16,
-      "titleKeywordMatchRate": 76,
+      "titleKeywordMatches": 12,
+      "titleKeywordMatchRate": 75,
       "explicitPublisherUrls": 5,
-      "explicitPublisherUrlRate": 24,
-      "crossQueryDuplicateUrls": 1,
-      "datedCandidates": 21,
+      "explicitPublisherUrlRate": 31,
+      "crossQueryDuplicateUrls": 3,
+      "datedCandidates": 16,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 6563,
-      "p90PublicationLagHours": 17995.9
+      "medianPublicationLagHours": 7419.6,
+      "p90PublicationLagHours": 26648.6
     },
     {
       "query": "Haewon international interview",
@@ -84,36 +84,36 @@
       "datedCandidates": 1,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 15353.5,
-      "p90PublicationLagHours": 15353.5
+      "medianPublicationLagHours": 15353.6,
+      "p90PublicationLagHours": 15353.6
     },
     {
       "query": "엔믹스 해원 활동 소식",
-      "candidates": 40,
+      "candidates": 51,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 3,
-        "within90Days": 1,
-        "olderThan90Days": 36,
+        "within30Days": 8,
+        "within90Days": 2,
+        "olderThan90Days": 41,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 8
+        "within30DaysRate": 16
       },
-      "uniqueCandidates": 40,
+      "uniqueCandidates": 51,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 19,
-      "titleKeywordMatchRate": 48,
-      "explicitPublisherUrls": 0,
-      "explicitPublisherUrlRate": 0,
-      "crossQueryDuplicateUrls": 1,
-      "datedCandidates": 40,
+      "titleKeywordMatches": 29,
+      "titleKeywordMatchRate": 57,
+      "explicitPublisherUrls": 12,
+      "explicitPublisherUrlRate": 24,
+      "crossQueryDuplicateUrls": 3,
+      "datedCandidates": 51,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 20924.9,
-      "p90PublicationLagHours": 34747.9
+      "medianPublicationLagHours": 17444.1,
+      "p90PublicationLagHours": 34748.1
     },
     {
       "query": "Haewon radio appearance",
@@ -140,50 +140,50 @@
       "datedCandidates": 2,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1208.2,
-      "p90PublicationLagHours": 1525.6
+      "medianPublicationLagHours": 1208.3,
+      "p90PublicationLagHours": 1525.8
     },
     {
       "query": "NMIXX Haewon television",
-      "candidates": 15,
+      "candidates": 14,
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 0,
         "within90Days": 3,
-        "olderThan90Days": 12,
+        "olderThan90Days": 11,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
         "within30DaysRate": 0
       },
-      "uniqueCandidates": 15,
+      "uniqueCandidates": 14,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 14,
+      "titleKeywordMatches": 13,
       "titleKeywordMatchRate": 93,
       "explicitPublisherUrls": 12,
-      "explicitPublisherUrlRate": 80,
-      "crossQueryDuplicateUrls": 4,
-      "datedCandidates": 15,
+      "explicitPublisherUrlRate": 86,
+      "crossQueryDuplicateUrls": 3,
+      "datedCandidates": 14,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 14778.7,
-      "p90PublicationLagHours": 27849.8
+      "medianPublicationLagHours": 12260,
+      "p90PublicationLagHours": 21143.6
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
   "bingSuccessfulQueries": 6,
-  "bingCandidates": 31,
+  "bingCandidates": 43,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 94,
-  "uniqueIncoming": 88,
-  "added": 39,
+  "fetched": 99,
+  "uniqueIncoming": 92,
+  "added": 3,
   "rssImageSignals": {
-    "items": 63,
-    "sourceUrlItems": 61,
+    "items": 56,
+    "sourceUrlItems": 54,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -196,9 +196,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 31,
+    "items": 43,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 31,
+    "publisherArticleUrlItems": 43,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -213,63 +213,47 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 2,
-    "found": 2,
-    "assigned": 2,
+    "attempted": 1,
+    "found": 1,
+    "assigned": 1,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
     "failed": 0,
     "results": [
       {
-        "id": "b163034ca145278d9390",
+        "id": "9ac91aa826b4fbed0763",
         "status": "assigned",
         "candidate": {
-          "url": "https://www.geo.tv/assets/uploads/updates/2023-03-20/477529_112029_updates.jpg",
+          "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
           "source": "og:image",
           "priority": 1
         },
         "candidates": [
           {
-            "url": "https://www.geo.tv/assets/uploads/updates/2023-03-20/477529_112029_updates.jpg",
+            "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
             "source": "og:image",
             "priority": 1
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://www.geo.tv/latest/477529-k-pop-group-nmixxs-haewon-discusses-former-member-for-the-first-time",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.geo.tv/latest/477529-k-pop-group-nmixxs-haewon-discusses-former-member-for-the-first-time",
-        "resolvedArticleHost": "www.geo.tv"
-      },
-      {
-        "id": "37430db34d600391f666",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://newsimg.koreatimes.co.kr/2026/10/19/d68d544f-6f9a-4d86-b23d-39b75dd674b2.jpg",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
+          },
           {
-            "url": "https://newsimg.koreatimes.co.kr/2026/10/19/d68d544f-6f9a-4d86-b23d-39b75dd674b2.jpg",
-            "source": "og:image",
-            "priority": 1
+            "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.8c4accbba768481e9da42739f10a8066_P1.jpg",
+            "source": "jsonld:image",
+            "priority": 5
           }
         ],
         "assigned": true,
-        "publisherArticleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20261019/nmixx-explores-unusual-muses-makes-wishes-with-strange-muse",
+        "publisherArticleUrl": "https://sports.khan.co.kr/article/202603051914007/",
         "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.koreatimes.co.kr/entertainment/k-pop/20261019/nmixx-explores-unusual-muses-makes-wishes-with-strange-muse",
-        "resolvedArticleHost": "www.koreatimes.co.kr"
+        "resolvedArticleUrl": "https://sports.khan.co.kr/article/202603051914007/",
+        "resolvedArticleHost": "sports.khan.co.kr"
       }
     ]
   },
   "deduplicationComparison": {
-    "before": 94,
-    "after": 87,
-    "collapsed": 7,
+    "before": 99,
+    "after": 91,
+    "collapsed": 8,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 855
+  "totalCandidates": 856
 }
