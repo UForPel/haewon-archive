@@ -1710,3 +1710,9 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - Do not assume this was transient, a block, or a valid Atom feed. Do not retry blindly, decode wrappers, change query parameters to evade controls, or store response bodies. MDN documents that HTTP Content-Type identifies the media type returned in the response: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Type
 - PR candidate adds a small diagnostic classifier (rss/atom/html/empty/unknown) and records only HTTP status, Content-Type and format classification in each Bing failure entry. The response body is never persisted. This makes the next occurrence diagnosable without access-control bypass or extra requests.
 - Added tests for all response classes and for retaining metadata without response body text. PR CI and next Production run pending.
+
+
+## 2026-11-26 — Persist feed failure diagnostics end-to-end (PR candidate)
+- Follow-up audit of Production #612 exposed a serialization gap: `collectFeeds()` returned Bing response metadata, but `main()` reduced failures to `{query,error}` before writing `news-collection-status.json`. Google RSS failures also retained only query/error. Thus the first telemetry patch was not visible in production data.
+- This branch fixes both feed paths: capture HTTP status and Content-Type before parsing; classify response format when a body was read; serialize only query, error, status, contentType and responseFormat to the status JSON. No response body is retained. HTTP 429 responses are not read or retried.
+- Tests assert both the collector result and the safe serializer output for Google HTTP 429 and Bing HTTP 200 HTML. PR CI and a new Production run are pending.
