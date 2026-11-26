@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T11:57:06.286Z",
+  "generatedAt": "2026-11-26T12:02:04.595Z",
   "discoveryRelevance": {
     "totalCandidates": 857,
     "articleCandidates": 670,
@@ -533,25 +533,25 @@
   },
   "collection": {
     "newsQueriesRequested": 6,
-    "newsQueriesSuccessful": 6,
+    "newsQueriesSuccessful": 3,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 5,
-    "bingNewsCandidates": 37,
-    "newsQuerySuccessRate": 100,
+    "bingNewsCandidates": 31,
+    "newsQuerySuccessRate": 50,
     "youtubeStatus": "success",
     "videosTotal": 20,
     "newsCandidatesTotal": 857,
-    "newsUniqueFetched": 61,
+    "newsUniqueFetched": 65,
     "newsAddedLastRun": 2,
-    "duplicateBeforeMergeLastRun": 7,
+    "duplicateBeforeMergeLastRun": 3,
     "duplicateGroupsCurrent": 857,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
       "before": 68,
-      "after": 60,
-      "collapsed": 8,
+      "after": 64,
+      "collapsed": 4,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -1231,8 +1231,8 @@
     {
       "source": "Google News RSS",
       "requested": 6,
-      "successful": 6,
-      "successRate": 100
+      "successful": 3,
+      "successRate": 50
     },
     {
       "source": "NMIXX YouTube Atom",
@@ -2135,7 +2135,7 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
+    "rateLimited": 10,
     "unreachable": 1,
     "thumbnailMissing": 505,
     "results": [
@@ -2172,8 +2172,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE15RHFobzdEazU1bUpUbXRFUjFDU3VZNk9NVFhKNXl4QjlDNzlrRkFscDJZYXNfTDJLYXJPcVlLQ0pXVmRBSm1qTlZxYjRmTzlESFNNYWIxdVYxQ0JmVk8wZUVTZE1INW5yVC1mT2xuU3dDdw?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2214,8 +2214,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBUWHV3TFl4Q1paWTF4YnpPMlNnLTFobTJOTFhCTjNyRUFnWk5mNk93N1pEUTFCUlI2WncxY0pTVGFtQzFQNVJHSWFZOUdISEEyOEVOTWRnREQzN21D?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2238,8 +2238,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBLTnIwX2RZRkdDZzRSSmhjRHZaUC1ab2NVcFNhSmhvYlhoRmxJX0tJNEFIdmRfV2NCZjlqcFBHSE9UWDgyZHhFdkhid0thaGFGTXJsVU1TYnY1OHZR?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2250,8 +2250,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE15TXNVN1Y5N1g5Yi1HLVZmV0FZc2JwYmhkbFNpYlpuWk9SMWJkTGVQa0hCbUlTdUJEOGdoSHJ4WGdESUgxcTNQNnBkM005NHU0cTB0MFQ4OEhrN1I0?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2280,8 +2280,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE05RDlFY3JYUEtwc1hLaXNLbEE5RVhYMzFUM2tWZ0NUb1ZpRngweTRwcTFYNFBWaWxyX1V2QXJtYi11TkNsMGQ4ZUZScFhwUDc4Y2xFSjJyTlZxRUY5?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2304,8 +2304,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBFMDFtT1Q5ZHZETDN3ZUJCQWFkSGVXZWp1NEtzOE0xbXFjb0R4eXBMRjM5Ulk3NTNyQ28xenBpeEsyT2NwMzE4OHUwRzJacHlyZHFZMTBwd18wZTFO?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2334,8 +2334,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9NLUswaEdhRU1HYWNWUnpqbnpWdHhXTGtyTTdmWFhTckxNSG03el9UMzVIZEpLSk0xcTk5bkEwMzJ6MjEyLWdYSg?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2346,8 +2346,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9SSVBickxWbFFCWjcwOTJoVkxwd2R0Y1R3dUsyNC1uMzN5LW5odTh2eXJmcXpOc3RNR3BrQ295TkViSnlrZkJUcVRnbmI1MXlhdXdtUUtGb2RRQnRs?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2370,8 +2370,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9HUzdsUDVkbnpwUVhUa0ZfbThaNFNtRmZLS2tsLWktTlAtajFTeWRGb0dUVUJKQWJ2TE9HQUsxYTdQTEhmTEFUZDhDb1RrR1U1Y2N2WGZBOUlvWlpM?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2382,8 +2382,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB6QlB2OUFQYjk5cm1wY253WnlZbjZodVZoaElqZk9IamZiNUw1TmM2QU9pM1lJekxZT3Mzamw2ZzA3OTlRV2Q4UFY3Z3ZkcUNvbndCYm0wMkdQSkFY?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       }
     ]
   },
@@ -4581,7 +4581,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T11:57:06.301Z",
+    "generatedAt": "2026-11-26T12:02:04.613Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -6614,108 +6614,108 @@
     "redirectPolicy": "standard-http-follow-only",
     "bypassAttempted": false,
     "sampled": 12,
-    "offset": 20,
+    "offset": 32,
     "checked": 12,
     "total": 76,
     "counts": {
-      "http-responded": 8,
+      "http-responded": 11,
       "blocked": 1,
       "paywall": 0,
-      "not-found": 3,
+      "not-found": 0,
       "uncertain": 0
     },
     "results": [
       {
-        "articleId": "9dca85b63514c793581e",
-        "url": "https://en.sportalkorea.com/news/articleView.html?idxno=48591",
-        "status": 404,
-        "state": "not-found",
-        "finalHost": "en.sportalkorea.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "5d6fe07de3f66983abd4",
-        "url": "https://en.sportalkorea.com/news/articleView.html?idxno=48308",
-        "status": 404,
-        "state": "not-found",
-        "finalHost": "en.sportalkorea.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "9ac3fa84f552e7bd2510",
-        "url": "https://en.koreadaily.com/nmixx-haewon-slimmer-visuals-surprising-new-look/",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "en.koreadaily.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "44a8773963a6cb3a4c68",
-        "url": "https://www.koreaboo.com/news/nmixx-haewon-talks-health-issues-amid-recent-weight-loss/",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.koreaboo.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "4c30e8eab8286f86c364",
-        "url": "https://en.sportalkorea.com/news/articleView.html?idxno=42092",
-        "status": 404,
-        "state": "not-found",
-        "finalHost": "en.sportalkorea.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "937b773eb419381da3d0",
-        "url": "https://www.msn.com/ko-kr/entertainment/%EC%9D%BC%EB%B0%98/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.msn.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "bfe53579db328d52b340",
-        "url": "https://www.koreaboo.com/news/nmixx-haewon-proportions-worry-weight-loss/",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.koreaboo.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "8483bee976c1fb0427a8",
-        "url": "https://sports.khan.co.kr/en/article/202609201357007",
+        "articleId": "509f9dc90f187035f117",
+        "url": "https://www.sportskeeda.com/us/k-pop/news-this-scary-fans-outraged-nmixx-s-haewon-allegedly-targeted-laser-pointer-birthday-live",
         "status": 403,
         "state": "blocked",
-        "finalHost": "sports.khan.co.kr",
+        "finalHost": "www.sportskeeda.com",
         "method": "HEAD"
       },
       {
-        "articleId": "06353d771cba5526f941",
-        "url": "https://www.koreaboo.com/news/nmixx-haewon-dieting-surgery-allegations/",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.koreaboo.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "f09df33b20baa8f03b54",
-        "url": "https://biz.chosun.com/en/en-entertainment/2026/07/10/UEECI6QMJBGTFBWEOEIJHBBRNQ/",
+        "articleId": "2ef058c52f217413e90c",
+        "url": "https://biz.chosun.com/en/en-entertainment/2026/01/20/DIV5LTYEF5H4NGBB4NMDGMC5KA/",
         "status": 200,
         "state": "http-responded",
         "finalHost": "biz.chosun.com",
         "method": "HEAD"
       },
       {
-        "articleId": "eb1509691290e61b7637",
-        "url": "https://www.soompi.com/article/1839633wpp/watch-nmixxs-haewon-and-bae-le-sserafims-chaewon-and-kazuha-come-together-in-amazing-saturday-preview",
+        "articleId": "fbcbd796f896e4e77e8a",
+        "url": "https://www.kapanlagi.com/korea/haewon-nmixx-akhirnya-ungkap-asal-usul-meme-oemochek-kaget-karena-jadi-viral-dan-tren-di-kalangan-idol-d0a1421e2b.html",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "www.soompi.com",
+        "finalHost": "www.kapanlagi.com",
         "method": "HEAD"
       },
       {
-        "articleId": "a093a5e94886fe4c0b7c",
-        "url": "https://biz.chosun.com/en/en-entertainment/2026/02/26/QWMLGGJWL5AS7LWUX5WDBNXYTI/",
+        "articleId": "01499265d4164c3f45b9",
+        "url": "https://www.mk.co.kr/en/photos/11444439",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.mk.co.kr",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "9c336218ce8f6660018a",
+        "url": "https://www.mk.co.kr/en/hot-issues/11438629",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.mk.co.kr",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "9ad6c5ab4ec97b9ab9e2",
+        "url": "https://www.mk.co.kr/en/entertain/11438157",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.mk.co.kr",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "8e4d1cb157cc747352ee",
+        "url": "https://www.chosun.com/english/kpop-culture-en/2025/10/10/TGPOAQOGVFAR7LUBGJTLMQ2Y4E/",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.chosun.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "aa1d73461e1a8ba8156f",
+        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008155695",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "sbsstar.net",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "ce4468d1f0e09b93135d",
+        "url": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "tw.news.yahoo.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "96579cf215e0e82b5ccf",
+        "url": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "biz.chosun.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "fb392e4ba8879b947e36",
+        "url": "https://biz.chosun.com/en/en-entertainment/2025/03/20/KLX7MY47U5A3RPES2JGB3YIW3Q/",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "biz.chosun.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "b73b0b6718cd750a66a5",
+        "url": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
         "status": 200,
         "state": "http-responded",
         "finalHost": "biz.chosun.com",
