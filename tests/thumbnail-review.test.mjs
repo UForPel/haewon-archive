@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createThumbnailReviewKey,summarizeThumbnailReviews,validateThumbnailReviewExport,mergeThumbnailReviewLabels,getThumbnailReviewCandidates,findNextUnreviewedThumbnail,groupRepeatedThumbnailAssignments,summarizeRepeatedThumbnailGroup,findNextUnreviewedInRepeatedGroup,persistThumbnailReviewLabels} from '../js/thumbnail-review.mjs';
+import {createThumbnailReviewKey,summarizeThumbnailReviews,validateThumbnailReviewExport,mergeThumbnailReviewLabels,getThumbnailReviewCandidates,findNextUnreviewedThumbnail,groupRepeatedThumbnailAssignments,summarizeRepeatedThumbnailGroup,findNextUnreviewedInRepeatedGroup,persistThumbnailReviewLabels,revealThumbnailReviewRow} from '../js/thumbnail-review.mjs';
 import {summarizeCollection} from '../scripts/quality-metrics.mjs';
 const article={id:'article-1',thumbnailUrl:'https://cdn.example/a.jpg',thumbnailCandidates:[{url:'https://cdn.example/a.jpg',source:'media:thumbnail'},{url:'https://cdn.example/b.jpg',source:'og:image'}]};
 test('review keys are article-specific even for a shared image URL',()=>{assert.notEqual(createThumbnailReviewKey('article-1','https://cdn.example/a.jpg'),createThumbnailReviewKey('article-2','https://cdn.example/a.jpg'));});
@@ -62,4 +62,14 @@ test('successful thumbnail label persistence commits the complete next label map
  assert.equal(result.saved,true);
  assert.deepEqual(result.labels,next);
  assert.deepEqual(JSON.parse(written),next);
+});
+
+
+test('review queue opens the collapsed image-candidate disclosure before focusing a row',()=>{
+ const disclosure={open:false};
+ const row={closest(selector){assert.equal(selector,'details.thumbnail-review-disclosure');return disclosure;}};
+ assert.equal(revealThumbnailReviewRow(row),true);
+ assert.equal(disclosure.open,true);
+ assert.equal(revealThumbnailReviewRow({closest(){return null;}}),false);
+ assert.equal(revealThumbnailReviewRow(null),false);
 });
