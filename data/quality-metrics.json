@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T05:28:47.026Z",
+  "generatedAt": "2026-11-26T07:56:19.963Z",
   "discoveryRelevance": {
     "totalCandidates": 856,
     "articleCandidates": 669,
@@ -536,12 +536,12 @@
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 38,
+    "bingNewsCandidates": 40,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
     "newsCandidatesTotal": 856,
-    "newsUniqueFetched": 87,
+    "newsUniqueFetched": 64,
     "newsAddedLastRun": 2,
     "duplicateBeforeMergeLastRun": 7,
     "duplicateGroupsCurrent": 856,
@@ -549,8 +549,8 @@
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 94,
-      "after": 86,
+      "before": 71,
+      "after": 63,
       "collapsed": 8,
       "method": "normalized exact headline first; canonical URL fallback"
     },
@@ -2135,7 +2135,7 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
+    "rateLimited": 1,
     "unreachable": 1,
     "thumbnailMissing": 504,
     "results": [
@@ -2352,8 +2352,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1uNlBuWlRHX0UtMmhLN1BrMkl0OW1UaFRna2U1bTl2amh0Ym9qRkpBa1FCRjY3TmZVMEtYcjd0YVlSVTFmcEhkc1JPMGJPTEo3RXBoaGctdXJXT0VN?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -4581,7 +4581,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T05:28:47.048Z",
+    "generatedAt": "2026-11-26T07:56:19.985Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -6614,111 +6614,111 @@
     "redirectPolicy": "standard-http-follow-only",
     "bypassAttempted": false,
     "sampled": 12,
-    "offset": 8,
+    "offset": 20,
     "checked": 12,
     "total": 76,
     "counts": {
-      "http-responded": 6,
-      "blocked": 4,
+      "http-responded": 8,
+      "blocked": 1,
       "paywall": 0,
-      "not-found": 2,
+      "not-found": 3,
       "uncertain": 0
     },
     "results": [
       {
-        "articleId": "200468c61716e4ff96b3",
-        "url": "https://sports.khan.co.kr/article/202510231129003",
+        "articleId": "9dca85b63514c793581e",
+        "url": "https://en.sportalkorea.com/news/articleView.html?idxno=48591",
+        "status": 404,
+        "state": "not-found",
+        "finalHost": "en.sportalkorea.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "5d6fe07de3f66983abd4",
+        "url": "https://en.sportalkorea.com/news/articleView.html?idxno=48308",
+        "status": 404,
+        "state": "not-found",
+        "finalHost": "en.sportalkorea.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "9ac3fa84f552e7bd2510",
+        "url": "https://en.koreadaily.com/nmixx-haewon-slimmer-visuals-surprising-new-look/",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "en.koreadaily.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "44a8773963a6cb3a4c68",
+        "url": "https://www.koreaboo.com/news/nmixx-haewon-talks-health-issues-amid-recent-weight-loss/",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.koreaboo.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "4c30e8eab8286f86c364",
+        "url": "https://en.sportalkorea.com/news/articleView.html?idxno=42092",
+        "status": 404,
+        "state": "not-found",
+        "finalHost": "en.sportalkorea.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "937b773eb419381da3d0",
+        "url": "https://www.msn.com/ko-kr/entertainment/%EC%9D%BC%EB%B0%98/haewon-of-nmixx-from-skin-and-bones-to-eye-hollows-regarding-the-changed-appearance-take-care-of-your-health/ar-AA2fSXii",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.msn.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "bfe53579db328d52b340",
+        "url": "https://www.koreaboo.com/news/nmixx-haewon-proportions-worry-weight-loss/",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.koreaboo.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "8483bee976c1fb0427a8",
+        "url": "https://sports.khan.co.kr/en/article/202609201357007",
         "status": 403,
         "state": "blocked",
         "finalHost": "sports.khan.co.kr",
         "method": "HEAD"
       },
       {
-        "articleId": "7c01e17c474ffecfd111",
-        "url": "https://sports.khan.co.kr/article/202510231108013",
-        "status": 403,
-        "state": "blocked",
-        "finalHost": "sports.khan.co.kr",
+        "articleId": "06353d771cba5526f941",
+        "url": "https://www.koreaboo.com/news/nmixx-haewon-dieting-surgery-allegations/",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.koreaboo.com",
         "method": "HEAD"
       },
       {
-        "articleId": "de974fb311b152bc6141",
-        "url": "https://biz.chosun.com/entertainment/enter_general/2025/06/10/NHN5PSUOLY45XJL6ONHFTU3R6Y/",
+        "articleId": "f09df33b20baa8f03b54",
+        "url": "https://biz.chosun.com/en/en-entertainment/2026/07/10/UEECI6QMJBGTFBWEOEIJHBBRNQ/",
         "status": 200,
         "state": "http-responded",
         "finalHost": "biz.chosun.com",
         "method": "HEAD"
       },
       {
-        "articleId": "d3cf5f84705cc6c0971b",
-        "url": "https://www.xportsnews.com/article/1970283",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.xportsnews.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "d103d78ba96bc58b409f",
-        "url": "https://mydaily.co.kr/page/view/2024092818150000890",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.mydaily.co.kr",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "3bbd95a333f1ae79efdc",
-        "url": "https://www.bntnews.co.kr/article/view/bnt202408300086",
-        "status": 403,
-        "state": "blocked",
-        "finalHost": "www.bntnews.co.kr",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "2bdcb63cc45e0a446bd8",
-        "url": "https://www.inven.co.kr/board/webzine/2097/2313909?category=_%EC%B9%B4",
-        "status": 404,
-        "state": "not-found",
-        "finalHost": "www.inven.co.kr",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "b37a5009be7372f08cbb",
-        "url": "https://biz.chosun.com/entertainment/enter_general/2024/07/18/XH24HR34ZQQDRAW7QI2RIQZMLM/",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "biz.chosun.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "2f3af607ca1ec5db5440",
-        "url": "https://www.hankooki.com/news/articleView.html?idxno=153478",
-        "status": 404,
-        "state": "not-found",
-        "finalHost": "www.hankooki.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "66c296a7f618669fd99b",
-        "url": "https://www.wikitree.co.kr/articles/839103",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.wikitree.co.kr",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "8a3321f6676aed137f5f",
-        "url": "https://technosports.co.in/nmixxs-haewon-withdraws-from-music/",
-        "status": 403,
-        "state": "blocked",
-        "finalHost": "technosports.co.in",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "f7fabbf8ab78fa7dce01",
-        "url": "https://www.soompi.com/article/1870023wpp/nmixxs-haewon-sits-out-music-bank-in-barcelona-due-to-health",
+        "articleId": "eb1509691290e61b7637",
+        "url": "https://www.soompi.com/article/1839633wpp/watch-nmixxs-haewon-and-bae-le-sserafims-chaewon-and-kazuha-come-together-in-amazing-saturday-preview",
         "status": 200,
         "state": "http-responded",
         "finalHost": "www.soompi.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "a093a5e94886fe4c0b7c",
+        "url": "https://biz.chosun.com/en/en-entertainment/2026/02/26/QWMLGGJWL5AS7LWUX5WDBNXYTI/",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "biz.chosun.com",
         "method": "HEAD"
       }
     ]
