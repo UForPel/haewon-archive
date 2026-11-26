@@ -723,3 +723,13 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Genuine PR CI #43 (`45751819231`) passed 192/192 tests, zero failures; archive validation passed with 818 discovery candidates, 20 official video records, 6 query metrics, 0 relevance-review labels and 172 schema-valid run logs.
 - Production run #601 (`45751857291`) was triggered by the code merge and is currently in progress. Collection/data commit/Pages deployment are not yet confirmed.
 - Mobile real-device QA remains unverified.
+
+
+## 2026-11-26 — Review queue Production #601 verified
+- PR #42 merged as `753b4323c4712c7a5580d336b30240894cca73c0`; PR CI #43 (`45751819231`) passed 192/192 tests, zero failures, and archive validation.
+- Production #601 (`45751857291`) completed successfully: 192/192 tests, YouTube/news collection, validation, data commit, Pages artifact upload and deployment. Generated data commit: `45af9e62b6b06da3abf99399897c5c6f0b186475` (parent: PR merge SHA).
+- Latest main after documentation checkpoint: `50786b74664a7cf680f008ac6b905cd3904823f7`; generated data commit is an ancestor. Open PRs: 0.
+- Production data: 855 discovery candidates (668 article / 187 video); 76 verified Haewon article candidates; 98 verified publisher article candidates; 351 thumbnail assignments, 504 missing, 79 unique URLs. The 273 legacy shared-image assignments are still preserved.
+- Run #601 news sample: 94 fetched / 88 unique / 39 added; Google and Bing each completed all 6 query requests. Pack 5 had 0/94 within 7 days and 7/94 within 8–30 days; 70/94 were older than 90 days. Do not infer relevance precision from title proxies or change pack selection from this single run.
+- Metadata enrichment attempted 2, assigned 2, missing 0, failed 0. Thumbnail response audit: 11/12 image responses, one Sportalkorea 404.
+- Review labels remain 0 in repository; the new pending-only/next-pending controls are deployed, but the real mobile visual/tap-target QA remains unverified. Public-site web preview could not be fetched by the research browser; Actions deployment success is confirmed.
