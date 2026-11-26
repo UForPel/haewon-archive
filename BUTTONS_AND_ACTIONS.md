@@ -455,3 +455,10 @@ Keep the conversation continuation button as the final response element of every
 - Latest generated metrics: 856 candidates (669 articles / 187 videos), 99 verified publisher articles, 76 verified Haewon articles, 58 verified Haewon articles with provenance thumbnails. Thumbnail audit: 352 assigned / 504 missing; 80 unique URLs; 273 legacy shared-image assignments preserved; 482 thumbnail-review eligible / 0 reviewed. Article human review labels remain 0. Google News wrapper-only metadata: 12 candidates, left untouched. No new RSS, no wrapper decoding, no access bypass, no search-pack change, no auto upload, no Playwright/Puppeteer.
 - Latest main at this checkpoint is the generated data commit `99f86221057a07ca827f538f5dc73143f82809bb`; open PR search returned 0 after #48 merge. This documentation follow-up is a Markdown-only PR and does not trigger another Production run.
 - Android Chrome QA remains **UNVERIFIED** because no user-reported device checklist was received. Pure Node tests, PR CI and Pages deployment do not constitute real-device QA.
+
+
+## 2026-11-26 — Thumbnail review storage-failure correction
+- PR #50 adds transactional localStorage persistence for thumbnail review candidate labels, repeated-image labels and imported JSON. Failed writes do not update the in-memory labels or progress metrics; the selector restores its last saved value.
+- PR CI #64 (`45794572903`) passed 205/205 tests and archive validation on code/test head `8ccd7af072eb3f6d3d3c60ebc4fb88e594cde0a3`. Documentation changes still require a final PR CI run before merge.
+- Production collection/data commit/Pages deployment for PR #50 are pending merge. Android Chrome QA remains unverified.
+- Preserve the required final ChatGPT control label **🔄 연구 기반 재귀개선 계속하기** and the complete continuation prompt already recorded above; never replace it with a short generic button or omit it.

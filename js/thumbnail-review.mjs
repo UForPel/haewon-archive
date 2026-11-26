@@ -60,3 +60,12 @@ export function summarizeThumbnailReviews(items=[],labels={}){
  const selectedDecided=selectedCounts.relevant+selectedUnsuitable;
  return {eligible:candidateKeys.size,reviewed:reviewed.length,reviewCoverage:candidateKeys.size?Math.round(reviewed.length/candidateKeys.size*100):0,relevant:counts.relevant,unsuitable,excluded:counts['rights-unclear']+counts.uncertain,precision:decided?Math.round(counts.relevant/decided*100):null,selectedEligible:selectedKeys.size,selectedReviewed:selectedReviewed.length,selectedPrecision:selectedDecided?Math.round(selectedCounts.relevant/selectedDecided*100):null,counts,selectedCounts};
 }
+
+export function persistThumbnailReviewLabels(storage, storageKey, currentLabels, nextLabels) {
+ try {
+  storage.setItem(storageKey, JSON.stringify(nextLabels));
+  return { saved: true, labels: nextLabels };
+ } catch (error) {
+  return { saved: false, labels: currentLabels, error: String(error?.name || 'storage-error') };
+ }
+}

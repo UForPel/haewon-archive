@@ -1531,3 +1531,43 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - Latest generated metrics: 856 candidates (669 articles / 187 videos), 99 verified publisher articles, 76 verified Haewon articles, 58 verified Haewon articles with provenance thumbnails. Thumbnail audit: 352 assigned / 504 missing; 80 unique URLs; 273 legacy shared-image assignments preserved; 482 thumbnail-review eligible / 0 reviewed. Article human review labels remain 0. Google News wrapper-only metadata: 12 candidates, left untouched. No new RSS, no wrapper decoding, no access bypass, no search-pack change, no auto upload, no Playwright/Puppeteer.
 - Latest main at this checkpoint is the generated data commit `99f86221057a07ca827f538f5dc73143f82809bb`; open PR search returned 0 after #48 merge. This documentation follow-up is a Markdown-only PR and does not trigger another Production run.
 - Android Chrome QA remains **UNVERIFIED** because no user-reported device checklist was received. Pure Node tests, PR CI and Pages deployment do not constitute real-device QA.
+
+
+## 2026-11-26 — Thumbnail review storage rollback (PR #50)
+
+### Fresh audit
+- Current main before work: `88c61699108ec3854c35d23813a4fd4558e73730`; open PRs: 0.
+- Latest Actions: PR CI #63 (`45793477042`) success; Production #607 (`45793067039`) success. Production #607 job completed tests/collection/validation/data commit/Pages artifact/deployment. Generated data commit `99f86221057a07ca827f538f5dc73143f82809bb`; Pages artifact `15103711890`, 597,338 bytes, SHA-256 `42f7bd9540b7ce086d2eac5baee3f7934dff2a5452c35b241ed4d9fdac80961c`.
+- Re-read the latest SESSION_LOG and PROJECT_STATUS and the six required operating documents before implementation.
+
+### Bottleneck and evidence
+- Article-review writes already use a transactional helper, but thumbnail-review UI directly mutated `reviewLabels` before calling `localStorage.setItem`.
+- The same unsafe ordering existed in individual thumbnail candidate labels, repeated-image group labels and JSON import. A thrown `QuotaExceededError` could leave the in-memory UI and progress counts showing a decision that was never persisted.
+- Platform evidence: MDN documents `Storage.setItem()` can throw `QuotaExceededError`; WHATWG Web Storage specifies the key/value update occurs only after the quota check succeeds.
+  - https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem
+  - https://html.spec.whatwg.org/multipage/webstorage.html
+
+### Implemented
+- Added `persistThumbnailReviewLabels(storage, key, current, next)` to `js/thumbnail-review.mjs`.
+- Updated `js/discovery-view.mjs` so individual candidate saves, repeated-image group saves and JSON imports all construct a new label map and pass it through the helper. The live map changes only after successful storage; on failure, selectors return to the last saved value and an accessible status message explains that prior labels remain.
+- Added behavior tests for simulated `QuotaExceededError`, successful persistence and source-level integration of all three UI paths.
+- PR #50: https://github.com/UForPel/haewon-archive/pull/50
+- Branch: `fix/thumbnail-review-storage-rollback-20261126`; final code/test head at first CI: `8ccd7af072eb3f6d3d3c60ebc4fb88e594cde0a3`.
+
+### Verification
+- PR CI #64, run `45794572903`, completed successfully: 205 tests, 205 passed, 0 failed.
+- `npm run validate` passed: 20 video records, 0 photo records, 856 discovery candidates, 0 human-reviewed article labels, 179 schema-valid run logs, 55 source summaries and 41 links checked.
+- CI validates Node behavior and integration source contracts; it does not prove Android Chrome quota behavior or real-device UX.
+
+### Scope and guardrails
+- No collection/source/search-pack changes, no new RSS, no image URL reassignment, no wrapper decoding or access bypass.
+- All 273 legacy shared-image assignments remain preserved. The 352 assigned / 504 missing thumbnail baseline is unchanged.
+- Review labels remain localStorage-only and manually exportable/importable; no server/backend upload was introduced.
+- PR #50 is still awaiting merge in this log checkpoint. Production collection, data commit and Pages deployment for this code change are pending.
+- Android Chrome QA remains unverified until the user reports the checklist.
+
+### Next
+1. Re-run/inspect PR CI after the six documentation updates.
+2. Merge PR #50 only if the latest head CI and archive validation pass.
+3. Verify the merge, Production collection, generated data commit and Pages deployment independently.
+4. Keep Android Chrome QA, article review labels (0) and thumbnail review (482 eligible / 0 reviewed) explicitly open.

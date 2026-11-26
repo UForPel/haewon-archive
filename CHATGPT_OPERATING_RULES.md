@@ -446,3 +446,11 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Latest generated metrics: 856 candidates (669 articles / 187 videos), 99 verified publisher articles, 76 verified Haewon articles, 58 verified Haewon articles with provenance thumbnails. Thumbnail audit: 352 assigned / 504 missing; 80 unique URLs; 273 legacy shared-image assignments preserved; 482 thumbnail-review eligible / 0 reviewed. Article human review labels remain 0. Google News wrapper-only metadata: 12 candidates, left untouched. No new RSS, no wrapper decoding, no access bypass, no search-pack change, no auto upload, no Playwright/Puppeteer.
 - Latest main at this checkpoint is the generated data commit `99f86221057a07ca827f538f5dc73143f82809bb`; open PR search returned 0 after #48 merge. This documentation follow-up is a Markdown-only PR and does not trigger another Production run.
 - Android Chrome QA remains **UNVERIFIED** because no user-reported device checklist was received. Pure Node tests, PR CI and Pages deployment do not constitute real-device QA.
+
+
+## 2026-11-26 — Transactional browser-review persistence rule
+- For any review workflow backed by localStorage, never mutate the committed in-memory label map before `Storage.setItem` succeeds. Build a separate next-state object, call a pure persistence helper, and publish the new state only on success.
+- On failure (including `QuotaExceededError`), preserve the prior committed map, restore the affected control to its latest saved value, and clearly report the failure without claiming the label was saved.
+- Apply the same invariant to direct edits, grouped/repeated-item edits and JSON import/merge. Test both a throwing storage adapter and a successful adapter; add an integration assertion that every UI write path uses the shared helper.
+- Node tests and CI are not Android Chrome QA. Device behavior remains unverified until the user reports the requested checklist.
+- Evidence: PR #50 CI #64 passed 205/205 tests and archive validation on code/test head `8ccd7af072eb3f6d3d3c60ebc4fb88e594cde0a3`; latest documentation head must pass its own PR CI before merge.

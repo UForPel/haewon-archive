@@ -342,3 +342,10 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Latest generated metrics: 856 candidates (669 articles / 187 videos), 99 verified publisher articles, 76 verified Haewon articles, 58 verified Haewon articles with provenance thumbnails. Thumbnail audit: 352 assigned / 504 missing; 80 unique URLs; 273 legacy shared-image assignments preserved; 482 thumbnail-review eligible / 0 reviewed. Article human review labels remain 0. Google News wrapper-only metadata: 12 candidates, left untouched. No new RSS, no wrapper decoding, no access bypass, no search-pack change, no auto upload, no Playwright/Puppeteer.
 - Latest main at this checkpoint is the generated data commit `99f86221057a07ca827f538f5dc73143f82809bb`; open PR search returned 0 after #48 merge. This documentation follow-up is a Markdown-only PR and does not trigger another Production run.
 - Android Chrome QA remains **UNVERIFIED** because no user-reported device checklist was received. Pure Node tests, PR CI and Pages deployment do not constitute real-device QA.
+
+
+## 2026-11-26 — Review-storage change does not alter collection policy
+- PR #50 is a browser-local review reliability fix only. It does not change enabled sources, RSS permissions, search terms, collection cadence, metadata fetch policy, URL provenance rules or retry/backoff.
+- Keep all 273 legacy shared-image assignments intact. Do not replace/delete them automatically.
+- Continue to reject wrapper-token decoding, inferred article URLs from site-level RSS sourceUrl, access-control bypass and unapproved new RSS feeds (including SBS/Yonhap).
+- Thumbnail review labels remain localStorage-only with explicit user-initiated JSON export/import; do not upload them automatically or transmit them to a service.

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createThumbnailReviewKey,summarizeThumbnailReviews,validateThumbnailReviewExport,mergeThumbnailReviewLabels,getThumbnailReviewCandidates,findNextUnreviewedThumbnail,groupRepeatedThumbnailAssignments,summarizeRepeatedThumbnailGroup,findNextUnreviewedInRepeatedGroup} from '../js/thumbnail-review.mjs';
+import {createThumbnailReviewKey,summarizeThumbnailReviews,validateThumbnailReviewExport,mergeThumbnailReviewLabels,getThumbnailReviewCandidates,findNextUnreviewedThumbnail,groupRepeatedThumbnailAssignments,summarizeRepeatedThumbnailGroup,findNextUnreviewedInRepeatedGroup,persistThumbnailReviewLabels} from '../js/thumbnail-review.mjs';
 import {summarizeCollection} from '../scripts/quality-metrics.mjs';
 const article={id:'article-1',thumbnailUrl:'https://cdn.example/a.jpg',thumbnailCandidates:[{url:'https://cdn.example/a.jpg',source:'media:thumbnail'},{url:'https://cdn.example/b.jpg',source:'og:image'}]};
 test('review keys are article-specific even for a shared image URL',()=>{assert.notEqual(createThumbnailReviewKey('article-1','https://cdn.example/a.jpg'),createThumbnailReviewKey('article-2','https://cdn.example/a.jpg'));});
@@ -39,4 +39,27 @@ test('repeated thumbnail groups preserve article records and never pool article 
 test('repeated thumbnail grouping accepts only HTTPS and normalizes URL fragments',()=>{
  const groups=groupRepeatedThumbnailAssignments([{id:'a',thumbnailUrl:'https://img.test/a.jpg#one'},{id:'b',thumbnailUrl:'https://img.test/a.jpg#two'},{id:'c',thumbnailUrl:'http://img.test/a.jpg'}]);
  assert.equal(groups.length,1);assert.equal(groups[0].count,2);assert.equal(groups[0].url,'https://img.test/a.jpg');
+});
+
+
+test('failed thumbnail label persistence preserves the last committed labels',()=>{
+ const previous={'article-1|https://img.test/a.jpg':{articleId:'article-1',imageUrl:'https://img.test/a.jpg',label:'relevant'}};
+ const next={...previous,'article-2|https://img.test/b.jpg':{articleId:'article-2',imageUrl:'https://img.test/b.jpg',label:'unrelated'}};
+ const storage={setItem(){const error=new Error('quota');error.name='QuotaExceededError';throw error;}};
+ const result=persistThumbnailReviewLabels(storage,'reviews',previous,next);
+ assert.equal(result.saved,false);
+ assert.equal(result.error,'QuotaExceededError');
+ assert.deepEqual(result.labels,previous);
+ assert.deepEqual(previous,{'article-1|https://img.test/a.jpg':{articleId:'article-1',imageUrl:'https://img.test/a.jpg',label:'relevant'}});
+});
+
+test('successful thumbnail label persistence commits the complete next label map',()=>{
+ let written='';
+ const storage={setItem(key,value){assert.equal(key,'reviews');written=value;}};
+ const previous={};
+ const next={'article-1|https://img.test/a.jpg':{articleId:'article-1',imageUrl:'https://img.test/a.jpg',label:'relevant'}};
+ const result=persistThumbnailReviewLabels(storage,'reviews',previous,next);
+ assert.equal(result.saved,true);
+ assert.deepEqual(result.labels,next);
+ assert.deepEqual(JSON.parse(written),next);
 });

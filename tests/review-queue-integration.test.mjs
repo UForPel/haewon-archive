@@ -41,3 +41,12 @@ test('news-to-video sync accepts explicit YouTube metadata only and never follow
  assert.doesNotMatch(source,/redirect:\s*['"]follow['"]/);
  assert.doesNotMatch(source,/fetchImpl/);
 });
+
+
+test('thumbnail review writes are transactional for candidate, repeated-group and import paths',async()=>{
+ const source=await readFile(new URL('js/discovery-view.mjs',root),'utf8');
+ assert.match(source,/persistThumbnailReviewLabels\(localStorage,REVIEW_KEY,reviewLabels,nextLabels\)/);
+ assert.equal((source.match(/persistReviewLabels\(nextLabels\)/g)||[]).length,3,'candidate, repeated-group and JSON import all use the persistence gate');
+ assert.doesNotMatch(source,/localStorage\.setItem\(REVIEW_KEY/,'UI must not mutate storage outside the transactional helper');
+ assert.match(source,/select\.value=reviewLabels\[key\]\?\.label\|\|''/,'failed writes restore the latest saved label');
+});

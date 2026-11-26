@@ -651,3 +651,15 @@
 - Latest generated metrics: 856 candidates (669 articles / 187 videos), 99 verified publisher articles, 76 verified Haewon articles, 58 verified Haewon articles with provenance thumbnails. Thumbnail audit: 352 assigned / 504 missing; 80 unique URLs; 273 legacy shared-image assignments preserved; 482 thumbnail-review eligible / 0 reviewed. Article human review labels remain 0. Google News wrapper-only metadata: 12 candidates, left untouched. No new RSS, no wrapper decoding, no access bypass, no search-pack change, no auto upload, no Playwright/Puppeteer.
 - Latest main at this checkpoint is the generated data commit `99f86221057a07ca827f538f5dc73143f82809bb`; open PR search returned 0 after #48 merge. This documentation follow-up is a Markdown-only PR and does not trigger another Production run.
 - Android Chrome QA remains **UNVERIFIED** because no user-reported device checklist was received. Pure Node tests, PR CI and Pages deployment do not constitute real-device QA.
+
+
+## 2026-11-26 — Thumbnail review persistence reliability
+- [x] Audit thumbnail review save paths against the already transactional article-review storage helper.
+- [x] Make candidate labels, repeated-image labels and JSON import commit in-memory state only after `localStorage.setItem` succeeds.
+- [x] Restore the most recently saved selector value and retain prior labels after a storage exception.
+- [x] Add behavior tests for simulated quota failure and successful persistence; add UI integration guards.
+- [x] PR CI #64: 205/205 tests passed; archive validation passed (856 discovery candidates).
+- [ ] Merge PR #50 after its latest head CI (including documentation changes) passes.
+- [ ] Verify Production collection, generated data commit and Pages deployment after merge; these are not yet run for PR #50 at this checkpoint.
+- [ ] Obtain user-reported Android Chrome QA; automated tests are not device QA.
+- [ ] Begin actual human review of the 482 eligible thumbnail candidates (0 reviewed) when the user chooses to do so. Preserve the 273 legacy shared-image assignments.
