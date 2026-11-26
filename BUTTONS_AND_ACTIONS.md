@@ -298,5 +298,13 @@ The assistant MUST render a real clickable button at the very bottom of every co
 ## 2026-11-26 — Freshness diagnostic checkpoint
 - Current main SHA at cycle start: `68b467748d524d437d75ed5de33adbd4ced5e6c4`; latest Production #599 and PR verification #41 succeeded.
 - Latest six-query sample contained 76 candidates (74 unique, 4 added); per-query median publication lag ranged from 808.5 to 38,498.2 hours. This supports adding explicit age buckets, not deleting old records.
-- This cycle adds 7-/30-day rates and 7/30/90-day age buckets with unknown/future categories. The implementation must pass PR CI before being called verified.
+- This cycle adds 7-/30-day rates and 7/30/90-day age buckets with unknown/future categories. PR #41 merged; genuine PR CI #42 passed 190/190 tests and archive validation; Production #600 completed collection, data commit and Pages deployment successfully.
 - Mandatory next action remains the full **🔄 재귀개선 계속하기** prompt above; always render it as a real conversation button at the bottom of the response.
+
+
+## 2026-11-26 — Freshness implementation outcome
+- PR #41 merged as `fa4c91474e6edee71c8b3416e569bf5b3cef98a4`; Production data commit `4643892a7d1a293adaafe8d7c926011b0027fd5e`.
+- Production #600: 69 incoming / 62 unique / 23 added; 0/69 within 7 days, 8/69 within 30 days, 46/69 older than 90 days.
+- Thumbnail enrichment: 9 attempted, 7 assigned, 2 missing. The 273 legacy group is unchanged.
+- Latest Pages deployment succeeded. Mobile visual QA remains unverified.
+- Always finish the assistant response with the full-prompt **🔄 재귀개선 계속하기** conversation button.
