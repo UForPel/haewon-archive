@@ -1,0 +1,53 @@
+name: Cloudflare dispatch dry-run
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Only dry-run is supported"
+        required: true
+        type: choice
+        options:
+          - dry-run
+      scheduled_at:
+        description: "UTC schedule timestamp supplied by the Worker"
+        required: true
+        type: string
+      cron:
+        description: "Cloudflare cron expression"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-dispatch-dry-run-${{ inputs.scheduled_at }}
+  cancel-in-progress: false
+
+jobs:
+  dry-run:
+    if: inputs.mode == 'dry-run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Validate dispatch metadata
+        env:
+          MODE: ${{ inputs.mode }}
+          SCHEDULED_AT: ${{ inputs.scheduled_at }}
+          CRON: ${{ inputs.cron }}
+        run: |
+          node --input-type=module <<'NODE'
+          const scheduledAt = new Date(process.env.SCHEDULED_AT);
+          if (process.env.MODE !== 'dry-run') throw new Error('Only dry-run is allowed.');
+          if (!Number.isFinite(scheduledAt.getTime())) throw new Error('Invalid scheduled_at input.');
+          if (!process.env.CRON || process.env.CRON.length > 80) throw new Error('Invalid cron metadata.');
+          console.log(JSON.stringify({
+            status: 'dry-run-only',
+            scheduledAt: scheduledAt.toISOString(),
+            cron: process.env.CRON,
+            writes: false,
+            collection: false,
+            deployment: false
+          }));
+          NODE

@@ -6,6 +6,10 @@ on:
     paths-ignore:
       - '**/*.md'
       - '*.md'
+      - 'tests/**'
+      - 'cloudflare/**'
+      - '.github/workflows/cloudflare-dispatch-dry-run.yml'
+      - '.github/workflows/pull-request-verification.yml'
   schedule:
     - cron: "17 23 * * *"
     - cron: "17 11 * * *"
