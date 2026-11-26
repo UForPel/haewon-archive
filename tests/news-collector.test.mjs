@@ -1,6 +1,7 @@
 import test from 'node:test';
+import { isExplicitPublisherArticleUrl } from '../js/discovery-kind.mjs';
 import assert from 'node:assert/strict';
-import {parseRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds} from '../scripts/collect-news.mjs';
+import {parseRss,parseBingNewsRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,shouldRetryThumbnailFetch,enrichThumbnails} from '../scripts/collect-news.mjs';
 const fixture='<rss><channel><item><title>오해원 인터뷰</title><link>https://news.example/a</link><pubDate>Thu, 20 Nov 2026 02:00:00 GMT</pubDate><description>Haewon interview</description><source>News</source><media:thumbnail url="https://img.example/thumb.jpg" /></item></channel></rss>';
 test('RSS에서 제목, 링크, 날짜, 검색 출처 메타데이터를 추출한다',()=>{const [item]=parseRss(fixture,'오해원', '2026-11-20T00:00:00Z');assert.equal(item.title,'오해원 인터뷰');assert.equal(item.url,'https://news.example/a');assert.equal(item.sourceName,'News');assert.equal(item.status,'candidate');assert.equal(item.thumbnailUrl,'https://img.example/thumb.jpg');});
 test('중복 URL 후보는 하나로 합친다',()=>{const a=parseRss(fixture,'오해원')[0];assert.equal(mergeCandidates([a],[a]).length,1);});
@@ -59,4 +60,58 @@ test('RSS response diagnostics count image-bearing structures without storing ra
  const result=summarizeRssImageSignals(xml);
  assert.equal(result.items,2);assert.equal(result.mediaThumbnailTags,1);assert.equal(result.enclosureTags,1);
  assert.equal(result.descriptionImageTags,1);assert.equal(result.contentEncodedImageTags,1);assert.equal(result.itemsWithImageSignals,2);
+});
+
+
+test('HTTP 405 metadata failures are classified distinctly and backed off for seven days',async()=>{
+ const fetchedAt='2026-11-25T00:00:00.000Z',day=86400000;
+ const meta={status:'failed',errorCode:'method-not-allowed',fetchedAt};
+ assert.equal(shouldRetryThumbnailFetch(meta,Date.parse(fetchedAt)+day),false);
+ assert.equal(shouldRetryThumbnailFetch(meta,Date.parse(fetchedAt)+7*day),true);
+});
+
+test('HTTP 405 metadata responses preserve the article and never trigger a method fallback',async()=>{
+ const methods=[];
+ const item={id:'http-405',title:'Haewon article',url:'https://publisher.example/article',publisherArticleUrl:'https://publisher.example/article',thumbnailUrl:''};
+ const result=await enrichThumbnails([item],{
+  fetchImpl:async(_url,options)=>{methods.push(options.method);return new Response('',{status:405,headers:{Allow:'HEAD'}});},
+  now:'2026-11-25T00:00:00.000Z',offset:0
+ });
+ assert.deepEqual(methods,['GET']);
+ assert.equal(result.attempted,1);
+ assert.equal(result.failed,1);
+ assert.equal(result.items.length,1);
+ assert.equal(result.items[0].url,item.url);
+ assert.equal(result.items[0].thumbnailMetaFetch.statusCode,405);
+ assert.equal(result.items[0].thumbnailMetaFetch.errorCode,'method-not-allowed');
+ assert.equal(shouldRetryThumbnailFetch(result.items[0].thumbnailMetaFetch,Date.parse('2026-11-26T00:00:00.000Z')),false);
+});
+
+
+test('legacy HTTP 405 records previously mislabeled network-error also receive seven-day backoff',()=>{
+ const fetchedAt='2026-11-25T00:00:00.000Z',day=86400000;
+ const legacyMeta={status:'failed',statusCode:405,errorCode:'network-error',fetchedAt};
+ assert.equal(shouldRetryThumbnailFetch(legacyMeta,Date.parse(fetchedAt)+day),false);
+ assert.equal(shouldRetryThumbnailFetch(legacyMeta,Date.parse(fetchedAt)+6*day),false);
+ assert.equal(shouldRetryThumbnailFetch(legacyMeta,Date.parse(fetchedAt)+7*day),true);
+});
+
+
+test('Bing RSS social destinations remain candidates but are not publisher articles or enrichment targets',async()=>{
+ const postUrl='https://x.com/nmixxiee/status/2112842130163114298';
+ const discoveryUrl='https://www.bing.com/news/apiclick.aspx?url='+encodeURIComponent(postUrl);
+ const xml='<rss><channel><item><title>NMIXX Haewon public social post candidate</title><link>'+discoveryUrl+'</link><description>Public social post</description></item></channel></rss>';
+ const [item]=parseBingNewsRss(xml,'NMIXX Haewon','2026-11-26T00:00:00.000Z');
+ assert.equal(item.url,postUrl);
+ assert.equal(item.publisherArticleUrl,'');
+ assert.equal(item.publisherHost,'');
+ assert.equal(item.candidateSources[0].host,'x.com');
+ const [merged]=mergeCandidates([{...item,publisherArticleUrl:postUrl,publisherHost:'x.com'}],[item]);
+ assert.equal(merged.url,postUrl);
+ assert.equal(merged.publisherArticleUrl,'');
+ let fetchCount=0;
+ const enriched=await enrichThumbnails([item],{fetchImpl:async()=>{fetchCount++;return new Response('<meta property="og:image" content="https://pbs.twimg.com/example.jpg">');}});
+ assert.equal(enriched.attempted,0);
+ assert.equal(fetchCount,0);
+ assert.equal(enriched.items[0].url,postUrl);
 });
