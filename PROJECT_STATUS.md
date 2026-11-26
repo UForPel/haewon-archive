@@ -686,3 +686,13 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - No new publisher RSS source. SBS/Yonhap direct feeds remain excluded pending explicit applicable permission.
 - Mobile/browser visual QA remains unverified.
 - **Required response invariant:** every completed cycle must end with the clickable “🔄 재귀개선 계속하기” action defined in BUTTONS_AND_ACTIONS.md. A manually typed user continuation does not waive this requirement.
+
+
+## 2026-11-26 — Live repository audit and publication-freshness improvement
+- Verified current main SHA: `68b467748d524d437d75ed5de33adbd4ced5e6c4`; no open PRs at audit time.
+- Latest Production run #599 (`45732608330`) succeeded through tests, collection, data validation/commit and GitHub Pages deployment. Latest PR verification run #41 (`45742755947`) succeeded on the continuation-button documentation branch.
+- Current production data at collection time: 797 discovery candidates; latest news pass fetched 76 candidates and added 4. Google RSS: 55 items, 0 explicit publisher article URLs and 0 image signals. Bing RSS: 21 items, 21 explicit publisher URLs and 0 image signals. Existing 273-record shared-thumbnail group remains preserved.
+- Per-query publication-lag medians ranged from 808.5 to 38,498.2 hours in the current sample. This demonstrates a material freshness-measurement gap; title keyword match is only a proxy and must not be described as relevance precision.
+- Implemented on a review branch: mutually exclusive publication-age buckets (within 7 days, 8–30 days, 31–90 days, over 90 days, unknown, future) and 7-/30-day candidate rates per query. This is diagnostic only: it does not delete or filter historical candidates.
+- Code/test verification and merge/deployment remain pending until PR CI and data validation finish. Mobile visual QA remains separate and unverified.
+- Automation remains GitHub Actions twice daily. Cloudflare dispatch is dry-run-only; no external scheduler is active. No paid service, new publisher RSS source, external contact or secret transfer was used.

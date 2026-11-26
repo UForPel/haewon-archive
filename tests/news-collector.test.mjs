@@ -155,3 +155,20 @@ test('per-query quality metrics measure unique URLs, duplicate titles, relevance
  assert.equal(report[1].crossQueryDuplicateUrls,1);
  assert.equal(report[1].unknownDates,1);
 });
+
+
+test('per-query publication freshness separates recent, stale, unknown and future dates',()=>{
+ const now='2026-11-26T00:00:00.000Z';
+ const rows=[
+  {query:'freshness',url:'https://news.test/7d',publishedAt:'2026-11-20T00:00:00.000Z'},
+  {query:'freshness',url:'https://news.test/30d',publishedAt:'2026-11-10T00:00:00.000Z'},
+  {query:'freshness',url:'https://news.test/90d',publishedAt:'2026-09-10T00:00:00.000Z'},
+  {query:'freshness',url:'https://news.test/old',publishedAt:'2026-01-01T00:00:00.000Z'},
+  {query:'freshness',url:'https://news.test/unknown',publishedAt:'not-a-date'},
+  {query:'freshness',url:'https://news.test/future',publishedAt:'2026-11-27T00:00:00.000Z'}
+ ];
+ const [report]=summarizeQueryPerformance(rows,['freshness'],now);
+ assert.deepEqual(report.publicationFreshness,{within7Days:1,within30Days:1,within90Days:1,olderThan90Days:1,unknown:1,future:1,within7DaysRate:17,within30DaysRate:33});
+ assert.equal(report.unknownDates,1);
+ assert.equal(report.futureDated,1);
+});

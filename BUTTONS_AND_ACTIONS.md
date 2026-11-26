@@ -293,3 +293,10 @@ The assistant MUST render a real clickable button at the very bottom of every co
 - Do not place explanatory text, links or another control after the button.
 - If work is interrupted before a full cycle completes, still preserve the next-step prompt in the response when useful; when the cycle is complete, the button is mandatory.
 - Keep this file updated whenever the prompt changes, and synchronize CHATGPT_OPERATING_RULES.md.
+
+
+## 2026-11-26 — Freshness diagnostic checkpoint
+- Current main SHA at cycle start: `68b467748d524d437d75ed5de33adbd4ced5e6c4`; latest Production #599 and PR verification #41 succeeded.
+- Latest six-query sample contained 76 candidates (74 unique, 4 added); per-query median publication lag ranged from 808.5 to 38,498.2 hours. This supports adding explicit age buckets, not deleting old records.
+- This cycle adds 7-/30-day rates and 7/30/90-day age buckets with unknown/future categories. The implementation must pass PR CI before being called verified.
+- Mandatory next action remains the full **🔄 재귀개선 계속하기** prompt above; always render it as a real conversation button at the bottom of the response.
