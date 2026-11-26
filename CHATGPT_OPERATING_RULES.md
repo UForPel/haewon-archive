@@ -355,3 +355,11 @@ For each substantial update include: changed paths; planned vs implemented items
 - Manual JSON import validates schema and eligible article IDs, merges rather than overwrites existing labels, and reports imported count. Export reports success/failure. No automatic transfer.
 - Node tests assert CSS/UI contracts, but do not count as browser viewport or real-device QA. A real Android/mobile pass remains mandatory before declaring usability verified.
 - PR #44 CI #48 passed 195/195 tests and archive validation. Merge and post-merge Production/Pages verification pending at this checkpoint.
+
+
+## 2026-11-26 — Mobile review cycle final verification
+- PR #44 merged after CI #51 passed 195/195 tests and archive validation; Production #603 completed tests, collection, data commit and Pages deployment.
+- Data commit `7753a02be1ad512a44348b67e483ee75038c6b7a`; final main at this checkpoint `7753a02be1ad512a44348b67e483ee75038c6b7a`.
+- UI source and CSS contracts are automated-tested, but no live Android/mobile visual, tap, keyboard, scroll or import/export test was performed. Report this as outstanding.
+- Review labels remain localStorage-only/manual JSON import-export; no automatic transfer. Committed human relevance labels remain 0.
+- Preserve 273 legacy shared-thumbnail assignments and current publisher source permission boundaries.
