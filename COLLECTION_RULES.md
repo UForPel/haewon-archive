@@ -356,3 +356,9 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - PR #50 changed only browser-local review persistence. It did not change source permissions, RSS list, query pack, collection cadence, metadata-fetch policy, retry/backoff, or article URL rules.
 - Preserve all 273 legacy shared-image assignments. No bulk replacement/deletion, Google News wrapper decoding, access-control bypass, or new RSS source (including SBS/Yonhap) was introduced.
 - Human review labels remain browser-local with manual JSON transfer only. No automatic upload or external service transmission.
+
+
+## 2026-11-26 — PR #52 is UI-only
+- Thumbnail review queue visibility change does not alter sources, RSS permissions, collection schedule, query pack, metadata fetch, retries or URL provenance.
+- Production #608 baseline: Google RSS 71, Bing RSS 40; 2 news additions; no thumbnail enrichment attempt.
+- Preserve all 273 legacy shared-image assignments. No new RSS (including SBS/Yonhap), wrapper decoding, access bypass, auto-labeling or automatic review upload.

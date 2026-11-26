@@ -50,3 +50,13 @@ test('thumbnail review writes are transactional for candidate, repeated-group an
  assert.doesNotMatch(source,/localStorage\.setItem\(REVIEW_KEY/,'UI must not mutate storage outside the transactional helper');
  assert.match(source,/select\.value=reviewLabels\[key\]\?\.label\|\|''/,'failed writes restore the latest saved label');
 });
+
+
+test('next-thumbnail queue reveals the collapsed candidate details before scrolling and focusing',()=>{
+ const helperImport= view.match(/import \{[^}]*revealThumbnailReviewRow[^}]*\} from '\.\/thumbnail-review\.mjs';/);
+ assert.ok(helperImport,'review view imports the disclosure reveal helper');
+ const reveal=view.indexOf('revealThumbnailReviewRow(row)');
+ const scroll=view.indexOf("row.scrollIntoView({behavior:'smooth',block:'center'})",reveal);
+ const focus=view.indexOf("row.querySelector('select')?.focus({preventScroll:true})",scroll);
+ assert.ok(reveal>=0&&scroll>reveal&&focus>scroll,'open details before scroll and focus');
+});

@@ -880,3 +880,13 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Production #608: 15 YouTube candidates, 0 accepted, 15 duplicates; Google RSS 71 and Bing RSS 40 items; all 6 queries succeeded for each provider; news fetched 71 / 64 unique incoming / 2 added. Thumbnail enrichment 0 attempted / 0 assigned. No collection coverage or thumbnail gain is claimed from this run.
 - The six required continuity documents were updated in PR #50 before merge. This follow-up entry records final Production outcome.
 - Android Chrome QA remains **UNVERIFIED**. CI and Pages deployment are not real-device testing.
+
+
+## 2026-11-26 — Thumbnail next-review queue disclosure fix (PR #52)
+- Fresh audit baseline main: `50644f26ee629c240d9e41c1fd119f7df4788c81`; open PRs 0 before this change. Latest PR CI #69 and Production #608 succeeded; Production data commit `d3d44f6252c7cdc8b01266d4779a54d262a8c029`, Pages artifact `15104173207` deployed successfully.
+- Current metrics remain 856 candidates, 669 article / 187 video; 352 assigned / 504 missing thumbnails; 80 unique URLs; 273 legacy shared-image assignments preserved; 482 thumbnail-review eligible / 0 reviewed; 76 verified Haewon articles / 0 human article review labels.
+- Code finding: the “다음 미검수 후보” queue located the row and attempted scroll/focus, but each candidate's controls are inside a collapsed `details.thumbnail-review-disclosure`. The queue did not set the disclosure's `open` property, so the target controls could remain hidden when focus was attempted.
+- PR #52 adds `revealThumbnailReviewRow`, opens the matching disclosure, then defers scroll/focus to the next animation frame. Unit tests cover opening and missing-row cases; integration test asserts open → scroll → focus order.
+- Official basis: MDN documents that closed `details` content is hidden and setting `HTMLDetailsElement.open=true` reveals it: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details and https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement/open
+- PR #52 CI and merge are pending at this checkpoint. No Production collection, data commit or Pages deployment has run for this change.
+- No collection sources, RSS, review labels, thumbnails, legacy assignments, or storage paths changed. Android Chrome QA remains UNVERIFIED.

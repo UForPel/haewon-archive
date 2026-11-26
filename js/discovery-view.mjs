@@ -1,5 +1,5 @@
 import { classifyDiscoveryItem, classifyDiscoveryCategories, groupDiscoveryDuplicates, assessDiscoveryQuality, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText, filterUnresolvedVideoCandidates } from './discovery-kind.mjs';
-import { createThumbnailReviewKey, summarizeThumbnailReviews, validateThumbnailReviewExport, mergeThumbnailReviewLabels, getThumbnailReviewCandidates, findNextUnreviewedThumbnail, groupRepeatedThumbnailAssignments, summarizeRepeatedThumbnailGroup, findNextUnreviewedInRepeatedGroup, persistThumbnailReviewLabels } from './thumbnail-review.mjs';
+import { createThumbnailReviewKey, summarizeThumbnailReviews, validateThumbnailReviewExport, mergeThumbnailReviewLabels, getThumbnailReviewCandidates, findNextUnreviewedThumbnail, groupRepeatedThumbnailAssignments, summarizeRepeatedThumbnailGroup, findNextUnreviewedInRepeatedGroup, persistThumbnailReviewLabels, revealThumbnailReviewRow } from './thumbnail-review.mjs';
 
 function getDiscoveryTimestamp(item) {
  for (const value of [item?.publishedAt, item?.discoveredAt]) {
@@ -220,9 +220,12 @@ if(list&&count){
   requestAnimationFrame(()=>{
    const row=[...list.querySelectorAll('.thumbnail-review-row')].find(element=>element.dataset.reviewKey===next.reviewKey);
    if(!row){reviewQueueStatus.textContent='후보 위치를 찾지 못했습니다. 목록을 새로고침해 주세요.';return;}
-   row.scrollIntoView({behavior:'smooth',block:'center'});
-   row.querySelector('select')?.focus({preventScroll:true});
-   reviewQueueStatus.textContent='미검수 후보 '+(next.itemIndex+1)+'번째 항목으로 이동했습니다. 라벨을 선택하면 자동 저장됩니다.';
+   if(!revealThumbnailReviewRow(row)){reviewQueueStatus.textContent='검수 영역을 열지 못했습니다. 해당 기사의 이미지 후보를 직접 펼쳐 주세요.';return;}
+   requestAnimationFrame(()=>{
+    row.scrollIntoView({behavior:'smooth',block:'center'});
+    row.querySelector('select')?.focus({preventScroll:true});
+    reviewQueueStatus.textContent='미검수 후보 '+(next.itemIndex+1)+'번째 항목으로 이동했습니다. 라벨을 선택하면 자동 저장됩니다.';
+   });
   });
  });
  renderCategories();

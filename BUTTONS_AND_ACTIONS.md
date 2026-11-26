@@ -469,3 +469,10 @@ Keep the conversation continuation button as the final response element of every
 - Production #608 succeeded; generated data commit `d3d44f6252c7cdc8b01266d4779a54d262a8c029`; Pages artifact `15104173207` (602,298 bytes; SHA-256 `e441ecf28b60a6d85ae6a86649f4083d9140f042e2f85cbd6611142b713d6e05`); deploy log reported success.
 - Keep the required final control label **🔄 연구 기반 재귀개선 계속하기** and the complete continuation prompt already recorded above. This must remain a real clickable ChatGPT action, not a decorative website button.
 - Android Chrome QA remains unverified pending user-reported checklist results.
+
+
+## 2026-11-26 — Queue focus now reveals hidden image-candidate details (PR #52)
+- “다음 미검수 후보” previously tried to focus a select inside a closed disclosure. PR #52 opens the corresponding details first, then scrolls and focuses the control.
+- Added helper and regression/integration tests. Official basis: MDN details/open property references are recorded in SESSION_LOG.
+- PR CI, merge, Production and Pages outcome pending; Android Chrome QA remains unverified.
+- Keep the required final control label **🔄 연구 기반 재귀개선 계속하기** and its complete continuation prompt. Never substitute a short prompt or omit the clickable action.
