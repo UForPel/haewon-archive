@@ -470,3 +470,9 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Keep human review data localStorage-only with manual JSON transfer. Preserve 273 legacy shared-image assignments and do not auto-label candidates.
 
 - Final-head verification note: PR #52 code and integration tests passed in CI #72 (207/207, archive validation 856 candidates, 180 schema-valid run logs, 55 source summaries, 41 links). CI #72 ran on head `949ed87f527bfe664185b586076bc9b867af9677`; the subsequent documentation-only commits require a final-head CI run before merge.
+
+
+## 2026-11-26 — Queue disclosure fix final verification
+- PR #52 implements the invariant: before focusing a thumbnail review control, open its collapsed `details.thumbnail-review-disclosure`, then defer scroll/focus until visible.
+- Final-head PR CI #74 passed 207/207 tests; Production #609 and Pages deployment succeeded. Generated data commit `5351bc276aa5b1dd5c9286caf9a6156f273318e9`.
+- Current archive: 857 candidates; 482 thumbnail review candidates / 0 reviewed; 273 legacy shared-image assignments preserved. Android Chrome QA remains unverified until user-reported checklist results.
