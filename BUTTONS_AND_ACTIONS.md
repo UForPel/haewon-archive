@@ -520,3 +520,8 @@ Keep the conversation continuation button as the final response element of every
 - PR #56 adds success-only auto-advance to the repeated-image review panel, reusing the current filtered next-pending article action. Labels remain per article, local-only; failed writes restore the saved value and do not advance.
 - No new RSS/source, no Google News wrapper decoding, no access bypass, no automatic review labels/upload, no paid dependency, no external transmission. Android Chrome QA remains UNVERIFIED; it requires user-reported device results.
 - Latest main after data commit: b3091b027e3ea73211b6766c09833ac98916a790. Documentation-only finalization PR follows; it does not trigger another Production collection.
+
+
+## 2026-11-26 — Bing failure diagnostic fields
+- Bing RSS failures record query, error, HTTP status, Content-Type and response format classification (rss/atom/html/empty/unknown).
+- Never persist response bodies, credentials or private data. Do not blindly retry or treat HTML/Atom as RSS; no access-control bypass.
