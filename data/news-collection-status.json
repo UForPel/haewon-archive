@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T04:03:56.167Z",
+  "collectedAt": "2026-11-26T04:12:42.657Z",
   "searchPack": 5,
   "queries": [
     {
@@ -9,8 +9,8 @@
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 2,
-        "within90Days": 5,
-        "olderThan90Days": 8,
+        "within90Days": 6,
+        "olderThan90Days": 7,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
@@ -28,36 +28,36 @@
       "datedCandidates": 15,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 6385.8,
-      "p90PublicationLagHours": 24217.3
+      "medianPublicationLagHours": 1605.3,
+      "p90PublicationLagHours": 24217.4
     },
     {
       "query": "오해원 해외 활동",
-      "candidates": 16,
+      "candidates": 21,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 1,
-        "within90Days": 3,
-        "olderThan90Days": 12,
+        "within30Days": 3,
+        "within90Days": 4,
+        "olderThan90Days": 14,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 6
+        "within30DaysRate": 14
       },
-      "uniqueCandidates": 16,
+      "uniqueCandidates": 21,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 12,
-      "titleKeywordMatchRate": 75,
+      "titleKeywordMatches": 16,
+      "titleKeywordMatchRate": 76,
       "explicitPublisherUrls": 5,
-      "explicitPublisherUrlRate": 31,
+      "explicitPublisherUrlRate": 24,
       "crossQueryDuplicateUrls": 3,
-      "datedCandidates": 16,
+      "datedCandidates": 21,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 7419.6,
-      "p90PublicationLagHours": 26648.6
+      "medianPublicationLagHours": 6563.3,
+      "p90PublicationLagHours": 17996.2
     },
     {
       "query": "Haewon international interview",
@@ -84,36 +84,36 @@
       "datedCandidates": 1,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 15353.6,
-      "p90PublicationLagHours": 15353.6
+      "medianPublicationLagHours": 15353.8,
+      "p90PublicationLagHours": 15353.8
     },
     {
       "query": "엔믹스 해원 활동 소식",
-      "candidates": 51,
+      "candidates": 21,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 8,
-        "within90Days": 2,
-        "olderThan90Days": 41,
+        "within30Days": 5,
+        "within90Days": 1,
+        "olderThan90Days": 15,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 16
+        "within30DaysRate": 24
       },
-      "uniqueCandidates": 51,
+      "uniqueCandidates": 21,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 29,
-      "titleKeywordMatchRate": 57,
+      "titleKeywordMatches": 15,
+      "titleKeywordMatchRate": 71,
       "explicitPublisherUrls": 12,
-      "explicitPublisherUrlRate": 24,
+      "explicitPublisherUrlRate": 57,
       "crossQueryDuplicateUrls": 3,
-      "datedCandidates": 51,
+      "datedCandidates": 21,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 17444.1,
-      "p90PublicationLagHours": 34748.1
+      "medianPublicationLagHours": 9433,
+      "p90PublicationLagHours": 18117.2
     },
     {
       "query": "Haewon radio appearance",
@@ -140,8 +140,8 @@
       "datedCandidates": 2,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1208.3,
-      "p90PublicationLagHours": 1525.8
+      "medianPublicationLagHours": 1208.5,
+      "p90PublicationLagHours": 1525.9
     },
     {
       "query": "NMIXX Haewon television",
@@ -162,28 +162,28 @@
       "duplicateTitleOccurrences": 0,
       "titleKeywordMatches": 13,
       "titleKeywordMatchRate": 93,
-      "explicitPublisherUrls": 12,
-      "explicitPublisherUrlRate": 86,
+      "explicitPublisherUrls": 11,
+      "explicitPublisherUrlRate": 79,
       "crossQueryDuplicateUrls": 3,
       "datedCandidates": 14,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 12260,
-      "p90PublicationLagHours": 21143.6
+      "medianPublicationLagHours": 12260.1,
+      "p90PublicationLagHours": 21143.7
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
   "bingSuccessfulQueries": 6,
-  "bingCandidates": 43,
+  "bingCandidates": 42,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 99,
-  "uniqueIncoming": 92,
-  "added": 3,
+  "fetched": 74,
+  "uniqueIncoming": 67,
+  "added": 2,
   "rssImageSignals": {
-    "items": 56,
-    "sourceUrlItems": 54,
+    "items": 32,
+    "sourceUrlItems": 32,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -196,9 +196,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 43,
+    "items": 42,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 43,
+    "publisherArticleUrlItems": 42,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -213,45 +213,18 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 1,
-    "found": 1,
-    "assigned": 1,
+    "attempted": 0,
+    "found": 0,
+    "assigned": 0,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
     "failed": 0,
-    "results": [
-      {
-        "id": "9ac91aa826b4fbed0763",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          {
-            "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.8c4accbba768481e9da42739f10a8066_P1.jpg",
-            "source": "jsonld:image",
-            "priority": 5
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://sports.khan.co.kr/article/202603051914007/",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://sports.khan.co.kr/article/202603051914007/",
-        "resolvedArticleHost": "sports.khan.co.kr"
-      }
-    ]
+    "results": []
   },
   "deduplicationComparison": {
-    "before": 99,
-    "after": 91,
+    "before": 74,
+    "after": 66,
     "collapsed": 8,
     "method": "normalized exact headline first; canonical URL fallback"
   },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T04:04:00.475Z",
+  "generatedAt": "2026-11-26T04:12:45.763Z",
   "discoveryRelevance": {
     "totalCandidates": 856,
     "articleCandidates": 669,
@@ -536,60 +536,33 @@
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 43,
+    "bingNewsCandidates": 42,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
     "newsCandidatesTotal": 856,
-    "newsUniqueFetched": 92,
-    "newsAddedLastRun": 3,
+    "newsUniqueFetched": 67,
+    "newsAddedLastRun": 2,
     "duplicateBeforeMergeLastRun": 7,
     "duplicateGroupsCurrent": 856,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 99,
-      "after": 91,
+      "before": 74,
+      "after": 66,
       "collapsed": 8,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 1,
-      "found": 1,
-      "assigned": 1,
+      "attempted": 0,
+      "found": 0,
+      "assigned": 0,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
       "failed": 0,
-      "results": [
-        {
-          "id": "9ac91aa826b4fbed0763",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.8c4accbba768481e9da42739f10a8066_P1.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://sports.khan.co.kr/article/202603051914007/",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://sports.khan.co.kr/article/202603051914007/",
-          "resolvedArticleHost": "sports.khan.co.kr"
-        }
-      ]
+      "results": []
     }
   },
   "sources": [
@@ -2421,12 +2394,12 @@
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
     "metaFound": 79,
-    "metaAssigned": 1,
-    "assignmentRate": 100,
-    "latestRunAttempted": 1,
-    "latestRunFound": 1,
-    "latestRunAssigned": 1,
-    "latestRunAssignmentRate": 100,
+    "metaAssigned": 0,
+    "assignmentRate": null,
+    "latestRunAttempted": 0,
+    "latestRunFound": 0,
+    "latestRunAssigned": 0,
+    "latestRunAssignmentRate": null,
     "persistedMetaCandidateRecords": 79,
     "persistedThumbnailRecords": 79,
     "persistedThumbnailRecordsTotal": 352,
@@ -4440,8 +4413,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://images.khan.co.kr/article/2026/03/05/news-p.v1.20260305.9fe78c2e80854722ae37f0f5ba4d2cdc_P1.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -4608,7 +4581,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T04:04:00.500Z",
+    "generatedAt": "2026-11-26T04:12:45.788Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

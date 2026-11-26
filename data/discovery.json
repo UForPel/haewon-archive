@@ -13841,7 +13841,13 @@
     "query": "엔믹스 해원 활동 소식",
     "discoveredAt": "2026-11-26T03:22:47.569Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "52a5c74299a10be3d8db",
@@ -14027,7 +14033,13 @@
     "query": "엔믹스 해원 활동 소식",
     "discoveredAt": "2026-11-26T03:22:47.569Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8e7f29e4ab43fa8ee6d3",
@@ -20820,7 +20832,13 @@
     "query": "엔믹스 해원 활동 소식",
     "discoveredAt": "2026-11-26T03:22:47.569Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0363be04afbcf7ebd21b",
@@ -21726,7 +21744,13 @@
     "query": "오해원 해외 활동",
     "discoveredAt": "2026-11-26T03:54:44.780Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "73a93e8db78a0aa2ce40",
@@ -22348,7 +22372,13 @@
     "query": "오해원 해외 활동",
     "discoveredAt": "2026-11-26T03:54:44.780Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0787bae56898f4d95568",
@@ -22462,7 +22492,13 @@
     "query": "오해원 해외 활동",
     "discoveredAt": "2026-11-26T03:54:44.780Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "1e1dee41fda134c35038",
