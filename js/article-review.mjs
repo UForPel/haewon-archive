@@ -71,6 +71,10 @@ export function validateArticleReviewExport(payload, eligibleIds = null) {
   }
   return { schemaVersion: 1, labels };
 }
+export function getArticleReviewValue(labels = {}, articleId, field) {
+  return labels[String(articleId)]?.[field] || '';
+}
+
 export function isArticleReviewComplete(item = {}, labels = {}) {
   const row = labels[String(item.id || '')] || {};
   return Object.entries(ARTICLE_REVIEW_DIMENSIONS).every(([dimension, options]) => options.includes(row[dimension]));
