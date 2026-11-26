@@ -269,3 +269,17 @@ For each substantial update include: changed paths; planned vs implemented items
 - No new publisher RSS feed without explicit permission. Do not delete/replace the 273 legacy image group.
 - External contact/email, personal/secret data handling and paid service activation require separate confirmation; repository-internal development and normal CI/merge operations are preauthorized.
 - Deployment success does not establish visual/mobile QA; report it separately.
+
+## 2026-11-26 — Current operating rules after article review rollout
+- Read main, open PRs, Actions, production data and all six documents before each cycle. Distinguish code/test, collection, data commit, Pages deployment and visual QA.
+- PR #34 is merged: Markdown-only pushes do not launch Production. Scheduled and manual runs remain active; PR read-only CI still verifies docs PRs.
+- PR #35 is merged: local seven-dimension review for explicit verified Haewon publisher articles, per-dimension metrics, legacy group audit and a bounded 12-URL HEAD-only accessibility sample.
+- Review labels are browser localStorage only. No automatic upload. Manual JSON export/import; avoid personal information in notes.
+- HEAD audit uses direct HTTPS publisher URLs only, standard redirects, concurrency 3, 3.5s timeout and max 12 requests/run. No GET fallback on 405 and no access-control bypass.
+- Latest Production run #45730919483 passed 173/173 tests, collection, validation, data commit and Node24 Pages deploy. No Node20 warning. Main data SHA `48c0963...`.
+- Current data: 795 candidates, 608 articles, 187 videos, 87 publisher URLs, 71 verified Haewon articles, 342 thumbnails assigned, 453 missing, 70 unique URLs. Preserve 273 legacy assignments.
+- Legacy group audit found 0 publisherArticleUrl values, 199 sourceSiteUrl values and 0 alternative thumbnail candidates across 273 records. Do not bulk delete or replace.
+- Accessibility sample: 12/71 checked; 10 responded, 2 blocked (403). Thumbnail sample: 12 checked, 11 image responses, 1 HTTP 404.
+- Query pack index 4 repeated in same-slot push runs. Wait for a distinct scheduled pack before interpreting rotation effectiveness. Title keyword proxy is not human-labeled precision.
+- No new publisher RSS source without explicit permission. External contact/email, personal/secret data handling and paid service activation require separate confirmation. Repository code, test, PR, merge and documentation work are preauthorized.
+- Production deploy success does not establish browser/mobile visual QA; report it separately.

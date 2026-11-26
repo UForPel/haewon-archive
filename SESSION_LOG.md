@@ -1246,3 +1246,18 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - This is one pack only; no precision claim or automatic query removal. Need at least two additional pack runs and compare identical metrics. The title proxy is not human-labeled relevance.
 - Latest thumbnail state: 340 assigned, 427 missing, 68 unique URLs, 273 legacy shared-image records preserved. 12 URL response audit: 11 image responses, one HTTP 404, no unreachable/429/non-image success. Latest metadata enrichment: attempted 10, found 7, assigned 7, missing 1, failed 2.
 - No new RSS feeds, no external contact, no paid APIs, no secrets or personal data. Mobile QA unverified.
+
+## 2026-11-26 — PR #34/#35 merge and production quality audit
+- Main before this cycle: `26a378a3...`. Merged PR #34 as `5c84b685...` to add Markdown-only `paths-ignore` to Production pushes. Scheduled cron and manual dispatch are unchanged; read-only PR CI still runs for docs-only PRs. This prevents future six-document updates from launching redundant production collections.
+- PR #34 CI #45730421297 passed 161/161 tests and validation. Its workflow-file change correctly triggered one Production run #45730513082, which succeeded.
+- Ported PR #13 to current main as PR #35. Added local browser-only seven-dimension article review, JSON export/import, per-dimension summaries, legacy thumbnail evidence audit, and a bounded rotating publisher accessibility audit. Added explicit warning not to enter personal information in review notes.
+- Accessibility audit is capped at 12 verified direct HTTPS Haewon publisher URLs per Production run; concurrency 3, timeout 3.5s, HEAD only, standard redirects. HTTP 405 is left uncertain; no GET fallback.
+- First PR #35 run #45730730054 failed due a duplicate local variable declaration in the new sample limit logic. Fixed using `sampleLimit` / `sampleOffset`; latest genuine PR CI #45730832939 passed 173/173 tests, zero failures, validation passed. PR #35 merged as `dda0b481...`; PR #13 closed as superseded.
+- Production run #45730919483 succeeded: 173/173 tests, YouTube/news collection, bounded improvement cycle, quality metrics, validation, data commit, Pages artifact and deployment. No Node20 deprecation warning. Generated data commit `48c0963...`.
+- Current metrics: 795 candidates, 608 articles, 187 videos, 87 publisher article URLs, 71 verified Haewon candidates, 342 thumbnails assigned, 453 missing, 70 unique thumbnail URLs.
+- Legacy shared-image audit: 273 assignments; zero explicit publisher article URLs, 199 sourceSiteUrl values, zero alternative thumbnail candidates, all 273 metadata outcomes not-attempted. The 273 records remain intact.
+- Publisher accessibility sample: 12/71 HEAD requests, 10 responded, 2 returned 403 blocked; no paywall/404/uncertain. No method fallback.
+- Thumbnail response sample: 12 URLs; 11 image responses, one HTTP 404 at Sportalkorea CDN, no unreachable/429/non-image successful responses.
+- Query pack index 4 ran again because PR pushes occurred in the same KST morning slot. Six query rows total 54 candidates. The next scheduled evening slot should select pack index 5; do not treat the repeated pack as an independent coverage test.
+- Browser review labels are localStorage-only and are not visible to the collector until manually exported/imported. Mobile visual QA remains unverified.
+- No new RSS sources, no external contact, no paid APIs, no personal data/secret sharing. PR #23 and #24 remain open for separate review.

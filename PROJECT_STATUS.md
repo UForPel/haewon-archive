@@ -663,3 +663,17 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - No new RSS feed source was added. SBS/Yonhap are still only discovery candidates via existing search providers; no publisher RSS feed allowlist expansion.
 - PR #14 closed as superseded by docs PR #29; PR #22 closed as superseded by PR #32. PR #13, #23 and #24 remain separate.
 - Mobile/browser visual QA remains unverified.
+
+## 2026-11-26 — Human review and bounded publisher audit merged
+- Current main: `48c0963e683c8e40e5454860e919d8439922a5f8`.
+- PR #34 merged: Production `push: main` ignores Markdown-only changes; twice-daily schedule, manual workflow_dispatch and read-only PR CI remain enabled. This prevents docs-only merges from repeating a full collection and deployment.
+- PR #35 merged: local seven-dimension article review UI, per-dimension summaries, legacy thumbnail evidence audit and bounded publisher accessibility audit. PR #13 is closed as superseded.
+- Production run #45730919483 after PR #35 succeeded: 173/173 tests, validation, data commit, Pages artifact and deployment; Node20 deprecation warning absent. Generated data commit `48c0963...`.
+- Current archive: 795 candidates (608 articles / 187 videos), 87 explicit publisher article URLs, 71 verified Haewon article candidates, 342 assigned thumbnails, 453 missing, 70 unique thumbnail URLs. The 273 unverified legacy shared-image assignments remain untouched.
+- Legacy group audit: 273 assignments; 0 records with explicit publisherArticleUrl; 199 have sourceSiteUrl; 0 have explicit alternative thumbnail candidates; metadata outcome is not-attempted for all 273. No evidence justifies automatic replacement or deletion.
+- Publisher accessibility audit: rotating HEAD-only sample of 12 out of 71 verified Haewon article URLs; 10 HTTP responses, 2 blocked (403), 0 paywall, 0 not-found, 0 uncertain. No GET fallback or access-control bypass.
+- Thumbnail response sample: 12 unique URLs; 11 image responses and one HTTP 404 (Sportalkorea CDN); no unreachable, 429 or non-image successful responses.
+- Six-pack query rotation remains at pack index 4 in the two latest push-triggered runs; these are repeated same-slot samples, not independent packs. Latest query rows: 54 candidates across six queries, with explicit publisher URL rates from 0% to 100% and very wide publication lag. Wait for the next scheduled KST evening slot (pack 5) before comparing a distinct pack.
+- Human review UI stores labels in browser localStorage only. JSON export/import is manual; labels are not automatically uploaded or committed. Actual mobile visual QA is still unverified.
+- No new RSS feed sources were added. SBS/Yonhap remain excluded as direct feeds pending explicit applicable permission.
+- Only PRs #23 (optional YouTube API search) and #24 (Cloudflare/GitHub App dry-run) remain open. No API key, external app secret or paid service was configured.

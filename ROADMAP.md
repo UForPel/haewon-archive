@@ -451,3 +451,17 @@
 - [ ] Improve provenance-backed article thumbnails; 340 assigned, 427 missing, 273 legacy shared-image assignments preserved.
 - [ ] Recheck live Pages mobile UI after a separate visual QA; deploy success is not visual QA.
 - [ ] Do not add new publisher RSS feeds without explicit applicable permission.
+
+## 2026-11-26 — Next steps after human review rollout
+- [x] Merge PR #34 to skip Production on Markdown-only pushes while preserving schedule, manual dispatch and PR CI.
+- [x] Merge PR #35 seven-dimension human article review UI and privacy-conscious localStorage export/import.
+- [x] Add per-dimension review metrics and a bounded rotating 12-URL HEAD-only accessibility audit.
+- [x] Verify Production run #45730919483: 173/173 tests, validation, data commit, Node24 Pages artifact and deployment successful.
+- [x] Measure legacy group without mutation: 273 assignments, 0 publisher article URLs, 199 sourceSiteUrl records, 0 alternative thumbnail candidates.
+- [ ] Complete manual article review on the deployed page; export JSON from the browser and decide whether to store a sanitized, non-personal review artifact in the repository.
+- [ ] Wait for the next KST evening pack 5 run, then compare with pack 4 using per-query unique yield, publisher URL rate, title proxy and publication lag.
+- [ ] Continue gathering distinct pack samples; do not prune queries based on repeated same-slot runs or title keyword proxy alone.
+- [ ] Review PR #23 optional YouTube API discovery; keep quota-bounded and optional, with no paid/core dependency.
+- [ ] Review PR #24 Cloudflare/GitHub App dispatcher only after verifying free-tier limits, minimal permissions and user-controlled secrets. Do not request secrets in chat.
+- [ ] Recheck deployed mobile UI and article review panel visually; deployment success is not visual QA.
+- [ ] Preserve 273 legacy thumbnail assignments and do not add SBS/Yonhap direct RSS feeds without explicit applicable permission.
