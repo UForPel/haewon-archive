@@ -468,3 +468,5 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Test the helper and assert the UI order open → scroll → focus.
 - PR #52 implements this invariant; PR CI and merge are pending at this checkpoint. Do not claim Android Chrome behavior from Node tests.
 - Keep human review data localStorage-only with manual JSON transfer. Preserve 273 legacy shared-image assignments and do not auto-label candidates.
+
+- Final-head verification note: PR #52 code and integration tests passed in CI #72 (207/207, archive validation 856 candidates, 180 schema-valid run logs, 55 source summaries, 41 links). CI #72 ran on head `949ed87f527bfe664185b586076bc9b867af9677`; the subsequent documentation-only commits require a final-head CI run before merge.
