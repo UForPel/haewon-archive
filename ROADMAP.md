@@ -713,3 +713,16 @@
 - Production #610 run log: 15 YouTube candidates, 0 accepted, 15 duplicates; Google News RSS 94 items; Bing News RSS 39 items; archive validation passed. Current archive: 857 candidates (670 articles / 187 videos), 352 thumbnails assigned / 505 missing, 80 unique URLs; 273 legacy shared-image assignments retained; 482 thumbnail-review eligible / 0 reviewed; article human relevance labels 0.
 - PR #54 changes only browser-local review interaction: after a manually selected label is successfully saved, the next pending candidate is opened, scrolled into view and focused. Failed storage writes preserve the previous label and do not advance. No review labels were created or uploaded.
 - No collection sources, RSS, query pack, thumbnail assignments, labels, storage destination or backend changed. No new RSS, wrapper decoding, access bypass, paid service or external transmission. Android Chrome QA remains UNVERIFIED.
+
+
+## 2026-11-26 — Repeated-image review auto-advance (PR candidate)
+- [x] Re-audit main, open PRs, recent Actions, Production run, generated data commit and Pages artifact.
+- [x] Re-read six continuity documents and inspect current metrics/code.
+- [x] Confirm repeated-image review lacks the successful-save auto-advance already present in the primary queue.
+- [x] Implement per-article repeated-group auto-advance after successful local save only.
+- [x] Add integration contract for success-only advancement.
+- [ ] Pass final-head PR CI and full archive validation.
+- [ ] Merge only after successful final-head verification.
+- [ ] Verify Production collection, generated data commit and Pages deployment independently.
+- [ ] Obtain user-reported Android Chrome QA; automated tests are not device QA.
+- [ ] Start manual review only when user chooses; do not auto-label the 273 repeated legacy rows, 482 thumbnail candidates or article records.
