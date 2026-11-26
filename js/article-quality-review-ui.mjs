@@ -75,6 +75,7 @@ if (host) {
     if (!next) { progress.textContent = '모든 검수 대상의 일곱 항목이 완료되었습니다.'; return; }
     const row = Array.from(list.children).find(element => element.dataset.articleId === String(next.id));
     if (!row) { progress.textContent = '다음 미검수 기사를 찾지 못했습니다. 목록을 다시 확인해 주세요.'; return; }
+    row.open = true;
     row.scrollIntoView({ behavior: 'smooth', block: 'center' });
     row.querySelector('select')?.focus({ preventScroll: true });
     progress.textContent = '다음 미검수 기사로 이동했습니다. 일곱 항목을 확인해 주세요.';
@@ -89,9 +90,9 @@ if (host) {
       ' · 분류 '+report.dimensions.categoryAccuracy.reviewed+'/'+report.eligible;
     list.replaceChildren();
     for (const item of filterArticleReviews(articles, labels, showPendingOnly ? 'pending' : 'all')) {
-      const row = document.createElement('article'); row.className = 'article-quality-review-row'; row.dataset.articleId = String(item.id);
+      const row = document.createElement('details'); row.className = 'article-quality-review-row'; row.dataset.articleId = String(item.id);
       const title = document.createElement('a'); title.href = item.publisherArticleUrl; title.target = '_blank'; title.rel = 'noopener noreferrer'; title.textContent = item.title; title.className = 'article-quality-review-title';
-      const meta = document.createElement('p'); meta.className = 'photo-meta';
+      const meta = document.createElement('span'); meta.className = 'photo-meta';
       const date = item.publishedAt ? new Date(item.publishedAt).toLocaleDateString('ko-KR') : '날짜 없음';
       const urlContext = getArticleUrlContext(item);
       meta.textContent = (item.sourceName || '출처 미상')+' · '+date+' · 원문 URL '+(urlContext.publisherArticleHost || '확인 불가')+' · 검색 URL '+(urlContext.discoveryUrlHost || '확인 불가')+' · 등록 출처 호스트 '+(urlContext.recordedPublisherHost || '미기록')+' · 자동 분류 '+classifyDiscoveryCategories(item).join(', ')+' · 이미지 출처 '+(item.thumbnailSource || item.thumbnailProvenance?.source || '미확인');
@@ -126,7 +127,9 @@ if (host) {
         if (!persistLabels(nextLabels, '저장됨 · 정정 분류 · '+item.title)) correctionSelect.value = current.expectedCategory || '';
       });
       correction.append(correctionSelect);
-      row.append(title, meta, image, fields, correction); list.append(row);
+      const rowSummary = document.createElement('summary'); rowSummary.className = 'article-quality-review-row-summary'; rowSummary.append(title, meta);
+      const rowContent = document.createElement('div'); rowContent.className = 'article-quality-review-row-content'; rowContent.append(image, fields, correction);
+      row.append(rowSummary, rowContent); list.append(row);
     }
     updateProgress();
   }
