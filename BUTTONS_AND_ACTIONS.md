@@ -369,3 +369,20 @@ The assistant MUST render a real clickable button at the very bottom of every co
 - Real Android/mobile QA remains mandatory and unverified. Repository has no browser automation dependency; do not imply that CSS contract tests simulate a phone.
 - Latest data: 856 candidates, 76 verified Haewon articles, zero committed review labels, 352 assigned / 504 missing thumbnails. Preserve all 273 legacy shared-image assignments.
 - Always finish each completed cycle with the full-prompt **🔄 재귀개선 계속하기** conversation button.
+
+
+## 2026-11-26 — Compact article review flow and manual QA
+
+Article review list now uses one collapsed disclosure per article instead of displaying all seven controls for every article at once. This reduces initial mobile scroll burden; actual phone usability is not yet verified.
+
+Next unreviewed article must open the target disclosure, scroll it into view and focus its first review select.
+
+JSON export/import uses pure helpers: export strips unsupported fields; import validates schema and eligible IDs, merges into existing local labels, and preserves prior data if validation or storage fails.
+
+Review labels remain in browser localStorage only. JSON movement is user-initiated; no server or automatic upload.
+
+Android manual acceptance checklist: open archive on Chrome; inspect narrow screen; expand/collapse an article; complete seven controls; verify next-pending opens and focuses next article; refresh to verify persistence; export then import JSON; confirm merge count and no automatic transfer.
+
+CI and Node contract tests do not establish Android visual/touch/focus/download QA. Keep real-device QA explicitly unverified until performed.
+
+Keep the conversation continuation button as the final response element of every completed cycle.
