@@ -1356,3 +1356,33 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Article review labels remain zero in the committed data. PR #42 adds a pending-only queue and next-pending navigation, still localStorage-only with manual JSON export/import. No automatic upload or secret was added.
 - Pages deployment succeeded in Actions #601. Research browser could not fetch the public Pages URL; no visual/mobile QA is claimed. Manual device QA remains outstanding.
 - No new RSS sources, no changes to 273 legacy records, no paid services, external contacts, credentials or personal-data transfer.
+
+
+## 2026-11-26 — Review queue automatic advancement (PR #43)
+
+### Baseline and diagnosis
+- Re-read the current main's PROJECT_STATUS, SESSION_LOG, ROADMAP, BUTTONS_AND_ACTIONS, COLLECTION_RULES and CHATGPT_OPERATING_RULES.
+- Live main at cycle start: `9beb7c115af632679d916c600a7be872f74ba2fc`; open PRs: 0. Latest recorded Production checkpoint is #601; its data commit is `45af9e62b6b06da3abf99399897c5c6f0b186475`.
+- The GitHub connector did not return the repository's latest Actions run list or any PR-associated runs for the new head at the time of this log. Treat PR CI and current Production status as unverified until independently retrieved.
+- Mobile visual QA remained outstanding. Code inspection found the pending-only list re-rendered after completing all seven dimensions, but focus stayed lost instead of moving to the next incomplete article.
+
+### Implemented on branch `fix/review-queue-auto-advance-20261126`
+- Added pure `getNextPendingArticle(items, labels, afterArticleId)` with deterministic forward progression and wraparound.
+- Reused `focusNextPendingArticle()` for the explicit next-pending action and automatically after a review row becomes complete.
+- When no pending article remains, the status announces completion. No automatic label upload or backend was introduced.
+- Added tests for next-item selection, wraparound and all-complete state.
+- PR #43: https://github.com/UForPel/haewon-archive/pull/43
+
+### Verification and limitations
+- PR opened against main; mergeability reported true. PR CI and archive validation are not yet confirmed by an accessible run result.
+- No local execution of the full Node suite was available through this GitHub-only editing path. Do not claim tests passed until CI output is checked.
+- No collection, data commit or Pages deployment was triggered/verified by this documentation checkpoint. Real mobile browser/device QA remains unverified.
+
+### Errors / omissions / risks
+- Prior cycle's queue navigation handled the explicit “next” button but did not automatically advance after completing a record. The regression is now covered by a pure selection test and UI wiring assertion.
+- The available Actions listing route failed to return data; do not infer latest run state from old session notes.
+
+### Next
+1. Verify PR #43 CI and archive validation; fix failures before merge.
+2. If checks pass, merge and independently verify Production/data commit/Pages deployment.
+3. Perform real-device mobile review of focus, scroll, tap targets and import/export when a browser check is available.
