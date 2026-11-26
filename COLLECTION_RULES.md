@@ -349,3 +349,10 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Keep all 273 legacy shared-image assignments intact. Do not replace/delete them automatically.
 - Continue to reject wrapper-token decoding, inferred article URLs from site-level RSS sourceUrl, access-control bypass and unapproved new RSS feeds (including SBS/Yonhap).
 - Thumbnail review labels remain localStorage-only with explicit user-initiated JSON export/import; do not upload them automatically or transmit them to a service.
+
+
+## 2026-11-26 — Production #608 confirms collection policy unchanged
+- Production #608 completed successfully; Google RSS 71 items, Bing RSS 40; 6/6 queries succeeded for each provider; 71 fetched / 64 unique incoming / 2 additions; thumbnail enrichment attempted 0.
+- PR #50 changed only browser-local review persistence. It did not change source permissions, RSS list, query pack, collection cadence, metadata-fetch policy, retry/backoff, or article URL rules.
+- Preserve all 273 legacy shared-image assignments. No bulk replacement/deletion, Google News wrapper decoding, access-control bypass, or new RSS source (including SBS/Yonhap) was introduced.
+- Human review labels remain browser-local with manual JSON transfer only. No automatic upload or external service transmission.
