@@ -454,3 +454,10 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Apply the same invariant to direct edits, grouped/repeated-item edits and JSON import/merge. Test both a throwing storage adapter and a successful adapter; add an integration assertion that every UI write path uses the shared helper.
 - Node tests and CI are not Android Chrome QA. Device behavior remains unverified until the user reports the requested checklist.
 - Evidence: PR #50 CI #64 passed 205/205 tests and archive validation on code/test head `8ccd7af072eb3f6d3d3c60ebc4fb88e594cde0a3`; latest documentation head must pass its own PR CI before merge.
+
+
+## 2026-11-26 — Thumbnail review persistence fix verified
+- PR #50 implements transactional writes for candidate labels, repeated-image group labels and JSON import. Failed storage writes preserve the last committed in-memory map and restore the visible selection.
+- PR CI #68 passed 205/205 tests; Production #608 and Pages deployment succeeded. This is not proof of Android Chrome behavior.
+- Maintain the localStorage transaction invariant for every browser review path. Device QA remains unverified until user reports the checklist.
+- Latest main data commit after Production #608: `d3d44f6252c7cdc8b01266d4779a54d262a8c029`; 856 discovery candidates, 482 eligible thumbnail reviews / 0 reviewed, 273 legacy shared-image assignments preserved.

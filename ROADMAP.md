@@ -663,3 +663,12 @@
 - [ ] Verify Production collection, generated data commit and Pages deployment after merge; these are not yet run for PR #50 at this checkpoint.
 - [ ] Obtain user-reported Android Chrome QA; automated tests are not device QA.
 - [ ] Begin actual human review of the 482 eligible thumbnail candidates (0 reviewed) when the user chooses to do so. Preserve the 273 legacy shared-image assignments.
+
+
+## 2026-11-26 — PR #50 completed
+- [x] Merge transactional thumbnail review persistence fix after latest-head CI passed.
+- [x] Verify Production #608 end-to-end, including generated data commit and Pages deployment.
+- [x] Confirm 273 legacy shared-image assignments remain preserved and no thumbnail reassignment was introduced.
+- [ ] Obtain user-reported Android Chrome QA for review UI, persistence and manual JSON import/export.
+- [ ] Begin human review of thumbnail candidates (482 eligible / 0 reviewed) when user chooses; do not auto-label.
+- [ ] Improve actual thumbnail coverage only through permitted explicit public metadata and source evidence; no new RSS or wrapper decoding without approval.
