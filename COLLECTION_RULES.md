@@ -331,3 +331,5 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - A successful localStorage write is the commit point for review labels. On a later failed write, both persisted data and UI controls must remain at the latest committed value, including after multiple edits in the same rendered row.
 - Never roll a control back to a stale value captured at initial render. Resolve fallback values from the current committed labels object.
 - This change does not alter the local-only storage boundary or JSON manual transfer behavior.
+
+- Validation correction: initial PR CI run `45792852673` executed 202 tests but failed one new source-contract assertion because the test regex was over-escaped; application code and the sequence test logic were not the reported failure. The assertion escaping was corrected in commit `eaf649630c18b8607f4723ea0a2d91995fa698cd`. Re-run CI before merge; do not treat the first run as passed.
