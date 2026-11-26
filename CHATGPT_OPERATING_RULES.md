@@ -510,3 +510,8 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - PR #56 adds success-only auto-advance to the repeated-image review panel, reusing the current filtered next-pending article action. Labels remain per article, local-only; failed writes restore the saved value and do not advance.
 - No new RSS/source, no Google News wrapper decoding, no access bypass, no automatic review labels/upload, no paid dependency, no external transmission. Android Chrome QA remains UNVERIFIED; it requires user-reported device results.
 - Latest main after data commit: b3091b027e3ea73211b6766c09833ac98916a790. Documentation-only finalization PR follows; it does not trigger another Production collection.
+
+
+## 2026-11-26 — Diagnose partial Bing collection runs
+- For Bing non-RSS failures, preserve query + error + HTTP status + Content-Type + coarse response format; never save response bodies.
+- Do not claim the cause is fixed without a later successful run. Do not add speculative retries, parse HTML as RSS, or bypass access restrictions.
