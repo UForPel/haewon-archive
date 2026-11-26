@@ -5,10 +5,13 @@ import { getDailySearches, SEARCH_PACKS } from '../scripts/collect-news.mjs';
 
 test('daily query rotation is deterministic and bounded to editorial packs',()=>{
  const day='2026-11-21';
- assert.deepEqual(getDailySearches(day),getDailySearches(day));
- assert.ok(getDailySearches(day).length>0);
- assert.ok(getDailySearches(day).every(q=>!/(fancam|직캠)/i.test(q)));
- assert.equal(SEARCH_PACKS.length,3);
+ const morning=getDailySearches(day,0),evening=getDailySearches(day,1);
+ assert.deepEqual(morning,getDailySearches(day,0));
+ assert.ok(morning.length>0);
+ assert.ok([...morning,...evening].every(q=>!/(fancam|직캠)/i.test(q)));
+ assert.notDeepEqual(morning,evening);
+ assert.equal(SEARCH_PACKS.length,6);
+ assert.ok(SEARCH_PACKS.every(pack=>pack.length===6));
 });
 test('improvement cycle reports evidence and refuses unmeasured precision claims',()=>{
  const report=buildImprovementCycle({day:'2026-11-21',discovery:[{query:getDailySearches('2026-11-21')[0]},{query:getDailySearches('2026-11-21')[0]}],videos:[{id:'x'}],newsStatus:{fetched:7,queries:[{query:getDailySearches('2026-11-21')[0],uniqueCandidates:7}]},reviews:[{query:'q',relevant:true},{query:'q',relevant:false}]});
