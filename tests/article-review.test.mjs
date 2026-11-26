@@ -1,7 +1,7 @@
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import assert from 'node:assert/strict';
-import { getVerifiedHaewonArticles, summarizeArticleReviews, validateArticleReviewExport, filterArticleReviews, isArticleReviewComplete, buildLegacyThumbnailAudit, auditVerifiedPublisherArticles, formatArticleReviewProgress } from '../js/article-review.mjs';
+import { getVerifiedHaewonArticles, summarizeArticleReviews, validateArticleReviewExport, filterArticleReviews, isArticleReviewComplete, getNextPendingArticle, buildLegacyThumbnailAudit, auditVerifiedPublisherArticles, formatArticleReviewProgress } from '../js/article-review.mjs';
 
 const base = { id: 'a', title: '오해원 인터뷰', url: 'https://news.test/a', publisherArticleUrl: 'https://news.test/a', publishedAt: '2026-11-20T00:00:00Z', sourceName: '뉴스', thumbnailUrl: 'https://img.test/a.jpg' };
 test('review scope contains only explicit publisher HTTPS Haewon articles and excludes videos', () => {
@@ -147,4 +147,17 @@ test('article review UI exposes pending-only and next-pending controls without s
  assert.match(ui,/filterArticleReviews/); assert.match(ui,/isArticleReviewComplete/);
  assert.match(ui,/scrollIntoView/); assert.match(ui,/localStorage/);
  assert.doesNotMatch(ui,/fetch\(['\"]https?:/);
+});
+
+
+test('pending review queue advances to the next incomplete article and wraps without revisiting completed rows',()=>{
+ const complete={articleId:'a',relevance:'uncertain',originalAccess:'accessible',dateAccuracy:'accurate',sourceAccuracy:'accurate',categoryAccuracy:'correct',thumbnailAccuracy:'not-present',contentType:'article'};
+ const partial={articleId:'b',relevance:'indirect'};
+ const items=[{...base,id:'a'},{...base,id:'b'},{...base,id:'c'},{...base,id:'d'}];
+ const labels={a:complete,b:partial,d:partial};
+ assert.equal(getNextPendingArticle(items,labels,'a').id,'b');
+ assert.equal(getNextPendingArticle(items,labels,'b').id,'c');
+ assert.equal(getNextPendingArticle(items,labels,'c').id,'d');
+ assert.equal(getNextPendingArticle(items,labels,'d').id,'b');
+ assert.equal(getNextPendingArticle(items,{a:complete,b:complete,c:complete,d:complete}),null);
 });
