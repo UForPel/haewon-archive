@@ -71,3 +71,14 @@ test('successful manual thumbnail review save advances to the next pending candi
  assert.ok(saved>=0&&advance>saved&&failure>advance,'auto-advance is scheduled only inside the successful persistence branch');
  assert.match(candidateRenderer,/검수 저장 완료\. 다음 미검수 후보로 이동합니다\./);
 });
+
+test('successful repeated-image article review save advances only after local persistence',()=>{
+ const start=view.indexOf("records.forEach(item=>");
+ const end=view.indexOf("if(!records.length)",start);
+ const repeatedRenderer=view.slice(start,end);
+ const saved=repeatedRenderer.indexOf("if(persistReviewLabels(nextLabels))");
+ const advance=repeatedRenderer.indexOf("requestAnimationFrame(()=>repeatedReviewNext.click())",saved);
+ const failure=repeatedRenderer.indexOf("else{select.value=reviewLabels[key]?.label||''",saved);
+ assert.ok(saved>=0&&advance>saved&&failure>advance,'repeated-group auto-advance is scheduled only after successful persistence');
+ assert.match(repeatedRenderer,/기사별 검수 저장 완료\. 다음 미검수 기사로 이동합니다\./);
+});
