@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-11-26T20:13:34.144Z",
+  "generatedAt": "2026-11-26T23:53:22.393Z",
   "discoveryRelevance": {
-    "totalCandidates": 883,
-    "articleCandidates": 696,
+    "totalCandidates": 902,
+    "articleCandidates": 715,
     "videoCandidates": 187,
     "verifiedPublisherArticles": 106,
     "verifiedHaewonArticles": 83,
     "verifiedPublisherArticlesWithProvenanceThumbnail": 79,
     "verifiedHaewonWithProvenanceThumbnail": 61,
-    "haewonTitleMatches": 524,
-    "nmixxTitleMatches": 545,
-    "otherArticleCandidates": 75,
+    "haewonTitleMatches": 535,
+    "nmixxTitleMatches": 557,
+    "otherArticleCandidates": 80,
     "defaultScope": "verified-haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 883,
+    "totalItems": 902,
     "itemsWithPublisherArticleUrl": 107,
     "bingNewsItems": 110,
     "candidateSourceCounts": {
@@ -125,41 +125,42 @@
       "youtu.be": 105,
       "news.nate.com": 35,
       "www.xportsnews.com": 32,
+      "m.newsen.com": 24,
       "enews.imbc.com": 24,
-      "m.newsen.com": 19,
-      "sports.khan.co.kr": 18,
+      "sports.khan.co.kr": 19,
       "www.chosun.com": 16,
       "www.slist.kr": 15,
       "www.topstarnews.net": 13,
       "www.newsis.com": 12,
       "www.tvj.co.kr": 12,
       "www.sedaily.com": 11,
+      "biz.chosun.com": 11,
       "mydaily.co.kr": 10,
-      "biz.chosun.com": 10,
       "www.munhwa.com": 10,
+      "www.osen.co.kr": 9,
       "www.hankooki.com": 9,
       "news.tf.co.kr": 9,
       "www.hankyung.com": 9,
       "programs.sbs.co.kr": 8,
-      "www.osen.co.kr": 8,
+      "pann.nate.com": 8,
       "www.breaknews.com": 8,
       "www.etnews.com": 7,
       "www.mk.co.kr": 6,
       "sports.donga.com": 6,
       "isplus.com": 6,
       "www.rnx.kr": 6,
+      "www.blogchart.co.kr": 5,
       "www.famtimes.co.kr": 5,
       "www.sportsseoul.com": 5,
       "www.bntnews.co.kr": 5,
       "www.wikitree.co.kr": 5,
+      "www.newsen.com": 5,
       "www.yna.co.kr": 5,
+      "www.ize.co.kr": 4,
       "www.news1.kr": 4,
       "www.fnnews.com": 4,
-      "pann.nate.com": 4,
-      "www.newsen.com": 4,
       "www.nc.press": 4,
       "tvreport.co.kr": 3,
-      "www.ize.co.kr": 3,
       "www.ytn.co.kr": 3,
       "www.koreadaily.com": 3,
       "www.starnewskorea.com": 3,
@@ -172,6 +173,7 @@
       "www.mt.co.kr": 2,
       "www.gukjenews.com": 2,
       "www.twig24.com": 2,
+      "m.pann.nate.com": 2,
       "www.asiatoday.co.kr": 2,
       "www.joynews24.com": 2,
       "www.sportschosun.com": 2,
@@ -193,7 +195,6 @@
       "www.ilyosisa.co.kr": 2,
       "www.sportsworldi.com": 2,
       "www.idomin.com": 2,
-      "www.blogchart.co.kr": 1,
       "m.segye.com": 1,
       "www.tenasia.co.kr": 1,
       "www.imbc.com": 1,
@@ -202,7 +203,6 @@
       "www.behindpress.com": 1,
       "ent.sbs.co.kr": 1,
       "enter.etoday.co.kr": 1,
-      "m.pann.nate.com": 1,
       "www.esquirekorea.co.kr": 1,
       "www.thepublic.kr": 1,
       "www.joongang.co.kr": 1,
@@ -290,20 +290,536 @@
       "twitter:image:src": 1
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 528,
+    "missingThumbnailCount": 547,
     "sourceProvenanceCoverage": 23
   },
+  "thumbnailMissingDiagnostics": {
+    "items": 902,
+    "missing": 547,
+    "classified": 547,
+    "unclassified": 0,
+    "byReason": {
+      "publisher-fetch-failed:forbidden": 9,
+      "google-news-wrapper-without-publisher-article-url": 507,
+      "publisher-page-no-image-candidate": 17,
+      "publisher-fetch-failed:method-not-allowed": 1,
+      "publisher-fetch-failed:network-error": 1,
+      "wrapper-only-not-followed": 12
+    },
+    "bySource": [
+      {
+        "source": "Google News",
+        "items": 792,
+        "missing": 519,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 449,
+        "reasons": {
+          "google-news-wrapper-without-publisher-article-url": 507,
+          "wrapper-only-not-followed": 12
+        }
+      },
+      {
+        "source": "allkpop",
+        "items": 3,
+        "missing": 3,
+        "missingWithPublisherArticleUrl": 3,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-fetch-failed:forbidden": 3
+        }
+      },
+      {
+        "source": "MSN",
+        "items": 4,
+        "missing": 3,
+        "missingWithPublisherArticleUrl": 3,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 3
+        }
+      },
+      {
+        "source": "텐아시아 on MSN",
+        "items": 3,
+        "missing": 3,
+        "missingWithPublisherArticleUrl": 3,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 3
+        }
+      },
+      {
+        "source": "Sportskeeda",
+        "items": 2,
+        "missing": 2,
+        "missingWithPublisherArticleUrl": 2,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-fetch-failed:method-not-allowed": 1,
+          "publisher-fetch-failed:network-error": 1
+        }
+      },
+      {
+        "source": "스포츠조선 on MSN",
+        "items": 2,
+        "missing": 2,
+        "missingWithPublisherArticleUrl": 2,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 2
+        }
+      },
+      {
+        "source": "bntnews",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-fetch-failed:forbidden": 1
+        }
+      },
+      {
+        "source": "Forbes",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-fetch-failed:forbidden": 1
+        }
+      },
+      {
+        "source": "irblog.prnewswire.com",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 1
+        }
+      },
+      {
+        "source": "News18",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-fetch-failed:forbidden": 1
+        }
+      },
+      {
+        "source": "NewsEn on MSN",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 1
+        }
+      },
+      {
+        "source": "OSEN",
+        "items": 2,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 1
+        }
+      },
+      {
+        "source": "SPOTV NEWS on MSN",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 1
+        }
+      },
+      {
+        "source": "TechnoSports",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-fetch-failed:forbidden": 1
+        }
+      },
+      {
+        "source": "x",
+        "items": 3,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-fetch-failed:forbidden": 1
+        }
+      },
+      {
+        "source": "뉴스1 on MSN",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 1
+        }
+      },
+      {
+        "source": "뉴시스 on MSN",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 1
+        }
+      },
+      {
+        "source": "스타뉴스 on MSN",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 1
+        }
+      },
+      {
+        "source": "스포츠경향",
+        "items": 5,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 1
+        }
+      },
+      {
+        "source": "에프이타임스",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-fetch-failed:forbidden": 1
+        }
+      },
+      {
+        "source": "티브이데일리",
+        "items": 1,
+        "missing": 1,
+        "missingWithPublisherArticleUrl": 1,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 1
+        }
+      },
+      {
+        "source": "BroadwayWorld",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "en.koreadaily",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "en.sportalkorea.com",
+        "items": 3,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "Etnews.com",
+        "items": 2,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "Geo News",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "HANKOOKI",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "Indiatimes",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "KapanLagi",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "koreaboo",
+        "items": 4,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "Maeil Business Newspaper",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "NME",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "SBS",
+        "items": 4,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "soompi.com",
+        "items": 4,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "SportsKyunghyang",
+        "items": 4,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "SPOTV NEWS",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "The Express Tribune",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "The Hollywood Reporter",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "The Korea Times",
+        "items": 2,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "The Music Universe",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "Yahoo News",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "Yahoo奇摩新聞",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "Yonhap News Agency",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "경북일보",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "동아일보",
+        "items": 2,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "마이데일리",
+        "items": 2,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "매일경제",
+        "items": 6,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "서울신문",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "스타뉴스",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "스포츠서울",
+        "items": 4,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "스포츠한국",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "스포탈코리아",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "엑스포츠뉴스",
+        "items": 5,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "위키트리",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "인벤",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "조선비즈",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
+        "source": "조선일보",
+        "items": 9,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      }
+    ]
+  },
   "thumbnailAudit": {
-    "items": 883,
+    "items": 902,
     "withThumbnail": 355,
-    "missing": 528,
+    "missing": 547,
     "uniqueThumbnailUrls": 83,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 9,
     "uniqueThumbnailAssignmentRate": 23,
     "dominantThumbnailCount": 273,
-    "dominantThumbnailShare": 31,
+    "dominantThumbnailShare": 30,
     "concentrationWarning": true,
     "repeatedUrls": [
       {
@@ -554,161 +1070,42 @@
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
-    "newsCandidatesTotal": 883,
-    "newsUniqueFetched": 185,
-    "newsAddedLastRun": 30,
-    "duplicateBeforeMergeLastRun": 45,
-    "duplicateGroupsCurrent": 883,
+    "newsCandidatesTotal": 902,
+    "newsUniqueFetched": 236,
+    "newsAddedLastRun": 23,
+    "duplicateBeforeMergeLastRun": 39,
+    "duplicateGroupsCurrent": 902,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 230,
-      "after": 184,
-      "collapsed": 46,
+      "before": 275,
+      "after": 235,
+      "collapsed": 40,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 7,
-      "found": 3,
-      "assigned": 3,
+      "attempted": 0,
+      "found": 0,
+      "assigned": 0,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
-      "missing": 4,
+      "missing": 0,
       "failed": 0,
-      "results": [
-        {
-          "id": "0435eb600a40bcc67383",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://www.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
-              "source": "twitter:image",
-              "priority": 2
-            },
-            {
-              "url": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553_O2.jpg",
-              "source": "jsonld:thumbnailUrl",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.seoul.co.kr/news/entertainment/starinterN/2025/03/20/20250320500125",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.twig24.com/news/entertainment/starinterN/2025/03/20/20250320500125",
-          "resolvedArticleHost": "www.twig24.com"
-        },
-        {
-          "id": "5a627ec8a85422548eac",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189932219809.jpg",
-            "source": "twitter:image",
-            "priority": 2
-          },
-          "candidates": [
-            {
-              "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189932219809.jpg",
-              "source": "twitter:image",
-              "priority": 2
-            },
-            {
-              "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189945514678.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.xportsnews.com/article/1952261",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.xportsnews.com/article/1952261",
-          "resolvedArticleHost": "www.xportsnews.com"
-        },
-        {
-          "id": "2e4548c8956414ff6e59",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EC%96%B8%EA%B8%89-%EC%9E%AC%EC%A1%B0%EB%AA%85-%EC%95%88%EC%93%B0%EB%9F%AC%EC%9B%8C-%EC%9D%B4%EC%8A%88s/ar-AA2hFYnv",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EC%96%B8%EA%B8%89-%EC%9E%AC%EC%A1%B0%EB%AA%85-%EC%95%88%EC%93%B0%EB%9F%AC%EC%9B%8C-%EC%9D%B4%EC%8A%88s/ar-AA2hFYnv",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "26991bb167188e557634",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "0e854777bfd25ecfa7dc",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://file.sportsseoul.com/news/cms/2026/11/07/news-p.v1.20261107.d1f7017bdfd745e2a4f2639448b34734_T1.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://file.sportsseoul.com/news/cms/2026/11/07/news-p.v1.20261107.d1f7017bdfd745e2a4f2639448b34734_T1.jpg",
-              "source": "og:image",
-              "priority": 1
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.sportsseoul.com/news/read/1647956",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.sportsseoul.com/news/read/1647956",
-          "resolvedArticleHost": "www.sportsseoul.com"
-        },
-        {
-          "id": "58287bdfebac9a39d7ae",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/news/other/%EA%B1%B4%EA%B0%95%EB%B6%80%ED%84%B0-%EC%B1%99%EA%B2%A8%EC%95%BC-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B6%80%EC%A9%8D-%EC%95%BC%EC%9C%88-%EA%B7%BC%ED%99%A9%EC%97%90-%ED%8C%AC%EB%93%A4-%EA%B1%B1%EC%A0%95-%EC%8F%9F%EC%95%84%EC%A1%8C%EB%8B%A4/ar-AA2gWZa6",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/news/other/%EA%B1%B4%EA%B0%95%EB%B6%80%ED%84%B0-%EC%B1%99%EA%B2%A8%EC%95%BC-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B6%80%EC%A9%8D-%EC%95%BC%EC%9C%88-%EA%B7%BC%ED%99%A9%EC%97%90-%ED%8C%AC%EB%93%A4-%EA%B1%B1%EC%A0%95-%EC%8F%9F%EC%95%84%EC%A1%8C%EB%8B%A4/ar-AA2gWZa6",
-          "resolvedArticleHost": "www.msn.com"
-        },
-        {
-          "id": "5c8d5119fcd89f8155d4",
-          "status": "missing",
-          "candidate": null,
-          "candidates": [],
-          "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
-          "resolvedArticleHost": "www.msn.com"
-        }
-      ]
+      "results": []
     }
   },
   "sources": [
     {
       "source": "Google News",
-      "items": 773,
-      "withUrl": 773,
+      "items": 792,
+      "withUrl": 792,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 773,
+      "withDate": 792,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
-      "thumbnailCoverage": 35,
+      "thumbnailCoverage": 34,
       "dateCoverage": 100
     },
     {
@@ -1405,14 +1802,14 @@
     }
   ],
   "classification": {
-    "items": 883,
+    "items": 902,
     "categoryCounts": {
       "video": 187,
       "interview": 63,
-      "news": 532,
-      "brand": 30,
+      "news": 548,
+      "brand": 32,
       "event": 18,
-      "performance": 44,
+      "performance": 45,
       "official": 14
     },
     "reviewedSamples": 0,
@@ -2311,7 +2708,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 528,
+    "thumbnailMissing": 547,
     "results": [
       {
         "kind": "article",
@@ -2568,12 +2965,12 @@
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
     "metaFound": 82,
-    "metaAssigned": 3,
-    "assignmentRate": 100,
-    "latestRunAttempted": 7,
-    "latestRunFound": 3,
-    "latestRunAssigned": 3,
-    "latestRunAssignmentRate": 100,
+    "metaAssigned": 0,
+    "assignmentRate": null,
+    "latestRunAttempted": 0,
+    "latestRunFound": 0,
+    "latestRunAssigned": 0,
+    "latestRunAssignmentRate": null,
     "persistedMetaCandidateRecords": 82,
     "persistedThumbnailRecords": 82,
     "persistedThumbnailRecordsTotal": 355,
@@ -2761,8 +3158,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://file.sportsseoul.com/news/cms/2026/11/07/news-p.v1.20261107.d1f7017bdfd745e2a4f2639448b34734_T1.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -2996,8 +3393,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -3062,8 +3459,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189932219809.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -4832,7 +5229,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T20:13:34.169Z",
+    "generatedAt": "2026-11-26T23:53:22.434Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -6761,17 +7158,16 @@
     "sampledUniqueUrls": 12,
     "checked": 12,
     "nonImage": [],
-    "broken": [],
-    "unreachable": [
+    "broken": [
       {
         "url": "https://cdn.sportalkorea.com/news/photo/202610/2025052909553648816_2725470_1793077511.jpg",
-        "status": null,
-        "contentType": "",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
         "ok": false,
-        "isImage": false,
-        "error": "The operation was aborted due to timeout"
+        "isImage": false
       }
     ],
+    "unreachable": [],
     "rateLimited": [],
     "results": [
       {
@@ -6790,11 +7186,10 @@
       },
       {
         "url": "https://cdn.sportalkorea.com/news/photo/202610/2025052909553648816_2725470_1793077511.jpg",
-        "status": null,
-        "contentType": "",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
         "ok": false,
-        "isImage": false,
-        "error": "The operation was aborted due to timeout"
+        "isImage": false
       },
       {
         "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",

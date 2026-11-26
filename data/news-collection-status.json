@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-26T20:13:26.444Z",
+  "collectedAt": "2026-11-26T23:53:18.809Z",
   "searchPack": 0,
   "queries": [
     {
@@ -24,40 +24,40 @@
       "titleKeywordMatchRate": 95,
       "explicitPublisherUrls": 8,
       "explicitPublisherUrlRate": 14,
-      "crossQueryDuplicateUrls": 16,
+      "crossQueryDuplicateUrls": 11,
       "datedCandidates": 56,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 14725.2,
-      "p90PublicationLagHours": 25092.2
+      "medianPublicationLagHours": 14788.9,
+      "p90PublicationLagHours": 25587.9
     },
     {
       "query": "해원 엔믹스",
-      "candidates": 61,
+      "candidates": 111,
       "publicationFreshness": {
         "within7Days": 1,
-        "within30Days": 10,
-        "within90Days": 4,
-        "olderThan90Days": 46,
+        "within30Days": 27,
+        "within90Days": 45,
+        "olderThan90Days": 38,
         "unknown": 0,
         "future": 0,
-        "within7DaysRate": 2,
-        "within30DaysRate": 18
+        "within7DaysRate": 1,
+        "within30DaysRate": 25
       },
-      "uniqueCandidates": 61,
+      "uniqueCandidates": 111,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 59,
-      "titleKeywordMatchRate": 97,
+      "titleKeywordMatches": 105,
+      "titleKeywordMatchRate": 95,
       "explicitPublisherUrls": 11,
-      "explicitPublisherUrlRate": 18,
+      "explicitPublisherUrlRate": 10,
       "crossQueryDuplicateUrls": 7,
-      "datedCandidates": 61,
+      "datedCandidates": 111,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 14872.4,
-      "p90PublicationLagHours": 39949.2
+      "medianPublicationLagHours": 1792.9,
+      "p90PublicationLagHours": 3856.9
     },
     {
       "query": "NMIXX Haewon news",
@@ -80,12 +80,12 @@
       "titleKeywordMatchRate": 41,
       "explicitPublisherUrls": 11,
       "explicitPublisherUrlRate": 30,
-      "crossQueryDuplicateUrls": 17,
+      "crossQueryDuplicateUrls": 19,
       "datedCandidates": 37,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 8028.2,
-      "p90PublicationLagHours": 27449.4
+      "medianPublicationLagHours": 9727.9,
+      "p90PublicationLagHours": 27453.1
     },
     {
       "query": "Haewon NMIXX news",
@@ -104,16 +104,16 @@
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 15,
-      "titleKeywordMatchRate": 75,
+      "titleKeywordMatches": 14,
+      "titleKeywordMatchRate": 70,
       "explicitPublisherUrls": 10,
       "explicitPublisherUrlRate": 50,
       "crossQueryDuplicateUrls": 16,
       "datedCandidates": 20,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 10064.7,
-      "p90PublicationLagHours": 21661.2
+      "medianPublicationLagHours": 8879.9,
+      "p90PublicationLagHours": 23433.5
     },
     {
       "query": "오해원 근황",
@@ -121,8 +121,8 @@
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 6,
-        "within90Days": 12,
-        "olderThan90Days": 21,
+        "within90Days": 15,
+        "olderThan90Days": 18,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
@@ -132,44 +132,44 @@
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 38,
-      "titleKeywordMatchRate": 97,
+      "titleKeywordMatches": 32,
+      "titleKeywordMatchRate": 82,
       "explicitPublisherUrls": 11,
       "explicitPublisherUrlRate": 28,
-      "crossQueryDuplicateUrls": 14,
+      "crossQueryDuplicateUrls": 11,
       "datedCandidates": 39,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 7884.2,
-      "p90PublicationLagHours": 24857
+      "medianPublicationLagHours": 1624.9,
+      "p90PublicationLagHours": 25206.3
     },
     {
       "query": "Haewon latest news",
-      "candidates": 17,
+      "candidates": 12,
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 0,
-        "within90Days": 4,
-        "olderThan90Days": 13,
+        "within90Days": 2,
+        "olderThan90Days": 10,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
         "within30DaysRate": 0
       },
-      "uniqueCandidates": 17,
+      "uniqueCandidates": 12,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 11,
-      "titleKeywordMatchRate": 65,
+      "titleKeywordMatches": 9,
+      "titleKeywordMatchRate": 75,
       "explicitPublisherUrls": 0,
       "explicitPublisherUrlRate": 0,
-      "crossQueryDuplicateUrls": 8,
-      "datedCandidates": 17,
+      "crossQueryDuplicateUrls": 7,
+      "datedCandidates": 12,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 11341.2,
-      "p90PublicationLagHours": 23067.6
+      "medianPublicationLagHours": 12136.9,
+      "p90PublicationLagHours": 22586.5
     }
   ],
   "requestedQueries": 6,
@@ -178,12 +178,12 @@
   "bingCandidates": 51,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 230,
-  "uniqueIncoming": 185,
-  "added": 30,
+  "fetched": 275,
+  "uniqueIncoming": 236,
+  "added": 23,
   "rssImageSignals": {
-    "items": 179,
-    "sourceUrlItems": 178,
+    "items": 224,
+    "sourceUrlItems": 221,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -196,7 +196,7 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 51,
+    "items": 52,
     "sourceUrlItems": 0,
     "publisherArticleUrlItems": 51,
     "mediaThumbnailTags": 0,
@@ -213,139 +213,20 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 7,
-    "found": 3,
-    "assigned": 3,
+    "attempted": 0,
+    "found": 0,
+    "assigned": 0,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
-    "missing": 4,
+    "missing": 0,
     "failed": 0,
-    "results": [
-      {
-        "id": "0435eb600a40bcc67383",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
-            "source": "og:image",
-            "priority": 1
-          },
-          {
-            "url": "https://www.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
-            "source": "twitter:image",
-            "priority": 2
-          },
-          {
-            "url": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553_O2.jpg",
-            "source": "jsonld:thumbnailUrl",
-            "priority": 5
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://www.seoul.co.kr/news/entertainment/starinterN/2025/03/20/20250320500125",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.twig24.com/news/entertainment/starinterN/2025/03/20/20250320500125",
-        "resolvedArticleHost": "www.twig24.com"
-      },
-      {
-        "id": "5a627ec8a85422548eac",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189932219809.jpg",
-          "source": "twitter:image",
-          "priority": 2
-        },
-        "candidates": [
-          {
-            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189932219809.jpg",
-            "source": "twitter:image",
-            "priority": 2
-          },
-          {
-            "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189945514678.jpg",
-            "source": "jsonld:image",
-            "priority": 5
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://www.xportsnews.com/article/1952261",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.xportsnews.com/article/1952261",
-        "resolvedArticleHost": "www.xportsnews.com"
-      },
-      {
-        "id": "2e4548c8956414ff6e59",
-        "status": "missing",
-        "candidate": null,
-        "candidates": [],
-        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EC%96%B8%EA%B8%89-%EC%9E%AC%EC%A1%B0%EB%AA%85-%EC%95%88%EC%93%B0%EB%9F%AC%EC%9B%8C-%EC%9D%B4%EC%8A%88s/ar-AA2hFYnv",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EC%96%B8%EA%B8%89-%EC%9E%AC%EC%A1%B0%EB%AA%85-%EC%95%88%EC%93%B0%EB%9F%AC%EC%9B%8C-%EC%9D%B4%EC%8A%88s/ar-AA2hFYnv",
-        "resolvedArticleHost": "www.msn.com"
-      },
-      {
-        "id": "26991bb167188e557634",
-        "status": "missing",
-        "candidate": null,
-        "candidates": [],
-        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
-        "resolvedArticleHost": "www.msn.com"
-      },
-      {
-        "id": "0e854777bfd25ecfa7dc",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://file.sportsseoul.com/news/cms/2026/11/07/news-p.v1.20261107.d1f7017bdfd745e2a4f2639448b34734_T1.jpg",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://file.sportsseoul.com/news/cms/2026/11/07/news-p.v1.20261107.d1f7017bdfd745e2a4f2639448b34734_T1.jpg",
-            "source": "og:image",
-            "priority": 1
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://www.sportsseoul.com/news/read/1647956",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.sportsseoul.com/news/read/1647956",
-        "resolvedArticleHost": "www.sportsseoul.com"
-      },
-      {
-        "id": "58287bdfebac9a39d7ae",
-        "status": "missing",
-        "candidate": null,
-        "candidates": [],
-        "publisherArticleUrl": "https://www.msn.com/ko-kr/news/other/%EA%B1%B4%EA%B0%95%EB%B6%80%ED%84%B0-%EC%B1%99%EA%B2%A8%EC%95%BC-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B6%80%EC%A9%8D-%EC%95%BC%EC%9C%88-%EA%B7%BC%ED%99%A9%EC%97%90-%ED%8C%AC%EB%93%A4-%EA%B1%B1%EC%A0%95-%EC%8F%9F%EC%95%84%EC%A1%8C%EB%8B%A4/ar-AA2gWZa6",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.msn.com/ko-kr/news/other/%EA%B1%B4%EA%B0%95%EB%B6%80%ED%84%B0-%EC%B1%99%EA%B2%A8%EC%95%BC-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B6%80%EC%A9%8D-%EC%95%BC%EC%9C%88-%EA%B7%BC%ED%99%A9%EC%97%90-%ED%8C%AC%EB%93%A4-%EA%B1%B1%EC%A0%95-%EC%8F%9F%EC%95%84%EC%A1%8C%EB%8B%A4/ar-AA2gWZa6",
-        "resolvedArticleHost": "www.msn.com"
-      },
-      {
-        "id": "5c8d5119fcd89f8155d4",
-        "status": "missing",
-        "candidate": null,
-        "candidates": [],
-        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
-        "resolvedArticleHost": "www.msn.com"
-      }
-    ]
+    "results": []
   },
   "deduplicationComparison": {
-    "before": 230,
-    "after": 184,
-    "collapsed": 46,
+    "before": 275,
+    "after": 235,
+    "collapsed": 40,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 883
+  "totalCandidates": 902
 }
