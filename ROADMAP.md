@@ -552,3 +552,13 @@
 - [ ] Verify post-merge Production/data commit/Pages deployment.
 - [ ] Perform actual Android/mobile browser QA; automated source/CSS checks do not establish device behavior.
 - [ ] Collect human-reviewed article labels; repository review set remains empty.
+
+
+## Mobile review accessibility — Production verified
+- [x] PR #44 merged after CI #51 passed 195/195 tests and archive validation.
+- [x] Production #603 passed tests, collection, data validation, data commit, Pages artifact upload and Pages deployment.
+- [x] Generated data commit `7753a02be1ad512a44348b67e483ee75038c6b7a` recorded.
+- [ ] Perform real Android/mobile browser QA: narrow viewport, tap target comfort, keyboard focus, scroll/auto-advance, JSON download/import and storage quota failures.
+- [ ] Collect voluntary human-review labels; repository label set remains empty.
+- [ ] Compare repeated query packs using actual human-reviewed relevance, not only freshness/title proxies.
+- [ ] Continue thumbnail-source investigation; latest enrichment attempted 0, 504 missing remain, preserve 273 legacy assignments.
