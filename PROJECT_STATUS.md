@@ -733,3 +733,11 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Run #601 news sample: 94 fetched / 88 unique / 39 added; Google and Bing each completed all 6 query requests. Pack 5 had 0/94 within 7 days and 7/94 within 8–30 days; 70/94 were older than 90 days. Do not infer relevance precision from title proxies or change pack selection from this single run.
 - Metadata enrichment attempted 2, assigned 2, missing 0, failed 0. Thumbnail response audit: 11/12 image responses, one Sportalkorea 404.
 - Review labels remain 0 in repository; the new pending-only/next-pending controls are deployed, but the real mobile visual/tap-target QA remains unverified. Public-site web preview could not be fetched by the research browser; Actions deployment success is confirmed.
+
+
+## 2026-11-26 — Review queue auto-advance (PR #43 pending)
+- Live baseline rechecked: main `9beb7c115af632679d916c600a7be872f74ba2fc`; zero open PRs before this cycle. Latest known production checkpoint remains #601 with generated data commit `45af9e62b6b06da3abf99399897c5c6f0b186475`; the latest Actions run list could not be retrieved through the available GitHub connector in this cycle, so no newer run is claimed.
+- Follow-up diagnosis: after the final one of seven review dimensions is completed in pending-only mode, the row is removed by a full render but focus is not advanced. This interrupts consecutive mobile review.
+- PR #43 adds deterministic next-pending selection, advances after completion, wraps to the first remaining pending article, and announces the all-complete state. Labels remain localStorage-only with manual JSON import/export.
+- Added regression tests for forward progression, wraparound and empty queue. PR CI/archive validation and merge remain pending at this checkpoint; real mobile/device QA remains unverified.
+- No data files, sources, secrets, legacy thumbnails or collection behavior changed. No paid service, automatic upload or new RSS source was added.
