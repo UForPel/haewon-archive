@@ -360,3 +360,12 @@ The assistant MUST render a real clickable button at the very bottom of every co
 - PR #44 CI #48 passed 195 tests and archive validation. Merge and Production deployment are pending final verification.
 - Required manual QA: Android viewport, scroll/focus after auto-advance, tap target comfort, download/import round trip, and storage quota failure.
 - Keep the ChatGPT conversation continuation button as the final element in every completed cycle.
+
+
+## 2026-11-26 — Mobile review accessibility merged and deployed
+- PR #44 merged as `a81bbdbded2841aa9c45beaa74c5c98b22ae7891`; PR CI #51 passed 195/195 tests and archive validation.
+- Production #603 succeeded; generated data commit `7753a02be1ad512a44348b67e483ee75038c6b7a`, Pages artifact `15086806938`, deployment created for merge SHA.
+- Review controls now have 44px minimum target height, keyboard-visible focus and narrow-screen layout. Browser-local writes are transactional; manual JSON import/export has clearer feedback and preserves existing labels on failure.
+- Real Android/mobile QA remains mandatory and unverified. Repository has no browser automation dependency; do not imply that CSS contract tests simulate a phone.
+- Latest data: 856 candidates, 76 verified Haewon articles, zero committed review labels, 352 assigned / 504 missing thumbnails. Preserve all 273 legacy shared-image assignments.
+- Always finish each completed cycle with the full-prompt **🔄 재귀개선 계속하기** conversation button.
