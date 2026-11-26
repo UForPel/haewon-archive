@@ -80,6 +80,15 @@ export function filterArticleReviews(items = [], labels = {}, scope = 'all') {
   return scope === 'pending' ? items.filter(item => !isArticleReviewComplete(item, labels)) : items;
 }
 
+export function getNextPendingArticle(items = [], labels = {}, afterArticleId = null) {
+  const pending = filterArticleReviews(items, labels, 'pending');
+  if (!pending.length) return null;
+  if (afterArticleId === null || afterArticleId === undefined) return pending[0];
+  const currentIndex = items.findIndex(item => String(item.id) === String(afterArticleId));
+  if (currentIndex < 0) return pending[0];
+  return pending.find(item => items.findIndex(candidate => String(candidate.id) === String(item.id)) > currentIndex) || pending[0];
+}
+
 export function summarizeArticleReviews(items = [], labels = {}) {
   const eligible = getVerifiedHaewonArticles(items);
   const dimensions = {};
