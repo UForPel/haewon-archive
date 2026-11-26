@@ -216,3 +216,11 @@ Gemini does not have permission to alter these rules or the validators enforcing
 ## 2026-11-26 — Review queue merge checkpoint
 - The pending-only and next-pending controls are merged, but deployment must be verified before treating them as production-visible.
 - No automatic review-label upload was introduced. Existing localStorage/manual JSON transfer boundary remains unchanged.
+
+
+## 2026-11-26 — Review queue deployment and current data
+- PR #42 review queue controls are deployed after successful Production #601.
+- Current data: 855 discovery candidates; 76 verified Haewon article candidates; zero committed human review labels.
+- Pack 5: 94 fetched / 88 unique / 39 added; 0 within 7 days, 7 in days 8–30, 70 older than 90 days. This is one sample only; do not auto-filter or change search strategy based on it.
+- Metadata enrichment attempted 2 and assigned 2; 273 legacy shared-image assignments remain untouched.
+- Manual review labels remain local-only unless the user explicitly exports/imports them. No automatic transfer.
