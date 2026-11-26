@@ -640,3 +640,5 @@
 - [ ] Obtain user-reported Android Chrome QA; do not substitute CI.
 - [ ] Gather human article labels (0 currently) and thumbnail reviews (0/482 currently).
 - Keep 273 legacy shared-image records unchanged; no new RSS without permission; no search-pack changes without repeated observations and human labels.
+
+- Validation correction: initial PR CI run `45792852673` executed 202 tests but failed one new source-contract assertion because the test regex was over-escaped; application code and the sequence test logic were not the reported failure. The assertion escaping was corrected in commit `eaf649630c18b8607f4723ea0a2d91995fa698cd`. Re-run CI before merge; do not treat the first run as passed.
