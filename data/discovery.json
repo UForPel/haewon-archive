@@ -1205,6 +1205,59 @@
     "publisherArticleUrl": ""
   },
   {
+    "id": "0e854777bfd25ecfa7dc",
+    "title": "“건강부터 챙겨야”… 오해원, 부쩍 야윈 근황에 팬들 걱정 쏟아졌다",
+    "url": "https://www.sportsseoul.com/news/read/1647956",
+    "publisherArticleUrl": "https://www.sportsseoul.com/news/read/1647956",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e9d3d34acf93113e8870836951&url=https%3a%2f%2fwww.sportsseoul.com%2fnews%2fread%2f1647956&c=17065769348663721410&mkt=ko-kr",
+    "publisherHost": "www.sportsseoul.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%98%A4%ED%95%B4%EC%9B%90%20%EA%B7%BC%ED%99%A9&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e9d3d34acf93113e8870836951&url=https%3a%2f%2fwww.sportsseoul.com%2fnews%2fread%2f1647956&c=17065769348663721410&mkt=ko-kr",
+        "articleUrl": "https://www.sportsseoul.com/news/read/1647956",
+        "host": "www.sportsseoul.com"
+      }
+    ],
+    "publishedAt": "2026-11-07T11:57:00.000Z",
+    "description": "[스포츠서울 | 이현승 기자] 그룹 엔믹스(NMIXX) 멤버 오해원이 한층 마른 모습으로 등장해 팬들의 걱정을 사고 있다. 오해원은 최근 공개된 유튜브 채널 ‘효연의 레벨업’ 콘텐츠에 출연해 그룹 ...",
+    "thumbnailUrl": "https://file.sportsseoul.com/news/cms/2026/11/07/news-p.v1.20261107.d1f7017bdfd745e2a4f2639448b34734_T1.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "스포츠서울",
+    "discoverySource": "bing-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://file.sportsseoul.com/news/cms/2026/11/07/news-p.v1.20261107.d1f7017bdfd745e2a4f2639448b34734_T1.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.sportsseoul.com/news/read/1647956",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.sportsseoul.com/news/read/1647956",
+      "resolvedArticleHost": "www.sportsseoul.com",
+      "fetchedAt": "2026-11-26T20:13:29.714Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://file.sportsseoul.com/news/cms/2026/11/07/news-p.v1.20261107.d1f7017bdfd745e2a4f2639448b34734_T1.jpg",
+      "articleUrl": "https://www.sportsseoul.com/news/read/1647956",
+      "observedAt": "2026-11-26T20:13:29.714Z"
+    }
+  },
+  {
     "id": "2895de96653834d148b0",
     "title": "엔믹스 오해원, 추구미 바꿨다더니…쏙 빠진 볼살에 헐렁한 옷→”건강 챙기길” - TV리포트",
     "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBERTVGV00yV09ERXhZQl95bmhHamw4ZDhvZnN0YmJZZUJtQ3M3ekx6cklaRURfSXVKN3JEZklCQldfR2k5OGRmZENlTlB2NzZobnp0ZzVyXzhOcjk5d1VJeGZiTdIBaEFVX3lxTE91TzZOaGRJZTRLVFlsWVE0a3dDcVlNWGJiLVNlSlZubzZUdFlUU3d4S25HY2VzeUtwbWhJX2VZUHhNcUVMT0JVa2oySlBXYkhFeWM3UVc5a0RNallTS3FVRjNDUDFJbmRu?oc=5",
@@ -1251,6 +1304,47 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "58287bdfebac9a39d7ae",
+    "title": "건강부터 챙겨야… 오해원, 부쩍 야윈 근황에 팬들 걱정 쏟아졌다",
+    "url": "https://www.msn.com/ko-kr/news/other/%EA%B1%B4%EA%B0%95%EB%B6%80%ED%84%B0-%EC%B1%99%EA%B2%A8%EC%95%BC-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B6%80%EC%A9%8D-%EC%95%BC%EC%9C%88-%EA%B7%BC%ED%99%A9%EC%97%90-%ED%8C%AC%EB%93%A4-%EA%B1%B1%EC%A0%95-%EC%8F%9F%EC%95%84%EC%A1%8C%EB%8B%A4/ar-AA2gWZa6",
+    "publisherArticleUrl": "https://www.msn.com/ko-kr/news/other/%EA%B1%B4%EA%B0%95%EB%B6%80%ED%84%B0-%EC%B1%99%EA%B2%A8%EC%95%BC-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B6%80%EC%A9%8D-%EC%95%BC%EC%9C%88-%EA%B7%BC%ED%99%A9%EC%97%90-%ED%8C%AC%EB%93%A4-%EA%B1%B1%EC%A0%95-%EC%8F%9F%EC%95%84%EC%A1%8C%EB%8B%A4/ar-AA2gWZa6",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e9d3d34acf93113e8870836951&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fnews%2fother%2f%25EA%25B1%25B4%25EA%25B0%2595%25EB%25B6%2580%25ED%2584%25B0-%25EC%25B1%2599%25EA%25B2%25A8%25EC%2595%25BC-%25EC%2598%25A4%25ED%2595%25B4%25EC%259B%2590-%25EB%25B6%2580%25EC%25A9%258D-%25EC%2595%25BC%25EC%259C%2588-%25EA%25B7%25BC%25ED%2599%25A9%25EC%2597%2590-%25ED%258C%25AC%25EB%2593%25A4-%25EA%25B1%25B1%25EC%25A0%2595-%25EC%258F%259F%25EC%2595%2584%25EC%25A1%258C%25EB%258B%25A4%2far-AA2gWZa6&c=6555406106191191576&mkt=ko-kr",
+    "publisherHost": "www.msn.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%98%A4%ED%95%B4%EC%9B%90%20%EA%B7%BC%ED%99%A9&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e9d3d34acf93113e8870836951&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fnews%2fother%2f%25EA%25B1%25B4%25EA%25B0%2595%25EB%25B6%2580%25ED%2584%25B0-%25EC%25B1%2599%25EA%25B2%25A8%25EC%2595%25BC-%25EC%2598%25A4%25ED%2595%25B4%25EC%259B%2590-%25EB%25B6%2580%25EC%25A9%258D-%25EC%2595%25BC%25EC%259C%2588-%25EA%25B7%25BC%25ED%2599%25A9%25EC%2597%2590-%25ED%258C%25AC%25EB%2593%25A4-%25EA%25B1%25B1%25EC%25A0%2595-%25EC%258F%259F%25EC%2595%2584%25EC%25A1%258C%25EB%258B%25A4%2far-AA2gWZa6&c=6555406106191191576&mkt=ko-kr",
+        "articleUrl": "https://www.msn.com/ko-kr/news/other/%EA%B1%B4%EA%B0%95%EB%B6%80%ED%84%B0-%EC%B1%99%EA%B2%A8%EC%95%BC-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B6%80%EC%A9%8D-%EC%95%BC%EC%9C%88-%EA%B7%BC%ED%99%A9%EC%97%90-%ED%8C%AC%EB%93%A4-%EA%B1%B1%EC%A0%95-%EC%8F%9F%EC%95%84%EC%A1%8C%EB%8B%A4/ar-AA2gWZa6",
+        "host": "www.msn.com"
+      }
+    ],
+    "publishedAt": "2026-11-07T02:56:00.000Z",
+    "description": "[스포츠서울 | 이현승 기자] 그룹 엔믹스(NMIXX) 멤버 오해원이 한층 마른 모습으로 등장해 팬들의 걱정을 사고 있다. 오해원은 최근 공개된 유튜브 채널 ‘효연의 레벨업’ 콘텐츠에 출연해 그룹 ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "MSN",
+    "discoverySource": "bing-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "missing",
+      "publisherArticleUrl": "https://www.msn.com/ko-kr/news/other/%EA%B1%B4%EA%B0%95%EB%B6%80%ED%84%B0-%EC%B1%99%EA%B2%A8%EC%95%BC-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B6%80%EC%A9%8D-%EC%95%BC%EC%9C%88-%EA%B7%BC%ED%99%A9%EC%97%90-%ED%8C%AC%EB%93%A4-%EA%B1%B1%EC%A0%95-%EC%8F%9F%EC%95%84%EC%A1%8C%EB%8B%A4/ar-AA2gWZa6",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.msn.com/ko-kr/news/other/%EA%B1%B4%EA%B0%95%EB%B6%80%ED%84%B0-%EC%B1%99%EA%B2%A8%EC%95%BC-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B6%80%EC%A9%8D-%EC%95%BC%EC%9C%88-%EA%B7%BC%ED%99%A9%EC%97%90-%ED%8C%AC%EB%93%A4-%EA%B1%B1%EC%A0%95-%EC%8F%9F%EC%95%84%EC%A1%8C%EB%8B%A4/ar-AA2gWZa6",
+      "resolvedArticleHost": "www.msn.com",
+      "fetchedAt": "2026-11-26T20:13:29.714Z",
+      "statusCode": 200,
+      "errorCode": ""
+    }
   },
   {
     "id": "bdc568387aaec606a9a6",
@@ -1306,6 +1400,47 @@
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/news/other/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
       "resolvedArticleHost": "www.msn.com",
       "fetchedAt": "2026-11-26T00:23:27.516Z",
+      "statusCode": 200,
+      "errorCode": ""
+    }
+  },
+  {
+    "id": "5c8d5119fcd89f8155d4",
+    "title": "엔믹스 오해원, 방송서 발언… 매니저 급히 제지",
+    "url": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
+    "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e9d3d34acf93113e8870836951&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fentertainment%2fmusic%2f%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-%25EC%2598%25A4%25ED%2595%25B4%25EC%259B%2590-%25EB%25B0%25A9%25EC%2586%25A1%25EC%2584%259C-%25EB%25B0%259C%25EC%2596%25B8-%25EB%25A7%25A4%25EB%258B%2588%25EC%25A0%2580-%25EA%25B8%2589%25ED%259E%2588-%25EC%25A0%259C%25EC%25A7%2580%2far-AA2ghYNl&c=9728912150567706988&mkt=ko-kr",
+    "publisherHost": "www.msn.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%98%A4%ED%95%B4%EC%9B%90%20%EA%B7%BC%ED%99%A9&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e9d3d34acf93113e8870836951&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fentertainment%2fmusic%2f%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-%25EC%2598%25A4%25ED%2595%25B4%25EC%259B%2590-%25EB%25B0%25A9%25EC%2586%25A1%25EC%2584%259C-%25EB%25B0%259C%25EC%2596%25B8-%25EB%25A7%25A4%25EB%258B%2588%25EC%25A0%2580-%25EA%25B8%2589%25ED%259E%2588-%25EC%25A0%259C%25EC%25A7%2580%2far-AA2ghYNl&c=9728912150567706988&mkt=ko-kr",
+        "articleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
+        "host": "www.msn.com"
+      }
+    ],
+    "publishedAt": "2026-10-28T17:01:00.000Z",
+    "description": "엔믹스 오해원이 '개그콘서트' 공개재판에 게스트로 출연했다. 본업에서 예쁜 척하는 게 킹받는다고 말했고, 매니저가 다급하게 말렸다. 최근 컴백한 엔믹스는 11월 27~29일 앙코르 콘서트를 연다.",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "MSN",
+    "discoverySource": "bing-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "missing",
+      "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
+      "resolvedArticleHost": "www.msn.com",
+      "fetchedAt": "2026-11-26T20:13:29.714Z",
       "statusCode": 200,
       "errorCode": ""
     }
@@ -1451,6 +1586,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "3716bd5af2899441e73d",
+    "title": "엔믹스 오해원 \"추구미는 어른 여자\"…슬림해진 근황 - 세계일보",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1pMDVpb2JmMXUxUEhkaFVzSlJKUVRUVjlwYTl3UUFCNVJQOXhISUs4NVdmSExvQjEwNGZXUGFVYjNCaDhwNi1vS1dOR2YxVGg0TmRCbdIBVEFVX3lxTE1pMDVpb2JmMXUxUEhkaFVzSlJKUVRUVjlwYTl3UUFCNVJQOXhISUs4NVdmSExvQjEwNGZXUGFVYjNCaDhwNi1vS1dOR2YxVGg0TmRCbQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.segye.com",
+    "publishedAt": "2026-10-26T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE1pMDVpb2JmMXUxUEhkaFVzSlJKUVRUVjlwYTl3UUFCNVJQOXhISUs4NVdmSExvQjEwNGZXUGFVYjNCaDhwNi1vS1dOR2YxVGg0TmRCbdIBVEFVX3lxTE1pMDVpb2JmMXUxUEhkaFVzSlJKUVRUVjlwYTl3UUFCNVJQOXhISUs4NVdmSExvQjEwNGZXUGFVYjNCaDhwNi1vS1dOR2YxVGg0TmRCbQ?oc=5\" target=\"_blank\">엔믹스 오해원 \"추구미는 어른 여자\"…슬림해진 근황</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">세계일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 8
   },
   {
     "id": "2d113e9520d071570889",
@@ -2783,6 +2936,69 @@
     "publisherArticleUrl": ""
   },
   {
+    "id": "0435eb600a40bcc67383",
+    "title": "엔믹스 오해원, ‘父 헛소문’ 굳이 해명하지 않았던 ‘뜻밖의 이유’",
+    "url": "https://www.seoul.co.kr/news/entertainment/starinterN/2025/03/20/20250320500125",
+    "publisherArticleUrl": "https://www.seoul.co.kr/news/entertainment/starinterN/2025/03/20/20250320500125",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e9d3d34acf93113e8870836951&url=https%3a%2f%2fwww.seoul.co.kr%2fnews%2fentertainment%2fstarinterN%2f2025%2f03%2f20%2f20250320500125&c=17873682567994307837&mkt=ko-kr",
+    "publisherHost": "www.seoul.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%98%A4%ED%95%B4%EC%9B%90%20%EA%B7%BC%ED%99%A9&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e9d3d34acf93113e8870836951&url=https%3a%2f%2fwww.seoul.co.kr%2fnews%2fentertainment%2fstarinterN%2f2025%2f03%2f20%2f20250320500125&c=17873682567994307837&mkt=ko-kr",
+        "articleUrl": "https://www.seoul.co.kr/news/entertainment/starinterN/2025/03/20/20250320500125",
+        "host": "www.seoul.co.kr"
+      }
+    ],
+    "publishedAt": "2025-03-20T07:26:00.000Z",
+    "description": "그룹 엔믹스(NMIXX)의 멤버 해원(22&#183;본명 오해원)이 자신의 가족과 어린 시절에 관한 소문을 언급했다. 20일 유튜브 채널 ‘뜬뜬’에는 해원과 설윤, 배이 등 엔믹스의 멤버들이 초대 손님으로 ...",
+    "thumbnailUrl": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "서울신문",
+    "discoverySource": "bing-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://www.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
+        "source": "twitter:image",
+        "priority": 2
+      },
+      {
+        "url": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553_O2.jpg",
+        "source": "jsonld:thumbnailUrl",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.seoul.co.kr/news/entertainment/starinterN/2025/03/20/20250320500125",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.twig24.com/news/entertainment/starinterN/2025/03/20/20250320500125",
+      "resolvedArticleHost": "www.twig24.com",
+      "fetchedAt": "2026-11-26T20:13:29.714Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://img.seoul.co.kr//img/upload/2025/03/20/SSC_20250320142553.jpg.webp",
+      "articleUrl": "https://www.twig24.com/news/entertainment/starinterN/2025/03/20/20250320500125",
+      "observedAt": "2026-11-26T20:13:29.714Z"
+    }
+  },
+  {
     "id": "a87dffda08b88715d8ae",
     "title": "엔믹스 오해원, ‘父 헛소문’ 굳이 해명하지 않았던 ‘뜻밖의 이유’ - TWIG",
     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUkZlQWNhV3UwSDBibDhVU3VsMTNaVkxNVTcxX3VlcjhzUnZsTUZRVlJ5QmlrRmRIUGZWS0ZSV2QyV1ZGNlB0MDNySUJ2S2trUHZucmN0NWdtNHY5UDBGeFJWV1llVFNvNTVtUEFkSWlaWWFnYXkya2xwX0RIUDIxa3YwRHM?oc=5",
@@ -2977,6 +3193,64 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "5a627ec8a85422548eac",
+    "title": "미주, 오해원 기강 잡았다…\"조심해\" 충고 (놀뭐)",
+    "url": "https://www.xportsnews.com/article/1952261",
+    "publisherArticleUrl": "https://www.xportsnews.com/article/1952261",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e9d3d34acf93113e8870836951&url=https%3a%2f%2fwww.xportsnews.com%2farticle%2f1952261&c=15620059835189572679&mkt=ko-kr",
+    "publisherHost": "www.xportsnews.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%98%A4%ED%95%B4%EC%9B%90%20%EA%B7%BC%ED%99%A9&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e9d3d34acf93113e8870836951&url=https%3a%2f%2fwww.xportsnews.com%2farticle%2f1952261&c=15620059835189572679&mkt=ko-kr",
+        "articleUrl": "https://www.xportsnews.com/article/1952261",
+        "host": "www.xportsnews.com"
+      }
+    ],
+    "publishedAt": "2025-01-18T09:46:00.000Z",
+    "description": "(엑스포츠뉴스 이예진 기자) '놀면 뭐하니?' 미주가 NMIXX 해원에게 충고를 건네며 기강을 잡는다. 1월 18일 방송되는 MBC ‘놀면 뭐하니?’에서는 윈터송 리메이크 음원 발매 프로젝트가 그려진다.",
+    "thumbnailUrl": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189932219809.jpg",
+    "thumbnailSource": "twitter:image",
+    "thumbnailCandidates": [],
+    "sourceName": "엑스포츠뉴스",
+    "discoverySource": "bing-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189932219809.jpg",
+        "source": "twitter:image",
+        "priority": 2
+      },
+      {
+        "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189945514678.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.xportsnews.com/article/1952261",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.xportsnews.com/article/1952261",
+      "resolvedArticleHost": "www.xportsnews.com",
+      "fetchedAt": "2026-11-26T20:13:29.714Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "twitter:image",
+      "url": "https://image.xportsnews.com/contents/images/upload/article/2025/0118/1737189932219809.jpg",
+      "articleUrl": "https://www.xportsnews.com/article/1952261",
+      "observedAt": "2026-11-26T20:13:29.714Z"
+    }
   },
   {
     "id": "7a07e6cc52496c1b10e1",
@@ -4255,6 +4529,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "0e1e9f4b30b1ae757b1b",
+    "title": "엔믹스 해원, 눈빛이 러블리한 '오해원' [포토엔HD] - 네이트",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9STHdXaUxubWxrbWdGSTB4Y216aURsVmhhOURiMk5MZTZ3eDRDNmRQTUk4WGJSYmRDZFRUYzRleHVRRlBaTXNvVldheC1GTXlnbFRF?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://news.nate.com",
+    "publishedAt": "2023-03-07T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE9STHdXaUxubWxrbWdGSTB4Y216aURsVmhhOURiMk5MZTZ3eDRDNmRQTUk4WGJSYmRDZFRUYzRleHVRRlBaTXNvVldheC1GTXlnbFRF?oc=5\" target=\"_blank\">엔믹스 해원, 눈빛이 러블리한 '오해원' [포토엔HD]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 8
   },
   {
     "id": "e366dd0bba521e4365de",
@@ -5907,6 +6199,24 @@
     "candidateSource": ""
   },
   {
+    "id": "db36472b21f5c8739349",
+    "title": "오해원 금발 존예 - 네이트 판",
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbjdIRzB2c0FudlF5bzNGTUJrc0ZmZ0xlcE9NNzUtN05wN2JHNDg2QVp1cU9YZUJWNGJRMlh4Y0ZWWWdLLXMyRHZzYzRtWjF1TG13MUl2Z3BrWERZdDNqTGRfM1JFZ0wtd1JJZEVCOE52ZHRpeWpjUE1SR0ZVSjYxTEtpaW9TRVNWQzk0X3dWZEd3dW82UGc?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.pann.nate.com",
+    "publishedAt": "2026-01-02T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQbjdIRzB2c0FudlF5bzNGTUJrc0ZmZ0xlcE9NNzUtN05wN2JHNDg2QVp1cU9YZUJWNGJRMlh4Y0ZWWWdLLXMyRHZzYzRtWjF1TG13MUl2Z3BrWERZdDNqTGRfM1JFZ0wtd1JJZEVCOE52ZHRpeWpjUE1SR0ZVSjYxTEtpaW9TRVNWQzk0X3dWZEd3dW82UGc?oc=5\" target=\"_blank\">오해원 금발 존예</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트 판</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
     "id": "0fa151c231c11e342675",
     "title": "오해원 입꼬리가 어떻게 ‘듀’, ‘뿅’, ‘뀹’? - 에스콰이어 코리아",
     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBhMENNYjJVUTZiSUhFZlBLMzlFY1pnS2tPcTFGbFRMcURZWWR5M1R6UkVHTHNpb0xFV21scEhhb2RDOWdtZHlZVDhhS1d5YkZkbTVaYzZHUzk5QQ?oc=5",
@@ -6899,6 +7209,42 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "publisherArticleUrl": ""
+  },
+  {
+    "id": "718ed90e6ab177f1a61c",
+    "title": "유재석도 깜짝…오해원, 하루 커피 무려 24포 먹는다 “상 줘야 할 듯” - Daum",
+    "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9vRnUydjVlOEFXdHY1TzlOaXJWV0NvdzRqRm5VVU9vYV9MZGFGTXU4b2dINXA3NVJsakRNZDg5V1BadXJvRkE?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://v.daum.net",
+    "publishedAt": "2025-03-20T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiRkFVX3lxTE9vRnUydjVlOEFXdHY1TzlOaXJWV0NvdzRqRm5VVU9vYV9MZGFGTXU4b2dINXA3NVJsakRNZDg5V1BadXJvRkE?oc=5\" target=\"_blank\">유재석도 깜짝…오해원, 하루 커피 무려 24포 먹는다 “상 줘야 할 듯”</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Daum</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
+    "id": "3898173d92f0014d9122",
+    "title": "유재석도 깜짝…오해원, 하루 커피 무려 24포 먹는다 \"상 줘야 할 듯\" - 네이트",
+    "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5jMUpXRDk5LU5nRE12SEdLRnhXcGVsLUcwODZrS0lWV29GN3JMWG9xNUFPd0UxNTQwc2U3QWlobFM1NmZHeS11QjloWlliT1AzUFRj?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://news.nate.com",
+    "publishedAt": "2025-03-20T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE5jMUpXRDk5LU5nRE12SEdLRnhXcGVsLUcwODZrS0lWV29GN3JMWG9xNUFPd0UxNTQwc2U3QWlobFM1NmZHeS11QjloWlliT1AzUFRj?oc=5\" target=\"_blank\">유재석도 깜짝…오해원, 하루 커피 무려 24포 먹는다 \"상 줘야 할 듯\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 6
   },
   {
     "id": "93d986538d8c269dfe9c",
@@ -8443,6 +8789,24 @@
     "candidateSource": ""
   },
   {
+    "id": "c16d34387e10c327f962",
+    "title": "[오해원의 깨톡]미국서 확인한 박지성의 존재감 - 노컷뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5CVG1kOWw0Mk9FV0tZZzlUQy00bDljNDl5ZVdLNVE1T0tERERIeGRYeEhnMVVSX2k3aFFjdERTODVpS1oxTF96YnFLeVlpSEtCN0E?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.nocutnews.co.kr",
+    "publishedAt": "2014-06-09T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5CVG1kOWw0Mk9FV0tZZzlUQy00bDljNDl5ZVdLNVE1T0tERERIeGRYeEhnMVVSX2k3aFFjdERTODVpS1oxTF96YnFLeVlpSEtCN0E?oc=5\" target=\"_blank\">[오해원의 깨톡]미국서 확인한 박지성의 존재감</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">노컷뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
     "id": "94683f2727ed302a289e",
     "title": "엔믹스 해원, 컨디션 난조로 바르셀로나 무대 불참…5인 체제 공연 - https://www.frame-less.co.kr/",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1zOEtvQkxOVVRLQWIwcThmTDNyY3k4aWI3Y0FEc0g3UXZKQVFoR21rYzluVExJa0RFRVBTbzJxcmduU0xOVnBWMWZOUGlheFBCTFJoOGhKN0x0UG9jS1pWaTdqZnE0azNadVRZM2Jn?oc=5",
@@ -9327,6 +9691,47 @@
     }
   },
   {
+    "id": "2e4548c8956414ff6e59",
+    "title": "'뼈말라' 된 엔믹스 해원, '외모 강박' 언급 재조명… 안쓰러워 [이슈S]",
+    "url": "https://www.msn.com/ko-kr/entertainment/music/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EC%96%B8%EA%B8%89-%EC%9E%AC%EC%A1%B0%EB%AA%85-%EC%95%88%EC%93%B0%EB%9F%AC%EC%9B%8C-%EC%9D%B4%EC%8A%88s/ar-AA2hFYnv",
+    "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EC%96%B8%EA%B8%89-%EC%9E%AC%EC%A1%B0%EB%AA%85-%EC%95%88%EC%93%B0%EB%9F%AC%EC%9B%8C-%EC%9D%B4%EC%8A%88s/ar-AA2hFYnv",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e8055145e986eeab001e55843b&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fentertainment%2fmusic%2f%25EB%25BC%2588%25EB%25A7%2590%25EB%259D%25BC-%25EB%2590%259C-%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-%25ED%2595%25B4%25EC%259B%2590-%25EC%2599%25B8%25EB%25AA%25A8-%25EA%25B0%2595%25EB%25B0%2595-%25EC%2596%25B8%25EA%25B8%2589-%25EC%259E%25AC%25EC%25A1%25B0%25EB%25AA%2585-%25EC%2595%2588%25EC%2593%25B0%25EB%259F%25AC%25EC%259B%258C-%25EC%259D%25B4%25EC%258A%2588s%2far-AA2hFYnv&c=10379316382029862414&mkt=ko-kr",
+    "publisherHost": "www.msn.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%ED%95%B4%EC%9B%90%20%EC%97%94%EB%AF%B9%EC%8A%A4&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e8055145e986eeab001e55843b&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fentertainment%2fmusic%2f%25EB%25BC%2588%25EB%25A7%2590%25EB%259D%25BC-%25EB%2590%259C-%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-%25ED%2595%25B4%25EC%259B%2590-%25EC%2599%25B8%25EB%25AA%25A8-%25EA%25B0%2595%25EB%25B0%2595-%25EC%2596%25B8%25EA%25B8%2589-%25EC%259E%25AC%25EC%25A1%25B0%25EB%25AA%2585-%25EC%2595%2588%25EC%2593%25B0%25EB%259F%25AC%25EC%259B%258C-%25EC%259D%25B4%25EC%258A%2588s%2far-AA2hFYnv&c=10379316382029862414&mkt=ko-kr",
+        "articleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EC%96%B8%EA%B8%89-%EC%9E%AC%EC%A1%B0%EB%AA%85-%EC%95%88%EC%93%B0%EB%9F%AC%EC%9B%8C-%EC%9D%B4%EC%8A%88s/ar-AA2hFYnv",
+        "host": "www.msn.com"
+      }
+    ],
+    "publishedAt": "2026-11-17T21:40:51.000Z",
+    "description": "최근 급격한 체중 감량으로 화제를 모았던 그룹 엔믹스 해원이 외모 강박에 대한 솔직한 생각을 밝혔다. 17일 SNS와 온라인 커뮤니티를 중심으로 과거 해원이 라이브 방송을 통해 팬들과 소통하던 중 외모 강박에 대해 언급했던 내용이 다시금 재조명됐다.",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "SPOTV NEWS on MSN",
+    "discoverySource": "bing-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "missing",
+      "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EC%96%B8%EA%B8%89-%EC%9E%AC%EC%A1%B0%EB%AA%85-%EC%95%88%EC%93%B0%EB%9F%AC%EC%9B%8C-%EC%9D%B4%EC%8A%88s/ar-AA2hFYnv",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/music/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EC%96%B8%EA%B8%89-%EC%9E%AC%EC%A1%B0%EB%AA%85-%EC%95%88%EC%93%B0%EB%9F%AC%EC%9B%8C-%EC%9D%B4%EC%8A%88s/ar-AA2hFYnv",
+      "resolvedArticleHost": "www.msn.com",
+      "fetchedAt": "2026-11-26T20:13:29.714Z",
+      "statusCode": 200,
+      "errorCode": ""
+    }
+  },
+  {
     "id": "07c7a38c0ae00230cee9",
     "title": "'뼈말라' 된 엔믹스 해원 \"얼굴 왜 나노 단위로 봐\"…과거 소신 발언 재조명",
     "url": "https://www.msn.com/ko-kr/entertainment/%EC%9D%BC%EB%B0%98/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
@@ -9363,6 +9768,47 @@
       "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9D%BC%EB%B0%98/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
       "resolvedArticleHost": "www.msn.com",
       "fetchedAt": "2026-11-26T00:23:27.516Z",
+      "statusCode": 200,
+      "errorCode": ""
+    }
+  },
+  {
+    "id": "26991bb167188e557634",
+    "title": "'뼈말라' 된 엔믹스 해원 \"얼굴 왜 나노 단위로 봐\"…과거 소신 발언 재조명",
+    "url": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+    "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e8055145e986eeab001e55843b&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fentertainment%2f%25EC%259C%25A0%25EB%25AA%2585-%25EC%259D%25B8%25EC%2582%25AC%2f%25EB%25BC%2588%25EB%25A7%2590%25EB%259D%25BC-%25EB%2590%259C-%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-%25ED%2595%25B4%25EC%259B%2590-%25EC%2596%25BC%25EA%25B5%25B4-%25EC%2599%259C-%25EB%2582%2598%25EB%2585%25B8-%25EB%258B%25A8%25EC%259C%2584%25EB%25A1%259C-%25EB%25B4%2590-%25EA%25B3%25BC%25EA%25B1%25B0-%25EC%2586%258C%25EC%258B%25A0-%25EB%25B0%259C%25EC%2596%25B8-%25EC%259E%25AC%25EC%25A1%25B0%25EB%25AA%2585%2far-AA2hF5jF&c=16982413077796688550&mkt=ko-kr",
+    "publisherHost": "www.msn.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%ED%95%B4%EC%9B%90%20%EC%97%94%EB%AF%B9%EC%8A%A4&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0892e8055145e986eeab001e55843b&url=https%3a%2f%2fwww.msn.com%2fko-kr%2fentertainment%2f%25EC%259C%25A0%25EB%25AA%2585-%25EC%259D%25B8%25EC%2582%25AC%2f%25EB%25BC%2588%25EB%25A7%2590%25EB%259D%25BC-%25EB%2590%259C-%25EC%2597%2594%25EB%25AF%25B9%25EC%258A%25A4-%25ED%2595%25B4%25EC%259B%2590-%25EC%2596%25BC%25EA%25B5%25B4-%25EC%2599%259C-%25EB%2582%2598%25EB%2585%25B8-%25EB%258B%25A8%25EC%259C%2584%25EB%25A1%259C-%25EB%25B4%2590-%25EA%25B3%25BC%25EA%25B1%25B0-%25EC%2586%258C%25EC%258B%25A0-%25EB%25B0%259C%25EC%2596%25B8-%25EC%259E%25AC%25EC%25A1%25B0%25EB%25AA%2585%2far-AA2hF5jF&c=16982413077796688550&mkt=ko-kr",
+        "articleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+        "host": "www.msn.com"
+      }
+    ],
+    "publishedAt": "2026-11-17T18:25:09.000Z",
+    "description": "그룹 엔믹스(NMIXX) 해원이 부쩍 마른 모습으로 화제가 된 가운데, 외모에 관한 그의 과거 발언이 재조명되고 있다.최근 온라인에서는 과거 해원이 얼굴 비율과 체형에 관한 자신의 생각을 밝힌 발언이 다시 주목받고 있다.해원은 \"요즘 사람들이 중안부에 대해 관심이 많다. 어쩌다가 이렇게 나노 단위로 사람의 얼굴을 보게 된 건지 모르겠다. 나도 가장 민감한 ...",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "텐아시아 on MSN",
+    "discoverySource": "bing-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": {
+      "status": "missing",
+      "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+      "resolvedArticleHost": "www.msn.com",
+      "fetchedAt": "2026-11-26T20:13:29.714Z",
       "statusCode": 200,
       "errorCode": ""
     }
@@ -11503,6 +11949,24 @@
     "candidateSource": ""
   },
   {
+    "id": "5d3d7a961d23b8f0efbc",
+    "title": "[사진]엔믹스 배이-해원 '찐친 포즈' - Chosunbiz",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbHBueUViVG54dkJoeFhPLU16amxCOUhmNm53MU1XeUlfZkFYc2duV0NVZmJqSm51OTYzTl9Ja2MwSzJnbjkxenZva2NWM2V1VGpKanRqanFuMEZ0ZWdGdHc0OWhJdHltRFFnclVJV19YTFdGUDQzdXlMX1IwMllPSWdWc3F6ZjFvdk9QZEtwOVRjTVJ0bmNNcGdrSdIBrwFBVV95cUxNQjdrTnp6Mi1qdmF2TmdnWmRoM0RmY01FU2xWNGNueWJzS0ZXLVZVczVrenc2bm4yeWJTUDlIRmRkVk1qaDBkYTF1WGlOcWZpdGVBVG9KOEJlZndaSDBheWhWWklpMjdvRi1xbHFiTi1rX2hWZXFaV2tvUnVja1RiQk9wQldJZ0h2ZWs0SEtQbWFhakE5RFI0WE9kd0cxMmtQYWdOdk8tYkVYd280UWU4?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://biz.chosun.com",
+    "publishedAt": "2026-07-23T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPbHBueUViVG54dkJoeFhPLU16amxCOUhmNm53MU1XeUlfZkFYc2duV0NVZmJqSm51OTYzTl9Ja2MwSzJnbjkxenZva2NWM2V1VGpKanRqanFuMEZ0ZWdGdHc0OWhJdHltRFFnclVJV19YTFdGUDQzdXlMX1IwMllPSWdWc3F6ZjFvdk9QZEtwOVRjTVJ0bmNNcGdrSdIBrwFBVV95cUxNQjdrTnp6Mi1qdmF2TmdnWmRoM0RmY01FU2xWNGNueWJzS0ZXLVZVczVrenc2bm4yeWJTUDlIRmRkVk1qaDBkYTF1WGlOcWZpdGVBVG9KOEJlZndaSDBheWhWWklpMjdvRi1xbHFiTi1rX2hWZXFaV2tvUnVja1RiQk9wQldJZ0h2ZWs0SEtQbWFhakE5RFI0WE9kd0cxMmtQYWdOdk8tYkVYd280UWU4?oc=5\" target=\"_blank\">[사진]엔믹스 배이-해원 '찐친 포즈'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Chosunbiz</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "9fd39402b9d1eb79f581",
     "title": "엔믹스 해원, 숏컷 변신 후 해명 해프닝…‘도움’과 ‘참견’ 사이",
     "url": "https://sports.donga.com/ent/article/all/20260712/134281960/1",
@@ -13460,6 +13924,24 @@
     }
   },
   {
+    "id": "28c875bf7d19021bb5c7",
+    "title": "엔믹스 해원, 대세 예능 아이돌의 거뜬한 한 끼 식사('식스센스') - 조선일보",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONXBmaVY0RTdHTFdnNTNDMFJRMjlmUkpaRWQwdmtFUS15aEpGWVhNdVlDMzJmTWZOWEhOMUxyakpOMmphcjMyd05XMWRzZVpGYlFUdDllbnVPQUpXTXR5QjJGY0NxZW1qeU5BcXQ1TDJjaTl4VjhDd1hWVVlFR0ZiMU9XWFctR29kak15QkI2TQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.chosun.com",
+    "publishedAt": "2025-03-14T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxONXBmaVY0RTdHTFdnNTNDMFJRMjlmUkpaRWQwdmtFUS15aEpGWVhNdVlDMzJmTWZOWEhOMUxyakpOMmphcjMyd05XMWRzZVpGYlFUdDllbnVPQUpXTXR5QjJGY0NxZW1qeU5BcXQ1TDJjaTl4VjhDd1hWVVlFR0ZiMU9XWFctR29kak15QkI2TQ?oc=5\" target=\"_blank\">엔믹스 해원, 대세 예능 아이돌의 거뜬한 한 끼 식사('식스센스')</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "e3185433ac99babfd884",
     "title": "송은이, 엔믹스 해원에 당황 \"내가 말실수한거지\" - 싱글리스트",
     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBKa0pyOEhrRVRLYVFVMGRqbEZ6WlFOX0NCZUZrNW01WHI0cFhjZE0xT2VtQnNsN1J6QXlVdlBNem0zZmJZVWZHTEZNMzFGWHJGR2tVRVVUeGpaWC1wdW1jcFgxME9Fdw?oc=5",
@@ -13587,7 +14069,14 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.etnews.com",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "bcd2515d1976224cf92d",
@@ -13749,6 +14238,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "98e0cacbcdc29a503efe",
+    "title": "‘피식쇼’ 엔믹스 리더 해원 \"롤모델은 소속사 대표 박진영\" - JTBC",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5FVVUzc0VPSzZ0M2x3MktRemgtUjNPUjc1QXgtcDRGNWVqeGVKbjYxd0hkcHpXVTFVNzJoR3hEMGN5a1J2S05WS2YxS2phSmJPdDhXVw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://news.jtbc.co.kr",
+    "publishedAt": "2024-12-01T11:08:39.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE5FVVUzc0VPSzZ0M2x3MktRemgtUjNPUjc1QXgtcDRGNWVqeGVKbjYxd0hkcHpXVTFVNzJoR3hEMGN5a1J2S05WS2YxS2phSmJPdDhXVw?oc=5\" target=\"_blank\">‘피식쇼’ 엔믹스 리더 해원 \"롤모델은 소속사 대표 박진영\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">JTBC</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 4
   },
   {
     "id": "77a9b76c78aa830ff5e1",
@@ -14663,7 +15170,15 @@
     "relevanceScore": 4,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "thumbnailUrl": "",
+    "sourceUrl": "https://mobile.newsis.com",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "6b6091eb083634909a69",
@@ -14714,6 +15229,24 @@
     "candidateSource": ""
   },
   {
+    "id": "e79ce6da758af2175320",
+    "title": "엔믹스 해원, ‘워크돌’ 시즌2 MC 발탁..벌써 기대되는 센스만점 예능감 - 브레이크뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFAxOGlHMG5YemdxYTJXLU1HUGpYemd0bUVRbTgxcXdOMVVMdG1nM2tvbzN2STRZSmlJcEZ4MUdVczFuWFg4UW42UA?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.breaknews.com",
+    "publishedAt": "2024-03-20T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTFAxOGlHMG5YemdxYTJXLU1HUGpYemd0bUVRbTgxcXdOMVVMdG1nM2tvbzN2STRZSmlJcEZ4MUdVczFuWFg4UW42UA?oc=5\" target=\"_blank\">엔믹스 해원, ‘워크돌’ 시즌2 MC 발탁..벌써 기대되는 센스만점 예능감</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">브레이크뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "Haewon latest news",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "82b58e7406e2e7b2b392",
     "title": "엔믹스 해원·배이, B컷도 완벽 [화보] - 싱글리스트",
     "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9aRnByY0haOW45aTlfRmZSVHkwSU0tS3VwWGVPdXQ5NDJmRHlRNWNYYmJVc1RjVDlIb3VGdHNURUdIZV8xdG5Kb1dSSEVhZlhFSktrRjhTeXVFdXlGZ0UzQmJGVFRodw?oc=5",
@@ -14760,6 +15293,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "57c7e0340d9778f0c4d9",
+    "title": "엔믹스 해원, 하트 장인 [SE★포토] - 서울경제",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBxVWFJTEJuXzM0YVVhcnlDTU1ucGt3cTdYc3RhektCTmZhbmJPM0ctVnVraWJodUtvYUFXdnpWZEpNZDNQRF82SzFSM3BZVUdNVWfSAVNBVV95cUxNdGZsejk0Q0ZSaUxET1BfZjFwODlybW56U01GbzBCM2hhRFBCLUJTSmR3bzFoV3hnLUVXblo1UkdZQWRrY09FTGlDaVhsejF5Z3Jibw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.sedaily.com",
+    "publishedAt": "2024-01-26T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFBxVWFJTEJuXzM0YVVhcnlDTU1ucGt3cTdYc3RhektCTmZhbmJPM0ctVnVraWJodUtvYUFXdnpWZEpNZDNQRF82SzFSM3BZVUdNVWfSAVNBVV95cUxNdGZsejk0Q0ZSaUxET1BfZjFwODlybW56U01GbzBCM2hhRFBCLUJTSmR3bzFoV3hnLUVXblo1UkdZQWRrY09FTGlDaVhsejF5Z3Jibw?oc=5\" target=\"_blank\">엔믹스 해원, 하트 장인 [SE★포토]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">서울경제</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 4
   },
   {
     "id": "dfe5a4552002e96b8fb6",
@@ -15163,7 +15714,14 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.sedaily.com",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "958ce5e6a5c89cc86680",
@@ -15595,6 +16153,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "c24392d3b3b793facc8a",
+    "title": "엔믹스 해원, 어떤 곡도 소화 가능…노래 실력 눈길 - 톱스타뉴스",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE54RUgwbmQydXRyemFFWVpubTZKNHIxamJUYU04MTRMVE9Zd2VDWGVPQ1pVbFhJakJEeGVYVk53SDl0dUpIVi1zaTc5a1FXMkNFUWZ6WU5lX2NQcTFKSXZpTmdSa01JTFhrUFNuc2ducXJ5Zw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.topstarnews.net",
+    "publishedAt": "2023-03-22T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE54RUgwbmQydXRyemFFWVpubTZKNHIxamJUYU04MTRMVE9Zd2VDWGVPQ1pVbFhJakJEeGVYVk53SDl0dUpIVi1zaTc5a1FXMkNFUWZ6WU5lX2NQcTFKSXZpTmdSa01JTFhrUFNuc2ducXJ5Zw?oc=5\" target=\"_blank\">엔믹스 해원, 어떤 곡도 소화 가능…노래 실력 눈길</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">톱스타뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "NMIXX Haewon news",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 4
   },
   {
     "id": "f9c37fd52432a10ae053",
@@ -16457,7 +17033,14 @@
     "relevanceScore": 4,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.hankookilbo.com",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0a2aa3b558ec8d19bb0a",
@@ -19142,6 +19725,24 @@
     "candidateSource": ""
   },
   {
+    "id": "c1834ce6d4e275214941",
+    "title": "해마 포뮬러 기반 웰니스 브랜드 해원랩, ‘해마맥스 아르기닌 120000’ 출시 - livesnews.com",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9aRnd1aHdqOW5nUndoaGhjcFVLOFl3ckJSSVlkZVNVZkd5ZFVQX29CWl9NV21FSTR0Y2pMY2ZiaHNOTk4yTmtmOEJBeXdRd0FyUTlCcGxaOHpKWl9Z?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://livesnews.com",
+    "publishedAt": "2025-12-23T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9aRnd1aHdqOW5nUndoaGhjcFVLOFl3ckJSSVlkZVNVZkd5ZFVQX29CWl9NV21FSTR0Y2pMY2ZiaHNOTk4yTmtmOEJBeXdRd0FyUTlCcGxaOHpKWl9Z?oc=5\" target=\"_blank\">해마 포뮬러 기반 웰니스 브랜드 해원랩, ‘해마맥스 아르기닌 120000’ 출시</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">livesnews.com</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "Haewon latest news",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
     "id": "17caa150297102c6120f",
     "title": "NMIXX Is Strong - 스포츠경향",
     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1kaF9uWHNZTjFqMkRsUlJscjRaRk92Q0ZOMTZ3MFJjbzJoS0N1cG45bFdVNHo2eDdGWGZpSk1zWkdMLWF2c2hOdnBRei1xVDkyUGVtbUt1X01lbHc0V2hHRmZ30gFjQVVfeXFMT1M2WWhKSW9tT3JtNDJtVVQwMVBUTk96TTV5U3NtVXRfdDN3WTVzSVV5T2VLSURxV0xCWVE2YlRwZ0I4bFVkUUxxTmd0MUc5M2VtMWh6QUhIZFdRUUJzWUYzWUlj?oc=5",
@@ -20108,6 +20709,24 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "publisherArticleUrl": ""
+  },
+  {
+    "id": "3304b8d558e02f811fdc",
+    "title": "엔믹스, 남미투어 화이팅💪 조심히 다녀와요~ (출국) [뉴스엔TV] - 뉴스엔",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBEM3diODRXU1NFTmJfQ2x6bDdTeWs5alJyQmtDS1dWQV9pano1dk55YW94UWFhUC1RMkhZcTJwdUFCWkpCckkyTnRtNjNscmJ5SGgwQlhYUjZKN1MwaEEwQVF3M1JTRmQz?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.newsen.com",
+    "publishedAt": "2025-02-18T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTFBEM3diODRXU1NFTmJfQ2x6bDdTeWs5alJyQmtDS1dWQV9pano1dk55YW94UWFhUC1RMkhZcTJwdUFCWkpCckkyTnRtNjNscmJ5SGgwQlhYUjZKN1MwaEEwQVF3M1JTRmQz?oc=5\" target=\"_blank\">엔믹스, 남미투어 화이팅💪 조심히 다녀와요~ (출국) [뉴스엔TV]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스엔</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "NMIXX Haewon news",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 2
   },
   {
     "id": "534a2af22c937e2c8b8a",
@@ -21938,6 +22557,24 @@
     "candidateSource": ""
   },
   {
+    "id": "1701020533d79428b87b",
+    "title": "[NC Rising] Three Violinists, Three Faces of Beethoven - 뉴스컬처",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5KRllfb0p6Um91bmlKLWJMUjh0WGJEb0FQcWVjOXJWNWtTTmtiM1RQQkk3SEhIbE1xd1JNbk9hdVl1U29oRm11bTB5QUg5Vk9aM1FmUEVodGJkLUFDNy05Y09URnotZw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.nc.press",
+    "publishedAt": "2026-07-22T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE5KRllfb0p6Um91bmlKLWJMUjh0WGJEb0FQcWVjOXJWNWtTTmtiM1RQQkk3SEhIbE1xd1JNbk9hdVl1U29oRm11bTB5QUg5Vk9aM1FmUEVodGJkLUFDNy05Y09URnotZw?oc=5\" target=\"_blank\">[NC Rising] Three Violinists, Three Faces of Beethoven</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스컬처</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "Haewon latest news",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
     "id": "ae7be3c0362faa0551c8",
     "title": "실력도 중요하지만… 솔직·털털한 인간미에 빠져든다 - 조선일보",
     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOLVVoa1Q3dkVwZjBaekxFUFl2bkE4cWZsSkgyZVhEd3hMRUF0WG9EVmlIbUpRVWFzai1fa3JTRVZTT1FzVThqUFVzbVRTTWs0Wmo4azRDa1JUTFZSeVo5NjNOeGJEQllBZHpkaHRVTEdvZTRvR3FGNS1LcmxLLXJudVVkOXhfMHJzRldlTg?oc=5",
@@ -22241,6 +22878,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "47e8c86b0e5029e01dac",
+    "title": "Gospel을 품는 클래식 음악회 - 목장드림뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5rSGMzUFRoN3NObkdGYnFxM3g0MW0tR2Y3Q0hNV1lGQXNiY3JYNnVKdFoycGpwMGRoS05JMGhyZjcxSkp6YUVGR29kRWNjalE1NGJmMHM2Q2dMWWhoZnRMbGdyVzk?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://penews.co.kr",
+    "publishedAt": "2025-08-11T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE5rSGMzUFRoN3NObkdGYnFxM3g0MW0tR2Y3Q0hNV1lGQXNiY3JYNnVKdFoycGpwMGRoS05JMGhyZjcxSkp6YUVGR29kRWNjalE1NGJmMHM2Q2dMWWhoZnRMbGdyVzk?oc=5\" target=\"_blank\">Gospel을 품는 클래식 음악회</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">목장드림뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "Haewon latest news",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 0
   },
   {
     "id": "ab466b6417b230957ed9",
@@ -22675,6 +23330,42 @@
     "candidateSource": ""
   },
   {
+    "id": "119127c6e104cdd52c4e",
+    "title": "Peek Into Jungkook's Military Life with 'Workman' Cooking Show - 한국아이닷컴",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96R21pMGtjVlRydVNsLW5CUnktelFvVXNpUWtTMEd4OFVTMU9SV0V0UV9qNk9vS0pzLXMwYWpnYlRJejZ3dUJXaVo0VWhnVFZXVmZDUFlneEZXUjhNSElFY2J2aXFKazVIX3Rj0gFvQVVfeXFMTk83TFNjbUFtNlRVRF9RY0tEYXhlNE9wNG9qbEFxX3R6bUtNWHdGTDBvWno5Q3dMczFzeGd5UTBPb1lQX195R3YySmYyLXRkdHpOQjRyX0JQeVRfNndCVGNzSFpFaXY1b3Q2R2tVZkpV?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.hankooki.com",
+    "publishedAt": "2024-04-23T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE96R21pMGtjVlRydVNsLW5CUnktelFvVXNpUWtTMEd4OFVTMU9SV0V0UV9qNk9vS0pzLXMwYWpnYlRJejZ3dUJXaVo0VWhnVFZXVmZDUFlneEZXUjhNSElFY2J2aXFKazVIX3Rj0gFvQVVfeXFMTk83TFNjbUFtNlRVRF9RY0tEYXhlNE9wNG9qbEFxX3R6bUtNWHdGTDBvWno5Q3dMczFzeGd5UTBPb1lQX195R3YySmYyLXRkdHpOQjRyX0JQeVRfNndCVGNzSFpFaXY1b3Q2R2tVZkpV?oc=5\" target=\"_blank\">Peek Into Jungkook's Military Life with 'Workman' Cooking Show</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">한국아이닷컴</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "Haewon latest news",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
+    "id": "6c71e0f22d6e28fc6be8",
+    "title": "'미니언 닮았다' 걸그룹 유머 능력 1등 멤버의 반전 너드미 - 한스경제",
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBWSDEwZ3dFWWdjQkpvdHJpbDNJOWdTZUxNTkhab3Bfc1hmbmdEa0tWN05jOEtqUHBHTzJhWFl2OW1pOGQ0MVN1MlFhUnFrWGlFVmota0txX1IzMW9Pelo0T1U2alZ4V29icHAw0gFvQVVfeXFMTTEzVFFoZFg0YjQyZzdSbEVvOV9oRTBjUkZvSmJmMk9uWEFJTVo5RnN0TjJIMllGU1JxN0RiSzBVZ0lyVGRXNHRJelR2ZlN0T0R3OEZ1SVF1Z19YUjlIRzlOSTJyN0pydDF0bXhZc0lB?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "",
+    "publishedAt": "2024-02-02T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFBWSDEwZ3dFWWdjQkpvdHJpbDNJOWdTZUxNTkhab3Bfc1hmbmdEa0tWN05jOEtqUHBHTzJhWFl2OW1pOGQ0MVN1MlFhUnFrWGlFVmota0txX1IzMW9Pelo0T1U2alZ4V29icHAw0gFvQVVfeXFMTTEzVFFoZFg0YjQyZzdSbEVvOV9oRTBjUkZvSmJmMk9uWEFJTVo5RnN0TjJIMllGU1JxN0RiSzBVZ0lyVGRXNHRJelR2ZlN0T0R3OEZ1SVF1Z19YUjlIRzlOSTJyN0pydDF0bXhZc0lB?oc=5\" target=\"_blank\">'미니언 닮았다' 걸그룹 유머 능력 1등 멤버의 반전 너드미</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">한스경제</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
     "id": "8aeeea5a94861f5653ca",
     "title": "이용진 \"'과몰입 인생사', 호기심 있게 임할 수 있는 프로‥영광\" - iMBC 연예",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5kc0JpU042cjE4NWYybW5abEJFRF8xU3F5bDZjc1JKblJSelRTSnhpc1VGdzF3c1I0anhxS2s3bWFEYkpkU1hxdFhEc29qU1l5cVlnWW94VGlMd1gzNzRfNA?oc=5",
@@ -22982,6 +23673,24 @@
     "discoverySource": "google-news-rss",
     "query": "오해원 해외 활동",
     "discoveredAt": "2026-11-26T09:58:28.029Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
+    "id": "784bd37d0e019af33eac",
+    "title": "소문난 맛 '욕지도 고구마'의 변신 - 경남도민일보",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9CUm56YklyMmVFbDRHakVval85MHJhd0RiSGg3cHkwZzdWVXlVVmxsd09hWE40cFpEUkd2MGlWa1F4U3hTNkZaU1lzaHUxYWxJMzQ1Nk1wTTBmZWR4M2hNdFBJLW9kTkxV?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.idomin.com",
+    "publishedAt": "2010-11-09T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE9CUm56YklyMmVFbDRHakVval85MHJhd0RiSGg3cHkwZzdWVXlVVmxsd09hWE40cFpEUkd2MGlWa1F4U3hTNkZaU1lzaHUxYWxJMzQ1Nk1wTTBmZWR4M2hNdFBJLW9kTkxV?oc=5\" target=\"_blank\">소문난 맛 '욕지도 고구마'의 변신</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">경남도민일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "Haewon latest news",
+    "discoveredAt": "2026-11-26T20:13:26.444Z",
     "status": "candidate",
     "relevanceScore": 0
   }

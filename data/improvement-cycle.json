@@ -2,55 +2,55 @@
   "schemaVersion": "1.0.0",
   "algorithm": "bounded-recursive-imitation",
   "algorithmVersion": "1.2.0",
-  "day": "2026-11-26",
+  "day": "2026-11-27",
   "timeZone": "Asia/Seoul",
   "cycle": {
-    "packIndex": 5,
+    "packIndex": 0,
     "packCount": 6,
     "activeQueries": [
-      "NMIXX Haewon Japan news",
-      "오해원 해외 활동",
-      "Haewon international interview",
-      "엔믹스 해원 활동 소식",
-      "Haewon radio appearance",
-      "NMIXX Haewon television"
+      "오해원 NMIXX",
+      "해원 엔믹스",
+      "NMIXX Haewon news",
+      "Haewon NMIXX news",
+      "오해원 근황",
+      "Haewon latest news"
     ],
-    "nextDayPackIndex": 0
+    "nextDayPackIndex": 1
   },
   "evidence": {
-    "cumulativeDiscoveryCandidates": 857,
-    "currentRunCandidates": 98,
+    "cumulativeDiscoveryCandidates": 883,
+    "currentRunCandidates": 230,
     "uniqueVideoRecords": 20,
     "queryYield": [
       {
-        "query": "NMIXX Haewon Japan news",
-        "candidates": 15
+        "query": "오해원 NMIXX",
+        "candidates": 56
       },
       {
-        "query": "오해원 해외 활동",
-        "candidates": 15
+        "query": "해원 엔믹스",
+        "candidates": 61
       },
       {
-        "query": "Haewon international interview",
-        "candidates": 1
+        "query": "NMIXX Haewon news",
+        "candidates": 37
       },
       {
-        "query": "엔믹스 해원 활동 소식",
-        "candidates": 51
+        "query": "Haewon NMIXX news",
+        "candidates": 20
       },
       {
-        "query": "Haewon radio appearance",
-        "candidates": 2
+        "query": "오해원 근황",
+        "candidates": 39
       },
       {
-        "query": "NMIXX Haewon television",
-        "candidates": 14
+        "query": "Haewon latest news",
+        "candidates": 17
       }
     ],
     "highestYieldQueries": [
-      "엔믹스 해원 활동 소식",
-      "NMIXX Haewon Japan news",
-      "오해원 해외 활동"
+      "해원 엔믹스",
+      "오해원 NMIXX",
+      "오해원 근황"
     ]
   },
   "evaluation": {
