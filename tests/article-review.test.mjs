@@ -236,3 +236,30 @@ test('review queue uses collapsed per-article disclosures and opens the active r
  assert.match(css, /Keep the 76-item review queue compact on mobile/);
  assert.match(css, /\.article-quality-review-row-summary\{display:grid/);
 });
+
+
+test('review label persistence keeps the prior state when browser storage throws', async () => {
+  const { persistArticleReviewLabels } = await import('../js/article-review.mjs');
+  const current = { a: { articleId: 'a', relevance: 'relevant' } };
+  const next = { ...current, a: { ...current.a, originalAccess: 'blocked' } };
+  const storage = { setItem() { const error = new Error('quota'); error.name = 'QuotaExceededError'; throw error; } };
+  const result = persistArticleReviewLabels(storage, 'reviews', current, next);
+  assert.equal(result.saved, false);
+  assert.equal(result.labels, current);
+  assert.equal(result.error, 'QuotaExceededError');
+  assert.deepEqual(current, { a: { articleId: 'a', relevance: 'relevant' } });
+});
+
+test('review label persistence commits only after storage accepts the complete next state', async () => {
+  const { persistArticleReviewLabels } = await import('../js/article-review.mjs');
+  let storedKey = '';
+  let storedValue = '';
+  const storage = { setItem(key, value) { storedKey = key; storedValue = value; } };
+  const current = { a: { articleId: 'a', relevance: 'relevant' } };
+  const next = { ...current, a: { ...current.a, originalAccess: 'blocked' } };
+  const result = persistArticleReviewLabels(storage, 'reviews', current, next);
+  assert.equal(result.saved, true);
+  assert.equal(result.labels, next);
+  assert.equal(storedKey, 'reviews');
+  assert.deepEqual(JSON.parse(storedValue), next);
+});
