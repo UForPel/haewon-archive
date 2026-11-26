@@ -1269,3 +1269,30 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Thumbnail response sample: 12 URLs; 11 image responses, one HTTP 404. 273 legacy shared-image assignments unchanged.
 - User reported the required next-cycle button was repeatedly missing. This is an operating failure, not a user-side issue. BUTTONS_AND_ACTIONS.md now defines a mandatory clickable action and exact prompt. The assistant must include it at the bottom of every completed work-cycle response, even if the user has manually typed “continue” in the meantime.
 - Mobile QA unverified; no new RSS sources added.
+
+
+## 2026-11-26 — Publication freshness diagnostics cycle
+
+### Live baseline
+- Re-read current main, latest SESSION_LOG/PROJECT_STATUS and the six required operating documents before implementation.
+- Current main SHA: `68b467748d524d437d75ed5de33adbd4ced5e6c4`; open PR count: 0.
+- Production run #599 (`45732608330`) succeeded, including collection, validation, data commit and Pages deployment. PR verification #41 (`45742755947`) succeeded.
+- Latest collection status: 76 incoming candidates, 74 unique URLs, 4 added, 55 Google RSS items and 21 Bing RSS items. Google feed had 0 explicit article URLs and 0 image signals; Bing had 21 explicit article URLs and 0 image signals.
+- Current archive count: 797 discovery candidates; 20 video records. The 273 legacy shared-thumbnail assignments remain untouched.
+- Query publication-lag medians in the latest six-query sample range from 808.5 to 38,498.2 hours. This is a freshness warning, not evidence of low human relevance; title keyword match remains an unreviewed proxy.
+
+### Chosen bottleneck and rationale
+- Chosen: make per-query publication freshness directly measurable. The existing median/p90 lag hides how many results are actually recent versus months/years old.
+- Rejected: deleting old records or imposing a hard freshness filter, because historical archive value and uncertain publication dates must be preserved.
+- Cost/risk: no extra network calls or paid API; a deterministic diagnostic adds small JSON output. Bucket boundaries are operational indicators, not a truth/relevance score.
+
+### Implementation
+- Added mutually exclusive age buckets to `summarizeQueryPerformance`: within 7 days, 8–30 days, 31–90 days, older than 90 days, unknown date and future date.
+- Added within-7-day and within-30-day candidate rates per query.
+- Added regression coverage with fixed dates for all six buckets and rate calculations.
+- No historical candidate filtering, image replacement, source-policy expansion or production scheduler change.
+
+### Verification and next steps
+- PR CI and full test suite must run against current main before merge. Production collection and Pages deployment will be verified separately after merge.
+- Next cycle should compare at least three distinct query packs using freshness buckets, explicit publisher URL rate, unique yield and human review labels where available. Do not auto-remove queries from a single sample.
+- Mobile browser QA remains unverified.
