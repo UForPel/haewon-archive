@@ -189,3 +189,11 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - First production sample pack index 4: 54 Google and 20 Bing candidates. Query metrics are provisional and require additional pack samples.
 - Latest thumbnail audit: 12 URLs; 11 image responses and one HTTP 404. Preserve all 273 legacy shared-image assignments.
 - No new publisher RSS source without explicit applicable permission.
+
+
+## 2026-11-26 — Publication freshness diagnostics
+- Record each query's candidate age in mutually exclusive buckets: within 7 days, 8–30 days, 31–90 days, older than 90 days, unknown date and future date.
+- Freshness rates use all candidates as denominator so missing/future dates are not silently excluded. Median/p90 publication lag remain complementary metrics.
+- Freshness is a search-quality diagnostic, not a factual-reliability or Haewon-relevance score. Title keyword matches remain proxies until human review.
+- Do not delete, reject or hide historical candidates solely because they are older than 90 days. Any display filtering must remain separate from collection and preserve records.
+- Do not expand publisher RSS sources without explicit applicable permission; SBS and Yonhap remain excluded.
