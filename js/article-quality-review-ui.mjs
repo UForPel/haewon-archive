@@ -1,5 +1,5 @@
 import { classifyDiscoveryCategories } from './discovery-kind.mjs';
-import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete } from './article-review.mjs';
+import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete, getNextPendingArticle } from './article-review.mjs';
 
 const host = document.querySelector('#article-quality-review');
 if (host) {
@@ -27,11 +27,7 @@ if (host) {
   const nextButton = document.createElement('button'); nextButton.type = 'button'; nextButton.textContent = '다음 미검수 기사';
   nextButton.addEventListener('click', () => {
     showPendingOnly = true; filterButton.textContent = '전체 기사 보기'; render();
-    const first = list.querySelector('.article-quality-review-row');
-    if (!first) { progress.textContent = '모든 검수 대상의 일곱 항목이 완료되었습니다.'; return; }
-    first.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    first.querySelector('select')?.focus({ preventScroll: true });
-    progress.textContent = '다음 미검수 기사로 이동했습니다. 일곱 항목을 확인해 주세요.';
+    focusNextPendingArticle();
   });
   const exportButton = document.createElement('button'); exportButton.type = 'button'; exportButton.textContent = '기사 검수 JSON 내보내기';
   exportButton.addEventListener('click', () => {
@@ -48,6 +44,15 @@ if (host) {
   const list = document.createElement('div'); list.className = 'article-quality-review-list';
   body.append(intro, progress, actions, list); details.append(summary, body); host.append(details);
   let articles = [];
+  function focusNextPendingArticle(afterArticleId = null) {
+    const next = getNextPendingArticle(articles, labels, afterArticleId);
+    if (!next) { progress.textContent = '모든 검수 대상의 일곱 항목이 완료되었습니다.'; return; }
+    const row = Array.from(list.children).find(element => element.dataset.articleId === String(next.id));
+    if (!row) { progress.textContent = '다음 미검수 기사를 찾지 못했습니다. 목록을 다시 확인해 주세요.'; return; }
+    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    row.querySelector('select')?.focus({ preventScroll: true });
+    progress.textContent = '다음 미검수 기사로 이동했습니다. 일곱 항목을 확인해 주세요.';
+  }
   function render() {
     const report = summarizeArticleReviews(articles, labels);
     summary.textContent = '검증 원문 URL '+report.eligible+'건 품질 검수 · 자료 유형 / 원문 접근성 / 관련성 / 날짜 / 출처 / 분류 / 썸네일 적합성';
@@ -79,7 +84,7 @@ if (host) {
           if (!select.value) delete next[dimension];
           labels[String(item.id)] = next;
           try { localStorage.setItem(STORAGE_KEY, JSON.stringify(labels)); progress.textContent = '저장됨 · '+item.title; } catch { progress.textContent = '브라우저 저장 공간에 기록하지 못했습니다.'; }
-          if (showPendingOnly && isArticleReviewComplete(item, labels)) render(); else updateProgress();
+          if (showPendingOnly && isArticleReviewComplete(item, labels)) { render(); focusNextPendingArticle(item.id); } else updateProgress();
         });
         label.append(select); fields.append(label);
       }
