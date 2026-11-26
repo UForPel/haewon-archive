@@ -347,3 +347,11 @@ For each substantial update include: changed paths; planned vs implemented items
 - Production verification and UI visual verification remain distinct. No actual phone/browser visual QA was performed; report this as outstanding.
 - Review labels remain localStorage-only/manual JSON export-import. The committed human relevance review set remains empty; do not infer accuracy from automated proxies.
 - Preserve the 273 legacy shared-thumbnail assignments and existing source permissions.
+
+
+## 2026-11-26 — Mobile review accessibility acceptance criteria
+- Review buttons, selects and inputs have a minimum 44px target height; focus is visible for keyboard users; action controls adapt to <=360px screens.
+- localStorage updates commit in memory only after browser storage succeeds. Failed storage/import leaves prior labels intact and gives explicit recovery feedback.
+- Manual JSON import validates schema and eligible article IDs, merges rather than overwrites existing labels, and reports imported count. Export reports success/failure. No automatic transfer.
+- Node tests assert CSS/UI contracts, but do not count as browser viewport or real-device QA. A real Android/mobile pass remains mandatory before declaring usability verified.
+- PR #44 CI #48 passed 195/195 tests and archive validation. Merge and post-merge Production/Pages verification pending at this checkpoint.

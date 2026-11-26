@@ -244,3 +244,11 @@ Gemini does not have permission to alter these rules or the validators enforcing
 - One thumbnail enrichment attempt succeeded and assigned one provenance-backed image. Total thumbnail state: 352 assigned, 504 missing, 80 unique URLs; the 273 legacy shared-image assignments remain untouched.
 - No new RSS source was added. SBS and Yonhap remain excluded pending explicit applicable permission.
 - Production #602 Pages deployment succeeded. This does not establish real mobile visual/tap-target QA.
+
+
+## 2026-11-26 — Mobile review UI safeguards
+- This cycle changes only browser-local review controls and CSS; it does not change collection, publisher source eligibility, archive records, or thumbnail assignment policy.
+- JSON import remains schema-validated and limited to currently eligible article IDs. Imported labels merge with existing browser-local labels; no automatic upload or backend is added.
+- Storage failures preserve the previous in-memory labels and surface a recovery message. Users should export a manual JSON backup before clearing browser data or changing devices.
+- PR #44 automated CI passed 195 tests and archive validation. Actual Android/mobile QA is still outstanding.
+- Preserve the 273 legacy shared-thumbnail assignments. Do not add SBS/Yonhap RSS without explicit applicable permission.

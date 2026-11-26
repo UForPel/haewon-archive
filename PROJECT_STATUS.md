@@ -757,3 +757,12 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Production dataset: 856 candidates (669 articles / 187 videos), 99 verified publisher articles, 76 verified Haewon articles; 352 thumbnail assignments, 504 missing, 80 unique URLs. All 273 legacy shared-image assignments remain unchanged.
 - News collection: 99 fetched / 92 unique / 3 added; six of six queries succeeded on Google and Bing. Google RSS had 56 items but zero explicit publisher article URLs and zero image signals; Bing RSS had 43 explicit publisher URLs but zero image signals. Thumbnail enrichment attempted 1 and assigned 1.
 - Final main after documentation checkpoints: `dd06a9638e8bf4e7365e1b66e21f4dedd08ed6f5`; open PRs: 0. Real mobile visual/device QA remains unverified.
+
+
+## 2026-11-26 — Mobile review accessibility and safe backup (PR #44)
+- Baseline main at cycle start: `3d35001afe150e352769e95b269ff3195cdb7a57`; open PRs 0. Production #602 succeeded; generated data commit `96a79935d85f23b17887b3ab20b95b780f1ab234`; Pages artifact `15086646238` was uploaded and deployment created for the PR #43 merge SHA.
+- Rechecked PR #43 auto-advance code in main and current archive data: 856 candidates, 76 verified Haewon articles, 0 committed human-review labels; 352 assigned thumbnails, 504 missing; 273 legacy shared-thumbnail assignments preserved.
+- Repository has Node's built-in test runner only (`node --test`), no Playwright/Puppeteer dependency or browser-test config. Avoid adding a paid or unnecessary browser dependency. CSS/UI contract tests do not substitute for real device QA.
+- PR #44 adds 44px minimum review control targets, narrow-screen layout, visible keyboard focus, transactional localStorage writes, and clearer JSON import/export success/failure messages. Imports remain schema-validated and browser-local; no automatic upload.
+- PR CI #48 passed 195/195 tests, zero failures, and archive validation (856 candidates, 20 videos, six query metrics, zero human labels, 174 schema-valid run logs). PR #44 merge and subsequent Production/Pages verification pending at this checkpoint.
+- Real Android/mobile visual and touch QA remains unverified.

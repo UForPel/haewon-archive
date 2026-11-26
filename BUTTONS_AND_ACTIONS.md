@@ -351,3 +351,12 @@ The assistant MUST render a real clickable button at the very bottom of every co
 - The review queue now advances focus/scroll to the next incomplete article after all seven dimensions are completed in pending-only mode. Labels remain browser-local with manual JSON import/export.
 - Current final main at audit: `dd06a9638e8bf4e7365e1b66e21f4dedd08ed6f5`; no open PRs. Real mobile visual QA remains unverified.
 - Always finish a completed cycle with the full-prompt **🔄 재귀개선 계속하기** conversation button.
+
+
+## 2026-11-26 — Review controls mobile accessibility and local backups (PR #44)
+- Article review controls now target at least 44px height, use visible `:focus-visible` outlines and a two-column mobile action grid with a single-column fallback on very narrow screens.
+- Local review writes are transactional: failed browser storage does not replace the in-memory label set; the affected select is restored and the user sees backup guidance.
+- JSON import validates schema and current eligible article IDs, merges with local labels, and reports how many records were imported. Export reports download start/failure. No automatic upload or remote storage.
+- PR #44 CI #48 passed 195 tests and archive validation. Merge and Production deployment are pending final verification.
+- Required manual QA: Android viewport, scroll/focus after auto-advance, tap target comfort, download/import round trip, and storage quota failure.
+- Keep the ChatGPT conversation continuation button as the final element in every completed cycle.
