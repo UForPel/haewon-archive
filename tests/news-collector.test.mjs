@@ -123,6 +123,7 @@ test('news search packs rotate between twice-daily runs and expand topic coverag
  assert.equal(SEARCH_PACKS.length,6);
  assert.ok(SEARCH_PACKS.every(pack=>pack.length===6));
  assert.equal(SEARCHES.length,36);
+ assert.equal(new Set(SEARCHES).size,36,'all editorial query phrases must be unique');
  assert.ok(SEARCHES.some(query=>/interview/i.test(query)));
  assert.ok(SEARCHES.some(query=>/광고|brand|campaign/i.test(query)));
  assert.ok(SEARCHES.some(query=>/방송|broadcast|radio/i.test(query)));
@@ -137,6 +138,12 @@ test('per-query quality metrics measure unique URLs, duplicate titles, relevance
   {query:'q2',url:'https://news.test/b',title:'General unrelated article headline',publisherArticleUrl:'',publishedAt:'not-a-date'}
  ];
  const report=summarizeQueryPerformance(rows,['q1','q2'],now);
+ const trackingVariants=summarizeQueryPerformance([
+  {query:'q3',url:'https://news.test/story?source=one&utm_source=rss'},
+  {query:'q3',url:'https://news.test/story?source=two&utm_source=rss'}
+ ],['q3'],now)[0];
+ assert.equal(trackingVariants.uniqueCandidates,2,'content-bearing source parameters must not be stripped');
+
  assert.equal(report[0].candidates,2);
  assert.equal(report[0].uniqueCandidates,1);
  assert.equal(report[0].duplicateUrlOccurrences,1);

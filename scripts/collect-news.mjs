@@ -214,7 +214,7 @@ export function canonicalCandidateUrl(value){
   if(!/^https?:$/.test(url.protocol))return '';
   url.hostname=url.hostname.toLowerCase().replace(/^www\./,'');
   url.hash='';
-  for(const key of [...url.searchParams.keys()])if(/^(utm_|fbclid|gclid|ref|source)/i.test(key))url.searchParams.delete(key);
+  for(const key of [...url.searchParams.keys()])if(/^utm_/i.test(key)||/^(?:fbclid|gclid|mc_cid|mc_eid|_ga|igshid)$/i.test(key))url.searchParams.delete(key);
   url.searchParams.sort();
   return url.toString().replace(/\/$/,'');
  }catch{return ''}
