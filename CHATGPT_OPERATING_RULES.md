@@ -298,3 +298,11 @@ For each substantial update include: changed paths; planned vs implemented items
 - Treat 7-/30-day freshness rates, unique yield and explicit publisher URL rate as operational diagnostics. Title keyword matching is not human-labeled precision.
 - Preserve old candidates and unknown-date records; do not apply destructive age filtering without a separate documented decision.
 - Continue to distinguish production collection, data commit, Pages deployment and mobile QA. Always render the mandatory continuation button as the final response element.
+
+
+## 2026-11-26 — Verified freshness cycle
+- PR #41 merged after 190/190 tests and archive validation passed; Production #600 also completed successfully through Pages deployment.
+- Latest pack 5 had 0% within 7 days and 11.6% within 30 days. Treat this as one exploratory sample; compare at least three distinct packs before adapting query terms.
+- Do not filter historical records based on age. Preserve the 273 legacy shared-thumbnail records.
+- Report 349 assigned thumbnails / 469 missing / 77 unique; 273 remain unverified legacy assignments. Do not label these counts as visual accuracy.
+- Mobile QA remains unverified even after a successful Pages deployment.
