@@ -306,3 +306,10 @@ For each substantial update include: changed paths; planned vs implemented items
 - Do not filter historical records based on age. Preserve the 273 legacy shared-thumbnail records.
 - Report 349 assigned thumbnails / 469 missing / 77 unique; 273 remain unverified legacy assignments. Do not label these counts as visual accuracy.
 - Mobile QA remains unverified even after a successful Pages deployment.
+
+
+## 2026-11-26 — Human-review-first query evaluation
+- When review labels are zero, prioritize enabling the user to complete a practical review sample before tuning query packs from title/freshness proxies.
+- Treat all seven review dimensions independently. An explicit uncertain judgment is completed for workflow coverage but is never a positive relevance label.
+- Preserve local-only storage and manual JSON export/import; do not add a server, secret, automatic upload or personal-data transfer without separate approval.
+- Report review controls as deployed only after Production deployment; report mobile QA separately from CI and Pages deployment.
