@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T09:58:30.994Z",
+  "generatedAt": "2026-11-26T11:47:26.544Z",
   "discoveryRelevance": {
     "totalCandidates": 857,
     "articleCandidates": 670,
@@ -536,22 +536,22 @@
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 43,
+    "bingNewsCandidates": 39,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
     "newsCandidatesTotal": 857,
-    "newsUniqueFetched": 63,
-    "newsAddedLastRun": 3,
-    "duplicateBeforeMergeLastRun": 8,
+    "newsUniqueFetched": 87,
+    "newsAddedLastRun": 2,
+    "duplicateBeforeMergeLastRun": 7,
     "duplicateGroupsCurrent": 857,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 71,
-      "after": 62,
-      "collapsed": 9,
+      "before": 94,
+      "after": 86,
+      "collapsed": 8,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -2135,7 +2135,7 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
+    "rateLimited": 2,
     "unreachable": 1,
     "thumbnailMissing": 505,
     "results": [
@@ -2280,8 +2280,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE05RDlFY3JYUEtwc1hLaXNLbEE5RVhYMzFUM2tWZ0NUb1ZpRngweTRwcTFYNFBWaWxyX1V2QXJtYi11TkNsMGQ4ZUZScFhwUDc4Y2xFSjJyTlZxRUY5?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2376,8 +2376,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0zWFh5VWo5TTMyMmJ6NFZobmNKbHZJa0dYMDdGOU5qeFNZT3lZbmdBLVVRMWxjY21SMktiM185WHJVY2tFV09lUEw4RlZaaXpnZ1plandLXzFJREpu?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -4581,7 +4581,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T09:58:31.019Z",
+    "generatedAt": "2026-11-26T11:47:26.560Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [

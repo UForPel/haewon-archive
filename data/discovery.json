@@ -22330,7 +22330,13 @@
     "query": "엔믹스 해원 활동 소식",
     "discoveredAt": "2026-11-26T03:54:44.780Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "617823ca2da41ed09178",
