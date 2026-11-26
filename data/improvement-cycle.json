@@ -19,12 +19,12 @@
   },
   "evidence": {
     "cumulativeDiscoveryCandidates": 797,
-    "currentRunCandidates": 48,
+    "currentRunCandidates": 53,
     "uniqueVideoRecords": 20,
     "queryYield": [
       {
         "query": "오해원 팬미팅 기사",
-        "candidates": 5
+        "candidates": 10
       },
       {
         "query": "NMIXX Haewon festival",
