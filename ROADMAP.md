@@ -503,3 +503,12 @@
 - [x] PR #42 merged after 192/192 tests and archive validation passed.
 - [ ] Production #601 collection, data commit and Pages deployment verification still running.
 - [ ] Manual mobile browser QA still outstanding.
+
+
+## Human-review workflow usability — Production verified 2026-11-26
+- [x] PR #42 merged; PR CI #43 passed 192/192 tests and archive validation.
+- [x] Production #601 completed collection, validation, data commit, Pages artifact upload and deployment.
+- [x] Add pending-only view and next-pending article navigation.
+- [ ] Complete real mobile/browser QA for scrolling, focus, tap targets and import/export.
+- [ ] Collect human-reviewed labels; current committed relevance review set remains empty.
+- [ ] Compare repeated query-pack samples with human relevance labels before promoting/demoting queries.
