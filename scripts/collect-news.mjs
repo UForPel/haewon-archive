@@ -295,11 +295,12 @@ function percentile(values,p){
  return Math.round(value*10)/10;
 }
 export function summarizeQueryPerformance(items=[],queries=[],now=new Date().toISOString()){
- const rows=new Map(queries.map(query=>[query,{query,candidates:0,urls:new Set(),titles:new Map(),titleKeywordMatches:0,explicitPublisherUrls:0,publicationLagHours:[],unknownDates:0,futureDated:0}]));
+ const createRow=query=>({query,candidates:0,urls:new Set(),titles:new Map(),titleKeywordMatches:0,explicitPublisherUrls:0,publicationLagHours:[],unknownDates:0,futureDated:0,publicationFreshness:{within7Days:0,within30Days:0,within90Days:0,olderThan90Days:0,unknown:0,future:0}});
+ const rows=new Map(queries.map(query=>[query,createRow(query)]));
  const urlOwners=new Map();
  for(const item of items){
   const query=String(item.query||'');
-  if(!rows.has(query))rows.set(query,{query,candidates:0,urls:new Set(),titles:new Map(),titleKeywordMatches:0,explicitPublisherUrls:0,publicationLagHours:[],unknownDates:0,futureDated:0});
+  if(!rows.has(query))rows.set(query,createRow(query));
   const row=rows.get(query);row.candidates++;
   const url=normalizeQueryMetricUrl(item.url);
   if(url){row.urls.add(url);if(!urlOwners.has(url))urlOwners.set(url,new Set());urlOwners.get(url).add(query);}
@@ -308,9 +309,16 @@ export function summarizeQueryPerformance(items=[],queries=[],now=new Date().toI
   if(/오해원|해원|haewon/i.test(String(item.title||'')))row.titleKeywordMatches++;
   if(normalizeQueryMetricUrl(item.publisherArticleUrl))row.explicitPublisherUrls++;
   const published=Date.parse(item.publishedAt||''),discovered=Date.parse(now);
-  if(!Number.isFinite(published)||!Number.isFinite(discovered))row.unknownDates++;
-  else if(published>discovered)row.futureDated++;
-  else row.publicationLagHours.push((discovered-published)/3600000);
+  if(!Number.isFinite(published)||!Number.isFinite(discovered)){row.unknownDates++;row.publicationFreshness.unknown++;}
+  else if(published>discovered){row.futureDated++;row.publicationFreshness.future++;}
+  else {
+   const ageHours=(discovered-published)/3600000;
+   row.publicationLagHours.push(ageHours);
+   if(ageHours<=24*7)row.publicationFreshness.within7Days++;
+   else if(ageHours<=24*30)row.publicationFreshness.within30Days++;
+   else if(ageHours<=24*90)row.publicationFreshness.within90Days++;
+   else row.publicationFreshness.olderThan90Days++;
+  }
  }
  return [...rows.values()].map(row=>{
   const duplicateTitleGroups=[...row.titles.values()].filter(count=>count>1);
@@ -319,6 +327,7 @@ export function summarizeQueryPerformance(items=[],queries=[],now=new Date().toI
   return {
    query:row.query,
    candidates:row.candidates,
+   publicationFreshness:{...row.publicationFreshness,within7DaysRate:row.candidates?Math.round(row.publicationFreshness.within7Days/row.candidates*100):null,within30DaysRate:row.candidates?Math.round((row.publicationFreshness.within7Days+row.publicationFreshness.within30Days)/row.candidates*100):null},
    uniqueCandidates:row.urls.size,
    duplicateUrlOccurrences:Math.max(0,row.candidates-row.urls.size),
    duplicateTitleGroups:duplicateTitleGroups.length,
