@@ -341,3 +341,25 @@
 - [x] Confirm successful run recorded 15 YouTube items, 73 Google News RSS items and 32 Bing News RSS candidates.
 - [ ] Continue improving the actual content mix and source-verified article/image coverage.
 - [ ] Perform real browser/mobile visual QA and human review.
+
+
+
+## 2026-11-25 — Current-main PR verification gate
+
+- [x] Re-inspect PR #15's genuine pull_request run #10 and workflow.
+- [x] Create a fresh current-main branch with read-only PR CI instead of carrying the stale 8-commits-behind PR #15 branch.
+- [ ] Open focused PR and confirm its own pull_request run passes 100% of tests and data validation.
+- [ ] After approval and merge, verify a subsequent unrelated PR receives the workflow check.
+
+
+
+### 2026-11-25 — PR #30 gate acceptance
+- [x] Open focused current-main PR #30 for read-only PR CI.
+- [x] Confirm its own actual `pull_request` Actions run #45570038033 completed successfully.
+- [x] Confirm unit tests and archive-data validation both succeeded.
+- [ ] User approval and merge before treating the workflow as active on main.
+- [ ] Confirm an unrelated future PR receives this check after merge.
+
+
+
+- [x] Re-run PR #30 validation after documentation synchronization; final head run #45570147672 passed.

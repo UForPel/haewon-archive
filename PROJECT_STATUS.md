@@ -564,3 +564,23 @@ The directory pages prove that feed endpoints are published, not that each RSS i
 - Reaffirmed the mandatory bottom-of-response ChatGPT action label **🔄 연구 기반 재귀개선 계속하기**.
 - User-typed messages and corrections must not suppress the action. The action submits the full reusable recursive-improvement prompt from `CHATGPT_OPERATING_RULES.md`; a textual label alone is insufficient.
 - The requirement was already present in operating guidance; this update addresses the failure to render the action in the actual assistant response. Documentation commit: `653405c1f422e53d67cf43ea13250d6abe7332d9`; follow-up session-log commit is being recorded separately. Verify Actions/Pages for the resulting commits.
+
+
+
+## 2026-11-25 — Read-only pull request CI on current main
+
+- Created a separate branch from current main `37998b31b12b2eb9980cff6df616b2f677a10de6` and added `.github/workflows/pull-request-verification.yml`.
+- The workflow runs only on `pull_request` targeting main, grants `contents: read`, uses pinned checkout v7.0.1 and setup-node v7.1.0 (Node 24 action runtimes), disables checkout credential persistence and package-manager cache, and runs `npm test` plus `npm run validate` on Node 22.
+- This branch is a focused replacement for stale PR #15; it contains no application code, archive data, secrets, deployment permissions, or Pages deployment steps.
+- A PR-event run is pending after opening the PR. Do not claim CI passed until that event is observed.
+
+
+
+### PR #30 acceptance result — 2026-11-25
+- Opened PR #30 from the current-main branch. Its actual GitHub Actions run `45570038033` is confirmed as event `pull_request`, associated with PR #30, and completed successfully.
+- Job `test-and-validate`: checkout, Node setup, `npm test`, and `npm run validate` all succeeded. This is a real PR-event pass for #30, not a push snapshot.
+- The workflow remains only proposed on the PR branch; it is not active on main until the user approves and merges it.
+
+
+
+- Final PR #30 head `de53462e6fc814213bce325de1cb00150e1683fa` was rechecked after the documentation-only follow-up commits. The latest run `45570147672` is a genuine `pull_request` event for PR #30 and passed the full job, including `npm test` and `npm run validate`. Earlier synchronize runs include a cancelled superseded run; the latest head run is successful.

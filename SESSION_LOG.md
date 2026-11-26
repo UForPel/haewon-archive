@@ -1128,3 +1128,32 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Added an explicit non-cancellation rule to `BUTTONS_AND_ACTIONS.md`: user-typed messages, corrections, and immediate task changes do not remove the required end-of-response action.
 - Required label remains **🔄 연구 기반 재귀개선 계속하기**; the action must submit the full research-informed recursive-improvement prompt in `CHATGPT_OPERATING_RULES.md`. If a real action cannot be rendered, provide the complete copyable prompt.
 - Documentation commit: `653405c1f422e53d67cf43ea13250d6abe7332d9`. CI/Pages status for this commit must be checked before calling the documentation change deployed.
+
+
+
+## 2026-11-25 — Rebase PR #15's read-only CI proposal onto current main
+
+- Inspected PR #15's workflow and verified run #10 (ID `45541326160`) was genuinely `pull_request` event for PR #15, with 142/142 tests and validation successful.
+- Rather than updating the stale PR #15 branch (8 commits behind), created `ci/read-only-pr-verification-main-20261125` directly from main SHA `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- Added only `.github/workflows/pull-request-verification.yml`: PRs targeting main, `contents: read`, pinned checkout v7.0.1 and setup-node v7.1.0, `persist-credentials: false`, `package-manager-cache: false`, Node 22, `npm test`, `npm run validate`, concurrency cancellation and 10-minute timeout.
+- No `package-lock.json` or npm-shrinkwrap exists in main; the repository has no dependency-install step in its existing workflows, so this minimal job does not invent an install step.
+- No code/data/deploy permissions were added. PR-event CI for this new branch is pending PR creation and must be reported separately from PR #15 run #10.
+
+
+
+### PR #30 actual PR-event validation — 2026-11-25
+- PR #30: `https://github.com/UForPel/haewon-archive/pull/30`; base SHA `37998b31...`; head SHA `e07785e56679b58a826d7b872b9f977f16b76d57`.
+- GitHub run `45570038033` was inspected through the Actions API: `event=pull_request`, PR association `[30]`, conclusion `success`.
+- Job `test-and-validate` succeeded. Checkout, Node setup, `npm test`, and `npm run validate` each completed successfully.
+- This validates the workflow as proposed in PR #30. It does not make the workflow active on main, and does not replace independent approval/merge. No PR was merged.
+
+
+
+- After the six documentation status updates, GitHub emitted synchronize runs for PR #30. Superseded run `45570112539` was cancelled as expected by concurrency; run `45570124386` passed an intermediate docs head; final head `de53462e6fc814213bce325de1cb00150e1683fa` was tested by run `45570147672`, event `pull_request`, associated with PR #30, conclusion `success`. Its sole job passed checkout, Node setup, unit tests and archive validation. This is the final-head acceptance result.
+
+
+## 2026-11-26 — Refresh PR verification against current main
+- Current main is `3c93903c6e37839fd69e0a1a74851a3dac3e6174`; scheduled production run #45695468167 completed 142/142 tests, all collection/validation/data-commit steps, and Pages deploy. Artifact: 446,580 bytes, SHA-256 `ea394ffa5add0d8ffc8bdfc88673b145cf64fc6d7ebbb9870badc5ffe8d50bcc`.
+- Main still emits the GitHub Node20 deprecation warning for checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4; the runner forces them to Node24. PR #26 proposes immutable Node24 action pins.
+- Previous PR #30 run #45570252997 passed 142 tests and validation but its merge commit was based on main `37998b31`, one data commit behind current main. This commit refreshes the PR head so the read-only workflow can be re-evaluated against current main.
+- This workflow must remain read-only (`contents: read`), with no secrets, data writes, artifact upload or deployment. A successful PR run is not a production deployment.

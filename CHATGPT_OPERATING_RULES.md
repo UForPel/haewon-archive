@@ -173,3 +173,20 @@ For each substantial update include: changed paths; planned vs implemented items
 - Google News RSS 4/4, 260 items, 258 site-level URLs, 0 direct article URLs and 0 image signals; Bing 4/4, 41 candidates; combined 301 fetched, 275 unique, 6 additions.
 - Metadata enrichment attempted 0 URLs due retry backoff. Do not characterize this as failure.
 - Keep Google News wrappers opaque and only use explicit HTTPS article/video URLs from public metadata.
+
+
+
+## 2026-11-25 — Read-only PR CI integration
+
+- Prefer rebasing a narrow workflow proposal from current main over merging a stale branch with unrelated commit history.
+- The read-only PR workflow is not active on main until its PR is approved and merged. Validate the PR using its own `pull_request` event run; never substitute a push snapshot or another PR's run.
+
+
+
+### PR #30 CI result — 2026-11-25
+- The new current-main PR #30 received a genuine `pull_request` run #45570038033, and the job passed `npm test` and `npm run validate`.
+- Report this as a successful PR-specific acceptance run, not as a main-branch required check. It becomes an active repository gate only after explicit user approval and merge.
+
+
+
+- Final PR #30 head `de53462e...` passed pull_request run #45570147672 after documentation synchronization. An intermediate cancelled run is superseded and must not be reported as the final result.
