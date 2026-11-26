@@ -840,3 +840,14 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Current main UI/code contains collapsed review rows, seven review dimensions, next-pending open/focus/scroll, manual JSON import/export, per-dimension merge and transactional storage failure recovery.
 - **Android Chrome QA: UNVERIFIED.** No user-reported device checklist was received in this cycle. CI, source inspection and Pages deployment are not device QA.
 - Review labels remain localStorage-only with user-initiated JSON transfer; no automatic upload. Search pack 5 unchanged; no new RSS sources or bulk thumbnail changes.
+
+
+## 2026-11-26 — Review UI failed-write rollback regression
+- Fresh baseline main: `f3db7e17606386e04fe43895d4d3b48434ccce5a`; PR #47 merged; 0 open PRs at audit time. Latest PR CI #56 and Production #606 succeeded.
+- Production #606 data commit: `78dbc39663e56a9165affb7ddf317cae0ba4b215`; Pages artifact `15097491496` (584,825 bytes; SHA-256 `71a771fb66b224455312bfe548f6b50dceb1bfc842ebb4508dd2f0a94f71d093`); Pages deploy step successful.
+- New code finding: if a review field was saved successfully and a subsequent edit failed, the UI could revert to the value captured at initial render rather than the most recently saved value. Correction-category selector had the same stale fallback.
+- Fix prepared on `fix/review-ui-rollback-to-latest-saved-label-20261126`: shared `getArticleReviewValue(labels, articleId, field)` reads the last committed label; both selectors now use it after failed writes. Regression covers successful first edit then simulated QuotaExceededError on second edit.
+- Data baseline: 856 candidates; 669 article / 187 video; 99 verified publisher articles; 76 verified Haewon; 58 provenance-thumbnail verified Haewon. Article labels 0; thumbnail review 482/0; 352 assigned / 504 missing; 273 legacy shared-image assignments retained.
+- Android Chrome QA remains **UNVERIFIED** pending user-reported checklist results. Review data stays localStorage + manual JSON only.
+
+- Validation correction: initial PR CI run `45792852673` executed 202 tests but failed one new source-contract assertion because the test regex was over-escaped; application code and the sequence test logic were not the reported failure. The assertion escaping was corrected in commit `eaf649630c18b8607f4723ea0a2d91995fa698cd`. Re-run CI before merge; do not treat the first run as passed.

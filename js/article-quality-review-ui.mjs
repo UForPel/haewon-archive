@@ -1,5 +1,5 @@
 import { classifyDiscoveryCategories } from './discovery-kind.mjs';
-import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, createArticleReviewExport, mergeArticleReviewLabels, persistArticleReviewLabels, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete, getNextPendingArticle } from './article-review.mjs';
+import { ARTICLE_REVIEW_DIMENSIONS, getVerifiedHaewonArticles, summarizeArticleReviews, formatArticleReviewProgress, validateArticleReviewExport, createArticleReviewExport, mergeArticleReviewLabels, persistArticleReviewLabels, getArticleUrlContext, filterArticleReviews, isArticleReviewComplete, getNextPendingArticle, getArticleReviewValue } from './article-review.mjs';
 
 const host = document.querySelector('#article-quality-review');
 if (host) {
@@ -109,7 +109,7 @@ if (host) {
           const next = { ...(labels[String(item.id)] || { articleId: String(item.id) }), [dimension]: select.value, reviewedAt: new Date().toISOString() };
           if (!select.value) delete next[dimension];
           const nextLabels = { ...labels, [String(item.id)]: next };
-          if (!persistLabels(nextLabels, '저장됨 · '+item.title)) { select.value = current[dimension] || ''; return; }
+          if (!persistLabels(nextLabels, '저장됨 · '+item.title)) { select.value = getArticleReviewValue(labels, item.id, dimension); return; }
           if (showPendingOnly && isArticleReviewComplete(item, labels)) { render(); focusNextPendingArticle(item.id); } else updateProgress();
         });
         label.append(select); fields.append(label);
@@ -123,7 +123,7 @@ if (host) {
         const next = { ...(labels[String(item.id)] || { articleId: String(item.id) }), reviewedAt: new Date().toISOString() };
         if (correctionSelect.value) next.expectedCategory = correctionSelect.value; else delete next.expectedCategory;
         const nextLabels = { ...labels, [String(item.id)]: next };
-        if (!persistLabels(nextLabels, '저장됨 · 정정 분류 · '+item.title)) correctionSelect.value = current.expectedCategory || '';
+        if (!persistLabels(nextLabels, '저장됨 · 정정 분류 · '+item.title)) correctionSelect.value = getArticleReviewValue(labels, item.id, 'expectedCategory');
       });
       correction.append(correctionSelect);
       const rowSummary = document.createElement('summary'); rowSummary.className = 'article-quality-review-row-summary'; rowSummary.append(title, meta);

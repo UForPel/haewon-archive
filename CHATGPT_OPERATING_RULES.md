@@ -429,3 +429,11 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - If a storage adapter throws, report the tested contract accurately: prior labels remain unchanged. Do not imply this reproduces a real browser quota condition.
 - Continue using the repository's existing Node test stack; do not add Playwright/Puppeteer merely to create a misleading substitute for the user's actual device test.
 - Review-label data stays in localStorage and manual user-controlled JSON transfers only. Do not introduce automatic upload.
+
+
+## 2026-11-26 — Repeated-edit storage failure invariant
+- Review UI correctness must be checked across sequences, not only a single failed write: successful edit A followed by failed edit B must preserve A in both storage and visible controls.
+- Test normal review dimensions and correction-category values. The in-memory labels object is updated only after storage accepts the complete write; failure fallback must read from that latest committed object.
+- Keep Node/CI evidence separate from Android Chrome QA. No user-reported device checklist means device QA remains UNVERIFIED.
+
+- Validation correction: initial PR CI run `45792852673` executed 202 tests but failed one new source-contract assertion because the test regex was over-escaped; application code and the sequence test logic were not the reported failure. The assertion escaping was corrected in commit `eaf649630c18b8607f4723ea0a2d91995fa698cd`. Re-run CI before merge; do not treat the first run as passed.
