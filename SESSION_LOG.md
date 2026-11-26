@@ -1309,3 +1309,29 @@ Continue Haewon Archive with verified latest GitHub/CI state, implement thumbnai
 - Thumbnail enrichment attempted 9, assigned 7, missing 2, failed 0. Total 349 thumbnails / 469 missing / 77 unique URLs. The 273 legacy shared-image assignments remain intact.
 - Production run #600 completed Pages deployment successfully. Browser/mobile visual QA is still unverified and must not be inferred from deployment.
 - No paid service, external contact, new source permission, or secret/personal-data transfer was used. Cloudflare dispatcher remains dry-run-only.
+
+
+## 2026-11-26 — Human-review queue usability cycle
+
+### Live baseline
+- Current main SHA: `a3e0bfd6c316ca5f789fa0af75fa7cee071d1167`; open PR count: 0.
+- Latest Production run #600 (`45748513047`) and PR CI #42 (`45748429788`) succeeded before the current documentation-only commits. Latest generated data commit: `4643892a7d1a293adaafe8d7c926011b0027fd5e`.
+- Latest archive metrics: 818 discovery records; 631 article candidates; 75 verified Haewon article candidates; 349 assigned thumbnails, 469 missing, 77 unique URLs. The dominant legacy image is assigned to 273 records and remains untouched.
+- Search pack 5 contains 69 candidates, with 0 within 7 days and 8 within 30 days. Its current query diagnostics are a single sample, not sufficient to optimize query packs.
+- Human review is the limiting evidence: 75 eligible records, zero persisted relevance-review labels (`data/relevance-reviews.json = []`); article quality labels are localStorage-only with manual JSON export/import.
+
+### Choice
+- Improve the existing human-review workflow before changing query selection. With no human labels, title-match and freshness indicators cannot establish actual Haewon relevance or precision.
+- Alternatives rejected: automatically upload browser labels (would require a backend/credentials and create privacy/security cost); change query terms based on proxy scores (premature); filter old records (destructive).
+- Cost/risk: static browser JavaScript and unit tests only; no API calls, paid service, backend, personal data transfer or credentials. Primary risk is unverified real-device scrolling/focus behavior.
+
+### Implementation on review branch
+- Added pure helpers to detect seven-dimension completion and filter pending review rows.
+- Added “다음 미검수 기사” and “미검수만 보기 / 전체 기사 보기” controls to the existing article-review panel.
+- When the last missing dimension is labeled, the completed article leaves the pending-only queue; explicit uncertain labels count as reviewed but never as positive relevance.
+- Kept localStorage-only persistence and manual JSON transfer. No upload or repository write from the browser.
+- Added tests for completed/partial/uncertain records, pending filtering, summary counts and UI control wiring.
+
+### Verification still pending
+- Run genuine PR CI and archive validation. If successful, merge and verify Production Actions / data commit / Pages deployment independently.
+- Ask for real mobile visual QA only after deployed UI; no claim of mobile QA from unit tests.
