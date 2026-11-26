@@ -830,3 +830,13 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Latest data still contains 856 candidates, 352 assigned thumbnails / 504 missing, 273 unverified legacy shared assignments retained, and 79 provenance-backed assignments. Thumbnail review: 482 eligible, 0 reviewed; article human review labels remain 0. No search-pack or thumbnail reassignment change was made.
 - PR #46 was merged as `8edb0e1...`; PR CI #55 passed 201/201 tests and validation. The earlier PR CI #54 failure was an outdated source-contract assertion; the assertion was updated and the rerun passed.
 - Real Android Chrome visual/touch/focus/refresh/download-import QA remains outstanding. Do not claim it from CI or deployment. Labels remain localStorage-only and manual JSON transfer only; no backend or automatic upload. No Playwright/Puppeteer dependency was added.
+
+
+## 2026-11-26 — Post-PR #46 verified baseline
+- Main: `61c7e63210651a7e86f4e08171833a0f50b49b06`; open PRs: 0 at audit time.
+- PR #46 merged as `8edb0e1b836061967466d018189292c5f5d5b3b0`; PR CI #55 passed 201/201 tests and archive validation (856 candidates).
+- Production #606 (`45779027835`) independently verified successful through collection, validation, generated data commit `78dbc39663e56a9165affb7ddf317cae0ba4b215`, Pages artifact `15097491496` and successful Pages deployment.
+- Current archive: 856 discovery candidates; article review labels 0; thumbnail review 482 eligible / 0 reviewed; 352 thumbnail assignments / 504 missing. Preserve 273 legacy shared-image assignments.
+- Current main UI/code contains collapsed review rows, seven review dimensions, next-pending open/focus/scroll, manual JSON import/export, per-dimension merge and transactional storage failure recovery.
+- **Android Chrome QA: UNVERIFIED.** No user-reported device checklist was received in this cycle. CI, source inspection and Pages deployment are not device QA.
+- Review labels remain localStorage-only with user-initiated JSON transfer; no automatic upload. Search pack 5 unchanged; no new RSS sources or bulk thumbnail changes.
