@@ -54,7 +54,7 @@ export function summarizeMissingThumbnailDiagnostics(items=[]) {
   missing++;row.missing++;byReason[reason]=(byReason[reason]||0)+1;
   if(reason==='unclassified-missing-thumbnail')unclassified++;
   if(hasExplicitPublisherArticleUrl(item))row.missingWithPublisherArticleUrl++;
-  if(/^https:\/\//i.test(String(item.sourceUrl||'')))row.missingWithSourceSiteUrl++;
+  if(!hasExplicitPublisherArticleUrl(item)&&/^https:\/\//i.test(String(item.sourceUrl||'')))row.missingWithSourceSiteUrl++;
   row.reasons[reason]=(row.reasons[reason]||0)+1;bySource.set(source,row);
  }
  return {items:items.length,missing,classified:missing-unclassified,unclassified,byReason,bySource:[...bySource.values()].sort((a,b)=>b.missing-a.missing||a.source.localeCompare(b.source))};
