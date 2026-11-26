@@ -337,3 +337,9 @@ The assistant MUST render a real clickable button at the very bottom of every co
 - Completing all seven dimensions while **미검수만 보기** is active removes the completed row and moves focus to the next pending article; navigation wraps to the first remaining pending item.
 - When no pending item remains, the status announces completion. Labels remain localStorage-only; import/export remains manual.
 - PR #43 is pending CI/merge at this checkpoint. Keep the ChatGPT **🔄 재귀개선 계속하기** conversation button as the final element of every completed cycle.
+
+
+## 2026-11-26 — Review queue auto-advance merged
+- PR #43 merged as `c77d605cde6eac9476f7d187f77ac6c9c646adee`; PR CI #47 (`45752743361`) passed 193/193 tests and archive validation.
+- Production #602 (`45752794835`) is in progress; do not claim live deployment until its Pages step succeeds.
+- Keep the conversation continuation button as the final response element for every completed cycle.
