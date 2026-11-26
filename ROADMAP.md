@@ -342,16 +342,98 @@
 - [ ] Continue improving the actual content mix and source-verified article/image coverage.
 - [ ] Perform real browser/mobile visual QA and human review.
 
-## 2026-11-25 — Node 24-compatible production workflow
-- [x] Verify current first-party action versions, Node 24 runtime declarations and full immutable tag commit SHAs.
-- [x] Update checkout, setup-node, configure-pages, upload-pages-artifact and deploy-pages pins on a separate branch.
-- [x] Preserve Node 22 for project scripts and explicitly disable unnecessary package-manager caching.
-- [ ] Await PR review and read-only validation; no merge without user approval.
-- [ ] After approved merge, verify the complete production collection, validation, data commit, artifact upload and Pages deployment.
 
-## 2026-11-25 — Verification boundaries after PR #25/#26
-- [x] Recheck PR #25 and PR #26 against latest main; both are open, unmerged, and have no status checks.
-- [x] Reconfirm production Actions #45556461352: 142/142 tests, full collection/validation/data commit/Pages deployment successful.
-- [x] Confirm the live workflow's Pages deployment source SHA differs from the post-run data commit; keep the identifiers distinct in reporting.
-- [ ] Run `npm test` and `npm run validate` on PR #25 and PR #26 through a working PR CI or local checkout. Current environment DNS prevents Git clone, and main has no pull_request workflow.
-- [ ] Inspect the published Pages site in a real browser/mobile viewport; web viewer access failed, so visual QA is still open.
+
+## 2026-11-25 — Fresh integration and deployment gates
+
+- [x] Reconfirm main SHA, all requested open PRs, current heads and behind counts.
+- [x] Separate PR snapshot push runs from actual PR-event checks.
+- [x] Verify production Actions #587 substantive steps, Pages artifact upload and deploy step.
+- [x] Measure PR #28 public Google/Bing RSS image signals; current sample has zero image metadata from both feeds.
+- [x] Preserve all 273 shared legacy thumbnail assignments.
+- [ ] Obtain explicit user approval before merging any PR.
+- [ ] Rebase/retest PRs #13–#16 and #20/#22–#24 against latest main; PR #14 needs a narrower replacement because its documentation-only branch conflicts with current documentation.
+- [ ] Establish the permanent read-only PR CI on main before treating pull_request checks as an enforced gate.
+- [ ] After PR #26 approval/merge, verify production Pages deploy using Node24-compatible action pins.
+- [ ] After PR #27 approval/merge, verify persisted X/social exclusion and no social thumbnail enrichment in the next production collection.
+- [ ] Keep investigating only publicly disclosed publisher article metadata; do not infer article URLs from Google News source URLs or decode wrappers.
+- [ ] Real mobile browser, visual layout, keyboard and interaction QA; not verified by Actions.
+- [ ] Human review of relevance, date, source, category and thumbnail suitability; precision remains unmeasured.
+
+
+## 2026-11-25 — Late-session audit gates
+- [x] Recheck main SHA, requested PR heads and ahead/behind counts (#13–#30).
+- [x] Verify Actions #587 / #45556461352, artifact size/digest and deploy step.
+- [x] Confirm PR #30 genuine pull_request run #45570252997 passed tests and archive validation.
+- [x] Re-open Sportskeeda article URL and observe HTTP 405; confirm PR #25 tests cover seven-day backoff and no method fallback.
+- [x] Review PR #27 shared predicate across Google/Bing ingestion, merge, enrichment, metrics and default display scope.
+- [x] Measure PR #28 current RSS image signals: zero in both sampled feeds.
+- [ ] Obtain user approval before any merge; none performed.
+- [ ] Validate PR #25 latest head through an accepted CI route; distinguish mocked 405 tests from production collector evidence.
+- [ ] After approved PR #26 merge, verify a complete production Node24 Pages deployment and artifact.
+- [ ] After approved PR #27 merge, verify X/Twitter exclusion in persisted metrics and thumbnails.
+- [ ] Review terms and source policy before adding any direct publisher RSS feed.
+- [ ] Preserve all 273 shared legacy thumbnails.
+- [ ] Perform real mobile/browser, keyboard and human image-relevance QA.
+
+## 2026-11-26 — Latest main, production and PR re-audit
+- Current main: `3c93903c6e37839fd69e0a1a74851a3dac3e6174` (`data: refresh archive discovery and improvement cycle`). The data commit was produced by scheduled production run `45695468167`, whose workflow source SHA was `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- Production run #45695468167: 142/142 tests, 0 failures; YouTube 15 items, Google RSS 135, Bing RSS 34; 24 new news candidates; metadata enrichment attempted 12, assigned 8, failed 3, missing 1. Validation, data commit, Pages configuration, 446,580-byte artifact upload and deploy step all succeeded. Artifact SHA-256 `ea394ffa5add0d8ffc8bdfc88673b145cf64fc6d7ebbb9870badc5ffe8d50bcc`.
+- Main workflow still references checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4. The actual production job emitted a Node.js 20 deprecation warning: these actions target Node20 but are forced to run on Node24. The run still succeeded. GitHub announced Node20 removal on 2026-09-23; do not describe the existing deployment as Node24-native.
+- Latest production data: 729 candidates; 543 articles; 186 videos; 77 verified publisher articles; 67 verified Haewon articles; 55 publisher articles and 48 Haewon articles with provenance-backed thumbnails; 329 thumbnail assignments; 400 missing; 57 unique thumbnail URLs. Of the 329 assignments, 273 are the same unverified legacy URL. Human image labels remain 0; visual precision is unmeasured.
+- Latest Google RSS diagnostics: 101 items, 98 site-level source URLs, 0 explicit publisher article URLs, 0 image signals. Bing RSS produced 34 candidates; the prior PR #28 sample (36 items) also had 0 image signals. PR #28 parser fixture tests are not proof of live feed image availability.
+- All 14 currently open PRs remain unmerged. Current main comparison ahead/behind: #13 59/9, #14 134/9, #15 3/9, #16 13/9, #20 17/7, #22 13/7, #23 15/7, #24 9/7, #25 19/1, #26 8/1, #27 19/1, #28 4/1, #29 13/1, #30 19/1. PR #14 remains mergeable=false; do not merge its stale docs branch wholesale.
+- PR #30 genuine pull_request run #45570252997 passed 142/142 tests and archive validation. It ran on a merge commit based on the previous main SHA 37998b31, not latest 3c93903. Its read-only workflow is not yet on main; it is not yet a shared CI gate for other PRs.
+- No PR merged and no new source was added. Browser/mobile visual QA remains unverified.
+
+## 2026-11-26 — Next verification gates
+- [x] Re-read latest main, all 14 open PRs, current ahead/behind comparisons and latest production run.
+- [x] Verify production Actions #45695468167: 142/142 tests, validation, data commit, Pages artifact (446,580 bytes) and deploy step.
+- [x] Capture actual Node20 deprecation warning from production job; confirm PR #26 upstream Node24 runtimes and immutable commit pins.
+- [x] Recheck Google RSS image diagnostics: 101 items, 0 direct article URLs, 0 image signals; confirm no feed expansion.
+- [x] Identify PR #28 standalone social URL regression against PR #27 shared predicate.
+- [x] Add legacy persisted-405 statusCode handling and regression test to PR #25 branch.
+- [ ] Run PR #25 latest tests in Actions; do not claim passing until a real run exists.
+- [ ] Obtain user approval before merging PR #30; then update/re-run open PRs against current main to establish a shared read-only CI gate.
+- [ ] Obtain user approval before PR #26 merge; verify complete production Pages deployment using Node24 pins.
+- [ ] Sequence PR #27 before PR #28 or port shared social predicate into #28 before any merge.
+- [ ] Preserve all 273 shared legacy thumbnails; human review and browser/mobile QA remain pending.
+
+## 2026-11-26 — PR #30 refreshed against latest main
+- After updating the PR #30 session log, genuine pull_request run #45704287050 checked merge commit `53b3d5b`, which merged PR head `fc619f0e623fdda9931f72e7f59da66c50c76b68` into current main `3c93903c6e37839fd69e0a1a74851a3dac3e6174`.
+- The read-only job succeeded: 142/142 tests, 0 failures, and `npm run validate` succeeded. No artifact upload or Pages deployment was attempted.
+- PR #30 is still open/unmerged. The shared PR CI workflow remains absent from main until user-approved merge.
+
+## 2026-11-26 — Remaining legacy PR review
+- PR #13's seven-dimension article review UI is still not in main. Current production review metrics remain 0 human labels; browser-local thumbnail review labels are not a substitute for article review. Branch is 9 commits behind main and needs a fresh merge-base review.
+- PR #16 addresses a real metric ambiguity: current main reports `metaFound:56` from persisted metadata candidates beside `metaAssigned:8` from the latest run, producing a potentially misleading 14% ratio. Its branch adds separate latest-run attempted/found/assigned fields and persisted-thumbnail matching counts. Current main still calls the old two-argument comparison function. Rebase/integrate this after reviewing PR #27's shared URL predicate.
+- PR #20 proposes date-first default sorting and explicit unresolved-video filtering. Current main still sorts news by relevance score first, then date; the requested date-first behavior is not deployed. PR #20 is 7 commits behind and should be refreshed before merge.
+- PR #22 expands the search vocabulary to 36 terms with four-query run rotation; current production still requests four news queries per run and records searchPack 2. PR #23 adds optional YouTube Data API discovery; it is not active in main and must remain optional, quota-bounded and nonessential to the free core.
+- PR #24 is a Cloudflare/GitHub App dispatch dry-run only. It does not implement the external scheduler or automated collection; no App, Worker or secret configuration is active.
+- PR #15 is an older read-only PR-CI proposal and is 9 commits behind; PR #30 is the newer tested version. Keep #15 unmerged rather than duplicating the CI gate.
+
+## 2026-11-26 — Verification and next implementation priorities
+- [x] Reconfirm main `3c93903c...`, Production run `45695468167` and PR #30 read-only run `45704287050`.
+- [x] Execute PR #25 head `b152ebc4...` in an isolated read-only Actions workflow: `45718220250`, 145/145 tests and validation passed.
+- [x] Re-measure first 12 unique thumbnail URLs with HEAD-only requests: `45718297315`, 1 HTTP 404, 11 image responses, no unreachable or rate-limited URLs.
+- [ ] Integrate PR #27 shared X/Twitter article predicate into PR #28 Bing parser; keep original candidate URL/provenance, blank publisherArticleUrl for social destinations, add profile/post regression cases, and run tests on a current-main snapshot.
+- [ ] Port PR #16 stored-vs-latest-run metric separation to current main; ensure latest run summary is passed explicitly and historical candidates never inflate current-run assignment rates.
+- [ ] Port PR #20 date-first default sort; keep relevance as explicit alternate sort and retain publishedAt → discoveredAt fallback; test invalid dates and unresolved video filtering.
+- [ ] Evaluate PR #26 Node24 action pins independently from PR #30 read-only CI. Verify the actual production workflow after any approved rollout.
+- [ ] Run the main data collector only when intentionally requested; then independently verify tests, collection, data commit, artifact, Pages deployment and live mobile UI.
+- [ ] Preserve 273 legacy thumbnail assignments, avoid automatic deletion/replacement, and keep human review labels per article.
+- [ ] Do not add SBS, Yonhap or other new RSS feeds without explicit applicable permission.
+
+## 2026-11-26 — Updated priorities after merged improvements
+- [x] Merge read-only PR verification (#30) and confirm genuine PR CI.
+- [x] Integrate social-safe publisher URL classification with Bing RSS image parsing, HTTP 405 retry, stored/latest-run thumbnail metrics, and date-first article ordering (#31).
+- [x] Upgrade Production Pages actions to immutable Node24-compatible pins (#26).
+- [x] Confirm first Node24 Production run #45728961571: 158/158 tests, data validation, data commit, Pages artifact and deployment successful.
+- [x] Re-measure thumbnail response sample: 12 URLs; 11 image responses; 1 HTTP 404.
+- [ ] Port PR #22's 36-query / six-pack morning-evening rotation to current main without losing PR #31's shared X/Twitter predicate. Measure per-query unique yield, overlap, explicit publisher URL rate and publication lag for at least two cycles before claiming improvement.
+- [ ] Review PR #13 human article/thumbnail review controls and define a measurable, privacy-conscious path for collecting labels; current human labels remain a separate quality bottleneck.
+- [ ] Keep PR #23 YouTube Data API optional and quota-bounded; never make it a required or paid core dependency.
+- [ ] Keep PR #24 Cloudflare/GitHub App dispatcher in dry-run until free-tier limits, app permissions and secret handling are reviewed. Do not request secrets in chat.
+- [ ] Improve article-specific thumbnail coverage through public metadata only; never bulk replace the 273 legacy shared-image assignments.
+- [ ] Recheck current live site and mobile layout after a verified deployment; deployment success alone is not visual QA.
+- [ ] No new publisher RSS source until explicit applicable permission is documented.

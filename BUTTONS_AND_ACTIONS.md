@@ -200,8 +200,60 @@ This file is a persistent UX requirement. **Do not forget visible buttons and us
 - If a rendered action cannot be supported by the client, include the exact full prompt as a copyable fallback. Never silently omit the action.
 - Regression cause: the requirement already existed in operating documentation, but the assistant omitted the actual conversation control. This is an execution/response-composition failure, not an absence of a documented requirement.
 
-## 2026-11-25 — Node 24 production workflow proposal
-- Branch `ci/upgrade-pages-actions-node24` upgrades five first-party actions to verified full immutable SHAs whose action metadata declares Node 24.
-- The application/runtime Node version remains 22. This change only upgrades the runtime used internally by JavaScript GitHub Actions.
-- Do not claim the change is deployed or verified until PR CI and an approved main production deployment succeed. No PR merge is authorized by this work.
-- The mandatory bottom-of-response conversation action **🔄 연구 기반 재귀개선 계속하기** remains required regardless of user-typed follow-up messages.
+
+
+## 2026-11-25 — Latest recursive audit and response action
+
+- Current audited main: `37998b31b12b2eb9980cff6df616b2f677a10de6`; latest production Actions #587 completed all substantive collection, validation, data-commit and Pages deployment steps. Pages artifact: 434,230 bytes. Independent mobile/browser QA remains unverified.
+- PR #25–#28 snapshot runs are push-triggered and read-only, not PR-event checks: 144/144, 142/142, 147/147 and 145/145 respectively. Their current PR heads are 0 behind main.
+- PR #13–#16 are 8 behind; #20/#22–#24 are 6 behind. PR #14 is documentation-only, mergeable=false and overlaps main's current edits to BUTTONS_AND_ACTIONS.md, PROJECT_STATUS.md and SESSION_LOG.md. Do not merge it wholesale.
+- The mandatory ChatGPT conversation control remains the final element of every substantial response: **🔄 연구 기반 재귀개선 계속하기**. It must be a real action, not plain text. The user typing another prompt does not cancel this requirement.
+
+
+## 2026-11-25 — Latest audit control inventory
+- No Haewon Archive website control or handler was added or changed in this audit.
+- The ChatGPT continuation action is conversation-level, not a website button. Keep the required label **🔄 연구 기반 재귀개선 계속하기** and make it a real action submitting the full prompt from CHATGPT_OPERATING_RULES.md; a text label alone is insufficient.
+- Main Pages deployment success does not establish manual browser testing of website controls. Mobile and keyboard QA remain pending.
+
+## 2026-11-26 — Latest main, production and PR re-audit
+- Current main: `3c93903c6e37839fd69e0a1a74851a3dac3e6174` (`data: refresh archive discovery and improvement cycle`). The data commit was produced by scheduled production run `45695468167`, whose workflow source SHA was `37998b31b12b2eb9980cff6df616b2f677a10de6`.
+- Production run #45695468167: 142/142 tests, 0 failures; YouTube 15 items, Google RSS 135, Bing RSS 34; 24 new news candidates; metadata enrichment attempted 12, assigned 8, failed 3, missing 1. Validation, data commit, Pages configuration, 446,580-byte artifact upload and deploy step all succeeded. Artifact SHA-256 `ea394ffa5add0d8ffc8bdfc88673b145cf64fc6d7ebbb9870badc5ffe8d50bcc`.
+- Main workflow still references checkout@v4, setup-node@v4, configure-pages@v5, upload-pages-artifact@v4 and deploy-pages@v4. The actual production job emitted a Node.js 20 deprecation warning: these actions target Node20 but are forced to run on Node24. The run still succeeded. GitHub announced Node20 removal on 2026-09-23; do not describe the existing deployment as Node24-native.
+- Latest production data: 729 candidates; 543 articles; 186 videos; 77 verified publisher articles; 67 verified Haewon articles; 55 publisher articles and 48 Haewon articles with provenance-backed thumbnails; 329 thumbnail assignments; 400 missing; 57 unique thumbnail URLs. Of the 329 assignments, 273 are the same unverified legacy URL. Human image labels remain 0; visual precision is unmeasured.
+- Latest Google RSS diagnostics: 101 items, 98 site-level source URLs, 0 explicit publisher article URLs, 0 image signals. Bing RSS produced 34 candidates; the prior PR #28 sample (36 items) also had 0 image signals. PR #28 parser fixture tests are not proof of live feed image availability.
+- All 14 currently open PRs remain unmerged. Current main comparison ahead/behind: #13 59/9, #14 134/9, #15 3/9, #16 13/9, #20 17/7, #22 13/7, #23 15/7, #24 9/7, #25 19/1, #26 8/1, #27 19/1, #28 4/1, #29 13/1, #30 19/1. PR #14 remains mergeable=false; do not merge its stale docs branch wholesale.
+- PR #30 genuine pull_request run #45570252997 passed 142/142 tests and archive validation. It ran on a merge commit based on the previous main SHA 37998b31, not latest 3c93903. Its read-only workflow is not yet on main; it is not yet a shared CI gate for other PRs.
+- No PR merged and no new source was added. Browser/mobile visual QA remains unverified.
+
+## 2026-11-26 — UI and continuation action verification
+- The current main UI still defaults the news discovery page to `verified-haewon` and sorts by relevance score then published/discovered date. PR #27's shared predicate is required before X profiles/posts can be excluded from the verified publisher scope.
+- No UI controls were changed in this cycle. Human thumbnail labels remain browser-local until exported/imported; there are 0 persisted human review labels in current metrics.
+- The mandatory ChatGPT continuation action remains **🔄 연구 기반 재귀개선 계속하기** and must submit the full next-cycle prompt. It is a conversation action, not a website control. No claim of manual mobile/keyboard QA.
+
+## 2026-11-26 — PR #30 refreshed against latest main
+- After updating the PR #30 session log, genuine pull_request run #45704287050 checked merge commit `53b3d5b`, which merged PR head `fc619f0e623fdda9931f72e7f59da66c50c76b68` into current main `3c93903c6e37839fd69e0a1a74851a3dac3e6174`.
+- The read-only job succeeded: 142/142 tests, 0 failures, and `npm run validate` succeeded. No artifact upload or Pages deployment was attempted.
+- PR #30 is still open/unmerged. The shared PR CI workflow remains absent from main until user-approved merge.
+
+## 2026-11-26 — Remaining legacy PR review
+- PR #13's seven-dimension article review UI is still not in main. Current production review metrics remain 0 human labels; browser-local thumbnail review labels are not a substitute for article review. Branch is 9 commits behind main and needs a fresh merge-base review.
+- PR #16 addresses a real metric ambiguity: current main reports `metaFound:56` from persisted metadata candidates beside `metaAssigned:8` from the latest run, producing a potentially misleading 14% ratio. Its branch adds separate latest-run attempted/found/assigned fields and persisted-thumbnail matching counts. Current main still calls the old two-argument comparison function. Rebase/integrate this after reviewing PR #27's shared URL predicate.
+- PR #20 proposes date-first default sorting and explicit unresolved-video filtering. Current main still sorts news by relevance score first, then date; the requested date-first behavior is not deployed. PR #20 is 7 commits behind and should be refreshed before merge.
+- PR #22 expands the search vocabulary to 36 terms with four-query run rotation; current production still requests four news queries per run and records searchPack 2. PR #23 adds optional YouTube Data API discovery; it is not active in main and must remain optional, quota-bounded and nonessential to the free core.
+- PR #24 is a Cloudflare/GitHub App dispatch dry-run only. It does not implement the external scheduler or automated collection; no App, Worker or secret configuration is active.
+- PR #15 is an older read-only PR-CI proposal and is 9 commits behind; PR #30 is the newer tested version. Keep #15 unmerged rather than duplicating the CI gate.
+
+## 2026-11-26 — Verification workflow inventory
+- Temporary branch-only workflow `verify/pr25-http405-b152ebc4`: read-only `npm test` + `npm run validate`; run `45718220250` passed 145/145. First attempt's `npm ci` failed because no lockfile exists; corrected workflow does not install dependencies.
+- Temporary branch-only workflow `audit/thumbnail-head-sample-20261126`: read-only HEAD checks for first 12 unique thumbnail URLs; run `45718297315` succeeded with 1 HTTP 404 and 11 image responses. No app UI controls changed.
+- PR #30 adds read-only pull_request CI but is not on main; PR #26 separately changes production deployment action versions. Neither is merged or deployed.
+- The mandatory ChatGPT conversation follow-up action remains **🔄 연구 기반 재귀개선 계속하기**. It is a ChatGPT conversation control, not a button in the deployed archive. Keep rendering it at the end of substantial project work.
+
+## 2026-11-26 — Current workflows and verified controls
+- Main PR gate: `.github/workflows/pull-request-verification.yml`, merged via PR #30. It runs `npm test` and `npm run validate` with contents:read, no collection, no data writes and no Pages deployment.
+- Production workflow: `.github/workflows/collect-and-deploy.yml`, Node24-compatible immutable action pins merged via PR #26. Latest production run #45728961571 passed all steps, including Pages deployment.
+- Combined discovery improvements: PR #31 merged. Default article sort is date-first; relevance is optional. Unresolved wrapper video candidates appear in a separate section. Persisted thumbnail metrics and latest-run enrichment metrics are separate.
+- Social URL guard: Bing/Google X/Twitter destinations remain discovery candidates but are excluded from publisher article URL metrics and metadata enrichment.
+- Current latest run: 736 candidates; 550 articles; 186 videos; 333 thumbnail assignments; 403 missing. 273 legacy repeated-image records preserved.
+- Latest thumbnail response sample: 12 checked; 11 image responses; 1 HTTP 404.
+- The required ChatGPT follow-up action is **🔄 연구 기반 재귀개선 계속하기**. It is a conversation action, not an archive website control.
