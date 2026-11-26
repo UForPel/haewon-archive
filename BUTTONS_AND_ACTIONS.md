@@ -316,3 +316,9 @@ The assistant MUST render a real clickable button at the very bottom of every co
 - Labels remain in localStorage; JSON export/import is manual. No server or GitHub upload was added.
 - PR CI and deployment pending; mobile real-device QA remains unverified.
 - Mandatory ChatGPT continuation control remains the final element in every completed response: **🔄 재귀개선 계속하기**.
+
+
+## 2026-11-26 — Review queue PR #42 merged
+- PR #42 merged as `753b4323c4712c7a5580d336b30240894cca73c0`; genuine PR CI #43 passed 192/192 tests and archive validation.
+- Production #601 is in progress; do not claim the new controls are live until Pages deployment succeeds.
+- Mobile visual QA remains unverified. The ChatGPT continuation button is still mandatory at the bottom of the assistant's completed work-cycle response.
