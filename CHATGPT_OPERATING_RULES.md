@@ -290,3 +290,11 @@ For each substantial update include: changed paths; planned vs implemented items
 - A user typing continuation manually does not cancel this requirement. Never omit the button because the user already typed the next request.
 - Do not put any content after the button.
 - This is a required acceptance criterion. If omitted, the cycle is incomplete even if code, tests, commits and deployment succeeded.
+
+
+## 2026-11-26 — Freshness-aware query evaluation
+- Inspect the latest per-query publication freshness buckets before proposing query-pack changes.
+- Compare multiple distinct pack samples; one run is not enough to promote or remove search terms.
+- Treat 7-/30-day freshness rates, unique yield and explicit publisher URL rate as operational diagnostics. Title keyword matching is not human-labeled precision.
+- Preserve old candidates and unknown-date records; do not apply destructive age filtering without a separate documented decision.
+- Continue to distinguish production collection, data commit, Pages deployment and mobile QA. Always render the mandatory continuation button as the final response element.
