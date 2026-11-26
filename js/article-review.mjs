@@ -18,10 +18,10 @@ export function getVerifiedHaewonArticles(items = []) {
 export async function auditVerifiedPublisherArticles(items = [], { fetchImpl = fetch, timeoutMs = 3500, concurrency = 3, limit = 12, offset = 0 } = {}) {
   const eligibleArticles = getVerifiedHaewonArticles(items);
   const total = eligibleArticles.length;
-  const limit = Math.max(0, Math.min(12, Math.trunc(Number(limit) || 12)));
+  const sampleLimit = Math.max(0, Math.min(12, Math.trunc(Number(limit) || 12)));
   const rawOffset = Math.trunc(Number(offset) || 0);
-  const offset = total ? ((rawOffset % total) + total) % total : 0;
-  const articles = total ? Array.from({length: Math.min(limit, total)}, (_, index) => eligibleArticles[(offset + index) % total]) : [];
+  const sampleOffset = total ? ((rawOffset % total) + total) % total : 0;
+  const articles = total ? Array.from({length: Math.min(sampleLimit, total)}, (_, index) => eligibleArticles[(sampleOffset + index) % total]) : [];
   const results = new Array(articles.length);
   let cursor = 0;
   async function worker() {
@@ -48,7 +48,7 @@ export async function auditVerifiedPublisherArticles(items = [], { fetchImpl = f
   }
   await Promise.all(Array.from({ length: Math.min(concurrency, articles.length) }, worker));
   const counts = Object.fromEntries(['http-responded', 'blocked', 'paywall', 'not-found', 'uncertain'].map(state => [state, results.filter(row => row.state === state).length]));
-  return { scope: 'explicit-publisher-https-haewon-articles', method: 'HEAD', redirectPolicy: 'standard-http-follow-only', bypassAttempted: false, sampled: results.length, offset, checked: results.length, total, counts, results };
+  return { scope: 'explicit-publisher-https-haewon-articles', method: 'HEAD', redirectPolicy: 'standard-http-follow-only', bypassAttempted: false, sampled: results.length, offset: sampleOffset, checked: results.length, total, counts, results };
 }
 
 export function validateArticleReviewExport(payload, eligibleIds = null) {
