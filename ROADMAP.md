@@ -530,3 +530,12 @@
 - [x] PR #43 merged as `c77d605cde6eac9476f7d187f77ac6c9c646adee` after PR CI #47 passed 193/193 tests and archive validation.
 - [ ] Verify Production #602 collection, generated data commit and Pages deployment (in progress at last check).
 - [ ] Complete real mobile browser/device QA; not established by CI or deployment.
+
+
+## Review queue continuous navigation — Production verified
+- [x] PR #43 merged after PR CI #47 passed 193/193 tests and archive validation.
+- [x] Production #602 passed tests, collection, data validation, data commit, Pages artifact upload and Pages deployment.
+- [x] Generated data commit `96a79935d85f23b17887b3ab20b95b780f1ab234` recorded.
+- [ ] Complete real mobile browser/device QA for automatic focus, scroll, tap targets and import/export.
+- [ ] Collect actual human review labels; committed relevance review set remains empty.
+- [ ] Compare repeated query packs using human-reviewed relevance labels before changing query selection.
