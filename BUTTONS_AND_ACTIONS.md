@@ -901,7 +901,7 @@ YouTube Atom 비활성, videos.json 20개 보존, Data API 비활성, workflow Y
 ```text
 Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA를 GitHub에서 실시간 조회하고 일곱 운영 문서를 먼저 읽는다. 직전 main은 dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2이다. 현재 main으로 가정하지 말고 다시 확인한다. PR #83은 CI #113에서 226/226 테스트와 전체 데이터 검증 성공 후 병합되었다. 이번 사이클 문서 전용 PR은 별도 CI와 데이터 검증 성공 전까지 병합하지 않는다.
 
-현재 확인 시각은 2026-11-28 06:47 KST다. Production #624(run 46060489526)는 Actions event=schedule, created_at/run_started_at=2026-11-27T19:59:27Z이며 run-log trigger=github_schedule, scheduleExpression='17 11 * * *', startedAt=2026-11-27T19:59:31.000Z, finishedAt=19:59:52.735Z다. 이는 2026-11-27 20:17 KST / 11:17 UTC의 이전 슬롯과 expression이 일치하지만 실행은 8시간 42분 10초 늦게 시작했다. 22:31 KST 시점에는 미관찰이었으나 현재는 지연된 schedule 실행으로 관찰되었다. 지연 원인은 미확인이다. GitHub drop/실패로 단정하지 않는다.
+현재 확인 시각은 2026-11-28 06:47 KST다. Production #624(run 46060489526)는 Actions event=schedule, created_at/run_started_at=2026-11-27T19:59:27Z이며 run-log trigger=github_schedule, scheduleExpression='17 11 * * *', startedAt=2026-11-27T19:59:31.000Z, finishedAt=19:59:52.735Z다. 이는 2026-11-27 20:17 KST / 11:17 UTC의 이전 슬롯과 expression이 일치하지만 실행은 8시간 42분 27초 늦게 시작했다. 22:31 KST 시점에는 미관찰이었으나 현재는 지연된 schedule 실행으로 관찰되었다. 지연 원인은 미확인이다. GitHub drop/실패로 단정하지 않는다.
 
 다음 슬롯은 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC, expression='17 23 * * *'이다. 06:47 KST 현재 미래이므로 성공/실패 판정 금지. 실행 후 Actions event=schedule, run-log trigger=github_schedule, 정확한 scheduleExpression='17 23 * * *'를 대조하고 created_at/run_started_at과 startedAt을 비교한다. #614/#622 소급 추정 금지, cron 변경 금지.
 
@@ -918,4 +918,25 @@ Query failure history retains only real #617 HTTP 429. YouTube Atom disabled, vi
 - The seven-document update was submitted as PR #84 and CI run #114 (46072826084) completed successfully. Its Unit tests and Validate committed archive data steps both passed.
 - PR #84 was merged after those checks, using squash merge. Merge commit / verified main immediately after merge: f2ca4cc33ecde38501a35c7332e6f0584f25a6ce. Post-merge open-PR search returned none.
 - This finalization note corrects the interim status in this cycle's checkpoint: PR #84 is merged, not awaiting CI. It was documentation-only; no collector or dataset code was changed.
-- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m10s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
+- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m27s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
+
+## 2026-11-28 06:47 KST — Final audit correction
+- Arithmetic correction: cron minute 11:17:00Z to Actions created_at/run_started_at 19:59:27Z is 8 hours 42 minutes 27 seconds (not 8h42m10s). Run-log startedAt 19:59:31Z is 8h42m31s after the scheduled clock. The slot classification remains unchanged: delayed observed schedule event; delay cause unknown.
+- PR #85 CI run #115 (46072938784) passed Unit tests and Validate committed archive data; PR #85 was merged. Main at the start of this correction PR: bfcb34d73e5c05ee8692c12a6500dff2c4375f10. No open PRs were found after the merge.
+
+## Next conversation button — current prompt
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA를 GitHub에서 실시간 조회하고 일곱 운영 문서를 먼저 읽는다. 직전 확인 main은 bfcb34d73e5c05ee8692c12a6500dff2c4375f10이다. 현재 main으로 가정하지 말고 다시 확인한다. PR #84와 #85는 각각 CI #114/#115에서 Unit tests 및 Validate committed archive data 성공 후 병합되었다. 열린 PR은 없다.
+
+현재 확인 시각은 2026-11-28 06:47 KST다. Production #624(run 46060489526)는 Actions event=schedule, created_at/run_started_at=2026-11-27T19:59:27Z이며 run-log trigger=github_schedule, scheduleExpression='17 11 * * *', startedAt=2026-11-27T19:59:31.000Z, finishedAt=19:59:52.735Z다. 이는 2026-11-27 20:17 KST / 11:17 UTC 이전 슬롯에 해당하며, cron 11:17:00Z 대비 Actions 시작은 8시간 42분 27초 지연되었다. run-log 시작은 8시간 42분 31초 지연이다. 이전 22:31 조회에서는 미관찰이었지만 현재 지연 실행으로 관찰되었다. 원인은 미확인이고 GitHub drop/실패로 단정하지 않는다.
+
+다음 예약 슬롯은 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC, expression='17 23 * * *'이다. 현재 슬롯 실행 전이므로 성공/실패 판정 금지. 실행 후 Actions event=schedule, run-log trigger=github_schedule, 정확한 scheduleExpression='17 23 * * *'를 대조하고 created_at/run_started_at과 startedAt을 비교한다. #614/#622 소급 추정 금지, cron 변경 금지.
+
+#624는 226/226 테스트, 0 실패, run-log validation passed. Google News 193, Bing News 36, 6/6 queries successful, queryFailures empty, YouTube skipped. Data commit dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2. Pages artifact 15228811375, 770763 bytes, SHA-256 a4a9101740cc69d85adf4b23e519548f6d483ed8398372fe9673437bbea8d1dd. Configure/upload/deploy 성공. 공개 URL 직접 접근 미검증.
+
+전체 discovery Git blob 9059841c0577269da3be828dfa15660b86fd926d: 962 records(774 article candidates,188 video candidates), explicit HTTPS publisherArticleUrl 113, missing thumbnail 602, missing+explicit publisher URL 28. Assigned thumbnails 360(legacy shared 273), verified Haewon articles 84, article image previews 62, RSS image candidates 0, meta-only comparison 87, review 493 eligible/0 reviewed/precision null. #624 thumbnail enrichment 2 attempts: fnnews OG image assigned 1, tvdaily no candidate 1. Exact shouldRetryThumbnailFetch logic at 2026-11-28 06:47 KST: retry eligible 0, earliest next eligibility 2026-12-01T06:57:55.671Z. Keep 1/7/30-day retry policy, six-hour offset rotation, max 12. Blind retry and speculative HTML fetch prohibited.
+
+Query failure history retains only real #617 HTTP 429. YouTube Atom disabled, videos.json 20, Data API disabled, no YOUTUBE_API_KEY injection. collection-status has no networkRequests field; do not claim 0 requests. Preserve JYP/NMIXX Gallery/Notice prohibition, SBSKPOP ZOOM ownership unconfirmed, no broadcaster collectors/auto-classification, no Google News wrapper decode/access bypass, 273 legacy shared assignments, and PR #54/#56 transactional save/move/restore.
+
+이번 문서 정정 PR의 CI 및 전체 데이터 검증이 성공한 뒤에만 병합한다. Android Chrome 실기기 QA와 공개 Pages URL 직접 접근은 미검증으로 유지한다. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 분리 보고하고 최신 main SHA와 PR/Actions 링크 및 다음 전체 지시 버튼을 제공한다.
+```

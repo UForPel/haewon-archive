@@ -758,7 +758,7 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 
 ## 2026-11-28 06:47 KST — Verification protocol addendum
 - Always re-fetch main before treating a prior SHA as current. Current checkpoint: dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2.
-- Delayed scheduled-run handling: #624 (46060489526) has Actions event=schedule and run-log trigger=github_schedule + scheduleExpression=17 11 * * *. It started at 19:59:27Z / log 19:59:31Z, 8h42m10s after the 20:17 KST / 11:17 UTC scheduled clock. Record as a delayed observed schedule run; delay cause unknown. Do not call it a drop or failure. Do not confuse it with the next 08:17 KST slot (17 23 * * *), which was still future at 06:47 KST.
+- Delayed scheduled-run handling: #624 (46060489526) has Actions event=schedule and run-log trigger=github_schedule + scheduleExpression=17 11 * * *. It started at 19:59:27Z / log 19:59:31Z, 8h42m27s after the 20:17 KST / 11:17 UTC scheduled clock. Record as a delayed observed schedule run; delay cause unknown. Do not call it a drop or failure. Do not confuse it with the next 08:17 KST slot (17 23 * * *), which was still future at 06:47 KST.
 - #624 evidence: 226 tests passed/0 failed; run-log validation passed; Google News 193, Bing News 36, six of six queries succeeded, no query failures, YouTube skipped. Artifact 15228811375, 770763 bytes, SHA-256 a4a9101740cc69d85adf4b23e519548f6d483ed8398372fe9673437bbea8d1dd; Pages deployment steps succeeded, live public access unverified.
 - Full discovery blob audit: 962 records; 113 explicit publisher URLs; 602 missing thumbnails; 28 missing with explicit publisher URL; 360 assignments including 273 legacy. Verified Haewon articles 84; article-image previews 62; RSS image candidates 0; review 493/0, precision null.
 - Re-evaluated actual shouldRetryThumbnailFetch logic at 2026-11-28 06:47 KST: zero eligible. Earliest next eligibility 2026-12-01T06:57:55.671Z. Do not fetch pages speculatively, retry blindly, or add extractor fixtures without a concrete eligible-page miss.
@@ -768,4 +768,8 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - The seven-document update was submitted as PR #84 and CI run #114 (46072826084) completed successfully. Its Unit tests and Validate committed archive data steps both passed.
 - PR #84 was merged after those checks, using squash merge. Merge commit / verified main immediately after merge: f2ca4cc33ecde38501a35c7332e6f0584f25a6ce. Post-merge open-PR search returned none.
 - This finalization note corrects the interim status in this cycle's checkpoint: PR #84 is merged, not awaiting CI. It was documentation-only; no collector or dataset code was changed.
-- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m10s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
+- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m27s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
+
+## 2026-11-28 06:47 KST — Final audit correction
+- Arithmetic correction: cron minute 11:17:00Z to Actions created_at/run_started_at 19:59:27Z is 8 hours 42 minutes 27 seconds (not 8h42m10s). Run-log startedAt 19:59:31Z is 8h42m31s after the scheduled clock. The slot classification remains unchanged: delayed observed schedule event; delay cause unknown.
+- PR #85 CI run #115 (46072938784) passed Unit tests and Validate committed archive data; PR #85 was merged. Main at the start of this correction PR: bfcb34d73e5c05ee8692c12a6500dff2c4375f10. No open PRs were found after the merge.
