@@ -90,3 +90,13 @@ These are evidence of official relationships only. Before enabling a collector, 
 - KBS KPOP, MBCkpop, ALL THE K-POP and M2 remain research leads only. Exact channel IDs, public Atom feed behavior, feed-specific robots/terms and item-level Haewon appearance have not all been verified. SBSKPOP ZOOM ownership remains unverified.
 - Do not add broadcaster sources or assign `broadcaster-official` automatically. Do not enable YouTube Data API without a compliant 30-day refresh/deletion lifecycle.
 - Preserve 61 provenance-backed article-image previews as a separate metric from 0 standalone photo-post records; do not alter the 273 legacy shared-thumbnail assignments.
+
+
+## 2026-11-27 — Exact broadcaster channel identity recheck
+- **MBCkpop**: YouTube's verified channel page resolves to channel ID `UCe52oeb7Xv_KaJsEzcKXJJg`; the page describes official Show! Music Core clips/fancams and carries the MBC&iMBC copyright notice. This verifies channel identity/provenance, not permission for automated feed collection. Keep research-only.
+- **ALL THE K-POP**: YouTube's verified channel page resolves to `UCPde4guD9yFBRzkxk2PatoA`; its description lists `youtube@mbcplus.com` and MBC PLUS copyright, consistent with MBC PLUS's own brand page. This verifies the channel relationship, not automated collection permission. Keep research-only.
+- **KBS Kpop**: KBS first-party material explicitly identifies KBS Kpop as its representative K-POP YouTube channel. A non-first-party index surfaced candidate ID `UCeLPm9yH_a_QH8n6445G-Ow`, but the ID was not independently established from a first-party channel link in this check. Do not register this ID or feed yet.
+- **M2**: MnetPlus first-party program pages confirm selected programs are simulcast on M2 YouTube. The exact stable M2 channel ID was not independently verified; a third-party candidate ID is not sufficient for registration.
+- **SBSKPOP ZOOM**: the YouTube handle page exists, but first-party SBS ownership and a stable channel ID remain unverified.
+- Public Atom feed endpoint checks for the candidate IDs were blocked by the current verifier. This is an inspection limitation, not proof that feeds are unavailable. No broadcaster feed was enabled and no video was newly labeled `broadcaster-official`.
+- JYP/NMIXX Gallery and Notice remain manual-link-only: `robots.txt` and a terms/permission basis for automated metadata extraction could not be retrieved or verified. No collector or inferred image endpoint is permitted by this evidence.
