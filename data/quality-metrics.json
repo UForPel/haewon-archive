@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-11-27T06:04:43.109Z",
+  "generatedAt": "2026-11-27T19:59:41.083Z",
   "discoveryRelevance": {
-    "totalCandidates": 936,
-    "articleCandidates": 749,
-    "videoCandidates": 187,
-    "verifiedPublisherArticles": 110,
+    "totalCandidates": 962,
+    "articleCandidates": 774,
+    "videoCandidates": 188,
+    "verifiedPublisherArticles": 112,
     "verifiedHaewonArticles": 84,
-    "verifiedPublisherArticlesWithProvenanceThumbnail": 83,
+    "verifiedPublisherArticlesWithProvenanceThumbnail": 84,
     "verifiedHaewonWithProvenanceThumbnail": 62,
-    "haewonTitleMatches": 557,
-    "nmixxTitleMatches": 582,
-    "otherArticleCandidates": 86,
+    "haewonTitleMatches": 567,
+    "nmixxTitleMatches": 590,
+    "otherArticleCandidates": 98,
     "defaultScope": "haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 936,
-    "itemsWithPublisherArticleUrl": 111,
-    "bingNewsItems": 114,
+    "totalItems": 962,
+    "itemsWithPublisherArticleUrl": 113,
+    "bingNewsItems": 116,
     "candidateSourceCounts": {
-      "bing-news-rss-explicit-url-param": 120
+      "bing-news-rss-explicit-url-param": 122
     },
     "publisherHosts": {
       "www.msn.com": 14,
@@ -36,6 +36,7 @@
       "www.etnews.com": 2,
       "mydaily.co.kr": 2,
       "www.sportskeeda.com": 2,
+      "www.tvdaily.co.kr": 2,
       "sports.donga.com": 2,
       "www.koreatimes.co.kr": 2,
       "www.famtimes.co.kr": 1,
@@ -58,10 +59,10 @@
       "tribune.com.pk": 1,
       "www.geo.tv": 1,
       "www.spotvnews.co.kr": 1,
-      "www.tvdaily.co.kr": 1,
       "osen.co.kr": 1,
       "www.starnewskorea.com": 1,
       "www.broadwayworld.com": 1,
+      "www.fnnews.com": 1,
       "www.sportsworldi.com": 1,
       "www.kyongbuk.co.kr": 1,
       "www.forbes.com": 1,
@@ -87,6 +88,7 @@
       "www.etnews.com": 2,
       "www.mydaily.co.kr": 2,
       "www.sportskeeda.com": 2,
+      "www.tvdaily.co.kr": 2,
       "sports.donga.com": 2,
       "www.koreatimes.co.kr": 2,
       "www.famtimes.co.kr": 1,
@@ -108,11 +110,11 @@
       "tribune.com.pk": 1,
       "www.geo.tv": 1,
       "www.spotvnews.co.kr": 1,
-      "www.tvdaily.co.kr": 1,
       "osen.co.kr": 1,
       "www.starnewskorea.com": 1,
       "news.sbs.co.kr": 1,
       "www.broadwayworld.com": 1,
+      "www.fnnews.com": 1,
       "www.sportsworldi.com": 1,
       "www.kyongbuk.co.kr": 1,
       "www.forbes.com": 1,
@@ -126,48 +128,48 @@
       "news.google.com": 12
     },
     "sourceSiteHosts": {
-      "youtu.be": 105,
-      "www.xportsnews.com": 36,
-      "news.nate.com": 35,
+      "youtu.be": 106,
+      "news.nate.com": 38,
+      "www.xportsnews.com": 38,
       "m.newsen.com": 28,
       "enews.imbc.com": 25,
       "sports.khan.co.kr": 19,
       "www.chosun.com": 18,
       "www.slist.kr": 18,
-      "www.topstarnews.net": 14,
+      "www.topstarnews.net": 15,
+      "www.famtimes.co.kr": 12,
       "www.newsis.com": 12,
       "www.tvj.co.kr": 12,
+      "www.munhwa.com": 12,
       "www.sedaily.com": 11,
       "biz.chosun.com": 11,
       "mydaily.co.kr": 10,
       "www.hankyung.com": 10,
-      "www.munhwa.com": 10,
       "www.osen.co.kr": 9,
       "www.hankooki.com": 9,
       "news.tf.co.kr": 9,
       "programs.sbs.co.kr": 8,
       "pann.nate.com": 8,
       "www.breaknews.com": 8,
+      "www.wikitree.co.kr": 7,
       "www.etnews.com": 7,
       "sports.donga.com": 7,
       "www.bntnews.co.kr": 6,
-      "www.wikitree.co.kr": 6,
       "www.mk.co.kr": 6,
       "isplus.com": 6,
       "www.rnx.kr": 6,
       "www.blogchart.co.kr": 5,
-      "www.famtimes.co.kr": 5,
       "www.sportsseoul.com": 5,
+      "www.nocutnews.co.kr": 5,
       "www.newsen.com": 5,
       "www.yna.co.kr": 5,
       "www.ize.co.kr": 4,
+      "www.ytn.co.kr": 4,
       "www.news1.kr": 4,
       "www.fnnews.com": 4,
-      "www.nocutnews.co.kr": 4,
       "www.stardailynews.co.kr": 4,
       "www.nc.press": 4,
       "tvreport.co.kr": 3,
-      "www.ytn.co.kr": 3,
       "www.koreadaily.com": 3,
       "www.starnewskorea.com": 3,
       "www.marieclairekorea.com": 3,
@@ -184,6 +186,7 @@
       "www.joynews24.com": 2,
       "www.sportschosun.com": 2,
       "nwww.newsis.com": 2,
+      "hugs.fnnews.com": 2,
       "mhnse.com": 2,
       "www.mksports.co.kr": 2,
       "v.daum.net": 2,
@@ -200,6 +203,8 @@
       "m.imbc.com": 2,
       "www.hyunbulnews.com": 2,
       "www.ohmynews.com": 2,
+      "star.ohmynews.com": 2,
+      "www.koreaboo.com": 2,
       "www.hani.co.kr": 2,
       "www.ilyosisa.co.kr": 2,
       "www.sportsworldi.com": 2,
@@ -272,46 +277,47 @@
       "sports.news.nate.com": 1,
       "www.tournews21.com": 1,
       "www.gheadline.co.kr": 1,
-      "www.koreaboo.com": 1,
       "m.news.nate.com": 1,
       "www.busan.com": 1,
       "rollingstone.co.kr": 1,
+      "imnews.imbc.com": 1,
       "penews.co.kr": 1,
       "www.mkhealth.co.kr": 1,
       "biz.heraldcorp.com": 1,
       "www.ngetnews.com": 1,
       "www.inews365.com": 1,
+      "www.foodbank.co.kr": 1,
       "news.bbsi.co.kr": 1,
       "www.gynews.kr": 1,
       "news.sbs.co.kr": 1,
       "www.obsnews.co.kr": 1
     },
     "discoveryWrapperHosts": {
-      "www.bing.com": 114
+      "www.bing.com": 116
     }
   },
   "thumbnailProvenance": {
-    "assignedTotal": 359,
+    "assignedTotal": 360,
     "assignedBySource": {
       "unverified-legacy": 273,
-      "og:image": 76,
+      "og:image": 77,
       "twitter:image": 8,
       "link:image_src": 1,
       "twitter:image:src": 1
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 577,
+    "missingThumbnailCount": 602,
     "sourceProvenanceCoverage": 24
   },
   "thumbnailMissingDiagnostics": {
-    "items": 936,
-    "missing": 577,
-    "classified": 577,
+    "items": 962,
+    "missing": 602,
+    "classified": 602,
     "unclassified": 0,
     "byReason": {
       "publisher-fetch-failed:forbidden": 9,
-      "google-news-wrapper-without-publisher-article-url": 537,
-      "publisher-page-no-image-candidate": 17,
+      "google-news-wrapper-without-publisher-article-url": 561,
+      "publisher-page-no-image-candidate": 18,
       "publisher-fetch-failed:method-not-allowed": 1,
       "publisher-fetch-failed:network-error": 1,
       "wrapper-only-not-followed": 12
@@ -319,12 +325,12 @@
     "bySource": [
       {
         "source": "Google News",
-        "items": 822,
-        "missing": 549,
+        "items": 846,
+        "missing": 573,
         "missingWithPublisherArticleUrl": 0,
-        "missingWithSourceSiteUrl": 479,
+        "missingWithSourceSiteUrl": 505,
         "reasons": {
-          "google-news-wrapper-without-publisher-article-url": 537,
+          "google-news-wrapper-without-publisher-article-url": 561,
           "wrapper-only-not-followed": 12
         }
       },
@@ -371,6 +377,16 @@
       },
       {
         "source": "스포츠조선 on MSN",
+        "items": 2,
+        "missing": 2,
+        "missingWithPublisherArticleUrl": 2,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {
+          "publisher-page-no-image-candidate": 2
+        }
+      },
+      {
+        "source": "티브이데일리",
         "items": 2,
         "missing": 2,
         "missingWithPublisherArticleUrl": 2,
@@ -517,16 +533,6 @@
         "missingWithSourceSiteUrl": 0,
         "reasons": {
           "publisher-fetch-failed:forbidden": 1
-        }
-      },
-      {
-        "source": "티브이데일리",
-        "items": 1,
-        "missing": 1,
-        "missingWithPublisherArticleUrl": 1,
-        "missingWithSourceSiteUrl": 0,
-        "reasons": {
-          "publisher-page-no-image-candidate": 1
         }
       },
       {
@@ -832,20 +838,28 @@
         "missingWithPublisherArticleUrl": 0,
         "missingWithSourceSiteUrl": 0,
         "reasons": {}
+      },
+      {
+        "source": "파이낸셜뉴스",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
       }
     ]
   },
   "thumbnailAudit": {
-    "items": 936,
-    "withThumbnail": 359,
-    "missing": 577,
-    "uniqueThumbnailUrls": 87,
+    "items": 962,
+    "withThumbnail": 360,
+    "missing": 602,
+    "uniqueThumbnailUrls": 88,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 9,
     "uniqueThumbnailAssignmentRate": 24,
     "dominantThumbnailCount": 273,
-    "dominantThumbnailShare": 29,
+    "dominantThumbnailShare": 28,
     "concentrationWarning": true,
     "repeatedUrls": [
       {
@@ -1009,6 +1023,10 @@
         "count": 1
       },
       {
+        "host": "image.fnnews.com",
+        "count": 1
+      },
+      {
         "host": "sportsworldi.com",
         "count": 1
       },
@@ -1110,46 +1128,78 @@
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 31,
+    "bingNewsCandidates": 36,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "disabled",
     "videosTotal": 20,
-    "newsCandidatesTotal": 936,
-    "newsUniqueFetched": 90,
-    "newsAddedLastRun": 2,
-    "duplicateBeforeMergeLastRun": 9,
-    "duplicateGroupsCurrent": 936,
+    "newsCandidatesTotal": 962,
+    "newsUniqueFetched": 166,
+    "newsAddedLastRun": 28,
+    "duplicateBeforeMergeLastRun": 27,
+    "duplicateGroupsCurrent": 962,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 99,
-      "after": 90,
-      "collapsed": 9,
+      "before": 193,
+      "after": 165,
+      "collapsed": 28,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 0,
-      "found": 0,
-      "assigned": 0,
+      "attempted": 2,
+      "found": 1,
+      "assigned": 1,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
-      "missing": 0,
+      "missing": 1,
       "failed": 0,
-      "results": []
+      "results": [
+        {
+          "id": "787a64978c31024530a1",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://image.fnnews.com/resource/media/image/2026/11/27/202611271159494653_e.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://image.fnnews.com/resource/media/image/2026/11/27/202611271159494653_e.jpg",
+              "source": "og:image",
+              "priority": 1
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://www.fnnews.com/news/202611271159532316",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.fnnews.com/news/202611271159532316",
+          "resolvedArticleHost": "www.fnnews.com"
+        },
+        {
+          "id": "d22af792dce9a1dba312",
+          "status": "missing",
+          "candidate": null,
+          "candidates": [],
+          "publisherArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17957604031811528010",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17957604031811528010",
+          "resolvedArticleHost": "www.tvdaily.co.kr"
+        }
+      ]
     }
   },
   "sources": [
     {
       "source": "Google News",
-      "items": 822,
-      "withUrl": 822,
+      "items": 846,
+      "withUrl": 846,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 822,
+      "withDate": 846,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
-      "thumbnailCoverage": 33,
+      "thumbnailCoverage": 32,
       "dateCoverage": 100
     },
     {
@@ -1382,6 +1432,18 @@
     },
     {
       "source": "스포츠조선 on MSN",
+      "items": 2,
+      "withUrl": 2,
+      "withPublisherArticleUrl": 2,
+      "withThumbnail": 0,
+      "withDate": 2,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 0,
+      "dateCoverage": 100
+    },
+    {
+      "source": "티브이데일리",
       "items": 2,
       "withUrl": 2,
       "withPublisherArticleUrl": 2,
@@ -1645,18 +1707,6 @@
       "dateCoverage": 100
     },
     {
-      "source": "티브이데일리",
-      "items": 1,
-      "withUrl": 1,
-      "withPublisherArticleUrl": 1,
-      "withThumbnail": 0,
-      "withDate": 1,
-      "urlCoverage": 100,
-      "publisherArticleUrlCoverage": 100,
-      "thumbnailCoverage": 0,
-      "dateCoverage": 100
-    },
-    {
       "source": "뉴시스 on MSN",
       "items": 1,
       "withUrl": 1,
@@ -1706,6 +1756,18 @@
     },
     {
       "source": "BroadwayWorld",
+      "items": 1,
+      "withUrl": 1,
+      "withPublisherArticleUrl": 1,
+      "withThumbnail": 1,
+      "withDate": 1,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 100,
+      "dateCoverage": 100
+    },
+    {
+      "source": "파이낸셜뉴스",
       "items": 1,
       "withUrl": 1,
       "withPublisherArticleUrl": 1,
@@ -1870,14 +1932,14 @@
     }
   ],
   "classification": {
-    "items": 936,
+    "items": 962,
     "categoryCounts": {
-      "video": 187,
-      "interview": 66,
-      "news": 565,
+      "video": 188,
+      "interview": 72,
+      "news": 582,
       "brand": 45,
       "event": 18,
-      "performance": 46,
+      "performance": 48,
       "official": 14
     },
     "reviewedSamples": 0,
@@ -1887,14 +1949,14 @@
     "accuracyLabel": "not measured (no category review labels)"
   },
   "thumbnailReviewMetrics": {
-    "eligible": 493,
+    "eligible": 494,
     "reviewed": 0,
     "reviewCoverage": 0,
     "relevant": 0,
     "unsuitable": 0,
     "excluded": 0,
     "precision": null,
-    "selectedEligible": 359,
+    "selectedEligible": 360,
     "selectedReviewed": 0,
     "selectedPrecision": null,
     "counts": {
@@ -2249,6 +2311,23 @@
       "assignmentRate": null
     },
     {
+      "host": "www.tvdaily.co.kr",
+      "attempted": 2,
+      "assigned": 0,
+      "found": 0,
+      "missing": 2,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.tvdaily.co.kr": 2
+      },
+      "successRate": 0,
+      "candidateRate": 0,
+      "assignmentRate": null
+    },
+    {
       "host": "ca.news.yahoo.com",
       "attempted": 1,
       "assigned": 1,
@@ -2474,6 +2553,23 @@
       "successRate": 0,
       "candidateRate": 0,
       "assignmentRate": null
+    },
+    {
+      "host": "www.fnnews.com",
+      "attempted": 1,
+      "assigned": 1,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.fnnews.com": 1
+      },
+      "successRate": 100,
+      "candidateRate": 100,
+      "assignmentRate": 100
     },
     {
       "host": "www.forbes.com",
@@ -2769,23 +2865,6 @@
       "assignmentRate": 100
     },
     {
-      "host": "www.tvdaily.co.kr",
-      "attempted": 1,
-      "assigned": 0,
-      "found": 0,
-      "missing": 1,
-      "failed": 0,
-      "wrapperOnly": 0,
-      "duplicateRejected": 0,
-      "errorCodes": {},
-      "finalHosts": {
-        "www.tvdaily.co.kr": 1
-      },
-      "successRate": 0,
-      "candidateRate": 0,
-      "assignmentRate": null
-    },
-    {
       "host": "www.wikitree.co.kr",
       "attempted": 1,
       "assigned": 1,
@@ -2810,7 +2889,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 577,
+    "thumbnailMissing": 602,
     "results": [
       {
         "kind": "article",
@@ -3061,25 +3140,25 @@
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 86,
+    "articlesCompared": 87,
     "rssOnly": 0,
-    "metaOnly": 86,
+    "metaOnly": 87,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 86,
-    "metaAssigned": 0,
-    "assignmentRate": null,
-    "latestRunAttempted": 0,
-    "latestRunFound": 0,
-    "latestRunAssigned": 0,
-    "latestRunAssignmentRate": null,
-    "persistedMetaCandidateRecords": 86,
-    "persistedThumbnailRecords": 86,
-    "persistedThumbnailRecordsTotal": 359,
-    "persistedThumbnailMatchesMetaCandidate": 86,
+    "metaFound": 87,
+    "metaAssigned": 1,
+    "assignmentRate": 100,
+    "latestRunAttempted": 2,
+    "latestRunFound": 1,
+    "latestRunAssigned": 1,
+    "latestRunAssignmentRate": 100,
+    "persistedMetaCandidateRecords": 87,
+    "persistedThumbnailRecords": 87,
+    "persistedThumbnailRecordsTotal": 360,
+    "persistedThumbnailMatchesMetaCandidate": 87,
     "persistedThumbnailDoesNotMatchMetaCandidate": 0,
     "sourceCounts": {
-      "og:image": 76,
+      "og:image": 77,
       "jsonld:image": 88,
       "twitter:image": 15,
       "jsonld:thumbnailUrl": 20,
@@ -3255,6 +3334,10 @@
       },
       {
         "host": "menu.starnewskorea.com",
+        "count": 1
+      },
+      {
+        "host": "image.fnnews.com",
         "count": 1
       },
       {
@@ -4968,6 +5051,24 @@
         "persistedThumbnailMatchesMetaCandidate": true
       },
       {
+        "id": "787a64978c31024530a1",
+        "title": "엔믹스, 첫 월드투어 대미 장식…오늘부터 인천서 앙코르 공연",
+        "articleUrl": "https://www.fnnews.com/news/202611271159532316",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://image.fnnews.com/resource/media/image/2026/11/27/202611271159494653_e.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned",
+        "persistedThumbnailUrl": "https://image.fnnews.com/resource/media/image/2026/11/27/202611271159494653_e.jpg",
+        "persistedThumbnailMatchesMetaCandidate": true
+      },
+      {
         "id": "9ffee44a0be1cb0b14a8",
         "title": "엔믹스, 첫 월드투어 27~29일 피날레…“더 벅찬 감동 드릴 것”",
         "articleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
@@ -5428,7 +5529,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-27T06:04:43.140Z",
+    "generatedAt": "2026-11-27T19:59:41.128Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -7366,7 +7467,16 @@
         "isImage": false
       }
     ],
-    "unreachable": [],
+    "unreachable": [
+      {
+        "url": "https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_x.png",
+        "status": null,
+        "contentType": "",
+        "ok": false,
+        "isImage": false,
+        "error": "The operation was aborted due to timeout"
+      }
+    ],
     "rateLimited": [],
     "results": [
       {
@@ -7406,10 +7516,11 @@
       },
       {
         "url": "https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_x.png",
-        "status": 200,
-        "contentType": "image/png",
-        "ok": true,
-        "isImage": true
+        "status": null,
+        "contentType": "",
+        "ok": false,
+        "isImage": false,
+        "error": "The operation was aborted due to timeout"
       },
       {
         "url": "https://file.sportsseoul.com/news/cms/2026/10/22/news-p.v1.20261022.03dbd0cc4b894e54a8068bc0cb0a7a95_T1.jpg",
@@ -7461,111 +7572,111 @@
     "redirectPolicy": "standard-http-follow-only",
     "bypassAttempted": false,
     "sampled": 12,
-    "offset": 60,
+    "offset": 0,
     "checked": 12,
     "total": 84,
     "counts": {
-      "http-responded": 9,
-      "blocked": 1,
+      "http-responded": 8,
+      "blocked": 3,
       "paywall": 0,
       "not-found": 1,
-      "uncertain": 1
+      "uncertain": 0
     },
     "results": [
       {
-        "articleId": "a37e26c7cfff0e81cf80",
-        "url": "https://www.allkpop.com/article/2023/01/nmixxs-haewon-praised-for-her-hosting-skills-after-she-appears-as-a-special-mc-on-kbs2s-music-bank",
+        "articleId": "573c328cd899cbdb983c",
+        "url": "https://www.famtimes.co.kr/news/articleView.html?idxno=703431",
         "status": 403,
         "state": "blocked",
-        "finalHost": "www.allkpop.com",
+        "finalHost": "www.famtimes.co.kr",
         "method": "HEAD"
       },
       {
-        "articleId": "410181bd7a26e470fb01",
-        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008342842",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "sbsstar.net",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "baaea643c6e7d0c5b9b4",
-        "url": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
-        "status": 405,
-        "state": "uncertain",
-        "finalHost": "www.sportskeeda.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "20b79e1521fe03642833",
-        "url": "https://www.soompi.com/article/1521113wpp/nmixxs-haewon-and-jiwoo-diagnosed-with-covid-19",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.soompi.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "0dce33409a82f8bfa806",
-        "url": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.msn.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "acc3649085bc58237439",
-        "url": "https://www.xportsnews.com/article/2220870",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.xportsnews.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "6876f635b800bea5bf90",
-        "url": "https://www.msn.com/ko-kr/news/other/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.msn.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "da2ca32f9a2115bbb975",
-        "url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1020506",
-        "status": 404,
-        "state": "not-found",
-        "finalHost": "www.spotvnews.co.kr",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "f60f0f16157da91b9bf1",
-        "url": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.tvdaily.co.kr",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "8a8f08aee0d72b0bc7b3",
-        "url": "https://www.msn.com/ko-kr/news/other/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.msn.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "0ffa4f472cdb2ae24b00",
-        "url": "https://www.sportsseoul.com/news/read/1650573",
+        "articleId": "0e854777bfd25ecfa7dc",
+        "url": "https://www.sportsseoul.com/news/read/1647956",
         "status": 200,
         "state": "http-responded",
         "finalHost": "www.sportsseoul.com",
         "method": "HEAD"
       },
       {
-        "articleId": "d6c5f93f622776e07642",
-        "url": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
+        "articleId": "58287bdfebac9a39d7ae",
+        "url": "https://www.msn.com/ko-kr/news/other/%EA%B1%B4%EA%B0%95%EB%B6%80%ED%84%B0-%EC%B1%99%EA%B2%A8%EC%95%BC-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B6%80%EC%A9%8D-%EC%95%BC%EC%9C%88-%EA%B7%BC%ED%99%A9%EC%97%90-%ED%8C%AC%EB%93%A4-%EA%B1%B1%EC%A0%95-%EC%8F%9F%EC%95%84%EC%A1%8C%EB%8B%A4/ar-AA2gWZa6",
         "status": 200,
         "state": "http-responded",
         "finalHost": "www.msn.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "866fedfe173358009f8c",
+        "url": "https://www.msn.com/ko-kr/news/other/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.msn.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "5c8d5119fcd89f8155d4",
+        "url": "https://www.msn.com/ko-kr/entertainment/music/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%B0%A9%EC%86%A1%EC%84%9C-%EB%B0%9C%EC%96%B8-%EB%A7%A4%EB%8B%88%EC%A0%80-%EA%B8%89%ED%9E%88-%EC%A0%9C%EC%A7%80/ar-AA2ghYNl",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.msn.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "9b6ef22307d3251cc2f8",
+        "url": "https://www.sportalkorea.com/news/articleView.html?idxno=2025052909553648816",
+        "status": 404,
+        "state": "not-found",
+        "finalHost": "www.sportalkorea.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "a49267aceb6585e0f222",
+        "url": "https://sports.khan.co.kr/article/202610240113003",
+        "status": 403,
+        "state": "blocked",
+        "finalHost": "sports.khan.co.kr",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "ddeba63a3da7bc4a06b8",
+        "url": "https://www.etnews.com/20261023000035",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.etnews.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "757ec3797d78fa2fe07b",
+        "url": "https://mydaily.co.kr/page/view/2026102216341082713",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.mydaily.co.kr",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "db6ba77a0559952da2df",
+        "url": "https://www.sportsseoul.com/news/read/1643207",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.sportsseoul.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "246381b2a4841d0662f4",
+        "url": "https://www.sportsseoul.com/news/read/1588725",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.sportsseoul.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "200468c61716e4ff96b3",
+        "url": "https://sports.khan.co.kr/article/202510231129003",
+        "status": 403,
+        "state": "blocked",
+        "finalHost": "sports.khan.co.kr",
         "method": "HEAD"
       }
     ]

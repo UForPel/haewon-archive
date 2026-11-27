@@ -2,55 +2,55 @@
   "schemaVersion": "1.0.0",
   "algorithm": "bounded-recursive-imitation",
   "algorithmVersion": "1.2.0",
-  "day": "2026-11-27",
+  "day": "2026-11-28",
   "timeZone": "Asia/Seoul",
   "cycle": {
-    "packIndex": 0,
+    "packIndex": 1,
     "packCount": 6,
     "activeQueries": [
-      "Haewon NMIXX interview",
-      "오해원 인터뷰",
-      "NMIXX Haewon magazine",
-      "Haewon NMIXX editorial",
-      "해원 화보 인터뷰",
-      "Haewon profile interview"
+      "오해원 방송",
+      "해원 엔믹스 기사",
+      "NMIXX Haewon appearance",
+      "Haewon NMIXX event",
+      "오해원 예능 출연",
+      "Haewon broadcast appearance"
     ],
-    "nextDayPackIndex": 1
+    "nextDayPackIndex": 2
   },
   "evidence": {
-    "cumulativeDiscoveryCandidates": 936,
-    "currentRunCandidates": 99,
+    "cumulativeDiscoveryCandidates": 962,
+    "currentRunCandidates": 193,
     "uniqueVideoRecords": 20,
     "queryYield": [
       {
-        "query": "Haewon NMIXX interview",
-        "candidates": 13
+        "query": "오해원 방송",
+        "candidates": 70
       },
       {
-        "query": "오해원 인터뷰",
-        "candidates": 33
+        "query": "해원 엔믹스 기사",
+        "candidates": 40
       },
       {
-        "query": "NMIXX Haewon magazine",
-        "candidates": 12
+        "query": "NMIXX Haewon appearance",
+        "candidates": 10
       },
       {
-        "query": "Haewon NMIXX editorial",
-        "candidates": 14
+        "query": "Haewon NMIXX event",
+        "candidates": 20
       },
       {
-        "query": "해원 화보 인터뷰",
-        "candidates": 27
+        "query": "오해원 예능 출연",
+        "candidates": 50
       },
       {
-        "query": "Haewon profile interview",
-        "candidates": 0
+        "query": "Haewon broadcast appearance",
+        "candidates": 3
       }
     ],
     "highestYieldQueries": [
-      "오해원 인터뷰",
-      "해원 화보 인터뷰",
-      "Haewon NMIXX editorial"
+      "오해원 방송",
+      "오해원 예능 출연",
+      "해원 엔믹스 기사"
     ]
   },
   "evaluation": {
