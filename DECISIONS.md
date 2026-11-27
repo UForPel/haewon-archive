@@ -94,3 +94,9 @@ Never silently convert a proposal into a confirmed decision. Add dated entries w
 - The 962-record full-blob audit finds zero retry-eligible publisher pages at 06:47 KST; earliest next eligibility 2026-12-01T06:57:55.671Z. Keep 1/7/30-day backoff, six-hour offset rotation and max 12. No blind retry, no new extractor fixture/code without an eligible real page proving a miss.
 - #624 produced one new OG image assignment from an explicitly identified fnnews article; tvdaily page returned no image candidate. This does not establish general extractor failure or justify changing parser behavior.
 - Continue preserving 273 unverified legacy shared assignments, query-failure #617 as the only actual 429, all source restrictions, and PR #54/#56 transactional flow.
+
+## 2026-11-28 06:47 KST — Documentation PR completion
+- The seven-document update was submitted as PR #84 and CI run #114 (46072826084) completed successfully. Its Unit tests and Validate committed archive data steps both passed.
+- PR #84 was merged after those checks, using squash merge. Merge commit / verified main immediately after merge: f2ca4cc33ecde38501a35c7332e6f0584f25a6ce. Post-merge open-PR search returned none.
+- This finalization note corrects the interim status in this cycle's checkpoint: PR #84 is merged, not awaiting CI. It was documentation-only; no collector or dataset code was changed.
+- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m10s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
