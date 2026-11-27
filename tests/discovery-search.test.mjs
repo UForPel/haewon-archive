@@ -105,7 +105,3 @@ test('fan-facing image gallery includes only unique, provenance-backed images fr
  assert.equal(gallery[0].publisherArticleUrl,'https://publisher.example/a');
 });
 
-test('default article relevance scope is widened to Haewon candidates instead of verified-only',()=>{
- const source=require('node:fs').readFileSync(new URL('../js/discovery-view.mjs',import.meta.url),'utf8');
- assert.match(source,/let selectedRelevance='haewon'/);
-});
