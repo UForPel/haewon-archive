@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-11-27T00:21:21.098Z",
+  "generatedAt": "2026-11-27T00:46:48.032Z",
   "discoveryRelevance": {
-    "totalCandidates": 903,
-    "articleCandidates": 716,
+    "totalCandidates": 913,
+    "articleCandidates": 726,
     "videoCandidates": 187,
     "verifiedPublisherArticles": 106,
     "verifiedHaewonArticles": 83,
     "verifiedPublisherArticlesWithProvenanceThumbnail": 79,
     "verifiedHaewonWithProvenanceThumbnail": 61,
-    "haewonTitleMatches": 536,
-    "nmixxTitleMatches": 558,
-    "otherArticleCandidates": 80,
+    "haewonTitleMatches": 544,
+    "nmixxTitleMatches": 565,
+    "otherArticleCandidates": 82,
     "defaultScope": "haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 903,
+    "totalItems": 913,
     "itemsWithPublisherArticleUrl": 107,
     "bingNewsItems": 110,
     "candidateSourceCounts": {
@@ -124,9 +124,9 @@
     "sourceSiteHosts": {
       "youtu.be": 105,
       "news.nate.com": 35,
-      "www.xportsnews.com": 32,
-      "m.newsen.com": 24,
-      "enews.imbc.com": 24,
+      "www.xportsnews.com": 35,
+      "m.newsen.com": 26,
+      "enews.imbc.com": 25,
       "sports.khan.co.kr": 19,
       "www.chosun.com": 16,
       "www.slist.kr": 15,
@@ -145,6 +145,8 @@
       "pann.nate.com": 8,
       "www.breaknews.com": 8,
       "www.etnews.com": 7,
+      "www.bntnews.co.kr": 6,
+      "www.wikitree.co.kr": 6,
       "www.mk.co.kr": 6,
       "sports.donga.com": 6,
       "isplus.com": 6,
@@ -152,8 +154,6 @@
       "www.blogchart.co.kr": 5,
       "www.famtimes.co.kr": 5,
       "www.sportsseoul.com": 5,
-      "www.bntnews.co.kr": 5,
-      "www.wikitree.co.kr": 5,
       "www.newsen.com": 5,
       "www.yna.co.kr": 5,
       "www.ize.co.kr": 4,
@@ -172,6 +172,7 @@
       "www.psnews.co.kr": 3,
       "www.mt.co.kr": 2,
       "www.gukjenews.com": 2,
+      "www.behindpress.com": 2,
       "www.twig24.com": 2,
       "m.pann.nate.com": 2,
       "www.asiatoday.co.kr": 2,
@@ -198,9 +199,10 @@
       "m.segye.com": 1,
       "www.tenasia.co.kr": 1,
       "www.imbc.com": 1,
+      "web.insight.co.kr": 1,
       "www.insight.co.kr": 1,
+      "www.job-post.co.kr": 1,
       "www.seoul.co.kr": 1,
-      "www.behindpress.com": 1,
       "ent.sbs.co.kr": 1,
       "enter.etoday.co.kr": 1,
       "www.esquirekorea.co.kr": 1,
@@ -264,6 +266,7 @@
       "www.tournews21.com": 1,
       "www.gheadline.co.kr": 1,
       "www.koreaboo.com": 1,
+      "m.news.nate.com": 1,
       "www.busan.com": 1,
       "rollingstone.co.kr": 1,
       "penews.co.kr": 1,
@@ -290,17 +293,17 @@
       "twitter:image:src": 1
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 548,
+    "missingThumbnailCount": 558,
     "sourceProvenanceCoverage": 23
   },
   "thumbnailMissingDiagnostics": {
-    "items": 903,
-    "missing": 548,
-    "classified": 548,
+    "items": 913,
+    "missing": 558,
+    "classified": 558,
     "unclassified": 0,
     "byReason": {
       "publisher-fetch-failed:forbidden": 9,
-      "google-news-wrapper-without-publisher-article-url": 508,
+      "google-news-wrapper-without-publisher-article-url": 518,
       "publisher-page-no-image-candidate": 17,
       "publisher-fetch-failed:method-not-allowed": 1,
       "publisher-fetch-failed:network-error": 1,
@@ -309,12 +312,12 @@
     "bySource": [
       {
         "source": "Google News",
-        "items": 793,
-        "missing": 520,
+        "items": 803,
+        "missing": 530,
         "missingWithPublisherArticleUrl": 0,
-        "missingWithSourceSiteUrl": 450,
+        "missingWithSourceSiteUrl": 460,
         "reasons": {
-          "google-news-wrapper-without-publisher-article-url": 508,
+          "google-news-wrapper-without-publisher-article-url": 518,
           "wrapper-only-not-followed": 12
         }
       },
@@ -810,9 +813,9 @@
     ]
   },
   "thumbnailAudit": {
-    "items": 903,
+    "items": 913,
     "withThumbnail": 355,
-    "missing": 548,
+    "missing": 558,
     "uniqueThumbnailUrls": 83,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
@@ -991,7 +994,7 @@
   "legacyThumbnailAudit": {
     "assignments": 273,
     "recordsWithPublisherArticleUrl": 0,
-    "recordsWithSourceSiteUrl": 202,
+    "recordsWithSourceSiteUrl": 204,
     "sourceSiteHosts": {
       "youtu.be": 50,
       "tvreport.co.kr": 1,
@@ -1007,10 +1010,12 @@
       "www.imbc.com": 1,
       "news.nate.com": 13,
       "enews.imbc.com": 11,
+      "web.insight.co.kr": 1,
       "programs.sbs.co.kr": 5,
       "www.chosun.com": 6,
       "www.osen.co.kr": 1,
       "biz.chosun.com": 1,
+      "www.job-post.co.kr": 1,
       "www.twig24.com": 2,
       "www.seoul.co.kr": 1,
       "www.xportsnews.com": 7,
@@ -1063,25 +1068,25 @@
   },
   "collection": {
     "newsQueriesRequested": 6,
-    "newsQueriesSuccessful": 5,
+    "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 52,
-    "newsQuerySuccessRate": 83,
+    "bingNewsCandidates": 50,
+    "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
-    "newsCandidatesTotal": 903,
-    "newsUniqueFetched": 171,
-    "newsAddedLastRun": 4,
-    "duplicateBeforeMergeLastRun": 48,
-    "duplicateGroupsCurrent": 903,
+    "newsCandidatesTotal": 913,
+    "newsUniqueFetched": 287,
+    "newsAddedLastRun": 14,
+    "duplicateBeforeMergeLastRun": 42,
+    "duplicateGroupsCurrent": 913,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 219,
-      "after": 170,
-      "collapsed": 49,
+      "before": 329,
+      "after": 286,
+      "collapsed": 43,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -1098,11 +1103,11 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 793,
-      "withUrl": 793,
+      "items": 803,
+      "withUrl": 803,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 793,
+      "withDate": 803,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
       "thumbnailCoverage": 34,
@@ -1785,8 +1790,8 @@
     {
       "source": "Google News RSS",
       "requested": 6,
-      "successful": 5,
-      "successRate": 83
+      "successful": 6,
+      "successRate": 100
     },
     {
       "source": "NMIXX YouTube Atom",
@@ -1802,11 +1807,11 @@
     }
   ],
   "classification": {
-    "items": 903,
+    "items": 913,
     "categoryCounts": {
       "video": 187,
-      "interview": 63,
-      "news": 549,
+      "interview": 64,
+      "news": 558,
       "brand": 32,
       "event": 18,
       "performance": 45,
@@ -2706,9 +2711,9 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 9,
+    "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 548,
+    "thumbnailMissing": 558,
     "results": [
       {
         "kind": "article",
@@ -2731,8 +2736,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1VMzVhTVZRS0lYbGRsU2J4MklBVllkal9pbkNnb05DdExsNDlmV3FvalpxZDNBNDRnd3pjcVhfa3Z1S2RXRWxiNFlHeF9WZl9QbUtYV09sYWFRRFoz?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2749,8 +2754,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkU0R3WDVXZGx2eTFNYXV3QUdwX3pCaHFVcExyeExLSkNVSGx5RGF3cU04QnRJb2hIS1QzVmF0VXBxQkI3YTkxNDJaZGhZT0t4dDB4OGhSTkpRcG11?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2767,8 +2772,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA3OFc2c28yeThjbmduNC1oaWh2VkdSTmpPMTIxWDRXdlVVM1Z4UzhyQUZjNTZLWnNSNnFodmQxM3VzT19DNTZIb09tSTRlSmlWUTZoR0ROdlR2X1Nl?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2809,8 +2814,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBLTnIwX2RZRkdDZzRSSmhjRHZaUC1ab2NVcFNhSmhvYlhoRmxJX0tJNEFIdmRfV2NCZjlqcFBHSE9UWDgyZHhFdkhid0thaGFGTXJsVU1TYnY1OHZR?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2833,8 +2838,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9qOUF2ZUxwaW9pekJKRnFBb1VnOWpReG9BS0pZVjNWRDhBNTFnUXZCaUtfUENQd1JZajIxMHVnYW00WFVyZ0xINWtnNWNHU2N6NVVma1BFdm9wRXI2?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2869,8 +2874,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yTlEyVnlhMXdvY3NkSDhGWUVQUnZETXpwelU5WHIzS2FZU3RGdUJYTU8ybGhaR1ZLeDI1UlVBT2pBOWRtYWhQQ0Mxd1o5STNEcnc4eEw3SVF4S2Et?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2887,8 +2892,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkQlMzX2loLTJLQldySXdGZVc3bGNLUFB1SklXLXRrM3Y0Qk5ZUjZ2NEkwYUo2ajRRR0R4MUY3akQySC0yS3BCLVBhZ2ZGNDZ0OThZMkpzd0Vzd0I1?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -2935,14 +2940,14 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9CS2l5dEZPUHRjSFRlUHFnMngxSXVTNEh0V0ZwYzB6U0tsa1pEZXRhQjV5X2ZiQmFkZDhKek5mVjVxZWFkdTdUWkw2OWFwSEdrN1Z1V1JB?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9HUzdsUDVkbnpwUVhUa0ZfbThaNFNtRmZLS2tsLWktTlAtajFTeWRGb0dUVUJKQWJ2TE9HQUsxYTdQTEhmTEFUZDhDb1RrR1U1Y2N2WGZBOUlvWlpM?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -5229,7 +5234,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-27T00:21:21.143Z",
+    "generatedAt": "2026-11-27T00:46:48.119Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -7167,7 +7172,16 @@
         "isImage": false
       }
     ],
-    "unreachable": [],
+    "unreachable": [
+      {
+        "url": "https://img.etnews.com/news/article/2026/10/23/article_23093430555193.jpg",
+        "status": null,
+        "contentType": "",
+        "ok": false,
+        "isImage": false,
+        "error": "The operation was aborted due to timeout"
+      }
+    ],
     "rateLimited": [],
     "results": [
       {
@@ -7200,10 +7214,11 @@
       },
       {
         "url": "https://img.etnews.com/news/article/2026/10/23/article_23093430555193.jpg",
-        "status": 200,
-        "contentType": "image/jpeg",
-        "ok": true,
-        "isImage": true
+        "status": null,
+        "contentType": "",
+        "ok": false,
+        "isImage": false,
+        "error": "The operation was aborted due to timeout"
       },
       {
         "url": "https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_x.png",

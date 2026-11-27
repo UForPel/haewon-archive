@@ -2373,7 +2373,14 @@
     "relevanceScore": 8,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://web.insight.co.kr",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "552300f2967dfeddf515",
@@ -2645,6 +2652,24 @@
     "candidateSource": ""
   },
   {
+    "id": "9b5a3eb16e8020399b4f",
+    "title": "[포토] 엔믹스 오해원, 밈 마스터 - iMBC 연예",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0xcl8wOE5fQUpzcVFDLUdqSnBjWG91TGZPaEYtMk04bHVkYk1ZS2Y3bE52Nm1WcmJGaUMtNmpwcnhadFhIN1dWUlpGMm9Mc2VEeDJmWA?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://enews.imbc.com",
+    "publishedAt": "2025-10-16T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE0xcl8wOE5fQUpzcVFDLUdqSnBjWG91TGZPaEYtMk04bHVkYk1ZS2Y3bE52Nm1WcmJGaUMtNmpwcnhadFhIN1dWUlpGMm9Mc2VEeDJmWA?oc=5\" target=\"_blank\">[포토] 엔믹스 오해원, 밈 마스터</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">iMBC 연예</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 NMIXX",
+    "discoveredAt": "2026-11-27T00:46:44.263Z",
+    "status": "candidate",
+    "relevanceScore": 8
+  },
+  {
     "id": "b103e8f21910f4e7df9f",
     "title": "엔믹스 오해원 '오늘은 냉미녀' [포토] - www.bntnews.co.kr",
     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9XTlhPTHRrSkRhU3VodW1UTjNwOHFBU0U4c2kta3JtMEdqYUhGbUFCc3JYODR0SHBhRWdndk0zaUZFSWl4VlljTDlLbWUzSGctREIwUURiMlRYMmJIWWpjVU5SSEI?oc=5",
@@ -2829,6 +2854,24 @@
     }
   },
   {
+    "id": "933e940765d91700a8f4",
+    "title": "엔믹스, 피곤해도 러블리한 미소로 입국 '하트 하다 빵터진 오해원' - 비하인드",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5xOFVYcmY3UUNHVW5sRmZCbXRObEQtRTZzZ0RnZVozdzVhSnhncUQ4ZHNwaU5MLUtOdjVmel9hOGlaR01UZC1OZm43UXY1dmducFpTYWNTVlNad1Noa1Vyb1hieVpVV0hxTkZRRWtB?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.behindpress.com",
+    "publishedAt": "2025-06-02T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE5xOFVYcmY3UUNHVW5sRmZCbXRObEQtRTZzZ0RnZVozdzVhSnhncUQ4ZHNwaU5MLUtOdjVmel9hOGlaR01UZC1OZm43UXY1dmducFpTYWNTVlNad1Noa1Vyb1hieVpVV0hxTkZRRWtB?oc=5\" target=\"_blank\">엔믹스, 피곤해도 러블리한 미소로 입국 '하트 하다 빵터진 오해원'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">비하인드</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 NMIXX",
+    "discoveredAt": "2026-11-27T00:46:44.263Z",
+    "status": "candidate",
+    "relevanceScore": 8
+  },
+  {
     "id": "c20af95bfefcacd5310b",
     "title": "[엔믹스] 백상예술대상 가서 유재석 선배님한테 놀림 당한 오해원 ㅋㅋㅋㅋ - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE14QzZHaUpnSjcxWGItVFc3cWY3ZFc3VXNPOVpCOUpHY0RLN3lRTWpISjdLbEZhWC1qZEQ2UXpGVWx0NVBiNnNVSzhDZnhhSHNOVkNObVBPNzVXUzQ2?oc=5",
@@ -2939,7 +2982,14 @@
     "thumbnailUrl": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300",
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.job-post.co.kr",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "0435eb600a40bcc67383",
@@ -3365,7 +3415,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "7e5d448615306531503c",
@@ -3594,6 +3650,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "7c5b966f89edf20bef11",
+    "title": "“외모 췍!” 엔믹스 오해원, 네이버웹툰 ‘마루는 강쥐‘ OST 참여한다 - 위키트리",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5oOWVGVjFsdGxwYUVpb01jMTE5cWswRHlfSlYzVk5kS0RJMElQeUE5YTJZNlYxTUw3a21mX2xLdkxzdjVfREdxV1JqaWR2YU5xLVU2VQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.wikitree.co.kr",
+    "publishedAt": "2024-09-04T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE5oOWVGVjFsdGxwYUVpb01jMTE5cWswRHlfSlYzVk5kS0RJMElQeUE5YTJZNlYxTUw3a21mX2xLdkxzdjVfREdxV1JqaWR2YU5xLVU2VQ?oc=5\" target=\"_blank\">“외모 췍!” 엔믹스 오해원, 네이버웹툰 ‘마루는 강쥐‘ OST 참여한다</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">위키트리</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 NMIXX",
+    "discoveredAt": "2026-11-27T00:46:44.263Z",
+    "status": "candidate",
+    "relevanceScore": 8
   },
   {
     "id": "bb6f7e5bb5cedcdc0dd4",
@@ -4553,6 +4627,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "9b9069bf8180579cdd24",
+    "title": "[bnt포토] 엔믹스 해원 '오해원은 사랑입니다' - bnt뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1tLXM0c0pOLXlZbzdWUjV0cFZucVpBdURZejdKMlNxMU44WjJRQ2RISzRhOERWa0lnZlNBWTZ2RHlIM0Fid2dlVmpkbHhvNXl5NGl4ajNZczFYSnZnOUxLc0VnT04?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.bntnews.co.kr",
+    "publishedAt": "2023-03-20T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE1tLXM0c0pOLXlZbzdWUjV0cFZucVpBdURZejdKMlNxMU44WjJRQ2RISzRhOERWa0lnZlNBWTZ2RHlIM0Fid2dlVmpkbHhvNXl5NGl4ajNZczFYSnZnOUxLc0VnT04?oc=5\" target=\"_blank\">[bnt포토] 엔믹스 해원 '오해원은 사랑입니다'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">bnt뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 NMIXX",
+    "discoveredAt": "2026-11-27T00:46:44.263Z",
+    "status": "candidate",
+    "relevanceScore": 8
   },
   {
     "id": "0e1e9f4b30b1ae757b1b",
@@ -7295,6 +7387,24 @@
     "candidateSource": ""
   },
   {
+    "id": "fd51143790f290782add",
+    "title": "오해원, 엄친딸이었나 \"父 판사→외고 준비설 돌아…굳이 해명 NO\" (미니핑계고) - 엑스포츠뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE05YTZZbnlXR2xfbWxwcEhIdEwxQ1FHV041dlZpQXhDRm1jcTAtbzdIRzFfa1dERTk4R2Y1TlVSVWxMTHh2bkhCYk5wbzJrUHh2SDZZSA?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.xportsnews.com",
+    "publishedAt": "2025-03-20T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE05YTZZbnlXR2xfbWxwcEhIdEwxQ1FHV041dlZpQXhDRm1jcTAtbzdIRzFfa1dERTk4R2Y1TlVSVWxMTHh2bkhCYk5wbzJrUHh2SDZZSA?oc=5\" target=\"_blank\">오해원, 엄친딸이었나 \"父 판사→외고 준비설 돌아…굳이 해명 NO\" (미니핑계고)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">엑스포츠뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 NMIXX",
+    "discoveredAt": "2026-11-27T00:46:44.263Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
     "id": "93d986538d8c269dfe9c",
     "title": "\"오해원의 회상\" - YouTube",
     "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9KUUVXT3VkU2R3OTUyNEl5NFBkaFJDc3JMZmh4bVpwdTdSX0p2ZXM0aThfcWJIWVYzeHFiRk54VGdLeHljamhybVRKaE1uNXJMLThWbjY0Ynk4ZDl3?oc=5",
@@ -8136,7 +8246,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "e74f0cd5f348cd454df9",
@@ -8471,7 +8587,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "36a929afc0296128434a",
@@ -9967,7 +10089,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b5cc9b4054e658adb6c0",
@@ -10120,7 +10248,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "cbd4c75b2f95e45c5b54",
@@ -10443,7 +10577,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "f5ae3b0ea7fa5deda0f2",
@@ -11060,7 +11200,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "edb07199d27444993dff",
@@ -12092,7 +12238,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "cb024b43ac70a63f757a",
@@ -12109,6 +12261,30 @@
     "discoverySource": "google-news-rss",
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
+    "status": "candidate",
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
+  },
+  {
+    "id": "aff91d5d7f0dc77ccc63",
+    "title": "엔믹스 해원 ‘예쁜 일자 어깨 라인’[포토엔HD] - 뉴스엔",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MaDhUX1Q4emE5VEpHMFJNMTRiQXczVzJCdGlVWTlBaGFQX0U4SlBLdWJmQ1I5YlNwbnluME1PVVVGZU9GX29FQ0t4Ql9zbHk0MlZNQV9BSUVIZ2lYZFRVZ2xReTZIZW5h?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.newsen.com",
+    "publishedAt": "2026-08-06T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE5MaDhUX1Q4emE5VEpHMFJNMTRiQXczVzJCdGlVWTlBaGFQX0U4SlBLdWJmQ1I5YlNwbnluME1PVVVGZU9GX29FQ0t4Ql9zbHk0MlZNQV9BSUVIZ2lYZFRVZ2xReTZIZW5h?oc=5\" target=\"_blank\">엔믹스 해원 ‘예쁜 일자 어깨 라인’[포토엔HD]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스엔</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-27T00:46:44.263Z",
     "status": "candidate",
     "relevanceScore": 4
   },
@@ -12668,6 +12844,24 @@
     "candidateSource": ""
   },
   {
+    "id": "8747274d7c6541971e5a",
+    "title": "엔믹스, I❣️HW🎂‘해원’ 생일 축하해요🎊 (출국)[뉴스엔TV] - 뉴스엔",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE00cGdvUFQ2TVFCZllLS1E5TlgtMmM4MVJMbVlOSmFzUDVudHhFNlpXUnRpRjRxUTcxTnhvbnJPRzc2TWZBRmRkcE4zZVYwbXE5Qzljc25wY09QN3lXci1QM3UtOHFYREdO?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.newsen.com",
+    "publishedAt": "2026-03-06T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE00cGdvUFQ2TVFCZllLS1E5TlgtMmM4MVJMbVlOSmFzUDVudHhFNlpXUnRpRjRxUTcxTnhvbnJPRzc2TWZBRmRkcE4zZVYwbXE5Qzljc25wY09QN3lXci1QM3UtOHFYREdO?oc=5\" target=\"_blank\">엔믹스, I❣️HW🎂‘해원’ 생일 축하해요🎊 (출국)[뉴스엔TV]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스엔</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-27T00:46:44.263Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "58ac8413c9155ba09700",
     "title": "엔믹스 해원, 남미서 라방 중 숙소 레이저 테러 - 금강일보",
     "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBtQ095MUctRDBpRW1RRF9uVGlfZWJZeHJNblo2M3hrdzc3cnRKdzFkNzZpdWt1RkJtVVJldi10QXNMdFl4Q25McDlXR3dKSllOUjJBMi1OTzZmLVkycXBuQ0xJMDBsbXI4LUE?oc=5",
@@ -12779,7 +12973,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "2692af3452a13302f087",
@@ -13370,6 +13570,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "be3f2c5ab6158d15c899",
+    "title": "엔믹스 해원, '예능캐' 고민 있었나 \"표정 너무 막 써…'예쁘다' 칭찬에 버벅\" (단순노동) - 엑스포츠뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9XaElMaEw3TVVuX1RTSExlMk5ZZXo0YVZfYzgzMzJUOExRUWFuN2FQZ19BanBSN0FNeWxMLVk0d3RGTVBWU2ozWEhfY1cybVlZWWMtSw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.xportsnews.com",
+    "publishedAt": "2025-10-23T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE9XaElMaEw3TVVuX1RTSExlMk5ZZXo0YVZfYzgzMzJUOExRUWFuN2FQZ19BanBSN0FNeWxMLVk0d3RGTVBWU2ozWEhfY1cybVlZWWMtSw?oc=5\" target=\"_blank\">엔믹스 해원, '예능캐' 고민 있었나 \"표정 너무 막 써…'예쁘다' 칭찬에 버벅\" (단순노동)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">엑스포츠뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 NMIXX",
+    "discoveredAt": "2026-11-27T00:46:44.263Z",
+    "status": "candidate",
+    "relevanceScore": 4
   },
   {
     "id": "f00010f60074f730c65d",
@@ -17753,7 +17971,13 @@
     "query": "NMIXX Haewon news",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 3
+    "relevanceScore": 3,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "43d061ffc340f94d1801",
@@ -18434,7 +18658,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "4d772642fbb4e7fac999",
@@ -21783,7 +22013,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "b8367b216b0f784cbed4",
@@ -22674,6 +22910,24 @@
     "candidateSource": ""
   },
   {
+    "id": "262695f3fc32826184f1",
+    "title": "윤은혜, 40대 맞아? 현직 아이돌이라 해도 믿겠네…초동안 미모 '깜짝' - 네이트",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBBRUVNeUxsek9yMHFhMzFJYVBGNk9aR3RVZV9wOFNYMjN1MDdGUDAzeXlCaS1OcnNETkVCbm1DSHpuQk9IYWRXTk9GaVNrT3BkLUw0T2I3bGlXVm9JaUFCRjdITVptX1BSUHllcE1sdFJfVkJJVjJ6Nw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.news.nate.com",
+    "publishedAt": "2026-10-24T14:42:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTFBBRUVNeUxsek9yMHFhMzFJYVBGNk9aR3RVZV9wOFNYMjN1MDdGUDAzeXlCaS1OcnNETkVCbm1DSHpuQk9IYWRXTk9GaVNrT3BkLUw0T2I3bGlXVm9JaUFCRjdITVptX1BSUHllcE1sdFJfVkJJVjJ6Nw?oc=5\" target=\"_blank\">윤은혜, 40대 맞아? 현직 아이돌이라 해도 믿겠네…초동안 미모 '깜짝'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">네이트</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 근황",
+    "discoveredAt": "2026-11-27T00:46:44.263Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
     "id": "16d724a7443c61d1eeec",
     "title": "최강창민, ‘개콘’서 신곡 홍보 의심받자…속마음 털어놨다 - 스포츠동아",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5hWVBIbEtPcDZvQTB1dEY4S0NpZ05mV1pZb3ZuUWVQOHlObHN6NnctcmxjTGRJY0poc0dSMEc5YkowWmlLZk5PZzR3RnRwcW9mdTI0S3FJdHczT0JHQ0lkQ05qSzVKVHNuZENkUzln?oc=5",
@@ -22713,7 +22967,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "e6288daaeb52847b2b6b",
@@ -22755,7 +23015,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "bacbb14e40f30700741b",
@@ -22773,7 +23039,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "14359c428b9c986a016e",
@@ -22791,7 +23063,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "ed649430e049e660cc87",
@@ -23524,6 +23802,24 @@
     "candidateSource": ""
   },
   {
+    "id": "7d660e252e2a9050326a",
+    "title": "\"父 의사=알파메일\" '워크돌', 초등생에 도 넘은 호구조사 '논란' [엑's 이슈] - xportsnews.com",
+    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE93Y09ZemNLdGxSOVRsMkVpWnB6N2swbUJnQ1RCVkVBVDk5Z21qS0M4LTJmTWNWNEl1elhBLXdKQmhVb3ZyQ3d2Yk14dGF4RWtRZ0FXbA?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.xportsnews.com",
+    "publishedAt": "2025-03-19T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE93Y09ZemNLdGxSOVRsMkVpWnB6N2swbUJnQ1RCVkVBVDk5Z21qS0M4LTJmTWNWNEl1elhBLXdKQmhVb3ZyQ3d2Yk14dGF4RWtRZ0FXbA?oc=5\" target=\"_blank\">\"父 의사=알파메일\" '워크돌', 초등생에 도 넘은 호구조사 '논란' [엑's 이슈]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">xportsnews.com</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 NMIXX",
+    "discoveredAt": "2026-11-27T00:46:44.263Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
     "id": "91e6a215ecc73ab479da",
     "title": "창작산실 신작 두 번째 막 올린다 - 뉴스저널리즘",
     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84eVVlWm5tckdKdWVVd0thbi1yeS1lYTY4ZVlidzJIeDdwdFhaMVB2UDB4TWJxZHdCaWl1LTZEX215YThqQkg4VHFFb00tMWFrTE9UYlg1UlpMOERXVDhLWE1VcjhKYXZxVFpz?oc=5",
@@ -23803,7 +24099,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-26T23:53:18.809Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "119127c6e104cdd52c4e",
