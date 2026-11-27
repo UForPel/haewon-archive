@@ -32,3 +32,9 @@ Never silently convert a proposal into a confirmed decision. Add dated entries w
 ## 2026-11-27 — YouTube automated access boundary
 13. YouTube Atom polling at /feeds/videos.xml is disabled for all channels because the current robots.txt disallows the path for general user agents and Terms restrict automated access. Preserve historical records; do not infer permission from official channel ownership.
 14. YouTube Data API remains disabled until a compliant 30-day refresh/deletion lifecycle is implemented and reviewed. Production must not pass the API secret while disabled.
+
+ 
+## 2026-11-27 — Schedule observability checkpoint
+15. PR #75's scheduleExpression field is now implemented and merged. The configured cron remains unchanged: 17 11 * * * and 17 23 * * * UTC.
+16. Production #623 is a push-triggered run and is not evidence that the 20:17 KST schedule executed.
+17. Keep the #614/#622 schedule timestamp anomalies unresolved until new event.schedule telemetry and timestamps provide evidence. GitHub's documented high-load delay behavior is not a proven cause for earlier-than-configured starts.
