@@ -447,3 +447,13 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - The 273 legacy image assignments remain unchanged: 0 publisher article URLs, 0 alternative candidate URLs, 202 source-site URLs; metadata outcome not-attempted for all 273. Do not bulk-label, delete or replace them.
 - PR #61 adds only evidence-based aggregate diagnostics and dashboard display; it does not fetch additional URLs or modify collection policies. Android Chrome QA remains UNVERIFIED pending the user's real-device checklist.
 - No new RSS sources, wrapper decoding, sourceUrl substitution, blind retries, access bypass, paid services, external data transfer, or automated review labels.
+
+ 
+## 2026-11-27 — Video and photo collection coverage
+- Official NMIXX Atom feed is the current no-key automated video source. A feed response is a recent window, not a complete channel history. Display the number stored, fetched on the latest run and newly added separately; never label archive count as total channel uploads.
+- Keep unresolved Google News YouTube-title candidates separate from verified YouTube videos unless an explicit YouTube watch/shorts/embed URL is present in allowed metadata. Do not decode Google News wrappers.
+- Optional YouTube Data API playlist pagination is not automatically enabled. Official docs: `playlistItems.list` returns pages up to 50 items and costs 1 quota unit per call (https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/list; https://developers.google.com/youtube/data/determine_quota_cost). API credentials are required.
+- Before storing YouTube API data long-term, comply with Developer Policy III.E.4: non-authorized API Data is temporary and must be refreshed or deleted within 30 calendar days; titles, creator names and descriptions are not exempt (https://developers.google.com/youtube/terms/developer-policies/). Do not add API backfill without a tested refresh/deletion lifecycle and explicit decision.
+- `data/photos.json` stores original photo-post links/metadata and currently has 0 records. `data/quality-metrics.json` thumbnails are article/video preview images, not a substitute for standalone photo posts.
+- The fan-facing article image gallery may display only images tied to explicit publisher article URLs and source provenance; do not display unverified legacy shared images as verified Haewon photos.
+- No image binaries are copied/rehosted. Keep official Instagram/JYP site manual-link-only until documented public feed/metadata access is permitted. No login scraping or access-control bypass.
