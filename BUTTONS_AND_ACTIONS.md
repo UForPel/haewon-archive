@@ -659,3 +659,27 @@ JYP/NMIXX Gallery와 Notice는 robots·약관·자동 메타데이터 수집 허
 
 마지막에는 코드·테스트·PR/Actions·Production·데이터·Pages·Android QA를 분리 보고하고 최신 main SHA, PR/Actions 링크, 지표, 미완료 항목, 다음 대화용 전체 지시 버튼을 제공한다. 계획만 말하지 말고 실제 저장소 작업을 수행하며, 확인하지 않은 결과를 성공으로 보고하지 않는다.
 ```
+
+## 2026-11-27 — Production #621 pending checkpoint (13:30 KST)
+- Re-read the seven operating/source-policy documents from current main `d4aa61fc43819e1f2b272cc1aade188af3779240`; current open PR count is 0 and latest main is unchanged at this checkpoint.
+- Queried the latest 30 Actions runs and verified no Production #621 or later Production run exists yet. Latest production run remains #620 (run 45926600456); #619 (45926252892) is a separate failed run. At 13:30 KST, the next configured schedule `17 11 * * *` UTC is still in the future (20:17 KST). Do not infer or fabricate a #621 result.
+- Production #620's committed run log reports success, Google/Bing queries 6/6 each, 5 added candidates, total 914 candidates, and no queryFailures. Its history file still contains only the confirmed #617 Google News 429 event; it has no Retry-After field because no header was observed. This confirms retention through one later successful run, not a second live failure event.
+- Re-fetched Production #620 job steps: test/collect/validate/commit, Pages configuration, artifact upload, and deploy-pages all succeeded. The workflow job log reports 220/220 tests and 0 failures (run #620 predates PR #67/#68). Artifact 15166123904 is 689,587 bytes; downloaded ZIP SHA-256 independently recomputed as `e37e5f81b8bf3349e1dc55ac90af9bcd9a95ec971f13f79874cdc6319e819a31`. Public Pages URL could not be opened through the independent web verifier; report deployment-step success, not live-site verification.
+- Latest PR CI #97 and #98 both independently logged 222/222 tests, 0 failures, and successful committed-data validation. The serializer real-newline regression, append-only multi-run unit test, Retry-After actual-header-only test, and no-blind-retry fetch-count test all passed in both PR runs.
+- Current committed history still has exactly one real event: run 45916213360 / google-news-rss / `오해원 근황` / HTTP 429 / retryAttempted false. No synthetic event was inserted.
+- Quality metrics re-read from main: 914 candidates (727 article, 187 video), 107 publisher article URLs, 83 verified Haewon articles, 61 article-image previews, 0 standalone photo records, 356 assigned thumbnails, 558 missing, 84 unique image URLs, and 273 legacy shared assignments.
+- Source policy remains unchanged: JYP Gallery/Notice manual-link-only; broadcaster feeds remain disabled; MBCkpop and ALL THE K-POP IDs are provenance leads only, not permission to collect. KBS/M2 exact ID and feed-policy evidence remains incomplete; SBSKPOP ZOOM ownership remains unverified. No item-level broadcaster-official auto-classification.
+- No Production dispatch was performed: only read-only workflow inspection is available. Android Chrome real-device QA remains unverified.
+
+### Complete next-cycle prompt
+```text
+Haewon Archive 재귀개선을 계속한다. 현재 기준 main은 d4aa61fc43819e1f2b272cc1aade188af3779240이고 11월 27일 13:30 KST 기준 Production #621은 아직 실행되지 않았다. 다음 예약 실행은 20:17 KST다. 먼저 최신 main, 열린 PR, Actions, Production, 데이터 커밋, Pages를 다시 실제 조회하고 SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md, COLLECTION_RULES.md, CHATGPT_OPERATING_RULES.md, SOURCE_POLICY.md를 읽는다.
+
+최우선은 20:17 KST 이후 실제 Production 실행 확인이다. #617의 429 이벤트가 append-only data/query-failure-history.json에 남아 있는지 확인한다. 다른 검색어가 실제 실패하면 별도 이벤트가 추가되는지 확인하고, 이후 실제 성공 실행에서도 두 이벤트가 모두 유지되는지 확인한다. 실제 응답 헤더가 있을 때만 Retry-After 저장, blind retry 금지, 합성 운영 이벤트 금지. #621이 실패하면 실패 원인·데이터 커밋 유무·artifact/Pages 여부를 구분한다.
+
+PR #65/#66의 JSON 실줄바꿈 회귀 테스트, PR #67/#68의 출처정책 및 222/222 CI 검증을 유지한다. Production 실행의 테스트 수는 실행 시점 코드 버전과 함께 기록한다. 데이터 커밋, artifact SHA-256, Pages deploy step, 공개 사이트 접근 여부를 각각 보고한다.
+
+JYP/NMIXX Gallery/Notice는 robots·약관·자동 메타데이터 수집 허용 근거가 확인되기 전까지 수집기 구현 금지. 기사 이미지 61개와 독립 사진 0개 분리. MBCkpop UCe52oeb7Xv_KaJsEzcKXJJg와 ALL THE K-POP UCPde4guD9yFBRzkxk2PatoA는 출처 ID 근거만 보존하고 자동 피드는 허용 근거 확인 전까지 비활성화한다. KBS Kpop과 M2 정확한 ID·Atom·이용정책을 검증하고 SBSKPOP ZOOM은 1차 출처 소유권 확인 전까지 보류. 개별 영상의 해원 출연 확인 전 broadcaster-official 자동분류 금지. YouTube API는 30일 갱신/삭제 lifecycle 없이 활성화 금지.
+
+273개 레거시 공유 썸네일과 PR #54/#56 저장 성공 후 이동·실패 시 복원 흐름 보존. 매 사이클 일곱 문서 갱신. PR CI와 전체 데이터 검증 성공 후에만 병합. Android Chrome 실기기 QA는 사용자가 직접 완료하기 전까지 미검증. 코드·테스트·Production·데이터·Pages·Android QA를 분리 보고하고, 최신 main SHA, PR/Actions 링크, 지표, 미완료 항목, 다음 대화용 전체 지시 버튼을 제공한다. 계획이 아니라 실제 저장소 작업을 수행한다.
+```
