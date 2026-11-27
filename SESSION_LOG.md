@@ -1955,3 +1955,15 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 - #619 remains failed due the literal backslash-n JSON serialization defect; #620 succeeded after PR #66; #621 succeeded with Atom polling disabled. Do not conflate these runs.
 - The 20:17 KST scheduled Production run was still pending at this checkpoint. #621 was a push-triggered run, not the scheduled cron run.
 - Android Chrome real-device QA remains unverified.
+
+
+## 2026-11-27 — Scheduled Production #622 verification and cron-time discrepancy
+- Production #622 (run 45943513107) completed successfully with event=schedule, 223/223 tests, full committed-data validation and successful Pages artifact upload/deploy steps.
+- Run #622 started at 2026-11-27T05:03:36Z (14:03:36 KST), which does not match the configured 20:17 KST cron slot (11:17Z). It is a genuine schedule event, but do not label it as the 20:17 KST execution. The intended 20:17 slot remains separately pending at this checkpoint; investigate the schedule timestamp/queue behavior on the next cycle.
+- #622 collector output: YouTube Atom disabled, networkRequests 0, retainedVideos 20; Data API disabled-policy. Run log marks nmixx-youtube skipped, 0 items; Google News/Bing News both successful; queryFailures empty.
+- #622 test count 223/223. Data commit 9de65fa731e459bf6238b7983169be1788644525. Pages artifact 15172754616, 724,180 bytes, SHA-256 digest a3510de9411c6449c2848c0eb231fcdbc408358f872fa28f5c8b2e5a903c1dbb. Upload and deploy-pages steps succeeded; public URL still not independently accessible to verifier.
+- Query-failure history remains exactly one real event from #617 (Google News HTTP 429, query 오해원 근황, retryAttempted false, no Retry-After). #622 had no query failures; no synthetic event added.
+- #622 data metrics: 936 candidates (749 articles, 187 videos), 111 publisherArticleUrl items, 84 verified Haewon articles, 62 article-image previews, 0 standalone photo records, 359 assigned thumbnails, 577 missing, 273 legacy shared assignments.
+- #621 was a separate push-triggered successful Production run; #622 was a schedule event. Both ran 223/223 and both kept YouTube automation disabled. #619 failed, #620 succeeded but still polled the Atom feed; PR #71 fixed the policy conflict.
+- PR #73 corrected the persisted next prompt to resolve latest main dynamically and merged as f62ebcaeb55e4b873f3572d72c81a78137d01117 after CI #45943533328 passed 223/223.
+- Android Chrome real-device QA remains unverified.

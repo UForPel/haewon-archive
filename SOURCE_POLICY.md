@@ -133,3 +133,9 @@ YouTube's Terms prohibit automated access except public search engines following
 - Production #621 confirmed the source as skipped, zero items seen, zero Atom network requests and 20 historical video records retained. YouTube Data API also remained disabled-policy; the workflow did not pass its secret.
 - This is operational confirmation for the push-triggered #621 run only. The 20:17 KST scheduled run still requires separate verification.
 - Current quality data after #621: 62 provenance-backed article-image previews and 0 standalone photo records. Preserve the distinction; the article-image metric rose from 61 to 62 due this collection cycle.
+
+
+## 2026-11-27 — Production #622
+- Production #622 independently reconfirmed YouTube Atom disabled (0 network requests, 20 historical video records retained) and YouTube Data API disabled-policy.
+- #622 is marked as a schedule event, but its run timestamp 14:03:36 KST does not match the configured 20:17 KST slot. Do not treat the requested 20:17 run as verified until a matching execution is observed.
+- No new source authorization was found. Keep all YouTube Atom collectors disabled; broadcaster channel IDs remain provenance-only.

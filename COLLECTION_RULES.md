@@ -571,3 +571,9 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Production #621 is the first post-merge live confirmation of the YouTube Atom disablement: source outcome skipped, 0 items seen, collector output networkRequests: 0, and 20 existing video records retained.
 - The append-only query failure history still contains the single confirmed #617 429 event after the #620 and #621 successful runs. No additional real failure occurred in #621; do not create synthetic entries.
 - Continue to record actual failures once per run/source/query, Retry-After only when present in the real response headers, and no blind retries.
+
+
+## Scheduled run #622 confirmation — 2026-11-27
+- Production #622 (schedule event) succeeded with nmixx-youtube skipped, zero items, zero Atom network requests, and 20 historical videos retained.
+- The run log timestamp is 14:03:36 KST, not the configured 20:17 KST slot. Do not treat it as confirmation of that specific scheduled slot; investigate timing separately.
+- Query failure history still has one real #617 429 event. #622 had no query failures. No synthetic events and no blind retries.
