@@ -1234,7 +1234,7 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 ## 2026-11-28 06:47 KST — Current verified status
 - Main: dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2 (live GitHub lookup).
 - PRs: none open at pre-branch check; current documentation-only PR is created from this SHA and awaits CI.
-- Production #624: successful schedule event; Actions event=schedule; run-log trigger=github_schedule; scheduleExpression=17 11 * * *; started 19:59:31Z. This is the prior 20:17 KST slot, observed late by 8h42m10s. Delay cause unknown. It is distinct from the upcoming 08:17 KST slot (17 23 * * *), which was future at 06:47 KST.
+- Production #624: successful schedule event; Actions event=schedule; run-log trigger=github_schedule; scheduleExpression=17 11 * * *; started 19:59:31Z. This is the prior 20:17 KST slot, observed late by 8h42m27s. Delay cause unknown. It is distinct from the upcoming 08:17 KST slot (17 23 * * *), which was future at 06:47 KST.
 - Tests/data validation: 226/226 tests passed, 0 failed; run-log validation passed. Google News 193, Bing News 36, all six queries successful, no queryFailures; YouTube skipped.
 - Data: 962 candidates (774 article, 188 video); 113 explicit publisher URLs; 602 missing thumbnails, 28 missing with publisher URL; 360 assigned thumbnails (273 legacy shared); 84 verified Haewon articles; 62 article-image previews; 0 RSS image candidates; review 493 eligible / 0 reviewed / precision null.
 - Thumbnail gate: 2 explicit page attempts in #624, 1 OG assignment, 1 no-candidate result. Recomputed retry eligibility at 06:47 KST: 0; earliest next 2026-12-01T06:57:55.671Z. No speculative retry or code change.
@@ -1245,4 +1245,8 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - The seven-document update was submitted as PR #84 and CI run #114 (46072826084) completed successfully. Its Unit tests and Validate committed archive data steps both passed.
 - PR #84 was merged after those checks, using squash merge. Merge commit / verified main immediately after merge: f2ca4cc33ecde38501a35c7332e6f0584f25a6ce. Post-merge open-PR search returned none.
 - This finalization note corrects the interim status in this cycle's checkpoint: PR #84 is merged, not awaiting CI. It was documentation-only; no collector or dataset code was changed.
-- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m10s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
+- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m27s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
+
+## 2026-11-28 06:47 KST — Final audit correction
+- Arithmetic correction: cron minute 11:17:00Z to Actions created_at/run_started_at 19:59:27Z is 8 hours 42 minutes 27 seconds (not 8h42m10s). Run-log startedAt 19:59:31Z is 8h42m31s after the scheduled clock. The slot classification remains unchanged: delayed observed schedule event; delay cause unknown.
+- PR #85 CI run #115 (46072938784) passed Unit tests and Validate committed archive data; PR #85 was merged. Main at the start of this correction PR: bfcb34d73e5c05ee8692c12a6500dff2c4375f10. No open PRs were found after the merge.
