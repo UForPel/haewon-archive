@@ -1189,3 +1189,27 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - [ ] Recompute retry eligibility from full current discovery.json at next data refresh; max 12 targets, no blind retries. Earliest current eligibility: 2026-12-01T06:57:55Z.
 - [ ] Add HTML fixture tests only if an eligible actual publisher page demonstrates an extraction gap. Preserve 273 legacy assignments and source policies.
 - [ ] Complete Android Chrome QA only after user's direct check.
+
+
+## 2026-11-27 22:19 KST — Fresh live verification
+- Live GitHub main rechecked: `7ac89feae4ac0b18bb3d99319fadd7e52ddab7de`; no open PRs. All seven canonical documents were re-read from this main before this checkpoint. Latest Actions list still contains no Production #624 or later run. The 20:17 KST / 11:17 UTC slot remains unobserved, cause unknown; do not call it a dropped or failed run.
+- Current time 2026-11-27 22:19 KST. Next configured slot remains 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC, cron `17 23 * * *`; it is still future. Require Actions `event=schedule`, run-log `trigger=github_schedule`, and exact `scheduleExpression=17 23 * * *`; compare Actions `created_at`/`run_started_at` with run-log `startedAt`. No cron change; do not infer historical #614/#622 expression.
+- Latest Production remains #623 run `45949528329`, `event=push`, created/run_started `2026-11-27T06:04:22Z`. Run log `data/run-logs/45949528329.json`: trigger `github_push`, startedAt `06:04:29.000Z`, finishedAt `06:04:49.518Z`, success; Google News 99, Bing News 31, YouTube skipped; queryFailures empty; validation passed. Job `140341900635` success, tests 226/226, fail 0, archive validation success, Pages configure/upload/deploy all success. Data commit `c5382d9816e114c565357f0f22eb47e1b7771b0b`; artifact `15176047291`, 731041 bytes, SHA-256 `f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7`. Public Pages URL was retried through the web verifier and remains inaccessible to that verifier; this is not evidence that the site is down. Direct public access remains unverified.
+- Fresh full-blob audit of `data/discovery.json` (936 records; Git blob 1,482,894 bytes): 111 explicit HTTPS publisherArticleUrl records; 577 missing thumbnails; 27 records have both missing thumbnail and explicit publisher URL. States: 17 `missing` (10 statusCode 200, 7 no statusCode), 8 `failed/403/forbidden`, 1 `failed/405/method-not-allowed`, 1 `failed/405/network-error`. Applying exact `shouldRetryThumbnailFetch` logic at 2026-11-27 22:19:12 KST yields 0 eligible. Earliest next eligibility is `2026-12-01T06:57:55.671Z` (one record); current six-hour offset is 83138; selected targets 0 of max 12. No network requests were made for this audit.
+- Code lines 211–227 in `scripts/collect-news.mjs` confirm 30-day assigned/found/duplicate-rejected/wrapper-only; 7-day missing and 405/forbidden/rate-limited/not-found classes; 1-day general failed; six-hour offset rotation; max 12. No eligible page or concrete extractor miss exists, so no HTML fetch, fixture, extractor code change, blind retry, or speculative change was made.
+- Baseline unchanged: 936 candidates (749 articles, 187 videos), 111 publisherArticleUrl, 84 verified Haewon articles, 62 article-image previews, 0 independent photos, 359 thumbnail assignments, 577 missing, 273 legacy shared assignments; RSS image signals/candidates 0, 86 meta-only comparisons, thumbnail review 493 eligible / 0 reviewed, precision null. Preserve all 273 legacy records and PR #54/#56 transactional save/move/restore.
+- `data/query-failure-history.json` still has exactly the real #617 HTTP 429; no synthetic events. YouTube Atom disabled, videos.json 20, Data API disabled, workflow has no `YOUTUBE_API_KEY` injection. `collection-status.json` lacks `networkRequests`; `itemsFetched=0` is visible but do not claim measured networkRequests=0. All source restrictions unchanged.
+- Android Chrome real-device QA remains unverified pending user check. Public Pages URL verification and Android rendering remain separate from successful deploy steps.
+
+
+## 2026-11-27 22:19 KST — Checkpoint
+- [x] Live main/open PR/Actions checked; all seven docs re-read.
+- [x] #623 Production run log, job, tests, data commit, artifact digest and Pages steps rechecked.
+- [x] Full discovery.json blob re-parsed; 27 missing + explicit publisher URL, 0 eligible; earliest eligibility 2026-12-01T06:57:55.671Z.
+- [x] Retry policy, offset 83138, max 12 confirmed from code; no blind retry.
+- [x] Public Pages URL retried; verifier could not access; direct public access remains unverified.
+- [ ] After 2026-11-28 08:17 KST, verify schedule event + github_schedule trigger + expression 17 23 * * * and timestamp alignment.
+- [ ] Recheck next Production tests, collection, data commit, artifact SHA-256, Pages deployment and public URL independently.
+- [ ] Recompute retry eligibility from the next full data blob; do not attempt early retries.
+- [ ] Add HTML fixture tests only if an eligible actual publisher page demonstrates a missed metadata image.
+- [ ] Android Chrome QA awaits user's direct check.
