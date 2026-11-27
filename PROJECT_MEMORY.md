@@ -231,3 +231,9 @@ Do not enable a five-minute production loop until the external scheduler and sec
 - Recomputed exact shouldRetryThumbnailFetch against all 962 records at 2026-11-27T21:47:00Z (2026-11-28 06:47 KST): 0 eligible; earliest next eligibility remains 2026-12-01T06:57:55.671Z. Keep 1/7/30-day policy, six-hour offset rotation, max 12; no blind retry or speculative fixture/code change.
 - Query-failure history still contains only real #617 HTTP 429. YouTube Atom disabled; videos.json 20; Data API disabled; no YOUTUBE_API_KEY injection. collection-status has no networkRequests field. Preserve all source restrictions, 273 legacy shared assignments, and PR #54/#56 transactional save/move/restore.
 - Android Chrome real-device QA and direct public Pages access remain unverified. Code unchanged; documentation-only PR opened for this cycle.
+
+## 2026-11-28 06:47 KST — Documentation PR completion
+- The seven-document update was submitted as PR #84 and CI run #114 (46072826084) completed successfully. Its Unit tests and Validate committed archive data steps both passed.
+- PR #84 was merged after those checks, using squash merge. Merge commit / verified main immediately after merge: f2ca4cc33ecde38501a35c7332e6f0584f25a6ce. Post-merge open-PR search returned none.
+- This finalization note corrects the interim status in this cycle's checkpoint: PR #84 is merged, not awaiting CI. It was documentation-only; no collector or dataset code was changed.
+- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m10s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.

@@ -913,3 +913,9 @@ Query failure history retains only real #617 HTTP 429. YouTube Atom disabled, vi
 
 이번 문서 전용 PR의 CI 및 전체 데이터 검증이 성공한 뒤에만 병합한다. 다음 Production이 나오면 별도로 tests, data, artifact, Pages를 확인한다. Android Chrome 실기기 QA와 공개 Pages URL 직접 접근은 미검증으로 유지한다. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 분리 보고하고 PR/Actions 링크와 다음 전체 지시 버튼을 제공한다.
 ```
+
+## 2026-11-28 06:47 KST — Documentation PR completion
+- The seven-document update was submitted as PR #84 and CI run #114 (46072826084) completed successfully. Its Unit tests and Validate committed archive data steps both passed.
+- PR #84 was merged after those checks, using squash merge. Merge commit / verified main immediately after merge: f2ca4cc33ecde38501a35c7332e6f0584f25a6ce. Post-merge open-PR search returned none.
+- This finalization note corrects the interim status in this cycle's checkpoint: PR #84 is merged, not awaiting CI. It was documentation-only; no collector or dataset code was changed.
+- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m10s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.

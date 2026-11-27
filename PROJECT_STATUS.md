@@ -1240,3 +1240,9 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Thumbnail gate: 2 explicit page attempts in #624, 1 OG assignment, 1 no-candidate result. Recomputed retry eligibility at 06:47 KST: 0; earliest next 2026-12-01T06:57:55.671Z. No speculative retry or code change.
 - Artifact/Pages: artifact 15228811375, 770763 bytes, SHA-256 a4a9101740cc69d85adf4b23e519548f6d483ed8398372fe9673437bbea8d1dd; configure/upload/deploy succeeded. Public URL direct access unverified.
 - Unverified: Android Chrome real-device QA; direct public Pages reachability.
+
+## 2026-11-28 06:47 KST — Documentation PR completion
+- The seven-document update was submitted as PR #84 and CI run #114 (46072826084) completed successfully. Its Unit tests and Validate committed archive data steps both passed.
+- PR #84 was merged after those checks, using squash merge. Merge commit / verified main immediately after merge: f2ca4cc33ecde38501a35c7332e6f0584f25a6ce. Post-merge open-PR search returned none.
+- This finalization note corrects the interim status in this cycle's checkpoint: PR #84 is merged, not awaiting CI. It was documentation-only; no collector or dataset code was changed.
+- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m10s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.

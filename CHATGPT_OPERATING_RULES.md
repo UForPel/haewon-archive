@@ -763,3 +763,9 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Full discovery blob audit: 962 records; 113 explicit publisher URLs; 602 missing thumbnails; 28 missing with explicit publisher URL; 360 assignments including 273 legacy. Verified Haewon articles 84; article-image previews 62; RSS image candidates 0; review 493/0, precision null.
 - Re-evaluated actual shouldRetryThumbnailFetch logic at 2026-11-28 06:47 KST: zero eligible. Earliest next eligibility 2026-12-01T06:57:55.671Z. Do not fetch pages speculatively, retry blindly, or add extractor fixtures without a concrete eligible-page miss.
 - Keep Android Chrome QA and public Pages reachability separate from CI/deploy success. Preserve all source restrictions and do not infer networkRequests=0 when the field is absent.
+
+## 2026-11-28 06:47 KST — Documentation PR completion
+- The seven-document update was submitted as PR #84 and CI run #114 (46072826084) completed successfully. Its Unit tests and Validate committed archive data steps both passed.
+- PR #84 was merged after those checks, using squash merge. Merge commit / verified main immediately after merge: f2ca4cc33ecde38501a35c7332e6f0584f25a6ce. Post-merge open-PR search returned none.
+- This finalization note corrects the interim status in this cycle's checkpoint: PR #84 is merged, not awaiting CI. It was documentation-only; no collector or dataset code was changed.
+- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m10s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
