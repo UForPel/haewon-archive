@@ -1829,3 +1829,15 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - PR #63 also aligns `quality-metrics.json` `defaultScope` metadata with the broadened Haewon-candidate default in the public article view. PR/CI pending.
 - The official Gallery link is a user-facing route to existing official photos; it does not mean this repository has begun automated photo-post collection. `data/photos.json` stays empty until a permitted public listing/image metadata path is implemented and validated. No image files are copied or rehosted.
 - Android Chrome real-device QA remains unverified pending the user's checklist. Preserve 273 legacy thumbnail assignments; no automatic labels, API keys, new RSS feeds or access bypass.
+
+ 
+## 2026-11-27 — PR #63 merged; official gallery link live; Production #617 diagnostics exercised
+- PR #63 merged as `a7d4ae26b154a1219ec4ba34f7d24002d31b20ce`; final-head PR CI #89 passed 218/218 tests, and archive validation passed for 903 discovery candidates, 20 schema-valid videos, 0 photo-post records, 188 run logs, 57 source summaries and 41 checked links.
+- Production #617 (run 45916213360) completed its workflow and Pages deployment successfully. Data commit/main: `87e1e859c2762680c13ff4d3c487e158164d86ed`, parent PR merge `a7d4ae26b154a1219ec4ba34f7d24002d31b20ce`.
+- Pages artifact 15161774593, 662,120 bytes, SHA-256 `a37263f12ec5d64e78db3439ec16f168ddd5327a251e13f4c862a14cfd58c244`; upload and deployment steps succeeded.
+- Latest metrics generated 2026-11-27T00:21:21.098Z: 903 discovery candidates (716 article / 187 unresolved video candidates), 106 explicit publisher article URLs, 83 verified Haewon articles, 61 source-provenance-backed Haewon article images, 355 assigned thumbnails / 548 missing, 83 unique image URLs, 273 legacy shared-image assignments. Videos remain 20; last feed fetched 15 and added 0. Standalone `data/photos.json` remains 0.
+- Production #617 Google News RSS returned 5/6 successful queries; Bing RSS 6/6. The one actual Google News failure is persisted in `data/news-collection-status.json`: query `오해원 근황`, HTTP 429, content type `text/html; charset=UTF-8`. This directly exercises PR #59's failure-diagnostic persistence path. Do not retry blindly; leave the failed query recorded and respect rate limiting. Production run log correctly marks Google News partial and overall run partial while validation and Pages deployment succeed.
+- The official photo gallery shortcut is now live in the photo/image section: https://nmixx.jype.com/gallery. It opens JYP's public Gallery; the archive still does not automatically copy or collect photo originals. The 61 local cards remain article-image previews, distinct from official photo posts.
+- `discoveryRelevance.defaultScope` now reports `haewon-title-match`, aligned with the actual default article UI.
+- No API key, new RSS source, external data transfer, wrapper decoding, access bypass, blind retry, auto-review label, or mutation of the 273 legacy image assignments.
+- Android Chrome QA remains unverified until the user completes the real-device checklist.
