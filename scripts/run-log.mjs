@@ -12,7 +12,7 @@ function readJson(path) {
   return readFile(resolve(ROOT, path), 'utf8').then(JSON.parse);
 }
 
-export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, newsStatus = {}, videoCount, photoCount, changedPaths = [] }) {
+export function buildRunLog({ runId, startedAt, finishedAt, trigger, scheduleExpression = '', status, newsStatus = {}, videoCount, photoCount, changedPaths = [] }) {
   const itemsFetched = Number(status.itemsFetched) || 0;
   const itemsAdded = Number(status.itemsAdded) || 0;
   const itemsDuplicate = Number(status.itemsDuplicate) || 0;
@@ -58,6 +58,7 @@ export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, new
     startedAt,
     finishedAt,
     trigger: trigger === 'schedule' ? 'github_schedule' : trigger === 'workflow_dispatch' ? 'workflow_dispatch' : trigger === 'push' ? 'github_push' : trigger === 'manual' ? 'manual' : trigger === 'external_scheduler' ? 'external_scheduler' : 'unknown',
+    ...(trigger === 'schedule' && typeof scheduleExpression === 'string' && scheduleExpression.trim() ? { scheduleExpression: scheduleExpression.trim() } : {}),
     mode: 'production',
     status: overallStatus,
     sources,
@@ -92,6 +93,7 @@ async function main() {
   const record = buildRunLog({
     runId, startedAt, finishedAt,
     trigger: process.env.GITHUB_EVENT_NAME || 'unknown',
+    scheduleExpression: process.env.GITHUB_EVENT_SCHEDULE || '',
     status, newsStatus, videoCount: videos.length, photoCount: photos.length, changedPaths
   });
   await mkdir(LOG_DIR, { recursive: true });

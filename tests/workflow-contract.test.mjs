@@ -30,3 +30,9 @@ test('production performs one normal collection pass and retries only on a main 
   assert.doesNotMatch(workflow, /- name: Collect public YouTube feed/);
   assert.doesNotMatch(workflow, /- name: Discover public news RSS candidates/);
 });
+
+
+test('production workflow passes GitHub schedule expression to the run logger', async () => {
+  const workflow = await readFile(new URL('../.github/workflows/collect-and-deploy.yml', import.meta.url), 'utf8');
+  assert.ok(workflow.includes("GITHUB_EVENT_SCHEDULE: ${{ github.event.schedule || '' }}"));
+});

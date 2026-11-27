@@ -1967,3 +1967,14 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 - #621 was a separate push-triggered successful Production run; #622 was a schedule event. Both ran 223/223 and both kept YouTube automation disabled. #619 failed, #620 succeeded but still polled the Atom feed; PR #71 fixed the policy conflict.
 - PR #73 corrected the persisted next prompt to resolve latest main dynamically and merged as f62ebcaeb55e4b873f3572d72c81a78137d01117 after CI #45943533328 passed 223/223.
 - Android Chrome real-device QA remains unverified.
+
+## 2026-11-27 — Schedule trigger observability investigation
+- Audit baseline main: 65d53b239eff93ffbea46b87940af7b4c3c0308e; open PRs 0.
+- Production #622 (45943513107) is event=schedule, created/started 2026-11-27T05:03:36Z (14:03:36 KST). #614 (45889430699) is event=schedule, created/started 2026-11-26T20:13:18Z (2026-11-27 05:13:18 KST). At both run head commits, workflow config was identical: `17 11 * * *` and `17 23 * * *`. Neither observed start matches either configured cron instant.
+- GitHub run API exposes event=schedule but previous run logs only stored generic `github_schedule`; exact `github.event.schedule` was not persisted, so the fired cron cannot be recovered retrospectively.
+- GitHub docs confirm schedule runs may be delayed under high Actions load, especially at the start of an hour, but that does not by itself explain these earlier-than-configured timestamps. Root cause remains unverified.
+- #622 job log confirms 223/223 tests; Atom collector disabled, networkRequests 0, 20 videos retained; Data API disabled-policy; queryFailures empty; 936 candidates; failure history 1 actual #617 event. Data commit 9de65fa731e459bf6238b7983169be1788644525.
+- #622 artifact 15172754616, 724180 bytes, digest sha256:a3510de9411c6449c2848c0eb231fcdbc408358f872fa28f5c8b2e5a903c1dbb. Upload and deploy-pages steps succeeded; public Pages URL could not be independently opened.
+- Implementation prepared in PR branch: pass `github.event.schedule` to run logger and record optional `scheduleExpression`; schema and regression tests cover scheduled and non-scheduled records. This cannot retroactively explain #614/#622.
+- 20:17 KST execution is future at this checkpoint (15:00 KST); no result is inferred.
+- Android Chrome real-device QA remains unverified.

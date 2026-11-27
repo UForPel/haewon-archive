@@ -98,3 +98,16 @@ test('run log keeps query-level failure details and explicit retry metadata',()=
  assert.equal(log.status,'partial');
  assert.deepEqual(log.queryFailures,[{sourceId:'google-news-rss',query:'오해원 근황',error:'HTTP 429',retryAttempted:false,status:429,contentType:'text/html; charset=UTF-8',responseFormat:'html'}]);
 });
+
+
+test('scheduled run logs preserve the exact GitHub cron expression',()=>{
+ const log=buildRunLog({...base,scheduleExpression:'17 11 * * *'});
+ assert.equal(log.trigger,'github_schedule');
+ assert.equal(log.scheduleExpression,'17 11 * * *');
+});
+
+test('schedule expression is omitted for non-scheduled runs',()=>{
+ const log=buildRunLog({...base,trigger:'push',scheduleExpression:'17 11 * * *'});
+ assert.equal(log.trigger,'github_push');
+ assert.equal(Object.hasOwn(log,'scheduleExpression'),false);
+});

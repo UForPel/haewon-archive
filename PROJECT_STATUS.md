@@ -1126,3 +1126,10 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Failure history still contains only the real #617 HTTP 429; no additional failure and no synthetic event. #622 test count 223/223.
 - Current #622 metrics: 936 candidates (749 article, 187 video), 111 publisherArticleUrl items, 84 verified Haewon articles, 62 article-image previews, 0 standalone photos, 359 assigned thumbnails, 577 missing, 273 legacy shared assignments.
 - PR #73 merged after 223/223 CI; current main at the time of this log update is resolved live in GitHub, not hard-coded into the next prompt. Android Chrome QA remains unverified.
+
+## 2026-11-27 — Schedule trigger observability
+- Latest main at audit start: 65d53b239eff93ffbea46b87940af7b4c3c0308e; open PRs 0.
+- Production workflow cron: `17 11 * * *` (20:17 KST) and `17 23 * * *` (08:17 KST next day), UTC.
+- #614 (20:13:18Z) and #622 (05:03:36Z) are reported as schedule events but their recorded starts do not match either cron instant. Workflow files at both run heads contain the same two expressions. Existing run logs omit `github.event.schedule`; exact trigger expression is not recoverable. Root cause remains unknown.
+- #622 fully succeeded: 223/223 tests; archive validation passed; 20 videos retained; 0 Atom network requests; Data API disabled-policy; one actual #617 failure preserved; 936 candidates. Data commit 9de65fa731e459bf6238b7983169be1788644525; artifact 15172754616 digest a3510de9411c6449c2848c0eb231fcdbc408358f872fa28f5c8b2e5a903c1dbb; Pages deploy step succeeded, public URL unverified.
+- At 15:00 KST, requested 20:17 KST run is still future. New PR records exact schedule expression for future runs; do not change cron based on unexplained evidence.

@@ -139,3 +139,7 @@ YouTube's Terms prohibit automated access except public search engines following
 - Production #622 independently reconfirmed YouTube Atom disabled (0 network requests, 20 historical video records retained) and YouTube Data API disabled-policy.
 - #622 is marked as a schedule event, but its run timestamp 14:03:36 KST does not match the configured 20:17 KST slot. Do not treat the requested 20:17 run as verified until a matching execution is observed.
 - No new source authorization was found. Keep all YouTube Atom collectors disabled; broadcaster channel IDs remain provenance-only.
+
+## 2026-11-27 — Collection policy unchanged during schedule investigation
+- The schedule diagnostic change only records the cron expression in sanitized run logs; it does not change source permissions, enable any collector, or pass YouTube secrets.
+- YouTube Atom remains disabled; Data API remains disabled pending a reviewed 30-day refresh/deletion lifecycle. All broadcaster IDs remain provenance-only.

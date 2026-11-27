@@ -577,3 +577,8 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Production #622 (schedule event) succeeded with nmixx-youtube skipped, zero items, zero Atom network requests, and 20 historical videos retained.
 - The run log timestamp is 14:03:36 KST, not the configured 20:17 KST slot. Do not treat it as confirmation of that specific scheduled slot; investigate timing separately.
 - Query failure history still has one real #617 429 event. #622 had no query failures. No synthetic events and no blind retries.
+
+## 2026-11-27 — Production schedule diagnostics
+- Existing cron entries are `17 11 * * *` and `17 23 * * *` UTC. #614 and #622 are reported as schedule events but their recorded starts do not match either cron instant.
+- Do not reinterpret generic event=schedule as proof of a particular local-time slot. Persist `github.event.schedule` in future run logs and compare it with startedAt.
+- #622 collection policy remained compliant: NMIXX Atom skipped, zero network requests, 20 historic videos preserved, YouTube Data API disabled-policy.

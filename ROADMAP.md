@@ -930,3 +930,10 @@
 - [x] Confirm a real schedule-event Production run with YouTube Atom disabled and 20 historical videos preserved.
 - [ ] Verify the configured 20:17 KST (11:17Z) cron slot separately; #622's event timestamp was 14:03:36 KST and does not match that slot.
 - [ ] Investigate GitHub Actions schedule timing/queue delay before changing the cron configuration; preserve the current two-run schedule until evidence supports a change.
+
+## 2026-11-27 — Scheduled-run diagnostics
+- [x] Confirm cron definitions and compare them with #614/#622 Actions timestamps.
+- [x] Confirm existing run logs omit GitHub's schedule expression, preventing retrospective mapping to one of two cron entries.
+- [ ] Add optional `scheduleExpression` to run-log schema and logger using `github.event.schedule`.
+- [ ] Verify 20:17 KST slot separately; do not assume #622 was that slot.
+- [ ] After the next matching run, compare expression, Actions created/start times, and run-log startedAt; investigate without speculative cron changes.
