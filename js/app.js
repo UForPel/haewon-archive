@@ -258,6 +258,8 @@ async function start() {
     if (responses[1].ok) {
       const status = await responses[1].json();
       updated.textContent = status.lastSuccessAt ? '마지막 수집 ' + new Date(status.lastSuccessAt).toLocaleString('ko-KR') : '첫 수집 대기 중';
+      const coverage=document.querySelector('#video-coverage-note');
+      if(coverage)coverage.textContent='아카이브 보관 '+videos.length+'개 · 마지막 공식 피드 확인 '+Number(status.itemsFetched||0)+'개 · 이번 신규 '+Number(status.itemsAdded||0)+'개. 최신 공개 피드 누적분이며 채널 전체 업로드 목록은 아닙니다.';
     }
     if (responses[2].ok) publishedPhotos = validatePhotoEntries(await responses[2].json());
     if (responses[3].ok) sources = await responses[3].json();
