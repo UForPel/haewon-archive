@@ -1,91 +1,91 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-27T00:46:44.263Z",
+  "collectedAt": "2026-11-27T02:09:09.800Z",
   "searchPack": 0,
   "queries": [
     {
       "query": "오해원 NMIXX",
-      "candidates": 108,
-      "publicationFreshness": {
-        "within7Days": 0,
-        "within30Days": 5,
-        "within90Days": 10,
-        "olderThan90Days": 93,
-        "unknown": 0,
-        "future": 0,
-        "within7DaysRate": 0,
-        "within30DaysRate": 5
-      },
-      "uniqueCandidates": 108,
-      "duplicateUrlOccurrences": 0,
-      "duplicateTitleGroups": 1,
-      "duplicateTitleOccurrences": 1,
-      "titleKeywordMatches": 87,
-      "titleKeywordMatchRate": 81,
-      "explicitPublisherUrls": 8,
-      "explicitPublisherUrlRate": 7,
-      "crossQueryDuplicateUrls": 14,
-      "datedCandidates": 108,
-      "unknownDates": 0,
-      "futureDated": 0,
-      "medianPublicationLagHours": 14273.8,
-      "p90PublicationLagHours": 23259.1
-    },
-    {
-      "query": "해원 엔믹스",
-      "candidates": 111,
-      "publicationFreshness": {
-        "within7Days": 1,
-        "within30Days": 27,
-        "within90Days": 43,
-        "olderThan90Days": 40,
-        "unknown": 0,
-        "future": 0,
-        "within7DaysRate": 1,
-        "within30DaysRate": 25
-      },
-      "uniqueCandidates": 111,
-      "duplicateUrlOccurrences": 0,
-      "duplicateTitleGroups": 0,
-      "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 105,
-      "titleKeywordMatchRate": 95,
-      "explicitPublisherUrls": 11,
-      "explicitPublisherUrlRate": 10,
-      "crossQueryDuplicateUrls": 8,
-      "datedCandidates": 111,
-      "unknownDates": 0,
-      "futureDated": 0,
-      "medianPublicationLagHours": 1841.8,
-      "p90PublicationLagHours": 4361.8
-    },
-    {
-      "query": "NMIXX Haewon news",
-      "candidates": 37,
+      "candidates": 55,
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 2,
-        "within90Days": 7,
-        "olderThan90Days": 28,
+        "within90Days": 6,
+        "olderThan90Days": 47,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 5
+        "within30DaysRate": 4
       },
-      "uniqueCandidates": 37,
+      "uniqueCandidates": 55,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 1,
+      "duplicateTitleOccurrences": 1,
+      "titleKeywordMatches": 52,
+      "titleKeywordMatchRate": 95,
+      "explicitPublisherUrls": 7,
+      "explicitPublisherUrlRate": 13,
+      "crossQueryDuplicateUrls": 10,
+      "datedCandidates": 55,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 14803.2,
+      "p90PublicationLagHours": 25203.8
+    },
+    {
+      "query": "해원 엔믹스",
+      "candidates": 61,
+      "publicationFreshness": {
+        "within7Days": 2,
+        "within30Days": 9,
+        "within90Days": 6,
+        "olderThan90Days": 44,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 3,
+        "within30DaysRate": 18
+      },
+      "uniqueCandidates": 61,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 15,
-      "titleKeywordMatchRate": 41,
+      "titleKeywordMatches": 58,
+      "titleKeywordMatchRate": 95,
       "explicitPublisherUrls": 11,
-      "explicitPublisherUrlRate": 30,
-      "crossQueryDuplicateUrls": 19,
-      "datedCandidates": 37,
+      "explicitPublisherUrlRate": 18,
+      "crossQueryDuplicateUrls": 6,
+      "datedCandidates": 61,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 9728.8,
-      "p90PublicationLagHours": 27454
+      "medianPublicationLagHours": 14878.4,
+      "p90PublicationLagHours": 39955.2
+    },
+    {
+      "query": "NMIXX Haewon news",
+      "candidates": 20,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 2,
+        "within90Days": 5,
+        "olderThan90Days": 13,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 10
+      },
+      "uniqueCandidates": 20,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 9,
+      "titleKeywordMatchRate": 45,
+      "explicitPublisherUrls": 11,
+      "explicitPublisherUrlRate": 55,
+      "crossQueryDuplicateUrls": 13,
+      "datedCandidates": 20,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 5687.8,
+      "p90PublicationLagHours": 21667.2
     },
     {
       "query": "Haewon NMIXX news",
@@ -108,12 +108,12 @@
       "titleKeywordMatchRate": 75,
       "explicitPublisherUrls": 10,
       "explicitPublisherUrlRate": 50,
-      "crossQueryDuplicateUrls": 17,
+      "crossQueryDuplicateUrls": 16,
       "datedCandidates": 20,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 8880.8,
-      "p90PublicationLagHours": 21665.8
+      "medianPublicationLagHours": 8882.2,
+      "p90PublicationLagHours": 21667.2
     },
     {
       "query": "오해원 근황",
@@ -136,12 +136,12 @@
       "titleKeywordMatchRate": 78,
       "explicitPublisherUrls": 10,
       "explicitPublisherUrlRate": 28,
-      "crossQueryDuplicateUrls": 9,
+      "crossQueryDuplicateUrls": 8,
       "datedCandidates": 36,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1545.2,
-      "p90PublicationLagHours": 25336.8
+      "medianPublicationLagHours": 1546.5,
+      "p90PublicationLagHours": 25338.2
     },
     {
       "query": "Haewon latest news",
@@ -164,26 +164,26 @@
       "titleKeywordMatchRate": 65,
       "explicitPublisherUrls": 0,
       "explicitPublisherUrlRate": 0,
-      "crossQueryDuplicateUrls": 8,
+      "crossQueryDuplicateUrls": 7,
       "datedCandidates": 17,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 11345.8,
-      "p90PublicationLagHours": 23072.2
+      "medianPublicationLagHours": 11347.2,
+      "p90PublicationLagHours": 23073.6
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
   "bingSuccessfulQueries": 6,
-  "bingCandidates": 50,
+  "bingCandidates": 49,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 329,
-  "uniqueIncoming": 287,
-  "added": 14,
+  "fetched": 209,
+  "uniqueIncoming": 175,
+  "added": 5,
   "rssImageSignals": {
-    "items": 279,
-    "sourceUrlItems": 275,
+    "items": 160,
+    "sourceUrlItems": 159,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -196,9 +196,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 50,
+    "items": 49,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 50,
+    "publisherArticleUrlItems": 49,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -213,20 +213,42 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 0,
-    "found": 0,
-    "assigned": 0,
+    "attempted": 1,
+    "found": 1,
+    "assigned": 1,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
     "failed": 0,
-    "results": []
+    "results": [
+      {
+        "id": "9ffee44a0be1cb0b14a8",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+        "resolvedArticleHost": "www.sportsworldi.com"
+      }
+    ]
   },
   "deduplicationComparison": {
-    "before": 329,
-    "after": 286,
-    "collapsed": 43,
+    "before": 209,
+    "after": 174,
+    "collapsed": 35,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 913
+  "totalCandidates": 914
 }

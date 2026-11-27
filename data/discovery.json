@@ -2422,6 +2422,13 @@
         "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0521ab7aca47489d65b58d02723c48&url=https%3a%2f%2fsports.khan.co.kr%2farticle%2f202510231129003&c=5566179246584930595&mkt=ko-kr",
         "articleUrl": "https://sports.khan.co.kr/article/202510231129003",
         "host": "sports.khan.co.kr"
+      },
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%EC%98%A4%ED%95%B4%EC%9B%90%20NMIXX&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b08e647f453466b9829d32d9974baee&url=https%3a%2f%2fnews.nate.com%2fview%2f20251023n15545&c=14178336418017467563&mkt=ko-kr",
+        "articleUrl": "https://news.nate.com/view/20251023n15545",
+        "host": "news.nate.com"
       }
     ],
     "publishedAt": "2025-10-23T04:29:00.000Z",
@@ -2799,7 +2806,7 @@
     "id": "de974fb311b152bc6141",
     "title": "“NMIXX 오해원 닮았다”…김동영, '7살 연하' 소개팅녀 미모에 ‘정신혼미’('조선의 사랑꾼')",
     "url": "https://www.osen.co.kr/article/G1112588404",
-    "publisherArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2025/06/10/NHN5PSUOLY45XJL6ONHFTU3R6Y/",
+    "publisherArticleUrl": "https://www.osen.co.kr/article/G1112588404",
     "sourceUrl": "",
     "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b0521ab7aca47489d65b58d02723c48&url=https%3a%2f%2fwww.osen.co.kr%2farticle%2fG1112588404&c=3584806933221711950&mkt=ko-kr",
     "publisherHost": "www.osen.co.kr",
@@ -16566,7 +16573,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-27T00:18:08.441Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8b4104f7d4c4602530cb",
@@ -18149,6 +18162,59 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "9ffee44a0be1cb0b14a8",
+    "title": "엔믹스, 첫 월드투어 27~29일 피날레…“더 벅찬 감동 드릴 것”",
+    "url": "https://www.sportsworldi.com/newsView/20261127505364",
+    "publisherArticleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b08e64720814350b57eb111dc519dab&url=https%3a%2f%2fwww.sportsworldi.com%2fnewsView%2f20261127505364&c=16558304619567788373&mkt=ko-kr",
+    "publisherHost": "www.sportsworldi.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=%ED%95%B4%EC%9B%90%20%EC%97%94%EB%AF%B9%EC%8A%A4&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b08e64720814350b57eb111dc519dab&url=https%3a%2f%2fwww.sportsworldi.com%2fnewsView%2f20261127505364&c=16558304619567788373&mkt=ko-kr",
+        "articleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+        "host": "www.sportsworldi.com"
+      }
+    ],
+    "publishedAt": "2026-11-26T12:40:00.000Z",
+    "description": "전 세계 17개 도시를 누빈 그룹 엔믹스(NMIXX)가 약 1년 만에 첫 월드투어의 출발점인 인천으로 돌아온다. 엔믹스는 27~29일 인천 인스파이어 아레나에서 첫 월드투어 ‘에피소드 1: 제로 프론티어(EPISODE 1: ZERO FRONTIER)’의 앙코르 공연을 개최한다. 지난해 11월 인천에서 월드투어의 막을 올린 엔믹스는 유럽과 북미, 아시아 등 ...",
+    "thumbnailUrl": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "스포츠월드",
+    "discoverySource": "bing-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-27T02:09:09.800Z",
+    "status": "candidate",
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+        "source": "og:image",
+        "priority": 1
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+      "resolvedArticleHost": "www.sportsworldi.com",
+      "fetchedAt": "2026-11-27T02:09:12.563Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+      "articleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+      "observedAt": "2026-11-27T02:09:12.563Z"
+    }
   },
   {
     "id": "8cf536bcc4266cf77971",
@@ -22925,7 +22991,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-27T00:46:44.263Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "16d724a7443c61d1eeec",

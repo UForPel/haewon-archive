@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-11-27T00:46:48.032Z",
+  "generatedAt": "2026-11-27T02:09:13.985Z",
   "discoveryRelevance": {
-    "totalCandidates": 913,
-    "articleCandidates": 726,
+    "totalCandidates": 914,
+    "articleCandidates": 727,
     "videoCandidates": 187,
-    "verifiedPublisherArticles": 106,
+    "verifiedPublisherArticles": 107,
     "verifiedHaewonArticles": 83,
-    "verifiedPublisherArticlesWithProvenanceThumbnail": 79,
+    "verifiedPublisherArticlesWithProvenanceThumbnail": 80,
     "verifiedHaewonWithProvenanceThumbnail": 61,
     "haewonTitleMatches": 544,
-    "nmixxTitleMatches": 565,
+    "nmixxTitleMatches": 566,
     "otherArticleCandidates": 82,
     "defaultScope": "haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 913,
-    "itemsWithPublisherArticleUrl": 107,
-    "bingNewsItems": 110,
+    "totalItems": 914,
+    "itemsWithPublisherArticleUrl": 108,
+    "bingNewsItems": 111,
     "candidateSourceCounts": {
-      "bing-news-rss-explicit-url-param": 115
+      "bing-news-rss-explicit-url-param": 117
     },
     "publisherHosts": {
       "www.msn.com": 14,
@@ -61,6 +61,7 @@
       "osen.co.kr": 1,
       "www.starnewskorea.com": 1,
       "www.broadwayworld.com": 1,
+      "www.sportsworldi.com": 1,
       "www.kyongbuk.co.kr": 1,
       "www.forbes.com": 1,
       "themusicuniverse.com": 1,
@@ -110,6 +111,7 @@
       "www.starnewskorea.com": 1,
       "news.sbs.co.kr": 1,
       "www.broadwayworld.com": 1,
+      "www.sportsworldi.com": 1,
       "www.kyongbuk.co.kr": 1,
       "www.forbes.com": 1,
       "themusicuniverse.com": 1,
@@ -280,14 +282,14 @@
       "www.obsnews.co.kr": 1
     },
     "discoveryWrapperHosts": {
-      "www.bing.com": 110
+      "www.bing.com": 111
     }
   },
   "thumbnailProvenance": {
-    "assignedTotal": 355,
+    "assignedTotal": 356,
     "assignedBySource": {
       "unverified-legacy": 273,
-      "og:image": 74,
+      "og:image": 75,
       "twitter:image": 6,
       "link:image_src": 1,
       "twitter:image:src": 1
@@ -297,7 +299,7 @@
     "sourceProvenanceCoverage": 23
   },
   "thumbnailMissingDiagnostics": {
-    "items": 913,
+    "items": 914,
     "missing": 558,
     "classified": 558,
     "unclassified": 0,
@@ -755,6 +757,14 @@
         "reasons": {}
       },
       {
+        "source": "스포츠월드",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
         "source": "스포츠한국",
         "items": 1,
         "missing": 0,
@@ -813,14 +823,14 @@
     ]
   },
   "thumbnailAudit": {
-    "items": 913,
-    "withThumbnail": 355,
+    "items": 914,
+    "withThumbnail": 356,
     "missing": 558,
-    "uniqueThumbnailUrls": 83,
+    "uniqueThumbnailUrls": 84,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 9,
-    "uniqueThumbnailAssignmentRate": 23,
+    "uniqueThumbnailAssignmentRate": 24,
     "dominantThumbnailCount": 273,
     "dominantThumbnailShare": 30,
     "concentrationWarning": true,
@@ -974,6 +984,10 @@
         "count": 1
       },
       {
+        "host": "sportsworldi.com",
+        "count": 1
+      },
+      {
         "host": "cdn.kyongbuk.co.kr",
         "count": 1
       },
@@ -1071,33 +1085,55 @@
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 50,
+    "bingNewsCandidates": 49,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
-    "newsCandidatesTotal": 913,
-    "newsUniqueFetched": 287,
-    "newsAddedLastRun": 14,
-    "duplicateBeforeMergeLastRun": 42,
-    "duplicateGroupsCurrent": 913,
+    "newsCandidatesTotal": 914,
+    "newsUniqueFetched": 175,
+    "newsAddedLastRun": 5,
+    "duplicateBeforeMergeLastRun": 34,
+    "duplicateGroupsCurrent": 914,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 329,
-      "after": 286,
-      "collapsed": 43,
+      "before": 209,
+      "after": 174,
+      "collapsed": 35,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 0,
-      "found": 0,
-      "assigned": 0,
+      "attempted": 1,
+      "found": 1,
+      "assigned": 1,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
       "failed": 0,
-      "results": []
+      "results": [
+        {
+          "id": "9ffee44a0be1cb0b14a8",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          "candidates": [
+            {
+              "url": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+              "source": "og:image",
+              "priority": 1
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+          "resolvedArticleHost": "www.sportsworldi.com"
+        }
+      ]
     }
   },
   "sources": [
@@ -1666,6 +1702,18 @@
       "dateCoverage": 100
     },
     {
+      "source": "스포츠월드",
+      "items": 1,
+      "withUrl": 1,
+      "withPublisherArticleUrl": 1,
+      "withThumbnail": 1,
+      "withDate": 1,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 100,
+      "dateCoverage": 100
+    },
+    {
       "source": "경북일보",
       "items": 1,
       "withUrl": 1,
@@ -1807,14 +1855,14 @@
     }
   ],
   "classification": {
-    "items": 913,
+    "items": 914,
     "categoryCounts": {
       "video": 187,
       "interview": 64,
       "news": 558,
       "brand": 32,
       "event": 18,
-      "performance": 45,
+      "performance": 46,
       "official": 14
     },
     "reviewedSamples": 0,
@@ -1824,14 +1872,14 @@
     "accuracyLabel": "not measured (no category review labels)"
   },
   "thumbnailReviewMetrics": {
-    "eligible": 488,
+    "eligible": 489,
     "reviewed": 0,
     "reviewCoverage": 0,
     "relevant": 0,
     "unsuitable": 0,
     "excluded": 0,
     "precision": null,
-    "selectedEligible": 355,
+    "selectedEligible": 356,
     "selectedReviewed": 0,
     "selectedPrecision": null,
     "counts": {
@@ -2638,6 +2686,23 @@
       "assignmentRate": 100
     },
     {
+      "host": "www.sportsworldi.com",
+      "attempted": 1,
+      "assigned": 1,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.sportsworldi.com": 1
+      },
+      "successRate": 100,
+      "candidateRate": 100,
+      "assignmentRate": 100
+    },
+    {
       "host": "www.spotvnews.co.kr",
       "attempted": 1,
       "assigned": 1,
@@ -2964,25 +3029,25 @@
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 82,
+    "articlesCompared": 83,
     "rssOnly": 0,
-    "metaOnly": 82,
+    "metaOnly": 83,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 82,
-    "metaAssigned": 0,
-    "assignmentRate": null,
-    "latestRunAttempted": 0,
-    "latestRunFound": 0,
-    "latestRunAssigned": 0,
-    "latestRunAssignmentRate": null,
-    "persistedMetaCandidateRecords": 82,
-    "persistedThumbnailRecords": 82,
-    "persistedThumbnailRecordsTotal": 355,
-    "persistedThumbnailMatchesMetaCandidate": 82,
+    "metaFound": 83,
+    "metaAssigned": 1,
+    "assignmentRate": 100,
+    "latestRunAttempted": 1,
+    "latestRunFound": 1,
+    "latestRunAssigned": 1,
+    "latestRunAssignmentRate": 100,
+    "persistedMetaCandidateRecords": 83,
+    "persistedThumbnailRecords": 83,
+    "persistedThumbnailRecordsTotal": 356,
+    "persistedThumbnailMatchesMetaCandidate": 83,
     "persistedThumbnailDoesNotMatchMetaCandidate": 0,
     "sourceCounts": {
-      "og:image": 74,
+      "og:image": 75,
       "jsonld:image": 87,
       "twitter:image": 13,
       "jsonld:thumbnailUrl": 20,
@@ -3142,6 +3207,10 @@
       },
       {
         "host": "menu.starnewskorea.com",
+        "count": 1
+      },
+      {
+        "host": "www.sportsworldi.com",
         "count": 1
       },
       {
@@ -3360,7 +3429,7 @@
       {
         "id": "de974fb311b152bc6141",
         "title": "“NMIXX 오해원 닮았다”…김동영, '7살 연하' 소개팅녀 미모에 ‘정신혼미’('조선의 사랑꾼')",
-        "articleUrl": "https://biz.chosun.com/entertainment/enter_general/2025/06/10/NHN5PSUOLY45XJL6ONHFTU3R6Y/",
+        "articleUrl": "https://www.osen.co.kr/article/G1112588404",
         "rssCandidates": [],
         "metaCandidates": [
           {
@@ -4792,6 +4861,24 @@
         "persistedThumbnailMatchesMetaCandidate": true
       },
       {
+        "id": "9ffee44a0be1cb0b14a8",
+        "title": "엔믹스, 첫 월드투어 27~29일 피날레…“더 벅찬 감동 드릴 것”",
+        "articleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned",
+        "persistedThumbnailUrl": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+        "persistedThumbnailMatchesMetaCandidate": true
+      },
+      {
         "id": "8cf536bcc4266cf77971",
         "title": "동해안별신굿에 전자음악&#183;미디어아트 더한 ‘해원’, 포항서 공연",
         "articleUrl": "https://www.kyongbuk.co.kr/news/articleView.html?idxno=4091494",
@@ -5234,7 +5321,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-27T00:46:48.119Z",
+    "generatedAt": "2026-11-27T02:09:14.017Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -7172,16 +7259,7 @@
         "isImage": false
       }
     ],
-    "unreachable": [
-      {
-        "url": "https://img.etnews.com/news/article/2026/10/23/article_23093430555193.jpg",
-        "status": null,
-        "contentType": "",
-        "ok": false,
-        "isImage": false,
-        "error": "The operation was aborted due to timeout"
-      }
-    ],
+    "unreachable": [],
     "rateLimited": [],
     "results": [
       {
@@ -7214,11 +7292,10 @@
       },
       {
         "url": "https://img.etnews.com/news/article/2026/10/23/article_23093430555193.jpg",
-        "status": null,
-        "contentType": "",
-        "ok": false,
-        "isImage": false,
-        "error": "The operation was aborted due to timeout"
+        "status": 200,
+        "contentType": "image/jpeg",
+        "ok": true,
+        "isImage": true
       },
       {
         "url": "https://img.mydaily.co.kr/photos/2026/10/22/2026102217300091251_x.png",
@@ -7282,10 +7359,10 @@
     "total": 83,
     "counts": {
       "http-responded": 9,
-      "blocked": 2,
+      "blocked": 1,
       "paywall": 0,
       "not-found": 1,
-      "uncertain": 0
+      "uncertain": 1
     },
     "results": [
       {
@@ -7339,8 +7416,8 @@
       {
         "articleId": "baaea643c6e7d0c5b9b4",
         "url": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
-        "status": 403,
-        "state": "blocked",
+        "status": 405,
+        "state": "uncertain",
         "finalHost": "www.sportskeeda.com",
         "method": "HEAD"
       },
