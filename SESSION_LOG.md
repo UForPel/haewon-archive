@@ -2066,3 +2066,26 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 - Failure history remains exactly one real #617 HTTP 429; no second real event and no synthetic event. Videos.json remains 20; YouTube Atom source registry disabled; workflow does not inject YOUTUBE_API_KEY. Existing 273 legacy group and PR #54/#56 transaction semantics unchanged.
 - No code/data/workflow/source-policy changes in this cycle; documentation-only evidence update. Android Chrome real-device QA unverified.
 - Next: inspect any late Production, then next schedule slot after 08:17 KST. Verify schedule expression and timestamps, tests, collection, data commit, artifact digest, deploy and direct URL separately. Continue thumbnail analysis only with measured eligible records/human labels; no auto-delete/replace.
+
+
+## 2026-11-27 22:10 KST — Live GitHub and thumbnail retry audit
+
+### Live state and schedule
+- Main at cycle start: `dd4ff74e5b4be907f34bdd0c1dffb62a7dd37030`; PR #79 merged; no open PRs.
+- Latest Actions list contains no Production #624 or later. Latest Production remains #623 push. 20:17 KST slot not observed; cause unknown. Next slot 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC; require event=schedule, trigger=github_schedule, scheduleExpression=17 23 * * * and compare timestamps.
+
+### Production / artifact / Pages
+- #623 run 45949528329: Actions created/run_started 06:04:22Z; run-log startedAt 06:04:29.000Z, finishedAt 06:04:49.518Z; trigger github_push.
+- Job 140341900635 passed 226/226 tests, 0 failures, archive validation. Google News 99, Bing News 31; six queries each succeeded; no queryFailures; YouTube skipped.
+- Data commit c5382d9816e114c565357f0f22eb47e1b7771b0b. Artifact 15176047291, 731041 bytes, SHA-256 f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7. Pages configure/upload/deploy steps succeeded. Public URL remains unavailable to verifier; independent live UI/Android QA unverified.
+
+### Exact retry eligibility
+- Parsed full Git blob data/discovery.json (936 records, 1,482,894 bytes), not a truncated response. Explicit HTTPS publisherArticleUrl = 111; missing thumbnail = 577; missing + explicit publisher URL = 27.
+- Of those 27: 17 status=missing, 10 status=failed (8 x 403/forbidden, 1 x 405/method-not-allowed, 1 x 405/network-error). At 2026-11-27 22:10 KST, exact current retry policy yields 0 eligible. All 27 are within applicable 7-day delay; earliest next eligibility is 2026-12-01T06:57:55Z.
+- At #623 collection timestamp offset = 83137; six-hour rotation and max 12 target limit remain unchanged. With zero eligible records, selected target count is zero. No requests made in this audit.
+- No HTML fixture or parser expansion warranted: no retry target and no concrete public page proving an extraction miss. No code change.
+
+### Data / policy / unresolved
+- Baseline: 936 candidates (749 articles, 187 videos), 111 publisher URLs, 84 verified Haewon articles, 62 article-image previews, 0 independent photos, 359 assigned thumbnails, 577 missing, 273 legacy shared assignments. RSS signals/candidates 0; comparison 86 meta-only; review 493 eligible/0 reviewed, precision null.
+- Failure history contains only real #617 HTTP 429; no synthetic events. YouTube Atom disabled, videos.json 20, Data API disabled, no workflow YOUTUBE_API_KEY. collection-status has no networkRequests field; itemsFetched=0 is visible. Source restrictions unchanged.
+- Android Chrome real-device QA unverified; preserve 273 legacy assignments and PR #54/#56 transactional flow.

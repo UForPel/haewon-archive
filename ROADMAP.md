@@ -978,3 +978,24 @@
 - [ ] Measure any retry-eligible missing explicit publisher article URLs; do not assume the 0 attempts reason without item-level evidence.
 - [ ] Add human thumbnail labels; 493 eligible, 0 reviewed, precision null. Preserve 273 legacy assignments.
 - [ ] Complete Android Chrome real-device QA after user direct check.
+
+
+## 2026-11-27 22:10 KST — Next-cycle action
+- **Visible label:** 🔄 연구 기반 재귀개선 계속하기
+- **Action:** submit the full continuation prompt below.
+
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA를 GitHub에서 실시간 조회하고 일곱 운영 문서를 먼저 읽는다. 직전 확인 main은 dd4ff74e5b4be907f34bdd0c1dffb62a7dd37030이며 PR #79는 병합되었고 열린 PR은 없었다. 최신 Actions 목록에서 Production #624 또는 이후 실행은 관찰되지 않았다. 20:17 KST 슬롯은 미관찰/원인 미확인으로 유지하며 GitHub drop/실패로 단정하지 않는다.
+
+다음 슬롯은 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC다. Actions event=schedule, run-log trigger=github_schedule, scheduleExpression='17 23 * * *'가 모두 일치해야 한다. Actions created_at/run_started_at과 run-log startedAt을 대조한다. #614/#622는 expression이 없어 소급 추정하지 말고 cron 변경 금지.
+
+최신 Production #623(run 45949528329)은 push 실행이다. 226/226 테스트, 전체 데이터 검증 성공, Google News 99/Bing News 31, data commit c5382d9816e114c565357f0f22eb47e1b7771b0b, artifact 15176047291, 731041 bytes, SHA-256 f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7, Pages configure/upload/deploy steps 성공. 공개 URL 직접 접근은 verifier에서 실패하여 미검증이다.
+
+썸네일 전체 데이터 audit: discovery.json 936개 전체 Git blob을 파싱했다. 명시적 HTTPS publisherArticleUrl 111, 썸네일 누락 577, 그중 publisherArticleUrl도 있는 누락 27. 상태는 missing 17, failed 10(403/forbidden 8, 405/method-not-allowed 1, 405/network-error 1). 2026-11-27 22:10 KST 기준 재시도 가능 0/27. 7일/30일 backoff와 6시간 offset 회전, 최대 12개 제한은 기존 코드대로다. 가장 빠른 다음 eligibility는 2026-12-01T06:57:55Z. 재시도 대상이 0이므로 blind retry, 임의 HTML fetch 및 parser 확장 금지. 실제 eligible publisher page에서 extractor miss가 확인될 때만 fixture/test/구현한다.
+
+Baseline: 936 candidates(749 articles,187 videos), 111 publisherArticleUrl, 84 verified Haewon articles, 62 article image previews, 0 independent photos, 359 assigned thumbnails, 577 missing, 273 legacy shared assignments. RSS image signals/candidates 0, 86 meta-only, thumbnail review 493 eligible/0 reviewed/precision null. #617 실제 HTTP 429만 append-only history에 남아 있으며 합성 이벤트 금지.
+
+YouTube Atom 비활성, videos.json 20개, Data API 비활성, workflow YOUTUBE_API_KEY 전달 금지. collection-status에 networkRequests field가 없으므로 0 요청이라고 단정하지 말고 itemsFetched=0만 직접 보고한다. JYP/NMIXX Gallery·Notice 수집기 금지, SBSKPOP ZOOM 소유권 미확인, 방송사 수집기/broadcaster-official 자동분류 금지, Google News wrapper decode/access bypass 금지. 273개 레거시 공유 썸네일 및 PR #54/#56 transactional save/move/restore 흐름 보존.
+
+다음 Production이 나타나면 tests, collection, data commit, artifact digest, Pages deploy, 공개 URL을 각각 검증한다. 일곱 문서를 매 사이클 갱신하고 PR CI 및 전체 데이터 검증 성공 후에만 병합한다. Android Chrome 실기기 QA는 사용자 직접 확인 전까지 미검증. 코드/테스트/Production/데이터/artifact/Pages/Android QA를 분리 보고하고 PR/Actions 링크와 다음 전체 지시 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
+```
