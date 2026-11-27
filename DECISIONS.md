@@ -27,3 +27,8 @@ Updated: 2026-11-19
 
 ## Decision rules
 Never silently convert a proposal into a confirmed decision. Add dated entries when the user explicitly confirms or changes a decision. If a newer decision conflicts with an older one, mark the older one superseded rather than deleting history.
+
+
+## 2026-11-27 — YouTube automated access boundary
+13. YouTube Atom polling at /feeds/videos.xml is disabled for all channels because the current robots.txt disallows the path for general user agents and Terms restrict automated access. Preserve historical records; do not infer permission from official channel ownership.
+14. YouTube Data API remains disabled until a compliant 30-day refresh/deletion lifecycle is implemented and reviewed. Production must not pass the API secret while disabled.

@@ -1928,3 +1928,17 @@ At or after 20:17 KST, re-query Actions for the next actual Production run. Insp
 
 ### Implication
 The previous "Atom feed not verified" status is refined: endpoint availability remains unverified, but the robots policy disallows the Atom path. Do not treat a successful HTTP response, if later observed, as permission to poll it.
+
+
+## 2026-11-27 — Active YouTube Atom collector policy conflict and remediation
+- Rechecked main ca55d79c0c30e3bc4d401ee1411289629317e31c, open PRs (0), recent Actions and all seven required operating/source documents.
+- Latest Production was #620 (run 45926600456); no #621 existed at the inspection time. The scheduled 20:17 KST execution was still pending.
+- Found a policy/code mismatch missed by the previous channel research: although broadcaster Atom feeds were not enabled, the legacy NMIXX official YouTube Atom source was still enabled. Production #620 log proves it fetched 15 feed entries. data/sources.json marked it public-feed / enabled, and scripts/collect-youtube.mjs directly fetched /feeds/videos.xml.
+- Official YouTube robots.txt disallows /feeds/videos.xml for User-agent: *; Terms restrict automated access to robots-compliant public search engines or prior written permission. Channel ownership/official status does not create permission.
+- Remediation submitted for review: disable Atom fetch entirely, mark source disabled, preserve archived videos, remove API secret injection, hard-disable API search pending the 30-day lifecycle, and add regression tests against network calls and secret exposure.
+- Production #620 log also shows YOUTUBE_API_KEY was empty and API search was skipped. No YouTube Data API call is evidenced for #620.
+- Preserve #617's one real 429 event; #620 success did not remove it. No synthetic failure events; no new live second failure exists yet.
+- Production #620 metrics: 914 candidates (727 article, 187 video), 108 publisherArticleUrl items in quality-metrics snapshot (news status recorded 107 explicit URLs in earlier count; keep metric definitions distinct), 83 verified Haewon articles, 61 article-image previews, 0 standalone photos, 356 assigned thumbnails, 558 missing, 273 legacy shared assignments.
+- #620 artifact 15166123904 reports SHA-256 e37e5f81b8bf3349e1dc55ac90af9bcd9a95ec971f13f79874cdc6319e819a31; deploy-pages and artifact upload steps succeeded. Live site was not independently opened.
+- #619 failed separately at JSON validation and did not produce a successful deploy. #620 succeeded.
+- Android Chrome real-device QA remains unverified.

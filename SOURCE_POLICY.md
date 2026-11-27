@@ -1,12 +1,12 @@
 # Source and rights policy
 
-## Allowed automatic source
+## Current automated-source status — 2026-11-27
 
-- NMIXX Official YouTube channel: https://www.youtube.com/@NMIXXOfficial
-- Channel ID: UCnUAyD4t2LkvW68YrDh7fDg
-- Feed: https://www.youtube.com/feeds/videos.xml?channel_id=UCnUAyD4t2LkvW68YrDh7fDg
-- Collection method: fetch the public channel Atom feed; no API key, login, scraping proxy, or hidden endpoint.
-- Stored fields: video ID, title, source URL, public thumbnail URL, published date, feed description (when supplied), collection time, keyword flag.
+- **YouTube automated collection: disabled.** The legacy NMIXX official channel Atom source remains recorded for provenance but is disabled in data/sources.json.
+- YouTube robots.txt disallows /feeds/videos.xml for User-agent: *; YouTube Terms restrict automated access unless the public-search-engine robots exception applies or prior written permission exists.
+- No YouTube Atom feed is polled. Existing video records are preserved and continue to link to their original YouTube pages.
+- YouTube Data API search is also disabled until a compliant 30-day refresh/deletion lifecycle is implemented and reviewed. The Production workflow does not pass YOUTUBE_API_KEY to the search process.
+- Google News and Bing News RSS remain the configured news-discovery inputs; they are not a license to crawl unrelated publisher pages.
 
 ## Manual-link-only sources
 
@@ -22,7 +22,7 @@ Official Instagram and JYP pages are currently listed as navigation/source links
 
 ## Scope and reliability
 
-YouTube's channel feed is limited to a small recent window (currently observed as 15 entries). This archive persists items seen during scheduled runs, but it cannot reconstruct videos that disappear from the feed before collection. Search across all YouTube channels, fan-uploaded content, or every Haewon appearance is not part of this MVP.
+The historical YouTube channel feed exposed only a small recent window (15 entries observed in Production #620). It is no longer polled. The archive preserves the records already collected, but it cannot reconstruct videos that disappeared before collection. Search across all YouTube channels, fan-uploaded content, or every Haewon appearance is not part of the current automated MVP.
 
 The relevance flag is a simple text-keyword match, not human verification. Group videos without member names in their title/description may be missed by the Haewon filter.
 

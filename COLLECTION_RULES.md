@@ -19,7 +19,7 @@ A source is not automatically approved merely because a page can be opened in a 
 | `review-required` | Permission, terms, robots policy, or technical access is uncertain | Do not collect until human review |
 | `disabled` | Source paused or disallowed | No requests |
 
-The current approved automated source is the NMIXX Official YouTube public Atom feed listed in `data/sources.json`. Instagram and JYP pages are currently manual-link-only. Do not expand this allowlist autonomously.
+There are currently **no approved automated YouTube sources**. The legacy NMIXX Official YouTube Atom source is retained in `data/sources.json` for provenance but is `enabled: false` / `policy: disabled`; the collector performs zero network requests. Existing video records remain preserved. Google News and Bing News RSS are used only for their separately scoped public discovery workflow. Instagram and JYP pages are manual-link-only. Do not expand the YouTube allowlist without documented permission or an explicitly authorized access method.
 
 ## 3. Allowed record content
 
@@ -557,3 +557,11 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 
 - Channel ID verification establishes identity only. It does not authorize automated access.
 - YouTube `/feeds/videos.xml` is disallowed by robots.txt for general user agents; do not add Atom polling based on public endpoint existence.
+
+
+## 10. YouTube automated-access policy — 2026-11-27
+- YouTube robots.txt disallows /feeds/videos.xml for User-agent: *; the Terms restrict automated access except public search engines complying with robots.txt or prior written permission.
+- Therefore all YouTube Atom polling is disabled, including the previously active NMIXX official channel feed. A channel being official does not override robots or terms.
+- Preserve already collected video records and their source attribution; do not delete historical items as part of disabling collection.
+- YouTube Data API remains disabled until a compliant 30-day refresh/deletion lifecycle is implemented and reviewed. The Production workflow must not pass the API secret to the collector while disabled.
+- Re-enable only after explicit documented authorization, policy review, tests and a human-approved PR.

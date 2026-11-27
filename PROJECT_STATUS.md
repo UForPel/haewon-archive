@@ -1,6 +1,6 @@
 # Project status
 
-Last updated: 2026-11-26
+Last updated: 2026-11-27
 
 ## Governance documentation update (2026-11-19)
 - Added protected `SECURITY_POLICY.md` and `COLLECTION_RULES.md`.
@@ -1093,3 +1093,15 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Exact ID status: KBS Kpop `UCeLPm9yH_a_QH8n6445G-Ow`; M2 `UCTQVIXvcHrR9jYoJ6qaBAow`; MBCkpop `UCe52oeb7Xv_KaJsEzcKXJJg`; ALL THE K-POP `UCPde4guD9yFBRzkxk2PatoA`. These are identity facts only; no broadcaster feed is enabled and no video is auto-labeled broadcaster-official.
 - SBSKPOP ZOOM first-party ownership and stable channel ID remain unverified. JYP Gallery/Notice remain manual-link-only due unresolved robots/terms/metadata permission.
 - No YouTube API activation: the 30-day refresh/deletion lifecycle requirement remains unmet. No code/source registry change, no automated collection, and no video reclassification was made.
+
+
+## 2026-11-27 — YouTube Atom collector disabled after policy/code audit
+- **Verified policy conflict:** Production #620 (run 45926600456) actually fetched 15 entries from nmixx-youtube; the source registry still had enabled: true, and scripts/collect-youtube.mjs made a direct request to /feeds/videos.xml.
+- YouTube's official robots.txt disallows /feeds/videos.xml for User-agent: *; Terms restrict automated access except the robots-compliant public-search-engine case or prior written permission. An official channel identity is not an exception.
+- Code change in review: disable all Atom network requests; mark the legacy source policy: disabled and enabled: false; preserve all existing data/videos.json records; keep the pure video merge helper for other permitted workflows.
+- YouTube Data API was not used in Production #620: the job log shows YOUTUBE_API_KEY empty and skipped-no-api-key. The workflow previously exposed the secret mapping, so this change removes that secret mapping and hard-disables the API entrypoint until the 30-day refresh/deletion lifecycle is implemented and reviewed.
+- Production #620: 220 tests passed at that run's code version; collection log status success; Google News 6/6 and Bing News 6/6; 5 new candidates; 914 total candidates (727 articles, 187 videos); history retained one confirmed #617 429 event.
+- #620 data commit: ba3f3da5fc6f82580f25dd26177216cfd65108fb. Artifact 15166123904, 689,587 bytes, SHA-256 e37e5f81b8bf3349e1dc55ac90af9bcd9a95ec971f13f79874cdc6319e819a31. Artifact upload and deploy-pages steps succeeded; independent live-site verification remains unavailable.
+- #619 remains a separate failure: run 45926252892 failed at query-failure-history JSON validation due a literal backslash-n serialization defect; no successful data commit or Pages deployment was recorded for #619. PR #66 fixed this before #620.
+- Latest main at audit start: ca55d79c0c30e3bc4d401ee1411289629317e31c; open PRs: 0. Production #621 was not present at this check; scheduled run at 20:17 KST was still pending.
+- Article-image previews remain 61; standalone photo records remain 0; preserve 273 legacy shared-thumbnail assignments. Android Chrome real-device QA remains unverified.

@@ -4,7 +4,7 @@
 
 - 사이트: https://uforpel.github.io/haewon-archive/
 - 저장소: https://github.com/UForPel/haewon-archive
-- 현재 자동 수집: NMIXX 공식 YouTube 공개 Atom 피드
+- 현재 자동 수집: Google News/Bing News RSS 기반 후보 발견만 활성화; YouTube 자동 수집은 정책 검토로 비활성화
 - 기존 자동 실행: 매일 한국 시간 08:17 / 20:17 (GitHub Actions)
 
 ## 자동 발견 및 개선 루프
@@ -17,8 +17,8 @@
 
 ## 현재 MVP 기능
 
-1. 공식 NMIXX YouTube 채널의 최신 피드 항목 수집
-2. 영상 ID 기준 중복 제거 및 최신순 저장
+1. 기존에 수집한 영상 기록을 보존하고 원문 YouTube 링크로 제공 (신규 Atom 수집은 비활성화)
+2. 영상 ID 기준 중복 검사 및 최신순 표시
 3. 제목·설명에서 해원 관련 키워드 표시
 4. 모바일 웹에서 검색, 필터, 영상 링크 열기
 5. 수집 결과와 마지막 실행 시각을 JSON으로 기록
@@ -68,7 +68,7 @@ npm run collect
 npm run validate
 ```
 
-현재 공식 YouTube Atom 피드는 한 번에 최신 15개 항목만 제공합니다. 수집기가 실행되는 동안 새 기록을 누적하지만, 전체 YouTube 검색이나 팬 영상 전체 탐색 기능은 아닙니다.
+기존 영상 기록은 보존됩니다. YouTube의 현재 robots.txt는 /feeds/videos.xml을 일반 사용자 에이전트에 대해 차단하므로 Atom 폴링은 비활성화했습니다. YouTube Data API도 30일 갱신/삭제 lifecycle이 구현되고 검토되기 전까지 비활성 상태입니다.
 
 ## 사진 링크 등록
 

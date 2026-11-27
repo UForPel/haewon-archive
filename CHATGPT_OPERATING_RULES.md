@@ -661,3 +661,10 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 
 - Treat robots.txt restrictions and platform Terms as separate evidence. A feed endpoint being technically reachable does not establish permission.
 - Do not propose or implement an automated YouTube Atom collector while the relevant robots exclusion remains in force without written permission or another clearly applicable authorization.
+
+
+## YouTube source-policy enforcement — 2026-11-27
+- Before every collector change, compare the complete active source registry and production job log against current robots.txt and platform terms; do not inspect only newly proposed broadcaster sources.
+- YouTube /feeds/videos.xml is disallowed for general user agents. Do not poll any Atom feed, including an official artist channel, unless written permission or a clearly applicable authorization is documented.
+- Keep the legacy NMIXX Atom source disabled and preserve historical records. A green Production run that still polls a disallowed endpoint is not policy-compliant.
+- Do not expose YOUTUBE_API_KEY to Production while the 30-day refresh/deletion lifecycle is absent. API search entrypoint remains hard-disabled until lifecycle implementation and human review.

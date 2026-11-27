@@ -696,3 +696,20 @@ JYP/NMIXX Gallery/Notice는 robots·약관·자동 메타데이터 수집 허용
 
 ### Source policy continuation
 YouTube robots.txt disallows /feeds/videos.xml for User-agent: *. YouTube Terms prohibit automated access except public search engines following robots.txt or prior written permission. Therefore do not poll public Atom feeds or add broadcaster collectors on the basis of channel identity alone. KBS Kpop ID UCeLPm9yH_a_QH8n6445G-Ow and M2 ID UCTQVIXvcHrR9jYoJ6qaBAow are now verified identity mappings; MBCkpop and ALL THE K-POP IDs remain recorded. All are provenance only, not permission. SBSKPOP ZOOM ownership remains unverified. No item-level broadcaster-official auto-classification without confirmed appearance. Keep YouTube API disabled until 30-day refresh/deletion lifecycle is implemented.
+
+
+## 2026-11-27 — Next conversation continuation action
+- **Visible label:** 🔄 연구 기반 재귀개선 계속하기
+- **Action:** submit the complete next-cycle instruction below as a new ChatGPT turn.
+
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 먼저 최신 main, 열린 PR, Actions, Production, 데이터 커밋, artifact SHA-256, Pages 배포를 실제 조회하고 SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md, COLLECTION_RULES.md, CHATGPT_OPERATING_RULES.md, SOURCE_POLICY.md를 먼저 읽는다.
+
+이번 PR의 YouTube Atom collector 비활성화가 실제 main에 반영되었는지 확인한다. Production #621 이후 실제 실행을 조사하고, 실행 로그에서 nmixx-youtube가 skipped/disabled이며 YouTube /feeds/videos.xml 네트워크 요청이 0회인지 확인한다. 기존 videos.json 기록은 그대로 보존되었는지, 273개 레거시 공유 썸네일과 PR #54/#56 저장 성공 후 이동·실패 시 복원 흐름이 보존되었는지 검증한다. YouTube Data API는 30일 갱신/삭제 lifecycle 구현 및 검토 전까지 계속 비활성화하고 workflow에서 YOUTUBE_API_KEY secret을 전달하지 않는다.
+
+#617의 실제 429 이벤트가 append-only data/query-failure-history.json에 유지되는지 확인한다. 다른 검색어에서 실제 실패가 발생하면 별도 이벤트가 추가되는지, 이후 실제 성공에서도 기존 이벤트가 보존되는지 확인한다. 실패가 없으면 합성 이벤트 금지. Retry-After는 실제 헤더가 있을 때만 기록하고 blind retry 금지.
+
+Production 수집, 데이터 커밋, artifact 업로드, SHA-256, Pages deploy step, 공개 사이트 접근 여부를 각각 분리 보고한다. #619 실패와 #620 성공을 구분하고, Production 실행 시점의 테스트 수와 최신 PR CI 테스트 수를 분리한다. 기사 이미지 61개와 독립 사진 0개 분리 유지. KBS Kpop ID UCeLPm9yH_a_QH8n6445G-Ow, M2 ID UCTQVIXvcHrR9jYoJ6qaBAow, MBCkpop ID UCe52oeb7Xv_KaJsEzcKXJJg, ALL THE K-POP ID UCPde4guD9yFBRzkxk2PatoA는 출처 식별 정보로만 보존한다. 방송사 수집기·broadcaster-official 자동분류 금지. JYP/NMIXX Gallery와 Notice는 robots·약관·자동 메타데이터 수집 허용 근거 확보 전까지 수집기 구현 금지. SBSKPOP ZOOM은 1차 출처 소유권 미확인 상태로 유지한다.
+
+매 사이클 일곱 문서를 갱신하고 PR CI와 전체 데이터 검증 성공 후에만 병합한다. Android Chrome 실기기 QA는 사용자가 직접 완료하기 전까지 미검증으로 표시한다. 코드·테스트·Production·데이터·Pages·Android QA를 구분 보고하고 최신 main SHA, PR/Actions 링크, 지표, 미완료 항목과 다음 대화용 전체 지시 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
+```

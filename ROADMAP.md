@@ -2,8 +2,8 @@
 
 ## MVP stabilization
 - [x] Build responsive static archive UI
-- [x] Collect official NMIXX YouTube feed
-- [x] Persist data and deduplicate by video ID
+- [x] Preserve existing NMIXX video records; disable YouTube Atom polling after robots/terms audit
+- [x] Preserve historical video records and deduplicate by video ID
 - [x] Add unit tests and JSON validation
 - [x] Run collection twice daily
 - [x] Configure and successfully deploy GitHub Pages
@@ -909,3 +909,10 @@
 ### Revised decision
 - Remove YouTube Atom polling from the near-term implementation plan unless written permission or a separately documented authorized access basis is obtained.
 - Continue only manual linking or permitted YouTube embeds. Revisit Data API only after the required 30-day refresh/deletion lifecycle is implemented and policy-reviewed.
+
+
+## 2026-11-27 — YouTube source-policy correction
+- [x] Disable the legacy NMIXX YouTube Atom collector after confirming the feed path is disallowed by robots.txt.
+- [x] Preserve previously collected video records and provenance.
+- [ ] Keep YouTube Data API disabled until a compliant 30-day refresh/deletion lifecycle is implemented and reviewed.
+- [ ] Reconsider YouTube automation only after written permission or a clearly authorized access method is documented.
