@@ -686,3 +686,9 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Compare configured cron (UTC), event schedule expression, Actions created/start timestamps and run-log startedAt. Generic event=schedule is insufficient to identify the requested local-time slot.
 - GitHub documents load-related delays and possible drops, but do not claim this explains a run timestamp earlier than its configured cron. Keep unexplained timing anomalies explicitly unresolved.
 - Do not alter cron configuration based on a single or unexplained observation.
+
+## 2026-11-27 — Schedule telemetry follow-through
+- PR #75 added optional `scheduleExpression` to the run-log contract and passes `github.event.schedule` into the logger. Verify this field on the next actual schedule run, not on push runs.
+- Compare the field with configured UTC cron, Actions created_at/run_started_at and log startedAt. Preserve the distinction between scheduled and push Production runs.
+- PR CI #105 and Production #623 each passed 226/226; #623 is push-triggered and does not verify the 20:17 KST slot.
+- #614/#622 timing remains unexplained. GitHub's documented schedule-load delays are not sufficient evidence to explain earlier-than-cron timestamps; don't change cron without more evidence.

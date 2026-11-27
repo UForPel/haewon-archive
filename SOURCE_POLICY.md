@@ -143,3 +143,8 @@ YouTube's Terms prohibit automated access except public search engines following
 ## 2026-11-27 — Collection policy unchanged during schedule investigation
 - The schedule diagnostic change only records the cron expression in sanitized run logs; it does not change source permissions, enable any collector, or pass YouTube secrets.
 - YouTube Atom remains disabled; Data API remains disabled pending a reviewed 30-day refresh/deletion lifecycle. All broadcaster IDs remain provenance-only.
+
+## 2026-11-27 — Source-policy status after Production #623
+- PR #75 changed only operational observability by recording the schedule expression; it did not change source permissions or activate collectors.
+- Production #623 confirms NMIXX Atom skipped, 0 network requests, 20 existing videos retained, and YouTube Data API disabled-policy. Keep YOUTUBE_API_KEY out of the Production workflow.
+- Broadcaster channel IDs remain provenance-only; JYP/NMIXX Gallery and Notice remain non-automated; SBSKPOP ZOOM ownership remains unverified.

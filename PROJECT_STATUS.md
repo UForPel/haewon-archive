@@ -1133,3 +1133,13 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - #614 (20:13:18Z) and #622 (05:03:36Z) are reported as schedule events but their recorded starts do not match either cron instant. Workflow files at both run heads contain the same two expressions. Existing run logs omit `github.event.schedule`; exact trigger expression is not recoverable. Root cause remains unknown.
 - #622 fully succeeded: 223/223 tests; archive validation passed; 20 videos retained; 0 Atom network requests; Data API disabled-policy; one actual #617 failure preserved; 936 candidates. Data commit 9de65fa731e459bf6238b7983169be1788644525; artifact 15172754616 digest a3510de9411c6449c2848c0eb231fcdbc408358f872fa28f5c8b2e5a903c1dbb; Pages deploy step succeeded, public URL unverified.
 - At 15:00 KST, requested 20:17 KST run is still future. New PR records exact schedule expression for future runs; do not change cron based on unexplained evidence.
+
+## 2026-11-27 — Schedule-expression instrumentation merged; Production #623
+- PR #75 merged as `a2eeba7763323ec7ec953c033fc01815cdcace42`; CI #105 passed 226/226 and committed-data validation. Production #623 (45949528329) separately passed 226/226, archive validation, artifact upload and deploy-pages.
+- PR #75 adds optional `scheduleExpression` to run-log schema/logger and wires `github.event.schedule` into the Production environment. Existing logs remain valid; push events omit this optional field.
+- #623 is a push event, not the 20:17 schedule. Run log has github_push, no scheduleExpression (expected); YouTube Atom disabled, zero requests, 20 stored videos; Data API disabled-policy; Google/Bing successful; queryFailures empty.
+- Data commit `c5382d9816e114c565357f0f22eb47e1b7771b0b`; artifact 15176047291 (731041 bytes), SHA-256 `f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7`. Deploy step succeeded; live public URL remains unverified.
+- Failure history still contains only the real #617 HTTP 429. No new real failure, no synthetic entry.
+- #614 and #622 are schedule events with timestamps that do not match the configured UTC cron entries; exact event cron cannot be recovered because older logs omitted github.event.schedule. The next 20:17 KST scheduled run is still pending and must be verified separately.
+- Current metrics: 936 candidates (749 articles, 187 videos), 111 publisherArticleUrl items, 84 verified Haewon articles, 62 article-image previews, 0 standalone photos, 359 assigned thumbnails, 577 missing, 273 legacy shared assignments.
+- Android Chrome real-device QA remains unverified.
