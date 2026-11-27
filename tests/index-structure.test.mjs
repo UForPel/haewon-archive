@@ -45,8 +45,8 @@ test('discovery reading view keeps technical diagnostics and image-review tools 
 
 test('article discovery has explicit relevance scopes and a sanitized reading surface',()=>{
  assert.ok(html.includes('id="discovery-relevance"'),'article relevance scope controls must be visible');
- assert.ok(html.includes('개별 HTTPS 원문 주소가 공개 메타데이터로 확인된 해원 기사를 기본 표시'),'default relevance behavior must be explained');
- assert.ok(discoveryView.includes("let selectedRelevance='verified-haewon'"),'Haewon-related articles must be the default scope');
+ assert.ok(html.includes('해원 기사 후보를 기본 표시합니다'),'default relevance behavior must be explained');
+ assert.ok(discoveryView.includes("let selectedRelevance='haewon'"),'Haewon-related articles must be the default scope');
  assert.ok(discoveryView.includes('filterArticleCandidates(allItems)'),'video candidates must not be mixed into article cards');
  assert.ok(discoveryView.includes('cleanDiscoveryText(item.description)'),'RSS HTML descriptions must be rendered as clean text');
  assert.ok(discoveryView.includes('unverifiedRepeatedThumbnailUrls.has(item.thumbnailUrl)'),'unverified shared legacy thumbnails must not be shown as article-specific images');
