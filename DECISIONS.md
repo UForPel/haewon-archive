@@ -87,3 +87,10 @@ Never silently convert a proposal into a confirmed decision. Add dated entries w
 
 ## 2026-11-27 decision
 - No collector/parser change: zero retry-eligible publisher pages and no proven extractor miss. Do not run speculative HTML requests. Continue to preserve current retry policy and source constraints.
+
+## 2026-11-28 decision — delayed schedule and thumbnail gate
+- #624 is an observed successful schedule event matching the prior 20:17 KST slot expression 17 11 * * *; Actions started 2026-11-27T19:59:27Z and run-log startedAt 19:59:31Z, about 8h42m late. Record lateness and unknown cause; do not attribute a root cause or classify it as a dropped run.
+- The next 08:17 KST slot is distinct (17 23 * * *) and was still future at 2026-11-28 06:47 KST. No cron change.
+- The 962-record full-blob audit finds zero retry-eligible publisher pages at 06:47 KST; earliest next eligibility 2026-12-01T06:57:55.671Z. Keep 1/7/30-day backoff, six-hour offset rotation and max 12. No blind retry, no new extractor fixture/code without an eligible real page proving a miss.
+- #624 produced one new OG image assignment from an explicitly identified fnnews article; tvdaily page returned no image candidate. This does not establish general extractor failure or justify changing parser behavior.
+- Continue preserving 273 unverified legacy shared assignments, query-failure #617 as the only actual 429, all source restrictions, and PR #54/#56 transactional flow.
