@@ -987,3 +987,15 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - The 273 legacy image assignments remain unchanged: 0 publisher article URLs, 0 alternative candidate URLs, 202 source-site URLs; metadata outcome not-attempted for all 273. Do not bulk-label, delete or replace them.
 - PR #61 adds only evidence-based aggregate diagnostics and dashboard display; it does not fetch additional URLs or modify collection policies. Android Chrome QA remains UNVERIFIED pending the user's real-device checklist.
 - No new RSS sources, wrapper decoding, sourceUrl substitution, blind retries, access bypass, paid services, external data transfer, or automated review labels.
+
+ 
+## 2026-11-27 — Fan-facing content visibility update (PR pending)
+- Current main baseline: `a9b597d5538ee066a1ee69a7902e8e418c2b48df`; Production #615 data commit `57bce05ac0511521c65c5ea27aa38c6a39141cd9`.
+- Latest persisted video archive contains 20 NMIXX Official channel videos. Production #615 feed response contained 15 entries, added 0 and retained 20. Optional YouTube Data API search was skipped because `YOUTUBE_API_KEY` is not configured. This is not the total channel upload count.
+- Discovery dataset contains 902 candidates (715 article / 187 unresolved video candidate classifications); 187 is not 187 verified video URLs. Google News wrapper video candidates have no explicit YouTube video URL and must remain candidates.
+- Standalone photo-post library `data/photos.json` remains empty. There is no automated official SNS/photo-post collector. Existing JYP website and NMIXX Instagram source entries are manual-link-only.
+- 61 verified Haewon article records currently have source-provenance-backed image thumbnails. A feature branch now exposes these 61 unique article preview images in a responsive gallery; they are article thumbnails, not standalone official photo posts.
+- Branch `feat/fan-facing-discovery-gallery-20261127`: adds top archive navigation, visible image gallery, broader default Haewon article candidate scope, explicit source links, all-page unresolved video candidate pagination, and live video coverage explanation. PR/CI pending.
+- YouTube Data API playlist pagination is technically low-quota (playlistItems.list: 1 unit/call; default most-method quota 10,000/day), but Developer Policies require non-authorized API data such as titles/creator names/descriptions to be refreshed or deleted within 30 days. No permanent API backfill is activated until compliant retention/refresh behavior and user choice are established.
+- No original photo files are copied, no API key requested, no new RSS feeds enabled, and no legacy image assignments or human labels modified.
+- Android Chrome QA remains unverified pending user real-device checklist.
