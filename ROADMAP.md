@@ -793,3 +793,15 @@
 - The 273 legacy image assignments remain unchanged: 0 publisher article URLs, 0 alternative candidate URLs, 202 source-site URLs; metadata outcome not-attempted for all 273. Do not bulk-label, delete or replace them.
 - PR #61 adds only evidence-based aggregate diagnostics and dashboard display; it does not fetch additional URLs or modify collection policies. Android Chrome QA remains UNVERIFIED pending the user's real-device checklist.
 - No new RSS sources, wrapper decoding, sourceUrl substitution, blind retries, access bypass, paid services, external data transfer, or automated review labels.
+
+ 
+## 2026-11-27 — Fan-facing discovery visibility
+- [x] Add top-level navigation to videos, article images, discovery articles and photo-post library (feature branch).
+- [x] Expose the 61 existing source-provenance-backed verified Haewon article images in a responsive gallery with original article links (feature branch).
+- [x] Widen default article discovery from verified-only to Haewon article candidates while retaining all-candidate filter (feature branch).
+- [x] Add explicit publisher-original/discovery-link actions and pagination for unresolved video candidates (feature branch).
+- [x] Display archived official video count separately from latest feed fetched/new counts and clarify it is not channel-wide total (feature branch).
+- [ ] Pass PR CI and full archive validation; merge only after success.
+- [ ] Perform real Android Chrome visual/tap-target QA with user checklist.
+- [ ] Design permitted public official photo-post discovery sources; do not claim photo-post collection until original post URLs and source permission are verified.
+- [ ] Reassess YouTube channel-wide history only with a compliant API Data 30-day refresh/deletion lifecycle; do not enable an API-key dependency by default.
