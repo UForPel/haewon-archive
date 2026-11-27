@@ -668,3 +668,10 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - YouTube /feeds/videos.xml is disallowed for general user agents. Do not poll any Atom feed, including an official artist channel, unless written permission or a clearly applicable authorization is documented.
 - Keep the legacy NMIXX Atom source disabled and preserve historical records. A green Production run that still polls a disallowed endpoint is not policy-compliant.
 - Do not expose YOUTUBE_API_KEY to Production while the 30-day refresh/deletion lifecycle is absent. API search entrypoint remains hard-disabled until lifecycle implementation and human review.
+
+
+## Post-merge Production verification — 2026-11-27
+- Distinguish the PR CI run from the Production run. For PR #71, CI #45943174220 passed 223/223; Production #621 run #45943216118 was a separate push-triggered execution and passed 223/223.
+- A successful post-merge Production run does not satisfy verification of the later scheduled cron. Check the 20:17 KST run separately and state its event type.
+- Verify actual source outcomes, network-request count, retained archive counts, run log, data commit, artifact digest and deployment steps before calling the fix operationally confirmed.
+- A successful deploy-pages step is not proof that the public site was independently opened; report that distinction.

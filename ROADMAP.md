@@ -916,3 +916,11 @@
 - [x] Preserve previously collected video records and provenance.
 - [ ] Keep YouTube Data API disabled until a compliant 30-day refresh/deletion lifecycle is implemented and reviewed.
 - [ ] Reconsider YouTube automation only after written permission or a clearly authorized access method is documented.
+
+
+## 2026-11-27 — Production #621 verified
+- [x] Disable YouTube Atom polling and preserve the 20 historical video records.
+- [x] Remove Production workflow injection of YOUTUBE_API_KEY and hard-disable API search pending lifecycle review.
+- [x] Verify a real Production run logs nmixx-youtube as skipped with zero network requests.
+- [ ] Verify the next scheduled Production run at 20:17 KST separately from the push-triggered #621 run.
+- [ ] Implement and review a compliant 30-day YouTube Data API refresh/deletion lifecycle before considering any API activation.

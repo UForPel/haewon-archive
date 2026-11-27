@@ -1105,3 +1105,14 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - #619 remains a separate failure: run 45926252892 failed at query-failure-history JSON validation due a literal backslash-n serialization defect; no successful data commit or Pages deployment was recorded for #619. PR #66 fixed this before #620.
 - Latest main at audit start: ca55d79c0c30e3bc4d401ee1411289629317e31c; open PRs: 0. Production #621 was not present at this check; scheduled run at 20:17 KST was still pending.
 - Article-image previews remain 61; standalone photo records remain 0; preserve 273 legacy shared-thumbnail assignments. Android Chrome real-device QA remains unverified.
+
+
+## 2026-11-27 — Production #621 post-merge verification
+- PR #71 merged as 535a3e812a87b6ab145d65eeb8d7fd7c84fdf518 after PR CI #45943174220 passed 223/223 tests and committed-data validation.
+- Latest main after Production #621 data commit: bf5e6b925b2c5cae351fc7759b2ae088fce110b6.
+- Production #621 run 45943216118 succeeded (push event). It ran 223/223 tests; YouTube Atom collector logged disabled / 0 network requests / 20 historical videos retained. YouTube Data API logged disabled-policy; API secret is no longer injected by the workflow.
+- Run log: nmixx-youtube skipped (0 items); Google News and Bing News succeeded; queryFailures empty; 10 new candidates; 922 cumulative candidates. Full validation passed: videos 20, photos 0, run logs 192 valid, query-failure history 1 event.
+- The one event remains #617's actual Google News 429 (query 오해원 근황); no second live failure occurred. No synthetic failure or Retry-After value was added.
+- Artifact 15173364036 (719,896 bytes), SHA-256 digest 76815c94c3f2cac80dcbe99adc914c395ced735150c97641a181d8a9dc1e860c. Artifact upload and deploy-pages steps succeeded. Public Pages URL could not be independently opened; live-site status is not independently verified.
+- Current quality metrics: 922 candidates (735 article, 187 video), 111 publisher article URL items, 84 verified Haewon articles, 62 article-image previews, 0 standalone photos, 359 assigned thumbnails, 563 missing, 273 legacy shared assignments.
+- 20:17 KST scheduled run remains pending; #621 was push-triggered. Android Chrome real-device QA remains unverified.
