@@ -1230,3 +1230,13 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - DEPLOYED: Production #623 Pages artifact and deploy steps succeeded.
 - UNVERIFIED: public Pages URL direct access and Android Chrome real-device rendering.
 - NOT OBSERVED: the 20:17 KST schedule slot; cause unknown. The next slot has not occurred yet.
+
+## 2026-11-28 06:47 KST — Current verified status
+- Main: dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2 (live GitHub lookup).
+- PRs: none open at pre-branch check; current documentation-only PR is created from this SHA and awaits CI.
+- Production #624: successful schedule event; Actions event=schedule; run-log trigger=github_schedule; scheduleExpression=17 11 * * *; started 19:59:31Z. This is the prior 20:17 KST slot, observed late by 8h42m10s. Delay cause unknown. It is distinct from the upcoming 08:17 KST slot (17 23 * * *), which was future at 06:47 KST.
+- Tests/data validation: 226/226 tests passed, 0 failed; run-log validation passed. Google News 193, Bing News 36, all six queries successful, no queryFailures; YouTube skipped.
+- Data: 962 candidates (774 article, 188 video); 113 explicit publisher URLs; 602 missing thumbnails, 28 missing with publisher URL; 360 assigned thumbnails (273 legacy shared); 84 verified Haewon articles; 62 article-image previews; 0 RSS image candidates; review 493 eligible / 0 reviewed / precision null.
+- Thumbnail gate: 2 explicit page attempts in #624, 1 OG assignment, 1 no-candidate result. Recomputed retry eligibility at 06:47 KST: 0; earliest next 2026-12-01T06:57:55.671Z. No speculative retry or code change.
+- Artifact/Pages: artifact 15228811375, 770763 bytes, SHA-256 a4a9101740cc69d85adf4b23e519548f6d483ed8398372fe9673437bbea8d1dd; configure/upload/deploy succeeded. Public URL direct access unverified.
+- Unverified: Android Chrome real-device QA; direct public Pages reachability.

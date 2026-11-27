@@ -2123,3 +2123,21 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 ## Work performed
 - Re-read seven canonical documents from current main; rechecked main, open PRs, recent Actions, Production #623 job, run log, artifact, data commit and full discovery blob.
 - Corrected the current item-level retry audit using the nested `thumbnailMetaFetch` object. Eligibility remains zero; no code/data changes or network requests.
+
+## 2026-11-28 06:47 KST — Live recursive-improvement cycle
+### Repository and schedule
+- Re-fetched live main from GitHub: dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2; prior checkpoint SHA was not assumed current. Read all seven canonical documents from this main before this update. Open PR search returned none before creating this documentation PR.
+- Production #624 / Actions run 46060489526 is a successful schedule run. Actions event=schedule; created_at and run_started_at both 2026-11-27T19:59:27Z. Run-log trigger=github_schedule, scheduleExpression=17 11 * * *, startedAt=19:59:31.000Z, finishedAt=19:59:52.735Z. This is the prior 20:17 KST / 11:17 UTC slot, observed 8h42m10s after the scheduled clock. The run was not visible at the 22:31 checkpoint; now confirmed. Root cause of delay is unknown.
+- The distinct next 08:17 KST / 23:17 UTC slot (17 23 * * *) remained future at the current 06:47 KST checkpoint. No cron change and no premature verdict.
+### Production / tests / data / deployment
+- Job 140713285787 completed successfully. Node test output: 226 tests, 226 pass, 0 fail. Run log says validation passed; Google News 193, Bing News 36; 6/6 queries succeeded; queryFailures empty; YouTube skipped.
+- Data refresh commit and new main: dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2.
+- Pages artifact 15228811375, 770763 bytes, digest sha256:a4a9101740cc69d85adf4b23e519548f6d483ed8398372fe9673437bbea8d1dd. Pages configure/upload/deploy steps succeeded. Direct public URL access not verified.
+- Full discovery blob 9059841c0577269da3be828dfa15660b86fd926d (1,425,314 decoded characters): 962 records; quality metrics report 774 article candidates and 188 video candidates; 113 explicit HTTPS publisherArticleUrl; 602 missing thumbnails; 28 missing+explicit publisher URL; 360 thumbnail assignments including 273 unverified legacy. 84 verified Haewon articles; 62 article-image previews; 0 RSS image candidates; thumbnail review 493 eligible / 0 reviewed / precision null.
+- #624 thumbnail enrichment attempted 2 explicit publisher pages: fnnews OG image assigned; tvdaily no candidate. Full audit using exact shouldRetryThumbnailFetch code at 2026-11-27T21:47:00Z (2026-11-28 06:47 KST) returned 0 eligible. Earliest next eligibility 2026-12-01T06:57:55.671Z. Retry policy and offset unchanged; no blind retries/network fetches.
+- Query-failure history still only real #617 HTTP 429; no synthetic failures. YouTube Atom disabled, videos.json 20, Data API disabled, no YOUTUBE_API_KEY workflow injection. collection-status.json has no networkRequests field.
+### Decisions and remaining checks
+- No collector/parser/test changes: zero retry eligibility and no demonstrated extractor bug. One successful image assignment is an incremental observed outcome, not proof of broad improvement.
+- Keep 273 legacy assignments and PR #54/#56 transactional save/move/restore. Keep JYP/NMIXX Gallery/Notice collectors disabled, SBSKPOP ZOOM ownership unconfirmed, no broadcaster collector/auto-label, no Google News wrapper decoding or access bypass.
+- Android Chrome real-device QA and direct Pages URL access remain unverified.
+- This PR changes seven operational documents only; merge only after PR CI and full committed-data validation pass.
