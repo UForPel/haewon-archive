@@ -812,3 +812,22 @@ YouTube Atom collector 비활성, networkRequests 0, videos.json 20개 보존. Y
 
 매 사이클 일곱 운영 문서를 갱신하고, PR CI 및 전체 데이터 검증 성공 후에만 병합한다. Android Chrome 실기기 QA는 사용자가 직접 확인하기 전까지 미검증이다. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 구분 보고하고, 최신 main SHA, PR/Actions 링크, 지표, 미완료 항목과 다음 대화용 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
 ```
+
+ 
+## 2026-11-27 22:03 KST — Next-cycle action
+- **Visible label:** 🔄 연구 기반 재귀개선 계속하기
+- **Action:** submit the full continuation prompt below; recheck the live schedule and continue evidence-based thumbnail work.
+ 
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA를 GitHub에서 실시간 조회하고, 일곱 운영 문서를 먼저 읽는다. 직전 확인 main은 933118349f54a07c2bab9a50b6bd6d1ec9794611이다. 현재까지 20:17 KST / 11:17 UTC 슬롯에 해당하는 Production #624 또는 이후 Production은 22:03 KST 조회에서도 관찰되지 않았다. 늦게 생성된 실행이 있는지 다시 확인하고, 없으면 미관찰/원인 미확인으로 남긴다. GitHub drop/실패로 단정하지 않는다.
+
+다음 슬롯은 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC다. Actions event=schedule, run-log trigger=github_schedule, scheduleExpression='17 23 * * *'가 모두 일치해야 한다. Actions created_at/run_started_at과 run-log startedAt을 대조한다. #614/#622의 과거 schedule expression은 소급 추측하지 않는다. cron은 임의 변경하지 않는다.
+
+최신 Production #623(run 45949528329)은 push이며 226/226 테스트, 전체 데이터 검증 통과, Google News 99/Bing News 31, data commit c5382d9816e114c565357f0f22eb47e1b7771b0b, artifact 15176047291, 731041 bytes, SHA-256 f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7, Pages configure/upload/deploy steps success다. 공개 Pages URL 직접 접근은 verifier에서 실패했으므로 미검증이다. 새로운 Production이 나오면 별도 검증한다.
+
+이미지 baseline: 936 후보(749 기사, 187 비디오), publisherArticleUrl 111, 검증 해원 기사 84, 기사 이미지 미리보기 62, 독립 사진 0, 썸네일 359, 누락 577, 레거시 공유 할당 273. RSS/meta 비교 86개는 모두 meta-only, RSS image signals 0, RSS image candidates 0, #623 thumbnail enrichment attempts 0, thumbnail review 493 eligible/0 reviewed/precision null. 기존 scripts/collect-news.mjs는 Media RSS, enclosure, description/content:encoded HTML, OG/Twitter, image_src, itemprop:image, JSON-LD를 이미 지원한다. 명시적 HTTPS publisherArticleUrl만 조회하며 source homepage나 Google News wrapper는 기사 URL로 취급하지 않는다. Google Search Central은 기사와 관련된 대표 이미지 및 crawlability를 요구하고 Open Graph는 og:image 및 optional dimensions/type/alt를 정의한다. 관련 코드/테스트/실제 item-level backoff를 확인해 구체적 결함이 입증될 때만 개선한다. 임의 로고 대체, wrapper decode, 접근 제한 우회, 273개 자동 삭제/교체 금지.
+
+data/query-failure-history.json의 #617 실제 HTTP 429를 보존한다. 다른 검색어 실제 실패가 있을 때만 추가하고, 성공 이후에도 보존되는지 확인한다. 실패 없으면 합성 금지. YouTube Atom 비활성, videos.json 20개, Data API 비활성, YOUTUBE_API_KEY workflow 전달 금지. JYP/NMIXX Gallery·Notice collector 금지, SBSKPOP ZOOM 소유권 미확인, 방송사 collector/broadcaster-official 자동 분류 금지. PR #54/#56 저장 성공 후 이동·실패 복원 및 273개 레거시 공유 썸네일 보존.
+
+매 사이클 일곱 문서 갱신, PR CI와 전체 데이터 검증 성공 후에만 병합. Android Chrome 실기기 QA는 사용자 직접 확인 전까지 미검증. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 분리 보고하고 최신 main SHA, PR/Actions 링크, 다음 대화용 전체 지시 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
+```

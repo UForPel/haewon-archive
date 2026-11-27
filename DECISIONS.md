@@ -44,3 +44,10 @@ Never silently convert a proposal into a confirmed decision. Add dated entries w
 18. At 21:22 KST, no Production run after #623 was present in the inspected live Actions list. This is an observation only, not a confirmed scheduler failure or root-cause diagnosis.
 19. Keep cron at `17 11 * * *` and `17 23 * * *` UTC until evidence supports a change. #614/#622 cannot be mapped retrospectively because their run logs lack scheduleExpression.
 20. Public Pages deploy success and independent public URL access are separate verification states; do not mark the latter successful when the verifier cannot open the URL.
+
+ 
+## 2026-11-27 — 22:03 KST schedule and thumbnail review
+21. Fresh Actions listing at 22:03 KST still shows no Production after #623; the 20:17 KST slot remains unobserved, not a proven GitHub scheduler drop.
+22. Next expected slot is 2026-11-28 08:17 KST with expression `17 23 * * *` UTC. Verify actual event and run-log telemetry before attributing it.
+23. Do not broaden thumbnail extraction merely because RSS image candidates are zero: the current collector already parses Media RSS, image enclosure, description/content:encoded markup, and publisher OG/Twitter/image_src/itemprop/JSON-LD. The latest feed sample had zero image-bearing RSS signals.
+24. Preserve the requirement that selected images are article-relevant and publicly accessible; a metadata URL is a candidate, not proof of relevance. No automated replacement of legacy shared thumbnails.
