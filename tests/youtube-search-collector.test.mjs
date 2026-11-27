@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { OFFICIAL_CHANNEL_ID, MAX_QUERIES_PER_RUN, YOUTUBE_SEARCH_QUERIES, getDailyVideoSearches, parseYoutubeSearchResponse, collectYoutubeSearch } from '../scripts/collect-youtube-search.mjs';
+import { OFFICIAL_CHANNEL_ID, MAX_QUERIES_PER_RUN, YOUTUBE_API_LIFECYCLE_ENABLED, YOUTUBE_SEARCH_QUERIES, getDailyVideoSearches, parseYoutubeSearchResponse, collectYoutubeSearch } from '../scripts/collect-youtube-search.mjs';
 
 const item=(id,channelId=OFFICIAL_CHANNEL_ID)=>({
  id:{videoId:id},
@@ -85,4 +85,8 @@ test('collector caps optional API calls at four per run and skips cleanly on tot
  assert.equal(failed.status,'error');
  assert.equal(failed.successfulQueries,0);
  assert.equal(failed.failedQueries.length,1);
+});
+
+test('production entrypoint keeps YouTube Data API disabled until lifecycle approval',()=>{
+ assert.equal(YOUTUBE_API_LIFECYCLE_ENABLED,false);
 });
