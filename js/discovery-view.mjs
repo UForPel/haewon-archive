@@ -172,6 +172,8 @@ if(list&&count){
   }
  };
  const videoDiscoveryList=document.querySelector('#video-discovery-list');
+ const videoDiscoveryPagination=document.querySelector('#video-discovery-pagination');
+ let videoDiscoveryPage=1;
   const videoDiscoveryCount=document.querySelector('#video-discovery-count');
   const sortSelect=document.querySelector('#discovery-sort');
   let selectedSort=sortSelect?.value||'date';
@@ -211,9 +213,10 @@ if(list&&count){
   if(!videoDiscoveryList)return;
   const q=search?.value||'';
   const candidates=sortDiscoveryItems(groupDiscoveryDuplicates(filterDiscoveryItems(filterUnresolvedVideoCandidates(allItems),q),'date'),'date');
+  const pageCount=Math.max(1,Math.ceil(candidates.length/12));videoDiscoveryPage=Math.min(videoDiscoveryPage,pageCount);
   if(videoDiscoveryCount)videoDiscoveryCount.textContent=candidates.length+'개';
   videoDiscoveryList.replaceChildren();
-  candidates.slice(0,12).forEach(item=>{
+  candidates.slice((videoDiscoveryPage-1)*12,videoDiscoveryPage*12).forEach(item=>{
    const row=document.createElement('article');row.className='video-discovery-candidate';
    const title=document.createElement('a');title.href=item.url;title.target='_blank';title.rel='noopener noreferrer';title.textContent=cleanDiscoveryText(item.title)||'제목 미상';
    const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):' · 날짜 미확인')+' · 원본 YouTube 주소 미확인';
@@ -221,7 +224,16 @@ if(list&&count){
    row.append(title,meta,note);videoDiscoveryList.append(row);
   });
   if(!candidates.length){const empty=document.createElement('p');empty.className='photo-meta';empty.textContent='별도 확인이 필요한 영상 후보가 없습니다.';videoDiscoveryList.append(empty);}
-  if(candidates.length>12){const more=document.createElement('p');more.className='photo-meta';more.textContent='최근 12개 표시 · 전체 '+candidates.length+'개 후보';videoDiscoveryList.append(more);}
+  if(videoDiscoveryPagination){
+   videoDiscoveryPagination.replaceChildren();
+   if(pageCount<=1){videoDiscoveryPagination.hidden=true;}else{
+    videoDiscoveryPagination.hidden=false;
+    const previous=document.createElement('button');previous.type='button';previous.textContent='이전';previous.disabled=videoDiscoveryPage<=1;previous.addEventListener('click',()=>{videoDiscoveryPage--;renderVideoDiscoveryCandidates();});
+    const label=document.createElement('span');label.textContent=videoDiscoveryPage+' / '+pageCount+'페이지';label.setAttribute('aria-live','polite');
+    const next=document.createElement('button');next.type='button';next.textContent='다음';next.disabled=videoDiscoveryPage>=pageCount;next.addEventListener('click',()=>{videoDiscoveryPage++;renderVideoDiscoveryCandidates();});
+    videoDiscoveryPagination.append(previous,label,next);
+   }
+  }
  };
  const render=()=>{
   const items=getVisibleItems();
@@ -244,6 +256,7 @@ if(list&&count){
    const note=document.createElement('p');note.className='photo-description';note.textContent=cleanDiscoveryText(item.description);
    details.append(title,kind,meta);
    if(note.textContent)details.append(note);
+   const sourceAction=document.createElement('a');sourceAction.className='discovery-source-open';sourceAction.href=item.publisherArticleUrl||item.url;sourceAction.target='_blank';sourceAction.rel='noopener noreferrer';sourceAction.textContent=item.publisherArticleUrl?'출판사 원문 보기 ↗':'발견 링크 열기 ↗';details.append(sourceAction);
    const candidateList=getThumbnailReviewCandidates(item);
    const reviewDisclosure=document.createElement('details');reviewDisclosure.className='thumbnail-review-disclosure';
    const reviewDisclosureTitle=document.createElement('summary');reviewDisclosureTitle.textContent='이미지 후보 검수 · '+candidateList.length+'개';
@@ -277,7 +290,7 @@ if(list&&count){
  });
  renderCategories();
  renderRelevanceFilters();
- if(search)search.addEventListener('input',()=>{page=1;render();});
+ if(search)search.addEventListener('input',()=>{page=1;videoDiscoveryPage=1;render();});
   if(sortSelect)sortSelect.addEventListener('change',()=>{selectedSort=sortSelect.value==='relevance'?'relevance':'date';page=1;render();});
  fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
   allItems=Array.isArray(items)?items:[];
