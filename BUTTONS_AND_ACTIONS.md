@@ -719,7 +719,7 @@ Production 수집, 데이터 커밋, artifact 업로드, SHA-256, Pages deploy s
 - **Action:** submit the complete next-cycle instruction below as a new ChatGPT turn.
 
 ```text
-Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main은 bf5e6b925b2c5cae351fc7759b2ae088fce110b6이다. 먼저 최신 main, 열린 PR, Actions, Production, 데이터 커밋, artifact SHA-256, Pages 배포를 실제 조회하고 SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md, COLLECTION_RULES.md, CHATGPT_OPERATING_RULES.md, SOURCE_POLICY.md를 먼저 읽는다.
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA는 이 지시문을 실행할 때 GitHub에서 실시간 조회한다. 이전 Production #621 데이터 커밋은 bf5e6b925b2c5cae351fc7759b2ae088fce110b6이다. 먼저 최신 main, 열린 PR, Actions, Production, 데이터 커밋, artifact SHA-256, Pages 배포를 실제 조회하고 SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md, COLLECTION_RULES.md, CHATGPT_OPERATING_RULES.md, SOURCE_POLICY.md를 먼저 읽는다.
 
 최우선은 2026-11-27 20:17 KST 예약 Production 실행 확인이다. Production #621은 PR #71 병합에 따른 push 이벤트로 성공했으며 cron 실행이 아니다. #621 run 45943216118, data commit bf5e6b925b2c5cae351fc7759b2ae088fce110b6, PR CI 223/223 성공, Production 223/223 성공을 구분한다. 예약 실행은 별도로 확인하고, 실행 로그·실패 이력·데이터 커밋·artifact SHA-256·Pages 배포를 각각 조사한다.
 
