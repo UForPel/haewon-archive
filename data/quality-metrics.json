@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T00:18:12.182Z",
+  "generatedAt": "2026-11-27T00:21:21.098Z",
   "discoveryRelevance": {
     "totalCandidates": 903,
     "articleCandidates": 716,
@@ -11,7 +11,7 @@
     "haewonTitleMatches": 536,
     "nmixxTitleMatches": 558,
     "otherArticleCandidates": 80,
-    "defaultScope": "verified-haewon-title-match"
+    "defaultScope": "haewon-title-match"
   },
   "articleUrlProvenance": {
     "totalItems": 903,
@@ -1063,25 +1063,25 @@
   },
   "collection": {
     "newsQueriesRequested": 6,
-    "newsQueriesSuccessful": 6,
+    "newsQueriesSuccessful": 5,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 50,
-    "newsQuerySuccessRate": 100,
+    "bingNewsCandidates": 52,
+    "newsQuerySuccessRate": 83,
     "youtubeStatus": "success",
     "videosTotal": 20,
     "newsCandidatesTotal": 903,
-    "newsUniqueFetched": 170,
-    "newsAddedLastRun": 5,
-    "duplicateBeforeMergeLastRun": 41,
+    "newsUniqueFetched": 171,
+    "newsAddedLastRun": 4,
+    "duplicateBeforeMergeLastRun": 48,
     "duplicateGroupsCurrent": 903,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 211,
-      "after": 169,
-      "collapsed": 42,
+      "before": 219,
+      "after": 170,
+      "collapsed": 49,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -1785,8 +1785,8 @@
     {
       "source": "Google News RSS",
       "requested": 6,
-      "successful": 6,
-      "successRate": 100
+      "successful": 5,
+      "successRate": 83
     },
     {
       "source": "NMIXX YouTube Atom",
@@ -2706,7 +2706,7 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
+    "rateLimited": 9,
     "unreachable": 1,
     "thumbnailMissing": 548,
     "results": [
@@ -2731,8 +2731,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1VMzVhTVZRS0lYbGRsU2J4MklBVllkal9pbkNnb05DdExsNDlmV3FvalpxZDNBNDRnd3pjcVhfa3Z1S2RXRWxiNFlHeF9WZl9QbUtYV09sYWFRRFoz?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2749,8 +2749,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkU0R3WDVXZGx2eTFNYXV3QUdwX3pCaHFVcExyeExLSkNVSGx5RGF3cU04QnRJb2hIS1QzVmF0VXBxQkI3YTkxNDJaZGhZT0t4dDB4OGhSTkpRcG11?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2767,8 +2767,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA3OFc2c28yeThjbmduNC1oaWh2VkdSTmpPMTIxWDRXdlVVM1Z4UzhyQUZjNTZLWnNSNnFodmQxM3VzT19DNTZIb09tSTRlSmlWUTZoR0ROdlR2X1Nl?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2809,8 +2809,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBLTnIwX2RZRkdDZzRSSmhjRHZaUC1ab2NVcFNhSmhvYlhoRmxJX0tJNEFIdmRfV2NCZjlqcFBHSE9UWDgyZHhFdkhid0thaGFGTXJsVU1TYnY1OHZR?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2833,8 +2833,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9qOUF2ZUxwaW9pekJKRnFBb1VnOWpReG9BS0pZVjNWRDhBNTFnUXZCaUtfUENQd1JZajIxMHVnYW00WFVyZ0xINWtnNWNHU2N6NVVma1BFdm9wRXI2?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2869,8 +2869,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yTlEyVnlhMXdvY3NkSDhGWUVQUnZETXpwelU5WHIzS2FZU3RGdUJYTU8ybGhaR1ZLeDI1UlVBT2pBOWRtYWhQQ0Mxd1o5STNEcnc4eEw3SVF4S2Et?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2887,8 +2887,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkQlMzX2loLTJLQldySXdGZVc3bGNLUFB1SklXLXRrM3Y0Qk5ZUjZ2NEkwYUo2ajRRR0R4MUY3akQySC0yS3BCLVBhZ2ZGNDZ0OThZMkpzd0Vzd0I1?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -2935,14 +2935,14 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9CS2l5dEZPUHRjSFRlUHFnMngxSXVTNEh0V0ZwYzB6U0tsa1pEZXRhQjV5X2ZiQmFkZDhKek5mVjVxZWFkdTdUWkw2OWFwSEdrN1Z1V1JB?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9HUzdsUDVkbnpwUVhUa0ZfbThaNFNtRmZLS2tsLWktTlAtajFTeWRGb0dUVUJKQWJ2TE9HQUsxYTdQTEhmTEFUZDhDb1RrR1U1Y2N2WGZBOUlvWlpM?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -5229,7 +5229,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-27T00:18:12.228Z",
+    "generatedAt": "2026-11-27T00:21:21.143Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -7158,17 +7158,16 @@
     "sampledUniqueUrls": 12,
     "checked": 12,
     "nonImage": [],
-    "broken": [],
-    "unreachable": [
+    "broken": [
       {
         "url": "https://cdn.sportalkorea.com/news/photo/202610/2025052909553648816_2725470_1793077511.jpg",
-        "status": null,
-        "contentType": "",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
         "ok": false,
-        "isImage": false,
-        "error": "The operation was aborted due to timeout"
+        "isImage": false
       }
     ],
+    "unreachable": [],
     "rateLimited": [],
     "results": [
       {
@@ -7187,11 +7186,10 @@
       },
       {
         "url": "https://cdn.sportalkorea.com/news/photo/202610/2025052909553648816_2725470_1793077511.jpg",
-        "status": null,
-        "contentType": "",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
         "ok": false,
-        "isImage": false,
-        "error": "The operation was aborted due to timeout"
+        "isImage": false
       },
       {
         "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
@@ -7268,11 +7266,11 @@
     "checked": 12,
     "total": 83,
     "counts": {
-      "http-responded": 8,
+      "http-responded": 9,
       "blocked": 2,
       "paywall": 0,
       "not-found": 1,
-      "uncertain": 1
+      "uncertain": 0
     },
     "results": [
       {
@@ -7286,11 +7284,10 @@
       {
         "articleId": "e74f0cd5f348cd454df9",
         "url": "https://www.mk.co.kr/en/musics/10921328",
-        "status": null,
-        "state": "uncertain",
-        "finalHost": "",
-        "method": "HEAD",
-        "error": "TimeoutError"
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.mk.co.kr",
+        "method": "HEAD"
       },
       {
         "articleId": "01d43afc81bf8da93d4a",
