@@ -90,3 +90,16 @@ test('quality dashboard displays evidence-based missing-thumbnail diagnostics by
  assert.match(source,/missingWithPublisherArticleUrl/);
  assert.match(source,/missingWithSourceSiteUrl/);
 });
+
+
+test('fan-facing archive exposes navigable articles, verified article images and every unresolved video candidate page',()=>{
+ assert.match(html,/class="archive-nav"/);
+ assert.match(html,/id="photo-preview-grid"/);
+ assert.match(html,/id="photo-preview-pagination"/);
+ assert.match(html,/id="video-discovery-pagination"/);
+ assert.match(view,/buildVerifiedHaewonImageGallery/);
+ assert.match(view,/let selectedRelevance='haewon'/);
+ assert.match(view,/출판사 원문 보기/);
+ assert.match(view,/발견 링크 열기/);
+ assert.match(view,/videoDiscoveryPagination/);
+});

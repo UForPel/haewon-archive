@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { filterDiscoveryItems, sortDiscoveryItems } from '../js/discovery-view.mjs';
+import { filterDiscoveryItems, sortDiscoveryItems, buildVerifiedHaewonImageGallery } from '../js/discovery-view.mjs';
 import { filterUnresolvedVideoCandidates, isExplicitYoutubeVideoUrl, classifyDiscoveryItem, classifyDiscoveryCategory, classifyDiscoveryCategories, filterArticleCandidates, filterDiscoveryRelevance, cleanDiscoveryText, classifyDiscoveryRelevance, hasExplicitPublisherArticleUrl, groupDiscoveryDuplicates, assessDiscoveryQuality } from '../js/discovery-kind.mjs';
 const items=[{title:'Haewon interview',sourceName:'News A',description:'NMIXX interview'},{title:'Stage clip',sourceName:'News B',description:'NMIXX stage'}];
 test('query filters title, source and description case-insensitively',()=>{assert.equal(filterDiscoveryItems(items,'haewon').length,1);assert.equal(filterDiscoveryItems(items,'news b')[0].title,'Stage clip');assert.equal(filterDiscoveryItems(items,'stage').length,1);});
@@ -89,3 +89,19 @@ test('date sorting falls back to a valid discovery date when publishedAt is inva
  ];
  assert.deepEqual(sortDiscoveryItems(rows,'date').map(item=>item.title),['newer fallback','older fallback','missing both']);
 });
+
+
+test('fan-facing image gallery includes only unique, provenance-backed images from verified Haewon publisher articles',()=>{
+ const rows=[
+  {id:'a',title:'오해원 인터뷰와 화보',url:'https://publisher.example/a',publisherArticleUrl:'https://publisher.example/a',publishedAt:'2026-11-25',thumbnailUrl:'https://img.example/haewon-a.jpg',thumbnailSource:'og:image'},
+  {id:'b',title:'Haewon interview follow-up',url:'https://publisher.example/b',publisherArticleUrl:'https://publisher.example/b',publishedAt:'2026-11-24',thumbnailUrl:'https://img.example/haewon-a.jpg',thumbnailSource:'og:image'},
+  {id:'legacy',title:'오해원 legacy item',url:'https://publisher.example/legacy',publisherArticleUrl:'https://publisher.example/legacy',thumbnailUrl:'https://img.example/shared.jpg'},
+  {id:'wrapper',title:'오해원 wrapper candidate',url:'https://news.google.com/rss/articles/token',thumbnailUrl:'https://img.example/wrapper.jpg',thumbnailSource:'og:image'},
+  {id:'unrelated',title:'Other member interview',url:'https://publisher.example/other',publisherArticleUrl:'https://publisher.example/other',thumbnailUrl:'https://img.example/other.jpg',thumbnailSource:'og:image'}
+ ];
+ const gallery=buildVerifiedHaewonImageGallery(rows);
+ assert.equal(gallery.length,1);
+ assert.equal(gallery[0].id,'a');
+ assert.equal(gallery[0].publisherArticleUrl,'https://publisher.example/a');
+});
+

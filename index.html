@@ -11,14 +11,15 @@
 <body>
   <header class="topbar">
     <a class="brand" href="./">HAEWON <span>ARCHIVE</span></a>
-    <a class="source-link" href="https://www.youtube.com/@NMIXXOfficial" target="_blank" rel="noopener">NMIXX 공식 채널 ↗</a>
+    <a class="source-link" href="https://www.youtube.com/@NMIXXOfficial/videos" target="_blank" rel="noopener">NMIXX 공식 영상 전체 보기 ↗</a>
   </header>
+  <nav class="archive-nav" aria-label="아카이브 바로가기"><a href="#video-section">영상</a><a href="#photo-preview-section">사진·이미지</a><a href="#discovery-heading">기사·발견 자료</a><a href="#photo-heading">사진 게시물 링크</a></nav>
   <main>
     <section class="intro">
       <p class="eyebrow">PUBLIC CONTENT INDEX</p>
       <h1>Haewon Archive</h1>
       <p>공개된 영상과 게시물의 출처를 한곳에서 찾아보세요.</p>
-      <div class="stats"><strong id="video-count">0</strong><span>수집된 영상</span><span id="updated-at">업데이트 기록 확인 중</span></div>
+      <div class="stats"><strong id="video-count">0</strong><span>보관된 영상</span><span id="updated-at">업데이트 기록 확인 중</span></div>
     </section>
     <section class="controls" aria-label="검색 및 필터">
       <label class="search"><span class="sr-only">검색</span><input id="search" type="search" placeholder="영상·사진 제목, 설명, 출처 검색"></label>
@@ -34,7 +35,13 @@
       <label>종료일 <input id="date-to" type="date"></label>
       <span id="result-count" class="result-count" aria-live="polite">불러오는 중</span>
     </section>
-    <section aria-label="영상 목록" id="video-section"><div class="section-heading compact-heading"><div><p class="eyebrow">VIDEO ARCHIVE</p><h2>영상</h2></div><span id="video-result-count" class="photo-count">0개</span></div><div id="video-grid" class="video-grid" aria-live="polite"></div><nav class="pagination" id="video-pagination" aria-label="영상 페이지 이동"></nav><p id="empty" class="empty" hidden>조건에 맞는 영상이 없습니다.</p></section>
+    <section aria-label="영상 목록" id="video-section"><div class="section-heading compact-heading"><div><p class="eyebrow">VIDEO ARCHIVE</p><h2>영상</h2></div><span id="video-result-count" class="photo-count">0개</span></div><p id="video-coverage-note" class="photo-policy">아카이브에 누적된 공식 채널 영상입니다. 채널 전체 영상 수와는 다릅니다.</p><div id="video-grid" class="video-grid" aria-live="polite"></div><nav class="pagination" id="video-pagination" aria-label="영상 페이지 이동"></nav><p id="empty" class="empty" hidden>조건에 맞는 영상이 없습니다.</p></section>
+    <section class="photo-section" id="photo-preview-section" aria-labelledby="photo-preview-heading">
+      <div class="section-heading"><div><p class="eyebrow">VERIFIED ARTICLE IMAGES</p><h2 id="photo-preview-heading">해원 기사 이미지 모아보기</h2></div><span id="photo-preview-count" class="photo-count">0개</span></div>
+      <p class="photo-policy">출판사 원문 URL이 확인된 해원 기사에서 제공한 이미지 미리보기입니다. 사진 원본을 내려받거나 복제하지 않고, 각 이미지를 해당 기사 원문으로 연결합니다. 기사 썸네일이며 공식 프로필·SNS 사진 게시물 수집과는 구분됩니다.</p>
+      <div id="photo-preview-grid" class="photo-preview-grid" aria-live="polite"><p class="photo-meta">이미지 목록을 불러오는 중…</p></div>
+      <nav class="pagination" id="photo-preview-pagination" aria-label="이미지 페이지 이동"></nav>
+    </section>
 
     <section class="photo-section" aria-labelledby="quick-discovery-heading">
       <div class="section-heading"><div><p class="eyebrow">LIVE SEARCH SHORTCUTS</p><h2 id="quick-discovery-heading">플랫폼별 검색</h2></div></div>
@@ -51,17 +58,17 @@
     </section>
     <section class="photo-section" aria-labelledby="discovery-heading">
       <div class="section-heading"><div><p class="eyebrow">AUTOMATED DISCOVERY</p><h2 id="discovery-heading">기사 후보</h2></div><span id="discovery-count" class="photo-count">0개</span></div>
-      <p class="photo-policy">Google News RSS에서 발견한 기사 후보만 표시합니다. YouTube 영상/직캠은 영상 목록과 플랫폼 검색에서 별도로 확인하세요. 후보 링크는 아직 검토 전 자료입니다.</p>
+      <p class="photo-policy">수집된 기사 후보를 제목·출처·게시일·이미지와 함께 하나씩 확인할 수 있습니다. 출판사 원문 주소가 확인된 항목은 원문으로, 아직 확인되지 않은 항목은 발견 링크로 구분합니다. 기본은 해원 기사 후보이며 전체 기사 후보로 넓힐 수 있습니다.</p>
       <div id="article-quality-review"></div>
-      <div id="discovery-quality-summary" class="photo-policy" aria-live="polite">자료 품질 통계를 불러오는 중…</div><p class="photo-policy">개별 HTTPS 원문 주소가 공개 메타데이터로 확인된 해원 기사를 기본 표시합니다. 해원 기사 후보, NMIXX 관련 기사, 전체 기사 후보로 넓힐 수 있습니다. 영상·직캠 후보는 별도 영상 목록에서 확인하세요. 원문 RSS의 HTML 링크와 주소는 읽기 화면에서 제거해 표시합니다.</p><div id="discovery-relevance" class="discovery-relevance" role="group" aria-label="기사 관련성 범위"></div><label class="discovery-search-label" for="discovery-search">기사 검색</label><input id="discovery-search" class="discovery-search" type="search" placeholder="기사 제목, 출처, 설명 검색"><div id="discovery-categories" class="discovery-categories" aria-label="기사 분류"></div><label class="discovery-sort-label" for="discovery-sort">정렬 <select id="discovery-sort"><option value="date" selected>최신 게시일순</option><option value="relevance">관련성순</option></select></label><p class="photo-policy">이미지 검수 라벨은 현재 브라우저에 저장됩니다. 검수 도구는 아래 진단 영역에서 펼쳐 사용할 수 있습니다.</p>
-      <div id="discovery-list" class="photo-list" aria-live="polite"></div><nav class="pagination" id="discovery-pagination" aria-label="뉴스 페이지 이동"></nav><section class="video-discovery-section" aria-labelledby="video-discovery-heading"><div class="section-heading compact-heading"><div><p class="eyebrow">VIDEO DISCOVERY</p><h3 id="video-discovery-heading">영상 발견 후보 · 원본 링크 확인 필요</h3></div><span id="video-discovery-count" class="photo-count">0개</span></div><div id="video-discovery-list" class="video-discovery-list" aria-live="polite"></div></section>
+      <div id="discovery-quality-summary" class="photo-policy" aria-live="polite">자료 품질 통계를 불러오는 중…</div><p class="photo-policy">해원 기사 후보를 기본 표시합니다. 출판사 원문 URL이 확인된 기사만 모아보거나, NMIXX 관련 기사·전체 기사 후보로 넓힐 수 있습니다. 영상·직캠 후보는 별도 영상 목록에서 확인하세요. 원문 RSS의 HTML 링크와 주소는 읽기 화면에서 제거해 표시합니다.</p><div id="discovery-relevance" class="discovery-relevance" role="group" aria-label="기사 관련성 범위"></div><label class="discovery-search-label" for="discovery-search">기사 검색</label><input id="discovery-search" class="discovery-search" type="search" placeholder="기사 제목, 출처, 설명 검색"><div id="discovery-categories" class="discovery-categories" aria-label="기사 분류"></div><label class="discovery-sort-label" for="discovery-sort">정렬 <select id="discovery-sort"><option value="date" selected>최신 게시일순</option><option value="relevance">관련성순</option></select></label><p class="photo-policy">이미지 검수 라벨은 현재 브라우저에 저장됩니다. 검수 도구는 아래 진단 영역에서 펼쳐 사용할 수 있습니다.</p>
+      <div id="discovery-list" class="photo-list" aria-live="polite"></div><nav class="pagination" id="discovery-pagination" aria-label="뉴스 페이지 이동"></nav><section class="video-discovery-section" aria-labelledby="video-discovery-heading"><div class="section-heading compact-heading"><div><p class="eyebrow">VIDEO DISCOVERY</p><h3 id="video-discovery-heading">영상 발견 후보 · 원본 링크 확인 필요</h3></div><span id="video-discovery-count" class="photo-count">0개</span></div><div id="video-discovery-list" class="video-discovery-list" aria-live="polite"></div><nav class="pagination" id="video-discovery-pagination" aria-label="영상 후보 페이지 이동"></nav></section>
     </section>
     <section class="photo-section" aria-labelledby="photo-heading">
       <div class="section-heading">
         <div><p class="eyebrow">SOURCE-LINK LIBRARY</p><h2 id="photo-heading">사진 게시물 링크</h2></div>
         <span id="photo-count" class="photo-count">0개</span>
       </div>
-      <p class="photo-policy">사진 파일을 복제하지 않고 원문 게시물 링크와 출처 정보만 기록합니다. 등록한 임시 항목은 현재 브라우저에만 저장됩니다.</p>
+      <p class="photo-policy">현재 별도 사진 게시물 데이터는 0건입니다. 공식 SNS·웹사이트의 사진 게시물 자동 수집은 아직 구현되지 않았습니다. 아래는 사진 게시물 등록 공간이며, 기사에서 확보한 이미지 미리보기는 위의 ‘해원 기사 이미지 모아보기’에서 볼 수 있습니다. 원문 링크만 기록하고 사진 파일은 복제하지 않습니다.</p>
 
       <form id="photo-form" class="photo-form">
         <label>게시물 제목 <input id="photo-title" maxlength="120" required placeholder="예: 공식 프로필 사진 게시물"></label>

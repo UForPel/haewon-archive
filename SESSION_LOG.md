@@ -1784,3 +1784,37 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - The 273 legacy image assignments remain unchanged: 0 publisher article URLs, 0 alternative candidate URLs, 202 source-site URLs; metadata outcome not-attempted for all 273. Do not bulk-label, delete or replace them.
 - PR #61 adds only evidence-based aggregate diagnostics and dashboard display; it does not fetch additional URLs or modify collection policies. Android Chrome QA remains UNVERIFIED pending the user's real-device checklist.
 - No new RSS sources, wrapper decoding, sourceUrl substitution, blind retries, access bypass, paid services, external data transfer, or automated review labels.
+
+ 
+## 2026-11-27 — Fan-facing discovery and image gallery (PR pending)
+
+### Fresh baseline re-check
+- Main at cycle start: `a9b597d5538ee066a1ee69a7902e8e418c2b48df`; open PRs 0; latest successful Production #615; latest data commit `57bce05ac0511521c65c5ea27aa38c6a39141cd9`.
+- Re-read SESSION_LOG, PROJECT_STATUS, ROADMAP, BUTTONS_AND_ACTIONS, COLLECTION_RULES and CHATGPT_OPERATING_RULES from main before editing.
+- Latest Production data: 902 discovery candidates, 715 articles / 187 video candidates, 83 verified Haewon articles, 61 verified Haewon article thumbnails with source provenance, 355 assigned thumbnails total (including 273 legacy shared-image assignments), 547 missing. `data/photos.json` has 0 standalone photo-post records.
+- `data/videos.json` contains 20 accumulated NMIXX Official channel videos. Production #615 fetched 15 Atom feed entries, added 0 and retained total 20. The optional YouTube Data API search job logged `skipped-no-api-key`; news-to-video sync found 0 explicit YouTube URLs. The 187 discovery video candidates are not 187 verified videos: they include discovery records with YouTube-like titles but unresolved Google News wrapper URLs.
+- Therefore “20 videos” is the current repository's accumulated official-channel feed archive, not the total number of uploads on the NMIXX channel. The current official Atom feed only returned 15 items in the last run; no historical backfill is active.
+
+### Policy research / decision
+- YouTube official channel and JYP channel content were reviewed as possible additional video sources. A broad channel-wide search API is not a safe drop-in for a permanent public archive.
+- Official YouTube Data API docs say `playlistItems.list` costs 1 quota unit per call and can page up to 50 items, while the default quota allocation is 10,000 units/day for most endpoints; API credentials are required. Sources: https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/list and https://developers.google.com/youtube/data/determine_quota_cost.
+- YouTube Developer Policies require Non-Authorized API Data to be refreshed or deleted within 30 calendar days; video titles, creator names and descriptions are included in data that cannot simply be stored indefinitely without refresh. Source: https://developers.google.com/youtube/terms/developer-policies/.
+- Decision: do not silently activate a permanent API backfill or require an API key. Keep the public Atom feed as the no-key baseline, clearly label archive coverage, and keep the full channel Videos page directly accessible. A future API-based backfill requires a compliant 30-day refresh/deletion lifecycle and explicit user decision; it is not included in this PR.
+
+### Implemented on `feat/fan-facing-discovery-gallery-20261127`
+- `index.html`: top-level archive navigation to videos, article images, discovery articles and photo-post links; direct link to the full NMIXX official Videos page; dedicated image gallery placed immediately after video archive; clearer distinction between article thumbnails and standalone photo posts; explicit coverage note; pagination control for unresolved video candidates.
+- `js/discovery-view.mjs`: new `buildVerifiedHaewonImageGallery()` exposes only source-provenance-backed thumbnails from articles with explicit publisher article URLs and Haewon-title matches; deduplicates by image URL. Default article view widened from verified-only (83) to Haewon candidates (535); full article candidates remain available via the existing filter. Added explicit “publisher original” vs “discovery link” action; video discovery candidates now paginate rather than stopping at 12.
+- `js/app.js`: shows actual archived video count, last feed item count and newly added count; explicitly explains this is not the channel's total upload count.
+- `assets/style.css`: mobile-first archive nav, responsive image gallery, source action and pagination styling.
+- `tests/discovery-search.test.mjs`: gallery regression test ensures only unique, provenance-backed images from explicit publisher URLs are displayed; legacy unprovenanced shared thumbnails and unresolved wrapper items are excluded.
+- The current main dataset has 61 eligible unique article images (calculated from the 902-record discovery file); these are article preview images, not 61 standalone official photo posts. PR CI pending; not yet deployed.
+
+### Photo collection status and honest scope
+- `data/photos.json` is empty and `sources.json` marks JYP official site and NMIXX Instagram as manual-link-only. There is no automated standalone photo-post collector.
+- This PR makes the 61 already-collected article images browsable now, but does not claim to have started collecting official SNS photo posts or to have rehosted original photos.
+- Next photo-source work must establish documented public metadata/feed permission and original post URLs before any automated collection. No login scraping, anti-bot bypass, private content, or image file copying.
+
+### Validation / remaining
+- PR CI and full validation pending. Do not merge until final-head checks pass.
+- Android Chrome real-device QA remains unverified until user runs the checklist.
+- No YouTube API key was requested or added, no new source feeds were enabled, no photo originals were copied, and no legacy thumbnail assignments or human review labels were changed.

@@ -554,3 +554,13 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - The 273 legacy image assignments remain unchanged: 0 publisher article URLs, 0 alternative candidate URLs, 202 source-site URLs; metadata outcome not-attempted for all 273. Do not bulk-label, delete or replace them.
 - PR #61 adds only evidence-based aggregate diagnostics and dashboard display; it does not fetch additional URLs or modify collection policies. Android Chrome QA remains UNVERIFIED pending the user's real-device checklist.
 - No new RSS sources, wrapper decoding, sourceUrl substitution, blind retries, access bypass, paid services, external data transfer, or automated review labels.
+
+ 
+## 2026-11-27 — User-facing content and honest coverage
+- A fan archive must expose collected content as browsable cards and images, not leave it only as raw data or a diagnostics footer. Provide clear top navigation, title/source/date, preview where evidence exists, and original/discovery link actions.
+- Keep separate product concepts distinct: (1) official channel videos, (2) unresolved video discovery candidates, (3) article thumbnails, and (4) standalone photo-post records. Never count one as another.
+- Report official video archive count as the number of persisted records, not the total channel upload count. Show latest feed fetched/added counts and link directly to the full official Videos page.
+- Default article browsing should show Haewon candidates, not hide nearly all content behind the strict verified-original filter; retain a control for all candidates and clear provenance labels.
+- Do not enable YouTube Data API historical backfill without policy review. Non-authorized API Data must be refreshed/deleted within 30 days; if no compliant refresh/deletion lifecycle is implemented, keep API backfill off.
+- Photo galleries built from article thumbnails must be labeled as article-image previews, not standalone photo-post collection. Clearly disclose when `data/photos.json` is empty and automated photo-post collection is not implemented.
+- Preserve the required continuation prompt button at the end of each substantial cycle.

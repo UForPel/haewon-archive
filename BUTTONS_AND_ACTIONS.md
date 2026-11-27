@@ -562,3 +562,13 @@ Keep the conversation continuation button as the final response element of every
 - The 273 legacy image assignments remain unchanged: 0 publisher article URLs, 0 alternative candidate URLs, 202 source-site URLs; metadata outcome not-attempted for all 273. Do not bulk-label, delete or replace them.
 - PR #61 adds only evidence-based aggregate diagnostics and dashboard display; it does not fetch additional URLs or modify collection policies. Android Chrome QA remains UNVERIFIED pending the user's real-device checklist.
 - No new RSS sources, wrapper decoding, sourceUrl substitution, blind retries, access bypass, paid services, external data transfer, or automated review labels.
+
+ 
+## 2026-11-27 — Fan-facing archive browsing controls (PR pending)
+- Added top navigation anchors for 영상, 사진·이미지, 기사·발견 자료 and 사진 게시물 링크.
+- Added a responsive article-image gallery. Each image card opens its verified publisher article; gallery items are limited to explicit publisher article URLs and source-provenance-backed Haewon article thumbnails, deduplicated by image URL.
+- Added clear “출판사 원문 보기” vs “발견 링크 열기” actions in article cards. Do not display raw href strings.
+- Added previous/next pagination for unresolved video discovery candidates; all candidates remain browseable, not only the first 12.
+- Added direct link to the full NMIXX official YouTube Videos page and a dynamic coverage note showing archive total, latest feed items fetched and new items added.
+- These are real UI controls and rendered data views, not mockups. Automated tests cover gallery source/provenance filtering; PR CI pending. Android Chrome visual QA remains user-performed.
+- Standalone photo-post library remains separate and empty; the new gallery is article thumbnails, not official SNS photo posts.
