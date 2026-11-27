@@ -139,8 +139,7 @@ export function mergeQueryFailureHistory(existing=[],{runId,occurredAt,googleFai
 }
 
 export function serializeQueryFailureHistory(failures=[]){
- return JSON.stringify({schemaVersion:'1.0.0',failures},null,2)+'
-';
+ return JSON.stringify({schemaVersion:'1.0.0',failures},null,2)+'\n';
 }
 
 async function persistQueryFailureHistory({runId,occurredAt,googleFailures,bingFailures}){
