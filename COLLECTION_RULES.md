@@ -582,3 +582,8 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Existing cron entries are `17 11 * * *` and `17 23 * * *` UTC. #614 and #622 are reported as schedule events but their recorded starts do not match either cron instant.
 - Do not reinterpret generic event=schedule as proof of a particular local-time slot. Persist `github.event.schedule` in future run logs and compare it with startedAt.
 - #622 collection policy remained compliant: NMIXX Atom skipped, zero network requests, 20 historic videos preserved, YouTube Data API disabled-policy.
+
+## 2026-11-27 — Schedule telemetry and Production #623
+- PR #75 now preserves the exact GitHub cron expression in optional run-log field `scheduleExpression` for schedule-triggered runs. Push and manual runs omit it.
+- Production #623 (push event) confirms source restrictions remain enforced: NMIXX Atom skipped, zero network requests, 20 historic video records retained, Data API disabled-policy.
+- Do not treat #623 as a scheduled run. Verify the next 20:17 KST execution and its stored expression separately.

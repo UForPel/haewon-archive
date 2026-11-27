@@ -752,3 +752,21 @@ YouTube Atom collector는 계속 비활성화, networkRequests 0, 기존 videos.
 
 매 사이클 일곱 문서 갱신, PR CI 및 전체 데이터 검증 성공 후에만 병합. Android Chrome 실기기 QA는 사용자 직접 확인 전까지 미검증. 코드·테스트·Production·데이터·artifact·Pages·Android QA를 분리 보고하고, 최신 main SHA와 다음 대화용 전체 지시 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
 ```
+
+## 2026-11-27 — Next-cycle action: verify scheduled cron telemetry
+- **Visible label:** 🔄 연구 기반 재귀개선 계속하기
+- **Action:** submit the complete next-cycle instruction below.
+
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA는 실행 시 GitHub에서 실시간 조회한다. 최신 확인된 Production #623 데이터 커밋은 c5382d9816e114c565357f0f22eb47e1b7771b0b이다. 먼저 최신 main, 열린 PR, Actions, Production, 데이터 커밋, artifact SHA-256, Pages 배포를 실제 조회하고 일곱 운영 문서를 먼저 읽는다.
+
+최우선은 2026-11-27 20:17 KST (11:17 UTC) schedule Production 실행을 확인하는 것이다. PR #75가 scheduleExpression 로깅을 구현·병합했다. 다음 schedule 실행의 data/run-logs/<run-id>.json에서 trigger=github_schedule과 scheduleExpression='17 11 * * *'를 확인하고, startedAt 및 Actions created_at/run_started_at을 비교한다. 해당 실행의 테스트 수, collection, data commit, artifact digest, Pages deploy, public URL 확인 여부를 각각 기록한다. 20:17 슬롯과 무관한 push run을 예약 실행으로 오인하지 않는다.
+
+이전 schedule anomalies: #614 run 45889430699 at 2026-11-26T20:13:18Z, #622 run 45943513107 at 2026-11-27T05:03:36Z. 두 run은 event=schedule이지만 당시 workflow cron 17 11 * * * / 17 23 * * *와 시작 시간이 맞지 않았다. 이전 로그에는 scheduleExpression이 없어서 어느 cron이 발화했는지 소급할 수 없다. GitHub 공식 문서의 부하 지연 안내는 기록하되, 설정 시각보다 일찍 시작한 이유로 단정하지 말고 미해결로 둔다. cron을 임의 변경하지 않는다.
+
+#617의 실제 HTTP 429 이벤트가 append-only data/query-failure-history.json에 남아 있는지 확인한다. 다른 검색어의 실제 실패가 발생하면 별도 이벤트가 추가되는지, 이후 성공에서도 모두 보존되는지 확인한다. 실패가 없으면 합성 이벤트 금지. Retry-After는 실제 헤더가 있을 때만 기록하고 blind retry 금지.
+
+YouTube Atom collector는 계속 비활성화, networkRequests 0, 기존 videos.json 20개 보존. YouTube Data API 비활성, workflow에서 YOUTUBE_API_KEY 전달 금지. JYP/NMIXX Gallery·Notice 수집기 구현 금지, SBSKPOP ZOOM 소유권 미확인, 방송사 수집기 및 broadcaster-official 자동 분류 금지. 273개 레거시 공유 썸네일과 PR #54/#56 저장 성공 후 이동·실패 시 복원 흐름 보존. 기사 이미지와 독립 사진 수치를 구분한다.
+
+매 사이클 일곱 문서 갱신, PR CI 및 전체 데이터 검증 성공 후에만 병합. Android Chrome 실기기 QA는 사용자 직접 확인 전까지 미검증. 코드·테스트·Production·데이터·artifact·Pages·Android QA를 분리 보고하고, 최신 main SHA와 다음 대화용 전체 지시 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
+```

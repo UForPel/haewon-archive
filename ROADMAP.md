@@ -937,3 +937,10 @@
 - [ ] Add optional `scheduleExpression` to run-log schema and logger using `github.event.schedule`.
 - [ ] Verify 20:17 KST slot separately; do not assume #622 was that slot.
 - [ ] After the next matching run, compare expression, Actions created/start times, and run-log startedAt; investigate without speculative cron changes.
+
+## 2026-11-27 — Schedule-expression observability
+- [x] Add optional `scheduleExpression` to run-log schema and logger, wired to `github.event.schedule`.
+- [x] PR #75 CI 226/226 and archive validation passed; merged as a2eeba7763323ec7ec953c033fc01815cdcace42.
+- [x] Post-merge push Production #623 passed 226/226 and deployed Pages artifact; it is not a scheduled-run confirmation.
+- [ ] Verify the next 20:17 KST schedule run records `scheduleExpression: 17 11 * * *` and compare its timestamps.
+- [ ] Keep #614/#622 schedule-time anomalies unresolved until new telemetry provides evidence; do not alter cron speculatively.

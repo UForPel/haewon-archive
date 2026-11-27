@@ -1978,3 +1978,14 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 - Implementation prepared in PR branch: pass `github.event.schedule` to run logger and record optional `scheduleExpression`; schema and regression tests cover scheduled and non-scheduled records. This cannot retroactively explain #614/#622.
 - 20:17 KST execution is future at this checkpoint (15:00 KST); no result is inferred.
 - Android Chrome real-device QA remains unverified.
+
+## 2026-11-27 — PR #75 schedule-expression instrumentation and Production #623
+- PR #75 added optional `scheduleExpression` to the run-log schema/logger and passed `github.event.schedule` through `GITHUB_EVENT_SCHEDULE`. It was merged as `a2eeba7763323ec7ec953c033fc01815cdcace42` after PR CI #105 (run 45949495617) passed 226/226 tests and committed archive validation.
+- Post-merge Production #623 (run 45949528329) was a push event, not a scheduled run. It completed successfully with 226/226 tests, archive validation, artifact upload and deploy-pages success.
+- #623 data commit: `c5382d9816e114c565357f0f22eb47e1b7771b0b`. Artifact 15176047291, 731041 bytes, SHA-256 `f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7`. Public Pages URL could not be independently opened.
+- #623 run log: trigger github_push, no scheduleExpression (expected for push); nmixx-youtube skipped, Google News/Bing News successful, queryFailures empty. YouTube collector status disabled, 0 network requests, 20 videos retained; Data API disabled-policy.
+- Failure history remains exactly one actual #617 Google News HTTP 429 event, with retryAttempted false and no Retry-After. No synthetic failures. #623 did not add a new failure.
+- Metrics remain 936 candidates (749 article, 187 video), 111 publisherArticleUrl items, 84 verified Haewon articles, 62 article-image previews, 0 standalone photos, 359 assigned thumbnails, 577 missing, 273 legacy shared assignments.
+- #614 (45889430699) started 2026-11-26T20:13:18Z and #622 (45943513107) started 2026-11-27T05:03:36Z. Both are event=schedule but neither timestamp matches the configured cron instants (17 11 / 17 23 UTC). Previous run logs did not preserve github.event.schedule, so exact cron source cannot be recovered.
+- The next 20:17 KST slot is still pending at this checkpoint. Verify a future schedule run's new scheduleExpression field; do not treat #623 push as the requested scheduled run.
+- Android Chrome real-device QA remains unverified.
