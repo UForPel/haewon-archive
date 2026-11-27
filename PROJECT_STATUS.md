@@ -1143,3 +1143,13 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - #614 and #622 are schedule events with timestamps that do not match the configured UTC cron entries; exact event cron cannot be recovered because older logs omitted github.event.schedule. The next 20:17 KST scheduled run is still pending and must be verified separately.
 - Current metrics: 936 candidates (749 articles, 187 videos), 111 publisherArticleUrl items, 84 verified Haewon articles, 62 article-image previews, 0 standalone photos, 359 assigned thumbnails, 577 missing, 273 legacy shared assignments.
 - Android Chrome real-device QA remains unverified.
+
+ 
+## 2026-11-27 19:08 KST — Latest independently checked state
+- Main SHA: 63f3c9c2daf0732252ac2c1e330cedaead0daeb5. Open PR/issue search: none. PR #75 and #76 merged.
+- PR #76 CI: run 45949751531, 226/226, 0 failures; committed archive data validation passed.
+- Production #623 (run 45949528329) was push-triggered, not schedule-triggered. It passed 226/226 tests, committed-data validation, collection and deploy-pages job steps. Data commit: c5382d9816e114c565357f0f22eb47e1b7771b0b.
+- Artifact: 15176047291, 731041 bytes, SHA-256 f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7. Pages deployment step succeeded; public URL was not independently accessible to verifier.
+- Collection: Google News 99 items; Bing News 31 items; queryFailures empty. YouTube Atom disabled / networkRequests 0 / 20 existing video records retained. Data API disabled and no YOUTUBE_API_KEY passed in the workflow.
+- Failure history: exactly one actual #617 HTTP 429 retained; no second live failure and no synthetic event. Android Chrome real-device QA remains unverified.
+- 20:17 KST scheduled run remains pending at 19:08 KST. Verify cron expression and timestamps on the next genuine schedule event; do not classify #623 as schedule evidence.

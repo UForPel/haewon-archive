@@ -136,3 +136,13 @@ Do not enable a five-minute production loop until the external scheduler and sec
 - Latest quality data: 285 unique article/image candidates eligible, 0 reviewed, 0% review coverage; candidate and selected-thumbnail precision remain unmeasured (null). No labels were fabricated.
 - Historical image state remains 620 articles, 273 thumbnails, 347 missing, one URL used by 273 records. No automatic deletion or replacement.
 - GitHub Actions deploy succeeded, but direct live browser visual/mobile inspection could not be confirmed in this environment. JSON round-trip and label precision calculations are covered by tests.
+
+ 
+## 2026-11-27 19:08 KST — Current verification checkpoint
+- Latest main: 63f3c9c2daf0732252ac2c1e330cedaead0daeb5 (PR #76 docs commit).
+- PR #75 merged schedule-expression telemetry. Production #623 (45949528329) is a successful PUSH run, not a scheduled run; data commit c5382d9816e114c565357f0f22eb47e1b7771b0b.
+- #623: 226/226 tests, archive validation passed, Google News/Bing News succeeded (99/31 items seen), queryFailures empty; YouTube Atom skipped, networkRequests 0, videos.json remains 20; Data API disabled.
+- Pages artifact 15176047291, 731041 bytes, SHA-256 f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7; deploy-pages step succeeded. Independent public URL opening failed in verifier; live UI remains unverified.
+- query-failure-history.json still contains exactly the real #617 Google News HTTP 429 event, retryAttempted=false, no Retry-After. No second real failure occurred; do not synthesize one.
+- 20:17 KST (11:17 UTC) schedule slot is still future at this checkpoint (19:08 KST). Do not label #623 as the slot. Next schedule run must log scheduleExpression='17 11 * * *'; compare run-log startedAt with Actions created_at/run_started_at.
+- Android Chrome real-device QA remains unverified. Keep all source-policy restrictions unchanged.
