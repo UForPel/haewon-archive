@@ -790,3 +790,25 @@ YouTube Atom collector는 계속 비활성화, networkRequests 0, 기존 videos.
 
 매 사이클 일곱 문서 갱신, PR CI 및 전체 데이터 검증 성공 후에만 병합. Android Chrome 실기기 QA는 사용자 직접 확인 전까지 미검증. 코드·테스트·Production·데이터·artifact·Pages·Android QA를 분리 보고하고, 최신 main SHA와 다음 대화용 전체 지시 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
 ```
+
+ 
+## 2026-11-27 21:22 KST — Next conversation action
+- **Visible label:** 🔄 연구 기반 재귀개선 계속하기
+- **Surface:** ChatGPT reply action, not a Haewon Archive website control.
+- **Action:** submit the full prompt below. It must recheck live GitHub and carry out an evidence-informed improvement cycle, not merely summarize.
+
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA는 반드시 GitHub에서 실시간 조회한다. 직전 확인 main은 ceed2b68e7f3e76a70b1e1740fafa0e41e677230이고, PR #77은 CI #107에서 226/226 및 전체 데이터 검증 성공 후 병합되었다. 먼저 최신 main, 열린 PR, Actions, Production, 데이터 커밋, artifact SHA-256, Pages 배포를 실제 조회하고 일곱 운영 문서(PROJECT_MEMORY.md, CHATGPT_OPERATING_RULES.md, DECISIONS.md, SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md)를 먼저 읽는다.
+
+2026-11-27 20:17 KST (11:17 UTC) schedule slot은 21:22 KST 확인 시점까지 Production #624 또는 이후 Production 실행이 관찰되지 않았다. 이를 예약 성공이나 확인된 GitHub drop으로 단정하지 않는다. 늦게 도착한 실행이 있는지 다시 확인하고, 없다면 원인은 미확인으로 기록한다. 다음 2026-11-28 08:17 KST (2026-11-27 23:17 UTC) 슬롯이 지난 뒤에도 확인한다. 해당 실행은 Actions event=schedule, run-log trigger=github_schedule, scheduleExpression='17 23 * * *'가 모두 맞아야 한다. 20:17 슬롯은 '17 11 * * *'와 구분한다. Actions created_at/run_started_at과 run-log startedAt을 비교한다. #614/#622는 기존 로그에 expression이 없으므로 소급 추정하지 않는다. GitHub 부하 지연/누락 안내를 원인으로 단정하지 말고 cron을 임의 변경하지 않는다.
+
+각 Production의 테스트 수, collection 결과, data commit, artifact ID/크기/SHA-256, upload/deploy step, 공개 Pages URL 직접 접근을 각각 확인한다. 배포 step 성공을 실제 공개 URL 또는 Android 화면 확인으로 혼동하지 않는다. 현재 마지막 Production #623(run 45949528329)은 push 실행, 226/226, 데이터 검증 통과, Google News 99/Bing News 31, data commit c5382d9816e114c565357f0f22eb47e1b7771b0b, artifact 15176047291, SHA-256 f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7이다.
+
+data/query-failure-history.json의 #617 실제 HTTP 429(검색어 '오해원 근황', retryAttempted=false, Retry-After 없음)가 이후 성공에서도 유지되는지 확인한다. 다른 검색어의 실제 실패가 있을 때만 별도 이벤트를 추가하고, 실제 후속 성공에서 보존되는지 확인한다. 실패가 없으면 합성 이벤트 금지, blind retry 금지, Retry-After는 실제 헤더가 있을 때만 기록한다.
+
+YouTube Atom collector 비활성, networkRequests 0, videos.json 20개 보존. YouTube Data API 비활성, workflow에 YOUTUBE_API_KEY 전달 금지. JYP/NMIXX Gallery·Notice 수집기 금지, SBSKPOP ZOOM 소유권 미확인, 방송사 수집기 및 broadcaster-official 자동분류 금지. Google News wrapper decode/access bypass 금지. 273개 레거시 공유 썸네일과 PR #54/#56 저장 성공 후 이동·실패 시 복원 흐름 보존. 기사 이미지와 독립 사진 지표 분리. 현재 기준 936 후보(749 기사, 187 비디오), publisherArticleUrl 111, 검증 해원 기사 84, 기사 이미지 미리보기 62, 독립 사진 0, 썸네일 359, 누락 577, 레거시 공유 할당 273이다. 썸네일 검수 493개 eligible/0 reviewed/0% coverage이며 precision은 null이다.
+
+연구 기반 개선은 최신 근거의 신뢰도·날짜·적용 한계를 확인하고 실제 병목에만 적용한다. 현재 핵심 데이터 병목은 RSS image 후보 0, 비교 기사 86개 모두 meta-only, 인간 검수 0%라는 점이다. 기사별 후보 출처/호스트/실제 이미지 적합성 근거를 개선하되 허용된 공개 메타데이터만 사용하고, 273개 레거시 항목을 자동 삭제/교체하지 않는다. 관련 코드·테스트·데이터 baseline을 먼저 읽고 제한된 개선을 구현하며 테스트/실제 Production 결과로 비교한다. 코드 변경과 문서 변경을 의미 있게 분리한다.
+
+매 사이클 일곱 운영 문서를 갱신하고, PR CI 및 전체 데이터 검증 성공 후에만 병합한다. Android Chrome 실기기 QA는 사용자가 직접 확인하기 전까지 미검증이다. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 구분 보고하고, 최신 main SHA, PR/Actions 링크, 지표, 미완료 항목과 다음 대화용 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
+```

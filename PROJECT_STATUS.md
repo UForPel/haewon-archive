@@ -1153,3 +1153,15 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Collection: Google News 99 items; Bing News 31 items; queryFailures empty. YouTube Atom disabled / networkRequests 0 / 20 existing video records retained. Data API disabled and no YOUTUBE_API_KEY passed in the workflow.
 - Failure history: exactly one actual #617 HTTP 429 retained; no second live failure and no synthetic event. Android Chrome real-device QA remains unverified.
 - 20:17 KST scheduled run remains pending at 19:08 KST. Verify cron expression and timestamps on the next genuine schedule event; do not classify #623 as schedule evidence.
+
+ 
+## 2026-11-27 21:22 KST — Post-20:17 operational checkpoint
+- Latest main at checkpoint start: `ceed2b68e7f3e76a70b1e1740fafa0e41e677230`; PR #77 merged; no open PRs found.
+- PR #77 CI #107: 226/226 tests, 0 failures; committed archive validation passed.
+- The 20:17 KST / 11:17 UTC slot passed, but no Production #624 or later Production run was found in the live Actions list. Latest Production remains #623 (event=push); the requested schedule is **not observed / unverified**.
+- Production #623: 226/226 tests, data validation passed, Google News 99 / Bing News 31, data commit `c5382d9816e114c565357f0f22eb47e1b7771b0b`.
+- Artifact `15176047291`, 731041 bytes, SHA-256 `f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7`; Pages deploy action reported success. Public URL direct open inaccessible to verifier; live site and UI unverified.
+- Current metrics: 936 candidates (749 articles, 187 videos); 111 publisher URLs; 84 verified Haewon articles; 62 article-image previews; 0 independent photos; 359 assigned thumbnails; 577 missing; 273 legacy shared assignments.
+- Failure history retains only real #617 HTTP 429 (`retryAttempted=false`, no Retry-After) through later successful runs. No second live failure; no synthetic event.
+- YouTube Atom disabled, 20 video records preserved, Data API disabled/no workflow key injection. All source-policy boundaries unchanged.
+- Android Chrome real-device QA remains unverified. No code change in this checkpoint.

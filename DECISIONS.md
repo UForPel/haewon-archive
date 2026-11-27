@@ -38,3 +38,9 @@ Never silently convert a proposal into a confirmed decision. Add dated entries w
 15. PR #75's scheduleExpression field is now implemented and merged. The configured cron remains unchanged: 17 11 * * * and 17 23 * * * UTC.
 16. Production #623 is a push-triggered run and is not evidence that the 20:17 KST schedule executed.
 17. Keep the #614/#622 schedule timestamp anomalies unresolved until new event.schedule telemetry and timestamps provide evidence. GitHub's documented high-load delay behavior is not a proven cause for earlier-than-configured starts.
+
+ 
+## 2026-11-27 — Operational observation after the 20:17 KST slot
+18. At 21:22 KST, no Production run after #623 was present in the inspected live Actions list. This is an observation only, not a confirmed scheduler failure or root-cause diagnosis.
+19. Keep cron at `17 11 * * *` and `17 23 * * *` UTC until evidence supports a change. #614/#622 cannot be mapped retrospectively because their run logs lack scheduleExpression.
+20. Public Pages deploy success and independent public URL access are separate verification states; do not mark the latter successful when the verifier cannot open the URL.

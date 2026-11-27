@@ -2004,3 +2004,38 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 - Official reference: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows and https://docs.github.com/en/actions/how-tos/troubleshoot-workflows
 - Article-image previews and standalone photo records remain separate metrics; preserve 273 legacy shared-thumbnail assignments and PR #54/#56 transactional save/move/restore behavior. Android Chrome real-device QA remains unverified.
 - No code or source-policy change in this checkpoint; next action is to verify the 20:17 KST scheduled run after its scheduled time.
+
+ 
+## 2026-11-27 21:22 KST — Post-slot verification and continuity update
+
+### Scope and live repository state
+- Re-read all seven canonical continuity documents and inspected live main, open PR search, recent Actions, workflow, run logs, data files, Production job logs, artifacts, PR #77 and its CI.
+- Main at start: `ceed2b68e7f3e76a70b1e1740fafa0e41e677230`. PR #77 merged. PR #77 CI #107 (`45980001843`) passed 226/226, 0 failures, and `npm run validate` on committed archive data passed.
+- No open PRs were found at the start of this cycle.
+
+### 20:17 KST scheduled-run result
+- Requested slot: 2026-11-27 20:17 KST = 11:17 UTC. It had passed by the 21:22 KST checkpoint.
+- The live Actions listing showed no Production #624 or later Production run. Latest Production remained #623 (`45949528329`, event=push). No matching run-log for this slot with `trigger=github_schedule` and `scheduleExpression=17 11 * * *` was present.
+- #623 timing: Actions `created_at=2026-11-27T06:04:22Z`, `run_started_at=2026-11-27T06:04:22Z`; run-log `startedAt=2026-11-27T06:04:29.000Z`, `finishedAt=06:04:49.518Z`; `trigger=github_push`. It is not the requested schedule run.
+- Do not infer the 20:17 run was dropped, delayed, or failed without an observed event. Keep the cause unknown. Do not change cron.
+- Existing anomalies #614 (`45889430699`) and #622 (`45943513107`) remain unresolved; historical run logs do not contain scheduleExpression and cannot be retroactively mapped to one of the two cron expressions.
+
+### Production #623 evidence (latest verified)
+- Job `140341900635` completed successfully. Test output: 226 tests, 226 pass. Archive validation passed.
+- Google News: 99 items; Bing News: 31 items; queryFailures empty. Collection status reports six of six Google News queries and six of six Bing queries successful. News deduplication: 99 pre-merge candidates, 90 unique fetched, 9 exact/canonical duplicates collapsed, 2 newly added.
+- Data commit: `c5382d9816e114c565357f0f22eb47e1b7771b0b`.
+- Artifact `15176047291`, 731041 bytes, SHA-256 `f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7`. Upload and deploy-pages steps succeeded; deployment action reported success.
+- Direct open of `https://uforpel.github.io/haewon-archive/` was inaccessible in the verifier. Public URL and actual live UI remain unverified.
+- Current metrics: 936 candidates (749 articles, 187 videos); 111 publisherArticleUrl items; 84 verified Haewon articles; 62 verified Haewon article image previews; 359 thumbnail assignments; 577 missing; 273 repeated legacy shared-thumbnail assignments; independent photos 0. Keep image/photo counts separate.
+- Thumbnail review: 493 eligible, 0 reviewed, 0% review coverage, precision null. RSS/meta comparison: 86 articles compared, RSS-only 0, meta-only 86, both 0; persisted metadata candidates 86. No visual relevance accuracy claim.
+
+### Failure history and source-policy invariants
+- `data/query-failure-history.json` still contains one real #617 Google News HTTP 429 for `오해원 근황`, `retryAttempted=false`, no Retry-After. Later successful #620/#622/#623 runs preserved the record.
+- No second distinct real live failure occurred; no synthetic event added. Multi-event append/dedup is covered by unit regression tests, but a second live event and its survival through a later live success remain unverified.
+- YouTube Atom collector remains disabled; videos.json remains 20 records; source registry says disabled; workflow does not inject `YOUTUBE_API_KEY`. YouTube Data API remains disabled.
+- Keep JYP/NMIXX Gallery/Notice collector prohibition, SBSKPOP ZOOM ownership unresolved, no broadcaster collectors or broadcaster-official auto-classification, no Google News wrapper decoding/access bypass, preserve 273 legacy thumbnail assignments and PR #54/#56 transactional save/move/restore.
+
+### Changes and next action
+- No code, test, data, collector, source-policy, or cron changes in this cycle. Seven continuity documents are being updated with this checkpoint only.
+- Android Chrome real-device QA remains unverified until user directly checks.
+- Next cycle: check whether a late run appears for the 20:17 slot and inspect the next configured 08:17 KST slot (2026-11-28 23:17 UTC) only after it passes. Require `event=schedule`, `trigger=github_schedule`, and the exact logged expression `17 23 * * *`; compare all timestamps, tests, collection, data commit, artifact digest, deploy step and direct public URL access. Investigate official scheduler behavior without speculating or changing cron.
