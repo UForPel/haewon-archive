@@ -630,3 +630,10 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Production #620 data commit: `ba3f3da5fc6f82580f25dd26177216cfd65108fb`. Pages artifact `15166123904`, 689,587 bytes, SHA-256 `e37e5f81b8bf3349e1dc55ac90af9bcd9a95ec971f13f79874cdc6319e819a31`. Artifact upload and Pages deployment steps both succeeded. The known Pages URL could not be independently opened through the current verifier; report deployment-step success, not independent live-site verification.
 - First-party source review: KBS World explicitly references KBS KPOP YouTube distribution; iMBC references the MBCkpop YouTube channel; MBC PLUS's own site identifies ALL THE K-POP and its official clip pages include MBC PLUS copyright; MnetPlus describes selected program simulcasts on M2 YouTube. These sources establish channel/program relationships but do not yet verify stable channel IDs, public Atom feed availability, robots/terms for automated feed collection, or individual Haewon appearances for all five proposed channels. SBSKPOP ZOOM ownership remains unverified. No broadcaster feed is enabled and no item is newly marked `broadcaster-official`.
 - JYP Gallery/Notice remain manual-link-only: robots.txt and automated collection permission were not verified. No photo collector, hidden endpoint, image download or rehosting was added. Android Chrome real-device QA remains unverified.
+
+## 2026-11-27 — Audit accuracy requirements
+- Report code-level tests, PR CI, Production collection, data commit, artifact upload, Pages deployment, live-site access, and Android device QA as separate evidence categories.
+- A unit test that simulates two runs is not proof that two real Production runs produced and persisted two events.
+- Verify the exact history file and run log after each Production run; compare event keys and preserve prior events.
+- Do not claim a workflow dispatch was executed when only read-only workflow inspection is available. Do not claim live Pages access unless independently opened.
+- End each cycle with a clickable next-cycle action whose prompt includes the full current operating constraints.

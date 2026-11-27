@@ -523,3 +523,10 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Production #620 data commit: `ba3f3da5fc6f82580f25dd26177216cfd65108fb`. Pages artifact `15166123904`, 689,587 bytes, SHA-256 `e37e5f81b8bf3349e1dc55ac90af9bcd9a95ec971f13f79874cdc6319e819a31`. Artifact upload and Pages deployment steps both succeeded. The known Pages URL could not be independently opened through the current verifier; report deployment-step success, not independent live-site verification.
 - First-party source review: KBS World explicitly references KBS KPOP YouTube distribution; iMBC references the MBCkpop YouTube channel; MBC PLUS's own site identifies ALL THE K-POP and its official clip pages include MBC PLUS copyright; MnetPlus describes selected program simulcasts on M2 YouTube. These sources establish channel/program relationships but do not yet verify stable channel IDs, public Atom feed availability, robots/terms for automated feed collection, or individual Haewon appearances for all five proposed channels. SBSKPOP ZOOM ownership remains unverified. No broadcaster feed is enabled and no item is newly marked `broadcaster-official`.
 - JYP Gallery/Notice remain manual-link-only: robots.txt and automated collection permission were not verified. No photo collector, hidden endpoint, image download or rehosting was added. Android Chrome real-device QA remains unverified.
+
+## 2026-11-27 — Failure-history multi-run invariants
+- History identity is the tuple `runId + sourceId + query`; repeated identity is idempotent, but the same query in another run is a distinct event.
+- Successful runs append no failure and never delete or rewrite prior failures.
+- Record HTTP status, content type and response format only when observed. Record `retryAfter` only when the response actually contains the Retry-After header.
+- Keep `retryAttempted:false`; each query is requested once. No blind retry, inferred delay, or synthetic production event.
+- Unit tests may use simulated run IDs and responses, but must label them as fixtures and never insert them into production data.

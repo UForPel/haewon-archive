@@ -1,7 +1,7 @@
 import test from 'node:test';
 import { isExplicitPublisherArticleUrl } from '../js/discovery-kind.mjs';
 import assert from 'node:assert/strict';
-import {parseRss,parseBingNewsRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,shouldRetryThumbnailFetch,enrichThumbnails,getDailySearches,SEARCH_PACKS,SEARCHES,summarizeQueryPerformance,serializeQueryFailureHistory} from '../scripts/collect-news.mjs';
+import {parseRss,parseBingNewsRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,shouldRetryThumbnailFetch,enrichThumbnails,getDailySearches,SEARCH_PACKS,SEARCHES,summarizeQueryPerformance,serializeQueryFailureHistory,mergeQueryFailureHistory} from '../scripts/collect-news.mjs';
 const fixture='<rss><channel><item><title>오해원 인터뷰</title><link>https://news.example/a</link><pubDate>Thu, 20 Nov 2026 02:00:00 GMT</pubDate><description>Haewon interview</description><source>News</source><media:thumbnail url="https://img.example/thumb.jpg" /></item></channel></rss>';
 test('RSS에서 제목, 링크, 날짜, 검색 출처 메타데이터를 추출한다',()=>{const [item]=parseRss(fixture,'오해원', '2026-11-20T00:00:00Z');assert.equal(item.title,'오해원 인터뷰');assert.equal(item.url,'https://news.example/a');assert.equal(item.sourceName,'News');assert.equal(item.status,'candidate');assert.equal(item.thumbnailUrl,'https://img.example/thumb.jpg');});
 test('중복 URL 후보는 하나로 합친다',()=>{const a=parseRss(fixture,'오해원')[0];assert.equal(mergeCandidates([a],[a]).length,1);});
@@ -212,4 +212,55 @@ test('serialized failure history is valid JSON with a real trailing newline',()=
  assert.equal(serialized.endsWith('\\n'),false,'the file must not end with the two literal characters backslash+n');
  assert.equal(serialized.endsWith('\n'),true,'JSON file ends with a newline');
  assert.equal(JSON.parse(serialized).failures.length,1);
+});
+
+
+test('append-only query failure history preserves earlier failures, appends a distinct later failure, and deduplicates replays',()=>{
+ const first=[{runId:'45916213360',sourceId:'google-news-rss',query:'오해원 근황',error:'HTTP 429',status:429,contentType:'text/html; charset=UTF-8',responseFormat:'html',retryAttempted:false,occurredAt:'2026-11-27T00:21:13.000Z'}];
+ const afterSuccessfulRun=mergeQueryFailureHistory(first,{
+  runId:'45926600456',occurredAt:'2026-11-27T02:08:57.000Z',googleFailures:[],bingFailures:[]
+ });
+ assert.deepEqual(afterSuccessfulRun,first,'a successful later run must not erase a prior failure');
+ const second=mergeQueryFailureHistory(afterSuccessfulRun,{
+  runId:'45930000000',occurredAt:'2026-11-27T11:17:00.000Z',
+  googleFailures:[{query:'오해원 인터뷰',error:'HTTP 503',status:503,contentType:'text/html; charset=utf-8',responseFormat:'html',retryAttempted:false}],
+  bingFailures:[]
+ });
+ assert.equal(second.length,2,'a distinct query failure in a later run is a new event');
+ assert.deepEqual(second[0],first[0],'the original event remains byte-for-byte equivalent');
+ assert.deepEqual(second[1],{
+  runId:'45930000000',sourceId:'google-news-rss',query:'오해원 인터뷰',error:'HTTP 503',
+  retryAttempted:false,occurredAt:'2026-11-27T11:17:00.000Z',status:503,
+  contentType:'text/html; charset=utf-8',responseFormat:'html'
+ });
+ const replay=mergeQueryFailureHistory(second,{
+  runId:'45930000000',occurredAt:'2026-11-27T11:18:00.000Z',
+  googleFailures:[{query:'오해원 인터뷰',error:'HTTP 500',status:500,retryAttempted:false}],
+  bingFailures:[]
+ });
+ assert.deepEqual(replay,second,'replaying the same run/source/query key must not add or rewrite an event');
+ const sameQueryNextRun=mergeQueryFailureHistory(replay,{
+  runId:'45930000001',occurredAt:'2026-11-27T11:19:00.000Z',
+  googleFailures:[{query:'오해원 인터뷰',error:'HTTP 429',status:429,retryAttempted:false}],
+  bingFailures:[]
+ });
+ assert.equal(sameQueryNextRun.length,3,'the same query failing in a different run is a distinct event');
+});
+
+test('Retry-After is recorded only from an actual response header and each query is requested once',async()=>{
+ let googleCalls=0,bingCalls=0;
+ const result=await collectFeeds({queries:['retry-after diagnostic'],fetchImpl:async url=>{
+  if(String(url).includes('bing.com')){
+   bingCalls++;
+   return new Response(fixture,{status:200,headers:{'content-type':'application/rss+xml'}});
+  }
+  googleCalls++;
+  return new Response('rate limited',{status:429,headers:{'content-type':'text/html; charset=utf-8','retry-after':'120'}});
+ }});
+ assert.equal(googleCalls,1,'Google query must not be blindly retried');
+ assert.equal(bingCalls,1,'Bing query must be requested exactly once');
+ assert.equal(result.failures.length,1);
+ assert.equal(result.failures[0].retryAfter,'120');
+ assert.equal(result.failures[0].retryAttempted,false);
+ assert.equal(result.bingFailures.length,0);
 });

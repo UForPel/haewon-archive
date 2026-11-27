@@ -871,3 +871,11 @@
 - Production #620 data commit: `ba3f3da5fc6f82580f25dd26177216cfd65108fb`. Pages artifact `15166123904`, 689,587 bytes, SHA-256 `e37e5f81b8bf3349e1dc55ac90af9bcd9a95ec971f13f79874cdc6319e819a31`. Artifact upload and Pages deployment steps both succeeded. The known Pages URL could not be independently opened through the current verifier; report deployment-step success, not independent live-site verification.
 - First-party source review: KBS World explicitly references KBS KPOP YouTube distribution; iMBC references the MBCkpop YouTube channel; MBC PLUS's own site identifies ALL THE K-POP and its official clip pages include MBC PLUS copyright; MnetPlus describes selected program simulcasts on M2 YouTube. These sources establish channel/program relationships but do not yet verify stable channel IDs, public Atom feed availability, robots/terms for automated feed collection, or individual Haewon appearances for all five proposed channels. SBSKPOP ZOOM ownership remains unverified. No broadcaster feed is enabled and no item is newly marked `broadcaster-official`.
 - JYP Gallery/Notice remain manual-link-only: robots.txt and automated collection permission were not verified. No photo collector, hidden endpoint, image download or rehosting was added. Android Chrome real-device QA remains unverified.
+
+## 2026-11-27 — Priority follow-up: prove multi-event persistence
+1. Complete unit tests for append-only history: old failure + later success + distinct later failure + replay dedupe + same query/different run.
+2. Verify Retry-After is stored only when the response header exists and that each query is fetched once; no blind retry.
+3. Pass PR CI and committed archive validation before merge.
+4. Inspect the next real Production run and compare its run log with `data/query-failure-history.json`. A second event counts only if the run actually reports a different failed query. Do not synthesize production events.
+5. Verify Production data commit, Pages artifact ID/hash, and deployment step independently from collection status.
+6. Keep JYP Gallery/Notice manual-link-only until robots/terms/permission evidence is explicit; keep broadcaster feeds disabled until exact channel IDs, public Atom feeds, terms/robots, and item-level Haewon appearances are verified.

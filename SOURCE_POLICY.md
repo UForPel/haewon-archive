@@ -84,3 +84,9 @@ Before enabling any source, verify channel ownership from the broadcaster's own 
 - SBSKPOP ZOOM: first-party ownership was not established in this review.
 
 These are evidence of official relationships only. Before enabling a collector, separately verify the exact YouTube channel ID, public Atom feed, robots/terms, and item-level Haewon appearance. Until then all five remain manual/research leads, not automatic sources. No video is marked broadcaster-official merely because a title or fan post mentions the broadcaster.
+
+## 2026-11-27 — Source-policy revalidation checkpoint
+- No permission evidence was found in this cycle that changes the current decision: NMIXX/JYP Gallery and Notice remain manual-link-only; robots/terms/automated metadata permission remain unverified.
+- KBS KPOP, MBCkpop, ALL THE K-POP and M2 remain research leads only. Exact channel IDs, public Atom feed behavior, feed-specific robots/terms and item-level Haewon appearance have not all been verified. SBSKPOP ZOOM ownership remains unverified.
+- Do not add broadcaster sources or assign `broadcaster-official` automatically. Do not enable YouTube Data API without a compliant 30-day refresh/deletion lifecycle.
+- Preserve 61 provenance-backed article-image previews as a separate metric from 0 standalone photo-post records; do not alter the 273 legacy shared-thumbnail assignments.
