@@ -18,8 +18,8 @@
     "nextDayPackIndex": 1
   },
   "evidence": {
-    "cumulativeDiscoveryCandidates": 922,
-    "currentRunCandidates": 81,
+    "cumulativeDiscoveryCandidates": 936,
+    "currentRunCandidates": 112,
     "uniqueVideoRecords": 20,
     "queryYield": [
       {
@@ -28,11 +28,11 @@
       },
       {
         "query": "오해원 인터뷰",
-        "candidates": 33
+        "candidates": 46
       },
       {
         "query": "NMIXX Haewon magazine",
-        "candidates": 13
+        "candidates": 12
       },
       {
         "query": "Haewon NMIXX editorial",
@@ -40,7 +40,7 @@
       },
       {
         "query": "해원 화보 인터뷰",
-        "candidates": 8
+        "candidates": 27
       },
       {
         "query": "Haewon profile interview",
@@ -49,8 +49,8 @@
     ],
     "highestYieldQueries": [
       "오해원 인터뷰",
-      "Haewon NMIXX editorial",
-      "Haewon NMIXX interview"
+      "해원 화보 인터뷰",
+      "Haewon NMIXX editorial"
     ]
   },
   "evaluation": {

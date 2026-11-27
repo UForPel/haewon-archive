@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-27T05:00:48.245Z",
+  "collectedAt": "2026-11-27T05:03:43.439Z",
   "searchPack": 1,
   "queries": [
     {
@@ -28,64 +28,64 @@
       "datedCandidates": 13,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 7477.6,
+      "medianPublicationLagHours": 7477.7,
       "p90PublicationLagHours": 15332.7
     },
     {
       "query": "오해원 인터뷰",
-      "candidates": 33,
+      "candidates": 46,
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 3,
-        "within90Days": 8,
-        "olderThan90Days": 22,
+        "within90Days": 11,
+        "olderThan90Days": 32,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 9
+        "within30DaysRate": 7
       },
-      "uniqueCandidates": 33,
+      "uniqueCandidates": 46,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 25,
-      "titleKeywordMatchRate": 76,
+      "titleKeywordMatches": 38,
+      "titleKeywordMatchRate": 83,
       "explicitPublisherUrls": 1,
-      "explicitPublisherUrlRate": 3,
-      "crossQueryDuplicateUrls": 1,
-      "datedCandidates": 33,
+      "explicitPublisherUrlRate": 2,
+      "crossQueryDuplicateUrls": 2,
+      "datedCandidates": 46,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 9598,
-      "p90PublicationLagHours": 85999.4
+      "medianPublicationLagHours": 11134.1,
+      "p90PublicationLagHours": 29638.1
     },
     {
       "query": "NMIXX Haewon magazine",
-      "candidates": 13,
+      "candidates": 12,
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 3,
-        "within90Days": 4,
+        "within90Days": 3,
         "olderThan90Days": 6,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 23
+        "within30DaysRate": 25
       },
-      "uniqueCandidates": 13,
+      "uniqueCandidates": 12,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 9,
-      "titleKeywordMatchRate": 69,
+      "titleKeywordMatches": 8,
+      "titleKeywordMatchRate": 67,
       "explicitPublisherUrls": 9,
-      "explicitPublisherUrlRate": 69,
+      "explicitPublisherUrlRate": 75,
       "crossQueryDuplicateUrls": 5,
-      "datedCandidates": 13,
+      "datedCandidates": 12,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 1438,
-      "p90PublicationLagHours": 19895.4
+      "medianPublicationLagHours": 4457.9,
+      "p90PublicationLagHours": 20531.9
     },
     {
       "query": "Haewon NMIXX editorial",
@@ -112,36 +112,36 @@
       "datedCandidates": 14,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 11167.6,
-      "p90PublicationLagHours": 28282.2
+      "medianPublicationLagHours": 11167.7,
+      "p90PublicationLagHours": 28282.3
     },
     {
       "query": "해원 화보 인터뷰",
-      "candidates": 8,
+      "candidates": 27,
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 0,
-        "within90Days": 1,
-        "olderThan90Days": 7,
+        "within90Days": 4,
+        "olderThan90Days": 23,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
         "within30DaysRate": 0
       },
-      "uniqueCandidates": 8,
+      "uniqueCandidates": 27,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 8,
-      "titleKeywordMatchRate": 100,
+      "titleKeywordMatches": 20,
+      "titleKeywordMatchRate": 74,
       "explicitPublisherUrls": 0,
       "explicitPublisherUrlRate": 0,
-      "crossQueryDuplicateUrls": 1,
-      "datedCandidates": 8,
+      "crossQueryDuplicateUrls": 2,
+      "datedCandidates": 27,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 13054,
-      "p90PublicationLagHours": 51203.7
+      "medianPublicationLagHours": 20182.1,
+      "p90PublicationLagHours": 54343.1
     },
     {
       "query": "Haewon profile interview",
@@ -178,12 +178,12 @@
   "bingCandidates": 31,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 81,
-  "uniqueIncoming": 72,
-  "added": 10,
+  "fetched": 112,
+  "uniqueIncoming": 102,
+  "added": 16,
   "rssImageSignals": {
-    "items": 50,
-    "sourceUrlItems": 49,
+    "items": 81,
+    "sourceUrlItems": 80,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -213,89 +213,20 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 3,
-    "found": 3,
-    "assigned": 3,
+    "attempted": 0,
+    "found": 0,
+    "assigned": 0,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 0,
     "failed": 0,
-    "results": [
-      {
-        "id": "ac8c7b7b6eacdb869bb4",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
-          "source": "og:image",
-          "priority": 1
-        },
-        "candidates": [
-          {
-            "url": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          {
-            "url": "https://image.idntimes.com/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
-            "source": "jsonld:image",
-            "priority": 5
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
-        "resolvedArticleHost": "www.idntimes.com"
-      },
-      {
-        "id": "49ca5ad1281318ba5b35",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
-          "source": "twitter:image",
-          "priority": 2
-        },
-        "candidates": [
-          {
-            "url": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
-            "source": "twitter:image",
-            "priority": 2
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
-        "resolvedArticleHost": "en.yna.co.kr"
-      },
-      {
-        "id": "76b51bf9c0a69f9d4268",
-        "status": "assigned",
-        "candidate": {
-          "url": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
-          "source": "twitter:image",
-          "priority": 2
-        },
-        "candidates": [
-          {
-            "url": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
-            "source": "twitter:image",
-            "priority": 2
-          }
-        ],
-        "assigned": true,
-        "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
-        "sourceUrl": "",
-        "resolvedArticleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
-        "resolvedArticleHost": "en.yna.co.kr"
-      }
-    ]
+    "results": []
   },
   "deduplicationComparison": {
-    "before": 81,
-    "after": 72,
-    "collapsed": 9,
+    "before": 112,
+    "after": 102,
+    "collapsed": 10,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 922
+  "totalCandidates": 936
 }

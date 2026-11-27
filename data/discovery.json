@@ -9205,7 +9205,13 @@
     "query": "오해원 인터뷰",
     "discoveredAt": "2026-11-27T05:00:48.245Z",
     "status": "candidate",
-    "relevanceScore": 6
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "94683f2727ed302a289e",
@@ -11390,6 +11396,42 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "af43ad45a5d930625180",
+    "title": "엔믹스 해원, 이니스프리 '레티놀 시카 모공흔적 앰플' 화보 공개 - 싱글리스트",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE03WFVvZHdUamVldl9kYXpobXZPUGpEWDZ2VHNhWEpJS3IxXzhrM1k5UFVVVGZPaGdkY24tLTJOd3dlTE1JWGFQVFVtNlJzbHNyTl9uNF9meF8zcFJrSFI2ZDJ2THJXQQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.slist.kr",
+    "publishedAt": "2026-09-22T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE03WFVvZHdUamVldl9kYXpobXZPUGpEWDZ2VHNhWEpJS3IxXzhrM1k5UFVVVGZPaGdkY24tLTJOd3dlTE1JWGFQVFVtNlJzbHNyTl9uNF9meF8zcFJrSFI2ZDJ2THJXQQ?oc=5\" target=\"_blank\">엔믹스 해원, 이니스프리 '레티놀 시카 모공흔적 앰플' 화보 공개</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">싱글리스트</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
+    "id": "79d5038b7fb57efde71e",
+    "title": "엔믹스 해원, 매끈하게 빛나는 피부 자신감…생기 넘치는 분위기 [화보] - 픽콘",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1teDN4WUtWcV94ZU5FMmtfVkhVODBDU212a3B1Njh4OUJZeVh0c1g5eE91TXIteWctWUY3NFhFNkZwWjZ5bnI5V1pTWEpGc3F3Yl8xb3MxbUZKdjdnT1hBS3BpaE91X1I3QnAtVlVkVlpNWE5yMFY0cGpB?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://pickcon.co.kr",
+    "publishedAt": "2026-09-22T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE1teDN4WUtWcV94ZU5FMmtfVkhVODBDU212a3B1Njh4OUJZeVh0c1g5eE91TXIteWctWUY3NFhFNkZwWjZ5bnI5V1pTWEpGc3F3Yl8xb3MxbUZKdjdnT1hBS3BpaE91X1I3QnAtVlVkVlpNWE5yMFY0cGpB?oc=5\" target=\"_blank\">엔믹스 해원, 매끈하게 빛나는 피부 자신감…생기 넘치는 분위기 [화보]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">픽콘</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 4
   },
   {
     "id": "121e843691e51a7f4f87",
@@ -13594,6 +13636,24 @@
     "candidateSource": ""
   },
   {
+    "id": "53b07c8a6682ae702b84",
+    "title": "엔믹스 해원이 찍으니 금융 화보도 특별한걸~! - 뉴스버즈",
+    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE01WXVVaFllYlA2cGVGbFJlSy13ZDZJWWl4RGpyR2d1RDl6Tjd4bVpkMVhLMmJnc2U0b2pXZnRka3F3aVMwSmdhTmhEM1pVYTRrck94T2pFMm5DMldGb1pVRktraVhZaGRmTmR0TA?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.newsbuzz.co.kr",
+    "publishedAt": "2025-12-23T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTE01WXVVaFllYlA2cGVGbFJlSy13ZDZJWWl4RGpyR2d1RDl6Tjd4bVpkMVhLMmJnc2U0b2pXZnRka3F3aVMwSmdhTmhEM1pVYTRrck94T2pFMm5DMldGb1pVRktraVhZaGRmTmR0TA?oc=5\" target=\"_blank\">엔믹스 해원이 찍으니 금융 화보도 특별한걸~!</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스버즈</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "25b6279bf18574f613bc",
     "title": "엔믹스 해원 '완벽한 옆태'[포토엔HD] - 네이트",
     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5vUzI1VGdkSU5sSkxkUjBBZFBIYXJxSFFkeDVRVElrYXNURUt1RnBnVDVUUFNIY0V5cDRYaWFuQkp0bE0yc0VYTkw4Z2JrbWpnVXpv?oc=5",
@@ -13941,6 +14001,24 @@
     "candidateSource": ""
   },
   {
+    "id": "d3865f6dec8ac4d70054",
+    "title": "엔믹스 해원-설윤, “화보 찢은 투샷” 서 있기만 해도 장면 완성(‘W Korea’ 포토월) [TOP영상] - 톱스타뉴스",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5JSUtHZVRDRTl6UlNPekg3bFpjcXpuUnpNWXc2THBrSDdKVFRrN0NtbXpGQl9qc1ZMMWkyaDJ4QzA2WFdsYWxJeFpaU2x6SHdLRzRnYVFJNlZaRFlrUVljdEg1cDFrUmpYRnhDdXBpcGphZw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.topstarnews.net",
+    "publishedAt": "2025-10-15T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE5JSUtHZVRDRTl6UlNPekg3bFpjcXpuUnpNWXc2THBrSDdKVFRrN0NtbXpGQl9qc1ZMMWkyaDJ4QzA2WFdsYWxJeFpaU2x6SHdLRzRnYVFJNlZaRFlrUVljdEg1cDFrUmpYRnhDdXBpcGphZw?oc=5\" target=\"_blank\">엔믹스 해원-설윤, “화보 찢은 투샷” 서 있기만 해도 장면 완성(‘W Korea’ 포토월) [TOP영상]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">톱스타뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "c79b913cd5269566f6e2",
     "title": "'육각형 걸그룹' 엔믹스, 오늘(13일) 데뷔 첫 정규…해원·릴리 작사 참여 - www.xportsnews.com",
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE43czlzNllSTU4zaVVpTnRkWVpucTdxUzc1bmM4RVlxZkZOaG9tbWJsdW04NndEVFFZdmhaN3V0bWU1b3NKS2dWdFpNQTJtSDdST2NBdA?oc=5",
@@ -14045,7 +14123,13 @@
     "query": "해원 화보 인터뷰",
     "discoveredAt": "2026-11-27T05:00:48.245Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "55361d9baad8fcb26598",
@@ -15192,6 +15276,24 @@
     "candidateSource": ""
   },
   {
+    "id": "31faf8b7725cac7c71fe",
+    "title": "르꼬끄스포르티브, 엔믹스 해원·설윤과 스타일리시한 캠페인 화보 공개 - 패션비즈",
+    "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB0bGRMQTZZLVlEQ0ZUNjlhYzdUZzdVTkc1aWY3MjR3dlR1XzZ1TzdDYUVzQmczRUhGYUZUUVZYRTdlQmxReEVNZWsxdlNFRlJS?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://fashionbiz.co.kr",
+    "publishedAt": "2024-11-27T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFB0bGRMQTZZLVlEQ0ZUNjlhYzdUZzdVTkc1aWY3MjR3dlR1XzZ1TzdDYUVzQmczRUhGYUZUUVZYRTdlQmxReEVNZWsxdlNFRlJS?oc=5\" target=\"_blank\">르꼬끄스포르티브, 엔믹스 해원·설윤과 스타일리시한 캠페인 화보 공개</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">패션비즈</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "67566c2ca360fdc40dc3",
     "title": "엔믹스 해원, '워크돌' 시즌3도 출석 췤…그룹 활동도 날아오를까 [엑's 초점] - 엑스포츠뉴스",
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE45VnY4T3hMcVFDa2czemVHSU1QUlZZeFktRVl3ZTlkeDJyQkZ2LWNGcUV6TDNnbGx4V1JjcFJhck1hYjMzMVVtU2JKQ2pfX2thWU5JcQ?oc=5",
@@ -15351,6 +15453,24 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "publisherArticleUrl": ""
+  },
+  {
+    "id": "8a175fc82092371565de",
+    "title": "엔믹스 해원·설윤, 르꼬끄 모델 발탁→패딩화보로 '외모체크' - 싱글리스트",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE90X0xEaWY1TDlsSlRmb2s1M29OT21Zb25EMmh6X2VMLWs3ZDFCQ0Ntek5IdVdfcFBzYTZzRTlZV3AwSmJkWEdZSGY5SDBkblU1dEhCNDkxQ09kSEdyQVpmU0hmVnF5QQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.slist.kr",
+    "publishedAt": "2024-10-10T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE90X0xEaWY1TDlsSlRmb2s1M29OT21Zb25EMmh6X2VMLWs3ZDFCQ0Ntek5IdVdfcFBzYTZzRTlZV3AwSmJkWEdZSGY5SDBkblU1dEhCNDkxQ09kSEdyQVpmU0hmVnF5QQ?oc=5\" target=\"_blank\">엔믹스 해원·설윤, 르꼬끄 모델 발탁→패딩화보로 '외모체크'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">싱글리스트</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 4
   },
   {
     "id": "7b06fa1440f3f0e7f75f",
@@ -17180,6 +17300,24 @@
     "publisherArticleUrl": ""
   },
   {
+    "id": "71f21d8dea79abebc976",
+    "title": "엔믹스 해원, 우유빛 피부와 반짝이는 눈망울 [포토화보] - 더쎈뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5BRkRCdGRVaHhTUFgtdmdyY3pSMnRfUWlubXdLdXNWc09DY0RyMF96VnpEQzM1S1V2ZnRqWUNVbFBid01NdFVhYmVOQ1J2RXU4YWNkVUJqUHJuczNhaV95SnlmaDdtcXdp?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.mhns.co.kr",
+    "publishedAt": "2022-09-20T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE5BRkRCdGRVaHhTUFgtdmdyY3pSMnRfUWlubXdLdXNWc09DY0RyMF96VnpEQzM1S1V2ZnRqWUNVbFBid01NdFVhYmVOQ1J2RXU4YWNkVUJqUHJuczNhaV95SnlmaDdtcXdp?oc=5\" target=\"_blank\">엔믹스 해원, 우유빛 피부와 반짝이는 눈망울 [포토화보]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">더쎈뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "90ea09550d792ddf4ba4",
     "title": "[포토] 엔믹스 해원, '깜찍한 모습으로 브이' - 한국경제",
     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBFYjZvRWplWXVmUV8tNzk4NDJCY20zS09xMkpBQWFuNDZSb0hzQm9lVWtGaS1ocjVuek0tOU1JdFh0X0tKNjhxNnVFeGpadWpaMFBsQXRqbVdvQQ?oc=5",
@@ -17709,7 +17847,13 @@
     "query": "해원 화보 인터뷰",
     "discoveredAt": "2026-11-27T05:00:48.245Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "8b12fcdc49043d1b4db3",
@@ -22571,6 +22715,24 @@
     "candidateSource": ""
   },
   {
+    "id": "5a40e54f43e3ab578ab5",
+    "title": "모두가 에이스, 확신의 엔믹스 - 엘르 코리아 │ ELLE KOREA",
+    "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE80ZjE5SEk1Tlh6VFhaSDBvdzJFdVRvS1oxZy15eXVwZ1c3NmlCR2hMX0RFTGR2NWRtT1hsNUgwT2MzWFNNN3Z4TU9lSHA?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.elle.co.kr",
+    "publishedAt": "2022-11-23T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE80ZjE5SEk1Tlh6VFhaSDBvdzJFdVRvS1oxZy15eXVwZ1c3NmlCR2hMX0RFTGR2NWRtT1hsNUgwT2MzWFNNN3Z4TU9lSHA?oc=5\" target=\"_blank\">모두가 에이스, 확신의 엔믹스</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">엘르 코리아 │ ELLE KOREA</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
     "id": "518f637ba10edde0ddd8",
     "title": "'JYP 신예' 엔믹스, 첫 컴백 활동 성료…'다이스' 챌린지 화제 - iMBC 연예",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5laEJIRE5tLW1uUGhKMlJWSVd2ZkFfX3lnOTRWMnpGVkViNWNPSlh3LXFJV29wdXJpZWhYcW9XR1FILUJRckluZFItY1pSYTRucGZkNThCLXI1MWNfRV94UQ?oc=5",
@@ -22641,6 +22803,42 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "372a4fcbd5ecf3f6ce94",
+    "title": "NMIXX 막내 규진 \"K팝계에 없어서는 안 될 그룹 되고파\"[화보] - 픽콘",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1YcjN3UFhEVjZNZjZKODFlVmJ4R051VWtWd005MUlrcmsyd1cwTEI2Tk9CYmxuakNFeFRKUnpwU3R0SW1pRy10aDNqWmgyN19nLVRCWUFTaUFlQ0FpQk13cTdBTElMNVV4dDdteVQ3dkN5cHRCYzRDOWFR?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://pickcon.co.kr",
+    "publishedAt": "2022-02-21T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE1YcjN3UFhEVjZNZjZKODFlVmJ4R051VWtWd005MUlrcmsyd1cwTEI2Tk9CYmxuakNFeFRKUnpwU3R0SW1pRy10aDNqWmgyN19nLVRCWUFTaUFlQ0FpQk13cTdBTElMNVV4dDdteVQ3dkN5cHRCYzRDOWFR?oc=5\" target=\"_blank\">NMIXX 막내 규진 \"K팝계에 없어서는 안 될 그룹 되고파\"[화보]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">픽콘</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 2
+  },
+  {
+    "id": "0bc7b3651c08d91dd10b",
+    "title": "JYP 새 걸그룹 엔믹스 지우X배이, 정식 데뷔 전부터 명품 카리스마 - 뉴스엔",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5EanFFMEJGMDEydXJRT1c5ajJWQ0RyMXN1ZU53Sno4U3Nmc0JMc1pTZzM1RjJPaV96QmZHMU9vWUttWWt1LWFrQnRTbzBVeTZpY2czd3VSWW1CWUo5T3ozb2VZd1NnWWRl?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.newsen.com",
+    "publishedAt": "2022-02-17T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE5EanFFMEJGMDEydXJRT1c5ajJWQ0RyMXN1ZU53Sno4U3Nmc0JMc1pTZzM1RjJPaV96QmZHMU9vWUttWWt1LWFrQnRTbzBVeTZpY2czd3VSWW1CWUo5T3ozb2VZd1NnWWRl?oc=5\" target=\"_blank\">JYP 새 걸그룹 엔믹스 지우X배이, 정식 데뷔 전부터 명품 카리스마</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스엔</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 2
   },
   {
     "id": "a73cad50b3459a7bad02",
@@ -22730,7 +22928,13 @@
     "query": "해원 화보 인터뷰",
     "discoveredAt": "2026-11-27T05:00:48.245Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "51281fb4fc1e90be8f65",
@@ -23019,6 +23223,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "45f4bccf7d6c95a37dd5",
+    "title": "김윤혜 “성형 오해와 악플 견디며 단단해졌다”(인터뷰) - 뉴스엔",
+    "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5FejdaRWM3cUR2WEpabWpKdlJsNDNSM3RpMWs5OWpxWFFQRnJqRXRBd3dDQlBRdnBfbEEzXy1LUkxlcTVHNXkyaW14ai1leTc1YjdjTnU4aURRNjJjZnYzenRWaWo4RUI4?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://m.newsen.com",
+    "publishedAt": "2013-10-28T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE5FejdaRWM3cUR2WEpabWpKdlJsNDNSM3RpMWs5OWpxWFFQRnJqRXRBd3dDQlBRdnBfbEEzXy1LUkxlcTVHNXkyaW14ai1leTc1YjdjTnU4aURRNjJjZnYzenRWaWo4RUI4?oc=5\" target=\"_blank\">김윤혜 “성형 오해와 악플 견디며 단단해졌다”(인터뷰)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">뉴스엔</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 1
   },
   {
     "id": "1a56ee676db5f3385be3",
@@ -24609,6 +24831,42 @@
     "candidateSource": ""
   },
   {
+    "id": "d1bb6d9bb433f450c5d8",
+    "title": "연예계에서 극히 드물다는 은은한 광기 ‘ESTP’ 아이돌 4 - 코스모폴리탄 코리아",
+    "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE4yVl9CNVdfYXB1LVZVTDVCNW9uX3JGMXhSR0FRa0ZTa2dzOHhmNFREbXVJRkhtd1hjeDdsaGtWVHdwemMzYVVZX1BJQm1FOFZHOThmVWY4QQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.cosmopolitan.co.kr",
+    "publishedAt": "2022-09-21T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE4yVl9CNVdfYXB1LVZVTDVCNW9uX3JGMXhSR0FRa0ZTa2dzOHhmNFREbXVJRkhtd1hjeDdsaGtWVHdwemMzYVVZX1BJQm1FOFZHOThmVWY4QQ?oc=5\" target=\"_blank\">연예계에서 극히 드물다는 은은한 광기 ‘ESTP’ 아이돌 4</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">코스모폴리탄 코리아</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
+    "id": "f286bd230c84c8318cb2",
+    "title": "‘플로리다반점’ 차우민 “배우다운 배우 되고파” [화보] - 스포츠동아",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5Ea1praGl5NFRPS0tDMkRkeGZEcjhYdlZUN3hXNmtiUGdMdkVxdHY4a0J0TUR2X3BfV1NhdmlMMWY2T1lmVVdsaHNtNFZ4dEZCS2FxYWFkQjIwWEI2S3VoWENXTUNhYWtGSzJ3LTFR?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://sports.donga.com",
+    "publishedAt": "2022-03-25T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE5Ea1praGl5NFRPS0tDMkRkeGZEcjhYdlZUN3hXNmtiUGdMdkVxdHY4a0J0TUR2X3BfV1NhdmlMMWY2T1lmVVdsaHNtNFZ4dEZCS2FxYWFkQjIwWEI2S3VoWENXTUNhYWtGSzJ3LTFR?oc=5\" target=\"_blank\">‘플로리다반점’ 차우민 “배우다운 배우 되고파” [화보]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">스포츠동아</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 0
+  },
+  {
     "id": "514969bad5ae57b45d1d",
     "title": "한국인 원폭 피해자 삶·고통 기억해요 - 경남도민일보",
     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1VOFhHYWpQTExrQmpzdlZLd0xUd1Zna0lqQXF6eThjVDNMLVR1N3hMYUlyeElQUURfTnFuQTFET3RPRWFvRExLY2tzUWx0cjNkWmY0S3A4ZFJ5Z1lFR3YwM2pfQ0dqbXVf?oc=5",
@@ -24762,6 +25020,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "fe18f70cb1b7e9a286c3",
+    "title": "'베를린의 여인' 정은채, 상큼한 봄 화보 공개 - 스타데일리뉴스",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0yTlZsUXQwSnh6SUotMURfenhWMFdtRGprTUgxcEpwMG9fWm5iOWhrMl82R2NyclF1XzU0Sl9Qd0RNSHpyd05JZFBPZksxamVVXzA0NDRZYTdEV0xsajZzS2V6NjktV3RhY042ODltb0pqcm8?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.stardailynews.co.kr",
+    "publishedAt": "2013-02-20T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE0yTlZsUXQwSnh6SUotMURfenhWMFdtRGprTUgxcEpwMG9fWm5iOWhrMl82R2NyclF1XzU0Sl9Qd0RNSHpyd05JZFBPZksxamVVXzA0NDRZYTdEV0xsajZzS2V6NjktV3RhY042ODltb0pqcm8?oc=5\" target=\"_blank\">'베를린의 여인' 정은채, 상큼한 봄 화보 공개</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">스타데일리뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:03:43.439Z",
+    "status": "candidate",
+    "relevanceScore": 0
   },
   {
     "id": "e20f5b73ec48017860a6",

@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-11-27T05:00:52.766Z",
+  "generatedAt": "2026-11-27T05:03:46.448Z",
   "discoveryRelevance": {
-    "totalCandidates": 922,
-    "articleCandidates": 735,
+    "totalCandidates": 936,
+    "articleCandidates": 749,
     "videoCandidates": 187,
     "verifiedPublisherArticles": 110,
     "verifiedHaewonArticles": 84,
     "verifiedPublisherArticlesWithProvenanceThumbnail": 83,
     "verifiedHaewonWithProvenanceThumbnail": 62,
-    "haewonTitleMatches": 550,
-    "nmixxTitleMatches": 572,
-    "otherArticleCandidates": 82,
+    "haewonTitleMatches": 557,
+    "nmixxTitleMatches": 582,
+    "otherArticleCandidates": 86,
     "defaultScope": "haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 922,
+    "totalItems": 936,
     "itemsWithPublisherArticleUrl": 111,
     "bingNewsItems": 114,
     "candidateSourceCounts": {
@@ -129,12 +129,12 @@
       "youtu.be": 105,
       "www.xportsnews.com": 36,
       "news.nate.com": 35,
-      "m.newsen.com": 26,
+      "m.newsen.com": 28,
       "enews.imbc.com": 25,
       "sports.khan.co.kr": 19,
       "www.chosun.com": 18,
-      "www.slist.kr": 16,
-      "www.topstarnews.net": 13,
+      "www.slist.kr": 18,
+      "www.topstarnews.net": 14,
       "www.newsis.com": 12,
       "www.tvj.co.kr": 12,
       "www.sedaily.com": 11,
@@ -149,10 +149,10 @@
       "pann.nate.com": 8,
       "www.breaknews.com": 8,
       "www.etnews.com": 7,
+      "sports.donga.com": 7,
       "www.bntnews.co.kr": 6,
       "www.wikitree.co.kr": 6,
       "www.mk.co.kr": 6,
-      "sports.donga.com": 6,
       "isplus.com": 6,
       "www.rnx.kr": 6,
       "www.blogchart.co.kr": 5,
@@ -164,6 +164,7 @@
       "www.news1.kr": 4,
       "www.fnnews.com": 4,
       "www.nocutnews.co.kr": 4,
+      "www.stardailynews.co.kr": 4,
       "www.nc.press": 4,
       "tvreport.co.kr": 3,
       "www.ytn.co.kr": 3,
@@ -171,7 +172,7 @@
       "www.starnewskorea.com": 3,
       "www.marieclairekorea.com": 3,
       "www.ajunews.com": 3,
-      "www.stardailynews.co.kr": 3,
+      "pickcon.co.kr": 3,
       "news.jtbc.co.kr": 3,
       "www.psnews.co.kr": 3,
       "www.mt.co.kr": 2,
@@ -187,10 +188,13 @@
       "www.mksports.co.kr": 2,
       "v.daum.net": 2,
       "m.ekn.kr": 2,
+      "www.elle.co.kr": 2,
       "www.mydaily.co.kr": 2,
       "newsen.com": 2,
       "www.newsinside.kr": 2,
       "www.pharmnews.com": 2,
+      "www.mhns.co.kr": 2,
+      "www.cosmopolitan.co.kr": 2,
       "mobile.newsis.com": 2,
       "m.sedaily.com": 2,
       "m.imbc.com": 2,
@@ -219,7 +223,6 @@
       "www.mediafine.co.kr": 1,
       "www.spotvnews.co.kr": 1,
       "www.etoday.co.kr": 1,
-      "www.elle.co.kr": 1,
       "www.peoplewatch.co.kr": 1,
       "classian.co.kr": 1,
       "www.cmn.co.kr": 1,
@@ -233,19 +236,18 @@
       "www.ggilbo.com": 1,
       "www.yonhapnewstv.co.kr": 1,
       "www.thepowernews.co.kr": 1,
+      "www.newsbuzz.co.kr": 1,
       "www.brandbrief.co.kr": 1,
       "www.hitnews.co.kr": 1,
       "m.nocutnews.co.kr": 1,
       "pharm.edaily.co.kr": 1,
       "www.newspim.com": 1,
       "www.thefairnews.co.kr": 1,
-      "www.mhns.co.kr": 1,
+      "fashionbiz.co.kr": 1,
       "www.newstap.co.kr": 1,
-      "www.cosmopolitan.co.kr": 1,
       "sports.hankooki.com": 1,
       "www.ilyoseoul.co.kr": 1,
       "www.entermedia.co.kr": 1,
-      "pickcon.co.kr": 1,
       "www.hankookilbo.com": 1,
       "masilwide.com": 1,
       "www.beyondpost.co.kr": 1,
@@ -298,17 +300,17 @@
       "twitter:image:src": 1
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 563,
+    "missingThumbnailCount": 577,
     "sourceProvenanceCoverage": 24
   },
   "thumbnailMissingDiagnostics": {
-    "items": 922,
-    "missing": 563,
-    "classified": 563,
+    "items": 936,
+    "missing": 577,
+    "classified": 577,
     "unclassified": 0,
     "byReason": {
       "publisher-fetch-failed:forbidden": 9,
-      "google-news-wrapper-without-publisher-article-url": 523,
+      "google-news-wrapper-without-publisher-article-url": 537,
       "publisher-page-no-image-candidate": 17,
       "publisher-fetch-failed:method-not-allowed": 1,
       "publisher-fetch-failed:network-error": 1,
@@ -317,12 +319,12 @@
     "bySource": [
       {
         "source": "Google News",
-        "items": 808,
-        "missing": 535,
+        "items": 822,
+        "missing": 549,
         "missingWithPublisherArticleUrl": 0,
-        "missingWithSourceSiteUrl": 465,
+        "missingWithSourceSiteUrl": 479,
         "reasons": {
-          "google-news-wrapper-without-publisher-article-url": 523,
+          "google-news-wrapper-without-publisher-article-url": 537,
           "wrapper-only-not-followed": 12
         }
       },
@@ -834,16 +836,16 @@
     ]
   },
   "thumbnailAudit": {
-    "items": 922,
+    "items": 936,
     "withThumbnail": 359,
-    "missing": 563,
+    "missing": 577,
     "uniqueThumbnailUrls": 87,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 9,
     "uniqueThumbnailAssignmentRate": 24,
     "dominantThumbnailCount": 273,
-    "dominantThumbnailShare": 30,
+    "dominantThumbnailShare": 29,
     "concentrationWarning": true,
     "repeatedUrls": [
       {
@@ -1112,111 +1114,42 @@
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "disabled",
     "videosTotal": 20,
-    "newsCandidatesTotal": 922,
-    "newsUniqueFetched": 72,
-    "newsAddedLastRun": 10,
-    "duplicateBeforeMergeLastRun": 9,
-    "duplicateGroupsCurrent": 922,
+    "newsCandidatesTotal": 936,
+    "newsUniqueFetched": 102,
+    "newsAddedLastRun": 16,
+    "duplicateBeforeMergeLastRun": 10,
+    "duplicateGroupsCurrent": 936,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 81,
-      "after": 72,
-      "collapsed": 9,
+      "before": 112,
+      "after": 102,
+      "collapsed": 10,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 3,
-      "found": 3,
-      "assigned": 3,
+      "attempted": 0,
+      "found": 0,
+      "assigned": 0,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
       "failed": 0,
-      "results": [
-        {
-          "id": "ac8c7b7b6eacdb869bb4",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
-            "source": "og:image",
-            "priority": 1
-          },
-          "candidates": [
-            {
-              "url": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
-              "source": "og:image",
-              "priority": 1
-            },
-            {
-              "url": "https://image.idntimes.com/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
-              "source": "jsonld:image",
-              "priority": 5
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
-          "resolvedArticleHost": "www.idntimes.com"
-        },
-        {
-          "id": "49ca5ad1281318ba5b35",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
-            "source": "twitter:image",
-            "priority": 2
-          },
-          "candidates": [
-            {
-              "url": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
-              "source": "twitter:image",
-              "priority": 2
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
-          "resolvedArticleHost": "en.yna.co.kr"
-        },
-        {
-          "id": "76b51bf9c0a69f9d4268",
-          "status": "assigned",
-          "candidate": {
-            "url": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
-            "source": "twitter:image",
-            "priority": 2
-          },
-          "candidates": [
-            {
-              "url": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
-              "source": "twitter:image",
-              "priority": 2
-            }
-          ],
-          "assigned": true,
-          "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
-          "sourceUrl": "",
-          "resolvedArticleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
-          "resolvedArticleHost": "en.yna.co.kr"
-        }
-      ]
+      "results": []
     }
   },
   "sources": [
     {
       "source": "Google News",
-      "items": 808,
-      "withUrl": 808,
+      "items": 822,
+      "withUrl": 822,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 808,
+      "withDate": 822,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
-      "thumbnailCoverage": 34,
+      "thumbnailCoverage": 33,
       "dateCoverage": 100
     },
     {
@@ -1937,12 +1870,12 @@
     }
   ],
   "classification": {
-    "items": 922,
+    "items": 936,
     "categoryCounts": {
       "video": 187,
-      "interview": 65,
-      "news": 562,
-      "brand": 35,
+      "interview": 66,
+      "news": 565,
+      "brand": 45,
       "event": 18,
       "performance": 46,
       "official": 14
@@ -2875,9 +2808,9 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 1,
+    "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 563,
+    "thumbnailMissing": 577,
     "results": [
       {
         "kind": "article",
@@ -2978,8 +2911,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBLTnIwX2RZRkdDZzRSSmhjRHZaUC1ab2NVcFNhSmhvYlhoRmxJX0tJNEFIdmRfV2NCZjlqcFBHSE9UWDgyZHhFdkhid0thaGFGTXJsVU1TYnY1OHZR?oc=5",
-        "status": 429,
-        "ok": false
+        "status": 200,
+        "ok": true
       },
       {
         "kind": "article",
@@ -3134,12 +3067,12 @@
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
     "metaFound": 86,
-    "metaAssigned": 3,
-    "assignmentRate": 100,
-    "latestRunAttempted": 3,
-    "latestRunFound": 3,
-    "latestRunAssigned": 3,
-    "latestRunAssignmentRate": 100,
+    "metaAssigned": 0,
+    "assignmentRate": null,
+    "latestRunAttempted": 0,
+    "latestRunFound": 0,
+    "latestRunAssigned": 0,
+    "latestRunAssignmentRate": null,
     "persistedMetaCandidateRecords": 86,
     "persistedThumbnailRecords": 86,
     "persistedThumbnailRecordsTotal": 359,
@@ -3932,8 +3865,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -4545,8 +4478,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -4586,8 +4519,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -5495,7 +5428,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-27T05:00:52.808Z",
+    "generatedAt": "2026-11-27T05:03:46.485Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -7532,11 +7465,11 @@
     "checked": 12,
     "total": 84,
     "counts": {
-      "http-responded": 10,
+      "http-responded": 7,
       "blocked": 2,
       "paywall": 0,
       "not-found": 0,
-      "uncertain": 0
+      "uncertain": 3
     },
     "results": [
       {
@@ -7590,10 +7523,11 @@
       {
         "articleId": "32964a7facfebdec9f38",
         "url": "https://www.mk.co.kr/en/hot-issues/11070438",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.mk.co.kr",
-        "method": "HEAD"
+        "status": null,
+        "state": "uncertain",
+        "finalHost": "",
+        "method": "HEAD",
+        "error": "TimeoutError"
       },
       {
         "articleId": "b9889446cfd423ab2196",
@@ -7614,18 +7548,20 @@
       {
         "articleId": "e74f0cd5f348cd454df9",
         "url": "https://www.mk.co.kr/en/musics/10921328",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.mk.co.kr",
-        "method": "HEAD"
+        "status": null,
+        "state": "uncertain",
+        "finalHost": "",
+        "method": "HEAD",
+        "error": "TimeoutError"
       },
       {
         "articleId": "01d43afc81bf8da93d4a",
         "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008299351",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "sbsstar.net",
-        "method": "HEAD"
+        "status": null,
+        "state": "uncertain",
+        "finalHost": "",
+        "method": "HEAD",
+        "error": "TimeoutError"
       },
       {
         "articleId": "b163034ca145278d9390",
