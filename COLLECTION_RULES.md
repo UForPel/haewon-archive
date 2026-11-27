@@ -565,3 +565,9 @@ Preserve the 273 legacy shared-thumbnail assignments unchanged. Current total re
 - Preserve already collected video records and their source attribution; do not delete historical items as part of disabling collection.
 - YouTube Data API remains disabled until a compliant 30-day refresh/deletion lifecycle is implemented and reviewed. The Production workflow must not pass the API secret to the collector while disabled.
 - Re-enable only after explicit documented authorization, policy review, tests and a human-approved PR.
+
+
+## Production confirmation — 2026-11-27 #621
+- Production #621 is the first post-merge live confirmation of the YouTube Atom disablement: source outcome skipped, 0 items seen, collector output networkRequests: 0, and 20 existing video records retained.
+- The append-only query failure history still contains the single confirmed #617 429 event after the #620 and #621 successful runs. No additional real failure occurred in #621; do not create synthetic entries.
+- Continue to record actual failures once per run/source/query, Retry-After only when present in the real response headers, and no blind retries.

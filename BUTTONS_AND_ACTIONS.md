@@ -713,3 +713,21 @@ Production 수집, 데이터 커밋, artifact 업로드, SHA-256, Pages deploy s
 
 매 사이클 일곱 문서를 갱신하고 PR CI와 전체 데이터 검증 성공 후에만 병합한다. Android Chrome 실기기 QA는 사용자가 직접 완료하기 전까지 미검증으로 표시한다. 코드·테스트·Production·데이터·Pages·Android QA를 구분 보고하고 최신 main SHA, PR/Actions 링크, 지표, 미완료 항목과 다음 대화용 전체 지시 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
 ```
+
+## 2026-11-27 — Production #621 verified continuation
+- **Visible label:** 🔄 연구 기반 재귀개선 계속하기
+- **Action:** submit the complete next-cycle instruction below as a new ChatGPT turn.
+
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main은 bf5e6b925b2c5cae351fc7759b2ae088fce110b6이다. 먼저 최신 main, 열린 PR, Actions, Production, 데이터 커밋, artifact SHA-256, Pages 배포를 실제 조회하고 SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md, COLLECTION_RULES.md, CHATGPT_OPERATING_RULES.md, SOURCE_POLICY.md를 먼저 읽는다.
+
+최우선은 2026-11-27 20:17 KST 예약 Production 실행 확인이다. Production #621은 PR #71 병합에 따른 push 이벤트로 성공했으며 cron 실행이 아니다. #621 run 45943216118, data commit bf5e6b925b2c5cae351fc7759b2ae088fce110b6, PR CI 223/223 성공, Production 223/223 성공을 구분한다. 예약 실행은 별도로 확인하고, 실행 로그·실패 이력·데이터 커밋·artifact SHA-256·Pages 배포를 각각 조사한다.
+
+YouTube Atom collector는 비활성 상태여야 한다. nmixx-youtube skipped, networkRequests 0, videos.json 20개 보존 여부를 확인한다. YouTube Data API는 30일 갱신/삭제 lifecycle 구현 및 검토 전까지 비활성 상태이며 workflow에서 YOUTUBE_API_KEY를 전달하지 않는다. robots.txt와 약관 근거가 바뀌지 않으면 어떤 채널도 Atom 자동 수집하지 않는다.
+
+#617의 실제 429 이벤트가 append-only data/query-failure-history.json에 남아 있는지 확인한다. 다른 검색어의 실제 실패가 발생하면 별도 이벤트가 추가되는지, 이후 성공에서도 두 이벤트가 유지되는지 확인한다. 실패가 없으면 합성 이벤트 금지. Retry-After는 실제 헤더가 있을 때만 기록하고 blind retry 금지.
+
+현재 #621 지표 기준은 922 후보(735 기사, 187 비디오), publisherArticleUrl 111개, 검증된 해원 기사 84개, 기사 이미지 미리보기 62개, 독립 사진 0개, 썸네일 할당 359개, 누락 563개, 레거시 공유 할당 273개다. 기사 이미지와 독립 사진을 합산하거나 혼동하지 않는다. KBS Kpop ID UCeLPm9yH_a_QH8n6445G-Ow, M2 ID UCTQVIXvcHrR9jYoJ6qaBAow, MBCkpop ID UCe52oeb7Xv_KaJsEzcKXJJg, ALL THE K-POP ID UCPde4guD9yFBRzkxk2PatoA는 출처 식별 정보로만 보존한다. 방송사 수집기 및 broadcaster-official 자동분류 금지. JYP/NMIXX Gallery·Notice 수집기 구현 금지. SBSKPOP ZOOM은 1차 출처 소유권 미확인 상태로 유지한다.
+
+매 사이클 일곱 문서를 갱신하고 PR CI와 전체 데이터 검증 성공 후에만 병합한다. Android Chrome 실기기 QA는 사용자가 직접 완료하기 전까지 미검증. 코드·테스트·Production·데이터·Pages·Android QA를 구분 보고하고 최신 main SHA, PR/Actions 링크, 지표, 미완료 항목과 다음 대화용 전체 지시 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
+```

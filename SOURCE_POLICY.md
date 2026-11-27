@@ -126,3 +126,10 @@ These are evidence of official relationships only. Before enabling a collector, 
 
 ### YouTube automated-access restriction
 YouTube's Terms prohibit automated access except public search engines following robots.txt or prior written permission. The current robots.txt disallows `/feeds/videos.xml` for general user agents. Accordingly, public Atom feed polling is not approved for this project. Channel identity and public visibility are not collection permission.
+
+
+## 2026-11-27 — Production #621 confirmation
+- PR #71 disabled the legacy NMIXX Atom collector and was merged after 223/223 PR CI tests and committed-data validation passed.
+- Production #621 confirmed the source as skipped, zero items seen, zero Atom network requests and 20 historical video records retained. YouTube Data API also remained disabled-policy; the workflow did not pass its secret.
+- This is operational confirmation for the push-triggered #621 run only. The 20:17 KST scheduled run still requires separate verification.
+- Current quality data after #621: 62 provenance-backed article-image previews and 0 standalone photo records. Preserve the distinction; the article-image metric rose from 61 to 62 due this collection cycle.

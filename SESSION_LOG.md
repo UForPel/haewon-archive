@@ -1942,3 +1942,16 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 - #620 artifact 15166123904 reports SHA-256 e37e5f81b8bf3349e1dc55ac90af9bcd9a95ec971f13f79874cdc6319e819a31; deploy-pages and artifact upload steps succeeded. Live site was not independently opened.
 - #619 failed separately at JSON validation and did not produce a successful deploy. #620 succeeded.
 - Android Chrome real-device QA remains unverified.
+
+
+## 2026-11-27 — PR #71 and Production #621 final verification
+- PR #71 (fix: disable unauthorized YouTube automated collection) merged after PR CI #45943174220 completed successfully: 223/223 tests, 0 failures, committed archive validation passed. Merge commit: 535a3e812a87b6ab145d65eeb8d7fd7c84fdf518.
+- Post-merge Production #621 (run 45943216118, push event from PR merge) succeeded. Its production test run was 223/223, distinct from the PR CI run which also had 223/223.
+- #621 log: nmixx-youtube outcome skipped, itemsSeen 0; Google News and Bing News both succeeded; 6/6 queries per engine; 10 new discovery candidates; total discovery candidates 922. Query failures empty.
+- Collector output explicitly reported status disabled, networkRequests 0, retainedVideos 20. Data API entrypoint reported disabled-policy. Workflow no longer injects YOUTUBE_API_KEY.
+- #621 validation: 20 video records, 0 photo records, 192 schema-valid run logs, 1 append-only query failure event. The sole event remains the real #617 Google News 429 for query 오해원 근황; no second real failure occurred and no synthetic event was created.
+- #621 data commit: bf5e6b925b2c5cae351fc7759b2ae088fce110b6. Artifact 15173364036, 719,896 bytes, GitHub artifact SHA-256 digest 76815c94c3f2cac80dcbe99adc914c395ced735150c97641a181d8a9dc1e860c. Upload and deploy-pages steps succeeded. Independent opening of the public Pages URL was not possible in the verifier; live-site verification remains unconfirmed.
+- Latest #621 metrics: 922 candidates (735 article, 187 video), 111 items with publisherArticleUrl, 84 verified Haewon articles, 62 article-image previews, 0 standalone photo records, 359 assigned thumbnails, 563 missing, 273 legacy shared assignments. The article-image count increased from 61 to 62 on this run; it remains distinct from standalone photos.
+- #619 remains failed due the literal backslash-n JSON serialization defect; #620 succeeded after PR #66; #621 succeeded with Atom polling disabled. Do not conflate these runs.
+- The 20:17 KST scheduled Production run was still pending at this checkpoint. #621 was a push-triggered run, not the scheduled cron run.
+- Android Chrome real-device QA remains unverified.
