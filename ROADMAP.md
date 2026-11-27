@@ -966,3 +966,15 @@
 - [ ] Verify a second distinct live query failure and preservation through a later success; do not manufacture failures.
 - [ ] Improve article thumbnail quality only with human-reviewed labels/evidence; current review coverage is 0%, precision null. Keep 273 legacy shared assignments untouched.
 - [ ] Complete Android Chrome real-device QA only when user directly checks the deployed site.
+
+ 
+## 2026-11-27 22:03 KST — Fresh verification and research checkpoint
+- [x] Recheck latest main, open PRs, recent Actions and latest Production.
+- [x] Confirm 20:17 KST slot still has no observed Production #624 or later; keep cause unknown.
+- [x] Verify #623 tests, validation, collection, data commit, artifact digest and Pages deploy steps.
+- [x] Recheck #617 real 429 remains append-only; no synthetic failures.
+- [x] Review current RSS and publisher image extraction code against Google Search Central and Open Graph documentation.
+- [ ] Observe next 08:17 KST scheduled Production and verify exact `17 23 * * *` expression.
+- [ ] Measure any retry-eligible missing explicit publisher article URLs; do not assume the 0 attempts reason without item-level evidence.
+- [ ] Add human thumbnail labels; 493 eligible, 0 reviewed, precision null. Preserve 273 legacy assignments.
+- [ ] Complete Android Chrome real-device QA after user direct check.

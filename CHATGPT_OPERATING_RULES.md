@@ -705,3 +705,13 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - The 20:17 KST slot passed, but no Production #624 or later Production was present in the live Actions listing at this checkpoint. Latest Production remains #623 (event=push). Report the slot as **not observed / unverified**, not success or confirmed GitHub drop.
 - A future schedule claim requires a matching Actions `event=schedule` run and run-log `trigger=github_schedule` plus exact `scheduleExpression`; compare Actions `created_at`, `run_started_at`, and run-log `startedAt`.
 - The current verifier could not open the public Pages URL. A successful deploy step/artifact is not proof of independent public-site or mobile UI verification.
+
+ 
+## 2026-11-27 22:03 KST — Fresh schedule and image-evidence checkpoint
+- Re-read the seven canonical documents and rechecked live main, open PRs, Actions, Production log, artifact, source registry, quality metrics, news status, workflow and failure history.
+- Main remained `933118349f54a07c2bab9a50b6bd6d1ec9794611`; no open PR before this docs-only update.
+- At 22:03 KST no Production #624 or later Production was present. The 20:17 KST slot remains not observed; do not infer a scheduler drop/root cause.
+- Next slot: 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC; require Actions event=schedule, run-log trigger=github_schedule, exact scheduleExpression `17 23 * * *`, and compare all timestamps.
+- Research review found no justified RSS parser expansion: current collector already supports Media RSS, enclosure, description/content:encoded HTML and publisher metadata OG/Twitter/image_src/itemprop/JSON-LD. Current #623 feed samples had zero image signals in both feeds. Keep source URL/homepage distinct from article URL and never decode Google News wrappers.
+- Google Search Central guidance requires relevant representative crawlable images; Open Graph documents image URL metadata and optional dimensions/type/alt. These are selection/provenance criteria, not evidence to accept unrelated logos. No code change until a specific failing case or eligible retry queue is measured.
+- #623 is still push, 226/226, data commit/artifact/deploy evidence as in the current checkpoint; public Pages URL direct access is unverified.

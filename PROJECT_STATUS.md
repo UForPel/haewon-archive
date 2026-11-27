@@ -1165,3 +1165,15 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Failure history retains only real #617 HTTP 429 (`retryAttempted=false`, no Retry-After) through later successful runs. No second live failure; no synthetic event.
 - YouTube Atom disabled, 20 video records preserved, Data API disabled/no workflow key injection. All source-policy boundaries unchanged.
 - Android Chrome real-device QA remains unverified. No code change in this checkpoint.
+
+ 
+## 2026-11-27 22:03 KST — Live checkpoint
+- Latest main at start: `933118349f54a07c2bab9a50b6bd6d1ec9794611`; no open PRs before documentation update.
+- 20:17 KST schedule: no Production #624 or later present in fresh Actions listing at 22:03 KST. Latest Production remains #623 push; slot unobserved, cause unknown.
+- #623: 226/226 tests, archive validation passed, Google News 99 / Bing News 31, data commit `c5382d9816e114c565357f0f22eb47e1b7771b0b`.
+- Artifact `15176047291`, 731041 bytes, SHA-256 `f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7`; Pages configure/upload/deploy steps succeeded. Direct public URL access failed in verifier; live URL/UI unverified.
+- Data: 936 candidates (749 articles, 187 videos); 111 publisherArticleUrl; 84 verified Haewon articles; 62 article-image previews; 0 independent photos; 359 assigned thumbnails; 577 missing; 273 legacy shared assignments.
+- Feed image evidence: 0 RSS image signals in 68 Google and 31 Bing RSS items; 0 RSS image candidates; enrichment attempts 0 in #623. Comparison 86 meta-only, no RSS candidates. 493 review eligible/0 reviewed; precision null.
+- Existing extractor already covers RSS media/enclosure/HTML and publisher OG/Twitter/image_src/itemprop/JSON-LD. No proven defect; no code change. Preserve article relevance and provenance; do not accept arbitrary logos/wrapper images.
+- #617 real 429 remains in append-only history. YouTube Atom disabled; 20 videos preserved; no YOUTUBE_API_KEY workflow injection. Android Chrome real-device QA unverified.
+- Next scheduled slot 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC, expression `17 23 * * *`.

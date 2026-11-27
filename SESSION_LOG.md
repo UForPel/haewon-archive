@@ -2039,3 +2039,30 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 - No code, test, data, collector, source-policy, or cron changes in this cycle. Seven continuity documents are being updated with this checkpoint only.
 - Android Chrome real-device QA remains unverified until user directly checks.
 - Next cycle: check whether a late run appears for the 20:17 slot and inspect the next configured 08:17 KST slot (2026-11-28 23:17 UTC) only after it passes. Require `event=schedule`, `trigger=github_schedule`, and the exact logged expression `17 23 * * *`; compare all timestamps, tests, collection, data commit, artifact digest, deploy step and direct public URL access. Investigate official scheduler behavior without speculating or changing cron.
+
+ 
+## 2026-11-27 22:03 KST — Late schedule check and evidence-based thumbnail review
+
+### Live state
+- Current main re-read from GitHub: `933118349f54a07c2bab9a50b6bd6d1ec9794611`; no open PRs before this cycle. Seven canonical docs re-read.
+- Latest Actions list (40 most recent) contains PR CI #108 and #107, Production #623 push, Production #622 schedule, and no Production #624 or later. The 20:17 KST / 11:17 UTC slot remains not observed at 22:03 KST; no cause assigned.
+- Next scheduled slot is 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC, requiring `event=schedule`, `trigger=github_schedule`, and `scheduleExpression=17 23 * * *`.
+
+### Production and deploy evidence
+- #623 run `45949528329` remains the latest Production and is a push event. Actions created_at/run_started_at: `2026-11-27T06:04:22Z`; run log startedAt `06:04:29.000Z`, finishedAt `06:04:49.518Z`; trigger `github_push`.
+- Job `140341900635`: 226 tests, 226 pass, 0 fail; archive validation passed. Google News 99 items, Bing News 31 items; both feeds' six queries succeeded; YouTube source skipped; run-log validation passed.
+- Data commit `c5382d9816e114c565357f0f22eb47e1b7771b0b`.
+- Artifact `15176047291`, 731041 bytes, SHA-256 `f2e72fe333ec583d944a21c19332f54c416c65c2807bf13e596576e2e89869e7`. Pages configure, upload, and deploy steps all succeeded.
+- Public Pages URL direct access failed in the web verifier; mark public URL/live UI unverified, not deployed-site success.
+ 
+### Thumbnail bottleneck and research
+- #623 `news-collection-status.json`: 68 Google RSS items and 31 Bing RSS items, 0 image-bearing RSS signals in either feed, 0 RSS image candidate articles, 0 RSS image candidates, 0 thumbnail enrichment attempts in that run. Both feed query groups succeeded; this is not a feed failure.
+- Current metrics: 936 total candidates (749 articles, 187 videos); 111 publisherArticleUrl records; 84 verified Haewon articles; 62 verified Haewon article-image previews; 359 assigned thumbnails; 577 missing; 273 legacy shared assignments; independent photos 0. RSS/meta comparison 86 compared, 0 RSS-only, 86 meta-only, 0 both. Review 493 eligible/0 reviewed; precision null.
+- Reviewed `scripts/collect-news.mjs`: RSS parser supports Media RSS thumbnail/content, image enclosure, description HTML and content:encoded. Publisher metadata extraction supports OG/Twitter, image_src, itemprop:image and JSON-LD. Enrichment only uses explicit HTTPS publisherArticleUrl, requires missing thumbnail, normal public GET/redirect following, and bounded retry backoff; it rejects Google News wrapper metadata as a publisher image.
+- Research: Google Search Central Article and general structured-data guidelines emphasize representative/relevant, crawlable/indexable images and reject irrelevant markup; Open Graph protocol defines og:image plus optional type, width, height and alt. These sources do not justify logo substitution or wrapper decoding. URLs: https://developers.google.com/search/docs/appearance/structured-data/article ; https://developers.google.com/search/docs/appearance/structured-data/sd-policies ; https://ogp.me/
+- No specific parser defect was demonstrated, so no code change was made. Further improvement should isolate whether any missing explicit publisher URLs are retry-eligible and whether an actual public publisher page contains image metadata that current extractor misses. Do not infer from a truncated large discovery JSON response.
+ 
+### Safety/policy and next work
+- Failure history remains exactly one real #617 HTTP 429; no second real event and no synthetic event. Videos.json remains 20; YouTube Atom source registry disabled; workflow does not inject YOUTUBE_API_KEY. Existing 273 legacy group and PR #54/#56 transaction semantics unchanged.
+- No code/data/workflow/source-policy changes in this cycle; documentation-only evidence update. Android Chrome real-device QA unverified.
+- Next: inspect any late Production, then next schedule slot after 08:17 KST. Verify schedule expression and timestamps, tests, collection, data commit, artifact digest, deploy and direct URL separately. Continue thumbnail analysis only with measured eligible records/human labels; no auto-delete/replace.
