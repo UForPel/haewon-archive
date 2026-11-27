@@ -92,7 +92,7 @@ test('quality report measures Haewon, NMIXX and video candidate separation indep
   verifiedPublisherArticles:2,verifiedHaewonArticles:1,
   verifiedPublisherArticlesWithProvenanceThumbnail:1,verifiedHaewonWithProvenanceThumbnail:1,
   haewonTitleMatches:1,nmixxTitleMatches:1,otherArticleCandidates:1,
-  defaultScope:'verified-haewon-title-match'
+  defaultScope:'haewon-title-match'
  });
 });
 
