@@ -39,6 +39,19 @@ export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, new
   const overallStatus = hasFailure ? (hasSuccess ? 'partial' : 'failed') :
     sources.every(source => source.outcome === 'skipped') ? 'skipped' :
     sources.some(source => source.outcome === 'partial') ? 'partial' : 'success';
+  const queryFailures = [
+    ...(Array.isArray(newsStatus.failedQueries) ? newsStatus.failedQueries.map(row => ({ sourceId: 'google-news-rss', ...row })) : []),
+    ...(Array.isArray(newsStatus.bingFailedQueries) ? newsStatus.bingFailedQueries.map(row => ({ sourceId: 'bing-news-rss', ...row })) : [])
+  ].map(row => ({
+    sourceId: row.sourceId,
+    query: String(row.query || ''),
+    error: String(row.error || 'unknown-feed-error'),
+    retryAttempted: row.retryAttempted === true,
+    ...(Number.isFinite(row.status) ? { status: row.status } : {}),
+    ...(row.contentType ? { contentType: String(row.contentType) } : {}),
+    ...(row.responseFormat ? { responseFormat: String(row.responseFormat) } : {}),
+    ...(row.retryAfter ? { retryAfter: String(row.retryAfter) } : {})
+  }));
   const record = {
     schemaVersion: '1.0.0',
     runId: String(runId),
@@ -48,6 +61,7 @@ export function buildRunLog({ runId, startedAt, finishedAt, trigger, status, new
     mode: 'production',
     status: overallStatus,
     sources,
+    queryFailures,
     counts: {
       discovered: itemsFetched,
       accepted: itemsAdded,

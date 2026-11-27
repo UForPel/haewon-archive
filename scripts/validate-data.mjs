@@ -65,6 +65,17 @@ try {
     assertMatchesSchema(record, runLogSchema, `data/run-logs/${name}`);
   }
   console.log(`OK data/run-logs (${names.length} schema-valid entries)`);
+
+const failureHistory = JSON.parse(await readFile(new URL('data/query-failure-history.json', root), 'utf8'));
+if (!failureHistory || failureHistory.schemaVersion !== '1.0.0' || !Array.isArray(failureHistory.failures)) throw new Error('Invalid data/query-failure-history.json');
+const failureKeys = new Set();
+for (const [index, failure] of failureHistory.failures.entries()) {
+  if (!failure || typeof failure.runId !== 'string' || !['google-news-rss', 'bing-news-rss'].includes(failure.sourceId) || typeof failure.query !== 'string' || typeof failure.error !== 'string' || typeof failure.retryAttempted !== 'boolean' || typeof failure.occurredAt !== 'string') throw new Error(`Invalid query failure history entry at index ${index}`);
+  const key = [failure.runId, failure.sourceId, failure.query].join('|');
+  if (failureKeys.has(key)) throw new Error('Duplicate query failure history entry');
+  failureKeys.add(key);
+}
+console.log(`OK data/query-failure-history.json (${failureHistory.failures.length} append-only failure entries)`);
 } catch (error) {
   if (error.code !== 'ENOENT') throw error;
   console.log('OK data/run-logs (not created yet)');

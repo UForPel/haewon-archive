@@ -187,14 +187,14 @@ test('Bing non-RSS responses retain status and content type diagnostics without 
   return new Response(fixture,{status:200,headers:{'content-type':'application/rss+xml'}});
  }});
  assert.equal(result.bingFailures.length,1);
- assert.deepEqual(result.bingFailures[0],{query:'diagnostic query',error:'Bing RSS 응답이 아닙니다',status:200,contentType:'text/html; charset=utf-8',responseFormat:'html'});
+ assert.deepEqual(result.bingFailures[0],{query:'diagnostic query',error:'Bing RSS 응답이 아닙니다',status:200,contentType:'text/html; charset=utf-8',responseFormat:'html',retryAttempted:false});
  assert.equal(JSON.stringify(result.bingFailures).includes('temporary response'),false);
 });
 
 import { serializeFeedFailure } from '../scripts/collect-news.mjs';
 test('feed failure serializer keeps only safe status metadata and excludes response bodies',()=>{
  const row=serializeFeedFailure({query:'q',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:'html',body:'private response body'});
- assert.deepEqual(row,{query:'q',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:'html'});
+ assert.deepEqual(row,{query:'q',error:'HTTP 429',retryAttempted:false,status:429,contentType:'text/html; charset=utf-8',responseFormat:'html'});
  assert.equal(JSON.stringify(row).includes('private response body'),false);
 });
 test('Google and Bing partial failures preserve HTTP status and response format in collector output',async()=>{
@@ -202,6 +202,6 @@ test('Google and Bing partial failures preserve HTTP status and response format 
   if(String(url).includes('bing.com'))return new Response('<!doctype html><html><title>temporary response</title></html>',{status:200,headers:{'content-type':'text/html; charset=utf-8'}});
   return new Response('rate limited',{status:429,headers:{'content-type':'text/html; charset=utf-8'}});
  }});
- assert.deepEqual(result.failures[0],{query:'diagnostic query',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:''});
- assert.deepEqual(result.bingFailures[0],{query:'diagnostic query',error:'Bing RSS 응답이 아닙니다',status:200,contentType:'text/html; charset=utf-8',responseFormat:'html'});
+ assert.deepEqual(result.failures[0],{query:'diagnostic query',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:'html',retryAttempted:false});
+ assert.deepEqual(result.bingFailures[0],{query:'diagnostic query',error:'Bing RSS 응답이 아닙니다',status:200,contentType:'text/html; charset=utf-8',responseFormat:'html',retryAttempted:false});
 });

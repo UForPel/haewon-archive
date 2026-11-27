@@ -5,68 +5,249 @@
   "description": "Sanitized machine-readable operational log emitted and schema-validated by the collection workflow.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "runId", "startedAt", "finishedAt", "trigger", "mode", "status", "sources", "counts", "validation", "changedPaths"],
+  "required": [
+    "schemaVersion",
+    "runId",
+    "startedAt",
+    "finishedAt",
+    "trigger",
+    "mode",
+    "status",
+    "sources",
+    "counts",
+    "validation",
+    "changedPaths"
+  ],
   "properties": {
-    "schemaVersion": { "const": "1.0.0" },
-    "runId": { "type": "string", "minLength": 1, "maxLength": 128 },
-    "startedAt": { "type": "string", "format": "date-time" },
-    "finishedAt": { "type": "string", "format": "date-time" },
-    "trigger": { "enum": ["manual", "github_push", "github_schedule", "external_scheduler", "workflow_dispatch", "unknown"] },
-    "mode": { "enum": ["dry-run", "production"] },
-    "status": { "enum": ["success", "partial", "skipped", "failed"] },
-    "model": { "type": "string", "maxLength": 100 },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "runId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finishedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "trigger": {
+      "enum": [
+        "manual",
+        "github_push",
+        "github_schedule",
+        "external_scheduler",
+        "workflow_dispatch",
+        "unknown"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "dry-run",
+        "production"
+      ]
+    },
+    "status": {
+      "enum": [
+        "success",
+        "partial",
+        "skipped",
+        "failed"
+      ]
+    },
+    "model": {
+      "type": "string",
+      "maxLength": 100
+    },
     "sources": {
       "type": "array",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["sourceId", "outcome"],
+        "required": [
+          "sourceId",
+          "outcome"
+        ],
         "properties": {
-          "sourceId": { "type": "string", "maxLength": 100 },
-          "outcome": { "enum": ["success", "partial", "skipped", "blocked", "failed"] },
-          "itemsSeen": { "type": "integer", "minimum": 0 },
-          "errorCode": { "type": "string", "maxLength": 80 }
+          "sourceId": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "outcome": {
+            "enum": [
+              "success",
+              "partial",
+              "skipped",
+              "blocked",
+              "failed"
+            ]
+          },
+          "itemsSeen": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "errorCode": {
+            "type": "string",
+            "maxLength": 80
+          }
         }
       }
     },
     "counts": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["discovered", "accepted", "rejected", "duplicates", "uncertain"],
+      "required": [
+        "discovered",
+        "accepted",
+        "rejected",
+        "duplicates",
+        "uncertain"
+      ],
       "properties": {
-        "discovered": { "type": "integer", "minimum": 0 },
-        "accepted": { "type": "integer", "minimum": 0 },
-        "rejected": { "type": "integer", "minimum": 0 },
-        "duplicates": { "type": "integer", "minimum": 0 },
-        "uncertain": { "type": "integer", "minimum": 0 }
+        "discovered": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "accepted": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rejected": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "duplicates": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "uncertain": {
+          "type": "integer",
+          "minimum": 0
+        }
       }
     },
     "validation": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["passed", "errors"],
+      "required": [
+        "passed",
+        "errors"
+      ],
       "properties": {
-        "passed": { "type": "boolean" },
-        "errors": { "type": "array", "maxItems": 50, "items": { "type": "string", "maxLength": 200 } }
+        "passed": {
+          "type": "boolean"
+        },
+        "errors": {
+          "type": "array",
+          "maxItems": 50,
+          "items": {
+            "type": "string",
+            "maxLength": 200
+          }
+        }
       }
     },
     "policyChange": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["proposed", "applied"],
+      "required": [
+        "proposed",
+        "applied"
+      ],
       "properties": {
-        "proposed": { "type": "boolean" },
-        "applied": { "type": "boolean" },
-        "files": { "type": "array", "items": { "type": "string", "maxLength": 160 } },
-        "rationale": { "type": "string", "maxLength": 1000 }
+        "proposed": {
+          "type": "boolean"
+        },
+        "applied": {
+          "type": "boolean"
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 160
+          }
+        },
+        "rationale": {
+          "type": "string",
+          "maxLength": 1000
+        }
       }
     },
     "changedPaths": {
       "type": "array",
       "maxItems": 30,
-      "items": { "type": "string", "maxLength": 160 }
+      "items": {
+        "type": "string",
+        "maxLength": 160
+      }
     },
-    "durationMs": { "type": "integer", "minimum": 0 },
-    "errorCode": { "type": "string", "maxLength": 80 }
+    "durationMs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "errorCode": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "queryFailures": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sourceId",
+          "query",
+          "error",
+          "retryAttempted"
+        ],
+        "properties": {
+          "sourceId": {
+            "enum": [
+              "google-news-rss",
+              "bing-news-rss"
+            ]
+          },
+          "query": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "error": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "status": {
+            "type": "integer",
+            "minimum": 100,
+            "maximum": 599
+          },
+          "contentType": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "responseFormat": {
+            "enum": [
+              "rss",
+              "atom",
+              "html",
+              "empty",
+              "unknown"
+            ]
+          },
+          "retryAfter": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "retryAttempted": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
   }
 }

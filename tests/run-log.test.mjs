@@ -91,3 +91,10 @@ test('run log is partial when one collector fails but another source succeeds',(
  assert.equal(log.sources[1].outcome,'success');
  assert.equal(log.sources[2].outcome,'failed');
 });
+
+
+test('run log keeps query-level failure details and explicit retry metadata',()=>{
+ const log=buildRunLog({...base,newsStatus:{requestedQueries:6,successfulQueries:5,fetched:219,failedQueries:[{query:'오해원 근황',error:'HTTP 429',status:429,contentType:'text/html; charset=UTF-8',responseFormat:'html',retryAttempted:false}],bingSuccessfulQueries:6,bingFailedQueries:[],bingCandidates:52}});
+ assert.equal(log.status,'partial');
+ assert.deepEqual(log.queryFailures,[{sourceId:'google-news-rss',query:'오해원 근황',error:'HTTP 429',retryAttempted:false,status:429,contentType:'text/html; charset=UTF-8',responseFormat:'html'}]);
+});

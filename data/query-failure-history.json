@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "failures": [
+    {
+      "runId": "45916213360",
+      "sourceId": "google-news-rss",
+      "query": "오해원 근황",
+      "error": "HTTP 429",
+      "status": 429,
+      "contentType": "text/html; charset=UTF-8",
+      "responseFormat": "html",
+      "retryAttempted": false,
+      "occurredAt": "2026-11-27T00:21:13.000Z"
+    }
+  ]
+}
