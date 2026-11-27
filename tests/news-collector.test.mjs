@@ -1,7 +1,7 @@
 import test from 'node:test';
 import { isExplicitPublisherArticleUrl } from '../js/discovery-kind.mjs';
 import assert from 'node:assert/strict';
-import {parseRss,parseBingNewsRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,shouldRetryThumbnailFetch,enrichThumbnails,getDailySearches,SEARCH_PACKS,SEARCHES,summarizeQueryPerformance} from '../scripts/collect-news.mjs';
+import {parseRss,parseBingNewsRss,mergeCandidates,newsFeedUrl,relevanceScore,collectFeeds,shouldRetryThumbnailFetch,enrichThumbnails,getDailySearches,SEARCH_PACKS,SEARCHES,summarizeQueryPerformance,serializeQueryFailureHistory} from '../scripts/collect-news.mjs';
 const fixture='<rss><channel><item><title>오해원 인터뷰</title><link>https://news.example/a</link><pubDate>Thu, 20 Nov 2026 02:00:00 GMT</pubDate><description>Haewon interview</description><source>News</source><media:thumbnail url="https://img.example/thumb.jpg" /></item></channel></rss>';
 test('RSS에서 제목, 링크, 날짜, 검색 출처 메타데이터를 추출한다',()=>{const [item]=parseRss(fixture,'오해원', '2026-11-20T00:00:00Z');assert.equal(item.title,'오해원 인터뷰');assert.equal(item.url,'https://news.example/a');assert.equal(item.sourceName,'News');assert.equal(item.status,'candidate');assert.equal(item.thumbnailUrl,'https://img.example/thumb.jpg');});
 test('중복 URL 후보는 하나로 합친다',()=>{const a=parseRss(fixture,'오해원')[0];assert.equal(mergeCandidates([a],[a]).length,1);});
@@ -204,4 +204,12 @@ test('Google and Bing partial failures preserve HTTP status and response format 
  }});
  assert.deepEqual(result.failures[0],{query:'diagnostic query',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:'html',retryAttempted:false});
  assert.deepEqual(result.bingFailures[0],{query:'diagnostic query',error:'Bing RSS 응답이 아닙니다',status:200,contentType:'text/html; charset=utf-8',responseFormat:'html',retryAttempted:false});
+});
+
+
+test('serialized failure history is valid JSON with a real trailing newline',()=>{
+ const serialized=serializeQueryFailureHistory([{runId:'r1',sourceId:'google-news-rss',query:'q',error:'HTTP 429',retryAttempted:false,occurredAt:'2026-11-27T00:00:00.000Z'}]);
+ assert.equal(serialized.endsWith('\\n'),false,'the file must not end with the two literal characters backslash+n');
+ assert.equal(serialized.endsWith('\n'),true,'JSON file ends with a newline');
+ assert.equal(JSON.parse(serialized).failures.length,1);
 });
