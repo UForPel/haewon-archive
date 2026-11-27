@@ -138,12 +138,17 @@ export function mergeQueryFailureHistory(existing=[],{runId,occurredAt,googleFai
  return [...rows,...additions];
 }
 
+export function serializeQueryFailureHistory(failures=[]){
+ return JSON.stringify({schemaVersion:'1.0.0',failures},null,2)+'
+';
+}
+
 async function persistQueryFailureHistory({runId,occurredAt,googleFailures,bingFailures}){
  const path=resolve(ROOT,'data/query-failure-history.json');
  let history={schemaVersion:'1.0.0',failures:[]};
  try{history=JSON.parse(await readFile(path,'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
  history={schemaVersion:'1.0.0',failures:mergeQueryFailureHistory(history.failures,{runId,occurredAt,googleFailures,bingFailures})};
- await writeFile(path,JSON.stringify(history,null,2)+'\\n');
+ await writeFile(path,serializeQueryFailureHistory(history.failures));
  return history;
 }
 export function parseBingNewsRss(xml,query,now=new Date().toISOString()){
