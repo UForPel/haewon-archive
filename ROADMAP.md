@@ -1047,3 +1047,11 @@ Next cycle: live-check main, PRs, Actions, Production, data commit, artifact dig
 2. If a new Production data commit appears, re-read the full discovery blob and recompute retry eligibility; otherwise retain zero eligible and do not retry.
 3. Only add an HTML fixture/test/parser change when a retry-eligible real publisher page demonstrates a specific extraction miss.
 4. Keep Android Chrome QA as user-confirmed pending.
+
+## Next cycle — 2026-11-28 06:47 KST
+1. Before 08:17 KST, keep the 17 23 * * * slot pending; do not assign success/failure early.
+2. After the slot, identify the actual schedule run and require Actions event=schedule, run-log trigger=github_schedule, exact scheduleExpression=17 23 * * *, and timestamp comparison. Keep the earlier #624 late run classified as the prior 17 11 slot, not this slot.
+3. If a new data commit appears, fetch the complete discovery Git blob and recompute item-level retry eligibility against the current code and time. Do not infer from summary metrics or partial contents.
+4. Retry only actual eligible publisher URLs under the existing 1/7/30-day policy, six-hour rotation and max 12. Only create fixture/test/parser changes if an eligible real publisher page proves a specific extraction miss.
+5. Preserve the 273 legacy assignments, #617 real 429 history, YouTube/source restrictions and PR #54/#56 transactional flow.
+6. Keep Android Chrome QA and direct Pages URL verification pending user/direct verification.
