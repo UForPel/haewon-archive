@@ -51,3 +51,9 @@ Never silently convert a proposal into a confirmed decision. Add dated entries w
 22. Next expected slot is 2026-11-28 08:17 KST with expression `17 23 * * *` UTC. Verify actual event and run-log telemetry before attributing it.
 23. Do not broaden thumbnail extraction merely because RSS image candidates are zero: the current collector already parses Media RSS, image enclosure, description/content:encoded markup, and publisher OG/Twitter/image_src/itemprop/JSON-LD. The latest feed sample had zero image-bearing RSS signals.
 24. Preserve the requirement that selected images are article-relevant and publicly accessible; a metadata URL is a candidate, not proof of relevance. No automated replacement of legacy shared thumbnails.
+
+
+## 2026-11-27 22:10 KST — Operational observation (not a policy change)
+- 20:17 KST slot remains unobserved in the latest Actions list; root cause unknown. Next slot remains 2026-11-28 08:17 KST with UTC expression `17 23 * * *`; no cron modification.
+- Full-data retry audit: 27 missing-thumbnail records have explicit publisher URLs; 0 currently retry-eligible (17 missing, 10 failed; all within 7-day delay). Earliest next eligibility is 2026-12-01T06:57:55Z.
+- Preserve source restrictions, human relevance review, 273 legacy image assignments and PR #54/#56 transaction semantics.

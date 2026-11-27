@@ -715,3 +715,11 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Research review found no justified RSS parser expansion: current collector already supports Media RSS, enclosure, description/content:encoded HTML and publisher metadata OG/Twitter/image_src/itemprop/JSON-LD. Current #623 feed samples had zero image signals in both feeds. Keep source URL/homepage distinct from article URL and never decode Google News wrappers.
 - Google Search Central guidance requires relevant representative crawlable images; Open Graph documents image URL metadata and optional dimensions/type/alt. These are selection/provenance criteria, not evidence to accept unrelated logos. No code change until a specific failing case or eligible retry queue is measured.
 - #623 is still push, 226/226, data commit/artifact/deploy evidence as in the current checkpoint; public Pages URL direct access is unverified.
+
+
+## 2026-11-27 22:10 KST — Mandatory continuation notes
+- Fetch live main/open PRs/Actions/Production/data commit/artifact/deploy and read all seven canonical documents before each cycle.
+- For retry counts, parse full current discovery.json and apply the exact isExplicitPublisherArticleUrl and shouldRetryThumbnailFetch logic. Report missing-with-explicit URL, eligible count, offset-selected count (max 12), status/error classes and next eligibility separately. Never estimate from truncated content.
+- Test extractor changes only against an actual publicly accessible publisher HTML fixture demonstrating a missed candidate. Existing OG/Twitter/image_src/itemprop/JSON-LD extraction is not expanded speculatively; metadata is not proof of image relevance.
+- A future schedule slot is neither successful nor failed until Actions event and run-log trigger/expression/timestamps match. Do not alter cron.
+- Do not report networkRequests=0 unless directly supported by a field or logs; current collection-status.json has no such field.

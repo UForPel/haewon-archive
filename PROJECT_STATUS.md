@@ -1177,3 +1177,15 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Existing extractor already covers RSS media/enclosure/HTML and publisher OG/Twitter/image_src/itemprop/JSON-LD. No proven defect; no code change. Preserve article relevance and provenance; do not accept arbitrary logos/wrapper images.
 - #617 real 429 remains in append-only history. YouTube Atom disabled; 20 videos preserved; no YOUTUBE_API_KEY workflow injection. Android Chrome real-device QA unverified.
 - Next scheduled slot 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC, expression `17 23 * * *`.
+
+
+## 2026-11-27 22:10 KST — Live checkpoint
+- [x] Recheck live main, open PRs, latest Actions, Production #623, run log, artifact digest, job steps and data commit.
+- [x] Re-read all seven canonical documents.
+- [x] Parse full discovery.json and calculate exact retry eligibility: 27 missing + explicit publisher URL; 0 eligible at 22:10 KST.
+- [x] Confirm #623 is push, not schedule; 20:17 slot remains unobserved, cause unknown.
+- [ ] After 2026-11-28 08:17 KST, inspect the next scheduled Production; require event=schedule + trigger=github_schedule + scheduleExpression='17 23 * * *'.
+- [ ] Compare Actions created_at/run_started_at with run-log startedAt; verify tests, collection, data commit, artifact digest, Pages deploy and public URL independently.
+- [ ] Recompute retry eligibility from full current discovery.json at next data refresh; max 12 targets, no blind retries. Earliest current eligibility: 2026-12-01T06:57:55Z.
+- [ ] Add HTML fixture tests only if an eligible actual publisher page demonstrates an extraction gap. Preserve 273 legacy assignments and source policies.
+- [ ] Complete Android Chrome QA only after user's direct check.
