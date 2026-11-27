@@ -1010,3 +1010,36 @@ YouTube Atom 비활성, videos.json 20개, Data API 비활성, YOUTUBE_API_KEY �
 
 Android Chrome 실기기 QA 및 공개 Pages URL 직접 접근은 미검증. 다음 Production이 나오면 전체 discovery Git blob을 다시 읽고 모든 지표와 retry eligibility를 재계산한다. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 분리 보고한다. 매 사이클 일곱 운영 문서 갱신, PR CI와 전체 데이터 검증 성공 후에만 병합한다. 최신 main SHA, PR/Actions 링크, 미완료 항목, 다음 전체 지시 버튼을 제공한다.
 ```
+
+## 2026-11-28 08:20 KST — Post-slot live verification
+- Re-fetched live main from GitHub: 45f400154ecb073d31dd28ad626df6c254d27313. Re-read all seven operating documents at this exact SHA before this checkpoint. Open PR search returned 0.
+- Current time is 2026-11-28 08:20 KST. The 08:17 KST / 2026-11-27 23:17 UTC schedule slot (cron 17 23 * * *) has elapsed.
+- Queried GitHub Actions filtered to event=schedule: 19 runs returned; newest remains Production #624 / 46060489526, created_at/run_started_at=2026-11-27T19:59:27Z. No schedule run after the target 23:17:00Z slot was observed at this checkpoint. This is recorded as "slot elapsed; matching run not observed", NOT as a failed run, dropped schedule, or confirmed GitHub omission. Recheck later for delayed arrival. No run-log for the target slot is available because no matching Actions run is currently visible.
+- Workflow file at current main still contains cron expressions 17 23 * * * and 17 11 * * *; no changes made.
+- Distinct prior Production #624 remains: Actions event=schedule; run-log trigger=github_schedule, scheduleExpression=17 11 * * *, startedAt=2026-11-27T19:59:31.000Z, finishedAt=19:59:52.735Z. This belongs to the prior 20:17 KST slot and started 8h42m27s after its cron minute; delay cause unknown. Do not conflate with 08:17 slot or infer #614/#622 retroactively.
+- #624 remains successful: 226/226 tests, committed data validation passed, Google News 193, Bing News 36, YouTube skipped, queryFailures empty. Data commit dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2. Pages artifact 15228811375, 770763 bytes, not expired; known SHA-256 a4a9101740cc69d85adf4b23e519548f6d483ed8398372fe9673437bbea8d1dd. Configure/upload/deploy succeeded; direct public URL access remains unverified.
+- No newer Production means the prior full discovery audit remains the latest: 962 records (774 articles, 188 videos), 113 explicit HTTPS publisherArticleUrl, 602 missing thumbnails, 28 missing+explicit URL; 360 assigned (273 legacy shared), 84 verified Haewon articles, 62 article-image previews, RSS image candidates 0, meta-only 87, review 493 eligible / 0 reviewed / precision null. Do not claim a new audit was performed.
+- Last exact retry audit remains 0 eligible, earliest next eligibility 2026-12-01T06:57:55.671Z. Preserve 1/7/30-day policy, six-hour offset rotation and max 12; no blind retry or speculative extractor change.
+- Recursive improvement remains exploratory: query pack 1/6, cumulative candidates 962, current run 193, videos 20, human-reviewed relevance 0, precision null, no automatic strategy promotion.
+- Preserve YouTube Atom/Data API disablement and no YOUTUBE_API_KEY injection; no networkRequests inference; only actual #617 HTTP 429 in query-failure history; no JYP/NMIXX Gallery/Notice collectors, broadcaster collectors or broadcaster-official auto-classification, Google News wrapper decoding/access bypass; preserve 273 legacy shared thumbnails and PR #54/#56 transactional save/move/restore.
+- Android Chrome real-device QA and public Pages direct access remain unverified. No code/data change justified because no new Production, no retry-eligible targets, and no evidenced eligible-page extractor miss.
+- This checkpoint is documentation-only across all seven operating documents. Merge only after PR CI and committed archive data validation both pass.
+
+## 2026-11-28 08:20 KST — Next conversation button
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA를 GitHub에서 실시간 조회하고 일곱 운영 문서를 먼저 읽는다. 직전 확인 main은 45f400154ecb073d31dd28ad626df6c254d27313이다. 현재 main으로 가정하지 말고 다시 확인한다. 이번 08:20 KST 문서 PR은 Unit tests와 Validate committed archive data가 모두 성공한 뒤에만 병합한다.
+
+마지막 확인 시각은 2026-11-28 08:20 KST다. 08:17 KST / 2026-11-27 23:17 UTC 슬롯(expression='17 23 * * *')은 시각이 지났다. GitHub event=schedule 실행 목록 19건을 조회했으며 최신 schedule은 이전 Production #624(run 46060489526), created_at/run_started_at=2026-11-27T19:59:27Z다. 08:17 슬롯 이후의 일치하는 schedule 실행은 현재 관찰되지 않았다. 이것을 실패나 예약 누락으로 단정하지 않는다. 다음 대화에서 최신 시간을 다시 확인하고 Actions schedule 목록을 재조회해 지연 도착 여부를 확인한다. 새 run이 나오면 Actions event=schedule, run-log trigger=github_schedule, 정확한 scheduleExpression='17 23 * * *' 세 조건과 created_at/run_started_at vs startedAt을 비교한다. cron 변경 금지. #614/#622 소급 추정 금지. #624와 혼동하지 않는다.
+
+GitHub live main은 45f400154ecb073d31dd28ad626df6c254d27313, 열린 PR 0개. PR #88은 CI #118(run 46075621330) Unit tests 및 Validate committed archive data 성공 후 병합되었다. #118: https://github.com/UForPel/haewon-archive/actions/runs/46075621330 . PR #88: https://github.com/UForPel/haewon-archive/pull/88 .
+
+현재 workflow file의 두 cron은 '17 23 * * *'와 '17 11 * * *' 그대로다. schedule event 조회에서 최신 Production은 #624뿐이며 새 Production은 없다. #624 Actions event=schedule, created_at/run_started_at=2026-11-27T19:59:27Z; run-log trigger=github_schedule, scheduleExpression='17 11 * * *', startedAt=19:59:31.000Z, finishedAt=19:59:52.735Z. 이는 이전 20:17 KST 슬롯 지연 실행이며 8시간 42분 27초 늦게 Actions가 시작했다. 지연 원인은 미확인. 226/226 테스트와 데이터 검증 성공, Google News 193, Bing News 36, YouTube skipped, queryFailures empty. Data commit dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2. Artifact 15228811375, 770763 bytes, SHA-256 a4a9101740cc69d85adf4b23e519548f6d483ed8398372fe9673437bbea8d1dd. Pages configure/upload/deploy 성공. 공개 URL 직접 접근 미검증.
+
+마지막 전체 discovery 감사는 962 records(774 article,188 video), explicit HTTPS publisherArticleUrl 113, missing thumbnails 602, missing+explicit URL 28. Assigned thumbnails 360(legacy shared 273), verified Haewon articles 84, article-image previews 62, RSS image candidates 0, meta-only 87, review 493 eligible/0 reviewed/precision null. 새 Production이 없어 이 사이클에서 전체 blob 재감사 또는 새로운 데이터 수치 산출은 하지 않았다. 이전 감사 수치를 신규 감사처럼 표현하지 않는다.
+
+현재 shouldRetryThumbnailFetch 정책은 missing 7일, failed 일반 1일, 405/not-found/forbidden/rate-limited/method-not-allowed 7일, assigned/found/duplicate-rejected/wrapper-only 30일. 마지막 계산 retry-eligible 0, earliest next eligibility 2026-12-01T06:57:55.671Z. Blind retry 금지. 실제 retry-eligible publisher page에서 extractor miss가 확인될 때만 HTML fixture, 테스트, 코드 수정.
+
+재귀개선 exploratory 유지: 6개 query pack 중 1번, 누적 후보 962, 현재 실행 후보 193, videos 20, human-reviewed relevance 0, precision null, automatic strategy promotion 금지. YouTube Atom/Data API 비활성, videos.json 20개 보존, YOUTUBE_API_KEY 전달 금지. collection-status에 networkRequests 필드가 없으므로 0 요청이라고 단정하지 않는다. Query-failure history는 실제 #617 HTTP 429만 보존. JYP/NMIXX Gallery·Notice collector 금지, SBSKPOP ZOOM 소유권 미확인, 방송사 collector 및 broadcaster-official 자동분류 금지, Google News wrapper decode/access bypass 금지. 273개 레거시 공유 썸네일과 PR #54/#56 transactional save/move/restore 보존.
+
+Android Chrome 실기기 QA와 공개 Pages URL 직접 접속은 미검증. 다음 대화에서는 우선 최신 시간과 schedule event 목록을 재조회해 08:17 슬롯에 늦게 도착한 실행이 있는지 확인한다. 새 Production이 확인되면 전체 discovery Git blob을 다시 읽고 지표 및 retry eligibility를 재계산한다. 매 사이클 일곱 운영 문서 갱신, PR CI 및 전체 데이터 검증 성공 후에만 병합한다. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 분리 보고한다. 최신 main SHA, PR/Actions 링크, 미완료 항목 및 다음 전체 지시 버튼을 제공한다. 확인하지 않은 결과는 성공으로 보고하지 않는다.
+```
