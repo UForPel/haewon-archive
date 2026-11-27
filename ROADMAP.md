@@ -954,3 +954,15 @@
 - [ ] Record that run's tests, collection counts, data commit, artifact digest, deploy step and independent public URL result separately.
 - [ ] Confirm whether any distinct live query failure was appended and preserved by a later successful run. If no failure occurs, leave live multi-failure acceptance pending.
 - [ ] Keep YouTube Atom disabled, videos.json 20 records, Data API disabled, source restrictions, 273 legacy thumbnail group and transactional review-save flow unchanged. Android real-device QA remains user-unverified.
+
+ 
+## 2026-11-27 — Post-20:17 schedule verification
+- [x] Recheck live main, open PRs, recent Actions, latest Production, run log, workflow, data, artifact metadata and Production job log.
+- [x] Verify #623 is push-triggered, not the 20:17 KST schedule.
+- [x] Verify #623 226/226 tests, committed archive validation, collection, data commit, artifact SHA-256 and deploy-pages step.
+- [x] Confirm #617 real HTTP 429 remains in append-only history through later successful runs; no synthetic failures.
+- [ ] Observe a genuine schedule run for the 20:17 KST slot; none was present at 21:22 KST. Keep status unverified and root cause unknown.
+- [ ] Observe the next 08:17 KST slot (2026-11-28 23:17 UTC) and require `scheduleExpression=17 23 * * *`.
+- [ ] Verify a second distinct live query failure and preservation through a later success; do not manufacture failures.
+- [ ] Improve article thumbnail quality only with human-reviewed labels/evidence; current review coverage is 0%, precision null. Keep 273 legacy shared assignments untouched.
+- [ ] Complete Android Chrome real-device QA only when user directly checks the deployed site.

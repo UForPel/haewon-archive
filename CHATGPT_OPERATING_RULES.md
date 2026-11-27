@@ -699,3 +699,9 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - PR #75's optional scheduleExpression instrumentation is merged. Only a genuine event=schedule run with run-log scheduleExpression='17 11 * * *' can verify the 20:17 KST slot.
 - Keep #614/#622 timestamp anomalies unresolved; GitHub documents load-related delays/dropped jobs but that does not explain earlier-than-cron starts. Do not change cron speculatively.
 - A cycle must update the seven canonical continuity files: PROJECT_MEMORY.md, CHATGPT_OPERATING_RULES.md, DECISIONS.md, SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md. Treat COLLECTION_RULES.md and SOURCE_POLICY.md as additional policy docs, not substitutes for any of the seven.
+
+ 
+## 2026-11-27 21:22 KST — Scheduled-run reporting rule
+- The 20:17 KST slot passed, but no Production #624 or later Production was present in the live Actions listing at this checkpoint. Latest Production remains #623 (event=push). Report the slot as **not observed / unverified**, not success or confirmed GitHub drop.
+- A future schedule claim requires a matching Actions `event=schedule` run and run-log `trigger=github_schedule` plus exact `scheduleExpression`; compare Actions `created_at`, `run_started_at`, and run-log `startedAt`.
+- The current verifier could not open the public Pages URL. A successful deploy step/artifact is not proof of independent public-site or mobile UI verification.
