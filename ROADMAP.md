@@ -944,3 +944,13 @@
 - [x] Post-merge push Production #623 passed 226/226 and deployed Pages artifact; it is not a scheduled-run confirmation.
 - [ ] Verify the next 20:17 KST schedule run records `scheduleExpression: 17 11 * * *` and compare its timestamps.
 - [ ] Keep #614/#622 schedule-time anomalies unresolved until new telemetry provides evidence; do not alter cron speculatively.
+
+ 
+## 2026-11-27 19:08 KST — Next operational gate
+- [x] Verify current main, PR #75/#76, PR #76 CI, Production #623, run log, artifact digest and deployment step.
+- [x] Confirm #623 is push-triggered and not the 20:17 KST schedule slot.
+- [x] Confirm #617 HTTP 429 remains the only real query failure; no synthetic failure.
+- [ ] After 2026-11-27 20:17 KST, inspect the next genuine schedule run. Require event=schedule and run-log scheduleExpression='17 11 * * *'; compare startedAt, created_at and run_started_at.
+- [ ] Record that run's tests, collection counts, data commit, artifact digest, deploy step and independent public URL result separately.
+- [ ] Confirm whether any distinct live query failure was appended and preserved by a later successful run. If no failure occurs, leave live multi-failure acceptance pending.
+- [ ] Keep YouTube Atom disabled, videos.json 20 records, Data API disabled, source restrictions, 273 legacy thumbnail group and transactional review-save flow unchanged. Android real-device QA remains user-unverified.
