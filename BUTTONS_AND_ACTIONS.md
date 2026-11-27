@@ -893,3 +893,23 @@ YouTube Atom 비활성, videos.json 20개 보존, Data API 비활성, workflow Y
 
 다음 사이클: 최신 main/PR/Actions/Production/data commit/artifact/Pages를 재검증하고 일곱 문서를 먼저 읽는다. 다음 예약 실행 후 schedule triple과 timestamps를 검증한다. 새 data commit이 있을 때만 full blob retry audit을 갱신한다. 실제 retry-eligible publisher page에서 extractor 누락이 확인될 때만 fixture/test/code 변경. PR CI와 전체 데이터 검증 성공 후에만 병합한다. Android Chrome 실기기 QA는 사용자 확인 전까지 미검증. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 분리 보고하고 최신 SHA와 PR/Actions 링크 및 다음 전체 지시 버튼을 제공한다.
 ```
+
+## 2026-11-28 06:47 KST — Next-cycle action
+- Visible label: 🔄 연구 기반 재귀개선 계속하기
+- Action: submit the complete prompt below; the next 08:17 KST schedule slot has not yet occurred at this checkpoint.
+
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA를 GitHub에서 실시간 조회하고 일곱 운영 문서를 먼저 읽는다. 직전 main은 dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2이다. 현재 main으로 가정하지 말고 다시 확인한다. PR #83은 CI #113에서 226/226 테스트와 전체 데이터 검증 성공 후 병합되었다. 이번 사이클 문서 전용 PR은 별도 CI와 데이터 검증 성공 전까지 병합하지 않는다.
+
+현재 확인 시각은 2026-11-28 06:47 KST다. Production #624(run 46060489526)는 Actions event=schedule, created_at/run_started_at=2026-11-27T19:59:27Z이며 run-log trigger=github_schedule, scheduleExpression='17 11 * * *', startedAt=2026-11-27T19:59:31.000Z, finishedAt=19:59:52.735Z다. 이는 2026-11-27 20:17 KST / 11:17 UTC의 이전 슬롯과 expression이 일치하지만 실행은 8시간 42분 10초 늦게 시작했다. 22:31 KST 시점에는 미관찰이었으나 현재는 지연된 schedule 실행으로 관찰되었다. 지연 원인은 미확인이다. GitHub drop/실패로 단정하지 않는다.
+
+다음 슬롯은 2026-11-28 08:17 KST / 2026-11-27 23:17 UTC, expression='17 23 * * *'이다. 06:47 KST 현재 미래이므로 성공/실패 판정 금지. 실행 후 Actions event=schedule, run-log trigger=github_schedule, 정확한 scheduleExpression='17 23 * * *'를 대조하고 created_at/run_started_at과 startedAt을 비교한다. #614/#622 소급 추정 금지, cron 변경 금지.
+
+#624는 226/226 테스트, 0 실패, run-log validation passed. Google News 193, Bing News 36, 6/6 queries successful, queryFailures empty, YouTube skipped. Data commit/current main dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2. Pages artifact 15228811375, 770763 bytes, SHA-256 a4a9101740cc69d85adf4b23e519548f6d483ed8398372fe9673437bbea8d1dd. Configure/upload/deploy 성공. 공개 URL 직접 접근 미검증.
+
+전체 discovery Git blob 9059841c0577269da3be828dfa15660b86fd926d: 962 records(774 articles,188 videos), explicit HTTPS publisherArticleUrl 113, missing thumbnail 602, missing+explicit publisher URL 28. Assigned thumbnails 360(legacy shared 273), verified Haewon articles 84, article image previews 62, RSS image candidates 0, review 493 eligible/0 reviewed/precision null. #624 thumbnail enrichment 2 attempts: fnnews OG image assigned 1, tvdaily no candidate 1. Exact shouldRetryThumbnailFetch logic at 2026-11-28 06:47 KST: retry eligible 0, earliest next eligibility 2026-12-01T06:57:55.671Z. Keep 1/7/30-day retry policy, six-hour offset rotation, max 12. Blind retry and speculative HTML fetch prohibited.
+
+Query failure history retains only real #617 HTTP 429. YouTube Atom disabled, videos.json 20, Data API disabled, no YOUTUBE_API_KEY injection. collection-status has no networkRequests field; do not claim 0 requests. Preserve JYP/NMIXX Gallery/Notice prohibition, SBSKPOP ZOOM ownership unconfirmed, no broadcaster collectors/auto-classification, no Google News wrapper decode/access bypass, 273 legacy shared assignments, and PR #54/#56 transactional save/move/restore.
+
+이번 문서 전용 PR의 CI 및 전체 데이터 검증이 성공한 뒤에만 병합한다. 다음 Production이 나오면 별도로 tests, data, artifact, Pages를 확인한다. Android Chrome 실기기 QA와 공개 Pages URL 직접 접근은 미검증으로 유지한다. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 분리 보고하고 PR/Actions 링크와 다음 전체 지시 버튼을 제공한다.
+```
