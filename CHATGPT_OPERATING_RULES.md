@@ -675,3 +675,8 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - A successful post-merge Production run does not satisfy verification of the later scheduled cron. Check the 20:17 KST run separately and state its event type.
 - Verify actual source outcomes, network-request count, retained archive counts, run log, data commit, artifact digest and deployment steps before calling the fix operationally confirmed.
 - A successful deploy-pages step is not proof that the public site was independently opened; report that distinction.
+
+
+## Scheduled-run timestamp verification — 2026-11-27
+- Treat Actions event=schedule as evidence of a scheduled workflow, but also compare its recorded timestamp with the configured cron in UTC and the user's requested local time. Do not claim a specific slot ran when timestamps do not match.
+- For #622, record 14:03:36 KST versus configured 20:17 KST. Keep the requested 20:17 slot pending and investigate possible schedule queue delay without changing cron configuration from a single anomalous observation.

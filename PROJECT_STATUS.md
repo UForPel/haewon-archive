@@ -1116,3 +1116,13 @@ Real Android/mobile visual, touch, focus and download/import QA remains unperfor
 - Artifact 15173364036 (719,896 bytes), SHA-256 digest 76815c94c3f2cac80dcbe99adc914c395ced735150c97641a181d8a9dc1e860c. Artifact upload and deploy-pages steps succeeded. Public Pages URL could not be independently opened; live-site status is not independently verified.
 - Current quality metrics: 922 candidates (735 article, 187 video), 111 publisher article URL items, 84 verified Haewon articles, 62 article-image previews, 0 standalone photos, 359 assigned thumbnails, 563 missing, 273 legacy shared assignments.
 - 20:17 KST scheduled run remains pending; #621 was push-triggered. Android Chrome real-device QA remains unverified.
+
+
+## 2026-11-27 — Scheduled Production #622 verification
+- Production #622 run 45943513107 completed successfully (event=schedule), with 223/223 tests, full archive validation, artifact upload and deploy-pages success.
+- The run started 05:03:36Z / 14:03:36 KST. This does not match the configured 20:17 KST cron slot (11:17Z); treat #622 as a schedule event with a timestamp discrepancy, not confirmed evidence for the requested 20:17 slot. The 20:17 KST execution remains pending verification.
+- YouTube Atom source skipped, 0 network requests, 20 historical video records retained; YouTube Data API disabled-policy. Google News/Bing News successful, queryFailures empty.
+- Data commit 9de65fa731e459bf6238b7983169be1788644525. Artifact 15172754616, 724,180 bytes, SHA-256 a3510de9411c6449c2848c0eb231fcdbc408358f872fa28f5c8b2e5a903c1dbb. Deployment steps succeeded; independent public Pages access remains unverified.
+- Failure history still contains only the real #617 HTTP 429; no additional failure and no synthetic event. #622 test count 223/223.
+- Current #622 metrics: 936 candidates (749 article, 187 video), 111 publisherArticleUrl items, 84 verified Haewon articles, 62 article-image previews, 0 standalone photos, 359 assigned thumbnails, 577 missing, 273 legacy shared assignments.
+- PR #73 merged after 223/223 CI; current main at the time of this log update is resolved live in GitHub, not hard-coded into the next prompt. Android Chrome QA remains unverified.

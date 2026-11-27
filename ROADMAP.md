@@ -924,3 +924,9 @@
 - [x] Verify a real Production run logs nmixx-youtube as skipped with zero network requests.
 - [ ] Verify the next scheduled Production run at 20:17 KST separately from the push-triggered #621 run.
 - [ ] Implement and review a compliant 30-day YouTube Data API refresh/deletion lifecycle before considering any API activation.
+
+
+## 2026-11-27 — Production #622 schedule-event checkpoint
+- [x] Confirm a real schedule-event Production run with YouTube Atom disabled and 20 historical videos preserved.
+- [ ] Verify the configured 20:17 KST (11:17Z) cron slot separately; #622's event timestamp was 14:03:36 KST and does not match that slot.
+- [ ] Investigate GitHub Actions schedule timing/queue delay before changing the cron configuration; preserve the current two-run schedule until evidence supports a change.

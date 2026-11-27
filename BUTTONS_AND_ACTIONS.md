@@ -719,7 +719,7 @@ Production 수집, 데이터 커밋, artifact 업로드, SHA-256, Pages deploy s
 - **Action:** submit the complete next-cycle instruction below as a new ChatGPT turn.
 
 ```text
-Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA는 이 지시문을 실행할 때 GitHub에서 실시간 조회한다. 이전 Production #621 데이터 커밋은 bf5e6b925b2c5cae351fc7759b2ae088fce110b6이다. 먼저 최신 main, 열린 PR, Actions, Production, 데이터 커밋, artifact SHA-256, Pages 배포를 실제 조회하고 SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md, COLLECTION_RULES.md, CHATGPT_OPERATING_RULES.md, SOURCE_POLICY.md를 먼저 읽는다.
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA는 이 지시문을 실행할 때 GitHub에서 실시간 조회한다. 최신 확인된 Production #622 데이터 커밋은 9de65fa731e459bf6238b7983169be1788644525이다. 먼저 최신 main, 열린 PR, Actions, Production, 데이터 커밋, artifact SHA-256, Pages 배포를 실제 조회하고 SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md, COLLECTION_RULES.md, CHATGPT_OPERATING_RULES.md, SOURCE_POLICY.md를 먼저 읽는다.
 
 최우선은 2026-11-27 20:17 KST 예약 Production 실행 확인이다. Production #621은 PR #71 병합에 따른 push 이벤트로 성공했으며 cron 실행이 아니다. #621 run 45943216118, data commit bf5e6b925b2c5cae351fc7759b2ae088fce110b6, PR CI 223/223 성공, Production 223/223 성공을 구분한다. 예약 실행은 별도로 확인하고, 실행 로그·실패 이력·데이터 커밋·artifact SHA-256·Pages 배포를 각각 조사한다.
 
@@ -731,3 +731,6 @@ YouTube Atom collector는 비활성 상태여야 한다. nmixx-youtube skipped, 
 
 매 사이클 일곱 문서를 갱신하고 PR CI와 전체 데이터 검증 성공 후에만 병합한다. Android Chrome 실기기 QA는 사용자가 직접 완료하기 전까지 미검증. 코드·테스트·Production·데이터·Pages·Android QA를 구분 보고하고 최신 main SHA, PR/Actions 링크, 지표, 미완료 항목과 다음 대화용 전체 지시 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
 ```
+
+## 2026-11-27 — Scheduled #622 timing discrepancy
+- Production #622 is a real schedule event, but its recorded start time is 14:03:36 KST, not the configured 20:17 KST cron slot. The next conversation prompt must verify the 20:17 slot independently and investigate schedule queue timing without changing cron settings on speculation.
