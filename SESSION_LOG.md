@@ -2141,3 +2141,9 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 - Keep 273 legacy assignments and PR #54/#56 transactional save/move/restore. Keep JYP/NMIXX Gallery/Notice collectors disabled, SBSKPOP ZOOM ownership unconfirmed, no broadcaster collector/auto-label, no Google News wrapper decoding or access bypass.
 - Android Chrome real-device QA and direct Pages URL access remain unverified.
 - This PR changes seven operational documents only; merge only after PR CI and full committed-data validation pass.
+
+## 2026-11-28 06:47 KST — Documentation PR completion
+- The seven-document update was submitted as PR #84 and CI run #114 (46072826084) completed successfully. Its Unit tests and Validate committed archive data steps both passed.
+- PR #84 was merged after those checks, using squash merge. Merge commit / verified main immediately after merge: f2ca4cc33ecde38501a35c7332e6f0584f25a6ce. Post-merge open-PR search returned none.
+- This finalization note corrects the interim status in this cycle's checkpoint: PR #84 is merged, not awaiting CI. It was documentation-only; no collector or dataset code was changed.
+- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m10s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
