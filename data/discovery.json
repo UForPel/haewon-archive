@@ -4570,7 +4570,13 @@
     "query": "오해원 근황",
     "discoveredAt": "2026-11-26T20:13:26.444Z",
     "status": "candidate",
-    "relevanceScore": 8
+    "relevanceScore": 8,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "e366dd0bba521e4365de",
@@ -14515,7 +14521,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-26T20:13:26.444Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "77a9b76c78aa830ff5e1",
@@ -15576,7 +15588,13 @@
     "query": "해원 엔믹스",
     "discoveredAt": "2026-11-26T20:13:26.444Z",
     "status": "candidate",
-    "relevanceScore": 4
+    "relevanceScore": 4,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "dfe5a4552002e96b8fb6",
@@ -16313,6 +16331,24 @@
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
     "publisherArticleUrl": ""
+  },
+  {
+    "id": "a62d99f43ae573ce9457",
+    "title": "[포토] 엔믹스 해원, '귀여움 가득한 모습에 눈길~' - 한국경제",
+    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9CMTFibzV5ZzViUno5Z25tUUpVRnRydzJRY19tSzFCdlZMb2d6ZEdsUUpNcVpKc2Y1bWpKRFZDcm5CQS1RUXNtWWE2ZGczQ2w2ZlRpdmtrdUFlZw?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.hankyung.com",
+    "publishedAt": "2023-07-11T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9CMTFibzV5ZzViUno5Z25tUUpVRnRydzJRY19tSzFCdlZMb2d6ZEdsUUpNcVpKc2Y1bWpKRFZDcm5CQS1RUXNtWWE2ZGczQ2w2ZlRpdmtrdUFlZw?oc=5\" target=\"_blank\">[포토] 엔믹스 해원, '귀여움 가득한 모습에 눈길~'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">한국경제</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 엔믹스",
+    "discoveredAt": "2026-11-27T00:18:08.441Z",
+    "status": "candidate",
+    "relevanceScore": 4
   },
   {
     "id": "8b4104f7d4c4602530cb",
@@ -20048,7 +20084,13 @@
     "query": "Haewon latest news",
     "discoveredAt": "2026-11-26T20:13:26.444Z",
     "status": "candidate",
-    "relevanceScore": 2
+    "relevanceScore": 2,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "17caa150297102c6120f",
@@ -23779,7 +23821,13 @@
     "query": "Haewon latest news",
     "discoveredAt": "2026-11-26T20:13:26.444Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "6c71e0f22d6e28fc6be8",
@@ -24132,6 +24180,12 @@
     "query": "Haewon latest news",
     "discoveredAt": "2026-11-26T20:13:26.444Z",
     "status": "candidate",
-    "relevanceScore": 0
+    "relevanceScore": 0,
+    "thumbnailMetaCandidates": [],
+    "thumbnailMetaFetch": null,
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   }
 ]

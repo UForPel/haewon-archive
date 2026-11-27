@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-11-26T23:53:22.393Z",
+  "generatedAt": "2026-11-27T00:18:12.182Z",
   "discoveryRelevance": {
-    "totalCandidates": 902,
-    "articleCandidates": 715,
+    "totalCandidates": 903,
+    "articleCandidates": 716,
     "videoCandidates": 187,
     "verifiedPublisherArticles": 106,
     "verifiedHaewonArticles": 83,
     "verifiedPublisherArticlesWithProvenanceThumbnail": 79,
     "verifiedHaewonWithProvenanceThumbnail": 61,
-    "haewonTitleMatches": 535,
-    "nmixxTitleMatches": 557,
+    "haewonTitleMatches": 536,
+    "nmixxTitleMatches": 558,
     "otherArticleCandidates": 80,
     "defaultScope": "verified-haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 902,
+    "totalItems": 903,
     "itemsWithPublisherArticleUrl": 107,
     "bingNewsItems": 110,
     "candidateSourceCounts": {
@@ -136,11 +136,11 @@
       "www.sedaily.com": 11,
       "biz.chosun.com": 11,
       "mydaily.co.kr": 10,
+      "www.hankyung.com": 10,
       "www.munhwa.com": 10,
       "www.osen.co.kr": 9,
       "www.hankooki.com": 9,
       "news.tf.co.kr": 9,
-      "www.hankyung.com": 9,
       "programs.sbs.co.kr": 8,
       "pann.nate.com": 8,
       "www.breaknews.com": 8,
@@ -290,17 +290,17 @@
       "twitter:image:src": 1
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 547,
+    "missingThumbnailCount": 548,
     "sourceProvenanceCoverage": 23
   },
   "thumbnailMissingDiagnostics": {
-    "items": 902,
-    "missing": 547,
-    "classified": 547,
+    "items": 903,
+    "missing": 548,
+    "classified": 548,
     "unclassified": 0,
     "byReason": {
       "publisher-fetch-failed:forbidden": 9,
-      "google-news-wrapper-without-publisher-article-url": 507,
+      "google-news-wrapper-without-publisher-article-url": 508,
       "publisher-page-no-image-candidate": 17,
       "publisher-fetch-failed:method-not-allowed": 1,
       "publisher-fetch-failed:network-error": 1,
@@ -309,12 +309,12 @@
     "bySource": [
       {
         "source": "Google News",
-        "items": 792,
-        "missing": 519,
+        "items": 793,
+        "missing": 520,
         "missingWithPublisherArticleUrl": 0,
-        "missingWithSourceSiteUrl": 449,
+        "missingWithSourceSiteUrl": 450,
         "reasons": {
-          "google-news-wrapper-without-publisher-article-url": 507,
+          "google-news-wrapper-without-publisher-article-url": 508,
           "wrapper-only-not-followed": 12
         }
       },
@@ -810,9 +810,9 @@
     ]
   },
   "thumbnailAudit": {
-    "items": 902,
+    "items": 903,
     "withThumbnail": 355,
-    "missing": 547,
+    "missing": 548,
     "uniqueThumbnailUrls": 83,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
@@ -1066,22 +1066,22 @@
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 51,
+    "bingNewsCandidates": 50,
     "newsQuerySuccessRate": 100,
     "youtubeStatus": "success",
     "videosTotal": 20,
-    "newsCandidatesTotal": 902,
-    "newsUniqueFetched": 236,
-    "newsAddedLastRun": 23,
-    "duplicateBeforeMergeLastRun": 39,
-    "duplicateGroupsCurrent": 902,
+    "newsCandidatesTotal": 903,
+    "newsUniqueFetched": 170,
+    "newsAddedLastRun": 5,
+    "duplicateBeforeMergeLastRun": 41,
+    "duplicateGroupsCurrent": 903,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 275,
-      "after": 235,
-      "collapsed": 40,
+      "before": 211,
+      "after": 169,
+      "collapsed": 42,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -1098,11 +1098,11 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 792,
-      "withUrl": 792,
+      "items": 793,
+      "withUrl": 793,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 792,
+      "withDate": 793,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
       "thumbnailCoverage": 34,
@@ -1802,11 +1802,11 @@
     }
   ],
   "classification": {
-    "items": 902,
+    "items": 903,
     "categoryCounts": {
       "video": 187,
       "interview": 63,
-      "news": 548,
+      "news": 549,
       "brand": 32,
       "event": 18,
       "performance": 45,
@@ -2708,7 +2708,7 @@
     "broken": [],
     "rateLimited": 0,
     "unreachable": 1,
-    "thumbnailMissing": 547,
+    "thumbnailMissing": 548,
     "results": [
       {
         "kind": "article",
@@ -5229,7 +5229,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-26T23:53:22.434Z",
+    "generatedAt": "2026-11-27T00:18:12.228Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -7158,16 +7158,17 @@
     "sampledUniqueUrls": 12,
     "checked": 12,
     "nonImage": [],
-    "broken": [
+    "broken": [],
+    "unreachable": [
       {
         "url": "https://cdn.sportalkorea.com/news/photo/202610/2025052909553648816_2725470_1793077511.jpg",
-        "status": 404,
-        "contentType": "text/html; charset=utf-8",
+        "status": null,
+        "contentType": "",
         "ok": false,
-        "isImage": false
+        "isImage": false,
+        "error": "The operation was aborted due to timeout"
       }
     ],
-    "unreachable": [],
     "rateLimited": [],
     "results": [
       {
@@ -7186,10 +7187,11 @@
       },
       {
         "url": "https://cdn.sportalkorea.com/news/photo/202610/2025052909553648816_2725470_1793077511.jpg",
-        "status": 404,
-        "contentType": "text/html; charset=utf-8",
+        "status": null,
+        "contentType": "",
         "ok": false,
-        "isImage": false
+        "isImage": false,
+        "error": "The operation was aborted due to timeout"
       },
       {
         "url": "https://images.khan.co.kr/article/2026/10/24/news-p.v1.20261024.4c2cacfa8d724a39b1d2a98752fb99bb_P1.jpg",
@@ -7262,111 +7264,112 @@
     "redirectPolicy": "standard-http-follow-only",
     "bypassAttempted": false,
     "sampled": 12,
-    "offset": 43,
+    "offset": 55,
     "checked": 12,
     "total": 83,
     "counts": {
-      "http-responded": 10,
+      "http-responded": 8,
       "blocked": 2,
       "paywall": 0,
-      "not-found": 0,
-      "uncertain": 0
+      "not-found": 1,
+      "uncertain": 1
     },
     "results": [
       {
-        "articleId": "8e4d1cb157cc747352ee",
-        "url": "https://www.chosun.com/english/kpop-culture-en/2025/10/10/TGPOAQOGVFAR7LUBGJTLMQ2Y4E/",
+        "articleId": "2cb9f94fed4fc8a84db3",
+        "url": "https://tribune.com.pk/story/2474873/nmixxs-haewon-to-perform-sitting-down-after-sustaining-minor-back-injury",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "www.chosun.com",
+        "finalHost": "tribune.com.pk",
         "method": "HEAD"
       },
       {
-        "articleId": "aa1d73461e1a8ba8156f",
-        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008155695",
+        "articleId": "e74f0cd5f348cd454df9",
+        "url": "https://www.mk.co.kr/en/musics/10921328",
+        "status": null,
+        "state": "uncertain",
+        "finalHost": "",
+        "method": "HEAD",
+        "error": "TimeoutError"
+      },
+      {
+        "articleId": "01d43afc81bf8da93d4a",
+        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008299351",
         "status": 200,
         "state": "http-responded",
         "finalHost": "sbsstar.net",
         "method": "HEAD"
       },
       {
-        "articleId": "ce4468d1f0e09b93135d",
-        "url": "https://tw.news.yahoo.com/nmixx-haewon%E8%B1%81%E5%87%BA%E5%8E%BB%E7%A4%BA%E7%AF%84%E8%BF%B7%E5%9B%A0-lily%E8%A6%AA%E8%A7%A3%E9%87%8B-%E7%84%A1%E8%B7%9F%E9%AB%98%E8%B7%9F%E9%9E%8B-%E5%8D%B1%E9%9A%AA%E7%B3%BB%E6%95%B8-073300314.html",
+        "articleId": "b163034ca145278d9390",
+        "url": "https://www.geo.tv/latest/477529-k-pop-group-nmixxs-haewon-discusses-former-member-for-the-first-time",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "tw.news.yahoo.com",
+        "finalHost": "www.geo.tv",
         "method": "HEAD"
       },
       {
-        "articleId": "96579cf215e0e82b5ccf",
-        "url": "https://biz.chosun.com/en/en-entertainment/2025/03/20/MV6ESV2335BQFGUZQU4UY46JVM/",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "biz.chosun.com",
+        "articleId": "a37e26c7cfff0e81cf80",
+        "url": "https://www.allkpop.com/article/2023/01/nmixxs-haewon-praised-for-her-hosting-skills-after-she-appears-as-a-special-mc-on-kbs2s-music-bank",
+        "status": 403,
+        "state": "blocked",
+        "finalHost": "www.allkpop.com",
         "method": "HEAD"
       },
       {
-        "articleId": "fb392e4ba8879b947e36",
-        "url": "https://biz.chosun.com/en/en-entertainment/2025/03/20/KLX7MY47U5A3RPES2JGB3YIW3Q/",
+        "articleId": "410181bd7a26e470fb01",
+        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008342842",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "biz.chosun.com",
+        "finalHost": "sbsstar.net",
         "method": "HEAD"
       },
       {
-        "articleId": "b73b0b6718cd750a66a5",
-        "url": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "biz.chosun.com",
+        "articleId": "baaea643c6e7d0c5b9b4",
+        "url": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+        "status": 403,
+        "state": "blocked",
+        "finalHost": "www.sportskeeda.com",
         "method": "HEAD"
       },
       {
-        "articleId": "288ac9019343bb06260d",
-        "url": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
+        "articleId": "20b79e1521fe03642833",
+        "url": "https://www.soompi.com/article/1521113wpp/nmixxs-haewon-and-jiwoo-diagnosed-with-covid-19",
         "status": 200,
         "state": "http-responded",
         "finalHost": "www.soompi.com",
         "method": "HEAD"
       },
       {
-        "articleId": "772e453cc3cd4b9b3a7e",
-        "url": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+        "articleId": "0dce33409a82f8bfa806",
+        "url": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "www.nme.com",
+        "finalHost": "www.msn.com",
         "method": "HEAD"
       },
       {
-        "articleId": "36046f8feaba91d4fded",
-        "url": "https://www.allkpop.com/article/2024/09/nmixx-haewon-zeas-dongjun-to-appear-on-running-man",
-        "status": 403,
-        "state": "blocked",
-        "finalHost": "www.allkpop.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "6c1b35df3ea9538b743b",
-        "url": "https://www.allkpop.com/article/2024/08/nmixxs-haewon-showcases-variety-show-skills-on-radio-star",
-        "status": 403,
-        "state": "blocked",
-        "finalHost": "www.allkpop.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "32964a7facfebdec9f38",
-        "url": "https://www.mk.co.kr/en/hot-issues/11070438",
+        "articleId": "acc3649085bc58237439",
+        "url": "https://www.xportsnews.com/article/2220870",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "www.mk.co.kr",
+        "finalHost": "www.xportsnews.com",
         "method": "HEAD"
       },
       {
-        "articleId": "b9889446cfd423ab2196",
-        "url": "https://timesofindia.indiatimes.com/entertainment/k-pop/music/news/nmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan/articleshow/111332943.cms",
+        "articleId": "6876f635b800bea5bf90",
+        "url": "https://www.msn.com/ko-kr/news/other/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "timesofindia.indiatimes.com",
+        "finalHost": "www.msn.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "da2ca32f9a2115bbb975",
+        "url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1020506",
+        "status": 404,
+        "state": "not-found",
+        "finalHost": "www.spotvnews.co.kr",
         "method": "HEAD"
       }
     ]
