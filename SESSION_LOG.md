@@ -1818,3 +1818,14 @@ Next: pass PR CI and archive validation; then merge. User-performed Android QA r
 - PR CI and full validation pending. Do not merge until final-head checks pass.
 - Android Chrome real-device QA remains unverified until user runs the checklist.
 - No YouTube API key was requested or added, no new source feeds were enabled, no photo originals were copied, and no legacy thumbnail assignments or human review labels were changed.
+
+ 
+## 2026-11-27 — Production #616 and official photo source discovery
+- PR #62 merged as `c789b9a7c38241c0d6e893cca11b3e2870276b70`; final-head PR CI #88 passed 218/218 tests and archive validation passed for 902 candidates. Production #616 (run 45915909274) completed successfully; data refresh commit/main `b5ca63188b34fe8b3f3cc5a96912d6d89b96a4ee`.
+- Production #616 Pages artifact 15162296412, 657,992 bytes, SHA-256 `9f10b21bc69a27502821925cb476cb9206555cd2d2b552be734065b0c1dfb177`; artifact upload and Pages deployment steps succeeded.
+- Latest metrics: 903 discovery candidates (716 articles / 187 unresolved video candidates), 106 explicit publisher article URLs, 83 verified Haewon articles, 61 verified Haewon article images with source provenance, 355 assigned thumbnails / 548 missing, 83 unique thumbnail URLs, 273 legacy shared-image assignments. `data/videos.json` remains 20 NMIXX channel videos; latest official feed fetched 15, added 0. `data/photos.json` remains 0 standalone photo-post records.
+- Production #616 collected 5 new news candidates; NMIXX YouTube Atom feed and Google/Bing RSS collection succeeded. The 187 discovery video candidates are not 187 verified YouTube URLs.
+- New public official photo source discovered: NMIXX official website Gallery at https://nmixx.jype.com/gallery. Current public page displays 34 gallery pages; official Notice also lists Haewon concept-photo posts. Search/open evidence: https://nmixx.jype.com/gallery and https://nmixx.jype.com/notice. The next PR adds a direct link to this official gallery in the archive.
+- PR #63 also aligns `quality-metrics.json` `defaultScope` metadata with the broadened Haewon-candidate default in the public article view. PR/CI pending.
+- The official Gallery link is a user-facing route to existing official photos; it does not mean this repository has begun automated photo-post collection. `data/photos.json` stays empty until a permitted public listing/image metadata path is implemented and validated. No image files are copied or rehosted.
+- Android Chrome real-device QA remains unverified pending the user's checklist. Preserve 273 legacy thumbnail assignments; no automatic labels, API keys, new RSS feeds or access bypass.
