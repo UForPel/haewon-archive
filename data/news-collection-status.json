@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-27T05:03:43.439Z",
+  "collectedAt": "2026-11-27T06:04:39.347Z",
   "searchPack": 1,
   "queries": [
     {
@@ -9,8 +9,8 @@
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 0,
-        "within90Days": 4,
-        "olderThan90Days": 9,
+        "within90Days": 5,
+        "olderThan90Days": 8,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
@@ -20,44 +20,44 @@
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 8,
-      "titleKeywordMatchRate": 62,
+      "titleKeywordMatches": 7,
+      "titleKeywordMatchRate": 54,
       "explicitPublisherUrls": 9,
       "explicitPublisherUrlRate": 69,
       "crossQueryDuplicateUrls": 5,
       "datedCandidates": 13,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 7477.7,
-      "p90PublicationLagHours": 15332.7
+      "medianPublicationLagHours": 4703.1,
+      "p90PublicationLagHours": 14780.5
     },
     {
       "query": "오해원 인터뷰",
-      "candidates": 46,
+      "candidates": 33,
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 3,
-        "within90Days": 11,
-        "olderThan90Days": 32,
+        "within90Days": 8,
+        "olderThan90Days": 22,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 7
+        "within30DaysRate": 9
       },
-      "uniqueCandidates": 46,
+      "uniqueCandidates": 33,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 38,
-      "titleKeywordMatchRate": 83,
+      "titleKeywordMatches": 25,
+      "titleKeywordMatchRate": 76,
       "explicitPublisherUrls": 1,
-      "explicitPublisherUrlRate": 2,
-      "crossQueryDuplicateUrls": 2,
-      "datedCandidates": 46,
+      "explicitPublisherUrlRate": 3,
+      "crossQueryDuplicateUrls": 1,
+      "datedCandidates": 33,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 11134.1,
-      "p90PublicationLagHours": 29638.1
+      "medianPublicationLagHours": 9599.1,
+      "p90PublicationLagHours": 86000.5
     },
     {
       "query": "NMIXX Haewon magazine",
@@ -84,8 +84,8 @@
       "datedCandidates": 12,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 4457.9,
-      "p90PublicationLagHours": 20531.9
+      "medianPublicationLagHours": 4458.9,
+      "p90PublicationLagHours": 20533
     },
     {
       "query": "Haewon NMIXX editorial",
@@ -112,8 +112,8 @@
       "datedCandidates": 14,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 11167.7,
-      "p90PublicationLagHours": 28282.3
+      "medianPublicationLagHours": 11168.7,
+      "p90PublicationLagHours": 28283.3
     },
     {
       "query": "해원 화보 인터뷰",
@@ -136,12 +136,12 @@
       "titleKeywordMatchRate": 74,
       "explicitPublisherUrls": 0,
       "explicitPublisherUrlRate": 0,
-      "crossQueryDuplicateUrls": 2,
+      "crossQueryDuplicateUrls": 1,
       "datedCandidates": 27,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 20182.1,
-      "p90PublicationLagHours": 54343.1
+      "medianPublicationLagHours": 20183.1,
+      "p90PublicationLagHours": 54344.1
     },
     {
       "query": "Haewon profile interview",
@@ -178,12 +178,12 @@
   "bingCandidates": 31,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 112,
-  "uniqueIncoming": 102,
-  "added": 16,
+  "fetched": 99,
+  "uniqueIncoming": 90,
+  "added": 2,
   "rssImageSignals": {
-    "items": 81,
-    "sourceUrlItems": 80,
+    "items": 68,
+    "sourceUrlItems": 67,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -223,9 +223,9 @@
     "results": []
   },
   "deduplicationComparison": {
-    "before": 112,
-    "after": 102,
-    "collapsed": 10,
+    "before": 99,
+    "after": 90,
+    "collapsed": 9,
     "method": "normalized exact headline first; canonical URL fallback"
   },
   "totalCandidates": 936

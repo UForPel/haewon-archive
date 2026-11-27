@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T05:03:46.448Z",
+  "generatedAt": "2026-11-27T06:04:43.109Z",
   "discoveryRelevance": {
     "totalCandidates": 936,
     "articleCandidates": 749,
@@ -1115,17 +1115,17 @@
     "youtubeStatus": "disabled",
     "videosTotal": 20,
     "newsCandidatesTotal": 936,
-    "newsUniqueFetched": 102,
-    "newsAddedLastRun": 16,
-    "duplicateBeforeMergeLastRun": 10,
+    "newsUniqueFetched": 90,
+    "newsAddedLastRun": 2,
+    "duplicateBeforeMergeLastRun": 9,
     "duplicateGroupsCurrent": 936,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 112,
-      "after": 102,
-      "collapsed": 10,
+      "before": 99,
+      "after": 90,
+      "collapsed": 9,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
@@ -5428,7 +5428,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-27T05:03:46.485Z",
+    "generatedAt": "2026-11-27T06:04:43.140Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -7461,114 +7461,111 @@
     "redirectPolicy": "standard-http-follow-only",
     "bypassAttempted": false,
     "sampled": 12,
-    "offset": 48,
+    "offset": 60,
     "checked": 12,
     "total": 84,
     "counts": {
-      "http-responded": 7,
-      "blocked": 2,
+      "http-responded": 9,
+      "blocked": 1,
       "paywall": 0,
-      "not-found": 0,
-      "uncertain": 3
+      "not-found": 1,
+      "uncertain": 1
     },
     "results": [
       {
-        "articleId": "fb392e4ba8879b947e36",
-        "url": "https://biz.chosun.com/en/en-entertainment/2025/03/20/KLX7MY47U5A3RPES2JGB3YIW3Q/",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "biz.chosun.com",
+        "articleId": "a37e26c7cfff0e81cf80",
+        "url": "https://www.allkpop.com/article/2023/01/nmixxs-haewon-praised-for-her-hosting-skills-after-she-appears-as-a-special-mc-on-kbs2s-music-bank",
+        "status": 403,
+        "state": "blocked",
+        "finalHost": "www.allkpop.com",
         "method": "HEAD"
       },
       {
-        "articleId": "b73b0b6718cd750a66a5",
-        "url": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
+        "articleId": "410181bd7a26e470fb01",
+        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008342842",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "biz.chosun.com",
+        "finalHost": "sbsstar.net",
         "method": "HEAD"
       },
       {
-        "articleId": "288ac9019343bb06260d",
-        "url": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
+        "articleId": "baaea643c6e7d0c5b9b4",
+        "url": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
+        "status": 405,
+        "state": "uncertain",
+        "finalHost": "www.sportskeeda.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "20b79e1521fe03642833",
+        "url": "https://www.soompi.com/article/1521113wpp/nmixxs-haewon-and-jiwoo-diagnosed-with-covid-19",
         "status": 200,
         "state": "http-responded",
         "finalHost": "www.soompi.com",
         "method": "HEAD"
       },
       {
-        "articleId": "772e453cc3cd4b9b3a7e",
-        "url": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+        "articleId": "0dce33409a82f8bfa806",
+        "url": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "www.nme.com",
+        "finalHost": "www.msn.com",
         "method": "HEAD"
       },
       {
-        "articleId": "36046f8feaba91d4fded",
-        "url": "https://www.allkpop.com/article/2024/09/nmixx-haewon-zeas-dongjun-to-appear-on-running-man",
-        "status": 403,
-        "state": "blocked",
-        "finalHost": "www.allkpop.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "6c1b35df3ea9538b743b",
-        "url": "https://www.allkpop.com/article/2024/08/nmixxs-haewon-showcases-variety-show-skills-on-radio-star",
-        "status": 403,
-        "state": "blocked",
-        "finalHost": "www.allkpop.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "32964a7facfebdec9f38",
-        "url": "https://www.mk.co.kr/en/hot-issues/11070438",
-        "status": null,
-        "state": "uncertain",
-        "finalHost": "",
-        "method": "HEAD",
-        "error": "TimeoutError"
-      },
-      {
-        "articleId": "b9889446cfd423ab2196",
-        "url": "https://timesofindia.indiatimes.com/entertainment/k-pop/music/news/nmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan/articleshow/111332943.cms",
+        "articleId": "acc3649085bc58237439",
+        "url": "https://www.xportsnews.com/article/2220870",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "timesofindia.indiatimes.com",
+        "finalHost": "www.xportsnews.com",
         "method": "HEAD"
       },
       {
-        "articleId": "2cb9f94fed4fc8a84db3",
-        "url": "https://tribune.com.pk/story/2474873/nmixxs-haewon-to-perform-sitting-down-after-sustaining-minor-back-injury",
+        "articleId": "6876f635b800bea5bf90",
+        "url": "https://www.msn.com/ko-kr/news/other/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "tribune.com.pk",
+        "finalHost": "www.msn.com",
         "method": "HEAD"
       },
       {
-        "articleId": "e74f0cd5f348cd454df9",
-        "url": "https://www.mk.co.kr/en/musics/10921328",
-        "status": null,
-        "state": "uncertain",
-        "finalHost": "",
-        "method": "HEAD",
-        "error": "TimeoutError"
+        "articleId": "da2ca32f9a2115bbb975",
+        "url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1020506",
+        "status": 404,
+        "state": "not-found",
+        "finalHost": "www.spotvnews.co.kr",
+        "method": "HEAD"
       },
       {
-        "articleId": "01d43afc81bf8da93d4a",
-        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008299351",
-        "status": null,
-        "state": "uncertain",
-        "finalHost": "",
-        "method": "HEAD",
-        "error": "TimeoutError"
-      },
-      {
-        "articleId": "b163034ca145278d9390",
-        "url": "https://www.geo.tv/latest/477529-k-pop-group-nmixxs-haewon-discusses-former-member-for-the-first-time",
+        "articleId": "f60f0f16157da91b9bf1",
+        "url": "https://www.tvdaily.co.kr/read.php3?aid=17949766171810215010",
         "status": 200,
         "state": "http-responded",
-        "finalHost": "www.geo.tv",
+        "finalHost": "www.tvdaily.co.kr",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "8a8f08aee0d72b0bc7b3",
+        "url": "https://www.msn.com/ko-kr/news/other/%EB%BC%88%EB%A7%90%EB%9D%BC-%EB%90%9C-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EC%99%9C-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EA%B3%BC%EA%B1%B0-%EC%86%8C%EC%8B%A0-%EB%B0%9C%EC%96%B8-%EC%9E%AC%EC%A1%B0%EB%AA%85/ar-AA2hF5jF",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.msn.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "0ffa4f472cdb2ae24b00",
+        "url": "https://www.sportsseoul.com/news/read/1650573",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.sportsseoul.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "d6c5f93f622776e07642",
+        "url": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%82%B4-%EB%B9%A0%EC%A7%84-%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EC%96%BC%EA%B5%B4-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84%EB%A1%9C-%EB%B4%90-%EC%97%AC%EB%9F%AC%EB%B6%84%EC%9D%80-%EA%B7%B8%EB%9F%AC%EC%A7%80-%EB%A7%88/ar-AA2hGa1I",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.msn.com",
         "method": "HEAD"
       }
     ]
