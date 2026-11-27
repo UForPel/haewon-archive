@@ -56,7 +56,9 @@ test('article discovery has explicit relevance scopes and a sanitized reading su
 
 test('video cards visibly distinguish official channels from unverified channels',async()=>{
  const appSource=await readFile(new URL('../js/app.js',import.meta.url),'utf8');
- assert.ok(appSource.includes("video.origin === 'official'"));
- assert.ok(appSource.includes("officialChannel ? '공식 채널' : '채널 미검수'"));
+ assert.ok(appSource.includes("video.origin || (video.sourceId === 'nmixx-youtube' ? 'artist-official' : 'unverified')"));
+ assert.ok(appSource.includes("'artist-official': '아티스트 공식'"));
+ assert.ok(appSource.includes("'broadcaster-official': '방송사 공식'"));
+ assert.ok(appSource.includes("unverified: '채널 미검수'"));
  assert.ok(appSource.includes("channelName = video.channelName"));
 });

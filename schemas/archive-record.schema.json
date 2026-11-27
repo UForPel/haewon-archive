@@ -80,7 +80,8 @@
         "origin": {
           "type": "string",
           "enum": [
-            "official",
+            "artist-official",
+            "broadcaster-official",
             "unverified"
           ]
         }

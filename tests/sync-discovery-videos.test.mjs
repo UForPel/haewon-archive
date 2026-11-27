@@ -16,6 +16,7 @@ test('news discovered YouTube candidates become schema-shaped video records',()=
  const [video]=discoveryVideos([{title:'Haewon clip',url:'https://youtu.be/abcdefghijk',description:'clip',sourceName:'News RSS',discoveredAt:'2026-11-20T12:00:00Z'}],'2026-11-21T00:00:00Z');
  assert.equal(video.id,'abcdefghijk');
  assert.equal(video.sourceId,'news-discovery-youtube');
+ assert.equal(video.origin,'unverified');
  assert.equal(video.thumbnailUrl,'https://i.ytimg.com/vi/abcdefghijk/hqdefault.jpg');
  assert.equal(video.publishedAt,'2026-11-20T12:00:00.000Z');
  assert.equal(video.relevance,true);

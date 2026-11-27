@@ -20,6 +20,8 @@ test('Atom 피드에서 영상 메타데이터와 해원 관련도를 추출한�
   assert.equal(video.id, 'abc123');
   assert.equal(video.title, '[NMIXX] 해원 HAEWON 영상 & 이야기');
   assert.equal(video.relevance, true);
+  assert.equal(video.channelId, 'UCnUAyD4t2LkvW68YrDh7fDg');
+  assert.equal(video.origin, 'artist-official');
   assert.equal(video.url, 'https://www.youtube.com/watch?v=abc123');
   assert.equal(video.thumbnailUrl, 'https://example.com/thumb.jpg');
 });

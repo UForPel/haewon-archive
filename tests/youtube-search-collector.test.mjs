@@ -21,7 +21,7 @@ test('YouTube search results preserve channel identity and distinguish official 
  assert.equal(rows.length,2);
  assert.equal(rows[0].url,'https://www.youtube.com/watch?v=abcdefghijk');
  assert.equal(rows[0].channelId,OFFICIAL_CHANNEL_ID);
- assert.equal(rows[0].origin,'official');
+ assert.equal(rows[0].origin,'artist-official');
  assert.equal(rows[1].origin,'unverified');
  assert.equal(rows[1].sourceId,'youtube-data-api-search');
  assert.equal(rows[1].relevance,true);

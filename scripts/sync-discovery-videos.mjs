@@ -36,7 +36,7 @@ export function discoveryVideos(items=[],now=new Date().toISOString()){
  return items.filter(item=>youtubeId(item.url)).map(item=>{
   const id=youtubeId(item.url);
   const publishedAt=item.publishedAt||item.discoveredAt||now;
-  return {id,title:String(item.title||'YouTube 발견 링크').slice(0,500),url:'https://www.youtube.com/watch?v='+id,thumbnailUrl:'https://i.ytimg.com/vi/'+id+'/hqdefault.jpg',publishedAt:new Date(publishedAt).toISOString(),description:String(item.description||'').slice(0,10000),channelName:String(item.sourceName||'뉴스 RSS 발견 링크').slice(0,200),sourceId:'news-discovery-youtube',collectedAt:now,relevance:/해원|오해원|haewon/i.test(String(item.title||item.description||''))};
+  return {id,title:String(item.title||'YouTube 발견 링크').slice(0,500),url:'https://www.youtube.com/watch?v='+id,thumbnailUrl:'https://i.ytimg.com/vi/'+id+'/hqdefault.jpg',publishedAt:new Date(publishedAt).toISOString(),description:String(item.description||'').slice(0,10000),channelName:String(item.sourceName||'뉴스 RSS 발견 링크').slice(0,200),sourceId:'news-discovery-youtube',origin:'unverified',collectedAt:now,relevance:/해원|오해원|haewon/i.test(String(item.title||item.description||''))};
  });
 }
 async function main(){
