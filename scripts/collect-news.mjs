@@ -110,11 +110,41 @@ export function classifyNewsFeedResponse(body='',contentType=''){
  return 'unknown';
 }
 export function serializeFeedFailure(row={}){
- const output={query:String(row.query||''),error:String(row.error||'unknown-feed-error')};
+ const output={query:String(row.query||''),error:String(row.error||'unknown-feed-error'),retryAttempted:row.retryAttempted===true};
  if(Number.isFinite(row.status))output.status=row.status;
  if(row.contentType)output.contentType=String(row.contentType);
  if(row.responseFormat)output.responseFormat=String(row.responseFormat);
+ if(row.retryAfter)output.retryAfter=String(row.retryAfter);
  return output;
+}
+
+export function mergeQueryFailureHistory(existing=[],{runId,occurredAt,googleFailures=[],bingFailures=[]}={}){
+ const rows=Array.isArray(existing)?existing:[];
+ const seen=new Set(rows.map(row=>[row.runId,row.sourceId,row.query].join('|')));
+ const additions=[];
+ for(const [sourceId,failures] of [['google-news-rss',googleFailures],['bing-news-rss',bingFailures]]){
+  for(const row of failures||[]){
+   const key=[String(runId),sourceId,String(row.query||'')].join('|');
+   if(seen.has(key))continue;
+   seen.add(key);
+   const entry={runId:String(runId),sourceId,query:String(row.query||''),error:String(row.error||'unknown-feed-error'),retryAttempted:row.retryAttempted===true,occurredAt};
+   if(Number.isFinite(row.status))entry.status=row.status;
+   if(row.contentType)entry.contentType=String(row.contentType);
+   if(row.responseFormat)entry.responseFormat=String(row.responseFormat);
+   if(row.retryAfter)entry.retryAfter=String(row.retryAfter);
+   additions.push(entry);
+  }
+ }
+ return [...rows,...additions];
+}
+
+async function persistQueryFailureHistory({runId,occurredAt,googleFailures,bingFailures}){
+ const path=resolve(ROOT,'data/query-failure-history.json');
+ let history={schemaVersion:'1.0.0',failures:[]};
+ try{history=JSON.parse(await readFile(path,'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
+ history={schemaVersion:'1.0.0',failures:mergeQueryFailureHistory(history.failures,{runId,occurredAt,googleFailures,bingFailures})};
+ await writeFile(path,JSON.stringify(history,null,2)+'\\n');
+ return history;
 }
 export function parseBingNewsRss(xml,query,now=new Date().toISOString()){
  if(typeof xml!=='string'||classifyNewsFeedResponse(xml)!=='rss')throw new Error('Bing RSS 응답이 아닙니다');
@@ -365,26 +395,28 @@ export async function collectFeeds({queries=getDailySearches(),fetchImpl=fetch,n
  const rssImageSignals={items:0,sourceUrlItems:0,publisherArticleUrlItems:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,imageMediaContentTags:0,imageEnclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
  const bingRssImageSignals={items:0,sourceUrlItems:0,publisherArticleUrlItems:0,mediaThumbnailTags:0,mediaContentTags:0,enclosureTags:0,imageMediaContentTags:0,imageEnclosureTags:0,contentEncodedItems:0,descriptionImageTags:0,contentEncodedImageTags:0,itemsWithImageSignals:0};
  for(const query of queries){
-  let responseStatus=null,contentType='',responseFormat='';
+  let responseStatus=null,contentType='',responseFormat='',retryAfter='';
   try{
    const response=await fetchImpl(newsFeedUrl(query),{headers:{'user-agent':'HaewonArchiveBot/0.2 (public RSS index)'},signal:AbortSignal.timeout(20000)});
    responseStatus=Number.isFinite(Number(response.status))?Number(response.status):null;
    contentType=String(response.headers?.get?.('content-type')||'');
+   retryAfter=String(response.headers?.get?.('retry-after')||'');
    if(!response.ok)throw new Error('HTTP '+response.status);
    const xml=await response.text();
    responseFormat=classifyNewsFeedResponse(xml,contentType);
    const signals=summarizeRssImageSignals(xml);
    for(const [key,value] of Object.entries(signals))rssImageSignals[key]=(rssImageSignals[key]||0)+value;
    incoming.push(...parseRss(xml,query,now));
-  }catch(error){failures.push({query,error:String(error?.message||error),status:responseStatus,contentType,responseFormat});}
+  }catch(error){if(!responseFormat&&contentType)responseFormat=classifyNewsFeedResponse('',contentType);failures.push({query,error:String(error?.message||error),status:responseStatus,contentType,responseFormat,retryAttempted:false,...(retryAfter?{retryAfter}:{})});}
  }
  let bingSuccessfulQueries=0;
  for(const query of queries){
-  let responseStatus=null,contentType='',responseFormat='';
+  let responseStatus=null,contentType='',responseFormat='',retryAfter='';
   try{
    const response=await fetchImpl(bingNewsFeedUrl(query),{headers:{'user-agent':'HaewonArchiveBot/0.2 (public Bing News RSS)'},signal:AbortSignal.timeout(20000)});
    responseStatus=Number.isFinite(Number(response.status))?Number(response.status):null;
    contentType=String(response.headers?.get?.('content-type')||'');
+   retryAfter=String(response.headers?.get?.('retry-after')||'');
    if(!response.ok)throw new Error('HTTP '+response.status);
    const xml=await response.text();
    responseFormat=classifyNewsFeedResponse(xml,contentType);
@@ -393,7 +425,7 @@ export async function collectFeeds({queries=getDailySearches(),fetchImpl=fetch,n
    const rows=parseBingNewsRss(xml,query,now);
    incoming.push(...rows);
    bingSuccessfulQueries++;
-  }catch(error){bingFailures.push({query,error:String(error?.message||error),status:responseStatus,contentType,responseFormat});}
+  }catch(error){if(!responseFormat&&contentType)responseFormat=classifyNewsFeedResponse('',contentType);bingFailures.push({query,error:String(error?.message||error),status:responseStatus,contentType,responseFormat,retryAttempted:false,...(retryAfter?{retryAfter}:{})});}
  }
  return {incoming,failures,queries:queries.length,successfulQueries:queries.length-failures.length,bingSuccessfulQueries,bingFailures,bingCandidates:incoming.filter(item=>item.discoverySource==='bing-news-rss').length,rssImageSignals,bingRssImageSignals};
 }
@@ -401,6 +433,7 @@ async function main(){
  const path=resolve(ROOT,'data/discovery.json'),existing=JSON.parse(await readFile(path,'utf8')),now=new Date().toISOString();
  const queriesList=getDailySearches();
  const {incoming,failures,queries,successfulQueries,bingSuccessfulQueries,bingFailures,bingCandidates,rssImageSignals,bingRssImageSignals}=await collectFeeds({queries:queriesList,now});
+ await persistQueryFailureHistory({runId:process.env.GITHUB_RUN_ID||'local-'+Date.now(),occurredAt:now,googleFailures:failures,bingFailures});
 
  if(successfulQueries===0&&bingSuccessfulQueries===0){
   await writeFile(resolve(ROOT,'data/news-collection-status.json'),JSON.stringify({schemaVersion:'1.0.0',collectedAt:now,searchPack:SEARCH_PACKS.findIndex(pack=>JSON.stringify(pack)===JSON.stringify(queriesList)),queries:summarizeQueryPerformance([],queriesList,now),requestedQueries:queries,successfulQueries,bingSuccessfulQueries,bingCandidates,bingFailedQueries:bingFailures.map(serializeFeedFailure),failedQueries:failures.map(serializeFeedFailure),rssImageSignals,bingRssImageSignals,fetched:0,uniqueIncoming:0,added:0,totalCandidates:existing.length},null,2)+'\n');

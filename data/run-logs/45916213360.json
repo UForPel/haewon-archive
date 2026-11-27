@@ -42,5 +42,16 @@
     "data/quality-metrics.json",
     "data/run-logs"
   ],
-  "durationMs": 17992
+  "durationMs": 17992,
+  "queryFailures": [
+    {
+      "sourceId": "google-news-rss",
+      "query": "오해원 근황",
+      "error": "HTTP 429",
+      "status": 429,
+      "contentType": "text/html; charset=UTF-8",
+      "responseFormat": "html",
+      "retryAttempted": false
+    }
+  ]
 }

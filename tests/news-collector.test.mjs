@@ -194,7 +194,7 @@ test('Bing non-RSS responses retain status and content type diagnostics without 
 import { serializeFeedFailure } from '../scripts/collect-news.mjs';
 test('feed failure serializer keeps only safe status metadata and excludes response bodies',()=>{
  const row=serializeFeedFailure({query:'q',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:'html',body:'private response body'});
- assert.deepEqual(row,{query:'q',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:'html'});
+ assert.deepEqual(row,{query:'q',error:'HTTP 429',retryAttempted:false,status:429,contentType:'text/html; charset=utf-8',responseFormat:'html'});
  assert.equal(JSON.stringify(row).includes('private response body'),false);
 });
 test('Google and Bing partial failures preserve HTTP status and response format in collector output',async()=>{
