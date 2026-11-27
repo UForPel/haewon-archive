@@ -47,7 +47,7 @@ export function parseYoutubeSearchResponse(payload,now=new Date().toISOString())
    id,title:title.slice(0,500),url:'https://www.youtube.com/watch?v='+id,
    thumbnailUrl:'https://i.ytimg.com/vi/'+id+'/hqdefault.jpg',
    publishedAt:new Date(date).toISOString(),description,channelName,channelId,
-   origin:channelId===OFFICIAL_CHANNEL_ID?'official':'unverified',
+   origin:channelId===OFFICIAL_CHANNEL_ID?'artist-official':'unverified',
    sourceId:'youtube-data-api-search',collectedAt:now,
    relevance:HAEWON.test(title+' '+description)
   };

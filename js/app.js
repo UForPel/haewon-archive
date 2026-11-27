@@ -129,10 +129,11 @@ function renderVideos() {
     const channelName = video.channelName ? ' · 채널 ' + video.channelName : '';
     meta.textContent = (video.publishedAt ? new Date(video.publishedAt).toLocaleDateString('ko-KR') : '날짜 미상') + ' · ' + sourceName(video.sourceId) + channelName;
     info.append(title, meta);
-    const officialChannel = video.origin === 'official' || (!video.origin && video.sourceId === 'nmixx-youtube');
+    const origin = video.origin || (video.sourceId === 'nmixx-youtube' ? 'artist-official' : 'unverified');
+    const originLabels = { 'artist-official': '아티스트 공식', 'broadcaster-official': '방송사 공식', unverified: '채널 미검수' };
     const originTag = document.createElement('span');
     originTag.className = 'tag';
-    originTag.textContent = officialChannel ? '공식 채널' : '채널 미검수';
+    originTag.textContent = originLabels[origin] || '채널 미검수';
     info.append(originTag);
     if (video.relevance) {
       const tag = document.createElement('span');

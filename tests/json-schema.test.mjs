@@ -14,7 +14,9 @@ const video = {
   channelName: 'NMIXX',
   sourceId: 'nmixx-youtube',
   collectedAt: '2026-11-18T19:25:38.877Z',
-  relevance: true
+  relevance: true,
+  channelId: 'UCnUAyD4t2LkvW68YrDh7fDg',
+  origin: 'artist-official'
 };
 const photo = {
   id: 'photo-1',
@@ -59,9 +61,11 @@ test('video/photo 어느 쪽에도 맞지 않는 객체는 oneOf에서 거부한
 });
 
 
-test('YouTube search records preserve channel identity and constrain origin values',()=>{
- const searched={...video,channelId:'UCexample123',origin:'unverified',sourceId:'youtube-data-api-search'};
- assert.deepEqual(validateAgainstSchema(searched,schema),[]);
- const invalid={...searched,origin:'unknown'};
+test('video records distinguish artist, broadcaster and unverified channel origins',()=>{
+ const artist={...video,origin:'artist-official'};
+ const broadcaster={...video,channelId:'UCbroadcaster123',origin:'broadcaster-official'};
+ const unverified={...video,channelId:'UCunknown123',origin:'unverified',sourceId:'youtube-data-api-search'};
+ for(const item of [artist,broadcaster,unverified])assert.deepEqual(validateAgainstSchema(item,schema),[]);
+ const invalid={...unverified,origin:'unknown'};
  assert.ok(validateAgainstSchema(invalid,schema).length>0);
 });

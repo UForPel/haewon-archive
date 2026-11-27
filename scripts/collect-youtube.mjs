@@ -54,6 +54,8 @@ export function parseAtomFeed(xml) {
       publishedAt: published.toISOString(),
       description,
       channelName: author || 'NMIXX',
+      channelId: CHANNEL_ID,
+      origin: 'artist-official',
       sourceId: 'nmixx-youtube',
       collectedAt: new Date().toISOString(),
       relevance: /해원|오해원|haewon/i.test(`${title} ${description}`)
