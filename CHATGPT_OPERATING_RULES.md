@@ -692,3 +692,10 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 - Compare the field with configured UTC cron, Actions created_at/run_started_at and log startedAt. Preserve the distinction between scheduled and push Production runs.
 - PR CI #105 and Production #623 each passed 226/226; #623 is push-triggered and does not verify the 20:17 KST slot.
 - #614/#622 timing remains unexplained. GitHub's documented schedule-load delays are not sufficient evidence to explain earlier-than-cron timestamps; don't change cron without more evidence.
+
+ 
+## 2026-11-27 19:08 KST — Verification discipline checkpoint
+- Main is 63f3c9c2daf0732252ac2c1e330cedaead0daeb5. #623 (45949528329) is event=push, not the requested 20:17 schedule.
+- PR #75's optional scheduleExpression instrumentation is merged. Only a genuine event=schedule run with run-log scheduleExpression='17 11 * * *' can verify the 20:17 KST slot.
+- Keep #614/#622 timestamp anomalies unresolved; GitHub documents load-related delays/dropped jobs but that does not explain earlier-than-cron starts. Do not change cron speculatively.
+- A cycle must update the seven canonical continuity files: PROJECT_MEMORY.md, CHATGPT_OPERATING_RULES.md, DECISIONS.md, SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md. Treat COLLECTION_RULES.md and SOURCE_POLICY.md as additional policy docs, not substitutes for any of the seven.
