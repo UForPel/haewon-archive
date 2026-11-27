@@ -25,6 +25,21 @@ export function filterDiscoveryItems(items,query='') {
  if(!q)return items;
  return items.filter(item=>[item.title,cleanDiscoveryText(item.description),item.sourceName,item.query].some(value=>String(value||'').toLowerCase().includes(q)));
 }
+
+export function buildVerifiedHaewonImageGallery(items=[]) {
+ const candidates=sortDiscoveryItems(
+  filterDiscoveryRelevance(filterArticleCandidates(items),'verified-haewon')
+   .filter(item=>/^https:\/\//i.test(String(item.thumbnailUrl||''))&&Boolean(item.thumbnailSource||item.thumbnailProvenance?.source)),
+  'date'
+ );
+ const seen=new Set();
+ return candidates.filter(item=>{
+  const url=String(item.thumbnailUrl||'');
+  if(seen.has(url))return false;
+  seen.add(url);
+  return true;
+ });
+}
 const list=typeof document!=='undefined'?document.querySelector('#discovery-list'):null;
 const count=typeof document!=='undefined'?document.querySelector('#discovery-count'):null;
 const search=typeof document!=='undefined'?document.querySelector('#discovery-search'):null;
@@ -124,13 +139,45 @@ if(list&&count){
   const next=document.createElement('button');next.type='button';next.textContent='다음';next.disabled=page>=pageCount;next.addEventListener('click',()=>{page++;render();});
   pagination.append(prev,label,next);
  };
+ const photoPreviewGrid=document.querySelector('#photo-preview-grid');
+ const photoPreviewCount=document.querySelector('#photo-preview-count');
+ const photoPreviewPagination=document.querySelector('#photo-preview-pagination');
+ const PHOTO_PREVIEW_PAGE_SIZE=12;
+ let photoPreviewItems=[];
+ let photoPreviewPage=1;
+ const renderPhotoPreviewGallery=()=>{
+  if(!photoPreviewGrid)return;
+  const pageCount=Math.max(1,Math.ceil(photoPreviewItems.length/PHOTO_PREVIEW_PAGE_SIZE));
+  photoPreviewPage=Math.min(photoPreviewPage,pageCount);
+  if(photoPreviewCount)photoPreviewCount.textContent=photoPreviewItems.length+'개';
+  photoPreviewGrid.replaceChildren();
+  photoPreviewItems.slice((photoPreviewPage-1)*PHOTO_PREVIEW_PAGE_SIZE,photoPreviewPage*PHOTO_PREVIEW_PAGE_SIZE).forEach(item=>{
+   const card=document.createElement('article');card.className='photo-preview-card';
+   const link=document.createElement('a');link.className='photo-preview-image-link';link.href=item.publisherArticleUrl;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label','기사 원문 열기: '+cleanDiscoveryText(item.title));
+   const image=document.createElement('img');image.className='photo-preview-image';image.src=item.thumbnailUrl;image.alt=cleanDiscoveryText(item.title)+' 기사 이미지';image.loading='lazy';image.onerror=()=>{const fallback=document.createElement('span');fallback.className='discovery-thumbnail-fallback';fallback.textContent='이미지를 불러오지 못했습니다';link.replaceChildren(fallback);};link.append(image);
+   const title=document.createElement('a');title.className='photo-preview-title';title.href=item.publisherArticleUrl;title.target='_blank';title.rel='noopener noreferrer';title.textContent=cleanDiscoveryText(item.title)||'제목 미상';
+   const meta=document.createElement('p');meta.className='photo-meta';meta.textContent=(item.sourceName||'출처 미상')+(item.publishedAt?' · '+new Date(item.publishedAt).toLocaleDateString('ko-KR'):'')+' · 출판사 원문 확인';
+   const open=document.createElement('a');open.className='photo-preview-open';open.href=item.publisherArticleUrl;open.target='_blank';open.rel='noopener noreferrer';open.textContent='기사 원문 보기 ↗';
+   card.append(link,title,meta,open);photoPreviewGrid.append(card);
+  });
+  if(!photoPreviewItems.length){const empty=document.createElement('p');empty.className='empty';empty.textContent='아직 출처가 확인된 해원 기사 이미지가 없습니다.';photoPreviewGrid.append(empty);}
+  if(photoPreviewPagination){
+   photoPreviewPagination.replaceChildren();
+   if(pageCount<=1){photoPreviewPagination.hidden=true;return;}
+   photoPreviewPagination.hidden=false;
+   const previous=document.createElement('button');previous.type='button';previous.textContent='이전';previous.disabled=photoPreviewPage<=1;previous.addEventListener('click',()=>{photoPreviewPage--;renderPhotoPreviewGallery();});
+   const label=document.createElement('span');label.textContent=photoPreviewPage+' / '+pageCount+'페이지';label.setAttribute('aria-live','polite');
+   const next=document.createElement('button');next.type='button';next.textContent='다음';next.disabled=photoPreviewPage>=pageCount;next.addEventListener('click',()=>{photoPreviewPage++;renderPhotoPreviewGallery();});
+   photoPreviewPagination.append(previous,label,next);
+  }
+ };
  const videoDiscoveryList=document.querySelector('#video-discovery-list');
   const videoDiscoveryCount=document.querySelector('#video-discovery-count');
   const sortSelect=document.querySelector('#discovery-sort');
   let selectedSort=sortSelect?.value||'date';
   const categoryBar=document.querySelector('#discovery-categories');
  const relevanceBar=document.querySelector('#discovery-relevance');
- let selectedRelevance='verified-haewon';
+ let selectedRelevance='haewon';
  let unverifiedRepeatedThumbnailUrls=new Set();
  const relevanceLabels={'verified-haewon':'해원 원문 확인',haewon:'해원 기사 후보',nmixx:'NMIXX 기사 후보',all:'전체 기사 후보'};
  let selectedCategory='all';
@@ -234,6 +281,8 @@ if(list&&count){
   if(sortSelect)sortSelect.addEventListener('change',()=>{selectedSort=sortSelect.value==='relevance'?'relevance':'date';page=1;render();});
  fetch('./data/discovery.json').then(response=>{if(!response.ok)throw new Error('discovery fetch failed');return response.json();}).then(items=>{
   allItems=Array.isArray(items)?items:[];
+  photoPreviewItems=buildVerifiedHaewonImageGallery(allItems);
+  renderPhotoPreviewGallery();
   const imageGroups=new Map();
   for(const item of allItems){const url=String(item.thumbnailUrl||'');if(url)imageGroups.set(url,(imageGroups.get(url)||0)+1);}
   unverifiedRepeatedThumbnailUrls=new Set([...imageGroups].filter(([url,n])=>n>=10&&allItems.filter(item=>item.thumbnailUrl===url).every(item=>!item.thumbnailSource&&!item.thumbnailMetaFetch&&!item.publisherArticleUrl)).map(([url])=>url));
