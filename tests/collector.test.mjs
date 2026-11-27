@@ -1,30 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseAtomFeed, mergeVideos } from '../scripts/collect-youtube.mjs';
-
-const fixture = `<?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/">
-  <entry>
-    <id>tag:youtube.com,2008:video:abc123</id>
-    <yt:videoId>abc123</yt:videoId>
-    <title>[NMIXX] 해원 HAEWON 영상 &amp; 이야기</title>
-    <link rel="alternate" href="https://www.youtube.com/watch?v=abc123"/>
-    <published>2026-11-17T09:00:00+00:00</published>
-    <author><name>NMIXX</name></author>
-    <media:group><media:description>오해원</media:description><media:thumbnail url="https://example.com/thumb.jpg"/></media:group>
-  </entry>
-</feed>`;
-
-test('Atom 피드에서 영상 메타데이터와 해원 관련도를 추출한다', () => {
-  const [video] = parseAtomFeed(fixture);
-  assert.equal(video.id, 'abc123');
-  assert.equal(video.title, '[NMIXX] 해원 HAEWON 영상 & 이야기');
-  assert.equal(video.relevance, true);
-  assert.equal(video.channelId, 'UCnUAyD4t2LkvW68YrDh7fDg');
-  assert.equal(video.origin, 'artist-official');
-  assert.equal(video.url, 'https://www.youtube.com/watch?v=abc123');
-  assert.equal(video.thumbnailUrl, 'https://example.com/thumb.jpg');
-});
+import { readFile } from 'node:fs/promises';
+import { buildDisabledCollectionStatus, mergeVideos } from '../scripts/collect-youtube.mjs';
 
 test('중복 영상 ID는 하나로 합치고 최신순으로 정렬한다', () => {
   const old = { id: 'a', title: 'old', publishedAt: '2026-01-01T00:00:00.000Z', collectedAt: 'first' };
@@ -37,6 +14,21 @@ test('중복 영상 ID는 하나로 합치고 최신순으로 정렬한다', () 
   assert.equal(result[0].id, 'b');
 });
 
-test('잘못된 피드는 명확하게 거부한다', () => {
-  assert.throws(() => parseAtomFeed('<html>not a feed</html>'), /Atom/);
+test('비활성화 상태를 기록하되 기존 영상 수와 마지막 성공 시각을 보존한다', () => {
+  const previous = { status: 'success', totalItems: 20, lastSuccessAt: '2026-11-27T02:09:09.571Z' };
+  const result = buildDisabledCollectionStatus(previous, '2026-11-27T05:00:00.000Z');
+  assert.equal(result.status, 'disabled');
+  assert.equal(result.policy, 'disabled');
+  assert.equal(result.itemsFetched, 0);
+  assert.equal(result.itemsAdded, 0);
+  assert.equal(result.totalItems, 20);
+  assert.equal(result.lastSuccessAt, previous.lastSuccessAt);
+  assert.equal(result.lastPolicyCheckAt, '2026-11-27T05:00:00.000Z');
+});
+
+test('YouTube Atom collector contains no network fetch or feed endpoint', async () => {
+  const source = await readFile(new URL('../scripts/collect-youtube.mjs', import.meta.url), 'utf8');
+  assert.doesNotMatch(source, /\bfetch\s*\(/);
+  assert.doesNotMatch(source, /feeds\/videos\.xml/i);
+  assert.match(source, /networkRequests: 0/);
 });

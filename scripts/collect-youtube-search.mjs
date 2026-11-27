@@ -22,6 +22,7 @@ export const YOUTUBE_SEARCH_QUERIES=[
 const VIDEO_ID=/^[A-Za-z0-9_-]{11}$/;
 const HAEWON=/오해원|해원|haewon/i;
 export const MAX_QUERIES_PER_RUN=4;
+export const YOUTUBE_API_LIFECYCLE_ENABLED = false;
 function defaultRunSlot(){
  const hour=Number(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul',hour:'2-digit',hourCycle:'h23'}));
  return hour>=12?1:0;
@@ -72,12 +73,16 @@ export async function collectYoutubeSearch({apiKey='',queries=getDailyVideoSearc
  return {status:successfulQueries?'success':'error',queries:boundedQueries.length,successfulQueries,failedQueries,incoming};
 }
 async function main(){
+ if (!YOUTUBE_API_LIFECYCLE_ENABLED) {
+  console.log(JSON.stringify({status:'disabled-policy',reason:'YouTube Data API remains disabled until a compliant 30-day refresh/deletion lifecycle is implemented and reviewed'}));
+  return;
+ }
  const apiKey=process.env.YOUTUBE_API_KEY||'';
  const queries=getDailyVideoSearches();
  const now=new Date().toISOString();
  const result=await collectYoutubeSearch({apiKey,queries,now});
  if(result.status==='skipped-no-api-key'){
-  console.log(JSON.stringify({status:result.status,reason:'YOUTUBE_API_KEY is not configured; official public Atom feed remains active'}));
+  console.log(JSON.stringify({status:result.status,reason:'YOUTUBE_API_KEY is not configured; YouTube Data API remains disabled'}));
   return;
  }
  if(result.successfulQueries===0){console.warn(JSON.stringify({status:'optional-search-failed',reason:'YouTube Data API search failed; official Atom feed and archive collection continue unchanged',failedQueries:result.failedQueries.length}));return;}

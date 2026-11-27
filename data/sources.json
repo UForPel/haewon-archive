@@ -5,8 +5,8 @@
     "kind": "youtube-atom",
     "url": "https://www.youtube.com/@NMIXXOfficial",
     "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnUAyD4t2LkvW68YrDh7fDg",
-    "policy": "public-feed",
-    "enabled": true
+    "policy": "disabled",
+    "enabled": false
   },
   {
     "id": "jyp-official",

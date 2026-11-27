@@ -26,7 +26,7 @@ test('production performs one normal collection pass and retries only on a main 
   assert.ok(workflow.includes('git fetch origin main'));
   assert.ok(workflow.includes('git reset --hard origin/main'));
   assert.ok(workflow.includes('if git push origin HEAD:main; then'));
-  assert.ok(workflow.includes('YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}'));
+  assert.doesNotMatch(workflow, /YOUTUBE_API_KEY/);
   assert.doesNotMatch(workflow, /- name: Collect public YouTube feed/);
   assert.doesNotMatch(workflow, /- name: Discover public news RSS candidates/);
 });
