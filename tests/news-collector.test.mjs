@@ -203,5 +203,5 @@ test('Google and Bing partial failures preserve HTTP status and response format 
   return new Response('rate limited',{status:429,headers:{'content-type':'text/html; charset=utf-8'}});
  }});
  assert.deepEqual(result.failures[0],{query:'diagnostic query',error:'HTTP 429',status:429,contentType:'text/html; charset=utf-8',responseFormat:'html',retryAttempted:false});
- assert.deepEqual(result.bingFailures[0],{query:'diagnostic query',error:'Bing RSS 응답이 아닙니다',status:200,contentType:'text/html; charset=utf-8',responseFormat:'html'});
+ assert.deepEqual(result.bingFailures[0],{query:'diagnostic query',error:'Bing RSS 응답이 아닙니다',status:200,contentType:'text/html; charset=utf-8',responseFormat:'html',retryAttempted:false});
 });
