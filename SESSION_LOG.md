@@ -2127,7 +2127,7 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 ## 2026-11-28 06:47 KST — Live recursive-improvement cycle
 ### Repository and schedule
 - Re-fetched live main from GitHub: dd9c7e09cf0297c08befc4a693cd4b27d5b5b9c2; prior checkpoint SHA was not assumed current. Read all seven canonical documents from this main before this update. Open PR search returned none before creating this documentation PR.
-- Production #624 / Actions run 46060489526 is a successful schedule run. Actions event=schedule; created_at and run_started_at both 2026-11-27T19:59:27Z. Run-log trigger=github_schedule, scheduleExpression=17 11 * * *, startedAt=19:59:31.000Z, finishedAt=19:59:52.735Z. This is the prior 20:17 KST / 11:17 UTC slot, observed 8h42m10s after the scheduled clock. The run was not visible at the 22:31 checkpoint; now confirmed. Root cause of delay is unknown.
+- Production #624 / Actions run 46060489526 is a successful schedule run. Actions event=schedule; created_at and run_started_at both 2026-11-27T19:59:27Z. Run-log trigger=github_schedule, scheduleExpression=17 11 * * *, startedAt=19:59:31.000Z, finishedAt=19:59:52.735Z. This is the prior 20:17 KST / 11:17 UTC slot, observed 8h42m27s after the scheduled clock. The run was not visible at the 22:31 checkpoint; now confirmed. Root cause of delay is unknown.
 - The distinct next 08:17 KST / 23:17 UTC slot (17 23 * * *) remained future at the current 06:47 KST checkpoint. No cron change and no premature verdict.
 ### Production / tests / data / deployment
 - Job 140713285787 completed successfully. Node test output: 226 tests, 226 pass, 0 fail. Run log says validation passed; Google News 193, Bing News 36; 6/6 queries succeeded; queryFailures empty; YouTube skipped.
@@ -2146,4 +2146,8 @@ The previous "Atom feed not verified" status is refined: endpoint availability r
 - The seven-document update was submitted as PR #84 and CI run #114 (46072826084) completed successfully. Its Unit tests and Validate committed archive data steps both passed.
 - PR #84 was merged after those checks, using squash merge. Merge commit / verified main immediately after merge: f2ca4cc33ecde38501a35c7332e6f0584f25a6ce. Post-merge open-PR search returned none.
 - This finalization note corrects the interim status in this cycle's checkpoint: PR #84 is merged, not awaiting CI. It was documentation-only; no collector or dataset code was changed.
-- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m10s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
+- Production #624 remains a separate successful schedule run for the prior 20:17 KST slot, delayed by 8h42m27s; cause unknown. The distinct 08:17 KST slot (17 23 * * *) was still in the future at 06:47 KST.
+
+## 2026-11-28 06:47 KST — Final audit correction
+- Arithmetic correction: cron minute 11:17:00Z to Actions created_at/run_started_at 19:59:27Z is 8 hours 42 minutes 27 seconds (not 8h42m10s). Run-log startedAt 19:59:31Z is 8h42m31s after the scheduled clock. The slot classification remains unchanged: delayed observed schedule event; delay cause unknown.
+- PR #85 CI run #115 (46072938784) passed Unit tests and Validate committed archive data; PR #85 was merged. Main at the start of this correction PR: bfcb34d73e5c05ee8692c12a6500dff2c4375f10. No open PRs were found after the merge.
