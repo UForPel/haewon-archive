@@ -680,3 +680,9 @@ Do not decode wrappers or infer images. Keep 273 legacy shared-thumbnail assignm
 ## Scheduled-run timestamp verification — 2026-11-27
 - Treat Actions event=schedule as evidence of a scheduled workflow, but also compare its recorded timestamp with the configured cron in UTC and the user's requested local time. Do not claim a specific slot ran when timestamps do not match.
 - For #622, record 14:03:36 KST versus configured 20:17 KST. Keep the requested 20:17 slot pending and investigate possible schedule queue delay without changing cron configuration from a single anomalous observation.
+
+## 2026-11-27 — Schedule event evidence rules
+- GitHub exposes `github.event.schedule` for distinguishing which cron expression triggered a workflow with multiple schedule entries. Prior run logs did not store this field; do not invent it retrospectively.
+- Compare configured cron (UTC), event schedule expression, Actions created/start timestamps and run-log startedAt. Generic event=schedule is insufficient to identify the requested local-time slot.
+- GitHub documents load-related delays and possible drops, but do not claim this explains a run timestamp earlier than its configured cron. Keep unexplained timing anomalies explicitly unresolved.
+- Do not alter cron configuration based on a single or unexplained observation.

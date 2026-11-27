@@ -734,3 +734,21 @@ YouTube Atom collector는 비활성 상태여야 한다. nmixx-youtube skipped, 
 
 ## 2026-11-27 — Scheduled #622 timing discrepancy
 - Production #622 is a real schedule event, but its recorded start time is 14:03:36 KST, not the configured 20:17 KST cron slot. The next conversation prompt must verify the 20:17 slot independently and investigate schedule queue timing without changing cron settings on speculation.
+
+## 2026-11-27 — Next-cycle action: schedule diagnostics
+- **Visible label:** 🔄 연구 기반 재귀개선 계속하기
+- **Action:** submit the complete next-cycle instruction below.
+
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA는 실행 시 GitHub에서 실시간 조회한다. 최신 확인된 Production 데이터 커밋은 9de65fa731e459bf6238b7983169be1788644525 (#622)이다. 먼저 최신 main, 열린 PR, Actions, Production, 데이터 커밋, artifact SHA-256, Pages 배포를 실제 조회하고 일곱 운영 문서를 먼저 읽는다.
+
+최우선은 2026-11-27 20:17 KST (11:17 UTC) Production 실행이다. #622 (run 45943513107)는 schedule 이벤트로 05:03:36Z / 14:03:36 KST에 시작했고, #614 (run 45889430699)는 schedule 이벤트로 2026-11-26 20:13:18Z / 2026-11-27 05:13:18 KST에 시작했다. 두 실행의 workflow 파일에는 동일하게 17 11 * * * 및 17 23 * * *가 설정되어 있었다. 둘 다 기록된 시작 시각은 설정 시각과 맞지 않는다. 기존 run log에는 github.event.schedule 값이 저장되지 않아 어느 cron expression이 발화했는지 소급 확인할 수 없다.
+
+이번 PR에서 scripts/run-log.mjs, run-log schema, Production workflow, tests에 optional scheduleExpression 필드를 추가하여 이후 run log에 github.event.schedule 원문을 보존한다. PR CI 및 전체 데이터 검증 성공 후 병합 여부를 판단한다. 병합되면 다음 예약 실행에서 data/run-logs/<run-id>.json의 scheduleExpression, startedAt, Actions created_at/run_started_at을 대조한다. 17 11 * * *인지, 실제 시작이 20:17 KST와 얼마나 차이 나는지 기록한다. #614/#622의 cron expression을 소급해 추측하지 않는다. 단일 이상 실행으로 cron을 변경하지 않는다.
+
+#617의 실제 HTTP 429 이벤트가 append-only data/query-failure-history.json에 유지되는지 확인한다. 다른 검색어의 실제 실패가 발생하면 별도 이벤트가 추가되는지, 이후 성공에서도 모두 보존되는지 확인한다. 실패가 없으면 합성 이벤트 금지. Retry-After는 실제 헤더가 있을 때만 기록하고 blind retry 금지.
+
+YouTube Atom collector는 계속 비활성화, networkRequests 0, 기존 videos.json 20개 보존. YouTube Data API 비활성, workflow에서 YOUTUBE_API_KEY 전달 금지. JYP/NMIXX Gallery·Notice 수집기 구현 금지, SBSKPOP ZOOM 소유권 미확인, 방송사 수집기 및 broadcaster-official 자동 분류 금지. 273개 레거시 공유 썸네일과 PR #54/#56 저장 성공 후 이동·실패 시 복원 흐름 보존. 기사 이미지와 독립 사진 수치를 구분한다.
+
+매 사이클 일곱 문서 갱신, PR CI 및 전체 데이터 검증 성공 후에만 병합. Android Chrome 실기기 QA는 사용자 직접 확인 전까지 미검증. 코드·테스트·Production·데이터·artifact·Pages·Android QA를 분리 보고하고, 최신 main SHA와 다음 대화용 전체 지시 버튼을 제공한다. 확인하지 않은 결과를 성공으로 보고하지 않는다.
+```

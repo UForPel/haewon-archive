@@ -248,6 +248,11 @@
           }
         }
       }
+    },
+    "scheduleExpression": {
+      "type": "string",
+      "maxLength": 100,
+      "pattern": "^([0-9*/, -]+)$"
     }
   }
 }
