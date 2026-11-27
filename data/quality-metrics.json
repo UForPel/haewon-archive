@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-11-27T02:09:13.985Z",
+  "generatedAt": "2026-11-27T05:00:52.766Z",
   "discoveryRelevance": {
-    "totalCandidates": 914,
-    "articleCandidates": 727,
+    "totalCandidates": 922,
+    "articleCandidates": 735,
     "videoCandidates": 187,
-    "verifiedPublisherArticles": 107,
-    "verifiedHaewonArticles": 83,
-    "verifiedPublisherArticlesWithProvenanceThumbnail": 80,
-    "verifiedHaewonWithProvenanceThumbnail": 61,
-    "haewonTitleMatches": 544,
-    "nmixxTitleMatches": 566,
+    "verifiedPublisherArticles": 110,
+    "verifiedHaewonArticles": 84,
+    "verifiedPublisherArticlesWithProvenanceThumbnail": 83,
+    "verifiedHaewonWithProvenanceThumbnail": 62,
+    "haewonTitleMatches": 550,
+    "nmixxTitleMatches": 572,
     "otherArticleCandidates": 82,
     "defaultScope": "haewon-title-match"
   },
   "articleUrlProvenance": {
-    "totalItems": 914,
-    "itemsWithPublisherArticleUrl": 108,
-    "bingNewsItems": 111,
+    "totalItems": 922,
+    "itemsWithPublisherArticleUrl": 111,
+    "bingNewsItems": 114,
     "candidateSourceCounts": {
-      "bing-news-rss-explicit-url-param": 117
+      "bing-news-rss-explicit-url-param": 120
     },
     "publisherHosts": {
       "www.msn.com": 14,
@@ -32,6 +32,7 @@
       "news.sbs.co.kr": 4,
       "en.sportalkorea.com": 3,
       "www.allkpop.com": 3,
+      "en.yna.co.kr": 3,
       "www.etnews.com": 2,
       "mydaily.co.kr": 2,
       "www.sportskeeda.com": 2,
@@ -47,6 +48,7 @@
       "www.wikitree.co.kr": 1,
       "technosports.co.in": 1,
       "en.koreadaily.com": 1,
+      "www.idntimes.com": 1,
       "www.kapanlagi.com": 1,
       "ca.news.yahoo.com": 1,
       "www.chosun.com": 1,
@@ -54,7 +56,6 @@
       "www.nme.com": 1,
       "timesofindia.indiatimes.com": 1,
       "tribune.com.pk": 1,
-      "en.yna.co.kr": 1,
       "www.geo.tv": 1,
       "www.spotvnews.co.kr": 1,
       "www.tvdaily.co.kr": 1,
@@ -82,6 +83,7 @@
       "en.sportalkorea.com": 3,
       "sbsstar.net": 3,
       "www.allkpop.com": 3,
+      "en.yna.co.kr": 3,
       "www.etnews.com": 2,
       "www.mydaily.co.kr": 2,
       "www.sportskeeda.com": 2,
@@ -96,6 +98,7 @@
       "www.wikitree.co.kr": 1,
       "technosports.co.in": 1,
       "en.koreadaily.com": 1,
+      "www.idntimes.com": 1,
       "www.kapanlagi.com": 1,
       "ca.news.yahoo.com": 1,
       "www.chosun.com": 1,
@@ -103,7 +106,6 @@
       "www.nme.com": 1,
       "timesofindia.indiatimes.com": 1,
       "tribune.com.pk": 1,
-      "en.yna.co.kr": 1,
       "www.geo.tv": 1,
       "www.spotvnews.co.kr": 1,
       "www.tvdaily.co.kr": 1,
@@ -125,13 +127,13 @@
     },
     "sourceSiteHosts": {
       "youtu.be": 105,
+      "www.xportsnews.com": 36,
       "news.nate.com": 35,
-      "www.xportsnews.com": 35,
       "m.newsen.com": 26,
       "enews.imbc.com": 25,
       "sports.khan.co.kr": 19,
-      "www.chosun.com": 16,
-      "www.slist.kr": 15,
+      "www.chosun.com": 18,
+      "www.slist.kr": 16,
       "www.topstarnews.net": 13,
       "www.newsis.com": 12,
       "www.tvj.co.kr": 12,
@@ -161,12 +163,12 @@
       "www.ize.co.kr": 4,
       "www.news1.kr": 4,
       "www.fnnews.com": 4,
+      "www.nocutnews.co.kr": 4,
       "www.nc.press": 4,
       "tvreport.co.kr": 3,
       "www.ytn.co.kr": 3,
       "www.koreadaily.com": 3,
       "www.starnewskorea.com": 3,
-      "www.nocutnews.co.kr": 3,
       "www.marieclairekorea.com": 3,
       "www.ajunews.com": 3,
       "www.stardailynews.co.kr": 3,
@@ -243,6 +245,7 @@
       "sports.hankooki.com": 1,
       "www.ilyoseoul.co.kr": 1,
       "www.entermedia.co.kr": 1,
+      "pickcon.co.kr": 1,
       "www.hankookilbo.com": 1,
       "masilwide.com": 1,
       "www.beyondpost.co.kr": 1,
@@ -282,30 +285,30 @@
       "www.obsnews.co.kr": 1
     },
     "discoveryWrapperHosts": {
-      "www.bing.com": 111
+      "www.bing.com": 114
     }
   },
   "thumbnailProvenance": {
-    "assignedTotal": 356,
+    "assignedTotal": 359,
     "assignedBySource": {
       "unverified-legacy": 273,
-      "og:image": 75,
-      "twitter:image": 6,
+      "og:image": 76,
+      "twitter:image": 8,
       "link:image_src": 1,
       "twitter:image:src": 1
     },
     "unverifiedLegacyAssignments": 273,
-    "missingThumbnailCount": 558,
-    "sourceProvenanceCoverage": 23
+    "missingThumbnailCount": 563,
+    "sourceProvenanceCoverage": 24
   },
   "thumbnailMissingDiagnostics": {
-    "items": 914,
-    "missing": 558,
-    "classified": 558,
+    "items": 922,
+    "missing": 563,
+    "classified": 563,
     "unclassified": 0,
     "byReason": {
       "publisher-fetch-failed:forbidden": 9,
-      "google-news-wrapper-without-publisher-article-url": 518,
+      "google-news-wrapper-without-publisher-article-url": 523,
       "publisher-page-no-image-candidate": 17,
       "publisher-fetch-failed:method-not-allowed": 1,
       "publisher-fetch-failed:network-error": 1,
@@ -314,12 +317,12 @@
     "bySource": [
       {
         "source": "Google News",
-        "items": 803,
-        "missing": 530,
+        "items": 808,
+        "missing": 535,
         "missingWithPublisherArticleUrl": 0,
-        "missingWithSourceSiteUrl": 460,
+        "missingWithSourceSiteUrl": 465,
         "reasons": {
-          "google-news-wrapper-without-publisher-article-url": 518,
+          "google-news-wrapper-without-publisher-article-url": 523,
           "wrapper-only-not-followed": 12
         }
       },
@@ -573,6 +576,14 @@
         "reasons": {}
       },
       {
+        "source": "idntimes",
+        "items": 1,
+        "missing": 0,
+        "missingWithPublisherArticleUrl": 0,
+        "missingWithSourceSiteUrl": 0,
+        "reasons": {}
+      },
+      {
         "source": "Indiatimes",
         "items": 1,
         "missing": 0,
@@ -694,7 +705,7 @@
       },
       {
         "source": "Yonhap News Agency",
-        "items": 1,
+        "items": 3,
         "missing": 0,
         "missingWithPublisherArticleUrl": 0,
         "missingWithSourceSiteUrl": 0,
@@ -823,10 +834,10 @@
     ]
   },
   "thumbnailAudit": {
-    "items": 914,
-    "withThumbnail": 356,
-    "missing": 558,
-    "uniqueThumbnailUrls": 84,
+    "items": 922,
+    "withThumbnail": 359,
+    "missing": 563,
+    "uniqueThumbnailUrls": 87,
     "repeatedUrlGroups": 1,
     "repeatedItems": 272,
     "uniqueImageCoverage": 9,
@@ -944,6 +955,10 @@
         "count": 1
       },
       {
+        "host": "image.idn.media",
+        "count": 1
+      },
+      {
         "host": "cdns.klimg.com",
         "count": 1
       },
@@ -961,6 +976,14 @@
       },
       {
         "host": "i.tribune.com.pk",
+        "count": 1
+      },
+      {
+        "host": "img7.yna.co.kr",
+        "count": 1
+      },
+      {
+        "host": "img8.yna.co.kr",
         "count": 1
       },
       {
@@ -1008,7 +1031,7 @@
   "legacyThumbnailAudit": {
     "assignments": 273,
     "recordsWithPublisherArticleUrl": 0,
-    "recordsWithSourceSiteUrl": 204,
+    "recordsWithSourceSiteUrl": 205,
     "sourceSiteHosts": {
       "youtu.be": 50,
       "tvreport.co.kr": 1,
@@ -1032,7 +1055,7 @@
       "www.job-post.co.kr": 1,
       "www.twig24.com": 2,
       "www.seoul.co.kr": 1,
-      "www.xportsnews.com": 7,
+      "www.xportsnews.com": 8,
       "www.wikitree.co.kr": 1,
       "www.bntnews.co.kr": 1,
       "www.sportschosun.com": 2,
@@ -1085,53 +1108,100 @@
     "newsQueriesSuccessful": 6,
     "bingNewsQueriesRequested": 6,
     "bingNewsQueriesSuccessful": 6,
-    "bingNewsCandidates": 49,
+    "bingNewsCandidates": 31,
     "newsQuerySuccessRate": 100,
-    "youtubeStatus": "success",
+    "youtubeStatus": "disabled",
     "videosTotal": 20,
-    "newsCandidatesTotal": 914,
-    "newsUniqueFetched": 175,
-    "newsAddedLastRun": 5,
-    "duplicateBeforeMergeLastRun": 34,
-    "duplicateGroupsCurrent": 914,
+    "newsCandidatesTotal": 922,
+    "newsUniqueFetched": 72,
+    "newsAddedLastRun": 10,
+    "duplicateBeforeMergeLastRun": 9,
+    "duplicateGroupsCurrent": 922,
     "duplicateItemsCollapsedCurrent": 0,
     "duplicateTitleGroupsCurrent": 0,
     "duplicateTitleItemsCollapsedCurrent": 0,
     "deduplicationComparison": {
-      "before": 209,
-      "after": 174,
-      "collapsed": 35,
+      "before": 81,
+      "after": 72,
+      "collapsed": 9,
       "method": "normalized exact headline first; canonical URL fallback"
     },
     "thumbnailEnrichment": {
-      "attempted": 1,
-      "found": 1,
-      "assigned": 1,
+      "attempted": 3,
+      "found": 3,
+      "assigned": 3,
       "duplicateRejected": 0,
       "wrapperOnly": 0,
       "missing": 0,
       "failed": 0,
       "results": [
         {
-          "id": "9ffee44a0be1cb0b14a8",
+          "id": "ac8c7b7b6eacdb869bb4",
           "status": "assigned",
           "candidate": {
-            "url": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+            "url": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
             "source": "og:image",
             "priority": 1
           },
           "candidates": [
             {
-              "url": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
+              "url": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
               "source": "og:image",
               "priority": 1
+            },
+            {
+              "url": "https://image.idntimes.com/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
+              "source": "jsonld:image",
+              "priority": 5
             }
           ],
           "assigned": true,
-          "publisherArticleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
+          "publisherArticleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
           "sourceUrl": "",
-          "resolvedArticleUrl": "https://www.sportsworldi.com/newsView/20261127505364",
-          "resolvedArticleHost": "www.sportsworldi.com"
+          "resolvedArticleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
+          "resolvedArticleHost": "www.idntimes.com"
+        },
+        {
+          "id": "49ca5ad1281318ba5b35",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
+            "source": "twitter:image",
+            "priority": 2
+          },
+          "candidates": [
+            {
+              "url": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
+              "source": "twitter:image",
+              "priority": 2
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
+          "resolvedArticleHost": "en.yna.co.kr"
+        },
+        {
+          "id": "76b51bf9c0a69f9d4268",
+          "status": "assigned",
+          "candidate": {
+            "url": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
+            "source": "twitter:image",
+            "priority": 2
+          },
+          "candidates": [
+            {
+              "url": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
+              "source": "twitter:image",
+              "priority": 2
+            }
+          ],
+          "assigned": true,
+          "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
+          "sourceUrl": "",
+          "resolvedArticleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
+          "resolvedArticleHost": "en.yna.co.kr"
         }
       ]
     }
@@ -1139,11 +1209,11 @@
   "sources": [
     {
       "source": "Google News",
-      "items": 803,
-      "withUrl": 803,
+      "items": 808,
+      "withUrl": 808,
       "withPublisherArticleUrl": 0,
       "withThumbnail": 273,
-      "withDate": 803,
+      "withDate": 808,
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 0,
       "thumbnailCoverage": 34,
@@ -1303,6 +1373,18 @@
       "urlCoverage": 100,
       "publisherArticleUrlCoverage": 100,
       "thumbnailCoverage": 0,
+      "dateCoverage": 100
+    },
+    {
+      "source": "Yonhap News Agency",
+      "items": 3,
+      "withUrl": 3,
+      "withPublisherArticleUrl": 3,
+      "withThumbnail": 3,
+      "withDate": 3,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 100,
       "dateCoverage": 100
     },
     {
@@ -1510,6 +1592,18 @@
       "dateCoverage": 100
     },
     {
+      "source": "idntimes",
+      "items": 1,
+      "withUrl": 1,
+      "withPublisherArticleUrl": 1,
+      "withThumbnail": 1,
+      "withDate": 1,
+      "urlCoverage": 100,
+      "publisherArticleUrlCoverage": 100,
+      "thumbnailCoverage": 100,
+      "dateCoverage": 100
+    },
+    {
       "source": "KapanLagi",
       "items": 1,
       "withUrl": 1,
@@ -1571,18 +1665,6 @@
     },
     {
       "source": "The Express Tribune",
-      "items": 1,
-      "withUrl": 1,
-      "withPublisherArticleUrl": 1,
-      "withThumbnail": 1,
-      "withDate": 1,
-      "urlCoverage": 100,
-      "publisherArticleUrlCoverage": 100,
-      "thumbnailCoverage": 100,
-      "dateCoverage": 100
-    },
-    {
-      "source": "Yonhap News Agency",
       "items": 1,
       "withUrl": 1,
       "withPublisherArticleUrl": 1,
@@ -1844,8 +1926,8 @@
     {
       "source": "NMIXX YouTube Atom",
       "requested": 1,
-      "successful": 1,
-      "successRate": 100
+      "successful": 0,
+      "successRate": 0
     },
     {
       "source": "Bing News RSS",
@@ -1855,12 +1937,12 @@
     }
   ],
   "classification": {
-    "items": 914,
+    "items": 922,
     "categoryCounts": {
       "video": 187,
-      "interview": 64,
-      "news": 558,
-      "brand": 32,
+      "interview": 65,
+      "news": 562,
+      "brand": 35,
       "event": 18,
       "performance": 46,
       "official": 14
@@ -1872,14 +1954,14 @@
     "accuracyLabel": "not measured (no category review labels)"
   },
   "thumbnailReviewMetrics": {
-    "eligible": 489,
+    "eligible": 493,
     "reviewed": 0,
     "reviewCoverage": 0,
     "relevant": 0,
     "unsuitable": 0,
     "excluded": 0,
     "precision": null,
-    "selectedEligible": 356,
+    "selectedEligible": 359,
     "selectedReviewed": 0,
     "selectedPrecision": null,
     "counts": {
@@ -2091,6 +2173,23 @@
       "assignmentRate": 100
     },
     {
+      "host": "en.yna.co.kr",
+      "attempted": 3,
+      "assigned": 3,
+      "found": 3,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "en.yna.co.kr": 3
+      },
+      "successRate": 100,
+      "candidateRate": 100,
+      "assignmentRate": 100
+    },
+    {
       "host": "www.allkpop.com",
       "attempted": 3,
       "assigned": 0,
@@ -2245,23 +2344,6 @@
       "errorCodes": {},
       "finalHosts": {
         "en.koreadaily.com": 1
-      },
-      "successRate": 100,
-      "candidateRate": 100,
-      "assignmentRate": 100
-    },
-    {
-      "host": "en.yna.co.kr",
-      "attempted": 1,
-      "assigned": 1,
-      "found": 1,
-      "missing": 0,
-      "failed": 0,
-      "wrapperOnly": 0,
-      "duplicateRejected": 0,
-      "errorCodes": {},
-      "finalHosts": {
-        "en.yna.co.kr": 1
       },
       "successRate": 100,
       "candidateRate": 100,
@@ -2531,6 +2613,23 @@
       "assignmentRate": 100
     },
     {
+      "host": "www.idntimes.com",
+      "attempted": 1,
+      "assigned": 1,
+      "found": 1,
+      "missing": 0,
+      "failed": 0,
+      "wrapperOnly": 0,
+      "duplicateRejected": 0,
+      "errorCodes": {},
+      "finalHosts": {
+        "www.idntimes.com": 1
+      },
+      "successRate": 100,
+      "candidateRate": 100,
+      "assignmentRate": 100
+    },
+    {
       "host": "www.inven.co.kr",
       "attempted": 1,
       "assigned": 1,
@@ -2776,9 +2875,9 @@
     "sampledItems": 40,
     "checked": 41,
     "broken": [],
-    "rateLimited": 0,
+    "rateLimited": 1,
     "unreachable": 1,
-    "thumbnailMissing": 558,
+    "thumbnailMissing": 563,
     "results": [
       {
         "kind": "article",
@@ -2879,8 +2978,8 @@
       {
         "kind": "article",
         "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBLTnIwX2RZRkdDZzRSSmhjRHZaUC1ab2NVcFNhSmhvYlhoRmxJX0tJNEFIdmRfV2NCZjlqcFBHSE9UWDgyZHhFdkhid0thaGFGTXJsVU1TYnY1OHZR?oc=5",
-        "status": 200,
-        "ok": true
+        "status": 429,
+        "ok": false
       },
       {
         "kind": "article",
@@ -3029,27 +3128,27 @@
     ]
   },
   "thumbnailCandidateComparison": {
-    "articlesCompared": 83,
+    "articlesCompared": 86,
     "rssOnly": 0,
-    "metaOnly": 83,
+    "metaOnly": 86,
     "bothSources": 0,
     "articlesWithSharedUrl": 0,
-    "metaFound": 83,
-    "metaAssigned": 1,
+    "metaFound": 86,
+    "metaAssigned": 3,
     "assignmentRate": 100,
-    "latestRunAttempted": 1,
-    "latestRunFound": 1,
-    "latestRunAssigned": 1,
+    "latestRunAttempted": 3,
+    "latestRunFound": 3,
+    "latestRunAssigned": 3,
     "latestRunAssignmentRate": 100,
-    "persistedMetaCandidateRecords": 83,
-    "persistedThumbnailRecords": 83,
-    "persistedThumbnailRecordsTotal": 356,
-    "persistedThumbnailMatchesMetaCandidate": 83,
+    "persistedMetaCandidateRecords": 86,
+    "persistedThumbnailRecords": 86,
+    "persistedThumbnailRecordsTotal": 359,
+    "persistedThumbnailMatchesMetaCandidate": 86,
     "persistedThumbnailDoesNotMatchMetaCandidate": 0,
     "sourceCounts": {
-      "og:image": 75,
-      "jsonld:image": 87,
-      "twitter:image": 13,
+      "og:image": 76,
+      "jsonld:image": 88,
+      "twitter:image": 15,
       "jsonld:thumbnailUrl": 20,
       "link:image_src": 1,
       "og:image:secure_url": 4,
@@ -3178,6 +3277,14 @@
         "count": 1
       },
       {
+        "host": "image.idn.media",
+        "count": 1
+      },
+      {
+        "host": "image.idntimes.com",
+        "count": 1
+      },
+      {
         "host": "www.chosun.com",
         "count": 1
       },
@@ -3190,7 +3297,15 @@
         "count": 1
       },
       {
+        "host": "img7.yna.co.kr",
+        "count": 1
+      },
+      {
         "host": "static.mk.co.kr",
+        "count": 1
+      },
+      {
+        "host": "img8.yna.co.kr",
         "count": 1
       },
       {
@@ -3800,6 +3915,29 @@
         "persistedThumbnailMatchesMetaCandidate": true
       },
       {
+        "id": "ac8c7b7b6eacdb869bb4",
+        "title": "5 Fakta Sing to the Moon, Lagu Duet Lily dan Haewon NMIXX",
+        "articleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://image.idntimes.com/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
+            "source": "jsonld:image",
+            "priority": 5
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned",
+        "persistedThumbnailUrl": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
+        "persistedThumbnailMatchesMetaCandidate": true
+      },
+      {
         "id": "f977bb5482918d976246",
         "title": "NMIXX Charts on X: \"NMIXX’s Lily and Haewon covering “Rolling in the Deep” by Adele with insane vocals.\"",
         "articleUrl": "https://x.com/nmixxiee/status/2112842130163114298",
@@ -4395,6 +4533,24 @@
         "persistedThumbnailMatchesMetaCandidate": true
       },
       {
+        "id": "49ca5ad1281318ba5b35",
+        "title": "S. Korean girl group NMIXX",
+        "articleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
+            "source": "twitter:image",
+            "priority": 2
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned",
+        "persistedThumbnailUrl": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
+        "persistedThumbnailMatchesMetaCandidate": true
+      },
+      {
         "id": "e74f0cd5f348cd454df9",
         "title": "The group NMIXX will open the third series of World View through God. Enmix (Baei, Kyujin, Haewon..",
         "articleUrl": "https://www.mk.co.kr/en/musics/10921328",
@@ -4415,6 +4571,24 @@
         "assigned": false,
         "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://pimg.mk.co.kr/news/cms/202401/15/news-p.v1.20240115.941e7549364d42349fb1d09bd24c2153.jpg",
+        "persistedThumbnailMatchesMetaCandidate": true
+      },
+      {
+        "id": "76b51bf9c0a69f9d4268",
+        "title": "S. Korean girl group NMIXX",
+        "articleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
+        "rssCandidates": [],
+        "metaCandidates": [
+          {
+            "url": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
+            "source": "twitter:image",
+            "priority": 2
+          }
+        ],
+        "sharedUrls": [],
+        "assigned": true,
+        "metaStatus": "assigned",
+        "persistedThumbnailUrl": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
       {
@@ -4873,8 +5047,8 @@
           }
         ],
         "sharedUrls": [],
-        "assigned": true,
-        "metaStatus": "assigned",
+        "assigned": false,
+        "metaStatus": "not-attempted",
         "persistedThumbnailUrl": "https://www.sportsworldi.com/content/image/2026/11/27/20261127505363.jpg",
         "persistedThumbnailMatchesMetaCandidate": true
       },
@@ -5321,7 +5495,7 @@
     ]
   },
   "thumbnailReview": {
-    "generatedAt": "2026-11-27T02:09:14.017Z",
+    "generatedAt": "2026-11-27T05:00:52.808Z",
     "automaticReplacement": false,
     "automaticDeletion": false,
     "groups": [
@@ -7354,17 +7528,81 @@
     "redirectPolicy": "standard-http-follow-only",
     "bypassAttempted": false,
     "sampled": 12,
-    "offset": 55,
+    "offset": 48,
     "checked": 12,
-    "total": 83,
+    "total": 84,
     "counts": {
-      "http-responded": 9,
-      "blocked": 1,
+      "http-responded": 10,
+      "blocked": 2,
       "paywall": 0,
-      "not-found": 1,
-      "uncertain": 1
+      "not-found": 0,
+      "uncertain": 0
     },
     "results": [
+      {
+        "articleId": "fb392e4ba8879b947e36",
+        "url": "https://biz.chosun.com/en/en-entertainment/2025/03/20/KLX7MY47U5A3RPES2JGB3YIW3Q/",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "biz.chosun.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "b73b0b6718cd750a66a5",
+        "url": "https://biz.chosun.com/en/en-entertainment/2025/02/24/IROSHWQZQRHFXL6BLQT753LDA4/",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "biz.chosun.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "288ac9019343bb06260d",
+        "url": "https://www.soompi.com/article/1724678wpp/nmixxs-haewon-sits-out-todays-concert-in-mexico-due-to-health",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.soompi.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "772e453cc3cd4b9b3a7e",
+        "url": "https://www.nme.com/news/music/nmixx-haewon-cover-sabrina-carpenter-please-please-please-3823592",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.nme.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "36046f8feaba91d4fded",
+        "url": "https://www.allkpop.com/article/2024/09/nmixx-haewon-zeas-dongjun-to-appear-on-running-man",
+        "status": 403,
+        "state": "blocked",
+        "finalHost": "www.allkpop.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "6c1b35df3ea9538b743b",
+        "url": "https://www.allkpop.com/article/2024/08/nmixxs-haewon-showcases-variety-show-skills-on-radio-star",
+        "status": 403,
+        "state": "blocked",
+        "finalHost": "www.allkpop.com",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "32964a7facfebdec9f38",
+        "url": "https://www.mk.co.kr/en/hot-issues/11070438",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "www.mk.co.kr",
+        "method": "HEAD"
+      },
+      {
+        "articleId": "b9889446cfd423ab2196",
+        "url": "https://timesofindia.indiatimes.com/entertainment/k-pop/music/news/nmixxs-haewon-to-perform-seated-after-minor-back-injury-at-midyear-special-music-core-in-japan/articleshow/111332943.cms",
+        "status": 200,
+        "state": "http-responded",
+        "finalHost": "timesofindia.indiatimes.com",
+        "method": "HEAD"
+      },
       {
         "articleId": "2cb9f94fed4fc8a84db3",
         "url": "https://tribune.com.pk/story/2474873/nmixxs-haewon-to-perform-sitting-down-after-sustaining-minor-back-injury",
@@ -7395,70 +7633,6 @@
         "status": 200,
         "state": "http-responded",
         "finalHost": "www.geo.tv",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "a37e26c7cfff0e81cf80",
-        "url": "https://www.allkpop.com/article/2023/01/nmixxs-haewon-praised-for-her-hosting-skills-after-she-appears-as-a-special-mc-on-kbs2s-music-bank",
-        "status": 403,
-        "state": "blocked",
-        "finalHost": "www.allkpop.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "410181bd7a26e470fb01",
-        "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008342842",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "sbsstar.net",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "baaea643c6e7d0c5b9b4",
-        "url": "https://www.sportskeeda.com/pop-culture/nmixx-s-haewon-diagnosed-covid-19",
-        "status": 405,
-        "state": "uncertain",
-        "finalHost": "www.sportskeeda.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "20b79e1521fe03642833",
-        "url": "https://www.soompi.com/article/1521113wpp/nmixxs-haewon-and-jiwoo-diagnosed-with-covid-19",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.soompi.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "0dce33409a82f8bfa806",
-        "url": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%ED%9E%98%EB%93%A4%EB%8B%A4-n%EC%9D%B4%EC%8A%88/ar-AA2hKsne",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.msn.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "acc3649085bc58237439",
-        "url": "https://www.xportsnews.com/article/2220870",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.xportsnews.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "6876f635b800bea5bf90",
-        "url": "https://www.msn.com/ko-kr/news/other/%EC%97%94%EB%AF%B9%EC%8A%A4-%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EC%9A%B0%EB%A0%A4-%EC%86%8D-%EC%99%B8%EB%AA%A8-%EA%B0%95%EB%B0%95-%EA%B3%A0%EB%B0%B1-%EB%82%98%EB%85%B8-%EB%8B%A8%EC%9C%84-%EC%96%BC%EA%B5%B4-%ED%8F%89%EA%B0%80/ar-AA2hFg9V",
-        "status": 200,
-        "state": "http-responded",
-        "finalHost": "www.msn.com",
-        "method": "HEAD"
-      },
-      {
-        "articleId": "da2ca32f9a2115bbb975",
-        "url": "https://www.spotvnews.co.kr/news/articleView.html?idxno=1020506",
-        "status": 404,
-        "state": "not-found",
-        "finalHost": "www.spotvnews.co.kr",
         "method": "HEAD"
       }
     ]

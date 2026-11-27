@@ -1,12 +1,14 @@
 {
-  "status": "success",
+  "status": "disabled",
   "source": "nmixx-youtube",
   "feedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCnUAyD4t2LkvW68YrDh7fDg",
   "lastAttemptAt": "2026-11-27T02:09:09.471Z",
   "lastSuccessAt": "2026-11-27T02:09:09.571Z",
-  "itemsFetched": 15,
+  "itemsFetched": 0,
   "itemsAdded": 0,
-  "itemsDuplicate": 15,
+  "itemsDuplicate": 0,
   "totalItems": 20,
-  "message": "공개 YouTube 채널 피드 수집 완료"
+  "message": "YouTube Atom 자동 수집은 robots.txt 및 약관 검토에 따라 비활성화되었습니다. 기존 영상 기록은 보존됩니다.",
+  "policy": "disabled",
+  "lastPolicyCheckAt": "2026-11-27T05:00:47.958Z"
 }

@@ -5573,6 +5573,64 @@
     "candidateSource": ""
   },
   {
+    "id": "ac8c7b7b6eacdb869bb4",
+    "title": "5 Fakta Sing to the Moon, Lagu Duet Lily dan Haewon NMIXX",
+    "url": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
+    "publisherArticleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b090e82de3c42149d8b99bf56cd0dad&url=https%3a%2f%2fwww.idntimes.com%2fkorea%2fkpop%2ffakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj&c=14450538050659263534&mkt=ko-kr",
+    "publisherHost": "www.idntimes.com",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20editorial&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b090e82de3c42149d8b99bf56cd0dad&url=https%3a%2f%2fwww.idntimes.com%2fkorea%2fkpop%2ffakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj&c=14450538050659263534&mkt=ko-kr",
+        "articleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
+        "host": "www.idntimes.com"
+      }
+    ],
+    "publishedAt": "2026-10-22T03:06:00.000Z",
+    "description": "NMIXX merilis mini album keenam, Strange Muse, pada 19 Oktober, termasuk unit Lily dan Haewon lewat lagu duet perdana mereka, \"Sing to the Moon\". \"Sing to the Moon\" berdurasi empat menit dan mengusung ...",
+    "thumbnailUrl": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
+    "thumbnailSource": "og:image",
+    "thumbnailCandidates": [],
+    "sourceName": "idntimes",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX editorial",
+    "discoveredAt": "2026-11-27T05:00:48.245Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
+        "source": "og:image",
+        "priority": 1
+      },
+      {
+        "url": "https://image.idntimes.com/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
+        "source": "jsonld:image",
+        "priority": 5
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
+      "resolvedArticleHost": "www.idntimes.com",
+      "fetchedAt": "2026-11-27T05:00:50.949Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "og:image",
+      "url": "https://image.idn.media/post/20261021/1000023053_ed2d8259-ec20-4e54-be01-3571ee6e4baf.jpg",
+      "articleUrl": "https://www.idntimes.com/korea/kpop/fakta-sing-to-the-moon-lagu-duet-lily-dan-haewon-nmixx-c1c2-01-2kxv1-5p2kcj",
+      "observedAt": "2026-11-27T05:00:50.949Z"
+    }
+  },
+  {
     "id": "f977bb5482918d976246",
     "title": "NMIXX Charts on X: \"NMIXX’s Lily and Haewon covering “Rolling in the Deep” by Adele with insane vocals.\"",
     "url": "https://x.com/nmixxiee/status/2112842130163114298",
@@ -8238,6 +8296,59 @@
     "candidateSource": ""
   },
   {
+    "id": "49ca5ad1281318ba5b35",
+    "title": "S. Korean girl group NMIXX",
+    "url": "https://en.yna.co.kr/view/PYH20240115166800344",
+    "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b090e82de3c42149d8b99bf56cd0dad&url=https%3a%2f%2fen.yna.co.kr%2fview%2fPYH20240115166800344&c=816353075298982627&mkt=ko-kr",
+    "publisherHost": "en.yna.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20editorial&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b090e82de3c42149d8b99bf56cd0dad&url=https%3a%2f%2fen.yna.co.kr%2fview%2fPYH20240115166800344&c=816353075298982627&mkt=ko-kr",
+        "articleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
+        "host": "en.yna.co.kr"
+      }
+    ],
+    "publishedAt": "2024-01-15T09:03:00.000Z",
+    "description": "Haewon, a member of South Korean girl group NMIXX, poses for a photo during a showcase for the group's second mini album \"Fe3O4: BREAK\" in Seoul on Jan. 15, 2024. (Yonhap) (END) ...",
+    "thumbnailUrl": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
+    "thumbnailSource": "twitter:image",
+    "thumbnailCandidates": [],
+    "sourceName": "Yonhap News Agency",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX editorial",
+    "discoveredAt": "2026-11-27T05:00:48.245Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
+        "source": "twitter:image",
+        "priority": 2
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
+      "resolvedArticleHost": "en.yna.co.kr",
+      "fetchedAt": "2026-11-27T05:00:50.949Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "twitter:image",
+      "url": "https://img7.yna.co.kr/photo/yna/YH/2024/01/15/PYH2024011516680034400_P4.jpg",
+      "articleUrl": "https://en.yna.co.kr/view/PYH20240115166800344",
+      "observedAt": "2026-11-27T05:00:50.949Z"
+    }
+  },
+  {
     "id": "ea105b8b55c7ba6075b7",
     "title": "오해원 복근 미쳤네 - 네이트 판",
     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1EekRqUzZyelJ5QnhzeXNfcjBYMVVTSFktUWhiUWs5MEd0aFJOeHF5WTdheFdNeXpWczlpa3Fxa1dOVWg2aWNmd25maGQ?oc=5",
@@ -8462,6 +8573,59 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "76b51bf9c0a69f9d4268",
+    "title": "S. Korean girl group NMIXX",
+    "url": "https://en.yna.co.kr/view/PYH20230711185400344",
+    "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
+    "sourceUrl": "",
+    "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b090e82de3c42149d8b99bf56cd0dad&url=https%3a%2f%2fen.yna.co.kr%2fview%2fPYH20230711185400344&c=4501241474637470030&mkt=ko-kr",
+    "publisherHost": "en.yna.co.kr",
+    "candidateSource": "bing-news-rss-explicit-url-param",
+    "candidateSources": [
+      {
+        "source": "bing-news-rss-explicit-url-param",
+        "feedUrl": "https://www.bing.com/news/search?q=Haewon%20NMIXX%20editorial&format=rss&setmkt=ko-KR",
+        "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b090e82de3c42149d8b99bf56cd0dad&url=https%3a%2f%2fen.yna.co.kr%2fview%2fPYH20230711185400344&c=4501241474637470030&mkt=ko-kr",
+        "articleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
+        "host": "en.yna.co.kr"
+      }
+    ],
+    "publishedAt": "2023-07-11T09:14:00.000Z",
+    "description": "Haewon, a member of South Korean girl group NMIXX, poses for a photo during a showcase in Seoul on July 11, 2023, to promote the release of the group's mini album \"A Midsummer NMIXX's Dream.\" (Yonhap) ...",
+    "thumbnailUrl": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
+    "thumbnailSource": "twitter:image",
+    "thumbnailCandidates": [],
+    "sourceName": "Yonhap News Agency",
+    "discoverySource": "bing-news-rss",
+    "query": "Haewon NMIXX editorial",
+    "discoveredAt": "2026-11-27T05:00:48.245Z",
+    "status": "candidate",
+    "relevanceScore": 6,
+    "thumbnailMetaCandidates": [
+      {
+        "url": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
+        "source": "twitter:image",
+        "priority": 2
+      }
+    ],
+    "thumbnailMetaFetch": {
+      "status": "assigned",
+      "publisherArticleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
+      "sourceUrl": "",
+      "resolvedArticleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
+      "resolvedArticleHost": "en.yna.co.kr",
+      "fetchedAt": "2026-11-27T05:00:50.949Z",
+      "statusCode": 200,
+      "errorCode": ""
+    },
+    "thumbnailProvenance": {
+      "source": "twitter:image",
+      "url": "https://img8.yna.co.kr/photo/yna/YH/2023/07/11/PYH2023071118540034400_P4.jpg",
+      "articleUrl": "https://en.yna.co.kr/view/PYH20230711185400344",
+      "observedAt": "2026-11-27T05:00:50.949Z"
+    }
   },
   {
     "id": "01d43afc81bf8da93d4a",
@@ -9026,6 +9190,24 @@
     "candidateSource": ""
   },
   {
+    "id": "7f3c836f41ecbdf4a4c2",
+    "title": "[오해원의 He스토리]신세대 해외파의 놀이터가 된 SNS - 노컷뉴스",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5UeE95SUxrSzR0aF9pVFdHVG44aDFpMUJXdTJTbUhBRGdVSnMtUDNNcS15a2NzN0dyVl9xcThIN3BXTXphSG44V1MtV2lDZy1zdkE?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.nocutnews.co.kr",
+    "publishedAt": "2013-07-04T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5UeE95SUxrSzR0aF9pVFdHVG44aDFpMUJXdTJTbUhBRGdVSnMtUDNNcS15a2NzN0dyVl9xcThIN3BXTXphSG44V1MtV2lDZy1zdkE?oc=5\" target=\"_blank\">[오해원의 He스토리]신세대 해외파의 놀이터가 된 SNS</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">노컷뉴스</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-27T05:00:48.245Z",
+    "status": "candidate",
+    "relevanceScore": 6
+  },
+  {
     "id": "94683f2727ed302a289e",
     "title": "엔믹스 해원, 컨디션 난조로 바르셀로나 무대 불참…5인 체제 공연 - https://www.frame-less.co.kr/",
     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1zOEtvQkxOVVRLQWIwcThmTDNyY3k4aWI3Y0FEc0g3UXZKQVFoR21rYzluVExJa0RFRVBTbzJxcmduU0xOVnBWMWZOUGlheFBCTFJoOGhKN0x0UG9jS1pWaTdqZnE0azNadVRZM2Jn?oc=5",
@@ -9232,6 +9414,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "6d70df5213c31ebd1061",
+    "title": "윤석철트리오, 아이돌과 협업도? 윤석철 \"최근 '최애'는 엔믹스 해원\" [인터뷰③] - 조선일보",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQZ3hWSGpndXRrUjk2SEJZZm1vZkJBZzBEVVZ6MUM2UkxSTWhFT3NUb2poTXFFOUdtUktSdlI1Z2pObDFsQXdKaFlENHd1ZlVpeHJXTUFlNWhlQWhrZkZMM0gweHZpdF91OV8wSlNGbVNubm9Xcm5TSWJCT2Rrd2J4eTZIei1idFVtVGc?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.chosun.com",
+    "publishedAt": "2024-08-28T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQZ3hWSGpndXRrUjk2SEJZZm1vZkJBZzBEVVZ6MUM2UkxSTWhFT3NUb2poTXFFOUdtUktSdlI1Z2pObDFsQXdKaFlENHd1ZlVpeHJXTUFlNWhlQWhrZkZMM0gweHZpdF91OV8wSlNGbVNubm9Xcm5TSWJCT2Rrd2J4eTZIei1idFVtVGc?oc=5\" target=\"_blank\">윤석철트리오, 아이돌과 협업도? 윤석철 \"최근 '최애'는 엔믹스 해원\" [인터뷰③]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "오해원 인터뷰",
+    "discoveredAt": "2026-11-27T05:00:48.245Z",
+    "status": "candidate",
+    "relevanceScore": 5
   },
   {
     "id": "e91b6a5b1c357e7a2f35",
@@ -13830,6 +14030,24 @@
     "candidateSource": ""
   },
   {
+    "id": "08946b0d5113a63c3534",
+    "title": "엔믹스 해원, 몽환적인 앤아더스토리즈 화보 “엔믹스가 아군이라 다행\" - 싱글리스트",
+    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1sOXE1dkFPRDVHTGNweDA4YjlDcEdpRDZsN0o4YnZQdkp3Ym5ZVko3XzFpYUZqX1VXN0pYTV9KX2V2azlDV25EOS1BYk9OSnExanRaN0lDSm15RXNvZXdNNE9ZWGlFUQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.slist.kr",
+    "publishedAt": "2025-09-19T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE1sOXE1dkFPRDVHTGNweDA4YjlDcEdpRDZsN0o4YnZQdkp3Ym5ZVko3XzFpYUZqX1VXN0pYTV9KX2V2azlDV25EOS1BYk9OSnExanRaN0lDSm15RXNvZXdNNE9ZWGlFUQ?oc=5\" target=\"_blank\">엔믹스 해원, 몽환적인 앤아더스토리즈 화보 “엔믹스가 아군이라 다행\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">싱글리스트</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:00:48.245Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "55361d9baad8fcb26598",
     "title": "엔믹스 해원 '우아하게'[엑's HD포토] - xportsnews.com",
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5DMllyV0Qyd3lRNi1sZ0lCUkxjY2l0QTJUeUpEOHF3bWZYUGNxcUNkalZHOWZyeDVZbWc0UTdoWG9lUDAwbzZ1eWtzN204RGFBMEhwTA?oc=5",
@@ -15860,7 +16078,14 @@
     "relevanceScore": 4,
     "thumbnailMetaCandidates": [],
     "thumbnailMetaFetch": null,
-    "publisherArticleUrl": ""
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.xportsnews.com",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "candidateSources": [],
+    "publisherHost": "",
+    "discoveryUrl": "",
+    "candidateSource": ""
   },
   {
     "id": "f49644404d58f1861ef9",
@@ -17469,6 +17694,24 @@
     "candidateSource": ""
   },
   {
+    "id": "d63817905cfc55080eae",
+    "title": "NMIXX 지니X해원 \"장르에 구애받지 않는 그룹\"[화보] - 픽콘",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAwUGtGQTlObVhjQzFiME1WWklYU05CZzBfSDZteVdPVldhMGZZUlRTQ3hEc1RxQ2R4MXFlYjNOb05KRVVjaFVWMEdOZzBFcEtNSVNzQzN6cWVmNl9jMmloUFN2ZE5KODBnVVg5SE9CNmFHdENYM2tHby13?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://pickcon.co.kr",
+    "publishedAt": "2022-02-18T08:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTFAwUGtGQTlObVhjQzFiME1WWklYU05CZzBfSDZteVdPVldhMGZZUlRTQ3hEc1RxQ2R4MXFlYjNOb05KRVVjaFVWMEdOZzBFcEtNSVNzQzN6cWVmNl9jMmloUFN2ZE5KODBnVVg5SE9CNmFHdENYM2tHby13?oc=5\" target=\"_blank\">NMIXX 지니X해원 \"장르에 구애받지 않는 그룹\"[화보]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">픽콘</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:00:48.245Z",
+    "status": "candidate",
+    "relevanceScore": 4
+  },
+  {
     "id": "8b12fcdc49043d1b4db3",
     "title": "'JYP 신인' 엔믹스 해원·설윤, 환상 속 여신 비주얼…몽환적 티저 눈길 - xportsnews.com",
     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBiUmJfNGVPSm5LVElXYkVyMHZpSm5pQ0dsaW5fb1JBaExfMS1NVHFpVGs3S0kzLTk4UTV1RURWSkFibGFzRTZtcno3WDVXaWI5WHNVMw?oc=5",
@@ -18391,7 +18634,7 @@
     "id": "e3a83d764eaef54855a6",
     "title": "NMIXX World Tour Finale Coming To SCREENX Cinemas Worldwide",
     "url": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
-    "publisherArticleUrl": "https://www.yahoo.com/entertainment/music/concerts/articles/nmixx-world-tour-finale-coming-075016665.html",
+    "publisherArticleUrl": "https://www.forbes.com/sites/jeffbenjamin/2026/11/12/nmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide/",
     "sourceUrl": "",
     "discoveryUrl": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6b06014669ba4614b63becb58f4c8e1e&url=https%3a%2f%2fwww.forbes.com%2fsites%2fjeffbenjamin%2f2026%2f11%2f12%2fnmixx-world-tour-finale-coming-to-screenx-cinemas-worldwide%2f&c=13789977525221205774&mkt=ko-kr",
     "publisherHost": "www.forbes.com",
@@ -22470,6 +22713,24 @@
     "publisherHost": "",
     "discoveryUrl": "",
     "candidateSource": ""
+  },
+  {
+    "id": "d56168fa361241b0306e",
+    "title": "[화보] \"섹시한 해원맥\"..'신과함께' 주지훈의 무한 매력 - 조선일보",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBOXzBuNUhHMnhOUlRWY2psYnl0ZTdMb1ExSWY3dTR3ckdQRGk3N0M4anA5OTl1TDM2Q2lNMVlmRWxsZVJVRzFqMldhQlFORWt4MkhGaTZZSmxBdFJYS0Z3RUZfaWdCbVB0TXhsSHpYakt3OEIyZ21rcF92VQ?oc=5",
+    "publisherArticleUrl": "",
+    "sourceUrl": "https://www.chosun.com",
+    "publishedAt": "2018-07-27T07:00:00.000Z",
+    "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFBOXzBuNUhHMnhOUlRWY2psYnl0ZTdMb1ExSWY3dTR3ckdQRGk3N0M4anA5OTl1TDM2Q2lNMVlmRWxsZVJVRzFqMldhQlFORWt4MkhGaTZZSmxBdFJYS0Z3RUZfaWdCbVB0TXhsSHpYakt3OEIyZ21rcF92VQ?oc=5\" target=\"_blank\">[화보] \"섹시한 해원맥\"..'신과함께' 주지훈의 무한 매력</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+    "thumbnailUrl": "",
+    "thumbnailSource": "",
+    "thumbnailCandidates": [],
+    "sourceName": "Google News",
+    "discoverySource": "google-news-rss",
+    "query": "해원 화보 인터뷰",
+    "discoveredAt": "2026-11-27T05:00:48.245Z",
+    "status": "candidate",
+    "relevanceScore": 2
   },
   {
     "id": "51281fb4fc1e90be8f65",

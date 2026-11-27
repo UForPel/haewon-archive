@@ -8,49 +8,49 @@
     "packIndex": 0,
     "packCount": 6,
     "activeQueries": [
-      "오해원 NMIXX",
-      "해원 엔믹스",
-      "NMIXX Haewon news",
-      "Haewon NMIXX news",
-      "오해원 근황",
-      "Haewon latest news"
+      "Haewon NMIXX interview",
+      "오해원 인터뷰",
+      "NMIXX Haewon magazine",
+      "Haewon NMIXX editorial",
+      "해원 화보 인터뷰",
+      "Haewon profile interview"
     ],
     "nextDayPackIndex": 1
   },
   "evidence": {
-    "cumulativeDiscoveryCandidates": 914,
-    "currentRunCandidates": 209,
+    "cumulativeDiscoveryCandidates": 922,
+    "currentRunCandidates": 81,
     "uniqueVideoRecords": 20,
     "queryYield": [
       {
-        "query": "오해원 NMIXX",
-        "candidates": 55
+        "query": "Haewon NMIXX interview",
+        "candidates": 13
       },
       {
-        "query": "해원 엔믹스",
-        "candidates": 61
+        "query": "오해원 인터뷰",
+        "candidates": 33
       },
       {
-        "query": "NMIXX Haewon news",
-        "candidates": 20
+        "query": "NMIXX Haewon magazine",
+        "candidates": 13
       },
       {
-        "query": "Haewon NMIXX news",
-        "candidates": 20
+        "query": "Haewon NMIXX editorial",
+        "candidates": 14
       },
       {
-        "query": "오해원 근황",
-        "candidates": 36
+        "query": "해원 화보 인터뷰",
+        "candidates": 8
       },
       {
-        "query": "Haewon latest news",
-        "candidates": 17
+        "query": "Haewon profile interview",
+        "candidates": 0
       }
     ],
     "highestYieldQueries": [
-      "해원 엔믹스",
-      "오해원 NMIXX",
-      "오해원 근황"
+      "오해원 인터뷰",
+      "Haewon NMIXX editorial",
+      "Haewon NMIXX interview"
     ]
   },
   "evaluation": {
