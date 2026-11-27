@@ -630,7 +630,7 @@ Keep the conversation continuation button as the final response element of every
 - All source-policy decisions remain unchanged: JYP Gallery/Notice manual-link-only; no broadcaster feeds enabled; preserve 273 legacy shared thumbnails and transactional PR #54/#56 review flow. Android Chrome QA remains unverified.
 
 ## 2026-11-27 — Production #620 final verification
-- PR #66 fixes the failure-history JSON serializer and was merged after final-head PR CI #95 succeeded (219/219 tests plus committed archive validation). Merge commit: `d61bc9aba38d4c8636828df2767bb3a67440be53`.
+- PR #66 fixes the failure-history JSON serializer and was merged after final-head PR CI #95 succeeded (220/220 tests plus committed archive validation). Merge commit: `d61bc9aba38d4c8636828df2767bb3a67440be53`.
 - Production #619 (`45926252892`) failed during validation because the first serializer emitted a literal backslash+n suffix. It did not commit refreshed data or deploy Pages. This was corrected in PR #66; do not count #619 as a successful deployment.
 - Production #620 succeeded end-to-end: https://github.com/UForPel/haewon-archive/actions/runs/45926600456. Collection and archive validation passed; Google News 6/6 queries and Bing 6/6 queries succeeded; NMIXX Atom feed returned 15 entries (0 added, 15 duplicates); Google RSS returned 160 items and Bing RSS 49 items; 5 new discovery candidates were added; cumulative candidates 914 (727 article, 187 unresolved video).
 - Run log `data/run-logs/45926600456.json` records status `success`, `queryFailures: []`, validation passed with no errors. The append-only `data/query-failure-history.json` still contains the one backfilled #617 failure (`오해원 근황`, HTTP 429, `text/html; charset=UTF-8`, no Retry-After recorded, no retry attempted). A later success did not erase it.
@@ -638,3 +638,24 @@ Keep the conversation continuation button as the final response element of every
 - Production #620 data commit: `ba3f3da5fc6f82580f25dd26177216cfd65108fb`. Pages artifact `15166123904`, 689,587 bytes, SHA-256 `e37e5f81b8bf3349e1dc55ac90af9bcd9a95ec971f13f79874cdc6319e819a31`. Artifact upload and Pages deployment steps both succeeded. The known Pages URL could not be independently opened through the current verifier; report deployment-step success, not independent live-site verification.
 - First-party source review: KBS World explicitly references KBS KPOP YouTube distribution; iMBC references the MBCkpop YouTube channel; MBC PLUS's own site identifies ALL THE K-POP and its official clip pages include MBC PLUS copyright; MnetPlus describes selected program simulcasts on M2 YouTube. These sources establish channel/program relationships but do not yet verify stable channel IDs, public Atom feed availability, robots/terms for automated feed collection, or individual Haewon appearances for all five proposed channels. SBSKPOP ZOOM ownership remains unverified. No broadcaster feed is enabled and no item is newly marked `broadcaster-official`.
 - JYP Gallery/Notice remain manual-link-only: robots.txt and automated collection permission were not verified. No photo collector, hidden endpoint, image download or rehosting was added. Android Chrome real-device QA remains unverified.
+
+## 2026-11-27 — Continuation action contract
+- Every cycle ends with one clickable continuation action containing the full project instructions, not a vague “continue” prompt.
+- The next cycle must inspect the current main/PRs/Actions/Production/data commit/Pages, read all six operating documents and SOURCE_POLICY.md first, then compare unit tests with the claimed guarantees.
+- Prioritize the real multi-event failure-history test. Distinguish synthetic tests from live Production evidence. Never fabricate events or Retry-After values; do not blindly retry.
+- Preserve all existing user constraints: no automatic JYP photo collection without verified permission; no unverified broadcaster-official labels; no YouTube API without 30-day refresh/deletion lifecycle; preserve 273 legacy thumbnails and PR #54/#56 rollback semantics; Android Chrome QA remains unverified until user completion.
+
+### Complete next-cycle prompt (copyable)
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 먼저 최신 main SHA, 열린 PR, 최근 Actions, Production 실행, 데이터 커밋, Pages artifact와 배포 상태를 실제 GitHub에서 조회한다. SESSION_LOG.md, PROJECT_STATUS.md, ROADMAP.md, BUTTONS_AND_ACTIONS.md, COLLECTION_RULES.md, CHATGPT_OPERATING_RULES.md, SOURCE_POLICY.md를 먼저 읽는다.
+
+최우선: Production #620 이후 다음 실제 Production 실행을 확인하여 append-only data/query-failure-history.json의 다회차 실운영을 검증한다. #617의 429 실패가 계속 남아 있는지 확인하고, 다음 Production에서 다른 검색어가 실제 실패하면 별도 이벤트로 추가되는지, 그 다음 성공에서도 둘 다 남는지 확인한다. 실제 응답 헤더에 Retry-After가 있을 때만 저장하며 blind retry 금지. 테스트 fixture를 운영 이벤트로 기록하지 않는다.
+
+PR #67의 최신 CI와 222개 테스트, 전체 데이터 검증 결과를 확인한다. PR #65/#66의 실패 이력 저장 및 JSON 줄바꿈 회귀 테스트를 유지한다. #619 실패는 실패로, #620 성공은 성공으로 별도 계산한다. Production 수집, 데이터 커밋, artifact, Pages 배포를 각각 확인한다.
+
+JYP/NMIXX Gallery와 Notice는 robots·약관·자동 메타데이터 수집 허용이 확인되지 않으면 수집기 구현 금지. 기사 이미지 61개와 독립 사진 0개 분리. KBS KPOP, MBCkpop, ALL THE K-POP, M2의 정확한 채널 ID·공개 Atom 피드·이용 정책을 검증하고, SBSKPOP ZOOM은 1차 출처 소유권부터 확인한다. 해원 출연이 개별 영상에서 명시적으로 확인되기 전 broadcaster-official 자동 분류 금지. YouTube API는 30일 갱신/삭제 lifecycle 없이는 활성화 금지.
+
+273개 레거시 공유 썸네일과 PR #54/#56 저장 성공 후 이동·실패 시 복원 흐름 보존. 매 사이클 SESSION_LOG, PROJECT_STATUS, ROADMAP, BUTTONS_AND_ACTIONS, COLLECTION_RULES, CHATGPT_OPERATING_RULES, SOURCE_POLICY를 갱신한다. PR CI 및 전체 데이터 검증 성공 후에만 병합한다. Android Chrome 실기기 QA는 사용자가 직접 완료하기 전까지 미검증으로 표시한다.
+
+마지막에는 코드·테스트·PR/Actions·Production·데이터·Pages·Android QA를 분리 보고하고 최신 main SHA, PR/Actions 링크, 지표, 미완료 항목, 다음 대화용 전체 지시 버튼을 제공한다. 계획만 말하지 말고 실제 저장소 작업을 수행하며, 확인하지 않은 결과를 성공으로 보고하지 않는다.
+```
