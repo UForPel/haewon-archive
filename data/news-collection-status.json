@@ -1,189 +1,189 @@
 {
   "schemaVersion": "1.0.0",
-  "collectedAt": "2026-11-27T19:59:35.545Z",
-  "searchPack": 2,
+  "collectedAt": "2026-11-28T04:44:14.648Z",
+  "searchPack": 3,
   "queries": [
     {
-      "query": "오해원 방송",
-      "candidates": 70,
+      "query": "오해원 광고",
+      "candidates": 35,
       "publicationFreshness": {
         "within7Days": 0,
-        "within30Days": 1,
-        "within90Days": 18,
-        "olderThan90Days": 51,
+        "within30Days": 4,
+        "within90Days": 7,
+        "olderThan90Days": 24,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 1
+        "within30DaysRate": 11
       },
-      "uniqueCandidates": 70,
-      "duplicateUrlOccurrences": 0,
-      "duplicateTitleGroups": 0,
-      "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 57,
-      "titleKeywordMatchRate": 81,
-      "explicitPublisherUrls": 3,
-      "explicitPublisherUrlRate": 4,
-      "crossQueryDuplicateUrls": 24,
-      "datedCandidates": 70,
-      "unknownDates": 0,
-      "futureDated": 0,
-      "medianPublicationLagHours": 14425,
-      "p90PublicationLagHours": 25572
-    },
-    {
-      "query": "해원 엔믹스 기사",
-      "candidates": 40,
-      "publicationFreshness": {
-        "within7Days": 2,
-        "within30Days": 8,
-        "within90Days": 4,
-        "olderThan90Days": 26,
-        "unknown": 0,
-        "future": 0,
-        "within7DaysRate": 5,
-        "within30DaysRate": 25
-      },
-      "uniqueCandidates": 40,
-      "duplicateUrlOccurrences": 0,
-      "duplicateTitleGroups": 0,
-      "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 38,
-      "titleKeywordMatchRate": 95,
-      "explicitPublisherUrls": 11,
-      "explicitPublisherUrlRate": 28,
-      "crossQueryDuplicateUrls": 1,
-      "datedCandidates": 40,
-      "unknownDates": 0,
-      "futureDated": 0,
-      "medianPublicationLagHours": 12853,
-      "p90PublicationLagHours": 32780.2
-    },
-    {
-      "query": "NMIXX Haewon appearance",
-      "candidates": 10,
-      "publicationFreshness": {
-        "within7Days": 0,
-        "within30Days": 2,
-        "within90Days": 3,
-        "olderThan90Days": 5,
-        "unknown": 0,
-        "future": 0,
-        "within7DaysRate": 0,
-        "within30DaysRate": 20
-      },
-      "uniqueCandidates": 10,
-      "duplicateUrlOccurrences": 0,
-      "duplicateTitleGroups": 1,
-      "duplicateTitleOccurrences": 1,
-      "titleKeywordMatches": 10,
-      "titleKeywordMatchRate": 100,
-      "explicitPublisherUrls": 8,
-      "explicitPublisherUrlRate": 80,
-      "crossQueryDuplicateUrls": 3,
-      "datedCandidates": 10,
-      "unknownDates": 0,
-      "futureDated": 0,
-      "medianPublicationLagHours": 5390.9,
-      "p90PublicationLagHours": 20966
-    },
-    {
-      "query": "Haewon NMIXX event",
-      "candidates": 20,
-      "publicationFreshness": {
-        "within7Days": 0,
-        "within30Days": 2,
-        "within90Days": 4,
-        "olderThan90Days": 14,
-        "unknown": 0,
-        "future": 0,
-        "within7DaysRate": 0,
-        "within30DaysRate": 10
-      },
-      "uniqueCandidates": 20,
-      "duplicateUrlOccurrences": 0,
-      "duplicateTitleGroups": 0,
-      "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 15,
-      "titleKeywordMatchRate": 75,
-      "explicitPublisherUrls": 12,
-      "explicitPublisherUrlRate": 60,
-      "crossQueryDuplicateUrls": 0,
-      "datedCandidates": 20,
-      "unknownDates": 0,
-      "futureDated": 0,
-      "medianPublicationLagHours": 9731.5,
-      "p90PublicationLagHours": 33152.8
-    },
-    {
-      "query": "오해원 예능 출연",
-      "candidates": 50,
-      "publicationFreshness": {
-        "within7Days": 2,
-        "within30Days": 3,
-        "within90Days": 18,
-        "olderThan90Days": 27,
-        "unknown": 0,
-        "future": 0,
-        "within7DaysRate": 4,
-        "within30DaysRate": 10
-      },
-      "uniqueCandidates": 50,
+      "uniqueCandidates": 35,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
       "titleKeywordMatches": 34,
-      "titleKeywordMatchRate": 68,
-      "explicitPublisherUrls": 0,
-      "explicitPublisherUrlRate": 0,
-      "crossQueryDuplicateUrls": 23,
-      "datedCandidates": 50,
+      "titleKeywordMatchRate": 97,
+      "explicitPublisherUrls": 3,
+      "explicitPublisherUrlRate": 9,
+      "crossQueryDuplicateUrls": 0,
+      "datedCandidates": 35,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 9360.5,
-      "p90PublicationLagHours": 22700.1
+      "medianPublicationLagHours": 13289.8,
+      "p90PublicationLagHours": 26118.3
     },
     {
-      "query": "Haewon broadcast appearance",
-      "candidates": 3,
+      "query": "NMIXX Haewon brand",
+      "candidates": 14,
       "publicationFreshness": {
         "within7Days": 0,
         "within30Days": 1,
-        "within90Days": 2,
-        "olderThan90Days": 0,
+        "within90Days": 4,
+        "olderThan90Days": 9,
         "unknown": 0,
         "future": 0,
         "within7DaysRate": 0,
-        "within30DaysRate": 33
+        "within30DaysRate": 7
       },
-      "uniqueCandidates": 3,
+      "uniqueCandidates": 14,
       "duplicateUrlOccurrences": 0,
       "duplicateTitleGroups": 0,
       "duplicateTitleOccurrences": 0,
-      "titleKeywordMatches": 3,
-      "titleKeywordMatchRate": 100,
-      "explicitPublisherUrls": 2,
-      "explicitPublisherUrlRate": 67,
-      "crossQueryDuplicateUrls": 3,
-      "datedCandidates": 3,
+      "titleKeywordMatches": 10,
+      "titleKeywordMatchRate": 71,
+      "explicitPublisherUrls": 11,
+      "explicitPublisherUrlRate": 79,
+      "crossQueryDuplicateUrls": 6,
+      "datedCandidates": 14,
       "unknownDates": 0,
       "futureDated": 0,
-      "medianPublicationLagHours": 829,
-      "p90PublicationLagHours": 854.1
+      "medianPublicationLagHours": 11445.1,
+      "p90PublicationLagHours": 24466
+    },
+    {
+      "query": "Haewon campaign",
+      "candidates": 5,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 0,
+        "within90Days": 2,
+        "olderThan90Days": 3,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 0
+      },
+      "uniqueCandidates": 5,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 4,
+      "titleKeywordMatchRate": 80,
+      "explicitPublisherUrls": 3,
+      "explicitPublisherUrlRate": 60,
+      "crossQueryDuplicateUrls": 1,
+      "datedCandidates": 5,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 9762.7,
+      "p90PublicationLagHours": 14828.4
+    },
+    {
+      "query": "해원 브랜드 화보",
+      "candidates": 36,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 0,
+        "within90Days": 9,
+        "olderThan90Days": 27,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 0
+      },
+      "uniqueCandidates": 36,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 32,
+      "titleKeywordMatchRate": 89,
+      "explicitPublisherUrls": 1,
+      "explicitPublisherUrlRate": 3,
+      "crossQueryDuplicateUrls": 0,
+      "datedCandidates": 36,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 17516.7,
+      "p90PublicationLagHours": 18693.7
+    },
+    {
+      "query": "NMIXX Haewon endorsement",
+      "candidates": 9,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 0,
+        "within90Days": 4,
+        "olderThan90Days": 5,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 0
+      },
+      "uniqueCandidates": 9,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 7,
+      "titleKeywordMatchRate": 78,
+      "explicitPublisherUrls": 9,
+      "explicitPublisherUrlRate": 100,
+      "crossQueryDuplicateUrls": 4,
+      "datedCandidates": 9,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 4801.3,
+      "p90PublicationLagHours": 15894.1
+    },
+    {
+      "query": "Haewon magazine pictorial",
+      "candidates": 1,
+      "publicationFreshness": {
+        "within7Days": 0,
+        "within30Days": 0,
+        "within90Days": 0,
+        "olderThan90Days": 1,
+        "unknown": 0,
+        "future": 0,
+        "within7DaysRate": 0,
+        "within30DaysRate": 0
+      },
+      "uniqueCandidates": 1,
+      "duplicateUrlOccurrences": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateTitleOccurrences": 0,
+      "titleKeywordMatches": 1,
+      "titleKeywordMatchRate": 100,
+      "explicitPublisherUrls": 0,
+      "explicitPublisherUrlRate": 0,
+      "crossQueryDuplicateUrls": 1,
+      "datedCandidates": 1,
+      "unknownDates": 0,
+      "futureDated": 0,
+      "medianPublicationLagHours": 10437.7,
+      "p90PublicationLagHours": 10437.7
     }
   ],
   "requestedQueries": 6,
   "successfulQueries": 6,
   "bingSuccessfulQueries": 6,
-  "bingCandidates": 36,
+  "bingCandidates": 28,
   "bingFailedQueries": [],
   "failedQueries": [],
-  "fetched": 193,
-  "uniqueIncoming": 166,
-  "added": 28,
+  "fetched": 100,
+  "uniqueIncoming": 94,
+  "added": 41,
   "rssImageSignals": {
-    "items": 157,
-    "sourceUrlItems": 153,
+    "items": 72,
+    "sourceUrlItems": 66,
     "publisherArticleUrlItems": 0,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
@@ -196,9 +196,9 @@
     "itemsWithImageSignals": 0
   },
   "bingRssImageSignals": {
-    "items": 36,
+    "items": 28,
     "sourceUrlItems": 0,
-    "publisherArticleUrlItems": 36,
+    "publisherArticleUrlItems": 27,
     "mediaThumbnailTags": 0,
     "mediaContentTags": 0,
     "enclosureTags": 0,
@@ -213,52 +213,248 @@
   "rssImageCandidatesTotal": 0,
   "rssImageCandidateSources": {},
   "thumbnailEnrichment": {
-    "attempted": 2,
-    "found": 1,
-    "assigned": 1,
+    "attempted": 9,
+    "found": 6,
+    "assigned": 6,
     "duplicateRejected": 0,
     "wrapperOnly": 0,
     "missing": 1,
-    "failed": 0,
+    "failed": 2,
     "results": [
       {
-        "id": "787a64978c31024530a1",
+        "id": "dbb392fc3002c20eeb37",
         "status": "assigned",
         "candidate": {
-          "url": "https://image.fnnews.com/resource/media/image/2026/11/27/202611271159494653_e.jpg",
+          "url": "https://biz.chosun.com/resizer/v2/I6J23DEN2MW57YCRL5HGCHQDKI.jpg?auth=1add6fab22a6f11a62b7973b00ddb4973291c633bfef3afa39f5c6686cb4127c&width=900&height=472&smart=true",
           "source": "og:image",
           "priority": 1
         },
         "candidates": [
           {
-            "url": "https://image.fnnews.com/resource/media/image/2026/11/27/202611271159494653_e.jpg",
+            "url": "https://biz.chosun.com/resizer/v2/I6J23DEN2MW57YCRL5HGCHQDKI.jpg?auth=1add6fab22a6f11a62b7973b00ddb4973291c633bfef3afa39f5c6686cb4127c&width=900&height=472&smart=true",
             "source": "og:image",
             "priority": 1
           }
         ],
         "assigned": true,
-        "publisherArticleUrl": "https://www.fnnews.com/news/202611271159532316",
+        "publisherArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2025/09/19/EHMBSG3B5WUZYJZMMNPBSLO4EM/",
         "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.fnnews.com/news/202611271159532316",
-        "resolvedArticleHost": "www.fnnews.com"
+        "resolvedArticleUrl": "https://biz.chosun.com/entertainment/enter_general/2025/09/19/EHMBSG3B5WUZYJZMMNPBSLO4EM/",
+        "resolvedArticleHost": "biz.chosun.com"
       },
       {
-        "id": "d22af792dce9a1dba312",
+        "id": "7cd377f1a7b61f87ed9d",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://hips.hearstapps.com/hmg-prod/images/unknown-nmixx-66223577893e8.jpeg?crop=1.00xw:0.892xh;0,0.0484xh&resize=1200:*",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://hips.hearstapps.com/hmg-prod/images/unknown-nmixx-66223577893e8.jpeg?crop=1.00xw:0.892xh;0,0.0484xh&resize=1200:*",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://hips.hearstapps.com/hmg-prod/images/unknown-nmixx-66223577893e8.jpeg?crop=1.00xw:0.892xh;0,0.0484xh&resize=640:*",
+            "source": "twitter:image",
+            "priority": 2
+          },
+          {
+            "url": "https://hips.hearstapps.com/hmg-prod/images/unknown-nmixx-66223577893e8.jpeg?crop=0.498xw:0.886xh;0.502xw,0.0399xh&resize=1200:*",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://hips.hearstapps.com/hmg-prod/images/unknown-nmixx-66223577893e8.jpeg?crop=0.75xw:1xh;center,top&resize=1200:*",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://hips.hearstapps.com/hmg-prod/images/unknown-nmixx-66223577893e8.jpeg?crop=1xw:1xh;center,top&resize=1200:*",
+            "source": "jsonld:image",
+            "priority": 5
+          },
+          {
+            "url": "https://hips.hearstapps.com/hmg-prod/images/unknown-nmixx-66223577893e8.jpeg?crop=0.498xw:0.886xh;0.502xw,0.0399xh&resize=100:*",
+            "source": "jsonld:thumbnailUrl",
+            "priority": 5
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.elle.com/tw/entertainment/music/g60542318/nmixx-members/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.elle.com/tw/entertainment/music/g60542318/nmixx-members/",
+        "resolvedArticleHost": "www.elle.com"
+      },
+      {
+        "id": "467fc02edb4b31ac2452",
         "status": "missing",
         "candidate": null,
         "candidates": [],
-        "publisherArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17957604031811528010",
+        "publisherArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EA%B7%BC%ED%99%A9%EB%B6%80%ED%84%B0-%EC%96%B4%EB%A5%B8-%EC%97%AC%EC%9E%90-%EB%B3%80%EC%8B%A0%EA%B9%8C%EC%A7%80-%EC%B6%94%EA%B5%AC%EB%AF%B8%EC%9D%98-%EC%99%84%EC%84%B1%EC%9D%B4%EB%84%A4%EC%9A%94/ar-AA2gydWf",
         "sourceUrl": "",
-        "resolvedArticleUrl": "https://www.tvdaily.co.kr/read.php3?aid=17957604031811528010",
-        "resolvedArticleHost": "www.tvdaily.co.kr"
+        "resolvedArticleUrl": "https://www.msn.com/ko-kr/entertainment/%EC%9C%A0%EB%AA%85-%EC%9D%B8%EC%82%AC/%EC%97%94%EB%AF%B9%EC%8A%A4-%EC%98%A4%ED%95%B4%EC%9B%90-%EB%BC%88%EB%A7%90%EB%9D%BC-%EA%B7%BC%ED%99%A9%EB%B6%80%ED%84%B0-%EC%96%B4%EB%A5%B8-%EC%97%AC%EC%9E%90-%EB%B3%80%EC%8B%A0%EA%B9%8C%EC%A7%80-%EC%B6%94%EA%B5%AC%EB%AF%B8%EC%9D%98-%EC%99%84%EC%84%B1%EC%9D%B4%EB%84%A4%EC%9A%94/ar-AA2gydWf",
+        "resolvedArticleHost": "www.msn.com"
+      },
+      {
+        "id": "4d42dee82db0e72f79c1",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://www.joseilbo.com/gisa_img/17479881181747988118_silentrock.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://www.joseilbo.com/gisa_img/17479881181747988118_silentrock.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.joseilbo.com/news/htmls/2025/05/20250523543941.html",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.joseilbo.com/news/htmls/2025/05/20250523543941.html",
+        "resolvedArticleHost": "www.joseilbo.com"
+      },
+      {
+        "id": "82406e3b1c2a3a14deec",
+        "status": "failed",
+        "publisherArticleUrl": "https://www.forbes.com/sites/laurasirikul/2026/05/12/nmixx-wants-everyone-to-love-loudly-with-their-heavy-serenade/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.forbes.com/sites/laurasirikul/2026/05/12/nmixx-wants-everyone-to-love-loudly-with-their-heavy-serenade/",
+        "resolvedArticleHost": "www.forbes.com"
+      },
+      {
+        "id": "2fdc3f06a7ca9945804e",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://biz.chosun.com/resizer/v2/NZESTVE7IVAXJSECXWTJPMQDCE.jpg?auth=b858b00dea2fdbd2f2d2a9fd9ef72d56948a3154ed6b28c71170bd818bc5c7b2&width=572&height=300&smart=true",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://biz.chosun.com/resizer/v2/NZESTVE7IVAXJSECXWTJPMQDCE.jpg?auth=b858b00dea2fdbd2f2d2a9fd9ef72d56948a3154ed6b28c71170bd818bc5c7b2&width=572&height=300&smart=true",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/10/15/LNTBYX75E5CKFF5BEK667BNRP4/",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://biz.chosun.com/en/en-entertainment/2025/10/15/LNTBYX75E5CKFF5BEK667BNRP4/",
+        "resolvedArticleHost": "biz.chosun.com"
+      },
+      {
+        "id": "923e91ee0f5573745401",
+        "status": "failed",
+        "publisherArticleUrl": "https://www.allkpop.com/article/2024/10/nmixxs-haewon-selected-as-endorsement-model-for-bb-lab",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.allkpop.com/article/2024/10/nmixxs-haewon-selected-as-endorsement-model-for-bb-lab",
+        "resolvedArticleHost": "www.allkpop.com"
+      },
+      {
+        "id": "d3c9d850e5d6c9900bc3",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1409576199.jpg?MW=800",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1409576199.jpg?MW=800",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1474178575.jpg?MW=800",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1855152066.jpg?MW=800",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1124205506.jpg?MW=800",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1923519553.jpg?MW=800",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1824041455.jpg?MW=800",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1946130259.jpg?MW=800",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1833506084.jpg?MW=800",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1661337377.jpg?MW=800",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/i1986133803.jpg?MW=800",
+            "source": "og:image",
+            "priority": 1
+          },
+          {
+            "url": "https://upload3.inven.co.kr/upload/2024/07/25/bbs/thumb/n1409576199.jpg",
+            "source": "link:image_src",
+            "priority": 3
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.inven.co.kr/board/webzine/2097/2298155?sort=prd",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.inven.co.kr/board/webzine/2097/2298155?sort=prd",
+        "resolvedArticleHost": "www.inven.co.kr"
+      },
+      {
+        "id": "03ce1cf1cea9ce64050a",
+        "status": "assigned",
+        "candidate": {
+          "url": "https://a.ksd-i.com/a/2024-01-15/151411-994024.jpg",
+          "source": "og:image",
+          "priority": 1
+        },
+        "candidates": [
+          {
+            "url": "https://a.ksd-i.com/a/2024-01-15/151411-994024.jpg",
+            "source": "og:image",
+            "priority": 1
+          }
+        ],
+        "assigned": true,
+        "publisherArticleUrl": "https://www.koreastardaily.com/tc/news/151411",
+        "sourceUrl": "",
+        "resolvedArticleUrl": "https://www.koreastardaily.com/tc/news/151411",
+        "resolvedArticleHost": "www.koreastardaily.com"
       }
     ]
   },
   "deduplicationComparison": {
-    "before": 193,
-    "after": 165,
-    "collapsed": 28,
+    "before": 100,
+    "after": 94,
+    "collapsed": 6,
     "method": "normalized exact headline first; canonical URL fallback"
   },
-  "totalCandidates": 962
+  "totalCandidates": 1001
 }

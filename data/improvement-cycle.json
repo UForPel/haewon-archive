@@ -8,49 +8,49 @@
     "packIndex": 1,
     "packCount": 6,
     "activeQueries": [
-      "오해원 방송",
-      "해원 엔믹스 기사",
-      "NMIXX Haewon appearance",
-      "Haewon NMIXX event",
-      "오해원 예능 출연",
-      "Haewon broadcast appearance"
+      "오해원 광고",
+      "NMIXX Haewon brand",
+      "Haewon campaign",
+      "해원 브랜드 화보",
+      "NMIXX Haewon endorsement",
+      "Haewon magazine pictorial"
     ],
     "nextDayPackIndex": 2
   },
   "evidence": {
-    "cumulativeDiscoveryCandidates": 962,
-    "currentRunCandidates": 193,
+    "cumulativeDiscoveryCandidates": 1001,
+    "currentRunCandidates": 100,
     "uniqueVideoRecords": 20,
     "queryYield": [
       {
-        "query": "오해원 방송",
-        "candidates": 70
+        "query": "오해원 광고",
+        "candidates": 35
       },
       {
-        "query": "해원 엔믹스 기사",
-        "candidates": 40
+        "query": "NMIXX Haewon brand",
+        "candidates": 14
       },
       {
-        "query": "NMIXX Haewon appearance",
-        "candidates": 10
+        "query": "Haewon campaign",
+        "candidates": 5
       },
       {
-        "query": "Haewon NMIXX event",
-        "candidates": 20
+        "query": "해원 브랜드 화보",
+        "candidates": 36
       },
       {
-        "query": "오해원 예능 출연",
-        "candidates": 50
+        "query": "NMIXX Haewon endorsement",
+        "candidates": 9
       },
       {
-        "query": "Haewon broadcast appearance",
-        "candidates": 3
+        "query": "Haewon magazine pictorial",
+        "candidates": 1
       }
     ],
     "highestYieldQueries": [
-      "오해원 방송",
-      "오해원 예능 출연",
-      "해원 엔믹스 기사"
+      "해원 브랜드 화보",
+      "오해원 광고",
+      "NMIXX Haewon brand"
     ]
   },
   "evaluation": {
