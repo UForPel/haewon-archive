@@ -1111,3 +1111,30 @@ Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA를 Gi
 
 Android Chrome 실기기 QA와 공개 Pages URL 직접 접속은 미검증. 이번 사이클은 문서 전용이다. 매 사이클 일곱 운영 문서를 갱신하고 PR CI 및 committed-data validation 성공 후에만 병합한다. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 분리 보고한다. 최신 main SHA, PR/Actions 링크, 미완료 항목, 다음 전체 지시 버튼을 제공한다. 확인하지 않은 결과는 성공으로 보고하지 않는다.
 ```
+
+
+## 2026-11-28 09:01 KST — Actions observability checkpoint
+- Live repository metadata confirms default branch `main`; latest main SHA at this checkpoint is `c45b0f62889fb686dd36dceb3cfb67516cda8961`. PR #91 is merged. Its verification run #121 / `46085424796` was independently checked: Unit tests and Validate committed archive data both succeeded.
+- Re-read all seven operating documents at the exact main SHA before this documentation update.
+- Current local time supplied by the runtime is 2026-11-28 09:01 KST. The 08:17 KST slot for `17 23 * * *` has elapsed; however, the available GitHub connector exposes PR-triggered runs for a commit and per-run jobs/artifacts, but does not expose the repository-wide workflow-runs listing filtered by `event=schedule`. The direct Actions API and Actions web page were inaccessible through the available read interface. Therefore the current schedule-run count, newest schedule run, and whether a delayed matching run has appeared cannot be independently established in this checkpoint.
+- Do not convert the unavailable Actions listing into a claim that no run exists, and do not label the slot failed, omitted, dropped, or a scheduler incident. No cron change. Do not infer #614 or #622 retroactively.
+- #624 remains independently inspectable as a distinct prior Production: its persisted run log records `trigger=github_schedule`, `scheduleExpression=17 11 * * *`, `startedAt=2026-11-27T19:59:31.000Z`, and `finishedAt=2026-11-27T19:59:52.735Z`; it must not be conflated with the 08:17 KST slot. Its job and Pages artifact metadata were re-fetched; do not treat this as proof that no later Production exists.
+- Because no authoritative current Actions schedule list was available, no new Production classification, discovery Git-blob audit, retry-eligibility recalculation, or dataset metrics are claimed. The last complete discovery and retry audits remain historical only. No blind retry and no speculative extractor change.
+- Workflow configuration at this main SHA still contains exactly `17 23 * * *` and `17 11 * * *`; this checkpoint makes no workflow or cron changes.
+- Android Chrome real-device QA and direct public Pages URL access remain unverified. The direct URL check could not be completed through the available web interface. Report documentation, code, tests, Production, data, artifact, Pages, and Android QA separately.
+- This is a documentation-only checkpoint. Merge only after the PR verification workflow passes both Unit tests and Validate committed archive data.
+
+## 2026-11-28 09:01 KST — Next conversation button
+```text
+Haewon Archive 연구 기반 재귀개선을 계속한다. 최신 main SHA를 GitHub에서 실시간 조회하고 일곱 운영 문서를 먼저 읽는다. 직전 확인 main은 c45b0f62889fb686dd36dceb3cfb67516cda8961이다. 현재 main으로 가정하지 말고 다시 확인한다.
+
+현재 확인 시각은 2026-11-28 09:01 KST다. 08:17 KST / 2026-11-27 23:17 UTC 슬롯(expression='17 23 * * *')은 경과했다. 다만 현재 연결된 GitHub 읽기 기능으로는 repository-wide Actions workflow-runs event=schedule 목록을 조회할 수 없고 직접 Actions API/web 페이지도 열리지 않았다. 따라서 schedule 총건수, 최신 schedule run, 지연 실행 출현 여부를 확인했다고 주장하지 않는다. 이를 실행 누락/실패/장애로 단정하지 않는다. cron 변경 금지. #614/#622 소급 추정 금지.
+
+PR #91은 병합되었고 CI #121(run 46085424796)의 Unit tests와 Validate committed archive data는 모두 성공했다. #624 run-log는 별개로 확인되며 trigger=github_schedule, scheduleExpression='17 11 * * *', startedAt=2026-11-27T19:59:31.000Z, finishedAt=2026-11-27T19:59:52.735Z다. #624를 08:17 슬롯과 혼동하지 않는다.
+
+Actions event=schedule 전체 목록을 확인할 수 있는 수단이 확보되면 현재 시각과 함께 다시 조회한다. 새 run이 발견되면 Actions event=schedule, run-log trigger=github_schedule, 정확한 scheduleExpression='17 23 * * *' 세 조건과 created_at/run_started_at 대 startedAt을 대조한다. 새 Production이 실제 확인된 경우에만 전체 discovery Git blob 감사와 지표 및 retry eligibility를 재계산한다. 그렇지 않으면 과거 수치를 신규 감사로 보고하지 않는다.
+
+이전 discovery 감사 962 records, retry-eligible 0, earliest next eligibility 2026-12-01T06:57:55.671Z는 historical only다. Blind retry 금지. YouTube Atom/Data API 비활성, YOUTUBE_API_KEY 전달 금지, query pack 1/6 exploratory 유지, human-reviewed relevance 0 / precision null / automatic strategy promotion 금지. 273개 legacy shared thumbnail 및 PR #54/#56 transactional save/move/restore 보존. Google News wrapper decode/access bypass 금지, JYP/NMIXX Gallery·Notice collector 및 방송사 collector 금지, broadcaster-official 자동분류 금지. collection-status에 networkRequests가 없으므로 0 요청 추론 금지.
+
+Android Chrome 실기기 QA와 공개 Pages URL 직접 접속은 미검증이다. 매 사이클 일곱 운영 문서를 갱신하고 PR CI의 Unit tests와 Validate committed archive data 성공 후에만 병합한다. 코드, 테스트, Production, 데이터, artifact, Pages, Android QA를 분리 보고한다. 최신 main SHA, PR/Actions 링크, 미완료 항목, 다음 전체 지시 버튼을 제공한다. 확인하지 않은 결과는 성공으로 보고하지 않는다.
+```
